@@ -1,0 +1,48 @@
+{
+  "ano": 2024,
+  "experimento": "kmeans_competencias_redacao",
+  "populacao": {
+    "criterio": "TP_STATUS_REDACAO = 1",
+    "total_redacoes_validas": 3002710,
+    "tamanho_amostra": 100000
+  },
+  "variaveis": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+  ],
+  "pre_processamento": {
+    "padronizacao": "StandardScaler",
+    "random_state": 42
+  },
+  "avaliacao": [
+    {
+      "k": 2,
+      "inercia": 236663.83,
+      "silhouette": 0.4259
+    },
+    {
+      "k": 3,
+      "inercia": 174491.61,
+      "silhouette": 0.3323
+    },
+    {
+      "k": 4,
+      "inercia": 149604.13,
+      "silhouette": 0.2772
+    },
+    {
+      "k": 5,
+      "inercia": 137685.55,
+      "silhouette": 0.2346
+    },
+    {
+      "k": 6,
+      "inercia": 126371.26,
+      "silhouette": 0.2339
+    }
+  ],
+  "melhor_k_por_silhouette": 2
+}
