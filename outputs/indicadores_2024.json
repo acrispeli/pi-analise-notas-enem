@@ -1,0 +1,41 @@
+{
+  "ano": 2024,
+  "populacao": {
+    "total_participantes": 4332944,
+    "com_informacao_redacao": 3167955,
+    "redacoes_sem_problemas": 3002710
+  },
+  "nota_redacao": {
+    "media": 658.97,
+    "mediana": 640.0,
+    "minimo": 40,
+    "maximo": 1000
+  },
+  "competencias": [
+    {
+      "competencia": "C1",
+      "media": 126.22,
+      "mediana": 120.0
+    },
+    {
+      "competencia": "C2",
+      "media": 152.53,
+      "mediana": 160.0
+    },
+    {
+      "competencia": "C3",
+      "media": 124.45,
+      "mediana": 120.0
+    },
+    {
+      "competencia": "C4",
+      "media": 136.0,
+      "mediana": 120.0
+    },
+    {
+      "competencia": "C5",
+      "media": 119.77,
+      "mediana": 120.0
+    }
+  ]
+}

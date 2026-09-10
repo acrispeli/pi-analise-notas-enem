@@ -1,0 +1,50 @@
+{
+  "ano": 2024,
+  "experimento": "kmeans_perfis_relativos_competencias",
+  "objetivo": "Identificar padrões relativos de forças e fragilidades entre C1 e C5, reduzindo o efeito do desempenho geral.",
+  "populacao": {
+    "criterio": "TP_STATUS_REDACAO = 1",
+    "total_redacoes_validas": 3002710,
+    "tamanho_amostra": 100000
+  },
+  "variaveis": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+  ],
+  "pre_processamento": {
+    "centralizacao_por_participante": true,
+    "padronizacao": "StandardScaler",
+    "random_state": 42
+  },
+  "avaliacao": [
+    {
+      "k": 2,
+      "inercia": 369341.72,
+      "silhouette": 0.2486
+    },
+    {
+      "k": 3,
+      "inercia": 314180.49,
+      "silhouette": 0.2036
+    },
+    {
+      "k": 4,
+      "inercia": 278480.98,
+      "silhouette": 0.198
+    },
+    {
+      "k": 5,
+      "inercia": 254260.59,
+      "silhouette": 0.1938
+    },
+    {
+      "k": 6,
+      "inercia": 235563.14,
+      "silhouette": 0.1904
+    }
+  ],
+  "melhor_k_por_silhouette": 2
+}
