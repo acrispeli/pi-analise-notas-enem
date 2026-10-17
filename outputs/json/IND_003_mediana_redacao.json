@@ -1,0 +1,1459 @@
+{
+  "meta": {
+    "indicator_id": "IND-003",
+    "module_schema_version": "ind003-module-1.0.0",
+    "analysis_version": "2.2.0-ind001-ind002-ind003",
+    "dataset_version": "enem-2019-2025-csv-publico",
+    "generated_at": "2026-10-17T22:07:02+00:00",
+    "data_status": "draft",
+    "source_files": {
+      "2019": "MICRODADOS_ENEM_2019.csv",
+      "2020": "MICRODADOS_ENEM_2020.csv",
+      "2021": "MICRODADOS_ENEM_2021.csv",
+      "2022": "MICRODADOS_ENEM_2022.csv",
+      "2023": "MICRODADOS_ENEM_2023.csv",
+      "2024": "RESULTADOS_2024.csv",
+      "2025": "RESULTADOS_2025.csv"
+    },
+    "population_definition": "Mediana exata de NU_NOTA_REDACAO para redações com TP_STATUS_REDACAO = 1 e nota numérica entre 0 e 1000, inclusive, segundo UF de aplicação.",
+    "geographic_dimension": "SG_UF_PROVA",
+    "comparison_ind001_ind002": "aprovada (N, total de registros e soma das notas)",
+    "calculation": "mediana exata por frequências; sem amostragem"
+  },
+  "indicator": {
+    "id": "IND-003",
+    "name": "Mediana da nota da redação",
+    "unit": "pontos",
+    "dashboard_json_path": "pages.overview.kpis.median_score"
+  },
+  "years": [
+    {
+      "ano": 2019,
+      "arquivo_fonte": "MICRODADOS_ENEM_2019.csv",
+      "brasil": {
+        "n_validas": 3779356,
+        "mediana": 580.0,
+        "total_registros": 5095171
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 28568,
+          "mediana": 560.0,
+          "total_registros": 38645
+        },
+        {
+          "uf": "AL",
+          "n_validas": 67414,
+          "mediana": 580.0,
+          "total_registros": 89824
+        },
+        {
+          "uf": "AM",
+          "n_validas": 76590,
+          "mediana": 540.0,
+          "total_registros": 118144
+        },
+        {
+          "uf": "AP",
+          "n_validas": 30681,
+          "mediana": 560.0,
+          "total_registros": 42603
+        },
+        {
+          "uf": "BA",
+          "n_validas": 291318,
+          "mediana": 580.0,
+          "total_registros": 395427
+        },
+        {
+          "uf": "CE",
+          "n_validas": 219039,
+          "mediana": 600.0,
+          "total_registros": 294984
+        },
+        {
+          "uf": "DF",
+          "n_validas": 69803,
+          "mediana": 600.0,
+          "total_registros": 95849
+        },
+        {
+          "uf": "ES",
+          "n_validas": 74282,
+          "mediana": 600.0,
+          "total_registros": 102273
+        },
+        {
+          "uf": "GO",
+          "n_validas": 127089,
+          "mediana": 580.0,
+          "total_registros": 169980
+        },
+        {
+          "uf": "MA",
+          "n_validas": 163265,
+          "mediana": 560.0,
+          "total_registros": 218074
+        },
+        {
+          "uf": "MG",
+          "n_validas": 399511,
+          "mediana": 600.0,
+          "total_registros": 534625
+        },
+        {
+          "uf": "MS",
+          "n_validas": 50578,
+          "mediana": 560.0,
+          "total_registros": 70393
+        },
+        {
+          "uf": "MT",
+          "n_validas": 61833,
+          "mediana": 560.0,
+          "total_registros": 88121
+        },
+        {
+          "uf": "PA",
+          "n_validas": 208527,
+          "mediana": 580.0,
+          "total_registros": 279593
+        },
+        {
+          "uf": "PB",
+          "n_validas": 113779,
+          "mediana": 580.0,
+          "total_registros": 147176
+        },
+        {
+          "uf": "PE",
+          "n_validas": 205165,
+          "mediana": 580.0,
+          "total_registros": 275317
+        },
+        {
+          "uf": "PI",
+          "n_validas": 94494,
+          "mediana": 580.0,
+          "total_registros": 122312
+        },
+        {
+          "uf": "PR",
+          "n_validas": 157643,
+          "mediana": 580.0,
+          "total_registros": 211306
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 251839,
+          "mediana": 600.0,
+          "total_registros": 339716
+        },
+        {
+          "uf": "RN",
+          "n_validas": 91309,
+          "mediana": 600.0,
+          "total_registros": 119319
+        },
+        {
+          "uf": "RO",
+          "n_validas": 41709,
+          "mediana": 560.0,
+          "total_registros": 58639
+        },
+        {
+          "uf": "RR",
+          "n_validas": 9045,
+          "mediana": 560.0,
+          "total_registros": 12956
+        },
+        {
+          "uf": "RS",
+          "n_validas": 161685,
+          "mediana": 580.0,
+          "total_registros": 218469
+        },
+        {
+          "uf": "SC",
+          "n_validas": 83069,
+          "mediana": 600.0,
+          "total_registros": 110699
+        },
+        {
+          "uf": "SE",
+          "n_validas": 60128,
+          "mediana": 600.0,
+          "total_registros": 78488
+        },
+        {
+          "uf": "SP",
+          "n_validas": 607123,
+          "mediana": 600.0,
+          "total_registros": 815990
+        },
+        {
+          "uf": "TO",
+          "n_validas": 33870,
+          "mediana": 560.0,
+          "total_registros": 46249
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "validado_contra_ind001_ind002": true
+      }
+    },
+    {
+      "ano": 2020,
+      "arquivo_fonte": "MICRODADOS_ENEM_2020.csv",
+      "brasil": {
+        "n_validas": 2674914,
+        "mediana": 580.0,
+        "total_registros": 5783109
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 19609,
+          "mediana": 540.0,
+          "total_registros": 41824
+        },
+        {
+          "uf": "AL",
+          "n_validas": 52661,
+          "mediana": 560.0,
+          "total_registros": 102551
+        },
+        {
+          "uf": "AM",
+          "n_validas": 49067,
+          "mediana": 560.0,
+          "total_registros": 163426
+        },
+        {
+          "uf": "AP",
+          "n_validas": 20477,
+          "mediana": 540.0,
+          "total_registros": 47263
+        },
+        {
+          "uf": "BA",
+          "n_validas": 212225,
+          "mediana": 560.0,
+          "total_registros": 447691
+        },
+        {
+          "uf": "CE",
+          "n_validas": 162228,
+          "mediana": 580.0,
+          "total_registros": 325680
+        },
+        {
+          "uf": "DF",
+          "n_validas": 54790,
+          "mediana": 580.0,
+          "total_registros": 116932
+        },
+        {
+          "uf": "ES",
+          "n_validas": 48354,
+          "mediana": 600.0,
+          "total_registros": 105812
+        },
+        {
+          "uf": "GO",
+          "n_validas": 93632,
+          "mediana": 580.0,
+          "total_registros": 211069
+        },
+        {
+          "uf": "MA",
+          "n_validas": 115887,
+          "mediana": 560.0,
+          "total_registros": 238272
+        },
+        {
+          "uf": "MG",
+          "n_validas": 265162,
+          "mediana": 600.0,
+          "total_registros": 577211
+        },
+        {
+          "uf": "MS",
+          "n_validas": 34033,
+          "mediana": 560.0,
+          "total_registros": 84548
+        },
+        {
+          "uf": "MT",
+          "n_validas": 41514,
+          "mediana": 560.0,
+          "total_registros": 101727
+        },
+        {
+          "uf": "PA",
+          "n_validas": 157977,
+          "mediana": 560.0,
+          "total_registros": 330883
+        },
+        {
+          "uf": "PB",
+          "n_validas": 87453,
+          "mediana": 580.0,
+          "total_registros": 164965
+        },
+        {
+          "uf": "PE",
+          "n_validas": 156230,
+          "mediana": 580.0,
+          "total_registros": 315569
+        },
+        {
+          "uf": "PI",
+          "n_validas": 68313,
+          "mediana": 560.0,
+          "total_registros": 134678
+        },
+        {
+          "uf": "PR",
+          "n_validas": 111559,
+          "mediana": 580.0,
+          "total_registros": 239635
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 179829,
+          "mediana": 600.0,
+          "total_registros": 387480
+        },
+        {
+          "uf": "RN",
+          "n_validas": 67552,
+          "mediana": 580.0,
+          "total_registros": 131225
+        },
+        {
+          "uf": "RO",
+          "n_validas": 23831,
+          "mediana": 540.0,
+          "total_registros": 69594
+        },
+        {
+          "uf": "RR",
+          "n_validas": 6601,
+          "mediana": 540.0,
+          "total_registros": 16885
+        },
+        {
+          "uf": "RS",
+          "n_validas": 116454,
+          "mediana": 580.0,
+          "total_registros": 249130
+        },
+        {
+          "uf": "SC",
+          "n_validas": 55277,
+          "mediana": 580.0,
+          "total_registros": 121153
+        },
+        {
+          "uf": "SE",
+          "n_validas": 45399,
+          "mediana": 580.0,
+          "total_registros": 88205
+        },
+        {
+          "uf": "SP",
+          "n_validas": 403156,
+          "mediana": 600.0,
+          "total_registros": 910492
+        },
+        {
+          "uf": "TO",
+          "n_validas": 25644,
+          "mediana": 560.0,
+          "total_registros": 59209
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "validado_contra_ind001_ind002": true
+      }
+    },
+    {
+      "ano": 2021,
+      "arquivo_fonte": "MICRODADOS_ENEM_2021.csv",
+      "brasil": {
+        "n_validas": 2293797,
+        "mediana": 620.0,
+        "total_registros": 3389832
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 13270,
+          "mediana": 580.0,
+          "total_registros": 20336
+        },
+        {
+          "uf": "AL",
+          "n_validas": 39164,
+          "mediana": 620.0,
+          "total_registros": 56584
+        },
+        {
+          "uf": "AM",
+          "n_validas": 46243,
+          "mediana": 560.0,
+          "total_registros": 89778
+        },
+        {
+          "uf": "AP",
+          "n_validas": 13460,
+          "mediana": 580.0,
+          "total_registros": 21774
+        },
+        {
+          "uf": "BA",
+          "n_validas": 179036,
+          "mediana": 600.0,
+          "total_registros": 266194
+        },
+        {
+          "uf": "CE",
+          "n_validas": 141716,
+          "mediana": 600.0,
+          "total_registros": 220517
+        },
+        {
+          "uf": "DF",
+          "n_validas": 46443,
+          "mediana": 620.0,
+          "total_registros": 67501
+        },
+        {
+          "uf": "ES",
+          "n_validas": 43408,
+          "mediana": 620.0,
+          "total_registros": 64181
+        },
+        {
+          "uf": "GO",
+          "n_validas": 86653,
+          "mediana": 620.0,
+          "total_registros": 136915
+        },
+        {
+          "uf": "MA",
+          "n_validas": 85846,
+          "mediana": 600.0,
+          "total_registros": 127905
+        },
+        {
+          "uf": "MG",
+          "n_validas": 225566,
+          "mediana": 640.0,
+          "total_registros": 327829
+        },
+        {
+          "uf": "MS",
+          "n_validas": 27863,
+          "mediana": 600.0,
+          "total_registros": 42490
+        },
+        {
+          "uf": "MT",
+          "n_validas": 36038,
+          "mediana": 600.0,
+          "total_registros": 56085
+        },
+        {
+          "uf": "PA",
+          "n_validas": 121959,
+          "mediana": 600.0,
+          "total_registros": 185978
+        },
+        {
+          "uf": "PB",
+          "n_validas": 71261,
+          "mediana": 620.0,
+          "total_registros": 102002
+        },
+        {
+          "uf": "PE",
+          "n_validas": 132247,
+          "mediana": 600.0,
+          "total_registros": 193616
+        },
+        {
+          "uf": "PI",
+          "n_validas": 56887,
+          "mediana": 620.0,
+          "total_registros": 79969
+        },
+        {
+          "uf": "PR",
+          "n_validas": 99579,
+          "mediana": 600.0,
+          "total_registros": 144282
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 163553,
+          "mediana": 620.0,
+          "total_registros": 238347
+        },
+        {
+          "uf": "RN",
+          "n_validas": 57335,
+          "mediana": 620.0,
+          "total_registros": 80820
+        },
+        {
+          "uf": "RO",
+          "n_validas": 19602,
+          "mediana": 580.0,
+          "total_registros": 32801
+        },
+        {
+          "uf": "RR",
+          "n_validas": 4977,
+          "mediana": 580.0,
+          "total_registros": 8056
+        },
+        {
+          "uf": "RS",
+          "n_validas": 104351,
+          "mediana": 620.0,
+          "total_registros": 150484
+        },
+        {
+          "uf": "SC",
+          "n_validas": 56618,
+          "mediana": 620.0,
+          "total_registros": 80765
+        },
+        {
+          "uf": "SE",
+          "n_validas": 37772,
+          "mediana": 620.0,
+          "total_registros": 53796
+        },
+        {
+          "uf": "SP",
+          "n_validas": 362590,
+          "mediana": 620.0,
+          "total_registros": 509954
+        },
+        {
+          "uf": "TO",
+          "n_validas": 20360,
+          "mediana": 600.0,
+          "total_registros": 30873
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "validado_contra_ind001_ind002": true
+      }
+    },
+    {
+      "ano": 2022,
+      "arquivo_fonte": "MICRODADOS_ENEM_2022.csv",
+      "brasil": {
+        "n_validas": 2363615,
+        "mediana": 640.0,
+        "total_registros": 3476105
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 14596,
+          "mediana": 600.0,
+          "total_registros": 22601
+        },
+        {
+          "uf": "AL",
+          "n_validas": 43183,
+          "mediana": 620.0,
+          "total_registros": 63945
+        },
+        {
+          "uf": "AM",
+          "n_validas": 41841,
+          "mediana": 580.0,
+          "total_registros": 80986
+        },
+        {
+          "uf": "AP",
+          "n_validas": 14455,
+          "mediana": 600.0,
+          "total_registros": 22674
+        },
+        {
+          "uf": "BA",
+          "n_validas": 183862,
+          "mediana": 620.0,
+          "total_registros": 265166
+        },
+        {
+          "uf": "CE",
+          "n_validas": 150973,
+          "mediana": 640.0,
+          "total_registros": 226377
+        },
+        {
+          "uf": "DF",
+          "n_validas": 45324,
+          "mediana": 640.0,
+          "total_registros": 65401
+        },
+        {
+          "uf": "ES",
+          "n_validas": 43182,
+          "mediana": 660.0,
+          "total_registros": 63700
+        },
+        {
+          "uf": "GO",
+          "n_validas": 91361,
+          "mediana": 640.0,
+          "total_registros": 141622
+        },
+        {
+          "uf": "MA",
+          "n_validas": 89093,
+          "mediana": 600.0,
+          "total_registros": 132916
+        },
+        {
+          "uf": "MG",
+          "n_validas": 217330,
+          "mediana": 680.0,
+          "total_registros": 309781
+        },
+        {
+          "uf": "MS",
+          "n_validas": 28693,
+          "mediana": 620.0,
+          "total_registros": 44683
+        },
+        {
+          "uf": "MT",
+          "n_validas": 37595,
+          "mediana": 620.0,
+          "total_registros": 59381
+        },
+        {
+          "uf": "PA",
+          "n_validas": 133917,
+          "mediana": 600.0,
+          "total_registros": 202621
+        },
+        {
+          "uf": "PB",
+          "n_validas": 71866,
+          "mediana": 640.0,
+          "total_registros": 103238
+        },
+        {
+          "uf": "PE",
+          "n_validas": 128503,
+          "mediana": 640.0,
+          "total_registros": 189595
+        },
+        {
+          "uf": "PI",
+          "n_validas": 59139,
+          "mediana": 640.0,
+          "total_registros": 84400
+        },
+        {
+          "uf": "PR",
+          "n_validas": 103046,
+          "mediana": 620.0,
+          "total_registros": 150396
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 171676,
+          "mediana": 660.0,
+          "total_registros": 250890
+        },
+        {
+          "uf": "RN",
+          "n_validas": 62045,
+          "mediana": 640.0,
+          "total_registros": 88049
+        },
+        {
+          "uf": "RO",
+          "n_validas": 19720,
+          "mediana": 600.0,
+          "total_registros": 31969
+        },
+        {
+          "uf": "RR",
+          "n_validas": 4953,
+          "mediana": 600.0,
+          "total_registros": 8434
+        },
+        {
+          "uf": "RS",
+          "n_validas": 104840,
+          "mediana": 640.0,
+          "total_registros": 152295
+        },
+        {
+          "uf": "SC",
+          "n_validas": 57787,
+          "mediana": 640.0,
+          "total_registros": 82791
+        },
+        {
+          "uf": "SE",
+          "n_validas": 41577,
+          "mediana": 660.0,
+          "total_registros": 58312
+        },
+        {
+          "uf": "SP",
+          "n_validas": 383826,
+          "mediana": 640.0,
+          "total_registros": 544442
+        },
+        {
+          "uf": "TO",
+          "n_validas": 19232,
+          "mediana": 620.0,
+          "total_registros": 29440
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "validado_contra_ind001_ind002": true
+      }
+    },
+    {
+      "ano": 2023,
+      "arquivo_fonte": "MICRODADOS_ENEM_2023.csv",
+      "brasil": {
+        "n_validas": 2704814,
+        "mediana": 620.0,
+        "total_registros": 3933955
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 15475,
+          "mediana": 580.0,
+          "total_registros": 24274
+        },
+        {
+          "uf": "AL",
+          "n_validas": 54605,
+          "mediana": 620.0,
+          "total_registros": 82760
+        },
+        {
+          "uf": "AM",
+          "n_validas": 48414,
+          "mediana": 560.0,
+          "total_registros": 92916
+        },
+        {
+          "uf": "AP",
+          "n_validas": 18351,
+          "mediana": 580.0,
+          "total_registros": 28807
+        },
+        {
+          "uf": "BA",
+          "n_validas": 221453,
+          "mediana": 620.0,
+          "total_registros": 324268
+        },
+        {
+          "uf": "CE",
+          "n_validas": 168615,
+          "mediana": 640.0,
+          "total_registros": 241960
+        },
+        {
+          "uf": "DF",
+          "n_validas": 51406,
+          "mediana": 640.0,
+          "total_registros": 72975
+        },
+        {
+          "uf": "ES",
+          "n_validas": 50099,
+          "mediana": 640.0,
+          "total_registros": 73724
+        },
+        {
+          "uf": "GO",
+          "n_validas": 98568,
+          "mediana": 640.0,
+          "total_registros": 149110
+        },
+        {
+          "uf": "MA",
+          "n_validas": 111310,
+          "mediana": 600.0,
+          "total_registros": 165756
+        },
+        {
+          "uf": "MG",
+          "n_validas": 254724,
+          "mediana": 660.0,
+          "total_registros": 358575
+        },
+        {
+          "uf": "MS",
+          "n_validas": 31901,
+          "mediana": 600.0,
+          "total_registros": 47455
+        },
+        {
+          "uf": "MT",
+          "n_validas": 41739,
+          "mediana": 600.0,
+          "total_registros": 63912
+        },
+        {
+          "uf": "PA",
+          "n_validas": 153006,
+          "mediana": 600.0,
+          "total_registros": 229162
+        },
+        {
+          "uf": "PB",
+          "n_validas": 86548,
+          "mediana": 640.0,
+          "total_registros": 124511
+        },
+        {
+          "uf": "PE",
+          "n_validas": 150756,
+          "mediana": 640.0,
+          "total_registros": 218859
+        },
+        {
+          "uf": "PI",
+          "n_validas": 69561,
+          "mediana": 620.0,
+          "total_registros": 99639
+        },
+        {
+          "uf": "PR",
+          "n_validas": 118364,
+          "mediana": 600.0,
+          "total_registros": 166506
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 189071,
+          "mediana": 640.0,
+          "total_registros": 282296
+        },
+        {
+          "uf": "RN",
+          "n_validas": 72615,
+          "mediana": 620.0,
+          "total_registros": 100706
+        },
+        {
+          "uf": "RO",
+          "n_validas": 22929,
+          "mediana": 600.0,
+          "total_registros": 36038
+        },
+        {
+          "uf": "RR",
+          "n_validas": 6140,
+          "mediana": 600.0,
+          "total_registros": 9639
+        },
+        {
+          "uf": "RS",
+          "n_validas": 114244,
+          "mediana": 640.0,
+          "total_registros": 159919
+        },
+        {
+          "uf": "SC",
+          "n_validas": 64493,
+          "mediana": 640.0,
+          "total_registros": 91263
+        },
+        {
+          "uf": "SE",
+          "n_validas": 46731,
+          "mediana": 640.0,
+          "total_registros": 65540
+        },
+        {
+          "uf": "SP",
+          "n_validas": 421831,
+          "mediana": 640.0,
+          "total_registros": 590767
+        },
+        {
+          "uf": "TO",
+          "n_validas": 21865,
+          "mediana": 600.0,
+          "total_registros": 32618
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "validado_contra_ind001_ind002": true
+      }
+    },
+    {
+      "ano": 2024,
+      "arquivo_fonte": "RESULTADOS_2024.csv",
+      "brasil": {
+        "n_validas": 3002710,
+        "mediana": 640.0,
+        "total_registros": 4332944
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 17207,
+          "mediana": 600.0,
+          "total_registros": 26424
+        },
+        {
+          "uf": "AL",
+          "n_validas": 60066,
+          "mediana": 640.0,
+          "total_registros": 88896
+        },
+        {
+          "uf": "AM",
+          "n_validas": 53319,
+          "mediana": 580.0,
+          "total_registros": 96898
+        },
+        {
+          "uf": "AP",
+          "n_validas": 19920,
+          "mediana": 600.0,
+          "total_registros": 30650
+        },
+        {
+          "uf": "BA",
+          "n_validas": 254741,
+          "mediana": 620.0,
+          "total_registros": 376845
+        },
+        {
+          "uf": "CE",
+          "n_validas": 180900,
+          "mediana": 680.0,
+          "total_registros": 250607
+        },
+        {
+          "uf": "DF",
+          "n_validas": 53470,
+          "mediana": 660.0,
+          "total_registros": 74520
+        },
+        {
+          "uf": "ES",
+          "n_validas": 52522,
+          "mediana": 680.0,
+          "total_registros": 74543
+        },
+        {
+          "uf": "GO",
+          "n_validas": 105004,
+          "mediana": 680.0,
+          "total_registros": 151158
+        },
+        {
+          "uf": "MA",
+          "n_validas": 123246,
+          "mediana": 620.0,
+          "total_registros": 178833
+        },
+        {
+          "uf": "MG",
+          "n_validas": 284268,
+          "mediana": 680.0,
+          "total_registros": 393824
+        },
+        {
+          "uf": "MS",
+          "n_validas": 34551,
+          "mediana": 620.0,
+          "total_registros": 51311
+        },
+        {
+          "uf": "MT",
+          "n_validas": 43717,
+          "mediana": 640.0,
+          "total_registros": 67782
+        },
+        {
+          "uf": "PA",
+          "n_validas": 172059,
+          "mediana": 600.0,
+          "total_registros": 248061
+        },
+        {
+          "uf": "PB",
+          "n_validas": 91286,
+          "mediana": 660.0,
+          "total_registros": 128546
+        },
+        {
+          "uf": "PE",
+          "n_validas": 167955,
+          "mediana": 660.0,
+          "total_registros": 237615
+        },
+        {
+          "uf": "PI",
+          "n_validas": 78728,
+          "mediana": 640.0,
+          "total_registros": 108113
+        },
+        {
+          "uf": "PR",
+          "n_validas": 130385,
+          "mediana": 640.0,
+          "total_registros": 179954
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 203818,
+          "mediana": 660.0,
+          "total_registros": 289397
+        },
+        {
+          "uf": "RN",
+          "n_validas": 74977,
+          "mediana": 660.0,
+          "total_registros": 102215
+        },
+        {
+          "uf": "RO",
+          "n_validas": 25421,
+          "mediana": 640.0,
+          "total_registros": 38609
+        },
+        {
+          "uf": "RR",
+          "n_validas": 8223,
+          "mediana": 600.0,
+          "total_registros": 12695
+        },
+        {
+          "uf": "RS",
+          "n_validas": 148365,
+          "mediana": 640.0,
+          "total_registros": 279039
+        },
+        {
+          "uf": "SC",
+          "n_validas": 67899,
+          "mediana": 660.0,
+          "total_registros": 95126
+        },
+        {
+          "uf": "SE",
+          "n_validas": 50903,
+          "mediana": 680.0,
+          "total_registros": 69529
+        },
+        {
+          "uf": "SP",
+          "n_validas": 476463,
+          "mediana": 660.0,
+          "total_registros": 647215
+        },
+        {
+          "uf": "TO",
+          "n_validas": 23297,
+          "mediana": 640.0,
+          "total_registros": 34539
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "validado_contra_ind001_ind002": true
+      }
+    },
+    {
+      "ano": 2025,
+      "arquivo_fonte": "RESULTADOS_2025.csv",
+      "brasil": {
+        "n_validas": 3245696,
+        "mediana": 600.0,
+        "total_registros": 4810772
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 17895,
+          "mediana": 580.0,
+          "total_registros": 28957
+        },
+        {
+          "uf": "AL",
+          "n_validas": 62984,
+          "mediana": 600.0,
+          "total_registros": 96480
+        },
+        {
+          "uf": "AM",
+          "n_validas": 58405,
+          "mediana": 560.0,
+          "total_registros": 110831
+        },
+        {
+          "uf": "AP",
+          "n_validas": 21072,
+          "mediana": 580.0,
+          "total_registros": 33190
+        },
+        {
+          "uf": "BA",
+          "n_validas": 281334,
+          "mediana": 580.0,
+          "total_registros": 427983
+        },
+        {
+          "uf": "CE",
+          "n_validas": 195244,
+          "mediana": 620.0,
+          "total_registros": 275902
+        },
+        {
+          "uf": "DF",
+          "n_validas": 58214,
+          "mediana": 620.0,
+          "total_registros": 82955
+        },
+        {
+          "uf": "ES",
+          "n_validas": 57041,
+          "mediana": 620.0,
+          "total_registros": 85910
+        },
+        {
+          "uf": "GO",
+          "n_validas": 113651,
+          "mediana": 620.0,
+          "total_registros": 166747
+        },
+        {
+          "uf": "MA",
+          "n_validas": 138346,
+          "mediana": 580.0,
+          "total_registros": 211370
+        },
+        {
+          "uf": "MG",
+          "n_validas": 314939,
+          "mediana": 640.0,
+          "total_registros": 464937
+        },
+        {
+          "uf": "MS",
+          "n_validas": 38579,
+          "mediana": 580.0,
+          "total_registros": 57932
+        },
+        {
+          "uf": "MT",
+          "n_validas": 47849,
+          "mediana": 600.0,
+          "total_registros": 80396
+        },
+        {
+          "uf": "PA",
+          "n_validas": 184690,
+          "mediana": 580.0,
+          "total_registros": 289328
+        },
+        {
+          "uf": "PB",
+          "n_validas": 96886,
+          "mediana": 620.0,
+          "total_registros": 142035
+        },
+        {
+          "uf": "PE",
+          "n_validas": 185793,
+          "mediana": 600.0,
+          "total_registros": 272279
+        },
+        {
+          "uf": "PI",
+          "n_validas": 82823,
+          "mediana": 600.0,
+          "total_registros": 120032
+        },
+        {
+          "uf": "PR",
+          "n_validas": 136868,
+          "mediana": 600.0,
+          "total_registros": 195836
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 226220,
+          "mediana": 620.0,
+          "total_registros": 328943
+        },
+        {
+          "uf": "RN",
+          "n_validas": 80888,
+          "mediana": 600.0,
+          "total_registros": 113208
+        },
+        {
+          "uf": "RO",
+          "n_validas": 28916,
+          "mediana": 580.0,
+          "total_registros": 46798
+        },
+        {
+          "uf": "RR",
+          "n_validas": 8097,
+          "mediana": 560.0,
+          "total_registros": 14158
+        },
+        {
+          "uf": "RS",
+          "n_validas": 125861,
+          "mediana": 620.0,
+          "total_registros": 186503
+        },
+        {
+          "uf": "SC",
+          "n_validas": 75867,
+          "mediana": 620.0,
+          "total_registros": 110459
+        },
+        {
+          "uf": "SE",
+          "n_validas": 55214,
+          "mediana": 620.0,
+          "total_registros": 78341
+        },
+        {
+          "uf": "SP",
+          "n_validas": 527592,
+          "mediana": 620.0,
+          "total_registros": 751612
+        },
+        {
+          "uf": "TO",
+          "n_validas": 24428,
+          "mediana": 600.0,
+          "total_registros": 37650
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "validado_contra_ind001_ind002": true
+      }
+    }
+  ],
+  "historical": {
+    "periodo": "2019-2025",
+    "brasil": {
+      "n_validas": 20064902,
+      "mediana": 600.0
+    },
+    "ufs": [
+      {
+        "uf": "AC",
+        "n_validas": 126620,
+        "mediana": 580.0
+      },
+      {
+        "uf": "AL",
+        "n_validas": 380077,
+        "mediana": 600.0
+      },
+      {
+        "uf": "AM",
+        "n_validas": 373879,
+        "mediana": 560.0
+      },
+      {
+        "uf": "AP",
+        "n_validas": 138416,
+        "mediana": 580.0
+      },
+      {
+        "uf": "BA",
+        "n_validas": 1623969,
+        "mediana": 600.0
+      },
+      {
+        "uf": "CE",
+        "n_validas": 1218715,
+        "mediana": 620.0
+      },
+      {
+        "uf": "DF",
+        "n_validas": 379450,
+        "mediana": 620.0
+      },
+      {
+        "uf": "ES",
+        "n_validas": 368888,
+        "mediana": 620.0
+      },
+      {
+        "uf": "GO",
+        "n_validas": 715958,
+        "mediana": 620.0
+      },
+      {
+        "uf": "MA",
+        "n_validas": 826993,
+        "mediana": 580.0
+      },
+      {
+        "uf": "MG",
+        "n_validas": 1961500,
+        "mediana": 640.0
+      },
+      {
+        "uf": "MS",
+        "n_validas": 246198,
+        "mediana": 580.0
+      },
+      {
+        "uf": "MT",
+        "n_validas": 310285,
+        "mediana": 600.0
+      },
+      {
+        "uf": "PA",
+        "n_validas": 1132135,
+        "mediana": 580.0
+      },
+      {
+        "uf": "PB",
+        "n_validas": 619079,
+        "mediana": 620.0
+      },
+      {
+        "uf": "PE",
+        "n_validas": 1126649,
+        "mediana": 600.0
+      },
+      {
+        "uf": "PI",
+        "n_validas": 509945,
+        "mediana": 600.0
+      },
+      {
+        "uf": "PR",
+        "n_validas": 857444,
+        "mediana": 600.0
+      },
+      {
+        "uf": "RJ",
+        "n_validas": 1386006,
+        "mediana": 620.0
+      },
+      {
+        "uf": "RN",
+        "n_validas": 506721,
+        "mediana": 620.0
+      },
+      {
+        "uf": "RO",
+        "n_validas": 182128,
+        "mediana": 580.0
+      },
+      {
+        "uf": "RR",
+        "n_validas": 48036,
+        "mediana": 580.0
+      },
+      {
+        "uf": "RS",
+        "n_validas": 875800,
+        "mediana": 620.0
+      },
+      {
+        "uf": "SC",
+        "n_validas": 461010,
+        "mediana": 620.0
+      },
+      {
+        "uf": "SE",
+        "n_validas": 337724,
+        "mediana": 620.0
+      },
+      {
+        "uf": "SP",
+        "n_validas": 3182581,
+        "mediana": 620.0
+      },
+      {
+        "uf": "TO",
+        "n_validas": 168696,
+        "mediana": 580.0
+      }
+    ],
+    "nota": "Mediana calculada a partir da distribuição conjunta das notas de todas as edições de 2019 a 2025. Não é a média ou mediana das medianas anuais. Refere-se a participações, não a indivíduos únicos; UF é local de prova."
+  },
+  "dashboard_files": [
+    "dashboard_enem_2019.json",
+    "dashboard_enem_2020.json",
+    "dashboard_enem_2021.json",
+    "dashboard_enem_2022.json",
+    "dashboard_enem_2023.json",
+    "dashboard_enem_2024.json",
+    "dashboard_enem_2025.json"
+  ]
+}

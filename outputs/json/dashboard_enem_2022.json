@@ -1,0 +1,1279 @@
+{
+  "meta": {
+    "schema_version": "1.0.0",
+    "analysis_version": "2.2.0-ind001-ind002-ind003",
+    "dataset_version": "enem-2022-csv-publico",
+    "generated_at": "2026-10-17T22:07:02+00:00",
+    "year": 2022,
+    "data_status": "draft",
+    "source_files": [
+      "MICRODADOS_ENEM_2022.csv"
+    ],
+    "population_definition": "Contagem de registros com TP_STATUS_REDACAO = 1 e NU_NOTA_REDACAO preenchida, numericamente interpretável e no intervalo de 0 a 1000.",
+    "warnings": [
+      "Resultado ainda depende de revisão e aprovação acadêmica.",
+      "Consolidado histórico conta participações, não pessoas únicas.",
+      "IND-002 validado tecnicamente; publicação acadêmica ainda pendente.",
+      "IND-003 ainda depende de validação acadêmica para publicação."
+    ]
+  },
+  "filters": {
+    "active": {
+      "year": 2022,
+      "population": "valid_essay",
+      "uf_exam": "BR"
+    },
+    "available": {
+      "year": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "population": [
+        {
+          "code": "valid_essay",
+          "label": "Redações válidas"
+        }
+      ],
+      "uf_exam": [
+        "BR",
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
+    },
+    "combination_policy": "IND-001 permite ano e UF de aplicação; demais filtros serão habilitados por indicadores posteriores."
+  },
+  "quality": {
+    "join_diagnostics": {
+      "status": "not_required",
+      "reason": "As três variáveis do IND-001 constam na mesma fonte de resultados."
+    },
+    "missingness": [
+      {
+        "variable": "SG_UF_PROVA",
+        "n_missing_valid": 0
+      },
+      {
+        "variable": "NU_NOTA_REDACAO",
+        "n_missing_status_1": 0
+      }
+    ],
+    "suppression": {
+      "min_group_n": 30,
+      "suppressed_cells": 0,
+      "note": "Limiar de 30 verificado para Brasil e UF; publicação é bloqueada se houver contagem positiva inferior a 30."
+    },
+    "indicator_validation": {
+      "status": "ok",
+      "status_1_sem_nota": 0,
+      "status_1_nota_invalida": 0,
+      "validas_uf_ausente": 0,
+      "validas_uf_nao_reconhecida": 0,
+      "registros_uf_nao_informada": 0,
+      "soma_27_ufs_igual_brasil": true
+    },
+    "ind002_validation": {
+      "status": "ok",
+      "status1_sem_nota": 0,
+      "status1_nota_invalida": 0,
+      "validas_sem_uf": 0,
+      "validas_uf_desconhecida": 0,
+      "soma_notas_uf_igual_brasil": true,
+      "soma_contagens_uf_igual_brasil": true,
+      "validado_contra_ind001": true
+    },
+    "ind003_validation": {
+      "status": "ok",
+      "status1_sem_nota": 0,
+      "status1_nota_invalida": 0,
+      "validas_sem_uf": 0,
+      "validas_uf_desconhecida": 0,
+      "soma_contagens_uf_igual_brasil": true,
+      "validado_contra_ind001_ind002": true
+    }
+  },
+  "pages": {
+    "overview": {
+      "status": "ok",
+      "kpis": {
+        "valid_essays": 2363615,
+        "mean_score": 652.4511,
+        "median_score": 640.0
+      },
+      "ind001": {
+        "indicator_id": "IND-001",
+        "unit": "redacoes",
+        "denominator": 3476105,
+        "national_percentage": 67.9961,
+        "by_uf": [
+          {
+            "uf": "AC",
+            "redacoes_validas": 14596,
+            "total_registros": 22601,
+            "percentual_validas": 64.5812,
+            "participacao_no_brasil_pct": 0.6175
+          },
+          {
+            "uf": "AL",
+            "redacoes_validas": 43183,
+            "total_registros": 63945,
+            "percentual_validas": 67.5315,
+            "participacao_no_brasil_pct": 1.827
+          },
+          {
+            "uf": "AM",
+            "redacoes_validas": 41841,
+            "total_registros": 80986,
+            "percentual_validas": 51.6645,
+            "participacao_no_brasil_pct": 1.7702
+          },
+          {
+            "uf": "AP",
+            "redacoes_validas": 14455,
+            "total_registros": 22674,
+            "percentual_validas": 63.7514,
+            "participacao_no_brasil_pct": 0.6116
+          },
+          {
+            "uf": "BA",
+            "redacoes_validas": 183862,
+            "total_registros": 265166,
+            "percentual_validas": 69.3385,
+            "participacao_no_brasil_pct": 7.7788
+          },
+          {
+            "uf": "CE",
+            "redacoes_validas": 150973,
+            "total_registros": 226377,
+            "percentual_validas": 66.691,
+            "participacao_no_brasil_pct": 6.3874
+          },
+          {
+            "uf": "DF",
+            "redacoes_validas": 45324,
+            "total_registros": 65401,
+            "percentual_validas": 69.3017,
+            "participacao_no_brasil_pct": 1.9176
+          },
+          {
+            "uf": "ES",
+            "redacoes_validas": 43182,
+            "total_registros": 63700,
+            "percentual_validas": 67.7896,
+            "participacao_no_brasil_pct": 1.8269
+          },
+          {
+            "uf": "GO",
+            "redacoes_validas": 91361,
+            "total_registros": 141622,
+            "percentual_validas": 64.5105,
+            "participacao_no_brasil_pct": 3.8653
+          },
+          {
+            "uf": "MA",
+            "redacoes_validas": 89093,
+            "total_registros": 132916,
+            "percentual_validas": 67.0296,
+            "participacao_no_brasil_pct": 3.7694
+          },
+          {
+            "uf": "MG",
+            "redacoes_validas": 217330,
+            "total_registros": 309781,
+            "percentual_validas": 70.156,
+            "participacao_no_brasil_pct": 9.1948
+          },
+          {
+            "uf": "MS",
+            "redacoes_validas": 28693,
+            "total_registros": 44683,
+            "percentual_validas": 64.2146,
+            "participacao_no_brasil_pct": 1.2139
+          },
+          {
+            "uf": "MT",
+            "redacoes_validas": 37595,
+            "total_registros": 59381,
+            "percentual_validas": 63.3115,
+            "participacao_no_brasil_pct": 1.5906
+          },
+          {
+            "uf": "PA",
+            "redacoes_validas": 133917,
+            "total_registros": 202621,
+            "percentual_validas": 66.0924,
+            "participacao_no_brasil_pct": 5.6658
+          },
+          {
+            "uf": "PB",
+            "redacoes_validas": 71866,
+            "total_registros": 103238,
+            "percentual_validas": 69.612,
+            "participacao_no_brasil_pct": 3.0405
+          },
+          {
+            "uf": "PE",
+            "redacoes_validas": 128503,
+            "total_registros": 189595,
+            "percentual_validas": 67.7776,
+            "participacao_no_brasil_pct": 5.4367
+          },
+          {
+            "uf": "PI",
+            "redacoes_validas": 59139,
+            "total_registros": 84400,
+            "percentual_validas": 70.0699,
+            "participacao_no_brasil_pct": 2.5021
+          },
+          {
+            "uf": "PR",
+            "redacoes_validas": 103046,
+            "total_registros": 150396,
+            "percentual_validas": 68.5164,
+            "participacao_no_brasil_pct": 4.3597
+          },
+          {
+            "uf": "RJ",
+            "redacoes_validas": 171676,
+            "total_registros": 250890,
+            "percentual_validas": 68.4268,
+            "participacao_no_brasil_pct": 7.2633
+          },
+          {
+            "uf": "RN",
+            "redacoes_validas": 62045,
+            "total_registros": 88049,
+            "percentual_validas": 70.4664,
+            "participacao_no_brasil_pct": 2.625
+          },
+          {
+            "uf": "RO",
+            "redacoes_validas": 19720,
+            "total_registros": 31969,
+            "percentual_validas": 61.6848,
+            "participacao_no_brasil_pct": 0.8343
+          },
+          {
+            "uf": "RR",
+            "redacoes_validas": 4953,
+            "total_registros": 8434,
+            "percentual_validas": 58.7266,
+            "participacao_no_brasil_pct": 0.2096
+          },
+          {
+            "uf": "RS",
+            "redacoes_validas": 104840,
+            "total_registros": 152295,
+            "percentual_validas": 68.8401,
+            "participacao_no_brasil_pct": 4.4356
+          },
+          {
+            "uf": "SC",
+            "redacoes_validas": 57787,
+            "total_registros": 82791,
+            "percentual_validas": 69.7986,
+            "participacao_no_brasil_pct": 2.4449
+          },
+          {
+            "uf": "SE",
+            "redacoes_validas": 41577,
+            "total_registros": 58312,
+            "percentual_validas": 71.3009,
+            "participacao_no_brasil_pct": 1.759
+          },
+          {
+            "uf": "SP",
+            "redacoes_validas": 383826,
+            "total_registros": 544442,
+            "percentual_validas": 70.499,
+            "participacao_no_brasil_pct": 16.2389
+          },
+          {
+            "uf": "TO",
+            "redacoes_validas": 19232,
+            "total_registros": 29440,
+            "percentual_validas": 65.3261,
+            "participacao_no_brasil_pct": 0.8137
+          }
+        ]
+      },
+      "ind002": {
+        "indicator_id": "IND-002",
+        "unit": "pontos",
+        "n": 2363615,
+        "mean_score": 652.4511,
+        "by_uf": [
+          {
+            "uf": "AC",
+            "n": 14596,
+            "mean_score": 616.1469
+          },
+          {
+            "uf": "AL",
+            "n": 43183,
+            "mean_score": 643.4074
+          },
+          {
+            "uf": "AM",
+            "n": 41841,
+            "mean_score": 590.9969
+          },
+          {
+            "uf": "AP",
+            "n": 14455,
+            "mean_score": 610.2456
+          },
+          {
+            "uf": "BA",
+            "n": 183862,
+            "mean_score": 640.6765
+          },
+          {
+            "uf": "CE",
+            "n": 150973,
+            "mean_score": 652.4519
+          },
+          {
+            "uf": "DF",
+            "n": 45324,
+            "mean_score": 661.0604
+          },
+          {
+            "uf": "ES",
+            "n": 43182,
+            "mean_score": 669.44
+          },
+          {
+            "uf": "GO",
+            "n": 91361,
+            "mean_score": 654.5957
+          },
+          {
+            "uf": "MA",
+            "n": 89093,
+            "mean_score": 628.8411
+          },
+          {
+            "uf": "MG",
+            "n": 217330,
+            "mean_score": 682.2767
+          },
+          {
+            "uf": "MS",
+            "n": 28693,
+            "mean_score": 634.209
+          },
+          {
+            "uf": "MT",
+            "n": 37595,
+            "mean_score": 633.88
+          },
+          {
+            "uf": "PA",
+            "n": 133917,
+            "mean_score": 629.3204
+          },
+          {
+            "uf": "PB",
+            "n": 71866,
+            "mean_score": 658.4655
+          },
+          {
+            "uf": "PE",
+            "n": 128503,
+            "mean_score": 651.7674
+          },
+          {
+            "uf": "PI",
+            "n": 59139,
+            "mean_score": 651.7598
+          },
+          {
+            "uf": "PR",
+            "n": 103046,
+            "mean_score": 639.0317
+          },
+          {
+            "uf": "RJ",
+            "n": 171676,
+            "mean_score": 665.616
+          },
+          {
+            "uf": "RN",
+            "n": 62045,
+            "mean_score": 652.1364
+          },
+          {
+            "uf": "RO",
+            "n": 19720,
+            "mean_score": 625.6339
+          },
+          {
+            "uf": "RR",
+            "n": 4953,
+            "mean_score": 623.4201
+          },
+          {
+            "uf": "RS",
+            "n": 104840,
+            "mean_score": 655.236
+          },
+          {
+            "uf": "SC",
+            "n": 57787,
+            "mean_score": 660.6143
+          },
+          {
+            "uf": "SE",
+            "n": 41577,
+            "mean_score": 663.5245
+          },
+          {
+            "uf": "SP",
+            "n": 383826,
+            "mean_score": 661.5578
+          },
+          {
+            "uf": "TO",
+            "n": 19232,
+            "mean_score": 635.7841
+          }
+        ]
+      },
+      "ind003": {
+        "indicator_id": "IND-003",
+        "unit": "pontos",
+        "n": 2363615,
+        "median_score": 640.0,
+        "by_uf": [
+          {
+            "uf": "AC",
+            "n": 14596,
+            "median_score": 600.0
+          },
+          {
+            "uf": "AL",
+            "n": 43183,
+            "median_score": 620.0
+          },
+          {
+            "uf": "AM",
+            "n": 41841,
+            "median_score": 580.0
+          },
+          {
+            "uf": "AP",
+            "n": 14455,
+            "median_score": 600.0
+          },
+          {
+            "uf": "BA",
+            "n": 183862,
+            "median_score": 620.0
+          },
+          {
+            "uf": "CE",
+            "n": 150973,
+            "median_score": 640.0
+          },
+          {
+            "uf": "DF",
+            "n": 45324,
+            "median_score": 640.0
+          },
+          {
+            "uf": "ES",
+            "n": 43182,
+            "median_score": 660.0
+          },
+          {
+            "uf": "GO",
+            "n": 91361,
+            "median_score": 640.0
+          },
+          {
+            "uf": "MA",
+            "n": 89093,
+            "median_score": 600.0
+          },
+          {
+            "uf": "MG",
+            "n": 217330,
+            "median_score": 680.0
+          },
+          {
+            "uf": "MS",
+            "n": 28693,
+            "median_score": 620.0
+          },
+          {
+            "uf": "MT",
+            "n": 37595,
+            "median_score": 620.0
+          },
+          {
+            "uf": "PA",
+            "n": 133917,
+            "median_score": 600.0
+          },
+          {
+            "uf": "PB",
+            "n": 71866,
+            "median_score": 640.0
+          },
+          {
+            "uf": "PE",
+            "n": 128503,
+            "median_score": 640.0
+          },
+          {
+            "uf": "PI",
+            "n": 59139,
+            "median_score": 640.0
+          },
+          {
+            "uf": "PR",
+            "n": 103046,
+            "median_score": 620.0
+          },
+          {
+            "uf": "RJ",
+            "n": 171676,
+            "median_score": 660.0
+          },
+          {
+            "uf": "RN",
+            "n": 62045,
+            "median_score": 640.0
+          },
+          {
+            "uf": "RO",
+            "n": 19720,
+            "median_score": 600.0
+          },
+          {
+            "uf": "RR",
+            "n": 4953,
+            "median_score": 600.0
+          },
+          {
+            "uf": "RS",
+            "n": 104840,
+            "median_score": 640.0
+          },
+          {
+            "uf": "SC",
+            "n": 57787,
+            "median_score": 640.0
+          },
+          {
+            "uf": "SE",
+            "n": 41577,
+            "median_score": 660.0
+          },
+          {
+            "uf": "SP",
+            "n": 383826,
+            "median_score": 640.0
+          },
+          {
+            "uf": "TO",
+            "n": 19232,
+            "median_score": 620.0
+          }
+        ]
+      }
+    },
+    "competencies": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "evaluators": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "high_performance": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "socioeconomic": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "ml": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "temporal": {
+      "status": "ok",
+      "indicator_id": "IND-001",
+      "national_by_year": [
+        {
+          "year": 2019,
+          "redacoes_validas": 3779356,
+          "total_registros": 5095171,
+          "percentual_validas": 74.1753,
+          "status_1": 3779356
+        },
+        {
+          "year": 2020,
+          "redacoes_validas": 2674914,
+          "total_registros": 5783109,
+          "percentual_validas": 46.2539,
+          "status_1": 2674914
+        },
+        {
+          "year": 2021,
+          "redacoes_validas": 2293797,
+          "total_registros": 3389832,
+          "percentual_validas": 67.667,
+          "status_1": 2293797
+        },
+        {
+          "year": 2022,
+          "redacoes_validas": 2363615,
+          "total_registros": 3476105,
+          "percentual_validas": 67.9961,
+          "status_1": 2363615
+        },
+        {
+          "year": 2023,
+          "redacoes_validas": 2704814,
+          "total_registros": 3933955,
+          "percentual_validas": 68.7556,
+          "status_1": 2704814
+        },
+        {
+          "year": 2024,
+          "redacoes_validas": 3002710,
+          "total_registros": 4332944,
+          "percentual_validas": 69.2995,
+          "status_1": 3002710
+        },
+        {
+          "year": 2025,
+          "redacoes_validas": 3245696,
+          "total_registros": 4810772,
+          "percentual_validas": 67.4673,
+          "status_1": 3245696
+        }
+      ],
+      "period_total": {
+        "redacoes_validas": 20064902,
+        "total_registros": 30821888,
+        "percentual_validas": 65.0995
+      },
+      "period_by_uf": [
+        {
+          "uf": "AC",
+          "redacoes_validas": 126620,
+          "total_registros": 203061,
+          "percentual_validas": 62.3556,
+          "participacao_no_brasil_pct": 0.6311
+        },
+        {
+          "uf": "AL",
+          "redacoes_validas": 380077,
+          "total_registros": 581040,
+          "percentual_validas": 65.4132,
+          "participacao_no_brasil_pct": 1.8942
+        },
+        {
+          "uf": "AM",
+          "redacoes_validas": 373879,
+          "total_registros": 752979,
+          "percentual_validas": 49.6533,
+          "participacao_no_brasil_pct": 1.8633
+        },
+        {
+          "uf": "AP",
+          "redacoes_validas": 138416,
+          "total_registros": 226961,
+          "percentual_validas": 60.9867,
+          "participacao_no_brasil_pct": 0.6898
+        },
+        {
+          "uf": "BA",
+          "redacoes_validas": 1623969,
+          "total_registros": 2503574,
+          "percentual_validas": 64.866,
+          "participacao_no_brasil_pct": 8.0936
+        },
+        {
+          "uf": "CE",
+          "redacoes_validas": 1218715,
+          "total_registros": 1836027,
+          "percentual_validas": 66.3778,
+          "participacao_no_brasil_pct": 6.0739
+        },
+        {
+          "uf": "DF",
+          "redacoes_validas": 379450,
+          "total_registros": 576133,
+          "percentual_validas": 65.8615,
+          "participacao_no_brasil_pct": 1.8911
+        },
+        {
+          "uf": "ES",
+          "redacoes_validas": 368888,
+          "total_registros": 570143,
+          "percentual_validas": 64.701,
+          "participacao_no_brasil_pct": 1.8385
+        },
+        {
+          "uf": "GO",
+          "redacoes_validas": 715958,
+          "total_registros": 1126601,
+          "percentual_validas": 63.5503,
+          "participacao_no_brasil_pct": 3.5682
+        },
+        {
+          "uf": "MA",
+          "redacoes_validas": 826993,
+          "total_registros": 1273126,
+          "percentual_validas": 64.9577,
+          "participacao_no_brasil_pct": 4.1216
+        },
+        {
+          "uf": "MG",
+          "redacoes_validas": 1961500,
+          "total_registros": 2966782,
+          "percentual_validas": 66.1154,
+          "participacao_no_brasil_pct": 9.7758
+        },
+        {
+          "uf": "MS",
+          "redacoes_validas": 246198,
+          "total_registros": 398812,
+          "percentual_validas": 61.7328,
+          "participacao_no_brasil_pct": 1.227
+        },
+        {
+          "uf": "MT",
+          "redacoes_validas": 310285,
+          "total_registros": 517404,
+          "percentual_validas": 59.9696,
+          "participacao_no_brasil_pct": 1.5464
+        },
+        {
+          "uf": "PA",
+          "redacoes_validas": 1132135,
+          "total_registros": 1765626,
+          "percentual_validas": 64.1209,
+          "participacao_no_brasil_pct": 5.6424
+        },
+        {
+          "uf": "PB",
+          "redacoes_validas": 619079,
+          "total_registros": 912473,
+          "percentual_validas": 67.8463,
+          "participacao_no_brasil_pct": 3.0854
+        },
+        {
+          "uf": "PE",
+          "redacoes_validas": 1126649,
+          "total_registros": 1702850,
+          "percentual_validas": 66.1626,
+          "participacao_no_brasil_pct": 5.615
+        },
+        {
+          "uf": "PI",
+          "redacoes_validas": 509945,
+          "total_registros": 749143,
+          "percentual_validas": 68.0704,
+          "participacao_no_brasil_pct": 2.5415
+        },
+        {
+          "uf": "PR",
+          "redacoes_validas": 857444,
+          "total_registros": 1287915,
+          "percentual_validas": 66.5761,
+          "participacao_no_brasil_pct": 4.2734
+        },
+        {
+          "uf": "RJ",
+          "redacoes_validas": 1386006,
+          "total_registros": 2117069,
+          "percentual_validas": 65.4682,
+          "participacao_no_brasil_pct": 6.9076
+        },
+        {
+          "uf": "RN",
+          "redacoes_validas": 506721,
+          "total_registros": 735542,
+          "percentual_validas": 68.8908,
+          "participacao_no_brasil_pct": 2.5254
+        },
+        {
+          "uf": "RO",
+          "redacoes_validas": 182128,
+          "total_registros": 314448,
+          "percentual_validas": 57.9199,
+          "participacao_no_brasil_pct": 0.9077
+        },
+        {
+          "uf": "RR",
+          "redacoes_validas": 48036,
+          "total_registros": 82823,
+          "percentual_validas": 57.9984,
+          "participacao_no_brasil_pct": 0.2394
+        },
+        {
+          "uf": "RS",
+          "redacoes_validas": 875800,
+          "total_registros": 1395839,
+          "percentual_validas": 62.7436,
+          "participacao_no_brasil_pct": 4.3648
+        },
+        {
+          "uf": "SC",
+          "redacoes_validas": 461010,
+          "total_registros": 692256,
+          "percentual_validas": 66.5953,
+          "participacao_no_brasil_pct": 2.2976
+        },
+        {
+          "uf": "SE",
+          "redacoes_validas": 337724,
+          "total_registros": 492211,
+          "percentual_validas": 68.6137,
+          "participacao_no_brasil_pct": 1.6832
+        },
+        {
+          "uf": "SP",
+          "redacoes_validas": 3182581,
+          "total_registros": 4770472,
+          "percentual_validas": 66.7142,
+          "participacao_no_brasil_pct": 15.8614
+        },
+        {
+          "uf": "TO",
+          "redacoes_validas": 168696,
+          "total_registros": 270578,
+          "percentual_validas": 62.3465,
+          "participacao_no_brasil_pct": 0.8408
+        }
+      ],
+      "note": "Soma de participações/redações nas edições, não de pessoas únicas entre anos. UF significa local de aplicação da prova.",
+      "ind002": {
+        "indicator_id": "IND-002",
+        "national_by_year": [
+          {
+            "year": 2019,
+            "n": 3779356,
+            "mean_score": 592.9016
+          },
+          {
+            "year": 2020,
+            "n": 2674914,
+            "mean_score": 590.3961
+          },
+          {
+            "year": 2021,
+            "n": 2293797,
+            "mean_score": 636.1228
+          },
+          {
+            "year": 2022,
+            "n": 2363615,
+            "mean_score": 652.4511
+          },
+          {
+            "year": 2023,
+            "n": 2704814,
+            "mean_score": 644.7115
+          },
+          {
+            "year": 2024,
+            "n": 3002710,
+            "mean_score": 658.9658
+          },
+          {
+            "year": 2025,
+            "n": 3245696,
+            "mean_score": 618.7151
+          }
+        ],
+        "period_total": {
+          "n": 20064902,
+          "mean_score": 625.5697
+        },
+        "period_by_uf": [
+          {
+            "uf": "AC",
+            "n": 126620,
+            "mean_score": 584.9907
+          },
+          {
+            "uf": "AL",
+            "n": 380077,
+            "mean_score": 615.3824
+          },
+          {
+            "uf": "AM",
+            "n": 373879,
+            "mean_score": 567.5933
+          },
+          {
+            "uf": "AP",
+            "n": 138416,
+            "mean_score": 587.4954
+          },
+          {
+            "uf": "BA",
+            "n": 1623969,
+            "mean_score": 610.4762
+          },
+          {
+            "uf": "CE",
+            "n": 1218715,
+            "mean_score": 631.7256
+          },
+          {
+            "uf": "DF",
+            "n": 379450,
+            "mean_score": 634.7034
+          },
+          {
+            "uf": "ES",
+            "n": 368888,
+            "mean_score": 642.4217
+          },
+          {
+            "uf": "GO",
+            "n": 715958,
+            "mean_score": 634.6
+          },
+          {
+            "uf": "MA",
+            "n": 826993,
+            "mean_score": 598.1722
+          },
+          {
+            "uf": "MG",
+            "n": 1961500,
+            "mean_score": 651.2755
+          },
+          {
+            "uf": "MS",
+            "n": 246198,
+            "mean_score": 602.5722
+          },
+          {
+            "uf": "MT",
+            "n": 310285,
+            "mean_score": 604.6315
+          },
+          {
+            "uf": "PA",
+            "n": 1132135,
+            "mean_score": 602.5169
+          },
+          {
+            "uf": "PB",
+            "n": 619079,
+            "mean_score": 631.6482
+          },
+          {
+            "uf": "PE",
+            "n": 1126649,
+            "mean_score": 623.6
+          },
+          {
+            "uf": "PI",
+            "n": 509945,
+            "mean_score": 623.5304
+          },
+          {
+            "uf": "PR",
+            "n": 857444,
+            "mean_score": 613.1402
+          },
+          {
+            "uf": "RJ",
+            "n": 1386006,
+            "mean_score": 641.9863
+          },
+          {
+            "uf": "RN",
+            "n": 506721,
+            "mean_score": 629.6612
+          },
+          {
+            "uf": "RO",
+            "n": 182128,
+            "mean_score": 592.8764
+          },
+          {
+            "uf": "RR",
+            "n": 48036,
+            "mean_score": 588.6681
+          },
+          {
+            "uf": "RS",
+            "n": 875800,
+            "mean_score": 628.2552
+          },
+          {
+            "uf": "SC",
+            "n": 461010,
+            "mean_score": 635.406
+          },
+          {
+            "uf": "SE",
+            "n": 337724,
+            "mean_score": 639.0761
+          },
+          {
+            "uf": "SP",
+            "n": 3182581,
+            "mean_score": 635.8536
+          },
+          {
+            "uf": "TO",
+            "n": 168696,
+            "mean_score": 602.9673
+          }
+        ],
+        "note": "A média do período 2019–2025 é ponderada pelo número de redações válidas de cada edição, e não a média simples das médias anuais. É uma estatística agregada de participações, não de pessoas únicas. UF refere-se ao local de aplicação da prova; variações anuais são descritivas e não demonstram causas."
+      },
+      "ind003": {
+        "indicator_id": "IND-003",
+        "national_by_year": [
+          {
+            "year": 2019,
+            "n": 3779356,
+            "median_score": 580.0
+          },
+          {
+            "year": 2020,
+            "n": 2674914,
+            "median_score": 580.0
+          },
+          {
+            "year": 2021,
+            "n": 2293797,
+            "median_score": 620.0
+          },
+          {
+            "year": 2022,
+            "n": 2363615,
+            "median_score": 640.0
+          },
+          {
+            "year": 2023,
+            "n": 2704814,
+            "median_score": 620.0
+          },
+          {
+            "year": 2024,
+            "n": 3002710,
+            "median_score": 640.0
+          },
+          {
+            "year": 2025,
+            "n": 3245696,
+            "median_score": 600.0
+          }
+        ],
+        "period_total": {
+          "n": 20064902,
+          "median_score": 600.0
+        },
+        "period_by_uf": [
+          {
+            "uf": "AC",
+            "n": 126620,
+            "median_score": 580.0
+          },
+          {
+            "uf": "AL",
+            "n": 380077,
+            "median_score": 600.0
+          },
+          {
+            "uf": "AM",
+            "n": 373879,
+            "median_score": 560.0
+          },
+          {
+            "uf": "AP",
+            "n": 138416,
+            "median_score": 580.0
+          },
+          {
+            "uf": "BA",
+            "n": 1623969,
+            "median_score": 600.0
+          },
+          {
+            "uf": "CE",
+            "n": 1218715,
+            "median_score": 620.0
+          },
+          {
+            "uf": "DF",
+            "n": 379450,
+            "median_score": 620.0
+          },
+          {
+            "uf": "ES",
+            "n": 368888,
+            "median_score": 620.0
+          },
+          {
+            "uf": "GO",
+            "n": 715958,
+            "median_score": 620.0
+          },
+          {
+            "uf": "MA",
+            "n": 826993,
+            "median_score": 580.0
+          },
+          {
+            "uf": "MG",
+            "n": 1961500,
+            "median_score": 640.0
+          },
+          {
+            "uf": "MS",
+            "n": 246198,
+            "median_score": 580.0
+          },
+          {
+            "uf": "MT",
+            "n": 310285,
+            "median_score": 600.0
+          },
+          {
+            "uf": "PA",
+            "n": 1132135,
+            "median_score": 580.0
+          },
+          {
+            "uf": "PB",
+            "n": 619079,
+            "median_score": 620.0
+          },
+          {
+            "uf": "PE",
+            "n": 1126649,
+            "median_score": 600.0
+          },
+          {
+            "uf": "PI",
+            "n": 509945,
+            "median_score": 600.0
+          },
+          {
+            "uf": "PR",
+            "n": 857444,
+            "median_score": 600.0
+          },
+          {
+            "uf": "RJ",
+            "n": 1386006,
+            "median_score": 620.0
+          },
+          {
+            "uf": "RN",
+            "n": 506721,
+            "median_score": 620.0
+          },
+          {
+            "uf": "RO",
+            "n": 182128,
+            "median_score": 580.0
+          },
+          {
+            "uf": "RR",
+            "n": 48036,
+            "median_score": 580.0
+          },
+          {
+            "uf": "RS",
+            "n": 875800,
+            "median_score": 620.0
+          },
+          {
+            "uf": "SC",
+            "n": 461010,
+            "median_score": 620.0
+          },
+          {
+            "uf": "SE",
+            "n": 337724,
+            "median_score": 620.0
+          },
+          {
+            "uf": "SP",
+            "n": 3182581,
+            "median_score": 620.0
+          },
+          {
+            "uf": "TO",
+            "n": 168696,
+            "median_score": 580.0
+          }
+        ],
+        "note": "Mediana calculada a partir da distribuição conjunta das notas de todas as edições de 2019 a 2025. Não é a média ou mediana das medianas anuais. Refere-se a participações, não a indivíduos únicos; UF é local de prova."
+      }
+    },
+    "methodology": {
+      "status": "ok",
+      "indicator_id": "IND-001",
+      "definition": "Contagem de registros com TP_STATUS_REDACAO = 1 e NU_NOTA_REDACAO preenchida, numericamente interpretável e no intervalo de 0 a 1000.",
+      "geographic_dimension": "SG_UF_PROVA",
+      "source_file": "MICRODADOS_ENEM_2022.csv",
+      "aggregation": "COUNT por ano e UF; soma anual para Brasil",
+      "limitations": "Soma de participações/redações nas edições, não de pessoas únicas entre anos. UF significa local de aplicação da prova.",
+      "ind002": {
+        "definition": "Média aritmética de NU_NOTA_REDACAO entre registros com TP_STATUS_REDACAO = 1 e nota numérica entre 0 e 1000, inclusive. Cada edição e UF usa somente suas próprias redações válidas.",
+        "calculation": "SUM(NU_NOTA_REDACAO) / COUNT(NU_NOTA_REDACAO)",
+        "population": "POP_VALID, mesma população do IND-001",
+        "geographic_dimension": "SG_UF_PROVA",
+        "source_file": "MICRODADOS_ENEM_2022.csv",
+        "precision": "4 casas decimais no JSON; frontend pode exibir 1 casa",
+        "historical_note": "A média do período 2019–2025 é ponderada pelo número de redações válidas de cada edição, e não a média simples das médias anuais. É uma estatística agregada de participações, não de pessoas únicas. UF refere-se ao local de aplicação da prova; variações anuais são descritivas e não demonstram causas."
+      },
+      "ind003": {
+        "definition": "Mediana exata de NU_NOTA_REDACAO para redações com TP_STATUS_REDACAO = 1 e nota numérica entre 0 e 1000, inclusive, segundo UF de aplicação.",
+        "calculation": "mediana exata por contagem das frequências de cada nota",
+        "population": "POP_VALID, a mesma dos IND-001 e IND-002",
+        "geographic_dimension": "SG_UF_PROVA",
+        "source_file": "MICRODADOS_ENEM_2022.csv",
+        "historical_note": "Mediana calculada a partir da distribuição conjunta das notas de todas as edições de 2019 a 2025. Não é a média ou mediana das medianas anuais. Refere-se a participações, não a indivíduos únicos; UF é local de prova."
+      }
+    }
+  }
+}

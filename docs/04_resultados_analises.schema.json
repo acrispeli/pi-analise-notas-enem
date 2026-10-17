@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://projeto-integrador.local/schemas/enem-dashboard-1.0.0.json",
+  "title": "Contrato de resultados analíticos - Dashboard ENEM",
+  "type": "object",
+  "required": [
+    "meta",
+    "filters",
+    "quality",
+    "pages"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "analysis_version",
+        "dataset_version",
+        "generated_at",
+        "year",
+        "data_status",
+        "source_files"
+      ],
+      "additionalProperties": true
+    },
+    "filters": {
+      "type": "object",
+      "required": [
+        "active",
+        "available"
+      ],
+      "additionalProperties": true
+    },
+    "quality": {
+      "type": "object",
+      "required": [
+        "join_diagnostics",
+        "missingness",
+        "suppression"
+      ],
+      "additionalProperties": true
+    },
+    "pages": {
+      "type": "object",
+      "required": [
+        "overview",
+        "competencies",
+        "evaluators",
+        "high_performance",
+        "socioeconomic",
+        "ml",
+        "methodology"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
