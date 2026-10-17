@@ -1,9 +1,9 @@
 {
   "meta": {
     "schema_version": "1.0.0",
-    "analysis_version": "2.2.0-ind001-ind002-ind003",
+    "analysis_version": "2.3.0-ind001-ind002-ind003-ind004",
     "dataset_version": "enem-2022-csv-publico",
-    "generated_at": "2026-10-17T22:07:02+00:00",
+    "generated_at": "2026-10-17T22:38:48+00:00",
     "year": 2022,
     "data_status": "draft",
     "source_files": [
@@ -14,7 +14,8 @@
       "Resultado ainda depende de revisão e aprovação acadêmica.",
       "Consolidado histórico conta participações, não pessoas únicas.",
       "IND-002 validado tecnicamente; publicação acadêmica ainda pendente.",
-      "IND-003 ainda depende de validação acadêmica para publicação."
+      "IND-003 ainda depende de validação acadêmica para publicação.",
+      "IND-004 validado computacionalmente; publicação acadêmica pendente."
     ]
   },
   "filters": {
@@ -119,6 +120,16 @@
       "validas_uf_desconhecida": 0,
       "soma_contagens_uf_igual_brasil": true,
       "validado_contra_ind001_ind002": true
+    },
+    "ind004_validation": {
+      "status": "ok",
+      "status1_sem_nota": 0,
+      "status1_nota_invalida": 0,
+      "validas_sem_uf": 0,
+      "validas_uf_desconhecida": 0,
+      "soma_contagens_uf_igual_brasil": true,
+      "metodo": "momentos_centrados_combinados_ddof0",
+      "validado_contra_ind001_ind002_ind003": true
     }
   },
   "pages": {
@@ -127,7 +138,8 @@
       "kpis": {
         "valid_essays": 2363615,
         "mean_score": 652.4511,
-        "median_score": 640.0
+        "median_score": 640.0,
+        "std_score": 159.1949
       },
       "ind001": {
         "indicator_id": "IND-001",
@@ -609,6 +621,150 @@
             "uf": "TO",
             "n": 19232,
             "median_score": 620.0
+          }
+        ]
+      },
+      "ind004": {
+        "indicator_id": "IND-004",
+        "unit": "pontos",
+        "n": 2363615,
+        "std_score": 159.1949,
+        "ddof": 0,
+        "by_uf": [
+          {
+            "uf": "AC",
+            "n": 14596,
+            "std_score": 154.3411
+          },
+          {
+            "uf": "AL",
+            "n": 43183,
+            "std_score": 160.965
+          },
+          {
+            "uf": "AM",
+            "n": 41841,
+            "std_score": 143.2018
+          },
+          {
+            "uf": "AP",
+            "n": 14455,
+            "std_score": 148.9245
+          },
+          {
+            "uf": "BA",
+            "n": 183862,
+            "std_score": 160.2476
+          },
+          {
+            "uf": "CE",
+            "n": 150973,
+            "std_score": 166.6279
+          },
+          {
+            "uf": "DF",
+            "n": 45324,
+            "std_score": 155.8332
+          },
+          {
+            "uf": "ES",
+            "n": 43182,
+            "std_score": 158.9726
+          },
+          {
+            "uf": "GO",
+            "n": 91361,
+            "std_score": 164.1057
+          },
+          {
+            "uf": "MA",
+            "n": 89093,
+            "std_score": 162.3795
+          },
+          {
+            "uf": "MG",
+            "n": 217330,
+            "std_score": 163.0865
+          },
+          {
+            "uf": "MS",
+            "n": 28693,
+            "std_score": 156.6107
+          },
+          {
+            "uf": "MT",
+            "n": 37595,
+            "std_score": 158.5399
+          },
+          {
+            "uf": "PA",
+            "n": 133917,
+            "std_score": 160.5603
+          },
+          {
+            "uf": "PB",
+            "n": 71866,
+            "std_score": 162.8398
+          },
+          {
+            "uf": "PE",
+            "n": 128503,
+            "std_score": 160.8888
+          },
+          {
+            "uf": "PI",
+            "n": 59139,
+            "std_score": 170.0345
+          },
+          {
+            "uf": "PR",
+            "n": 103046,
+            "std_score": 145.8879
+          },
+          {
+            "uf": "RJ",
+            "n": 171676,
+            "std_score": 160.5189
+          },
+          {
+            "uf": "RN",
+            "n": 62045,
+            "std_score": 160.6978
+          },
+          {
+            "uf": "RO",
+            "n": 19720,
+            "std_score": 153.5071
+          },
+          {
+            "uf": "RR",
+            "n": 4953,
+            "std_score": 150.7786
+          },
+          {
+            "uf": "RS",
+            "n": 104840,
+            "std_score": 154.9792
+          },
+          {
+            "uf": "SC",
+            "n": 57787,
+            "std_score": 146.9666
+          },
+          {
+            "uf": "SE",
+            "n": 41577,
+            "std_score": 167.8204
+          },
+          {
+            "uf": "SP",
+            "n": 383826,
+            "std_score": 149.6565
+          },
+          {
+            "uf": "TO",
+            "n": 19232,
+            "std_score": 159.0403
           }
         ]
       }
@@ -1247,6 +1403,189 @@
           }
         ],
         "note": "Mediana calculada a partir da distribuição conjunta das notas de todas as edições de 2019 a 2025. Não é a média ou mediana das medianas anuais. Refere-se a participações, não a indivíduos únicos; UF é local de prova."
+      },
+      "ind004": {
+        "indicator_id": "IND-004",
+        "ddof": 0,
+        "national_by_year": [
+          {
+            "year": 2019,
+            "n": 3779356,
+            "std_score": 155.2765
+          },
+          {
+            "year": 2020,
+            "n": 2674914,
+            "std_score": 176.3058
+          },
+          {
+            "year": 2021,
+            "n": 2293797,
+            "std_score": 152.7169
+          },
+          {
+            "year": 2022,
+            "n": 2363615,
+            "std_score": 159.1949
+          },
+          {
+            "year": 2023,
+            "n": 2704814,
+            "std_score": 175.2646
+          },
+          {
+            "year": 2024,
+            "n": 3002710,
+            "std_score": 163.4915
+          },
+          {
+            "year": 2025,
+            "n": 3245696,
+            "std_score": 157.521
+          }
+        ],
+        "period_total": {
+          "n": 20064902,
+          "std_score": 164.8611
+        },
+        "period_by_uf": [
+          {
+            "uf": "AC",
+            "n": 126620,
+            "std_score": 159.4586
+          },
+          {
+            "uf": "AL",
+            "n": 380077,
+            "std_score": 167.0761
+          },
+          {
+            "uf": "AM",
+            "n": 373879,
+            "std_score": 147.0035
+          },
+          {
+            "uf": "AP",
+            "n": 138416,
+            "std_score": 154.6845
+          },
+          {
+            "uf": "BA",
+            "n": 1623969,
+            "std_score": 164.1467
+          },
+          {
+            "uf": "CE",
+            "n": 1218715,
+            "std_score": 172.7786
+          },
+          {
+            "uf": "DF",
+            "n": 379450,
+            "std_score": 161.0822
+          },
+          {
+            "uf": "ES",
+            "n": 368888,
+            "std_score": 166.019
+          },
+          {
+            "uf": "GO",
+            "n": 715958,
+            "std_score": 170.011
+          },
+          {
+            "uf": "MA",
+            "n": 826993,
+            "std_score": 165.6164
+          },
+          {
+            "uf": "MG",
+            "n": 1961500,
+            "std_score": 169.3318
+          },
+          {
+            "uf": "MS",
+            "n": 246198,
+            "std_score": 162.4212
+          },
+          {
+            "uf": "MT",
+            "n": 310285,
+            "std_score": 165.9889
+          },
+          {
+            "uf": "PA",
+            "n": 1132135,
+            "std_score": 165.1809
+          },
+          {
+            "uf": "PB",
+            "n": 619079,
+            "std_score": 168.2536
+          },
+          {
+            "uf": "PE",
+            "n": 1126649,
+            "std_score": 166.2115
+          },
+          {
+            "uf": "PI",
+            "n": 509945,
+            "std_score": 175.2026
+          },
+          {
+            "uf": "PR",
+            "n": 857444,
+            "std_score": 153.6286
+          },
+          {
+            "uf": "RJ",
+            "n": 1386006,
+            "std_score": 165.3627
+          },
+          {
+            "uf": "RN",
+            "n": 506721,
+            "std_score": 164.4288
+          },
+          {
+            "uf": "RO",
+            "n": 182128,
+            "std_score": 157.8669
+          },
+          {
+            "uf": "RR",
+            "n": 48036,
+            "std_score": 158.5394
+          },
+          {
+            "uf": "RS",
+            "n": 875800,
+            "std_score": 160.1588
+          },
+          {
+            "uf": "SC",
+            "n": 461010,
+            "std_score": 154.8821
+          },
+          {
+            "uf": "SE",
+            "n": 337724,
+            "std_score": 171.9276
+          },
+          {
+            "uf": "SP",
+            "n": 3182581,
+            "std_score": 156.6429
+          },
+          {
+            "uf": "TO",
+            "n": 168696,
+            "std_score": 163.2575
+          }
+        ],
+        "note": "Desvio-padrão populacional calculado reunindo as observações de 2019–2025; não é a média dos desvios-padrão de cada ano, pois incorpora variações dentro dos grupos e entre suas médias. São participações em edições do Enem, não pessoas únicas; UF identifica o local da prova."
       }
     },
     "methodology": {
@@ -1273,6 +1612,15 @@
         "geographic_dimension": "SG_UF_PROVA",
         "source_file": "MICRODADOS_ENEM_2022.csv",
         "historical_note": "Mediana calculada a partir da distribuição conjunta das notas de todas as edições de 2019 a 2025. Não é a média ou mediana das medianas anuais. Refere-se a participações, não a indivíduos únicos; UF é local de prova."
+      },
+      "ind004": {
+        "definition": "Desvio-padrão populacional (ddof=0) das notas NU_NOTA_REDACAO de redações com TP_STATUS_REDACAO = 1 e nota numérica de 0 a 1000, inclusive, agrupadas por ano e UF da prova (SG_UF_PROVA).",
+        "calculation": "sqrt(sum((nota - media)^2) / N) — ddof=0",
+        "population": "POP_VALID, a mesma dos IND-001, IND-002 e IND-003",
+        "geographic_dimension": "SG_UF_PROVA",
+        "source_file": "MICRODADOS_ENEM_2022.csv",
+        "precision": "4 casas decimais no JSON",
+        "historical_note": "Desvio-padrão populacional calculado reunindo as observações de 2019–2025; não é a média dos desvios-padrão de cada ano, pois incorpora variações dentro dos grupos e entre suas médias. São participações em edições do Enem, não pessoas únicas; UF identifica o local da prova."
       }
     }
   }
