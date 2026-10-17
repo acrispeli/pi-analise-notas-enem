@@ -1,0 +1,589 @@
+{
+  "meta": {
+    "schema_version": "1.0.0",
+    "analysis_version": "2.0.0-ind001",
+    "dataset_version": "enem-2024-csv-publico",
+    "generated_at": "2026-10-16T23:42:40+00:00",
+    "year": 2024,
+    "data_status": "draft",
+    "source_files": [
+      "RESULTADOS_2024.csv"
+    ],
+    "population_definition": "Contagem de registros com TP_STATUS_REDACAO = 1 e NU_NOTA_REDACAO preenchida, numericamente interpretável e no intervalo de 0 a 1000.",
+    "warnings": [
+      "Resultado ainda depende de revisão e aprovação acadêmica.",
+      "Consolidado histórico conta participações, não pessoas únicas."
+    ]
+  },
+  "filters": {
+    "active": {
+      "year": 2024,
+      "population": "valid_essay",
+      "uf_exam": "BR"
+    },
+    "available": {
+      "year": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "population": [
+        {
+          "code": "valid_essay",
+          "label": "Redações válidas"
+        }
+      ],
+      "uf_exam": [
+        "BR",
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO"
+      ]
+    },
+    "combination_policy": "IND-001 permite ano e UF de aplicação; demais filtros serão habilitados por indicadores posteriores."
+  },
+  "quality": {
+    "join_diagnostics": {
+      "status": "not_required",
+      "reason": "As três variáveis do IND-001 constam na mesma fonte de resultados."
+    },
+    "missingness": [
+      {
+        "variable": "SG_UF_PROVA",
+        "n_missing_valid": 0
+      },
+      {
+        "variable": "NU_NOTA_REDACAO",
+        "n_missing_status_1": 0
+      }
+    ],
+    "suppression": {
+      "min_group_n": 30,
+      "suppressed_cells": 0,
+      "note": "Limiar de 30 verificado para Brasil e UF; publicação é bloqueada se houver contagem positiva inferior a 30."
+    },
+    "indicator_validation": {
+      "status": "ok",
+      "status_1_sem_nota": 0,
+      "status_1_nota_invalida": 0,
+      "validas_uf_ausente": 0,
+      "validas_uf_nao_reconhecida": 0,
+      "registros_uf_nao_informada": 0,
+      "soma_27_ufs_igual_brasil": true
+    }
+  },
+  "pages": {
+    "overview": {
+      "status": "ok",
+      "kpis": {
+        "valid_essays": 3002710
+      },
+      "ind001": {
+        "indicator_id": "IND-001",
+        "unit": "redacoes",
+        "denominator": 4332944,
+        "national_percentage": 69.2995,
+        "by_uf": [
+          {
+            "uf": "AC",
+            "redacoes_validas": 17207,
+            "total_registros": 26424,
+            "percentual_validas": 65.1188,
+            "participacao_no_brasil_pct": 0.573
+          },
+          {
+            "uf": "AL",
+            "redacoes_validas": 60066,
+            "total_registros": 88896,
+            "percentual_validas": 67.5688,
+            "participacao_no_brasil_pct": 2.0004
+          },
+          {
+            "uf": "AM",
+            "redacoes_validas": 53319,
+            "total_registros": 96898,
+            "percentual_validas": 55.0259,
+            "participacao_no_brasil_pct": 1.7757
+          },
+          {
+            "uf": "AP",
+            "redacoes_validas": 19920,
+            "total_registros": 30650,
+            "percentual_validas": 64.9918,
+            "participacao_no_brasil_pct": 0.6634
+          },
+          {
+            "uf": "BA",
+            "redacoes_validas": 254741,
+            "total_registros": 376845,
+            "percentual_validas": 67.5983,
+            "participacao_no_brasil_pct": 8.4837
+          },
+          {
+            "uf": "CE",
+            "redacoes_validas": 180900,
+            "total_registros": 250607,
+            "percentual_validas": 72.1847,
+            "participacao_no_brasil_pct": 6.0246
+          },
+          {
+            "uf": "DF",
+            "redacoes_validas": 53470,
+            "total_registros": 74520,
+            "percentual_validas": 71.7525,
+            "participacao_no_brasil_pct": 1.7807
+          },
+          {
+            "uf": "ES",
+            "redacoes_validas": 52522,
+            "total_registros": 74543,
+            "percentual_validas": 70.4587,
+            "participacao_no_brasil_pct": 1.7492
+          },
+          {
+            "uf": "GO",
+            "redacoes_validas": 105004,
+            "total_registros": 151158,
+            "percentual_validas": 69.4664,
+            "participacao_no_brasil_pct": 3.497
+          },
+          {
+            "uf": "MA",
+            "redacoes_validas": 123246,
+            "total_registros": 178833,
+            "percentual_validas": 68.9168,
+            "participacao_no_brasil_pct": 4.1045
+          },
+          {
+            "uf": "MG",
+            "redacoes_validas": 284268,
+            "total_registros": 393824,
+            "percentual_validas": 72.1815,
+            "participacao_no_brasil_pct": 9.467
+          },
+          {
+            "uf": "MS",
+            "redacoes_validas": 34551,
+            "total_registros": 51311,
+            "percentual_validas": 67.3364,
+            "participacao_no_brasil_pct": 1.1507
+          },
+          {
+            "uf": "MT",
+            "redacoes_validas": 43717,
+            "total_registros": 67782,
+            "percentual_validas": 64.4965,
+            "participacao_no_brasil_pct": 1.4559
+          },
+          {
+            "uf": "PA",
+            "redacoes_validas": 172059,
+            "total_registros": 248061,
+            "percentual_validas": 69.3616,
+            "participacao_no_brasil_pct": 5.7301
+          },
+          {
+            "uf": "PB",
+            "redacoes_validas": 91286,
+            "total_registros": 128546,
+            "percentual_validas": 71.0143,
+            "participacao_no_brasil_pct": 3.0401
+          },
+          {
+            "uf": "PE",
+            "redacoes_validas": 167955,
+            "total_registros": 237615,
+            "percentual_validas": 70.6837,
+            "participacao_no_brasil_pct": 5.5934
+          },
+          {
+            "uf": "PI",
+            "redacoes_validas": 78728,
+            "total_registros": 108113,
+            "percentual_validas": 72.8201,
+            "participacao_no_brasil_pct": 2.6219
+          },
+          {
+            "uf": "PR",
+            "redacoes_validas": 130385,
+            "total_registros": 179954,
+            "percentual_validas": 72.4546,
+            "participacao_no_brasil_pct": 4.3422
+          },
+          {
+            "uf": "RJ",
+            "redacoes_validas": 203818,
+            "total_registros": 289397,
+            "percentual_validas": 70.4285,
+            "participacao_no_brasil_pct": 6.7878
+          },
+          {
+            "uf": "RN",
+            "redacoes_validas": 74977,
+            "total_registros": 102215,
+            "percentual_validas": 73.3522,
+            "participacao_no_brasil_pct": 2.497
+          },
+          {
+            "uf": "RO",
+            "redacoes_validas": 25421,
+            "total_registros": 38609,
+            "percentual_validas": 65.8422,
+            "participacao_no_brasil_pct": 0.8466
+          },
+          {
+            "uf": "RR",
+            "redacoes_validas": 8223,
+            "total_registros": 12695,
+            "percentual_validas": 64.7735,
+            "participacao_no_brasil_pct": 0.2739
+          },
+          {
+            "uf": "RS",
+            "redacoes_validas": 148365,
+            "total_registros": 279039,
+            "percentual_validas": 53.17,
+            "participacao_no_brasil_pct": 4.941
+          },
+          {
+            "uf": "SC",
+            "redacoes_validas": 67899,
+            "total_registros": 95126,
+            "percentual_validas": 71.378,
+            "participacao_no_brasil_pct": 2.2613
+          },
+          {
+            "uf": "SE",
+            "redacoes_validas": 50903,
+            "total_registros": 69529,
+            "percentual_validas": 73.2112,
+            "participacao_no_brasil_pct": 1.6952
+          },
+          {
+            "uf": "SP",
+            "redacoes_validas": 476463,
+            "total_registros": 647215,
+            "percentual_validas": 73.6174,
+            "participacao_no_brasil_pct": 15.8678
+          },
+          {
+            "uf": "TO",
+            "redacoes_validas": 23297,
+            "total_registros": 34539,
+            "percentual_validas": 67.4513,
+            "participacao_no_brasil_pct": 0.7759
+          }
+        ]
+      }
+    },
+    "competencies": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "evaluators": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "high_performance": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "socioeconomic": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "ml": {
+      "status": "unavailable",
+      "reason": "indicadores_ainda_nao_implementados"
+    },
+    "temporal": {
+      "status": "ok",
+      "indicator_id": "IND-001",
+      "national_by_year": [
+        {
+          "year": 2019,
+          "redacoes_validas": 3779356,
+          "total_registros": 5095171,
+          "percentual_validas": 74.1753,
+          "status_1": 3779356
+        },
+        {
+          "year": 2020,
+          "redacoes_validas": 2674914,
+          "total_registros": 5783109,
+          "percentual_validas": 46.2539,
+          "status_1": 2674914
+        },
+        {
+          "year": 2021,
+          "redacoes_validas": 2293797,
+          "total_registros": 3389832,
+          "percentual_validas": 67.667,
+          "status_1": 2293797
+        },
+        {
+          "year": 2022,
+          "redacoes_validas": 2363615,
+          "total_registros": 3476105,
+          "percentual_validas": 67.9961,
+          "status_1": 2363615
+        },
+        {
+          "year": 2023,
+          "redacoes_validas": 2704814,
+          "total_registros": 3933955,
+          "percentual_validas": 68.7556,
+          "status_1": 2704814
+        },
+        {
+          "year": 2024,
+          "redacoes_validas": 3002710,
+          "total_registros": 4332944,
+          "percentual_validas": 69.2995,
+          "status_1": 3002710
+        },
+        {
+          "year": 2025,
+          "redacoes_validas": 3245696,
+          "total_registros": 4810772,
+          "percentual_validas": 67.4673,
+          "status_1": 3245696
+        }
+      ],
+      "period_total": {
+        "redacoes_validas": 20064902,
+        "total_registros": 30821888,
+        "percentual_validas": 65.0995
+      },
+      "period_by_uf": [
+        {
+          "uf": "AC",
+          "redacoes_validas": 126620,
+          "total_registros": 203061,
+          "percentual_validas": 62.3556,
+          "participacao_no_brasil_pct": 0.6311
+        },
+        {
+          "uf": "AL",
+          "redacoes_validas": 380077,
+          "total_registros": 581040,
+          "percentual_validas": 65.4132,
+          "participacao_no_brasil_pct": 1.8942
+        },
+        {
+          "uf": "AM",
+          "redacoes_validas": 373879,
+          "total_registros": 752979,
+          "percentual_validas": 49.6533,
+          "participacao_no_brasil_pct": 1.8633
+        },
+        {
+          "uf": "AP",
+          "redacoes_validas": 138416,
+          "total_registros": 226961,
+          "percentual_validas": 60.9867,
+          "participacao_no_brasil_pct": 0.6898
+        },
+        {
+          "uf": "BA",
+          "redacoes_validas": 1623969,
+          "total_registros": 2503574,
+          "percentual_validas": 64.866,
+          "participacao_no_brasil_pct": 8.0936
+        },
+        {
+          "uf": "CE",
+          "redacoes_validas": 1218715,
+          "total_registros": 1836027,
+          "percentual_validas": 66.3778,
+          "participacao_no_brasil_pct": 6.0739
+        },
+        {
+          "uf": "DF",
+          "redacoes_validas": 379450,
+          "total_registros": 576133,
+          "percentual_validas": 65.8615,
+          "participacao_no_brasil_pct": 1.8911
+        },
+        {
+          "uf": "ES",
+          "redacoes_validas": 368888,
+          "total_registros": 570143,
+          "percentual_validas": 64.701,
+          "participacao_no_brasil_pct": 1.8385
+        },
+        {
+          "uf": "GO",
+          "redacoes_validas": 715958,
+          "total_registros": 1126601,
+          "percentual_validas": 63.5503,
+          "participacao_no_brasil_pct": 3.5682
+        },
+        {
+          "uf": "MA",
+          "redacoes_validas": 826993,
+          "total_registros": 1273126,
+          "percentual_validas": 64.9577,
+          "participacao_no_brasil_pct": 4.1216
+        },
+        {
+          "uf": "MG",
+          "redacoes_validas": 1961500,
+          "total_registros": 2966782,
+          "percentual_validas": 66.1154,
+          "participacao_no_brasil_pct": 9.7758
+        },
+        {
+          "uf": "MS",
+          "redacoes_validas": 246198,
+          "total_registros": 398812,
+          "percentual_validas": 61.7328,
+          "participacao_no_brasil_pct": 1.227
+        },
+        {
+          "uf": "MT",
+          "redacoes_validas": 310285,
+          "total_registros": 517404,
+          "percentual_validas": 59.9696,
+          "participacao_no_brasil_pct": 1.5464
+        },
+        {
+          "uf": "PA",
+          "redacoes_validas": 1132135,
+          "total_registros": 1765626,
+          "percentual_validas": 64.1209,
+          "participacao_no_brasil_pct": 5.6424
+        },
+        {
+          "uf": "PB",
+          "redacoes_validas": 619079,
+          "total_registros": 912473,
+          "percentual_validas": 67.8463,
+          "participacao_no_brasil_pct": 3.0854
+        },
+        {
+          "uf": "PE",
+          "redacoes_validas": 1126649,
+          "total_registros": 1702850,
+          "percentual_validas": 66.1626,
+          "participacao_no_brasil_pct": 5.615
+        },
+        {
+          "uf": "PI",
+          "redacoes_validas": 509945,
+          "total_registros": 749143,
+          "percentual_validas": 68.0704,
+          "participacao_no_brasil_pct": 2.5415
+        },
+        {
+          "uf": "PR",
+          "redacoes_validas": 857444,
+          "total_registros": 1287915,
+          "percentual_validas": 66.5761,
+          "participacao_no_brasil_pct": 4.2734
+        },
+        {
+          "uf": "RJ",
+          "redacoes_validas": 1386006,
+          "total_registros": 2117069,
+          "percentual_validas": 65.4682,
+          "participacao_no_brasil_pct": 6.9076
+        },
+        {
+          "uf": "RN",
+          "redacoes_validas": 506721,
+          "total_registros": 735542,
+          "percentual_validas": 68.8908,
+          "participacao_no_brasil_pct": 2.5254
+        },
+        {
+          "uf": "RO",
+          "redacoes_validas": 182128,
+          "total_registros": 314448,
+          "percentual_validas": 57.9199,
+          "participacao_no_brasil_pct": 0.9077
+        },
+        {
+          "uf": "RR",
+          "redacoes_validas": 48036,
+          "total_registros": 82823,
+          "percentual_validas": 57.9984,
+          "participacao_no_brasil_pct": 0.2394
+        },
+        {
+          "uf": "RS",
+          "redacoes_validas": 875800,
+          "total_registros": 1395839,
+          "percentual_validas": 62.7436,
+          "participacao_no_brasil_pct": 4.3648
+        },
+        {
+          "uf": "SC",
+          "redacoes_validas": 461010,
+          "total_registros": 692256,
+          "percentual_validas": 66.5953,
+          "participacao_no_brasil_pct": 2.2976
+        },
+        {
+          "uf": "SE",
+          "redacoes_validas": 337724,
+          "total_registros": 492211,
+          "percentual_validas": 68.6137,
+          "participacao_no_brasil_pct": 1.6832
+        },
+        {
+          "uf": "SP",
+          "redacoes_validas": 3182581,
+          "total_registros": 4770472,
+          "percentual_validas": 66.7142,
+          "participacao_no_brasil_pct": 15.8614
+        },
+        {
+          "uf": "TO",
+          "redacoes_validas": 168696,
+          "total_registros": 270578,
+          "percentual_validas": 62.3465,
+          "participacao_no_brasil_pct": 0.8408
+        }
+      ],
+      "note": "Soma de participações/redações nas edições, não de pessoas únicas entre anos. UF significa local de aplicação da prova."
+    },
+    "methodology": {
+      "status": "ok",
+      "indicator_id": "IND-001",
+      "definition": "Contagem de registros com TP_STATUS_REDACAO = 1 e NU_NOTA_REDACAO preenchida, numericamente interpretável e no intervalo de 0 a 1000.",
+      "geographic_dimension": "SG_UF_PROVA",
+      "source_file": "RESULTADOS_2024.csv",
+      "aggregation": "COUNT por ano e UF; soma anual para Brasil",
+      "limitations": "Soma de participações/redações nas edições, não de pessoas únicas entre anos. UF significa local de aplicação da prova."
+    }
+  }
+}

@@ -220,3 +220,6 @@ __marimo__/
 # Dados brutos do projeto
 data/raw/*
 !data/raw/README.md
+
+# Dados brutos processados do projeto
+data/processed/*
