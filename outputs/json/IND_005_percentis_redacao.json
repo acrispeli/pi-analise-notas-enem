@@ -1,0 +1,3713 @@
+{
+  "meta": {
+    "indicator_id": "IND-005",
+    "module_schema_version": "ind005-module-1.0.0",
+    "analysis_version": "2.4.0-ind001-ind002-ind003-ind004-ind005",
+    "dataset_version": "enem-2019-2025-csv-publico",
+    "generated_at": "2026-10-17T23:20:19+00:00",
+    "data_status": "draft",
+    "source_files": {
+      "2019": "MICRODADOS_ENEM_2019.csv",
+      "2020": "MICRODADOS_ENEM_2020.csv",
+      "2021": "MICRODADOS_ENEM_2021.csv",
+      "2022": "MICRODADOS_ENEM_2022.csv",
+      "2023": "MICRODADOS_ENEM_2023.csv",
+      "2024": "RESULTADOS_2024.csv",
+      "2025": "RESULTADOS_2025.csv"
+    },
+    "population_definition": "Percentis P25, P50, P75, P90 e P95 da nota NU_NOTA_REDACAO, para TP_STATUS_REDACAO = 1 e nota numérica entre 0 e 1000, inclusive; por ano, Brasil e UF de aplicação (SG_UF_PROVA).",
+    "geographic_dimension": "SG_UF_PROVA",
+    "comparison_ind001_ind002_ind003_ind004": "aprovada (N, soma, média, mediana e desvio-padrão)",
+    "method": "quantil_empirico_interpolacao_linear_hf7",
+    "quantile_probabilities": {
+      "p25": 0.25,
+      "p50": 0.5,
+      "p75": 0.75,
+      "p90": 0.9,
+      "p95": 0.95
+    }
+  },
+  "indicator": {
+    "id": "IND-005",
+    "name": "Percentis da nota da redação",
+    "unit": "pontos",
+    "dashboard_json_path": "pages.overview.ind005.percentiles"
+  },
+  "years": [
+    {
+      "ano": 2019,
+      "arquivo_fonte": "MICRODADOS_ENEM_2019.csv",
+      "brasil": {
+        "n_validas": 3779356,
+        "percentis": {
+          "p25": 500.0,
+          "p50": 580.0,
+          "p75": 680.0,
+          "p90": 820.0,
+          "p95": 880.0
+        },
+        "iqr": 180.0,
+        "soma_notas": 2240786300.0,
+        "media": 592.9016,
+        "desvio_padrao": 155.2765,
+        "total_registros": 5095171
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 28568,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 560.0,
+            "p75": 640.0,
+            "p90": 740.0,
+            "p95": 820.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 15810120.0,
+          "media": 553.4206,
+          "desvio_padrao": 144.2027,
+          "total_registros": 38645
+        },
+        {
+          "uf": "AL",
+          "n_validas": 67414,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 660.0,
+            "p90": 800.0,
+            "p95": 880.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 39313060.0,
+          "media": 583.1587,
+          "desvio_padrao": 150.689,
+          "total_registros": 89824
+        },
+        {
+          "uf": "AM",
+          "n_validas": 76590,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 540.0,
+            "p75": 620.0,
+            "p90": 700.0,
+            "p95": 780.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 41345120.0,
+          "media": 539.824,
+          "desvio_padrao": 137.4996,
+          "total_registros": 118144
+        },
+        {
+          "uf": "AP",
+          "n_validas": 30681,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 620.0,
+            "p90": 720.0,
+            "p95": 800.0
+          },
+          "iqr": 140.0,
+          "soma_notas": 17116060.0,
+          "media": 557.8716,
+          "desvio_padrao": 134.8997,
+          "total_registros": 42603
+        },
+        {
+          "uf": "BA",
+          "n_validas": 291318,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 660.0,
+            "p90": 800.0,
+            "p95": 860.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 168781580.0,
+          "media": 579.3723,
+          "desvio_padrao": 151.5407,
+          "total_registros": 395427
+        },
+        {
+          "uf": "CE",
+          "n_validas": 219039,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 700.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 131089520.0,
+          "media": 598.4757,
+          "desvio_padrao": 165.0927,
+          "total_registros": 294984
+        },
+        {
+          "uf": "DF",
+          "n_validas": 69803,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 700.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 42119700.0,
+          "media": 603.4082,
+          "desvio_padrao": 153.4833,
+          "total_registros": 95849
+        },
+        {
+          "uf": "ES",
+          "n_validas": 74282,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 700.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 45120760.0,
+          "media": 607.4252,
+          "desvio_padrao": 158.8636,
+          "total_registros": 102273
+        },
+        {
+          "uf": "GO",
+          "n_validas": 127089,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 700.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 75631200.0,
+          "media": 595.1042,
+          "desvio_padrao": 167.385,
+          "total_registros": 169980
+        },
+        {
+          "uf": "MA",
+          "n_validas": 163265,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 640.0,
+            "p90": 760.0,
+            "p95": 840.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 91621080.0,
+          "media": 561.1802,
+          "desvio_padrao": 144.9808,
+          "total_registros": 218074
+        },
+        {
+          "uf": "MG",
+          "n_validas": 399511,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 860.0,
+            "p95": 920.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 245557660.0,
+          "media": 614.6456,
+          "desvio_padrao": 166.1138,
+          "total_registros": 534625
+        },
+        {
+          "uf": "MS",
+          "n_validas": 50578,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 660.0,
+            "p90": 780.0,
+            "p95": 860.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 28834080.0,
+          "media": 570.0913,
+          "desvio_padrao": 155.6079,
+          "total_registros": 70393
+        },
+        {
+          "uf": "MT",
+          "n_validas": 61833,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 640.0,
+            "p90": 780.0,
+            "p95": 860.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 34973400.0,
+          "media": 565.6106,
+          "desvio_padrao": 154.9433,
+          "total_registros": 88121
+        },
+        {
+          "uf": "PA",
+          "n_validas": 208527,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 660.0,
+            "p90": 800.0,
+            "p95": 880.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 121086560.0,
+          "media": 580.6757,
+          "desvio_padrao": 153.3601,
+          "total_registros": 279593
+        },
+        {
+          "uf": "PB",
+          "n_validas": 113779,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 68045720.0,
+          "media": 598.0517,
+          "desvio_padrao": 151.9292,
+          "total_registros": 147176
+        },
+        {
+          "uf": "PE",
+          "n_validas": 205165,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 800.0,
+            "p95": 880.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 121147640.0,
+          "media": 590.4888,
+          "desvio_padrao": 154.9511,
+          "total_registros": 275317
+        },
+        {
+          "uf": "PI",
+          "n_validas": 94494,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 55810760.0,
+          "media": 590.6276,
+          "desvio_padrao": 158.8873,
+          "total_registros": 122312
+        },
+        {
+          "uf": "PR",
+          "n_validas": 157643,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 580.0,
+            "p75": 660.0,
+            "p90": 780.0,
+            "p95": 840.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 91681000.0,
+          "media": 581.5736,
+          "desvio_padrao": 147.0725,
+          "total_registros": 211306
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 251839,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 155350960.0,
+          "media": 616.8662,
+          "desvio_padrao": 158.7208,
+          "total_registros": 339716
+        },
+        {
+          "uf": "RN",
+          "n_validas": 91309,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 54858640.0,
+          "media": 600.8021,
+          "desvio_padrao": 148.9823,
+          "total_registros": 119319
+        },
+        {
+          "uf": "RO",
+          "n_validas": 41709,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 620.0,
+            "p90": 720.0,
+            "p95": 800.0
+          },
+          "iqr": 140.0,
+          "soma_notas": 23020740.0,
+          "media": 551.937,
+          "desvio_padrao": 140.1124,
+          "total_registros": 58639
+        },
+        {
+          "uf": "RR",
+          "n_validas": 9045,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 560.0,
+            "p75": 640.0,
+            "p90": 740.0,
+            "p95": 820.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 4964820.0,
+          "media": 548.9022,
+          "desvio_padrao": 148.16,
+          "total_registros": 12956
+        },
+        {
+          "uf": "RS",
+          "n_validas": 161685,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 800.0,
+            "p95": 880.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 96286560.0,
+          "media": 595.5194,
+          "desvio_padrao": 149.297,
+          "total_registros": 218469
+        },
+        {
+          "uf": "SC",
+          "n_validas": 83069,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 680.0,
+            "p90": 800.0,
+            "p95": 860.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 49607840.0,
+          "media": 597.1884,
+          "desvio_padrao": 145.6328,
+          "total_registros": 110699
+        },
+        {
+          "uf": "SE",
+          "n_validas": 60128,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 700.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 36596200.0,
+          "media": 608.6382,
+          "desvio_padrao": 160.508,
+          "total_registros": 78488
+        },
+        {
+          "uf": "SP",
+          "n_validas": 607123,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 680.0,
+            "p90": 800.0,
+            "p95": 880.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 365615220.0,
+          "media": 602.2095,
+          "desvio_padrao": 149.7811,
+          "total_registros": 815990
+        },
+        {
+          "uf": "TO",
+          "n_validas": 33870,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 640.0,
+            "p90": 780.0,
+            "p95": 840.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 19400300.0,
+          "media": 572.7871,
+          "desvio_padrao": 145.783,
+          "total_registros": 46249
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "metodo": "quantil_empirico_interpolacao_linear_hf7",
+        "validado_contra_ind001_ind002_ind003_ind004": true
+      }
+    },
+    {
+      "ano": 2020,
+      "arquivo_fonte": "MICRODADOS_ENEM_2020.csv",
+      "brasil": {
+        "n_validas": 2674914,
+        "percentis": {
+          "p25": 480.0,
+          "p50": 580.0,
+          "p75": 700.0,
+          "p90": 860.0,
+          "p95": 920.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 1579258920.0,
+        "media": 590.3961,
+        "desvio_padrao": 176.3058,
+        "total_registros": 5783109
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 19609,
+          "percentis": {
+            "p25": 420.0,
+            "p50": 540.0,
+            "p75": 640.0,
+            "p90": 780.0,
+            "p95": 860.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 10678720.0,
+          "media": 544.5826,
+          "desvio_padrao": 162.8552,
+          "total_registros": 41824
+        },
+        {
+          "uf": "AL",
+          "n_validas": 52661,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 560.0,
+            "p75": 680.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 30453720.0,
+          "media": 578.2974,
+          "desvio_padrao": 174.8829,
+          "total_registros": 102551
+        },
+        {
+          "uf": "AM",
+          "n_validas": 49067,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 620.0,
+            "p90": 740.0,
+            "p95": 820.0
+          },
+          "iqr": 140.0,
+          "soma_notas": 27160720.0,
+          "media": 553.5435,
+          "desvio_padrao": 140.8474,
+          "total_registros": 163426
+        },
+        {
+          "uf": "AP",
+          "n_validas": 20477,
+          "percentis": {
+            "p25": 440.0,
+            "p50": 540.0,
+            "p75": 620.0,
+            "p90": 760.0,
+            "p95": 860.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 11201360.0,
+          "media": 547.0215,
+          "desvio_padrao": 156.4814,
+          "total_registros": 47263
+        },
+        {
+          "uf": "BA",
+          "n_validas": 212225,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 560.0,
+            "p75": 680.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 121754600.0,
+          "media": 573.7053,
+          "desvio_padrao": 175.1409,
+          "total_registros": 447691
+        },
+        {
+          "uf": "CE",
+          "n_validas": 162228,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 580.0,
+            "p75": 720.0,
+            "p90": 860.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 96554480.0,
+          "media": 595.1777,
+          "desvio_padrao": 181.9704,
+          "total_registros": 325680
+        },
+        {
+          "uf": "DF",
+          "n_validas": 54790,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 700.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 32497400.0,
+          "media": 593.1265,
+          "desvio_padrao": 172.3496,
+          "total_registros": 116932
+        },
+        {
+          "uf": "ES",
+          "n_validas": 48354,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 29144460.0,
+          "media": 602.7311,
+          "desvio_padrao": 183.4571,
+          "total_registros": 105812
+        },
+        {
+          "uf": "GO",
+          "n_validas": 93632,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 580.0,
+            "p75": 720.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 55617580.0,
+          "media": 594.0018,
+          "desvio_padrao": 183.285,
+          "total_registros": 211069
+        },
+        {
+          "uf": "MA",
+          "n_validas": 115887,
+          "percentis": {
+            "p25": 440.0,
+            "p50": 560.0,
+            "p75": 640.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 64758660.0,
+          "media": 558.8087,
+          "desvio_padrao": 168.6333,
+          "total_registros": 238272
+        },
+        {
+          "uf": "MG",
+          "n_validas": 265162,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 760.0,
+            "p90": 900.0,
+            "p95": 940.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 164322120.0,
+          "media": 619.7046,
+          "desvio_padrao": 186.3698,
+          "total_registros": 577211
+        },
+        {
+          "uf": "MS",
+          "n_validas": 34033,
+          "percentis": {
+            "p25": 440.0,
+            "p50": 560.0,
+            "p75": 660.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 19265780.0,
+          "media": 566.0911,
+          "desvio_padrao": 171.474,
+          "total_registros": 84548
+        },
+        {
+          "uf": "MT",
+          "n_validas": 41514,
+          "percentis": {
+            "p25": 440.0,
+            "p50": 560.0,
+            "p75": 660.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 23530140.0,
+          "media": 566.8001,
+          "desvio_padrao": 174.652,
+          "total_registros": 101727
+        },
+        {
+          "uf": "PA",
+          "n_validas": 157977,
+          "percentis": {
+            "p25": 440.0,
+            "p50": 560.0,
+            "p75": 660.0,
+            "p90": 820.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 89668140.0,
+          "media": 567.6025,
+          "desvio_padrao": 170.536,
+          "total_registros": 330883
+        },
+        {
+          "uf": "PB",
+          "n_validas": 87453,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 580.0,
+            "p75": 700.0,
+            "p90": 860.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 51381840.0,
+          "media": 587.5366,
+          "desvio_padrao": 179.2052,
+          "total_registros": 164965
+        },
+        {
+          "uf": "PE",
+          "n_validas": 156230,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 580.0,
+            "p75": 700.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 91245620.0,
+          "media": 584.0467,
+          "desvio_padrao": 177.009,
+          "total_registros": 315569
+        },
+        {
+          "uf": "PI",
+          "n_validas": 68313,
+          "percentis": {
+            "p25": 440.0,
+            "p50": 560.0,
+            "p75": 700.0,
+            "p90": 860.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 39754680.0,
+          "media": 581.949,
+          "desvio_padrao": 184.1112,
+          "total_registros": 134678
+        },
+        {
+          "uf": "PR",
+          "n_validas": 111559,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 65363680.0,
+          "media": 585.9113,
+          "desvio_padrao": 165.401,
+          "total_registros": 239635
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 179829,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 110195840.0,
+          "media": 612.7813,
+          "desvio_padrao": 178.6175,
+          "total_registros": 387480
+        },
+        {
+          "uf": "RN",
+          "n_validas": 67552,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 720.0,
+            "p90": 860.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 40115140.0,
+          "media": 593.8409,
+          "desvio_padrao": 177.4989,
+          "total_registros": 131225
+        },
+        {
+          "uf": "RO",
+          "n_validas": 23831,
+          "percentis": {
+            "p25": 420.0,
+            "p50": 540.0,
+            "p75": 640.0,
+            "p90": 800.0,
+            "p95": 860.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 13072380.0,
+          "media": 548.5452,
+          "desvio_padrao": 165.3809,
+          "total_registros": 69594
+        },
+        {
+          "uf": "RR",
+          "n_validas": 6601,
+          "percentis": {
+            "p25": 420.0,
+            "p50": 540.0,
+            "p75": 640.0,
+            "p90": 780.0,
+            "p95": 880.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 3606900.0,
+          "media": 546.4172,
+          "desvio_padrao": 165.4232,
+          "total_registros": 16885
+        },
+        {
+          "uf": "RS",
+          "n_validas": 116454,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 700.0,
+            "p90": 860.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 69040540.0,
+          "media": 592.8568,
+          "desvio_padrao": 173.1769,
+          "total_registros": 249130
+        },
+        {
+          "uf": "SC",
+          "n_validas": 55277,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 32994500.0,
+          "media": 596.8938,
+          "desvio_padrao": 171.4814,
+          "total_registros": 121153
+        },
+        {
+          "uf": "SE",
+          "n_validas": 45399,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 740.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 27326400.0,
+          "media": 601.9163,
+          "desvio_padrao": 184.7549,
+          "total_registros": 88205
+        },
+        {
+          "uf": "SP",
+          "n_validas": 403156,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 244262360.0,
+          "media": 605.8755,
+          "desvio_padrao": 170.3892,
+          "total_registros": 910492
+        },
+        {
+          "uf": "TO",
+          "n_validas": 25644,
+          "percentis": {
+            "p25": 440.0,
+            "p50": 560.0,
+            "p75": 660.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 14291160.0,
+          "media": 557.2906,
+          "desvio_padrao": 172.4449,
+          "total_registros": 59209
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "metodo": "quantil_empirico_interpolacao_linear_hf7",
+        "validado_contra_ind001_ind002_ind003_ind004": true
+      }
+    },
+    {
+      "ano": 2021,
+      "arquivo_fonte": "MICRODADOS_ENEM_2021.csv",
+      "brasil": {
+        "n_validas": 2293797,
+        "percentis": {
+          "p25": 540.0,
+          "p50": 620.0,
+          "p75": 740.0,
+          "p90": 860.0,
+          "p95": 900.0
+        },
+        "iqr": 200.0,
+        "soma_notas": 1459136680.0,
+        "media": 636.1228,
+        "desvio_padrao": 152.7169,
+        "total_registros": 3389832
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 13270,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 840.0,
+            "p95": 880.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 7988100.0,
+          "media": 601.9668,
+          "desvio_padrao": 147.1263,
+          "total_registros": 20336
+        },
+        {
+          "uf": "AL",
+          "n_validas": 39164,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 24846080.0,
+          "media": 634.4112,
+          "desvio_padrao": 154.556,
+          "total_registros": 56584
+        },
+        {
+          "uf": "AM",
+          "n_validas": 46243,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 640.0,
+            "p90": 760.0,
+            "p95": 840.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 26383680.0,
+          "media": 570.5443,
+          "desvio_padrao": 136.91,
+          "total_registros": 89778
+        },
+        {
+          "uf": "AP",
+          "n_validas": 13460,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 160.0,
+          "soma_notas": 8098520.0,
+          "media": 601.6731,
+          "desvio_padrao": 142.9962,
+          "total_registros": 21774
+        },
+        {
+          "uf": "BA",
+          "n_validas": 179036,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 112066660.0,
+          "media": 625.9448,
+          "desvio_padrao": 150.771,
+          "total_registros": 266194
+        },
+        {
+          "uf": "CE",
+          "n_validas": 141716,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 89208780.0,
+          "media": 629.4898,
+          "desvio_padrao": 161.757,
+          "total_registros": 220517
+        },
+        {
+          "uf": "DF",
+          "n_validas": 46443,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 29745780.0,
+          "media": 640.4793,
+          "desvio_padrao": 149.1105,
+          "total_registros": 67501
+        },
+        {
+          "uf": "ES",
+          "n_validas": 43408,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 28120320.0,
+          "media": 647.8142,
+          "desvio_padrao": 153.9317,
+          "total_registros": 64181
+        },
+        {
+          "uf": "GO",
+          "n_validas": 86653,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 55075640.0,
+          "media": 635.5884,
+          "desvio_padrao": 158.0833,
+          "total_registros": 136915
+        },
+        {
+          "uf": "MA",
+          "n_validas": 85846,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 52880340.0,
+          "media": 615.9907,
+          "desvio_padrao": 153.857,
+          "total_registros": 127905
+        },
+        {
+          "uf": "MG",
+          "n_validas": 225566,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 640.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 149997280.0,
+          "media": 664.9818,
+          "desvio_padrao": 157.6379,
+          "total_registros": 327829
+        },
+        {
+          "uf": "MS",
+          "n_validas": 27863,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 17216640.0,
+          "media": 617.9033,
+          "desvio_padrao": 149.9923,
+          "total_registros": 42490
+        },
+        {
+          "uf": "MT",
+          "n_validas": 36038,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 22169580.0,
+          "media": 615.1723,
+          "desvio_padrao": 153.4934,
+          "total_registros": 56085
+        },
+        {
+          "uf": "PA",
+          "n_validas": 121959,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 75809820.0,
+          "media": 621.6009,
+          "desvio_padrao": 151.1661,
+          "total_registros": 185978
+        },
+        {
+          "uf": "PB",
+          "n_validas": 71261,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 45520220.0,
+          "media": 638.7817,
+          "desvio_padrao": 156.7319,
+          "total_registros": 102002
+        },
+        {
+          "uf": "PE",
+          "n_validas": 132247,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 83541000.0,
+          "media": 631.7043,
+          "desvio_padrao": 154.1232,
+          "total_registros": 193616
+        },
+        {
+          "uf": "PI",
+          "n_validas": 56887,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 36333520.0,
+          "media": 638.6964,
+          "desvio_padrao": 162.7747,
+          "total_registros": 79969
+        },
+        {
+          "uf": "PR",
+          "n_validas": 99579,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 61948200.0,
+          "media": 622.101,
+          "desvio_padrao": 140.8549,
+          "total_registros": 144282
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 163553,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 106487640.0,
+          "media": 651.0895,
+          "desvio_padrao": 152.8828,
+          "total_registros": 238347
+        },
+        {
+          "uf": "RN",
+          "n_validas": 57335,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 36764300.0,
+          "media": 641.2192,
+          "desvio_padrao": 153.7057,
+          "total_registros": 80820
+        },
+        {
+          "uf": "RO",
+          "n_validas": 19602,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 11799540.0,
+          "media": 601.9559,
+          "desvio_padrao": 147.3409,
+          "total_registros": 32801
+        },
+        {
+          "uf": "RR",
+          "n_validas": 4977,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 580.0,
+            "p75": 700.0,
+            "p90": 840.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 3014900.0,
+          "media": 605.7665,
+          "desvio_padrao": 147.9497,
+          "total_registros": 8056
+        },
+        {
+          "uf": "RS",
+          "n_validas": 104351,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 66601440.0,
+          "media": 638.2444,
+          "desvio_padrao": 148.3638,
+          "total_registros": 150484
+        },
+        {
+          "uf": "SC",
+          "n_validas": 56618,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 36200940.0,
+          "media": 639.3892,
+          "desvio_padrao": 143.2348,
+          "total_registros": 80765
+        },
+        {
+          "uf": "SE",
+          "n_validas": 37772,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 24444980.0,
+          "media": 647.172,
+          "desvio_padrao": 160.5769,
+          "total_registros": 53796
+        },
+        {
+          "uf": "SP",
+          "n_validas": 362590,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 234373820.0,
+          "media": 646.388,
+          "desvio_padrao": 144.3793,
+          "total_registros": 509954
+        },
+        {
+          "uf": "TO",
+          "n_validas": 20360,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 12498960.0,
+          "media": 613.8978,
+          "desvio_padrao": 152.2449,
+          "total_registros": 30873
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "metodo": "quantil_empirico_interpolacao_linear_hf7",
+        "validado_contra_ind001_ind002_ind003_ind004": true
+      }
+    },
+    {
+      "ano": 2022,
+      "arquivo_fonte": "MICRODADOS_ENEM_2022.csv",
+      "brasil": {
+        "n_validas": 2363615,
+        "percentis": {
+          "p25": 540.0,
+          "p50": 640.0,
+          "p75": 780.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 240.0,
+        "soma_notas": 1542143260.0,
+        "media": 652.4511,
+        "desvio_padrao": 159.1949,
+        "total_registros": 3476105
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 14596,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 8993280.0,
+          "media": 616.1469,
+          "desvio_padrao": 154.3411,
+          "total_registros": 22601
+        },
+        {
+          "uf": "AL",
+          "n_validas": 43183,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 27784260.0,
+          "media": 643.4074,
+          "desvio_padrao": 160.965,
+          "total_registros": 63945
+        },
+        {
+          "uf": "AM",
+          "n_validas": 41841,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 800.0,
+            "p95": 860.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 24727900.0,
+          "media": 590.9969,
+          "desvio_padrao": 143.2018,
+          "total_registros": 80986
+        },
+        {
+          "uf": "AP",
+          "n_validas": 14455,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 700.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 8821100.0,
+          "media": 610.2456,
+          "desvio_padrao": 148.9245,
+          "total_registros": 22674
+        },
+        {
+          "uf": "BA",
+          "n_validas": 183862,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 117796060.0,
+          "media": 640.6765,
+          "desvio_padrao": 160.2476,
+          "total_registros": 265166
+        },
+        {
+          "uf": "CE",
+          "n_validas": 150973,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 98502620.0,
+          "media": 652.4519,
+          "desvio_padrao": 166.6279,
+          "total_registros": 226377
+        },
+        {
+          "uf": "DF",
+          "n_validas": 45324,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 29961900.0,
+          "media": 661.0604,
+          "desvio_padrao": 155.8332,
+          "total_registros": 65401
+        },
+        {
+          "uf": "ES",
+          "n_validas": 43182,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 660.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 28907760.0,
+          "media": 669.44,
+          "desvio_padrao": 158.9726,
+          "total_registros": 63700
+        },
+        {
+          "uf": "GO",
+          "n_validas": 91361,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 59804520.0,
+          "media": 654.5957,
+          "desvio_padrao": 164.1057,
+          "total_registros": 141622
+        },
+        {
+          "uf": "MA",
+          "n_validas": 89093,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 56025340.0,
+          "media": 628.8411,
+          "desvio_padrao": 162.3795,
+          "total_registros": 132916
+        },
+        {
+          "uf": "MG",
+          "n_validas": 217330,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 680.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 148279200.0,
+          "media": 682.2767,
+          "desvio_padrao": 163.0865,
+          "total_registros": 309781
+        },
+        {
+          "uf": "MS",
+          "n_validas": 28693,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 18197360.0,
+          "media": 634.209,
+          "desvio_padrao": 156.6107,
+          "total_registros": 44683
+        },
+        {
+          "uf": "MT",
+          "n_validas": 37595,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 23830720.0,
+          "media": 633.88,
+          "desvio_padrao": 158.5399,
+          "total_registros": 59381
+        },
+        {
+          "uf": "PA",
+          "n_validas": 133917,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 84276700.0,
+          "media": 629.3204,
+          "desvio_padrao": 160.5603,
+          "total_registros": 202621
+        },
+        {
+          "uf": "PB",
+          "n_validas": 71866,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 800.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 47321280.0,
+          "media": 658.4655,
+          "desvio_padrao": 162.8398,
+          "total_registros": 103238
+        },
+        {
+          "uf": "PE",
+          "n_validas": 128503,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 83754060.0,
+          "media": 651.7674,
+          "desvio_padrao": 160.8888,
+          "total_registros": 189595
+        },
+        {
+          "uf": "PI",
+          "n_validas": 59139,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 38544420.0,
+          "media": 651.7598,
+          "desvio_padrao": 170.0345,
+          "total_registros": 84400
+        },
+        {
+          "uf": "PR",
+          "n_validas": 103046,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 65849660.0,
+          "media": 639.0317,
+          "desvio_padrao": 145.8879,
+          "total_registros": 150396
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 171676,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 660.0,
+            "p75": 800.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 114270300.0,
+          "media": 665.616,
+          "desvio_padrao": 160.5189,
+          "total_registros": 250890
+        },
+        {
+          "uf": "RN",
+          "n_validas": 62045,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 40461800.0,
+          "media": 652.1364,
+          "desvio_padrao": 160.6978,
+          "total_registros": 88049
+        },
+        {
+          "uf": "RO",
+          "n_validas": 19720,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 12337500.0,
+          "media": 625.6339,
+          "desvio_padrao": 153.5071,
+          "total_registros": 31969
+        },
+        {
+          "uf": "RR",
+          "n_validas": 4953,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 888.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 3087800.0,
+          "media": 623.4201,
+          "desvio_padrao": 150.7786,
+          "total_registros": 8434
+        },
+        {
+          "uf": "RS",
+          "n_validas": 104840,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 68694940.0,
+          "media": 655.236,
+          "desvio_padrao": 154.9792,
+          "total_registros": 152295
+        },
+        {
+          "uf": "SC",
+          "n_validas": 57787,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 38174920.0,
+          "media": 660.6143,
+          "desvio_padrao": 146.9666,
+          "total_registros": 82791
+        },
+        {
+          "uf": "SE",
+          "n_validas": 41577,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 660.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 27587360.0,
+          "media": 663.5245,
+          "desvio_padrao": 167.8204,
+          "total_registros": 58312
+        },
+        {
+          "uf": "SP",
+          "n_validas": 383826,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 253923100.0,
+          "media": 661.5578,
+          "desvio_padrao": 149.6565,
+          "total_registros": 544442
+        },
+        {
+          "uf": "TO",
+          "n_validas": 19232,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 12227400.0,
+          "media": 635.7841,
+          "desvio_padrao": 159.0403,
+          "total_registros": 29440
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "metodo": "quantil_empirico_interpolacao_linear_hf7",
+        "validado_contra_ind001_ind002_ind003_ind004": true
+      }
+    },
+    {
+      "ano": 2023,
+      "arquivo_fonte": "MICRODADOS_ENEM_2023.csv",
+      "brasil": {
+        "n_validas": 2704814,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 620.0,
+          "p75": 780.0,
+          "p90": 900.0,
+          "p95": 920.0
+        },
+        "iqr": 260.0,
+        "soma_notas": 1743824560.0,
+        "media": 644.7115,
+        "desvio_padrao": 175.2646,
+        "total_registros": 3933955
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 15475,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 720.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 9366400.0,
+          "media": 605.2601,
+          "desvio_padrao": 175.4092,
+          "total_registros": 24274
+        },
+        {
+          "uf": "AL",
+          "n_validas": 54605,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 620.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 280.0,
+          "soma_notas": 34459660.0,
+          "media": 631.0715,
+          "desvio_padrao": 180.1232,
+          "total_registros": 82760
+        },
+        {
+          "uf": "AM",
+          "n_validas": 48414,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 28119400.0,
+          "media": 580.8113,
+          "desvio_padrao": 162.7845,
+          "total_registros": 92916
+        },
+        {
+          "uf": "AP",
+          "n_validas": 18351,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 720.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 11130580.0,
+          "media": 606.5381,
+          "desvio_padrao": 171.9648,
+          "total_registros": 28807
+        },
+        {
+          "uf": "BA",
+          "n_validas": 221453,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 139659960.0,
+          "media": 630.6528,
+          "desvio_padrao": 175.3935,
+          "total_registros": 324268
+        },
+        {
+          "uf": "CE",
+          "n_validas": 168615,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 940.0
+          },
+          "iqr": 280.0,
+          "soma_notas": 110343140.0,
+          "media": 654.4088,
+          "desvio_padrao": 183.4306,
+          "total_registros": 241960
+        },
+        {
+          "uf": "DF",
+          "n_validas": 51406,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 33532720.0,
+          "media": 652.3114,
+          "desvio_padrao": 168.2993,
+          "total_registros": 72975
+        },
+        {
+          "uf": "ES",
+          "n_validas": 50099,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 940.0
+          },
+          "iqr": 280.0,
+          "soma_notas": 33300220.0,
+          "media": 664.6883,
+          "desvio_padrao": 173.2315,
+          "total_registros": 73724
+        },
+        {
+          "uf": "GO",
+          "n_validas": 98568,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 940.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 64735380.0,
+          "media": 656.7586,
+          "desvio_padrao": 178.2435,
+          "total_registros": 149110
+        },
+        {
+          "uf": "MA",
+          "n_validas": 111310,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 600.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 280.0,
+          "soma_notas": 68724080.0,
+          "media": 617.4116,
+          "desvio_padrao": 182.1708,
+          "total_registros": 165756
+        },
+        {
+          "uf": "MG",
+          "n_validas": 254724,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 660.0,
+            "p75": 820.0,
+            "p90": 920.0,
+            "p95": 940.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 171595880.0,
+          "media": 673.6542,
+          "desvio_padrao": 174.3219,
+          "total_registros": 358575
+        },
+        {
+          "uf": "MS",
+          "n_validas": 31901,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 19831680.0,
+          "media": 621.6633,
+          "desvio_padrao": 172.3237,
+          "total_registros": 47455
+        },
+        {
+          "uf": "MT",
+          "n_validas": 41739,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 26050600.0,
+          "media": 624.1309,
+          "desvio_padrao": 178.0481,
+          "total_registros": 63912
+        },
+        {
+          "uf": "PA",
+          "n_validas": 153006,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 600.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 280.0,
+          "soma_notas": 94562680.0,
+          "media": 618.0325,
+          "desvio_padrao": 181.5925,
+          "total_registros": 229162
+        },
+        {
+          "uf": "PB",
+          "n_validas": 86548,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 940.0
+          },
+          "iqr": 280.0,
+          "soma_notas": 56260580.0,
+          "media": 650.0506,
+          "desvio_padrao": 181.081,
+          "total_registros": 124511
+        },
+        {
+          "uf": "PE",
+          "n_validas": 150756,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 280.0,
+          "soma_notas": 97379700.0,
+          "media": 645.9425,
+          "desvio_padrao": 177.8806,
+          "total_registros": 218859
+        },
+        {
+          "uf": "PI",
+          "n_validas": 69561,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 620.0,
+            "p75": 800.0,
+            "p90": 920.0,
+            "p95": 940.0
+          },
+          "iqr": 300.0,
+          "soma_notas": 44742100.0,
+          "media": 643.2067,
+          "desvio_padrao": 189.5896,
+          "total_registros": 99639
+        },
+        {
+          "uf": "PR",
+          "n_validas": 118364,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 74116860.0,
+          "media": 626.1774,
+          "desvio_padrao": 162.1143,
+          "total_registros": 166506
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 189071,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 940.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 124354820.0,
+          "media": 657.7149,
+          "desvio_padrao": 174.159,
+          "total_registros": 282296
+        },
+        {
+          "uf": "RN",
+          "n_validas": 72615,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 780.0,
+            "p90": 900.0,
+            "p95": 940.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 46728180.0,
+          "media": 643.5059,
+          "desvio_padrao": 176.7427,
+          "total_registros": 100706
+        },
+        {
+          "uf": "RO",
+          "n_validas": 22929,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 14280180.0,
+          "media": 622.7999,
+          "desvio_padrao": 170.0089,
+          "total_registros": 36038
+        },
+        {
+          "uf": "RR",
+          "n_validas": 6140,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 3788040.0,
+          "media": 616.9446,
+          "desvio_padrao": 172.6344,
+          "total_registros": 9639
+        },
+        {
+          "uf": "RS",
+          "n_validas": 114244,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 74293180.0,
+          "media": 650.3027,
+          "desvio_padrao": 168.9646,
+          "total_registros": 159919
+        },
+        {
+          "uf": "SC",
+          "n_validas": 64493,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 42190500.0,
+          "media": 654.1873,
+          "desvio_padrao": 162.6424,
+          "total_registros": 91263
+        },
+        {
+          "uf": "SE",
+          "n_validas": 46731,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 940.0
+          },
+          "iqr": 300.0,
+          "soma_notas": 30780520.0,
+          "media": 658.6745,
+          "desvio_padrao": 183.7387,
+          "total_registros": 65540
+        },
+        {
+          "uf": "SP",
+          "n_validas": 421831,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 275832540.0,
+          "media": 653.8935,
+          "desvio_padrao": 164.6238,
+          "total_registros": 590767
+        },
+        {
+          "uf": "TO",
+          "n_validas": 21865,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 13664980.0,
+          "media": 624.9705,
+          "desvio_padrao": 177.6774,
+          "total_registros": 32618
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "metodo": "quantil_empirico_interpolacao_linear_hf7",
+        "validado_contra_ind001_ind002_ind003_ind004": true
+      }
+    },
+    {
+      "ano": 2024,
+      "arquivo_fonte": "RESULTADOS_2024.csv",
+      "brasil": {
+        "n_validas": 3002710,
+        "percentis": {
+          "p25": 540.0,
+          "p50": 640.0,
+          "p75": 800.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 260.0,
+        "soma_notas": 1978683280.0,
+        "media": 658.9658,
+        "desvio_padrao": 163.4915,
+        "total_registros": 4332944
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 17207,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 10702800.0,
+          "media": 622.0027,
+          "desvio_padrao": 165.2602,
+          "total_registros": 26424
+        },
+        {
+          "uf": "AL",
+          "n_validas": 60066,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 38801920.0,
+          "media": 645.9881,
+          "desvio_padrao": 170.3801,
+          "total_registros": 88896
+        },
+        {
+          "uf": "AM",
+          "n_validas": 53319,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 31630160.0,
+          "media": 593.2249,
+          "desvio_padrao": 155.8872,
+          "total_registros": 96898
+        },
+        {
+          "uf": "AP",
+          "n_validas": 19920,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 12480220.0,
+          "media": 626.5171,
+          "desvio_padrao": 161.6415,
+          "total_registros": 30650
+        },
+        {
+          "uf": "BA",
+          "n_validas": 254741,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 162800240.0,
+          "media": 639.0814,
+          "desvio_padrao": 165.3163,
+          "total_registros": 376845
+        },
+        {
+          "uf": "CE",
+          "n_validas": 180900,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 680.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 121490820.0,
+          "media": 671.591,
+          "desvio_padrao": 171.2782,
+          "total_registros": 250607
+        },
+        {
+          "uf": "DF",
+          "n_validas": 53470,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 660.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 35980160.0,
+          "media": 672.9037,
+          "desvio_padrao": 157.0045,
+          "total_registros": 74520
+        },
+        {
+          "uf": "ES",
+          "n_validas": 52522,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 680.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 35929660.0,
+          "media": 684.0878,
+          "desvio_padrao": 159.7098,
+          "total_registros": 74543
+        },
+        {
+          "uf": "GO",
+          "n_validas": 105004,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 680.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 71026100.0,
+          "media": 676.4133,
+          "desvio_padrao": 163.3391,
+          "total_registros": 151158
+        },
+        {
+          "uf": "MA",
+          "n_validas": 123246,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 78564240.0,
+          "media": 637.4587,
+          "desvio_padrao": 170.7406,
+          "total_registros": 178833
+        },
+        {
+          "uf": "MG",
+          "n_validas": 284268,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 680.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 195013360.0,
+          "media": 686.0194,
+          "desvio_padrao": 161.038,
+          "total_registros": 393824
+        },
+        {
+          "uf": "MS",
+          "n_validas": 34551,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 22054700.0,
+          "media": 638.3231,
+          "desvio_padrao": 159.6886,
+          "total_registros": 51311
+        },
+        {
+          "uf": "MT",
+          "n_validas": 43717,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 780.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 28171560.0,
+          "media": 644.4074,
+          "desvio_padrao": 164.8583,
+          "total_registros": 67782
+        },
+        {
+          "uf": "PA",
+          "n_validas": 172059,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 108192900.0,
+          "media": 628.8128,
+          "desvio_padrao": 170.5084,
+          "total_registros": 248061
+        },
+        {
+          "uf": "PB",
+          "n_validas": 91286,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 660.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 61271860.0,
+          "media": 671.2076,
+          "desvio_padrao": 167.6696,
+          "total_registros": 128546
+        },
+        {
+          "uf": "PE",
+          "n_validas": 167955,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 660.0,
+            "p75": 800.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 110924760.0,
+          "media": 660.4433,
+          "desvio_padrao": 164.6198,
+          "total_registros": 237615
+        },
+        {
+          "uf": "PI",
+          "n_validas": 78728,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 300.0,
+          "soma_notas": 51814860.0,
+          "media": 658.1503,
+          "desvio_padrao": 177.2044,
+          "total_registros": 108113
+        },
+        {
+          "uf": "PR",
+          "n_validas": 130385,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 84115580.0,
+          "media": 645.1323,
+          "desvio_padrao": 152.8116,
+          "total_registros": 179954
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 203818,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 660.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 136880820.0,
+          "media": 671.5836,
+          "desvio_padrao": 162.1659,
+          "total_registros": 289397
+        },
+        {
+          "uf": "RN",
+          "n_validas": 74977,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 660.0,
+            "p75": 800.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 49693440.0,
+          "media": 662.7825,
+          "desvio_padrao": 163.7843,
+          "total_registros": 102215
+        },
+        {
+          "uf": "RO",
+          "n_validas": 25421,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 16320280.0,
+          "media": 641.9999,
+          "desvio_padrao": 159.8131,
+          "total_registros": 38609
+        },
+        {
+          "uf": "RR",
+          "n_validas": 8223,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 5111900.0,
+          "media": 621.6588,
+          "desvio_padrao": 156.5547,
+          "total_registros": 12695
+        },
+        {
+          "uf": "RS",
+          "n_validas": 148365,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 640.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 95886620.0,
+          "media": 646.2887,
+          "desvio_padrao": 158.9367,
+          "total_registros": 279039
+        },
+        {
+          "uf": "SC",
+          "n_validas": 67899,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 660.0,
+            "p75": 800.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 45822640.0,
+          "media": 674.8647,
+          "desvio_padrao": 150.6649,
+          "total_registros": 95126
+        },
+        {
+          "uf": "SE",
+          "n_validas": 50903,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 680.0,
+            "p75": 820.0,
+            "p90": 900.0,
+            "p95": 920.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 34280720.0,
+          "media": 673.4519,
+          "desvio_padrao": 168.0685,
+          "total_registros": 69529
+        },
+        {
+          "uf": "SP",
+          "n_validas": 476463,
+          "percentis": {
+            "p25": 560.0,
+            "p50": 660.0,
+            "p75": 800.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 318794580.0,
+          "media": 669.0857,
+          "desvio_padrao": 152.6842,
+          "total_registros": 647215
+        },
+        {
+          "uf": "TO",
+          "n_validas": 23297,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 14926380.0,
+          "media": 640.6997,
+          "desvio_padrao": 165.7548,
+          "total_registros": 34539
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "metodo": "quantil_empirico_interpolacao_linear_hf7",
+        "validado_contra_ind001_ind002_ind003_ind004": true
+      }
+    },
+    {
+      "ano": 2025,
+      "arquivo_fonte": "RESULTADOS_2025.csv",
+      "brasil": {
+        "n_validas": 3245696,
+        "percentis": {
+          "p25": 500.0,
+          "p50": 600.0,
+          "p75": 720.0,
+          "p90": 840.0,
+          "p95": 900.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 2008161140.0,
+        "media": 618.7151,
+        "desvio_padrao": 157.521,
+        "total_registros": 4810772
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_validas": 17895,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 10532100.0,
+          "media": 588.5499,
+          "desvio_padrao": 152.4307,
+          "total_registros": 28957
+        },
+        {
+          "uf": "AL",
+          "n_validas": 62984,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 38234000.0,
+          "media": 607.0431,
+          "desvio_padrao": 161.0667,
+          "total_registros": 96480
+        },
+        {
+          "uf": "AM",
+          "n_validas": 58405,
+          "percentis": {
+            "p25": 460.0,
+            "p50": 560.0,
+            "p75": 640.0,
+            "p90": 760.0,
+            "p95": 840.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 32844220.0,
+          "media": 562.3529,
+          "desvio_padrao": 144.3834,
+          "total_registros": 110831
+        },
+        {
+          "uf": "AP",
+          "n_validas": 21072,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 12470920.0,
+          "media": 591.8242,
+          "desvio_padrao": 151.7398,
+          "total_registros": 33190
+        },
+        {
+          "uf": "BA",
+          "n_validas": 281334,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 700.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 168535260.0,
+          "media": 599.0576,
+          "desvio_padrao": 156.3381,
+          "total_registros": 427983
+        },
+        {
+          "uf": "CE",
+          "n_validas": 195244,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 122704060.0,
+          "media": 628.4652,
+          "desvio_padrao": 164.1184,
+          "total_registros": 275902
+        },
+        {
+          "uf": "DF",
+          "n_validas": 58214,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 37000540.0,
+          "media": 635.5952,
+          "desvio_padrao": 153.7663,
+          "total_registros": 82955
+        },
+        {
+          "uf": "ES",
+          "n_validas": 57041,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 36458460.0,
+          "media": 639.1624,
+          "desvio_padrao": 155.8645,
+          "total_registros": 85910
+        },
+        {
+          "uf": "GO",
+          "n_validas": 113651,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 72456540.0,
+          "media": 637.5354,
+          "desvio_padrao": 157.1463,
+          "total_registros": 166747
+        },
+        {
+          "uf": "MA",
+          "n_validas": 138346,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 700.0,
+            "p90": 840.0,
+            "p95": 880.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 82110480.0,
+          "media": 593.5154,
+          "desvio_padrao": 159.9532,
+          "total_registros": 211370
+        },
+        {
+          "uf": "MG",
+          "n_validas": 314939,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 640.0,
+            "p75": 760.0,
+            "p90": 880.0,
+            "p95": 920.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 202711440.0,
+          "media": 643.653,
+          "desvio_padrao": 159.0771,
+          "total_registros": 464937
+        },
+        {
+          "uf": "MS",
+          "n_validas": 38579,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 700.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 22951840.0,
+          "media": 594.9309,
+          "desvio_padrao": 154.303,
+          "total_registros": 57932
+        },
+        {
+          "uf": "MT",
+          "n_validas": 47849,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 28882100.0,
+          "media": 603.6093,
+          "desvio_padrao": 159.5567,
+          "total_registros": 80396
+        },
+        {
+          "uf": "PA",
+          "n_validas": 184690,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 108533660.0,
+          "media": 587.6531,
+          "desvio_padrao": 155.6572,
+          "total_registros": 289328
+        },
+        {
+          "uf": "PB",
+          "n_validas": 96886,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 61238620.0,
+          "media": 632.0688,
+          "desvio_padrao": 160.7738,
+          "total_registros": 142035
+        },
+        {
+          "uf": "PE",
+          "n_validas": 185793,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 720.0,
+            "p90": 840.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 114585560.0,
+          "media": 616.7378,
+          "desvio_padrao": 157.7371,
+          "total_registros": 272279
+        },
+        {
+          "uf": "PI",
+          "n_validas": 82823,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 260.0,
+          "soma_notas": 50965880.0,
+          "media": 615.359,
+          "desvio_padrao": 168.6287,
+          "total_registros": 120032
+        },
+        {
+          "uf": "PR",
+          "n_validas": 136868,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 700.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 82658380.0,
+          "media": 603.9277,
+          "desvio_padrao": 147.2849,
+          "total_registros": 195836
+        },
+        {
+          "uf": "RJ",
+          "n_validas": 226220,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 142256460.0,
+          "media": 628.8412,
+          "desvio_padrao": 160.0014,
+          "total_registros": 328943
+        },
+        {
+          "uf": "RN",
+          "n_validas": 80888,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 50441040.0,
+          "media": 623.5911,
+          "desvio_padrao": 157.5529,
+          "total_registros": 113208
+        },
+        {
+          "uf": "RO",
+          "n_validas": 28916,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 580.0,
+            "p75": 680.0,
+            "p90": 800.0,
+            "p95": 860.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 17148780.0,
+          "media": 593.0551,
+          "desvio_padrao": 149.3255,
+          "total_registros": 46798
+        },
+        {
+          "uf": "RR",
+          "n_validas": 8097,
+          "percentis": {
+            "p25": 480.0,
+            "p50": 560.0,
+            "p75": 660.0,
+            "p90": 800.0,
+            "p95": 860.0
+          },
+          "iqr": 180.0,
+          "soma_notas": 4702900.0,
+          "media": 580.8201,
+          "desvio_padrao": 146.6905,
+          "total_registros": 14158
+        },
+        {
+          "uf": "RS",
+          "n_validas": 125861,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 79422640.0,
+          "media": 631.0346,
+          "desvio_padrao": 155.2481,
+          "total_registros": 186503
+        },
+        {
+          "uf": "SC",
+          "n_validas": 75867,
+          "percentis": {
+            "p25": 540.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 840.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 47937160.0,
+          "media": 631.8579,
+          "desvio_padrao": 147.2169,
+          "total_registros": 110459
+        },
+        {
+          "uf": "SE",
+          "n_validas": 55214,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 760.0,
+            "p90": 860.0,
+            "p95": 900.0
+          },
+          "iqr": 240.0,
+          "soma_notas": 34815160.0,
+          "media": 630.5495,
+          "desvio_padrao": 164.5957,
+          "total_registros": 78341
+        },
+        {
+          "uf": "SP",
+          "n_validas": 527592,
+          "percentis": {
+            "p25": 520.0,
+            "p50": 620.0,
+            "p75": 740.0,
+            "p90": 840.0,
+            "p95": 880.0
+          },
+          "iqr": 220.0,
+          "soma_notas": 330853940.0,
+          "media": 627.1019,
+          "desvio_padrao": 150.966,
+          "total_registros": 751612
+        },
+        {
+          "uf": "TO",
+          "n_validas": 24428,
+          "percentis": {
+            "p25": 500.0,
+            "p50": 600.0,
+            "p75": 700.0,
+            "p90": 820.0,
+            "p95": 880.0
+          },
+          "iqr": 200.0,
+          "soma_notas": 14709000.0,
+          "media": 602.1369,
+          "desvio_padrao": 153.2724,
+          "total_registros": 37650
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "status1_sem_nota": 0,
+        "status1_nota_invalida": 0,
+        "validas_sem_uf": 0,
+        "validas_uf_desconhecida": 0,
+        "soma_contagens_uf_igual_brasil": true,
+        "metodo": "quantil_empirico_interpolacao_linear_hf7",
+        "validado_contra_ind001_ind002_ind003_ind004": true
+      }
+    }
+  ],
+  "historical": {
+    "periodo": "2019-2025",
+    "brasil": {
+      "n_validas": 20064902,
+      "percentis": {
+        "p25": 520.0,
+        "p50": 600.0,
+        "p75": 740.0,
+        "p90": 860.0,
+        "p95": 920.0
+      },
+      "iqr": 220.0,
+      "soma_notas": 12551994140.0,
+      "media": 625.5697,
+      "desvio_padrao": 164.8611
+    },
+    "ufs": [
+      {
+        "uf": "AC",
+        "n_validas": 126620,
+        "percentis": {
+          "p25": 480.0,
+          "p50": 580.0,
+          "p75": 680.0,
+          "p90": 820.0,
+          "p95": 880.0
+        },
+        "iqr": 200.0,
+        "soma_notas": 74071520.0,
+        "media": 584.9907,
+        "desvio_padrao": 159.4586
+      },
+      {
+        "uf": "AL",
+        "n_validas": 380077,
+        "percentis": {
+          "p25": 500.0,
+          "p50": 600.0,
+          "p75": 740.0,
+          "p90": 860.0,
+          "p95": 900.0
+        },
+        "iqr": 240.0,
+        "soma_notas": 233892700.0,
+        "media": 615.3824,
+        "desvio_padrao": 167.0761
+      },
+      {
+        "uf": "AM",
+        "n_validas": 373879,
+        "percentis": {
+          "p25": 480.0,
+          "p50": 560.0,
+          "p75": 640.0,
+          "p90": 780.0,
+          "p95": 860.0
+        },
+        "iqr": 160.0,
+        "soma_notas": 212211200.0,
+        "media": 567.5933,
+        "desvio_padrao": 147.0035
+      },
+      {
+        "uf": "AP",
+        "n_validas": 138416,
+        "percentis": {
+          "p25": 480.0,
+          "p50": 580.0,
+          "p75": 680.0,
+          "p90": 820.0,
+          "p95": 880.0
+        },
+        "iqr": 200.0,
+        "soma_notas": 81318760.0,
+        "media": 587.4954,
+        "desvio_padrao": 154.6845
+      },
+      {
+        "uf": "BA",
+        "n_validas": 1623969,
+        "percentis": {
+          "p25": 500.0,
+          "p50": 600.0,
+          "p75": 720.0,
+          "p90": 860.0,
+          "p95": 900.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 991394360.0,
+        "media": 610.4762,
+        "desvio_padrao": 164.1467
+      },
+      {
+        "uf": "CE",
+        "n_validas": 1218715,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 620.0,
+          "p75": 760.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 240.0,
+        "soma_notas": 769893420.0,
+        "media": 631.7256,
+        "desvio_padrao": 172.7786
+      },
+      {
+        "uf": "DF",
+        "n_validas": 379450,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 620.0,
+          "p75": 760.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 240.0,
+        "soma_notas": 240838200.0,
+        "media": 634.7034,
+        "desvio_padrao": 161.0822
+      },
+      {
+        "uf": "ES",
+        "n_validas": 368888,
+        "percentis": {
+          "p25": 540.0,
+          "p50": 620.0,
+          "p75": 760.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 236981640.0,
+        "media": 642.4217,
+        "desvio_padrao": 166.019
+      },
+      {
+        "uf": "GO",
+        "n_validas": 715958,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 620.0,
+          "p75": 760.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 240.0,
+        "soma_notas": 454346960.0,
+        "media": 634.6,
+        "desvio_padrao": 170.011
+      },
+      {
+        "uf": "MA",
+        "n_validas": 826993,
+        "percentis": {
+          "p25": 480.0,
+          "p50": 580.0,
+          "p75": 700.0,
+          "p90": 840.0,
+          "p95": 900.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 494684220.0,
+        "media": 598.1722,
+        "desvio_padrao": 165.6164
+      },
+      {
+        "uf": "MG",
+        "n_validas": 1961500,
+        "percentis": {
+          "p25": 540.0,
+          "p50": 640.0,
+          "p75": 780.0,
+          "p90": 900.0,
+          "p95": 920.0
+        },
+        "iqr": 240.0,
+        "soma_notas": 1277476940.0,
+        "media": 651.2755,
+        "desvio_padrao": 169.3318
+      },
+      {
+        "uf": "MS",
+        "n_validas": 246198,
+        "percentis": {
+          "p25": 500.0,
+          "p50": 580.0,
+          "p75": 720.0,
+          "p90": 840.0,
+          "p95": 900.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 148352080.0,
+        "media": 602.5722,
+        "desvio_padrao": 162.4212
+      },
+      {
+        "uf": "MT",
+        "n_validas": 310285,
+        "percentis": {
+          "p25": 500.0,
+          "p50": 600.0,
+          "p75": 720.0,
+          "p90": 860.0,
+          "p95": 900.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 187608100.0,
+        "media": 604.6315,
+        "desvio_padrao": 165.9889
+      },
+      {
+        "uf": "PA",
+        "n_validas": 1132135,
+        "percentis": {
+          "p25": 500.0,
+          "p50": 580.0,
+          "p75": 720.0,
+          "p90": 860.0,
+          "p95": 900.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 682130460.0,
+        "media": 602.5169,
+        "desvio_padrao": 165.1809
+      },
+      {
+        "uf": "PB",
+        "n_validas": 619079,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 620.0,
+          "p75": 760.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 240.0,
+        "soma_notas": 391040120.0,
+        "media": 631.6482,
+        "desvio_padrao": 168.2536
+      },
+      {
+        "uf": "PE",
+        "n_validas": 1126649,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 600.0,
+          "p75": 740.0,
+          "p90": 860.0,
+          "p95": 920.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 702578340.0,
+        "media": 623.6,
+        "desvio_padrao": 166.2115
+      },
+      {
+        "uf": "PI",
+        "n_validas": 509945,
+        "percentis": {
+          "p25": 500.0,
+          "p50": 600.0,
+          "p75": 760.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 260.0,
+        "soma_notas": 317966220.0,
+        "media": 623.5304,
+        "desvio_padrao": 175.2026
+      },
+      {
+        "uf": "PR",
+        "n_validas": 857444,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 600.0,
+          "p75": 720.0,
+          "p90": 840.0,
+          "p95": 880.0
+        },
+        "iqr": 200.0,
+        "soma_notas": 525733360.0,
+        "media": 613.1402,
+        "desvio_padrao": 153.6286
+      },
+      {
+        "uf": "RJ",
+        "n_validas": 1386006,
+        "percentis": {
+          "p25": 540.0,
+          "p50": 620.0,
+          "p75": 760.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 889796840.0,
+        "media": 641.9863,
+        "desvio_padrao": 165.3627
+      },
+      {
+        "uf": "RN",
+        "n_validas": 506721,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 620.0,
+          "p75": 740.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 319062540.0,
+        "media": 629.6612,
+        "desvio_padrao": 164.4288
+      },
+      {
+        "uf": "RO",
+        "n_validas": 182128,
+        "percentis": {
+          "p25": 480.0,
+          "p50": 580.0,
+          "p75": 680.0,
+          "p90": 820.0,
+          "p95": 880.0
+        },
+        "iqr": 200.0,
+        "soma_notas": 107979400.0,
+        "media": 592.8764,
+        "desvio_padrao": 157.8669
+      },
+      {
+        "uf": "RR",
+        "n_validas": 48036,
+        "percentis": {
+          "p25": 480.0,
+          "p50": 580.0,
+          "p75": 680.0,
+          "p90": 820.0,
+          "p95": 880.0
+        },
+        "iqr": 200.0,
+        "soma_notas": 28277260.0,
+        "media": 588.6681,
+        "desvio_padrao": 158.5394
+      },
+      {
+        "uf": "RS",
+        "n_validas": 875800,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 620.0,
+          "p75": 740.0,
+          "p90": 860.0,
+          "p95": 900.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 550225920.0,
+        "media": 628.2552,
+        "desvio_padrao": 160.1588
+      },
+      {
+        "uf": "SC",
+        "n_validas": 461010,
+        "percentis": {
+          "p25": 540.0,
+          "p50": 620.0,
+          "p75": 740.0,
+          "p90": 860.0,
+          "p95": 900.0
+        },
+        "iqr": 200.0,
+        "soma_notas": 292928500.0,
+        "media": 635.406,
+        "desvio_padrao": 154.8821
+      },
+      {
+        "uf": "SE",
+        "n_validas": 337724,
+        "percentis": {
+          "p25": 520.0,
+          "p50": 620.0,
+          "p75": 780.0,
+          "p90": 880.0,
+          "p95": 920.0
+        },
+        "iqr": 260.0,
+        "soma_notas": 215831340.0,
+        "media": 639.0761,
+        "desvio_padrao": 171.9276
+      },
+      {
+        "uf": "SP",
+        "n_validas": 3182581,
+        "percentis": {
+          "p25": 540.0,
+          "p50": 620.0,
+          "p75": 760.0,
+          "p90": 860.0,
+          "p95": 900.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 2023655560.0,
+        "media": 635.8536,
+        "desvio_padrao": 156.6429
+      },
+      {
+        "uf": "TO",
+        "n_validas": 168696,
+        "percentis": {
+          "p25": 500.0,
+          "p50": 580.0,
+          "p75": 720.0,
+          "p90": 840.0,
+          "p95": 900.0
+        },
+        "iqr": 220.0,
+        "soma_notas": 101718180.0,
+        "media": 602.9673,
+        "desvio_padrao": 163.2575
+      }
+    ],
+    "nota": "Percentis históricos calculados sobre a distribuição conjunta de todas as redações válidas de 2019–2025, e não sobre médias de percentis anuais. O método de interpolação linear é o padrão do Pandas/NumPy (tipo 7). O consolidado contabiliza participações, não pessoas únicas, e a UF representa o local de aplicação da prova, não a residência."
+  },
+  "dashboard_files": [
+    "dashboard_enem_2019.json",
+    "dashboard_enem_2020.json",
+    "dashboard_enem_2021.json",
+    "dashboard_enem_2022.json",
+    "dashboard_enem_2023.json",
+    "dashboard_enem_2024.json",
+    "dashboard_enem_2025.json"
+  ]
+}

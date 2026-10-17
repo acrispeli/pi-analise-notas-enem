@@ -1,9 +1,9 @@
 {
   "meta": {
     "schema_version": "1.0.0",
-    "analysis_version": "2.3.0-ind001-ind002-ind003-ind004",
+    "analysis_version": "2.4.0-ind001-ind002-ind003-ind004-ind005",
     "dataset_version": "enem-2020-csv-publico",
-    "generated_at": "2026-10-17T22:38:48+00:00",
+    "generated_at": "2026-10-17T23:20:19+00:00",
     "year": 2020,
     "data_status": "draft",
     "source_files": [
@@ -15,7 +15,8 @@
       "Consolidado histórico conta participações, não pessoas únicas.",
       "IND-002 validado tecnicamente; publicação acadêmica ainda pendente.",
       "IND-003 ainda depende de validação acadêmica para publicação.",
-      "IND-004 validado computacionalmente; publicação acadêmica pendente."
+      "IND-004 validado computacionalmente; publicação acadêmica pendente.",
+      "IND-005 validado computacionalmente; publicação acadêmica pendente."
     ]
   },
   "filters": {
@@ -130,6 +131,16 @@
       "soma_contagens_uf_igual_brasil": true,
       "metodo": "momentos_centrados_combinados_ddof0",
       "validado_contra_ind001_ind002_ind003": true
+    },
+    "ind005_validation": {
+      "status": "ok",
+      "status1_sem_nota": 0,
+      "status1_nota_invalida": 0,
+      "validas_sem_uf": 0,
+      "validas_uf_desconhecida": 0,
+      "soma_contagens_uf_igual_brasil": true,
+      "metodo": "quantil_empirico_interpolacao_linear_hf7",
+      "validado_contra_ind001_ind002_ind003_ind004": true
     }
   },
   "pages": {
@@ -139,7 +150,14 @@
         "valid_essays": 2674914,
         "mean_score": 590.3961,
         "median_score": 580.0,
-        "std_score": 176.3058
+        "std_score": 176.3058,
+        "percentiles": {
+          "p25": 480.0,
+          "p50": 580.0,
+          "p75": 700.0,
+          "p90": 860.0,
+          "p95": 920.0
+        }
       },
       "ind001": {
         "indicator_id": "IND-001",
@@ -765,6 +783,345 @@
             "uf": "TO",
             "n": 25644,
             "std_score": 172.4449
+          }
+        ]
+      },
+      "ind005": {
+        "indicator_id": "IND-005",
+        "unit": "pontos",
+        "n": 2674914,
+        "percentiles": {
+          "p25": 480.0,
+          "p50": 580.0,
+          "p75": 700.0,
+          "p90": 860.0,
+          "p95": 920.0
+        },
+        "iqr": 220.0,
+        "by_uf": [
+          {
+            "uf": "AC",
+            "n": 19609,
+            "percentiles": {
+              "p25": 420.0,
+              "p50": 540.0,
+              "p75": 640.0,
+              "p90": 780.0,
+              "p95": 860.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "AL",
+            "n": 52661,
+            "percentiles": {
+              "p25": 460.0,
+              "p50": 560.0,
+              "p75": 680.0,
+              "p90": 840.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "AM",
+            "n": 49067,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 560.0,
+              "p75": 620.0,
+              "p90": 740.0,
+              "p95": 820.0
+            },
+            "iqr": 140.0
+          },
+          {
+            "uf": "AP",
+            "n": 20477,
+            "percentiles": {
+              "p25": 440.0,
+              "p50": 540.0,
+              "p75": 620.0,
+              "p90": 760.0,
+              "p95": 860.0
+            },
+            "iqr": 180.0
+          },
+          {
+            "uf": "BA",
+            "n": 212225,
+            "percentiles": {
+              "p25": 460.0,
+              "p50": 560.0,
+              "p75": 680.0,
+              "p90": 840.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "CE",
+            "n": 162228,
+            "percentiles": {
+              "p25": 460.0,
+              "p50": 580.0,
+              "p75": 720.0,
+              "p90": 860.0,
+              "p95": 920.0
+            },
+            "iqr": 260.0
+          },
+          {
+            "uf": "DF",
+            "n": 54790,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 700.0,
+              "p90": 840.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "ES",
+            "n": 48354,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 600.0,
+              "p75": 720.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "GO",
+            "n": 93632,
+            "percentiles": {
+              "p25": 460.0,
+              "p50": 580.0,
+              "p75": 720.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 260.0
+          },
+          {
+            "uf": "MA",
+            "n": 115887,
+            "percentiles": {
+              "p25": 440.0,
+              "p50": 560.0,
+              "p75": 640.0,
+              "p90": 820.0,
+              "p95": 880.0
+            },
+            "iqr": 200.0
+          },
+          {
+            "uf": "MG",
+            "n": 265162,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 600.0,
+              "p75": 760.0,
+              "p90": 900.0,
+              "p95": 940.0
+            },
+            "iqr": 260.0
+          },
+          {
+            "uf": "MS",
+            "n": 34033,
+            "percentiles": {
+              "p25": 440.0,
+              "p50": 560.0,
+              "p75": 660.0,
+              "p90": 820.0,
+              "p95": 880.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "MT",
+            "n": 41514,
+            "percentiles": {
+              "p25": 440.0,
+              "p50": 560.0,
+              "p75": 660.0,
+              "p90": 840.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "PA",
+            "n": 157977,
+            "percentiles": {
+              "p25": 440.0,
+              "p50": 560.0,
+              "p75": 660.0,
+              "p90": 820.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "PB",
+            "n": 87453,
+            "percentiles": {
+              "p25": 460.0,
+              "p50": 580.0,
+              "p75": 700.0,
+              "p90": 860.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "PE",
+            "n": 156230,
+            "percentiles": {
+              "p25": 460.0,
+              "p50": 580.0,
+              "p75": 700.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "PI",
+            "n": 68313,
+            "percentiles": {
+              "p25": 440.0,
+              "p50": 560.0,
+              "p75": 700.0,
+              "p90": 860.0,
+              "p95": 920.0
+            },
+            "iqr": 260.0
+          },
+          {
+            "uf": "PR",
+            "n": 111559,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 680.0,
+              "p90": 820.0,
+              "p95": 880.0
+            },
+            "iqr": 200.0
+          },
+          {
+            "uf": "RJ",
+            "n": 179829,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 600.0,
+              "p75": 740.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "RN",
+            "n": 67552,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 720.0,
+              "p90": 860.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "RO",
+            "n": 23831,
+            "percentiles": {
+              "p25": 420.0,
+              "p50": 540.0,
+              "p75": 640.0,
+              "p90": 800.0,
+              "p95": 860.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "RR",
+            "n": 6601,
+            "percentiles": {
+              "p25": 420.0,
+              "p50": 540.0,
+              "p75": 640.0,
+              "p90": 780.0,
+              "p95": 880.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "RS",
+            "n": 116454,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 700.0,
+              "p90": 860.0,
+              "p95": 920.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "SC",
+            "n": 55277,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 720.0,
+              "p90": 840.0,
+              "p95": 900.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "SE",
+            "n": 45399,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 740.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 260.0
+          },
+          {
+            "uf": "SP",
+            "n": 403156,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 600.0,
+              "p75": 720.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "TO",
+            "n": 25644,
+            "percentiles": {
+              "p25": 440.0,
+              "p50": 560.0,
+              "p75": 660.0,
+              "p90": 820.0,
+              "p95": 880.0
+            },
+            "iqr": 220.0
           }
         ]
       }
@@ -1586,6 +1943,434 @@
           }
         ],
         "note": "Desvio-padrão populacional calculado reunindo as observações de 2019–2025; não é a média dos desvios-padrão de cada ano, pois incorpora variações dentro dos grupos e entre suas médias. São participações em edições do Enem, não pessoas únicas; UF identifica o local da prova."
+      },
+      "ind005": {
+        "indicator_id": "IND-005",
+        "method": "quantil_empirico_interpolacao_linear_hf7",
+        "national_by_year": [
+          {
+            "year": 2019,
+            "n": 3779356,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 580.0,
+              "p75": 680.0,
+              "p90": 820.0,
+              "p95": 880.0
+            },
+            "iqr": 180.0
+          },
+          {
+            "year": 2020,
+            "n": 2674914,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 700.0,
+              "p90": 860.0,
+              "p95": 920.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "year": 2021,
+            "n": 2293797,
+            "percentiles": {
+              "p25": 540.0,
+              "p50": 620.0,
+              "p75": 740.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 200.0
+          },
+          {
+            "year": 2022,
+            "n": 2363615,
+            "percentiles": {
+              "p25": 540.0,
+              "p50": 640.0,
+              "p75": 780.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "year": 2023,
+            "n": 2704814,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 620.0,
+              "p75": 780.0,
+              "p90": 900.0,
+              "p95": 920.0
+            },
+            "iqr": 260.0
+          },
+          {
+            "year": 2024,
+            "n": 3002710,
+            "percentiles": {
+              "p25": 540.0,
+              "p50": 640.0,
+              "p75": 800.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 260.0
+          },
+          {
+            "year": 2025,
+            "n": 3245696,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 600.0,
+              "p75": 720.0,
+              "p90": 840.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          }
+        ],
+        "period_total": {
+          "n": 20064902,
+          "percentiles": {
+            "p25": 520.0,
+            "p50": 600.0,
+            "p75": 740.0,
+            "p90": 860.0,
+            "p95": 920.0
+          },
+          "iqr": 220.0
+        },
+        "period_by_uf": [
+          {
+            "uf": "AC",
+            "n": 126620,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 680.0,
+              "p90": 820.0,
+              "p95": 880.0
+            },
+            "iqr": 200.0
+          },
+          {
+            "uf": "AL",
+            "n": 380077,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 600.0,
+              "p75": 740.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "AM",
+            "n": 373879,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 560.0,
+              "p75": 640.0,
+              "p90": 780.0,
+              "p95": 860.0
+            },
+            "iqr": 160.0
+          },
+          {
+            "uf": "AP",
+            "n": 138416,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 680.0,
+              "p90": 820.0,
+              "p95": 880.0
+            },
+            "iqr": 200.0
+          },
+          {
+            "uf": "BA",
+            "n": 1623969,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 600.0,
+              "p75": 720.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "CE",
+            "n": 1218715,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 620.0,
+              "p75": 760.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "DF",
+            "n": 379450,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 620.0,
+              "p75": 760.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "ES",
+            "n": 368888,
+            "percentiles": {
+              "p25": 540.0,
+              "p50": 620.0,
+              "p75": 760.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "GO",
+            "n": 715958,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 620.0,
+              "p75": 760.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "MA",
+            "n": 826993,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 700.0,
+              "p90": 840.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "MG",
+            "n": 1961500,
+            "percentiles": {
+              "p25": 540.0,
+              "p50": 640.0,
+              "p75": 780.0,
+              "p90": 900.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "MS",
+            "n": 246198,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 580.0,
+              "p75": 720.0,
+              "p90": 840.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "MT",
+            "n": 310285,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 600.0,
+              "p75": 720.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "PA",
+            "n": 1132135,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 580.0,
+              "p75": 720.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "PB",
+            "n": 619079,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 620.0,
+              "p75": 760.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 240.0
+          },
+          {
+            "uf": "PE",
+            "n": 1126649,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 600.0,
+              "p75": 740.0,
+              "p90": 860.0,
+              "p95": 920.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "PI",
+            "n": 509945,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 600.0,
+              "p75": 760.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 260.0
+          },
+          {
+            "uf": "PR",
+            "n": 857444,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 600.0,
+              "p75": 720.0,
+              "p90": 840.0,
+              "p95": 880.0
+            },
+            "iqr": 200.0
+          },
+          {
+            "uf": "RJ",
+            "n": 1386006,
+            "percentiles": {
+              "p25": 540.0,
+              "p50": 620.0,
+              "p75": 760.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "RN",
+            "n": 506721,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 620.0,
+              "p75": 740.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "RO",
+            "n": 182128,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 680.0,
+              "p90": 820.0,
+              "p95": 880.0
+            },
+            "iqr": 200.0
+          },
+          {
+            "uf": "RR",
+            "n": 48036,
+            "percentiles": {
+              "p25": 480.0,
+              "p50": 580.0,
+              "p75": 680.0,
+              "p90": 820.0,
+              "p95": 880.0
+            },
+            "iqr": 200.0
+          },
+          {
+            "uf": "RS",
+            "n": 875800,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 620.0,
+              "p75": 740.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "SC",
+            "n": 461010,
+            "percentiles": {
+              "p25": 540.0,
+              "p50": 620.0,
+              "p75": 740.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 200.0
+          },
+          {
+            "uf": "SE",
+            "n": 337724,
+            "percentiles": {
+              "p25": 520.0,
+              "p50": 620.0,
+              "p75": 780.0,
+              "p90": 880.0,
+              "p95": 920.0
+            },
+            "iqr": 260.0
+          },
+          {
+            "uf": "SP",
+            "n": 3182581,
+            "percentiles": {
+              "p25": 540.0,
+              "p50": 620.0,
+              "p75": 760.0,
+              "p90": 860.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          },
+          {
+            "uf": "TO",
+            "n": 168696,
+            "percentiles": {
+              "p25": 500.0,
+              "p50": 580.0,
+              "p75": 720.0,
+              "p90": 840.0,
+              "p95": 900.0
+            },
+            "iqr": 220.0
+          }
+        ],
+        "note": "Percentis históricos calculados sobre a distribuição conjunta de todas as redações válidas de 2019–2025, e não sobre médias de percentis anuais. O método de interpolação linear é o padrão do Pandas/NumPy (tipo 7). O consolidado contabiliza participações, não pessoas únicas, e a UF representa o local de aplicação da prova, não a residência."
       }
     },
     "methodology": {
@@ -1621,6 +2406,15 @@
         "source_file": "MICRODADOS_ENEM_2020.csv",
         "precision": "4 casas decimais no JSON",
         "historical_note": "Desvio-padrão populacional calculado reunindo as observações de 2019–2025; não é a média dos desvios-padrão de cada ano, pois incorpora variações dentro dos grupos e entre suas médias. São participações em edições do Enem, não pessoas únicas; UF identifica o local da prova."
+      },
+      "ind005": {
+        "definition": "Percentis P25, P50, P75, P90 e P95 da nota NU_NOTA_REDACAO, para TP_STATUS_REDACAO = 1 e nota numérica entre 0 e 1000, inclusive; por ano, Brasil e UF de aplicação (SG_UF_PROVA).",
+        "calculation": "Quantil tipo 7: h=(N-1)*p, com interpolação linear entre posições ordenadas",
+        "population": "POP_VALID, a mesma dos indicadores IND-001 a IND-004",
+        "geographic_dimension": "SG_UF_PROVA",
+        "source_file": "MICRODADOS_ENEM_2020.csv",
+        "precision": "Até 6 casas decimais (interpolação); em geral notas múltiplas de 20",
+        "historical_note": "Percentis históricos calculados sobre a distribuição conjunta de todas as redações válidas de 2019–2025, e não sobre médias de percentis anuais. O método de interpolação linear é o padrão do Pandas/NumPy (tipo 7). O consolidado contabiliza participações, não pessoas únicas, e a UF representa o local de aplicação da prova, não a residência."
       }
     }
   }
