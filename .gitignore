@@ -223,3 +223,5 @@ data/raw/*
 
 # Dados brutos processados do projeto
 data/processed/*
+
+/outputs/ind020_sql_*/
