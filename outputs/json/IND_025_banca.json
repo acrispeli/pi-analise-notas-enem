@@ -1,0 +1,2489 @@
+{
+  "meta": {
+    "indicator_id": "IND-025",
+    "module_schema_version": "ind025-module-1.0.0",
+    "analysis_version": "2.24.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023-ind024-ind025",
+    "dataset_version": "enem-2019-2025-csv-publico",
+    "generated_at": "2026-10-22T01:40:36+00:00",
+    "data_status": "draft",
+    "source_indicator": "IND-007",
+    "population_definition": "POP_ALL: todos os registros dos resultados",
+    "geographic_dimension": "SG_UF_PROVA",
+    "method": "presenca_nota_ou_status_av4_sobre_pop_all",
+    "minimum_group_count": 30,
+    "source_qa": {
+      "2019": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2019.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2019.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 5095171,
+        "linhas_geografia": 5095171,
+        "n_candidatos_av4": 138338,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      },
+      "2020": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2020.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2020.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 5783109,
+        "linhas_geografia": 5783109,
+        "n_candidatos_av4": 113882,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      },
+      "2021": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2021.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2021.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 3389832,
+        "linhas_geografia": 3389832,
+        "n_candidatos_av4": 55938,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      },
+      "2022": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2022.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2022.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 3476105,
+        "linhas_geografia": 3476105,
+        "n_candidatos_av4": 64676,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      },
+      "2023": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2023.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2023.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 3933955,
+        "linhas_geografia": 3933955,
+        "n_candidatos_av4": 185447,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      },
+      "2024": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2024.csv",
+        "arquivo_geografia": "PARTICIPANTES_2024.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 4332944,
+        "linhas_geografia": 4332944,
+        "n_candidatos_av4": 171463,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      },
+      "2025": {
+        "arquivo_av4": "RESULTADOS_2025.csv",
+        "arquivo_geografia": "RESULTADOS_2025.csv",
+        "juncao": "mesma_linha",
+        "linhas_fonte": 4810772,
+        "linhas_geografia": null,
+        "n_candidatos_av4": 185926,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      }
+    },
+    "publication_status": "draft; revisão acadêmica e privacidade complementar pendentes",
+    "notes": "Proxy de convocação de banca de três avaliadores: nota AV4 ou status AV4 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV4, não comprova o registro administrativo da convocação. AV4 designa banca de três avaliadores no dicionário dos microdados; não é quarto corretor individual. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas inferiores a 30 na medida ou no complemento bloqueiam a publicação do recorte (e a execução, para impedir reconstruções). Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
+  },
+  "indicator": {
+    "id": "IND-025",
+    "name": "Banca (AV4)",
+    "unit": "percentual",
+    "dashboard_json_path": "pages.evaluators.panel_rate",
+    "visualization": "KPI"
+  },
+  "years": [
+    {
+      "brasil": {
+        "n_pop_all": 5095171,
+        "n_com_av4": 138338,
+        "n_sem_av4": 4956833,
+        "percentual_com_av4": 2.715081,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_all": 38645,
+          "n_com_av4": 1000,
+          "n_sem_av4": 37645,
+          "percentual_com_av4": 2.587657,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_all": 89824,
+          "n_com_av4": 2450,
+          "n_sem_av4": 87374,
+          "percentual_com_av4": 2.727556,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_all": 118144,
+          "n_com_av4": 2974,
+          "n_sem_av4": 115170,
+          "percentual_com_av4": 2.517267,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_all": 42603,
+          "n_com_av4": 991,
+          "n_sem_av4": 41612,
+          "percentual_com_av4": 2.326127,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_all": 395427,
+          "n_com_av4": 10889,
+          "n_sem_av4": 384538,
+          "percentual_com_av4": 2.753732,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_all": 294984,
+          "n_com_av4": 8470,
+          "n_sem_av4": 286514,
+          "percentual_com_av4": 2.871342,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_all": 95849,
+          "n_com_av4": 2661,
+          "n_sem_av4": 93188,
+          "percentual_com_av4": 2.776242,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_all": 102273,
+          "n_com_av4": 2720,
+          "n_sem_av4": 99553,
+          "percentual_com_av4": 2.659548,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_all": 169980,
+          "n_com_av4": 5165,
+          "n_sem_av4": 164815,
+          "percentual_com_av4": 3.038593,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_all": 218074,
+          "n_com_av4": 5735,
+          "n_sem_av4": 212339,
+          "percentual_com_av4": 2.629841,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_all": 534625,
+          "n_com_av4": 14730,
+          "n_sem_av4": 519895,
+          "percentual_com_av4": 2.755202,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_all": 70393,
+          "n_com_av4": 1777,
+          "n_sem_av4": 68616,
+          "percentual_com_av4": 2.524399,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_all": 88121,
+          "n_com_av4": 2175,
+          "n_sem_av4": 85946,
+          "percentual_com_av4": 2.468197,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_all": 279593,
+          "n_com_av4": 7785,
+          "n_sem_av4": 271808,
+          "percentual_com_av4": 2.784404,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_all": 147176,
+          "n_com_av4": 4098,
+          "n_sem_av4": 143078,
+          "percentual_com_av4": 2.784421,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_all": 275317,
+          "n_com_av4": 7501,
+          "n_sem_av4": 267816,
+          "percentual_com_av4": 2.724496,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_all": 122312,
+          "n_com_av4": 3370,
+          "n_sem_av4": 118942,
+          "percentual_com_av4": 2.755249,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_all": 211306,
+          "n_com_av4": 5775,
+          "n_sem_av4": 205531,
+          "percentual_com_av4": 2.733003,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_all": 339716,
+          "n_com_av4": 9062,
+          "n_sem_av4": 330654,
+          "percentual_com_av4": 2.667522,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_all": 119319,
+          "n_com_av4": 3202,
+          "n_sem_av4": 116117,
+          "percentual_com_av4": 2.683563,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_all": 58639,
+          "n_com_av4": 1522,
+          "n_sem_av4": 57117,
+          "percentual_com_av4": 2.595542,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_all": 12956,
+          "n_com_av4": 321,
+          "n_sem_av4": 12635,
+          "percentual_com_av4": 2.477617,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_all": 218469,
+          "n_com_av4": 5789,
+          "n_sem_av4": 212680,
+          "percentual_com_av4": 2.649804,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_all": 110699,
+          "n_com_av4": 2966,
+          "n_sem_av4": 107733,
+          "percentual_com_av4": 2.679338,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_all": 78488,
+          "n_com_av4": 2142,
+          "n_sem_av4": 76346,
+          "percentual_com_av4": 2.72908,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_all": 815990,
+          "n_com_av4": 21855,
+          "n_sem_av4": 794135,
+          "percentual_com_av4": 2.678342,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_all": 46249,
+          "n_com_av4": 1213,
+          "n_sem_av4": 45036,
+          "percentual_com_av4": 2.622759,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "celulas_positivas_inferiores_30": 0
+      },
+      "ano": 2019,
+      "qualidade_fonte": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2019.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2019.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 5095171,
+        "linhas_geografia": 5095171,
+        "n_candidatos_av4": 138338,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      }
+    },
+    {
+      "brasil": {
+        "n_pop_all": 5783109,
+        "n_com_av4": 113882,
+        "n_sem_av4": 5669227,
+        "percentual_com_av4": 1.969218,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_all": 41824,
+          "n_com_av4": 831,
+          "n_sem_av4": 40993,
+          "percentual_com_av4": 1.986897,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_all": 102551,
+          "n_com_av4": 2372,
+          "n_sem_av4": 100179,
+          "percentual_com_av4": 2.312995,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_all": 163426,
+          "n_com_av4": 1385,
+          "n_sem_av4": 162041,
+          "percentual_com_av4": 0.847478,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_all": 47263,
+          "n_com_av4": 850,
+          "n_sem_av4": 46413,
+          "percentual_com_av4": 1.798447,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_all": 447691,
+          "n_com_av4": 9596,
+          "n_sem_av4": 438095,
+          "percentual_com_av4": 2.143443,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_all": 325680,
+          "n_com_av4": 6926,
+          "n_sem_av4": 318754,
+          "percentual_com_av4": 2.126627,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_all": 116932,
+          "n_com_av4": 2141,
+          "n_sem_av4": 114791,
+          "percentual_com_av4": 1.830979,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_all": 105812,
+          "n_com_av4": 1998,
+          "n_sem_av4": 103814,
+          "percentual_com_av4": 1.888255,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_all": 211069,
+          "n_com_av4": 3932,
+          "n_sem_av4": 207137,
+          "percentual_com_av4": 1.862898,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_all": 238272,
+          "n_com_av4": 5107,
+          "n_sem_av4": 233165,
+          "percentual_com_av4": 2.143349,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_all": 577211,
+          "n_com_av4": 11212,
+          "n_sem_av4": 565999,
+          "percentual_com_av4": 1.942444,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_all": 84548,
+          "n_com_av4": 1370,
+          "n_sem_av4": 83178,
+          "percentual_com_av4": 1.620381,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_all": 101727,
+          "n_com_av4": 1822,
+          "n_sem_av4": 99905,
+          "percentual_com_av4": 1.791068,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_all": 330883,
+          "n_com_av4": 7272,
+          "n_sem_av4": 323611,
+          "percentual_com_av4": 2.197756,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_all": 164965,
+          "n_com_av4": 3891,
+          "n_sem_av4": 161074,
+          "percentual_com_av4": 2.358682,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_all": 315569,
+          "n_com_av4": 6851,
+          "n_sem_av4": 308718,
+          "percentual_com_av4": 2.170999,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_all": 134678,
+          "n_com_av4": 3041,
+          "n_sem_av4": 131637,
+          "percentual_com_av4": 2.257978,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_all": 239635,
+          "n_com_av4": 4477,
+          "n_sem_av4": 235158,
+          "percentual_com_av4": 1.868258,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_all": 387480,
+          "n_com_av4": 7570,
+          "n_sem_av4": 379910,
+          "percentual_com_av4": 1.953649,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_all": 131225,
+          "n_com_av4": 3013,
+          "n_sem_av4": 128212,
+          "percentual_com_av4": 2.296056,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_all": 69594,
+          "n_com_av4": 996,
+          "n_sem_av4": 68598,
+          "percentual_com_av4": 1.431158,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_all": 16885,
+          "n_com_av4": 281,
+          "n_sem_av4": 16604,
+          "percentual_com_av4": 1.664199,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_all": 249130,
+          "n_com_av4": 4676,
+          "n_sem_av4": 244454,
+          "percentual_com_av4": 1.876932,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_all": 121153,
+          "n_com_av4": 2330,
+          "n_sem_av4": 118823,
+          "percentual_com_av4": 1.923188,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_all": 88205,
+          "n_com_av4": 2138,
+          "n_sem_av4": 86067,
+          "percentual_com_av4": 2.423899,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_all": 910492,
+          "n_com_av4": 16667,
+          "n_sem_av4": 893825,
+          "percentual_com_av4": 1.830549,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_all": 59209,
+          "n_com_av4": 1137,
+          "n_sem_av4": 58072,
+          "percentual_com_av4": 1.920316,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "celulas_positivas_inferiores_30": 0
+      },
+      "ano": 2020,
+      "qualidade_fonte": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2020.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2020.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 5783109,
+        "linhas_geografia": 5783109,
+        "n_candidatos_av4": 113882,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      }
+    },
+    {
+      "brasil": {
+        "n_pop_all": 3389832,
+        "n_com_av4": 55938,
+        "n_sem_av4": 3333894,
+        "percentual_com_av4": 1.65017,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_all": 20336,
+          "n_com_av4": 359,
+          "n_sem_av4": 19977,
+          "percentual_com_av4": 1.765342,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_all": 56584,
+          "n_com_av4": 989,
+          "n_sem_av4": 55595,
+          "percentual_com_av4": 1.747844,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_all": 89778,
+          "n_com_av4": 1197,
+          "n_sem_av4": 88581,
+          "percentual_com_av4": 1.333289,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_all": 21774,
+          "n_com_av4": 319,
+          "n_sem_av4": 21455,
+          "percentual_com_av4": 1.46505,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_all": 266194,
+          "n_com_av4": 4325,
+          "n_sem_av4": 261869,
+          "percentual_com_av4": 1.624755,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_all": 220517,
+          "n_com_av4": 3636,
+          "n_sem_av4": 216881,
+          "percentual_com_av4": 1.648852,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_all": 67501,
+          "n_com_av4": 1033,
+          "n_sem_av4": 66468,
+          "percentual_com_av4": 1.530348,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_all": 64181,
+          "n_com_av4": 928,
+          "n_sem_av4": 63253,
+          "percentual_com_av4": 1.445911,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_all": 136915,
+          "n_com_av4": 2119,
+          "n_sem_av4": 134796,
+          "percentual_com_av4": 1.547676,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_all": 127905,
+          "n_com_av4": 2214,
+          "n_sem_av4": 125691,
+          "percentual_com_av4": 1.730972,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_all": 327829,
+          "n_com_av4": 5304,
+          "n_sem_av4": 322525,
+          "percentual_com_av4": 1.617917,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_all": 42490,
+          "n_com_av4": 679,
+          "n_sem_av4": 41811,
+          "percentual_com_av4": 1.598023,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_all": 56085,
+          "n_com_av4": 982,
+          "n_sem_av4": 55103,
+          "percentual_com_av4": 1.750914,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_all": 185978,
+          "n_com_av4": 3100,
+          "n_sem_av4": 182878,
+          "percentual_com_av4": 1.666864,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_all": 102002,
+          "n_com_av4": 1868,
+          "n_sem_av4": 100134,
+          "percentual_com_av4": 1.831337,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_all": 193616,
+          "n_com_av4": 3277,
+          "n_sem_av4": 190339,
+          "percentual_com_av4": 1.692525,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_all": 79969,
+          "n_com_av4": 1402,
+          "n_sem_av4": 78567,
+          "percentual_com_av4": 1.753179,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_all": 144282,
+          "n_com_av4": 2279,
+          "n_sem_av4": 142003,
+          "percentual_com_av4": 1.579546,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_all": 238347,
+          "n_com_av4": 4006,
+          "n_sem_av4": 234341,
+          "percentual_com_av4": 1.680743,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_all": 80820,
+          "n_com_av4": 1405,
+          "n_sem_av4": 79415,
+          "percentual_com_av4": 1.738431,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_all": 32801,
+          "n_com_av4": 489,
+          "n_sem_av4": 32312,
+          "percentual_com_av4": 1.490808,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_all": 8056,
+          "n_com_av4": 115,
+          "n_sem_av4": 7941,
+          "percentual_com_av4": 1.427507,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_all": 150484,
+          "n_com_av4": 2353,
+          "n_sem_av4": 148131,
+          "percentual_com_av4": 1.563621,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_all": 80765,
+          "n_com_av4": 1356,
+          "n_sem_av4": 79409,
+          "percentual_com_av4": 1.678945,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_all": 53796,
+          "n_com_av4": 1000,
+          "n_sem_av4": 52796,
+          "percentual_com_av4": 1.858874,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_all": 509954,
+          "n_com_av4": 8741,
+          "n_sem_av4": 501213,
+          "percentual_com_av4": 1.714076,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_all": 30873,
+          "n_com_av4": 463,
+          "n_sem_av4": 30410,
+          "percentual_com_av4": 1.499692,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "celulas_positivas_inferiores_30": 0
+      },
+      "ano": 2021,
+      "qualidade_fonte": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2021.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2021.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 3389832,
+        "linhas_geografia": 3389832,
+        "n_candidatos_av4": 55938,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      }
+    },
+    {
+      "brasil": {
+        "n_pop_all": 3476105,
+        "n_com_av4": 64676,
+        "n_sem_av4": 3411429,
+        "percentual_com_av4": 1.860588,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_all": 22601,
+          "n_com_av4": 390,
+          "n_sem_av4": 22211,
+          "percentual_com_av4": 1.725587,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_all": 63945,
+          "n_com_av4": 1239,
+          "n_sem_av4": 62706,
+          "percentual_com_av4": 1.937603,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_all": 80986,
+          "n_com_av4": 1300,
+          "n_sem_av4": 79686,
+          "percentual_com_av4": 1.605216,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_all": 22674,
+          "n_com_av4": 375,
+          "n_sem_av4": 22299,
+          "percentual_com_av4": 1.653877,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_all": 265166,
+          "n_com_av4": 5227,
+          "n_sem_av4": 259939,
+          "percentual_com_av4": 1.971218,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_all": 226377,
+          "n_com_av4": 4370,
+          "n_sem_av4": 222007,
+          "percentual_com_av4": 1.930408,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_all": 65401,
+          "n_com_av4": 1148,
+          "n_sem_av4": 64253,
+          "percentual_com_av4": 1.755325,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_all": 63700,
+          "n_com_av4": 1137,
+          "n_sem_av4": 62563,
+          "percentual_com_av4": 1.784929,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_all": 141622,
+          "n_com_av4": 2518,
+          "n_sem_av4": 139104,
+          "percentual_com_av4": 1.777972,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_all": 132916,
+          "n_com_av4": 2636,
+          "n_sem_av4": 130280,
+          "percentual_com_av4": 1.983207,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_all": 309781,
+          "n_com_av4": 5453,
+          "n_sem_av4": 304328,
+          "percentual_com_av4": 1.760276,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_all": 44683,
+          "n_com_av4": 737,
+          "n_sem_av4": 43946,
+          "percentual_com_av4": 1.649397,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_all": 59381,
+          "n_com_av4": 1011,
+          "n_sem_av4": 58370,
+          "percentual_com_av4": 1.702565,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_all": 202621,
+          "n_com_av4": 3935,
+          "n_sem_av4": 198686,
+          "percentual_com_av4": 1.942049,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_all": 103238,
+          "n_com_av4": 1995,
+          "n_sem_av4": 101243,
+          "percentual_com_av4": 1.932428,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_all": 189595,
+          "n_com_av4": 3785,
+          "n_sem_av4": 185810,
+          "percentual_com_av4": 1.996361,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_all": 84400,
+          "n_com_av4": 1754,
+          "n_sem_av4": 82646,
+          "percentual_com_av4": 2.078199,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_all": 150396,
+          "n_com_av4": 2613,
+          "n_sem_av4": 147783,
+          "percentual_com_av4": 1.737413,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_all": 250890,
+          "n_com_av4": 4565,
+          "n_sem_av4": 246325,
+          "percentual_com_av4": 1.819522,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_all": 88049,
+          "n_com_av4": 1697,
+          "n_sem_av4": 86352,
+          "percentual_com_av4": 1.927336,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_all": 31969,
+          "n_com_av4": 555,
+          "n_sem_av4": 31414,
+          "percentual_com_av4": 1.736057,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_all": 8434,
+          "n_com_av4": 128,
+          "n_sem_av4": 8306,
+          "percentual_com_av4": 1.517667,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_all": 152295,
+          "n_com_av4": 2498,
+          "n_sem_av4": 149797,
+          "percentual_com_av4": 1.640238,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_all": 82791,
+          "n_com_av4": 1445,
+          "n_sem_av4": 81346,
+          "percentual_com_av4": 1.745359,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_all": 58312,
+          "n_com_av4": 1257,
+          "n_sem_av4": 57055,
+          "percentual_com_av4": 2.155645,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_all": 544442,
+          "n_com_av4": 10355,
+          "n_sem_av4": 534087,
+          "percentual_com_av4": 1.901947,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_all": 29440,
+          "n_com_av4": 553,
+          "n_sem_av4": 28887,
+          "percentual_com_av4": 1.878397,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "celulas_positivas_inferiores_30": 0
+      },
+      "ano": 2022,
+      "qualidade_fonte": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2022.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2022.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 3476105,
+        "linhas_geografia": 3476105,
+        "n_candidatos_av4": 64676,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      }
+    },
+    {
+      "brasil": {
+        "n_pop_all": 3933955,
+        "n_com_av4": 185447,
+        "n_sem_av4": 3748508,
+        "percentual_com_av4": 4.714009,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_all": 24274,
+          "n_com_av4": 1179,
+          "n_sem_av4": 23095,
+          "percentual_com_av4": 4.857049,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_all": 82760,
+          "n_com_av4": 4013,
+          "n_sem_av4": 78747,
+          "percentual_com_av4": 4.848961,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_all": 92916,
+          "n_com_av4": 3671,
+          "n_sem_av4": 89245,
+          "percentual_com_av4": 3.95088,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_all": 28807,
+          "n_com_av4": 1339,
+          "n_sem_av4": 27468,
+          "percentual_com_av4": 4.648176,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_all": 324268,
+          "n_com_av4": 15152,
+          "n_sem_av4": 309116,
+          "percentual_com_av4": 4.672678,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_all": 241960,
+          "n_com_av4": 11865,
+          "n_sem_av4": 230095,
+          "percentual_com_av4": 4.903703,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_all": 72975,
+          "n_com_av4": 2999,
+          "n_sem_av4": 69976,
+          "percentual_com_av4": 4.109627,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_all": 73724,
+          "n_com_av4": 3167,
+          "n_sem_av4": 70557,
+          "percentual_com_av4": 4.295752,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_all": 149110,
+          "n_com_av4": 6354,
+          "n_sem_av4": 142756,
+          "percentual_com_av4": 4.261284,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_all": 165756,
+          "n_com_av4": 8308,
+          "n_sem_av4": 157448,
+          "percentual_com_av4": 5.012187,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_all": 358575,
+          "n_com_av4": 15788,
+          "n_sem_av4": 342787,
+          "percentual_com_av4": 4.402984,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_all": 47455,
+          "n_com_av4": 2128,
+          "n_sem_av4": 45327,
+          "percentual_com_av4": 4.484248,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_all": 63912,
+          "n_com_av4": 2941,
+          "n_sem_av4": 60971,
+          "percentual_com_av4": 4.60164,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_all": 229162,
+          "n_com_av4": 11493,
+          "n_sem_av4": 217669,
+          "percentual_com_av4": 5.015229,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_all": 124511,
+          "n_com_av4": 6380,
+          "n_sem_av4": 118131,
+          "percentual_com_av4": 5.124045,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_all": 218859,
+          "n_com_av4": 11024,
+          "n_sem_av4": 207835,
+          "percentual_com_av4": 5.037033,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_all": 99639,
+          "n_com_av4": 5252,
+          "n_sem_av4": 94387,
+          "percentual_com_av4": 5.271028,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_all": 166506,
+          "n_com_av4": 7691,
+          "n_sem_av4": 158815,
+          "percentual_com_av4": 4.619053,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_all": 282296,
+          "n_com_av4": 12607,
+          "n_sem_av4": 269689,
+          "percentual_com_av4": 4.46588,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_all": 100706,
+          "n_com_av4": 5155,
+          "n_sem_av4": 95551,
+          "percentual_com_av4": 5.118861,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_all": 36038,
+          "n_com_av4": 1655,
+          "n_sem_av4": 34383,
+          "percentual_com_av4": 4.592375,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_all": 9639,
+          "n_com_av4": 422,
+          "n_sem_av4": 9217,
+          "percentual_com_av4": 4.378048,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_all": 159919,
+          "n_com_av4": 7331,
+          "n_sem_av4": 152588,
+          "percentual_com_av4": 4.584196,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_all": 91263,
+          "n_com_av4": 4250,
+          "n_sem_av4": 87013,
+          "percentual_com_av4": 4.656871,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_all": 65540,
+          "n_com_av4": 3568,
+          "n_sem_av4": 61972,
+          "percentual_com_av4": 5.444004,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_all": 590767,
+          "n_com_av4": 28139,
+          "n_sem_av4": 562628,
+          "percentual_com_av4": 4.76313,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_all": 32618,
+          "n_com_av4": 1576,
+          "n_sem_av4": 31042,
+          "percentual_com_av4": 4.831688,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "celulas_positivas_inferiores_30": 0
+      },
+      "ano": 2023,
+      "qualidade_fonte": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2023.csv",
+        "arquivo_geografia": "MICRODADOS_ENEM_2023.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 3933955,
+        "linhas_geografia": 3933955,
+        "n_candidatos_av4": 185447,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      }
+    },
+    {
+      "brasil": {
+        "n_pop_all": 4332944,
+        "n_com_av4": 171463,
+        "n_sem_av4": 4161481,
+        "percentual_com_av4": 3.957194,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_all": 26424,
+          "n_com_av4": 1125,
+          "n_sem_av4": 25299,
+          "percentual_com_av4": 4.257493,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_all": 88896,
+          "n_com_av4": 3754,
+          "n_sem_av4": 85142,
+          "percentual_com_av4": 4.222912,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_all": 96898,
+          "n_com_av4": 3552,
+          "n_sem_av4": 93346,
+          "percentual_com_av4": 3.66571,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_all": 30650,
+          "n_com_av4": 1282,
+          "n_sem_av4": 29368,
+          "percentual_com_av4": 4.182708,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_all": 376845,
+          "n_com_av4": 15293,
+          "n_sem_av4": 361552,
+          "percentual_com_av4": 4.058167,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_all": 250607,
+          "n_com_av4": 10557,
+          "n_sem_av4": 240050,
+          "percentual_com_av4": 4.212572,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_all": 74520,
+          "n_com_av4": 2689,
+          "n_sem_av4": 71831,
+          "percentual_com_av4": 3.608427,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_all": 74543,
+          "n_com_av4": 2743,
+          "n_sem_av4": 71800,
+          "percentual_com_av4": 3.679755,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_all": 151158,
+          "n_com_av4": 5767,
+          "n_sem_av4": 145391,
+          "percentual_com_av4": 3.815213,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_all": 178833,
+          "n_com_av4": 7822,
+          "n_sem_av4": 171011,
+          "percentual_com_av4": 4.373913,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_all": 393824,
+          "n_com_av4": 14713,
+          "n_sem_av4": 379111,
+          "percentual_com_av4": 3.735933,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_all": 51311,
+          "n_com_av4": 1979,
+          "n_sem_av4": 49332,
+          "percentual_com_av4": 3.856873,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_all": 67782,
+          "n_com_av4": 2465,
+          "n_sem_av4": 65317,
+          "percentual_com_av4": 3.636659,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_all": 248061,
+          "n_com_av4": 10999,
+          "n_sem_av4": 237062,
+          "percentual_com_av4": 4.43399,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_all": 128546,
+          "n_com_av4": 5387,
+          "n_sem_av4": 123159,
+          "percentual_com_av4": 4.190718,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_all": 237615,
+          "n_com_av4": 9832,
+          "n_sem_av4": 227783,
+          "percentual_com_av4": 4.137786,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_all": 108113,
+          "n_com_av4": 4839,
+          "n_sem_av4": 103274,
+          "percentual_com_av4": 4.475872,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_all": 179954,
+          "n_com_av4": 7263,
+          "n_sem_av4": 172691,
+          "percentual_com_av4": 4.036031,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_all": 289397,
+          "n_com_av4": 10786,
+          "n_sem_av4": 278611,
+          "percentual_com_av4": 3.72706,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_all": 102215,
+          "n_com_av4": 4339,
+          "n_sem_av4": 97876,
+          "percentual_com_av4": 4.244974,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_all": 38609,
+          "n_com_av4": 1479,
+          "n_sem_av4": 37130,
+          "percentual_com_av4": 3.830713,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_all": 12695,
+          "n_com_av4": 523,
+          "n_sem_av4": 12172,
+          "percentual_com_av4": 4.119732,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_all": 279039,
+          "n_com_av4": 8258,
+          "n_sem_av4": 270781,
+          "percentual_com_av4": 2.959443,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_all": 95126,
+          "n_com_av4": 3580,
+          "n_sem_av4": 91546,
+          "percentual_com_av4": 3.76343,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_all": 69529,
+          "n_com_av4": 2988,
+          "n_sem_av4": 66541,
+          "percentual_com_av4": 4.297487,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_all": 647215,
+          "n_com_av4": 25991,
+          "n_sem_av4": 621224,
+          "percentual_com_av4": 4.015822,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_all": 34539,
+          "n_com_av4": 1458,
+          "n_sem_av4": 33081,
+          "percentual_com_av4": 4.221315,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "celulas_positivas_inferiores_30": 0
+      },
+      "ano": 2024,
+      "qualidade_fonte": {
+        "arquivo_av4": "COMPETENCIAS_REDACAO_2024.csv",
+        "arquivo_geografia": "PARTICIPANTES_2024.csv",
+        "juncao": "NU_INSCRICAO+NU_ANO",
+        "linhas_fonte": 4332944,
+        "linhas_geografia": 4332944,
+        "n_candidatos_av4": 171463,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      }
+    },
+    {
+      "brasil": {
+        "n_pop_all": 4810772,
+        "n_com_av4": 185926,
+        "n_sem_av4": 4624846,
+        "percentual_com_av4": 3.864785,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_all": 28957,
+          "n_com_av4": 1109,
+          "n_sem_av4": 27848,
+          "percentual_com_av4": 3.829817,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_all": 96480,
+          "n_com_av4": 3642,
+          "n_sem_av4": 92838,
+          "percentual_com_av4": 3.774876,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_all": 110831,
+          "n_com_av4": 3787,
+          "n_sem_av4": 107044,
+          "percentual_com_av4": 3.416914,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_all": 33190,
+          "n_com_av4": 1273,
+          "n_sem_av4": 31917,
+          "percentual_com_av4": 3.835493,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_all": 427983,
+          "n_com_av4": 17123,
+          "n_sem_av4": 410860,
+          "percentual_com_av4": 4.00086,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_all": 275902,
+          "n_com_av4": 11776,
+          "n_sem_av4": 264126,
+          "percentual_com_av4": 4.268182,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_all": 82955,
+          "n_com_av4": 2937,
+          "n_sem_av4": 80018,
+          "percentual_com_av4": 3.540474,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_all": 85910,
+          "n_com_av4": 3137,
+          "n_sem_av4": 82773,
+          "percentual_com_av4": 3.651496,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_all": 166747,
+          "n_com_av4": 5966,
+          "n_sem_av4": 160781,
+          "percentual_com_av4": 3.577875,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_all": 211370,
+          "n_com_av4": 8611,
+          "n_sem_av4": 202759,
+          "percentual_com_av4": 4.073899,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_all": 464937,
+          "n_com_av4": 17257,
+          "n_sem_av4": 447680,
+          "percentual_com_av4": 3.711686,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_all": 57932,
+          "n_com_av4": 2270,
+          "n_sem_av4": 55662,
+          "percentual_com_av4": 3.918387,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_all": 80396,
+          "n_com_av4": 2849,
+          "n_sem_av4": 77547,
+          "percentual_com_av4": 3.543709,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_all": 289328,
+          "n_com_av4": 10672,
+          "n_sem_av4": 278656,
+          "percentual_com_av4": 3.688547,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_all": 142035,
+          "n_com_av4": 5591,
+          "n_sem_av4": 136444,
+          "percentual_com_av4": 3.936354,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_all": 272279,
+          "n_com_av4": 10995,
+          "n_sem_av4": 261284,
+          "percentual_com_av4": 4.038137,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_all": 120032,
+          "n_com_av4": 5074,
+          "n_sem_av4": 114958,
+          "percentual_com_av4": 4.227206,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_all": 195836,
+          "n_com_av4": 7714,
+          "n_sem_av4": 188122,
+          "percentual_com_av4": 3.93901,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_all": 328943,
+          "n_com_av4": 12597,
+          "n_sem_av4": 316346,
+          "percentual_com_av4": 3.829539,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_all": 113208,
+          "n_com_av4": 4637,
+          "n_sem_av4": 108571,
+          "percentual_com_av4": 4.096,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_all": 46798,
+          "n_com_av4": 1795,
+          "n_sem_av4": 45003,
+          "percentual_com_av4": 3.835634,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_all": 14158,
+          "n_com_av4": 483,
+          "n_sem_av4": 13675,
+          "percentual_com_av4": 3.411499,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_all": 186503,
+          "n_com_av4": 6801,
+          "n_sem_av4": 179702,
+          "percentual_com_av4": 3.64659,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_all": 110459,
+          "n_com_av4": 4172,
+          "n_sem_av4": 106287,
+          "percentual_com_av4": 3.776967,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_all": 78341,
+          "n_com_av4": 3179,
+          "n_sem_av4": 75162,
+          "percentual_com_av4": 4.057901,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_all": 751612,
+          "n_com_av4": 29104,
+          "n_sem_av4": 722508,
+          "percentual_com_av4": 3.872211,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_all": 37650,
+          "n_com_av4": 1375,
+          "n_sem_av4": 36275,
+          "percentual_com_av4": 3.652058,
+          "populacao": "POP_ALL",
+          "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "celulas_positivas_inferiores_30": 0
+      },
+      "ano": 2025,
+      "qualidade_fonte": {
+        "arquivo_av4": "RESULTADOS_2025.csv",
+        "arquivo_geografia": "RESULTADOS_2025.csv",
+        "juncao": "mesma_linha",
+        "linhas_fonte": 4810772,
+        "linhas_geografia": null,
+        "n_candidatos_av4": 185926,
+        "n_candidatos_sem_uf": 0,
+        "n_candidatos_sem_juncao": 0
+      }
+    }
+  ],
+  "historical": {
+    "brasil": {
+      "n_pop_all": 30821888,
+      "n_com_av4": 915670,
+      "n_sem_av4": 29906218,
+      "percentual_com_av4": 2.970843,
+      "populacao": "POP_ALL",
+      "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+      "sem_dados_individuais": true
+    },
+    "ufs": [
+      {
+        "uf": "AC",
+        "n_pop_all": 203061,
+        "n_com_av4": 5993,
+        "n_sem_av4": 197068,
+        "percentual_com_av4": 2.95133,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "AL",
+        "n_pop_all": 581040,
+        "n_com_av4": 18459,
+        "n_sem_av4": 562581,
+        "percentual_com_av4": 3.17689,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "AM",
+        "n_pop_all": 752979,
+        "n_com_av4": 17866,
+        "n_sem_av4": 735113,
+        "percentual_com_av4": 2.372709,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "AP",
+        "n_pop_all": 226961,
+        "n_com_av4": 6429,
+        "n_sem_av4": 220532,
+        "percentual_com_av4": 2.832645,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "BA",
+        "n_pop_all": 2503574,
+        "n_com_av4": 77605,
+        "n_sem_av4": 2425969,
+        "percentual_com_av4": 3.099769,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "CE",
+        "n_pop_all": 1836027,
+        "n_com_av4": 57600,
+        "n_sem_av4": 1778427,
+        "percentual_com_av4": 3.137209,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "DF",
+        "n_pop_all": 576133,
+        "n_com_av4": 15608,
+        "n_sem_av4": 560525,
+        "percentual_com_av4": 2.709097,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "ES",
+        "n_pop_all": 570143,
+        "n_com_av4": 15830,
+        "n_sem_av4": 554313,
+        "percentual_com_av4": 2.776496,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "GO",
+        "n_pop_all": 1126601,
+        "n_com_av4": 31821,
+        "n_sem_av4": 1094780,
+        "percentual_com_av4": 2.824514,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "MA",
+        "n_pop_all": 1273126,
+        "n_com_av4": 40433,
+        "n_sem_av4": 1232693,
+        "percentual_com_av4": 3.175884,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "MG",
+        "n_pop_all": 2966782,
+        "n_com_av4": 84457,
+        "n_sem_av4": 2882325,
+        "percentual_com_av4": 2.846754,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "MS",
+        "n_pop_all": 398812,
+        "n_com_av4": 10940,
+        "n_sem_av4": 387872,
+        "percentual_com_av4": 2.743147,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "MT",
+        "n_pop_all": 517404,
+        "n_com_av4": 14245,
+        "n_sem_av4": 503159,
+        "percentual_com_av4": 2.753168,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PA",
+        "n_pop_all": 1765626,
+        "n_com_av4": 55256,
+        "n_sem_av4": 1710370,
+        "percentual_com_av4": 3.129542,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PB",
+        "n_pop_all": 912473,
+        "n_com_av4": 29210,
+        "n_sem_av4": 883263,
+        "percentual_com_av4": 3.201191,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PE",
+        "n_pop_all": 1702850,
+        "n_com_av4": 53265,
+        "n_sem_av4": 1649585,
+        "percentual_com_av4": 3.127991,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PI",
+        "n_pop_all": 749143,
+        "n_com_av4": 24732,
+        "n_sem_av4": 724411,
+        "percentual_com_av4": 3.301372,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PR",
+        "n_pop_all": 1287915,
+        "n_com_av4": 37812,
+        "n_sem_av4": 1250103,
+        "percentual_com_av4": 2.935908,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RJ",
+        "n_pop_all": 2117069,
+        "n_com_av4": 61193,
+        "n_sem_av4": 2055876,
+        "percentual_com_av4": 2.890458,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RN",
+        "n_pop_all": 735542,
+        "n_com_av4": 23448,
+        "n_sem_av4": 712094,
+        "percentual_com_av4": 3.187853,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RO",
+        "n_pop_all": 314448,
+        "n_com_av4": 8491,
+        "n_sem_av4": 305957,
+        "percentual_com_av4": 2.700287,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RR",
+        "n_pop_all": 82823,
+        "n_com_av4": 2273,
+        "n_sem_av4": 80550,
+        "percentual_com_av4": 2.744407,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RS",
+        "n_pop_all": 1395839,
+        "n_com_av4": 37706,
+        "n_sem_av4": 1358133,
+        "percentual_com_av4": 2.701314,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "SC",
+        "n_pop_all": 692256,
+        "n_com_av4": 20099,
+        "n_sem_av4": 672157,
+        "percentual_com_av4": 2.903406,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "SE",
+        "n_pop_all": 492211,
+        "n_com_av4": 16272,
+        "n_sem_av4": 475939,
+        "percentual_com_av4": 3.305899,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "SP",
+        "n_pop_all": 4770472,
+        "n_com_av4": 140852,
+        "n_sem_av4": 4629620,
+        "percentual_com_av4": 2.95258,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "TO",
+        "n_pop_all": 270578,
+        "n_com_av4": 7775,
+        "n_sem_av4": 262803,
+        "percentual_com_av4": 2.873478,
+        "populacao": "POP_ALL",
+        "criterio": "NU_NOTA_AV4 OU TP_STATUS_REDACAO_AV4 preenchido",
+        "sem_dados_individuais": true
+      }
+    ],
+    "qualidade": {
+      "status": "ok",
+      "soma_27_ufs_igual_brasil": true,
+      "celulas_positivas_inferiores_30": 0
+    },
+    "periodo": "2019-2025"
+  },
+  "dashboard_files": [
+    "dashboard_enem_2019.json",
+    "dashboard_enem_2020.json",
+    "dashboard_enem_2021.json",
+    "dashboard_enem_2022.json",
+    "dashboard_enem_2023.json",
+    "dashboard_enem_2024.json",
+    "dashboard_enem_2025.json"
+  ]
+}

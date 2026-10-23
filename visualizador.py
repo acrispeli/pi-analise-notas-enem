@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-r"""Visualizador ENEM 2019–2025 | IND-001 a IND-022.
+r"""Visualizador ENEM 2019–2025 | IND-001–031 e IND-040–041.
 
 Instalar: .\.venv\Scripts\python.exe -m pip install -r requirements_visualizador.txt
 Executar: .\.venv\Scripts\python.exe -m streamlit run visualizador.py
@@ -15,6 +15,12 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+
+from painel_indicadores_recentes import (
+    bloco as bloco_recente, recorte as recorte_recente_dados,
+    validar_renda, linhas_renda, serie_renda, serie_metrica as serie_recente_metrica,
+    FAIXAS_RENDA,
+)
 
 from painel_dados_enem import (
     ANOS, UFS, NOMES_UF, localizar_dashboards, carregar_json, obter_recorte,
@@ -124,7 +130,7 @@ def imprimir_menu_lateral(pagina_atual: str, recorte: str) -> None:
         f'{itens}'
         '<div class="print-nav-recorte"><strong>Recorte da impressão</strong><div>'
         f'{escape(recorte)}</div></div>'
-        '<div class="print-nav-fim">Indicadores disponíveis: IND-001 a IND-022</div>'
+        '<div class="print-nav-fim">Indicadores disponíveis: IND-001 a IND-041</div>'
         '<div class="print-nav-fim">Projeto Integrador IV · UNIVESP</div>'
         '</aside>'
     )
@@ -528,8 +534,8 @@ def perfis():
 def evolucao():
     st.title('Evolução temporal')
     st.caption('Como os resultados variaram entre 2019 e 2025. Selecione o assunto abaixo; a UF é mantida em todas as séries.')
-    aba_notas,aba_comp,aba_pca,aba_perfis,aba_correcao=st.tabs([
-        'Notas e redações','Competências','Relações e PCA','Perfis','Correção',
+    aba_notas,aba_comp,aba_pca,aba_perfis,aba_correcao,aba_renda=st.tabs([
+        'Notas e redações','Competências','Relações e PCA','Perfis','Correção','Renda familiar',
     ])
     with aba_notas:
         # Visão histórica por indicadores, sempre respeitando a UF selecionada.
@@ -642,6 +648,11 @@ def evolucao():
     with aba_correcao:
         grafico_temporal_avaliadores()
 
+
+    with aba_renda:
+        bloco('Evolução das médias das faixas extremas',
+              'Categorias A e Q por edição, com valores de renda nominais específicos de cada ano.', 'IND-041')
+        grafico_renda_serie()
 
 def histograma_diferencas_avaliadores(d):
     """Barras categóricas; faixas têm larguras variáveis, sem densidade implícita."""
@@ -779,6 +790,7 @@ def avaliadores():
         for erro in erros:st.caption('• '+erro)
         st.caption('Confirme os sete arquivos outputs/json/dashboard_enem_2019.json ... dashboard_enem_2025.json '
                    'e as versões completas dos IND-020, IND-021 e IND-022.')
+        pagina_avaliadores_adicionais()
         return
 
     aba20,aba21,aba22,aba_tempo=st.tabs([
@@ -836,6 +848,321 @@ def avaliadores():
         st.markdown('#### O que mudou entre os anos?')
         st.caption('As três séries respeitam a UF selecionada; sempre usam recortes anuais originais, não médias dos modelos históricos.')
         grafico_temporal_avaliadores()
+    st.divider()
+    pagina_avaliadores_adicionais()
+
+
+def dashboard_do_filtro():
+    """Nunca substitui um ano selecionado pelo JSON de referência de outro ano."""
+    if ano is None or ano not in arquivos:
+        return None
+    try:
+        return ler_cached(arquivos[ano])
+    except (OSError, ValueError) as exc:
+        st.error(f'Dashboard de {ano} indisponível: {exc}')
+        return None
+
+
+def dashboards_disponiveis():
+    """Carrega somente edições que têm seu próprio arquivo JSON."""
+    out = {}
+    for ano_arquivo, caminho in sorted(arquivos.items()):
+        try:
+            out[int(ano_arquivo)] = ler_cached(caminho)
+        except (OSError, ValueError):
+            continue
+    return out
+
+
+def recorte_recente(indicador):
+    return recorte_recente_dados(dashboard_do_filtro(), indicador, uf)
+
+
+def grafico_renda_serie():
+    serie = serie_renda(dashboards_disponiveis(), uf)
+    if not serie:
+        return sem_dados()
+    df = pd.DataFrame(serie)
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=df['ano'].astype(str), y=df['faixa_a_media'], mode='lines+markers',
+                             name='A · Nenhuma renda', line=dict(color=COR_SEC, width=2.5)))
+    fig.add_trace(go.Scatter(x=df['ano'].astype(str), y=df['faixa_q_media'], mode='lines+markers',
+                             name='Q · Faixa mais alta', line=dict(color=COR, width=2.5)))
+    fig.update_layout(yaxis_title='Nota média (0–1.000)', xaxis_title='Ano')
+    grafico(fig, 360)
+    diferencas = pd.DataFrame([{
+        'Ano': r['ano'], 'Média A': r['faixa_a_media'], 'Média Q': r['faixa_q_media'],
+        'Diferença Q − A': r['diferenca_q_a'], 'Limite da faixa Q': r['q_descricao'],
+    } for r in serie])
+    with st.expander('Comparar médias e limites de renda de cada edição'):
+        st.dataframe(diferencas, hide_index=True, use_container_width=True)
+    st.caption('A faixa Q representa limites monetários diferentes em cada edição. As notas A e Q são médias anuais ' 
+               'das redações válidas. Não são médias do histórico nem medidas de efeito causal.')
+    anos_mostrados = {r['ano'] for r in serie}
+    if 2025 not in anos_mostrados:
+        st.info('IND-041: 2025 indisponível para o cruzamento individual renda × nota; não foi extrapolado nem substituído por 2024.')
+
+
+def grafico_renda_ano(dashboard):
+    rec = recorte_recente_dados(dashboard, 41, uf)
+    modulo = bloco_recente(dashboard, 41)
+    if not rec or not modulo:
+        return sem_dados()
+    erros = validar_renda(rec)
+    if erros:
+        st.error('O recorte de renda não passou nas verificações mínimas; seus gráficos foram suspensos.')
+        for erro in erros: st.caption(f'• {erro}')
+        return
+    rows = linhas_renda(rec)
+    df = pd.DataFrame([r for r in rows if r['faixa'] in FAIXAS_RENDA and r['n'] > 0])
+    if df.empty:
+        return sem_dados()
+    faixa_a = df.loc[df['faixa'] == 'A'].iloc[0]
+    faixa_q = df.loc[df['faixa'] == 'Q'].iloc[0]
+    col = st.columns(2)
+    col[0].metric('Redações válidas', pt_int(rec['n_redacoes_validas']))
+    col[1].metric('Renda informada', pt(rec.get('percentual_renda_declarada'), 2) + '%')
+    col = st.columns(2)
+    col[0].metric('Média · nenhuma renda (A)', pt(faixa_a['media'], 2))
+    col[1].metric('Média · maior faixa (Q)', pt(faixa_q['media'], 2))
+    st.metric('Diferença entre médias Q − A', pt(faixa_q['media']-faixa_a['media'], 2) + ' pontos')
+    st.caption(f"Faixa Q nesta edição: {faixa_q['descricao']}. Questão do questionário: {modulo.get('source_question', '—')}. "
+               'População POP_SOCIO_VALID: apenas participações com redação válida.')
+    if rec.get('n_renda_nao_informada', 0):
+        st.info(f"Renda não informada: {pt_int(rec['n_renda_nao_informada'])} redações "
+                '(mantidas nos denominadores, mas fora da curva de renda ordenada).')
+    raras = [r for r in rows if 0 < r['n'] < 30]
+    if raras:
+        st.warning('Existem categorias com menos de 30 redações neste recorte: ' +
+                   ', '.join(f"{r['faixa']} (n={r['n']})" for r in raras) +
+                   '. Esses resultados são exibidos, mas são pouco estáveis para inferência estatística.')
+    bloco('Renda familiar e nota média', 'Cada categoria de renda mantém o limite monetário específico desta edição.', 'IND-041')
+    fig = px.line(df, x='faixa', y='media', markers=True, custom_data=['descricao','n'])
+    fig.update_traces(line_color=COR, marker=dict(size=8),
+                      hovertemplate='Faixa %{x}<br>%{customdata[0]}<br>Média %{y:.2f} pontos<br>n=%{customdata[1]:,.0f}<extra></extra>')
+    fig.update_layout(xaxis_title='Faixa de renda familiar',yaxis_title='Nota média (0–1.000)')
+    fig.update_yaxes(range=[0,1000])
+    grafico(fig, 370)
+    aba_dist, aba_quartis = st.tabs(['Participação por renda', 'Mediana e quartis'])
+    with aba_dist:
+        fig = px.bar(df, x='faixa', y='percentual', custom_data=['descricao','n'])
+        fig.update_traces(marker_color=COR,hovertemplate='Faixa %{x}<br>%{customdata[0]}<br>%{y:.3f}% do total<br>n=%{customdata[1]:,.0f}<extra></extra>')
+        fig.update_layout(yaxis_title='Redações válidas (%)',xaxis_title='Faixa de renda')
+        grafico(fig, 345)
+    with aba_quartis:
+        fig = go.Figure()
+        for campo, titulo, cor in [('q1', 'P25', '#A8C7DA'),('mediana','Mediana','#2563A6'),('q3','P75','#193E64')]:
+            fig.add_trace(go.Scatter(x=df['faixa'], y=df[campo], name=titulo, mode='lines+markers', line=dict(color=cor)))
+        fig.update_layout(yaxis_title='Nota total (pontos)', xaxis_title='Faixa de renda')
+        fig.update_yaxes(range=[0,1000])
+        grafico(fig, 355)
+    with st.expander('Tabela completa do IND-041 (incluindo ausências de renda)'):
+        tabela = pd.DataFrame(rows).rename(columns={
+            'faixa':'Código', 'descricao':'Faixa monetária', 'n':'Redações',
+            'media':'Média','mediana':'Mediana','q1':'P25','q3':'P75',
+            'iqr':'IQR','desvio_padrao':'Desvio-padrão','percentual':'% das válidas',
+            'n_pequeno':'n < 30',
+        })
+        st.dataframe(tabela, hide_index=True, use_container_width=True)
+    st.caption('A relação mostrada é descritiva; renda autorreferida e escolaridade, trajetória educacional e outros fatores ' 
+               'podem estar associados às notas. UF significa local de prova, não residência.')
+
+
+def pagina_socioeconomica():
+    st.title('Contexto socioeconômico')
+    st.caption('Distribuição das respostas do questionário (IND-040) e relação entre renda familiar e redação (IND-041).')
+    aba40,aba41 = st.tabs(['Perfil socioeconômico · IND-040','Renda × nota · IND-041'])
+    with aba40:
+        if ano is None:
+            st.info('Escolha um ano para comparar categorias do questionário. Q006 e Q007, por exemplo, ' 
+                    'têm significados diferentes conforme a edição; categorias não são somadas indiscriminadamente.')
+            serie = []
+            for yy, d in dashboards_disponiveis().items():
+                r = recorte_recente_dados(d,40,uf)
+                if r and isinstance(r.get('n_participacoes'),int):
+                    serie.append({'Ano':str(yy),'Participações':r['n_participacoes']})
+            if serie:
+                grafico_bar(pd.DataFrame(serie),'Ano','Participações',altura=320)
+        else:
+            r = recorte_recente(40)
+            if not r:
+                sem_dados()
+            else:
+                st.metric('Participações com questionário',pt_int(r.get('n_participacoes')))
+                perguntas = r.get('questoes') or []
+                opcoes = {f"{q.get('questao')} — {q.get('tema')}":q for q in perguntas}
+                if opcoes:
+                    selecionada = st.selectbox('Tema do questionário',list(opcoes),key='tema_socio_040')
+                    q = opcoes[selecionada]
+                    cats = q.get('categorias') or []
+                    if cats:
+                        df = pd.DataFrame([{'Resposta':str(x.get('rotulo',x.get('codigo'))),
+                                           'Percentual':x.get('percentual'),
+                                           'Participações':x.get('quantidade')} for x in cats])
+                        fig=px.bar(df,x='Resposta',y='Percentual',custom_data=['Participações'])
+                        fig.update_traces(marker_color=COR,hovertemplate='%{x}<br>%{y:.2f}%<br>n=%{customdata[0]:,.0f}<extra></extra>')
+                        fig.update_layout(yaxis_title='Participações (%)')
+                        grafico(fig)
+                        st.caption('As letras da legenda são os códigos originais do questionário; não equivalem a valores monetários. ' 
+                                   'POP_SOCIO considera participantes com questionário, inclusive sem redação válida.')
+                        if q.get('tem_agregacao_para_privacidade'):
+                            st.caption('Este recorte contém categorias agrupadas no módulo IND-040; não são semanticamente homogêneas.')
+                        with st.expander('Ver tabela de respostas'):
+                            st.dataframe(df,hide_index=True,use_container_width=True)
+                    else: sem_dados()
+                else: sem_dados()
+    with aba41:
+        if ano is None:
+            bloco('Evolução anual das faixas extremas',
+                  'Média das faixas A e Q em cada edição disponível, sem misturar faixas monetárias de anos distintos.', 'IND-041')
+            grafico_renda_serie()
+            st.info('Para ver as 17 faixas de renda, percentuais, medianas e quartis, selecione uma edição no filtro Ano.')
+        else:
+            d = dashboard_do_filtro()
+            if d and bloco_recente(d,41):
+                grafico_renda_ano(d)
+            else:
+                st.info('IND-041 indisponível para este ano: não se estima renda × nota a partir de dados sem ligação individual válida.')
+
+
+def pagina_alto_desempenho():
+    st.title('Alto desempenho')
+    st.caption('IND-030: distribuição das notas 900–1000. IND-031: pontos perdidos por competência entre 900 e 980.')
+    if ano is None:
+        hist = []
+        perdas=[]
+        for yy, d in dashboards_disponiveis().items():
+            a = recorte_recente_dados(d,30,uf)
+            b = recorte_recente_dados(d,31,uf)
+            if a and isinstance(a.get('n_high'),int):
+                hist.append({'Ano':str(yy),'Redações ≥900':a['n_high'],
+                             'Percentual de válidas':a.get('percentual_high_sobre_validas')})
+            if b and b.get('resumo_competencias'):
+                for c in b['resumo_competencias']:
+                    perdas.append({'Ano':str(yy),'Competência':c['competencia'],'Pontos de perda':c['media_perda']})
+        if hist:
+            bloco('Redações com nota ≥900 por ano', 'Proporção calculada sobre as redações válidas de cada edição.', 'IND-030')
+            df=pd.DataFrame(hist)
+            linha(df,'Ano','Percentual de válidas')
+            with st.expander('Ver totais anuais'):st.dataframe(df,hide_index=True,use_container_width=True)
+        else: sem_dados()
+        if perdas:
+            bloco('Perda média por competência', 'Redações válidas entre 900 e 980 pontos (sem nota 1.000).','IND-031')
+            fig=px.line(pd.DataFrame(perdas),x='Ano',y='Pontos de perda',color='Competência',markers=True,color_discrete_sequence=ESCALA[::-1])
+            grafico(fig)
+        return
+    a,b=recorte_recente(30),recorte_recente(31)
+    tab30,tab31=st.tabs(['Faixas 900–1000 · IND-030','Perda por competência · IND-031'])
+    with tab30:
+        if a and a.get('n_high') is not None:
+            cols=st.columns(2)
+            cols[0].metric('Redações com 900–1000',pt_int(a['n_high']))
+            cols[1].metric('Das redações válidas',pt(a.get('percentual_high_sobre_validas'),2)+'%')
+            df=pd.DataFrame([{'Faixa':x['faixa'],'Redações':x['quantidade'],'Participação (%)':x['percentual']}
+                             for x in a.get('faixas',[])])
+            if not df.empty:
+                fig=px.bar(df,x='Faixa',y='Participação (%)',custom_data=['Redações'])
+                fig.update_traces(marker_color=COR,hovertemplate='%{x}<br>%{y:.2f}%<br>n=%{customdata[0]:,.0f}<extra></extra>')
+                grafico(fig)
+            if a.get('status_publicacao') != 'ok':
+                st.caption('Algumas faixas foram unidas na origem. Compare recortes verificando os limites de cada faixa.')
+        else: sem_dados()
+    with tab31:
+        if b and b.get('resumo_competencias'):
+            st.metric('Redações 900–980',pt_int(b.get('n_near')))
+            df=pd.DataFrame([{'Competência':r['competencia'],'Perda média (pontos)':r['media_perda'],
+                              'Perda mediana':r['mediana_perda'],'n':r['n_redacoes']}
+                             for r in b['resumo_competencias']])
+            fig=px.bar(df,x='Competência',y='Perda média (pontos)')
+            fig.update_traces(marker_color=COR)
+            grafico(fig)
+            with st.expander('Valores de cada competência'):
+                st.dataframe(df,hide_index=True,use_container_width=True)
+            st.caption('Perda = 200 − nota de cada competência. A amostra exclui notas 1.000; não é a totalidade das redações.')
+        else: sem_dados()
+
+
+def pagina_avaliadores_adicionais():
+    """Complemento ao IND-020..022, usando diretamente os recortes já agregados."""
+    st.markdown('### Complementos da análise entre avaliadores')
+    st.caption('IND-023 a IND-029. POP_ALL, POP_EVALUATOR e amostras de ML possuem denominadores diferentes.')
+    if ano is None:
+        st.info('A evolução anual usa cada JSON de sua própria edição; não aplica um modelo de ML histórico inexistente.')
+        colunas = [
+            (23,'percentual_divergencia_pop_evaluator','Situação divergente (POP_EVALUATOR, %)'),
+            (24,'percentual_com_av3','AV3 presente (POP_ALL, %)'),
+            (25,'percentual_com_av4','Banca AV4 presente (POP_ALL, %)'),
+            (27,'icc_concordancia_absoluta','ICC(A,1) entre AV1 e AV2'),
+        ]
+        for ind,field,titulo in colunas:
+            linhas=serie_recente_metrica(dashboards_disponiveis(),ind,field,uf)
+            if linhas:
+                bloco(titulo,'Métrica anual calculada com a população específica do indicador.',f'IND-{ind:03d}')
+                linha(pd.DataFrame(linhas),'Ano','Valor')
+        st.caption('Para Kappa por competência, K-Means de divergências e Isolation Forest, escolha um ano específico.')
+        return
+    sub=st.tabs(['Situação · 023','AV3 e banca · 024–025','Concordância · 026–027',
+                 'Perfis de divergência · 028','Atípicos · 029'])
+    with sub[0]:
+        r=recorte_recente(23)
+        if r:
+            c=st.columns(2)
+            c[0].metric('Situações divergentes',pt_int(r.get('n_status_divergentes')))
+            c[1].metric('Percentual',pt(r.get('percentual_divergencia_pop_evaluator'),2)+'%')
+            st.caption('Denominador: POP_EVALUATOR. Matriz de status omitida quando contém categorias raras.')
+        else:sem_dados()
+    with sub[1]:
+        c=st.columns(2)
+        for col,ind,campo in zip(c,[24,25],['av3','av4']):
+            r=recorte_recente(ind)
+            if r:
+                col.metric(f'IND-{ind:03d} · {campo.upper()} presente',pt(r.get('percentual_com_'+campo),2)+'%')
+                col.caption('População POP_ALL; presença de campos, não prova administrativa de convocação.')
+            else: col.info('Dados indisponíveis')
+    with sub[2]:
+        r=recorte_recente(26)
+        if r:
+            res=[{'Competência':k,'Kappa quadrático':v.get('kappa_ponderado_quadratico'),
+                  'Concordância exata (%)':v.get('percentual_concordancia_exata')}
+                 for k,v in (r.get('competencias') or {}).items()]
+            if res:
+                fig=px.bar(pd.DataFrame(res),x='Competência',y='Kappa quadrático')
+                fig.update_traces(marker_color=COR)
+                fig.update_yaxes(range=[0,1]);grafico(fig,315)
+                with st.expander('Detalhes IND-026'):st.dataframe(pd.DataFrame(res),hide_index=True,use_container_width=True)
+        else:sem_dados()
+        r=recorte_recente(27)
+        if r:
+            c=st.columns(2)
+            c[0].metric('ICC(A,1) absoluto',pt(r.get('icc_concordancia_absoluta'),3))
+            c[1].metric('Pearson AV1 × AV2',pt(r.get('correlacao_pearson'),3))
+            st.caption('Concordância entre duas notas não identifica qual avaliador está correto.')
+    with sub[3]:
+        r=recorte_recente(28)
+        if r and r.get('clusters'):
+            st.metric('Amostra do modelo',pt_int(r.get('n_amostra_ml_evaluator')))
+            df=pd.DataFrame([{'Perfil':cluster['cluster_id'],
+                              'Competência':entry['competencia'],
+                              'Diferença média (pontos)':entry['diferenca_media_pontos']}
+                             for cluster in r['clusters']
+                             for entry in cluster.get('centro_por_competencia',[])])
+            if not df.empty:
+                fig=px.line(df,x='Competência',y='Diferença média (pontos)',color='Perfil',markers=True,
+                            color_discrete_sequence=ESCALA[::-1]);grafico(fig)
+            st.caption('Percentuais do IND-028 se referem à amostra do K-Means, não às participações nacionais.')
+        else:sem_dados()
+    with sub[4]:
+        r=recorte_recente(29)
+        if r:
+            if r.get('sinalizacao_suprimida'):
+                st.info('A sinalização está omitida neste recorte conforme a origem. Não há contagem exibível.')
+            else:
+                c=st.columns(2)
+                c[0].metric('Sinalizados na amostra',pt_int(r.get('n_sinalizados_auto')))
+                c[1].metric('Percentual da amostra',pt(r.get('percentual_sinalizados_auto'),2)+'%')
+            st.caption('Isolation Forest: atípico significa comportamento estatístico menos frequente, ' 
+                       'não evidência de erro, fraude ou identidade individual.')
+        else:sem_dados()
 
 
 def futura(titulo, texto):
@@ -860,13 +1187,18 @@ def metodologia():
 
 **Privacidade**: o IND-016 é exibido para **exploração interna** usando apenas hexágonos com pelo menos 30 redações; células menores já foram omitidas no processamento. A revisão de supressão complementar permanece pendente para publicação externa. Este visualizador oculta ou agrega informações potencialmente sensíveis, **mas não substitui uma auditoria formal de privacidade**.
 
-**Situação acadêmica**: os JSONs podem ter status `draft`; validação computacional não significa aprovação para divulgação pública. Os indicadores IND-020, IND-021 e IND-022 são exibidos na página Avaliação entre corretores, apenas como resultados agregados em estado draft.''')
+**Situação acadêmica**: os JSONs podem ter status `draft`; validação computacional não significa aprovação para divulgação pública. Os indicadores IND-020 a IND-029 são exibidos na página Avaliação entre corretores, apenas como resultados agregados em estado draft.''')
+    st.markdown('**IND-040:** perfil descritivo de todo o questionário (POP_SOCIO), independentemente de redação válida. '
+                '**IND-041:** apenas redações válidas com informação de renda vinculável (POP_SOCIO_VALID); '
+                'renda Q006 até 2023 e Q007 em 2024. 2025 não foi estimado. As faixas A–Q mudam de limites '
+                'monetários ao longo do tempo. Grupos com n pequeno ficam sinalizados e não são automaticamente excluídos. '
+                'Associação não prova causalidade.')
     with st.expander('Fontes locais utilizadas'):
         for y,p in sorted(arquivos.items()):st.write(f'{y}: `{p}`')
         st.write('Nenhum CSV de microdados é lido pelo visualizador.')
-    with st.expander('Método de cada indicador (IND-001 a IND-022)'):
+    with st.expander('Método de cada indicador disponível (IND-001 a IND-041)'):
         m=referencia.get('pages',{}).get('methodology',{})
-        for i in range(1,23):
+        for i in list(range(1,32)) + [40,41]:
             entry=m if i==1 else m.get(f'ind{i:03d}',{})
             if entry:
                 with st.expander(f'IND-{i:03d}'):
@@ -885,12 +1217,14 @@ def ler_cached(caminho: Path):
 with st.sidebar:
     st.markdown('### Redação no ENEM')
     st.caption('Painel de indicadores · UNIVESP')
+    st.caption('Versão IND-041 · páginas Alto desempenho e Contexto socioeconômico ativas')
     st.markdown('---')
     st.caption('NAVEGAÇÃO')
     pagina=st.radio('Páginas',PAGINAS,label_visibility='collapsed',key='pagina_ativa')
     st.markdown('---')
-    st.caption('Disponíveis: IND-001 a IND-022')
-    st.caption('Em preparação: IND-023 em diante')
+    st.caption('Disponíveis: IND-001 a IND-031, IND-040 e IND-041')
+    st.caption('IND-032–039 em preparação')
+    st.caption('Para visualizar IND-030/031/040/041, escolha as duas últimas páginas temáticas acima.')
     if st.button('Atualizar dados', use_container_width=True):
         st.cache_data.clear()
         st.rerun()
@@ -937,8 +1271,8 @@ elif pagina=='Relações e PCA':relacoes()
 elif pagina=='Perfis de redação':perfis()
 elif pagina=='Evolução temporal':evolucao()
 elif pagina=='Avaliação entre corretores':avaliadores()
-elif pagina=='Alto desempenho':futura('Alto desempenho','Espaço reservado para análises futuras de alto desempenho.')
-elif pagina=='Contexto socioeconômico':futura('Contexto socioeconômico','Espaço reservado para análises futuras de condições socioeconômicas.')
+elif pagina=='Alto desempenho':pagina_alto_desempenho()
+elif pagina=='Contexto socioeconômico':pagina_socioeconomica()
 elif pagina=='Modelos futuros':futura('Modelos futuros','Espaço reservado para novas análises de aprendizado de máquina.')
 elif pagina=='Metodologia':metodologia()
 

@@ -1,0 +1,4425 @@
+{
+  "meta": {
+    "indicator_id": "IND-023",
+    "module_schema_version": "ind023-module-1.0.0",
+    "analysis_version": "2.22.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023",
+    "dataset_version": "enem-2019-2025-csv-publico",
+    "generated_at": "2026-10-20T14:24:46+00:00",
+    "data_status": "draft",
+    "source_indicator_files": [
+      "IND_022_discrepancia_oficial.json",
+      "IND_020_diferenca_total_av1_av2.json"
+    ],
+    "geographic_dimension": "SG_UF_PROVA",
+    "population_definition": "POP_EVALUATOR: duas notas totais AV1/AV2 válidas, como IND-020",
+    "method": "taxa_status_av1_av2_na_pop_evaluator_a_partir_ind022_auditado",
+    "matrix_mode": "matriz",
+    "source_qa": {
+      "2019": {
+        "linhas_fonte": 5095171,
+        "n_pop_evaluator": 3779355,
+        "n_pares_status": 3779355,
+        "n_ausentes": 0,
+        "registros_geografia": 5095171
+      },
+      "2020": {
+        "linhas_fonte": 5783109,
+        "n_pop_evaluator": 2674914,
+        "n_pares_status": 2674914,
+        "n_ausentes": 0,
+        "registros_geografia": 5783109
+      },
+      "2021": {
+        "linhas_fonte": 3389832,
+        "n_pop_evaluator": 2378379,
+        "n_pares_status": 2378379,
+        "n_ausentes": 0,
+        "registros_geografia": 3389832
+      },
+      "2022": {
+        "linhas_fonte": 3476105,
+        "n_pop_evaluator": 2493442,
+        "n_pares_status": 2493442,
+        "n_ausentes": 0,
+        "registros_geografia": 3476105
+      },
+      "2023": {
+        "linhas_fonte": 3933955,
+        "n_pop_evaluator": 2822643,
+        "n_pares_status": 2822643,
+        "n_ausentes": 0,
+        "registros_geografia": 3933955
+      },
+      "2024": {
+        "linhas_fonte": 4332944,
+        "n_pop_evaluator": 3167955,
+        "n_pares_status": 3167955,
+        "n_ausentes": 0,
+        "registros_geografia": 4332944
+      },
+      "2025": {
+        "linhas_fonte": 4810772,
+        "n_pop_evaluator": 3457555,
+        "n_pares_status": 3457555,
+        "n_ausentes": 0
+      }
+    },
+    "minimum_group_count": 30,
+    "publication_status": "draft; revisão acadêmica e privacidade complementar pendentes",
+    "notes": "Compara exclusivamente TP_STATUS_REDACAO_AV1 com TP_STATUS_REDACAO_AV2 entre participações da POP_EVALUATOR (duas notas totais AV1/AV2 válidas). Status ausente não é classificado como igual. A taxa principal usa como denominador a POP_EVALUATOR; a taxa entre pares de status conhecidos é adicional e requer apresentar a cobertura. Contagens do IND-022 são a fonte exata já calculada do motivo status divergente. A matriz de transições detalhadas só é gerada a partir dos microdados no modo matriz, podendo ser inteiramente retida se houver células positivas <30. Códigos de status sem validação interanual não são agregados em matriz histórica. Divergência de situação não significa erro do avaliador nem mede a nota final; UF é local de prova. Histórico soma participações, não pessoas únicas. Uso exploratório, data_status=draft; revisão acadêmica e privacidade complementar pendentes."
+  },
+  "indicator": {
+    "id": "IND-023",
+    "name": "Divergência de status AV1×AV2",
+    "unit": "percentual",
+    "dashboard_json_path": "pages.evaluators.status_disagreement",
+    "visualization": "KPI/matriz"
+  },
+  "years": [
+    {
+      "brasil": {
+        "n_pop_evaluator": 3779355,
+        "n_pares_status_preenchidos": 3779355,
+        "n_status_divergentes": 20178,
+        "n_status_iguais": 3759177,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 0.533901,
+        "percentual_divergencia_pares_comparaveis": 0.533901,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 99.466099,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_publicada_celulas_raras",
+          "celulas": [],
+          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+        },
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_evaluator": 28568,
+          "n_pares_status_preenchidos": 28568,
+          "n_status_divergentes": 203,
+          "n_status_iguais": 28365,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.710585,
+          "percentual_divergencia_pares_comparaveis": 0.710585,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.289415,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_evaluator": 67414,
+          "n_pares_status_preenchidos": 67414,
+          "n_status_divergentes": 406,
+          "n_status_iguais": 67008,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.602249,
+          "percentual_divergencia_pares_comparaveis": 0.602249,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.397751,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_evaluator": 76590,
+          "n_pares_status_preenchidos": 76590,
+          "n_status_divergentes": 678,
+          "n_status_iguais": 75912,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.885233,
+          "percentual_divergencia_pares_comparaveis": 0.885233,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.114767,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_evaluator": 30681,
+          "n_pares_status_preenchidos": 30681,
+          "n_status_divergentes": 198,
+          "n_status_iguais": 30483,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.645351,
+          "percentual_divergencia_pares_comparaveis": 0.645351,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.354649,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_evaluator": 291318,
+          "n_pares_status_preenchidos": 291318,
+          "n_status_divergentes": 1578,
+          "n_status_iguais": 289740,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.541676,
+          "percentual_divergencia_pares_comparaveis": 0.541676,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.458324,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_evaluator": 219039,
+          "n_pares_status_preenchidos": 219039,
+          "n_status_divergentes": 1490,
+          "n_status_iguais": 217549,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.680244,
+          "percentual_divergencia_pares_comparaveis": 0.680244,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.319756,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_evaluator": 69803,
+          "n_pares_status_preenchidos": 69803,
+          "n_status_divergentes": 287,
+          "n_status_iguais": 69516,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.411157,
+          "percentual_divergencia_pares_comparaveis": 0.411157,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.588843,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_evaluator": 74282,
+          "n_pares_status_preenchidos": 74282,
+          "n_status_divergentes": 290,
+          "n_status_iguais": 73992,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.390404,
+          "percentual_divergencia_pares_comparaveis": 0.390404,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.609596,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_evaluator": 127089,
+          "n_pares_status_preenchidos": 127089,
+          "n_status_divergentes": 640,
+          "n_status_iguais": 126449,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.503584,
+          "percentual_divergencia_pares_comparaveis": 0.503584,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.496416,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_evaluator": 163265,
+          "n_pares_status_preenchidos": 163265,
+          "n_status_divergentes": 1283,
+          "n_status_iguais": 161982,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.785839,
+          "percentual_divergencia_pares_comparaveis": 0.785839,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.214161,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_evaluator": 399511,
+          "n_pares_status_preenchidos": 399511,
+          "n_status_divergentes": 1893,
+          "n_status_iguais": 397618,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.473829,
+          "percentual_divergencia_pares_comparaveis": 0.473829,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.526171,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_evaluator": 50578,
+          "n_pares_status_preenchidos": 50578,
+          "n_status_divergentes": 280,
+          "n_status_iguais": 50298,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.5536,
+          "percentual_divergencia_pares_comparaveis": 0.5536,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.4464,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_evaluator": 61833,
+          "n_pares_status_preenchidos": 61833,
+          "n_status_divergentes": 353,
+          "n_status_iguais": 61480,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.570893,
+          "percentual_divergencia_pares_comparaveis": 0.570893,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.429107,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_evaluator": 208527,
+          "n_pares_status_preenchidos": 208527,
+          "n_status_divergentes": 1424,
+          "n_status_iguais": 207103,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.682885,
+          "percentual_divergencia_pares_comparaveis": 0.682885,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.317115,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_evaluator": 113779,
+          "n_pares_status_preenchidos": 113779,
+          "n_status_divergentes": 658,
+          "n_status_iguais": 113121,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.578314,
+          "percentual_divergencia_pares_comparaveis": 0.578314,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.421686,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_evaluator": 205165,
+          "n_pares_status_preenchidos": 205165,
+          "n_status_divergentes": 1347,
+          "n_status_iguais": 203818,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.656545,
+          "percentual_divergencia_pares_comparaveis": 0.656545,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.343455,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_evaluator": 94494,
+          "n_pares_status_preenchidos": 94494,
+          "n_status_divergentes": 715,
+          "n_status_iguais": 93779,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.756662,
+          "percentual_divergencia_pares_comparaveis": 0.756662,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.243338,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_evaluator": 157643,
+          "n_pares_status_preenchidos": 157643,
+          "n_status_divergentes": 633,
+          "n_status_iguais": 157010,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.40154,
+          "percentual_divergencia_pares_comparaveis": 0.40154,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.59846,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_evaluator": 251839,
+          "n_pares_status_preenchidos": 251839,
+          "n_status_divergentes": 1171,
+          "n_status_iguais": 250668,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.46498,
+          "percentual_divergencia_pares_comparaveis": 0.46498,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.53502,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_evaluator": 91309,
+          "n_pares_status_preenchidos": 91309,
+          "n_status_divergentes": 470,
+          "n_status_iguais": 90839,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.514736,
+          "percentual_divergencia_pares_comparaveis": 0.514736,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.485264,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_evaluator": 41709,
+          "n_pares_status_preenchidos": 41709,
+          "n_status_divergentes": 283,
+          "n_status_iguais": 41426,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.678511,
+          "percentual_divergencia_pares_comparaveis": 0.678511,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.321489,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_evaluator": 9045,
+          "n_pares_status_preenchidos": 9045,
+          "n_status_divergentes": 50,
+          "n_status_iguais": 8995,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.552792,
+          "percentual_divergencia_pares_comparaveis": 0.552792,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.447208,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_evaluator": 161685,
+          "n_pares_status_preenchidos": 161685,
+          "n_status_divergentes": 519,
+          "n_status_iguais": 161166,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.320995,
+          "percentual_divergencia_pares_comparaveis": 0.320995,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.679005,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_evaluator": 83069,
+          "n_pares_status_preenchidos": 83069,
+          "n_status_divergentes": 295,
+          "n_status_iguais": 82774,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.355126,
+          "percentual_divergencia_pares_comparaveis": 0.355126,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.644874,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_evaluator": 60128,
+          "n_pares_status_preenchidos": 60128,
+          "n_status_divergentes": 352,
+          "n_status_iguais": 59776,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.585418,
+          "percentual_divergencia_pares_comparaveis": 0.585418,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.414582,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_evaluator": 607122,
+          "n_pares_status_preenchidos": 607122,
+          "n_status_divergentes": 2508,
+          "n_status_iguais": 604614,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.413097,
+          "percentual_divergencia_pares_comparaveis": 0.413097,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.586903,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_evaluator": 33870,
+          "n_pares_status_preenchidos": 33870,
+          "n_status_divergentes": 174,
+          "n_status_iguais": 33696,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.513729,
+          "percentual_divergencia_pares_comparaveis": 0.513729,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.486271,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "origem_contagens": "IND-022",
+        "minimum_group_count": 30
+      },
+      "ano": 2019
+    },
+    {
+      "brasil": {
+        "n_pop_evaluator": 2674914,
+        "n_pares_status_preenchidos": 2674914,
+        "n_status_divergentes": 18877,
+        "n_status_iguais": 2656037,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 0.705705,
+        "percentual_divergencia_pares_comparaveis": 0.705705,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 99.294295,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_publicada_celulas_raras",
+          "celulas": [],
+          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+        },
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_evaluator": 19609,
+          "n_pares_status_preenchidos": 19609,
+          "n_status_divergentes": 176,
+          "n_status_iguais": 19433,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.897547,
+          "percentual_divergencia_pares_comparaveis": 0.897547,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.102453,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_evaluator": 52661,
+          "n_pares_status_preenchidos": 52661,
+          "n_status_divergentes": 422,
+          "n_status_iguais": 52239,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.801352,
+          "percentual_divergencia_pares_comparaveis": 0.801352,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.198648,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_evaluator": 49067,
+          "n_pares_status_preenchidos": 49067,
+          "n_status_divergentes": 821,
+          "n_status_iguais": 48246,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.673222,
+          "percentual_divergencia_pares_comparaveis": 1.673222,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.326778,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_evaluator": 20477,
+          "n_pares_status_preenchidos": 20477,
+          "n_status_divergentes": 162,
+          "n_status_iguais": 20315,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.791132,
+          "percentual_divergencia_pares_comparaveis": 0.791132,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.208868,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_evaluator": 212225,
+          "n_pares_status_preenchidos": 212225,
+          "n_status_divergentes": 1583,
+          "n_status_iguais": 210642,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.745906,
+          "percentual_divergencia_pares_comparaveis": 0.745906,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.254094,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_evaluator": 162228,
+          "n_pares_status_preenchidos": 162228,
+          "n_status_divergentes": 1163,
+          "n_status_iguais": 161065,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.716892,
+          "percentual_divergencia_pares_comparaveis": 0.716892,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.283108,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_evaluator": 54790,
+          "n_pares_status_preenchidos": 54790,
+          "n_status_divergentes": 302,
+          "n_status_iguais": 54488,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.551195,
+          "percentual_divergencia_pares_comparaveis": 0.551195,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.448805,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_evaluator": 48354,
+          "n_pares_status_preenchidos": 48354,
+          "n_status_divergentes": 317,
+          "n_status_iguais": 48037,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.655582,
+          "percentual_divergencia_pares_comparaveis": 0.655582,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.344418,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_evaluator": 93632,
+          "n_pares_status_preenchidos": 93632,
+          "n_status_divergentes": 592,
+          "n_status_iguais": 93040,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.632262,
+          "percentual_divergencia_pares_comparaveis": 0.632262,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.367738,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_evaluator": 115887,
+          "n_pares_status_preenchidos": 115887,
+          "n_status_divergentes": 987,
+          "n_status_iguais": 114900,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.851692,
+          "percentual_divergencia_pares_comparaveis": 0.851692,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.148308,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_evaluator": 265162,
+          "n_pares_status_preenchidos": 265162,
+          "n_status_divergentes": 1610,
+          "n_status_iguais": 263552,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.607176,
+          "percentual_divergencia_pares_comparaveis": 0.607176,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.392824,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_evaluator": 34033,
+          "n_pares_status_preenchidos": 34033,
+          "n_status_divergentes": 259,
+          "n_status_iguais": 33774,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.761026,
+          "percentual_divergencia_pares_comparaveis": 0.761026,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.238974,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_evaluator": 41514,
+          "n_pares_status_preenchidos": 41514,
+          "n_status_divergentes": 313,
+          "n_status_iguais": 41201,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.753963,
+          "percentual_divergencia_pares_comparaveis": 0.753963,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.246037,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_evaluator": 157977,
+          "n_pares_status_preenchidos": 157977,
+          "n_status_divergentes": 1397,
+          "n_status_iguais": 156580,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.884306,
+          "percentual_divergencia_pares_comparaveis": 0.884306,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.115694,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_evaluator": 87453,
+          "n_pares_status_preenchidos": 87453,
+          "n_status_divergentes": 660,
+          "n_status_iguais": 86793,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.754691,
+          "percentual_divergencia_pares_comparaveis": 0.754691,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.245309,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_evaluator": 156230,
+          "n_pares_status_preenchidos": 156230,
+          "n_status_divergentes": 1149,
+          "n_status_iguais": 155081,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.735454,
+          "percentual_divergencia_pares_comparaveis": 0.735454,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.264546,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_evaluator": 68313,
+          "n_pares_status_preenchidos": 68313,
+          "n_status_divergentes": 563,
+          "n_status_iguais": 67750,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.824148,
+          "percentual_divergencia_pares_comparaveis": 0.824148,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.175852,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_evaluator": 111559,
+          "n_pares_status_preenchidos": 111559,
+          "n_status_divergentes": 653,
+          "n_status_iguais": 110906,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.58534,
+          "percentual_divergencia_pares_comparaveis": 0.58534,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.41466,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_evaluator": 179829,
+          "n_pares_status_preenchidos": 179829,
+          "n_status_divergentes": 1228,
+          "n_status_iguais": 178601,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.682871,
+          "percentual_divergencia_pares_comparaveis": 0.682871,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.317129,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_evaluator": 67552,
+          "n_pares_status_preenchidos": 67552,
+          "n_status_divergentes": 445,
+          "n_status_iguais": 67107,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.658752,
+          "percentual_divergencia_pares_comparaveis": 0.658752,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.341248,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_evaluator": 23831,
+          "n_pares_status_preenchidos": 23831,
+          "n_status_divergentes": 205,
+          "n_status_iguais": 23626,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.860224,
+          "percentual_divergencia_pares_comparaveis": 0.860224,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.139776,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_evaluator": 6601,
+          "n_pares_status_preenchidos": 6601,
+          "n_status_divergentes": 64,
+          "n_status_iguais": 6537,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.96955,
+          "percentual_divergencia_pares_comparaveis": 0.96955,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.03045,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_evaluator": 116454,
+          "n_pares_status_preenchidos": 116454,
+          "n_status_divergentes": 646,
+          "n_status_iguais": 115808,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.554725,
+          "percentual_divergencia_pares_comparaveis": 0.554725,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.445275,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_evaluator": 55277,
+          "n_pares_status_preenchidos": 55277,
+          "n_status_divergentes": 338,
+          "n_status_iguais": 54939,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.611466,
+          "percentual_divergencia_pares_comparaveis": 0.611466,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.388534,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_evaluator": 45399,
+          "n_pares_status_preenchidos": 45399,
+          "n_status_divergentes": 337,
+          "n_status_iguais": 45062,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.742307,
+          "percentual_divergencia_pares_comparaveis": 0.742307,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.257693,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_evaluator": 403156,
+          "n_pares_status_preenchidos": 403156,
+          "n_status_divergentes": 2310,
+          "n_status_iguais": 400846,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.572979,
+          "percentual_divergencia_pares_comparaveis": 0.572979,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.427021,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_evaluator": 25644,
+          "n_pares_status_preenchidos": 25644,
+          "n_status_divergentes": 175,
+          "n_status_iguais": 25469,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.682421,
+          "percentual_divergencia_pares_comparaveis": 0.682421,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.317579,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "origem_contagens": "IND-022",
+        "minimum_group_count": 30
+      },
+      "ano": 2020
+    },
+    {
+      "brasil": {
+        "n_pop_evaluator": 2378379,
+        "n_pares_status_preenchidos": 2378379,
+        "n_status_divergentes": 20956,
+        "n_status_iguais": 2357423,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 0.881104,
+        "percentual_divergencia_pares_comparaveis": 0.881104,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 99.118896,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_publicada_celulas_raras",
+          "celulas": [],
+          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+        },
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_evaluator": 13761,
+          "n_pares_status_preenchidos": 13761,
+          "n_status_divergentes": 155,
+          "n_status_iguais": 13606,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.126372,
+          "percentual_divergencia_pares_comparaveis": 1.126372,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.873628,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_evaluator": 40809,
+          "n_pares_status_preenchidos": 40809,
+          "n_status_divergentes": 395,
+          "n_status_iguais": 40414,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.967924,
+          "percentual_divergencia_pares_comparaveis": 0.967924,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.032076,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_evaluator": 49815,
+          "n_pares_status_preenchidos": 49815,
+          "n_status_divergentes": 863,
+          "n_status_iguais": 48952,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.73241,
+          "percentual_divergencia_pares_comparaveis": 1.73241,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.26759,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_evaluator": 14154,
+          "n_pares_status_preenchidos": 14154,
+          "n_status_divergentes": 162,
+          "n_status_iguais": 13992,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.144553,
+          "percentual_divergencia_pares_comparaveis": 1.144553,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.855447,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_evaluator": 184844,
+          "n_pares_status_preenchidos": 184844,
+          "n_status_divergentes": 1616,
+          "n_status_iguais": 183228,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.874251,
+          "percentual_divergencia_pares_comparaveis": 0.874251,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.125749,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_evaluator": 151391,
+          "n_pares_status_preenchidos": 151391,
+          "n_status_divergentes": 2072,
+          "n_status_iguais": 149319,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.368641,
+          "percentual_divergencia_pares_comparaveis": 1.368641,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.631359,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_evaluator": 47817,
+          "n_pares_status_preenchidos": 47817,
+          "n_status_divergentes": 298,
+          "n_status_iguais": 47519,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.623209,
+          "percentual_divergencia_pares_comparaveis": 0.623209,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.376791,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_evaluator": 45008,
+          "n_pares_status_preenchidos": 45008,
+          "n_status_divergentes": 371,
+          "n_status_iguais": 44637,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.824298,
+          "percentual_divergencia_pares_comparaveis": 0.824298,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.175702,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_evaluator": 89555,
+          "n_pares_status_preenchidos": 89555,
+          "n_status_divergentes": 741,
+          "n_status_iguais": 88814,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.827424,
+          "percentual_divergencia_pares_comparaveis": 0.827424,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.172576,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_evaluator": 89957,
+          "n_pares_status_preenchidos": 89957,
+          "n_status_divergentes": 1094,
+          "n_status_iguais": 88863,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.216137,
+          "percentual_divergencia_pares_comparaveis": 1.216137,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.783863,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_evaluator": 231751,
+          "n_pares_status_preenchidos": 231751,
+          "n_status_divergentes": 1634,
+          "n_status_iguais": 230117,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.705067,
+          "percentual_divergencia_pares_comparaveis": 0.705067,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.294933,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_evaluator": 28960,
+          "n_pares_status_preenchidos": 28960,
+          "n_status_divergentes": 272,
+          "n_status_iguais": 28688,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.939227,
+          "percentual_divergencia_pares_comparaveis": 0.939227,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.060773,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_evaluator": 37739,
+          "n_pares_status_preenchidos": 37739,
+          "n_status_divergentes": 369,
+          "n_status_iguais": 37370,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.977768,
+          "percentual_divergencia_pares_comparaveis": 0.977768,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.022232,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_evaluator": 127423,
+          "n_pares_status_preenchidos": 127423,
+          "n_status_divergentes": 1420,
+          "n_status_iguais": 126003,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.114398,
+          "percentual_divergencia_pares_comparaveis": 1.114398,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.885602,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_evaluator": 74081,
+          "n_pares_status_preenchidos": 74081,
+          "n_status_divergentes": 680,
+          "n_status_iguais": 73401,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.917914,
+          "percentual_divergencia_pares_comparaveis": 0.917914,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.082086,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_evaluator": 138589,
+          "n_pares_status_preenchidos": 138589,
+          "n_status_divergentes": 1404,
+          "n_status_iguais": 137185,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.013067,
+          "percentual_divergencia_pares_comparaveis": 1.013067,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.986933,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_evaluator": 58995,
+          "n_pares_status_preenchidos": 58995,
+          "n_status_divergentes": 654,
+          "n_status_iguais": 58341,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.108569,
+          "percentual_divergencia_pares_comparaveis": 1.108569,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.891431,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_evaluator": 102445,
+          "n_pares_status_preenchidos": 102445,
+          "n_status_divergentes": 674,
+          "n_status_iguais": 101771,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.657914,
+          "percentual_divergencia_pares_comparaveis": 0.657914,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.342086,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_evaluator": 168747,
+          "n_pares_status_preenchidos": 168747,
+          "n_status_divergentes": 1329,
+          "n_status_iguais": 167418,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.78757,
+          "percentual_divergencia_pares_comparaveis": 0.78757,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.21243,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_evaluator": 59311,
+          "n_pares_status_preenchidos": 59311,
+          "n_status_divergentes": 519,
+          "n_status_iguais": 58792,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.875048,
+          "percentual_divergencia_pares_comparaveis": 0.875048,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.124952,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_evaluator": 20585,
+          "n_pares_status_preenchidos": 20585,
+          "n_status_divergentes": 215,
+          "n_status_iguais": 20370,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.04445,
+          "percentual_divergencia_pares_comparaveis": 1.04445,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.95555,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_evaluator": 5265,
+          "n_pares_status_preenchidos": 5265,
+          "n_status_divergentes": 52,
+          "n_status_iguais": 5213,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.987654,
+          "percentual_divergencia_pares_comparaveis": 0.987654,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.012346,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_evaluator": 107690,
+          "n_pares_status_preenchidos": 107690,
+          "n_status_divergentes": 685,
+          "n_status_iguais": 107005,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.636085,
+          "percentual_divergencia_pares_comparaveis": 0.636085,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.363915,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_evaluator": 58274,
+          "n_pares_status_preenchidos": 58274,
+          "n_status_divergentes": 381,
+          "n_status_iguais": 57893,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.653808,
+          "percentual_divergencia_pares_comparaveis": 0.653808,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.346192,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_evaluator": 39310,
+          "n_pares_status_preenchidos": 39310,
+          "n_status_divergentes": 404,
+          "n_status_iguais": 38906,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.027728,
+          "percentual_divergencia_pares_comparaveis": 1.027728,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.972272,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_evaluator": 370914,
+          "n_pares_status_preenchidos": 370914,
+          "n_status_divergentes": 2273,
+          "n_status_iguais": 368641,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.612811,
+          "percentual_divergencia_pares_comparaveis": 0.612811,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.387189,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_evaluator": 21189,
+          "n_pares_status_preenchidos": 21189,
+          "n_status_divergentes": 224,
+          "n_status_iguais": 20965,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.057152,
+          "percentual_divergencia_pares_comparaveis": 1.057152,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.942848,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "origem_contagens": "IND-022",
+        "minimum_group_count": 30
+      },
+      "ano": 2021
+    },
+    {
+      "brasil": {
+        "n_pop_evaluator": 2493442,
+        "n_pares_status_preenchidos": 2493442,
+        "n_status_divergentes": 45276,
+        "n_status_iguais": 2448166,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.815803,
+        "percentual_divergencia_pares_comparaveis": 1.815803,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.184197,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_publicada_celulas_raras",
+          "celulas": [],
+          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+        },
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_evaluator": 15430,
+          "n_pares_status_preenchidos": 15430,
+          "n_status_divergentes": 330,
+          "n_status_iguais": 15100,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.138691,
+          "percentual_divergencia_pares_comparaveis": 2.138691,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.861309,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_evaluator": 45960,
+          "n_pares_status_preenchidos": 45960,
+          "n_status_divergentes": 959,
+          "n_status_iguais": 45001,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.086597,
+          "percentual_divergencia_pares_comparaveis": 2.086597,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.913403,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_evaluator": 45955,
+          "n_pares_status_preenchidos": 45955,
+          "n_status_divergentes": 1418,
+          "n_status_iguais": 44537,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 3.085627,
+          "percentual_divergencia_pares_comparaveis": 3.085627,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 96.914373,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_evaluator": 15500,
+          "n_pares_status_preenchidos": 15500,
+          "n_status_divergentes": 327,
+          "n_status_iguais": 15173,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.109677,
+          "percentual_divergencia_pares_comparaveis": 2.109677,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.890323,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_evaluator": 193444,
+          "n_pares_status_preenchidos": 193444,
+          "n_status_divergentes": 3609,
+          "n_status_iguais": 189835,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.865656,
+          "percentual_divergencia_pares_comparaveis": 1.865656,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.134344,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_evaluator": 165422,
+          "n_pares_status_preenchidos": 165422,
+          "n_status_divergentes": 4304,
+          "n_status_iguais": 161118,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.60183,
+          "percentual_divergencia_pares_comparaveis": 2.60183,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.39817,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_evaluator": 47382,
+          "n_pares_status_preenchidos": 47382,
+          "n_status_divergentes": 592,
+          "n_status_iguais": 46790,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.24942,
+          "percentual_divergencia_pares_comparaveis": 1.24942,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.75058,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_evaluator": 45293,
+          "n_pares_status_preenchidos": 45293,
+          "n_status_divergentes": 678,
+          "n_status_iguais": 44615,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.49692,
+          "percentual_divergencia_pares_comparaveis": 1.49692,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.50308,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_evaluator": 96545,
+          "n_pares_status_preenchidos": 96545,
+          "n_status_divergentes": 1727,
+          "n_status_iguais": 94818,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.788803,
+          "percentual_divergencia_pares_comparaveis": 1.788803,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.211197,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_evaluator": 95545,
+          "n_pares_status_preenchidos": 95545,
+          "n_status_divergentes": 2266,
+          "n_status_iguais": 93279,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.371657,
+          "percentual_divergencia_pares_comparaveis": 2.371657,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.628343,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_evaluator": 226060,
+          "n_pares_status_preenchidos": 226060,
+          "n_status_divergentes": 3240,
+          "n_status_iguais": 222820,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.433248,
+          "percentual_divergencia_pares_comparaveis": 1.433248,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.566752,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_evaluator": 30392,
+          "n_pares_status_preenchidos": 30392,
+          "n_status_divergentes": 539,
+          "n_status_iguais": 29853,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.773493,
+          "percentual_divergencia_pares_comparaveis": 1.773493,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.226507,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_evaluator": 40491,
+          "n_pares_status_preenchidos": 40491,
+          "n_status_divergentes": 831,
+          "n_status_iguais": 39660,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.052308,
+          "percentual_divergencia_pares_comparaveis": 2.052308,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.947692,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_evaluator": 143422,
+          "n_pares_status_preenchidos": 143422,
+          "n_status_divergentes": 3224,
+          "n_status_iguais": 140198,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.247912,
+          "percentual_divergencia_pares_comparaveis": 2.247912,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.752088,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_evaluator": 76250,
+          "n_pares_status_preenchidos": 76250,
+          "n_status_divergentes": 1567,
+          "n_status_iguais": 74683,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.055082,
+          "percentual_divergencia_pares_comparaveis": 2.055082,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.944918,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_evaluator": 137835,
+          "n_pares_status_preenchidos": 137835,
+          "n_status_divergentes": 2934,
+          "n_status_iguais": 134901,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.128632,
+          "percentual_divergencia_pares_comparaveis": 2.128632,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.871368,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_evaluator": 62944,
+          "n_pares_status_preenchidos": 62944,
+          "n_status_divergentes": 1626,
+          "n_status_iguais": 61318,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.583249,
+          "percentual_divergencia_pares_comparaveis": 2.583249,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.416751,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_evaluator": 107182,
+          "n_pares_status_preenchidos": 107182,
+          "n_status_divergentes": 1750,
+          "n_status_iguais": 105432,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.632737,
+          "percentual_divergencia_pares_comparaveis": 1.632737,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.367263,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_evaluator": 179732,
+          "n_pares_status_preenchidos": 179732,
+          "n_status_divergentes": 2848,
+          "n_status_iguais": 176884,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.584581,
+          "percentual_divergencia_pares_comparaveis": 1.584581,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.415419,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_evaluator": 65264,
+          "n_pares_status_preenchidos": 65264,
+          "n_status_divergentes": 1165,
+          "n_status_iguais": 64099,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.785058,
+          "percentual_divergencia_pares_comparaveis": 1.785058,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.214942,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_evaluator": 21204,
+          "n_pares_status_preenchidos": 21204,
+          "n_status_divergentes": 486,
+          "n_status_iguais": 20718,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.29202,
+          "percentual_divergencia_pares_comparaveis": 2.29202,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.70798,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_evaluator": 5404,
+          "n_pares_status_preenchidos": 5404,
+          "n_status_divergentes": 108,
+          "n_status_iguais": 5296,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.99852,
+          "percentual_divergencia_pares_comparaveis": 1.99852,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.00148,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_evaluator": 109473,
+          "n_pares_status_preenchidos": 109473,
+          "n_status_divergentes": 1439,
+          "n_status_iguais": 108034,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.314479,
+          "percentual_divergencia_pares_comparaveis": 1.314479,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.685521,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_evaluator": 60127,
+          "n_pares_status_preenchidos": 60127,
+          "n_status_divergentes": 691,
+          "n_status_iguais": 59436,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.149234,
+          "percentual_divergencia_pares_comparaveis": 1.149234,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.850766,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_evaluator": 44110,
+          "n_pares_status_preenchidos": 44110,
+          "n_status_divergentes": 935,
+          "n_status_iguais": 43175,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.119701,
+          "percentual_divergencia_pares_comparaveis": 2.119701,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.880299,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_evaluator": 396655,
+          "n_pares_status_preenchidos": 396655,
+          "n_status_divergentes": 5228,
+          "n_status_iguais": 391427,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.318022,
+          "percentual_divergencia_pares_comparaveis": 1.318022,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.681978,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_evaluator": 20421,
+          "n_pares_status_preenchidos": 20421,
+          "n_status_divergentes": 455,
+          "n_status_iguais": 19966,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.228099,
+          "percentual_divergencia_pares_comparaveis": 2.228099,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.771901,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "origem_contagens": "IND-022",
+        "minimum_group_count": 30
+      },
+      "ano": 2022
+    },
+    {
+      "brasil": {
+        "n_pop_evaluator": 2822643,
+        "n_pares_status_preenchidos": 2822643,
+        "n_status_divergentes": 60912,
+        "n_status_iguais": 2761731,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 2.157977,
+        "percentual_divergencia_pares_comparaveis": 2.157977,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 97.842023,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_publicada_celulas_raras",
+          "celulas": [],
+          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+        },
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_evaluator": 16162,
+          "n_pares_status_preenchidos": 16162,
+          "n_status_divergentes": 477,
+          "n_status_iguais": 15685,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.951367,
+          "percentual_divergencia_pares_comparaveis": 2.951367,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.048633,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_evaluator": 57761,
+          "n_pares_status_preenchidos": 57761,
+          "n_status_divergentes": 1562,
+          "n_status_iguais": 56199,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.704247,
+          "percentual_divergencia_pares_comparaveis": 2.704247,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.295753,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_evaluator": 52183,
+          "n_pares_status_preenchidos": 52183,
+          "n_status_divergentes": 1937,
+          "n_status_iguais": 50246,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 3.711937,
+          "percentual_divergencia_pares_comparaveis": 3.711937,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 96.288063,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_evaluator": 19524,
+          "n_pares_status_preenchidos": 19524,
+          "n_status_divergentes": 588,
+          "n_status_iguais": 18936,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 3.011678,
+          "percentual_divergencia_pares_comparaveis": 3.011678,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 96.988322,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_evaluator": 230352,
+          "n_pares_status_preenchidos": 230352,
+          "n_status_divergentes": 5187,
+          "n_status_iguais": 225165,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.251771,
+          "percentual_divergencia_pares_comparaveis": 2.251771,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.748229,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_evaluator": 180709,
+          "n_pares_status_preenchidos": 180709,
+          "n_status_divergentes": 5068,
+          "n_status_iguais": 175641,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.804509,
+          "percentual_divergencia_pares_comparaveis": 2.804509,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.195491,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_evaluator": 53169,
+          "n_pares_status_preenchidos": 53169,
+          "n_status_divergentes": 825,
+          "n_status_iguais": 52344,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.551656,
+          "percentual_divergencia_pares_comparaveis": 1.551656,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.448344,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_evaluator": 52208,
+          "n_pares_status_preenchidos": 52208,
+          "n_status_divergentes": 916,
+          "n_status_iguais": 51292,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.75452,
+          "percentual_divergencia_pares_comparaveis": 1.75452,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.24548,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_evaluator": 102564,
+          "n_pares_status_preenchidos": 102564,
+          "n_status_divergentes": 1928,
+          "n_status_iguais": 100636,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.879802,
+          "percentual_divergencia_pares_comparaveis": 1.879802,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.120198,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_evaluator": 118332,
+          "n_pares_status_preenchidos": 118332,
+          "n_status_divergentes": 3658,
+          "n_status_iguais": 114674,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 3.091302,
+          "percentual_divergencia_pares_comparaveis": 3.091302,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 96.908698,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_evaluator": 262482,
+          "n_pares_status_preenchidos": 262482,
+          "n_status_divergentes": 4193,
+          "n_status_iguais": 258289,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.597443,
+          "percentual_divergencia_pares_comparaveis": 1.597443,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.402557,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_evaluator": 33405,
+          "n_pares_status_preenchidos": 33405,
+          "n_status_divergentes": 720,
+          "n_status_iguais": 32685,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.155366,
+          "percentual_divergencia_pares_comparaveis": 2.155366,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.844634,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_evaluator": 44236,
+          "n_pares_status_preenchidos": 44236,
+          "n_status_divergentes": 1064,
+          "n_status_iguais": 43172,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.405281,
+          "percentual_divergencia_pares_comparaveis": 2.405281,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.594719,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_evaluator": 161840,
+          "n_pares_status_preenchidos": 161840,
+          "n_status_divergentes": 4728,
+          "n_status_iguais": 157112,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.921404,
+          "percentual_divergencia_pares_comparaveis": 2.921404,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.078596,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_evaluator": 90867,
+          "n_pares_status_preenchidos": 90867,
+          "n_status_divergentes": 2257,
+          "n_status_iguais": 88610,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.48385,
+          "percentual_divergencia_pares_comparaveis": 2.48385,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.51615,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_evaluator": 159271,
+          "n_pares_status_preenchidos": 159271,
+          "n_status_divergentes": 3766,
+          "n_status_iguais": 155505,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.364523,
+          "percentual_divergencia_pares_comparaveis": 2.364523,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.635477,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_evaluator": 73437,
+          "n_pares_status_preenchidos": 73437,
+          "n_status_divergentes": 2326,
+          "n_status_iguais": 71111,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 3.167341,
+          "percentual_divergencia_pares_comparaveis": 3.167341,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 96.832659,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_evaluator": 122052,
+          "n_pares_status_preenchidos": 122052,
+          "n_status_divergentes": 2306,
+          "n_status_iguais": 119746,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.889359,
+          "percentual_divergencia_pares_comparaveis": 1.889359,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.110641,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_evaluator": 196024,
+          "n_pares_status_preenchidos": 196024,
+          "n_status_divergentes": 3577,
+          "n_status_iguais": 192447,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.824777,
+          "percentual_divergencia_pares_comparaveis": 1.824777,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.175223,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_evaluator": 75459,
+          "n_pares_status_preenchidos": 75459,
+          "n_status_divergentes": 1548,
+          "n_status_iguais": 73911,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.051445,
+          "percentual_divergencia_pares_comparaveis": 2.051445,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.948555,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_evaluator": 24356,
+          "n_pares_status_preenchidos": 24356,
+          "n_status_divergentes": 685,
+          "n_status_iguais": 23671,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.812449,
+          "percentual_divergencia_pares_comparaveis": 2.812449,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.187551,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_evaluator": 6572,
+          "n_pares_status_preenchidos": 6572,
+          "n_status_divergentes": 197,
+          "n_status_iguais": 6375,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.997565,
+          "percentual_divergencia_pares_comparaveis": 2.997565,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.002435,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_evaluator": 118262,
+          "n_pares_status_preenchidos": 118262,
+          "n_status_divergentes": 1909,
+          "n_status_iguais": 116353,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.614213,
+          "percentual_divergencia_pares_comparaveis": 1.614213,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.385787,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_evaluator": 66702,
+          "n_pares_status_preenchidos": 66702,
+          "n_status_divergentes": 999,
+          "n_status_iguais": 65703,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.497706,
+          "percentual_divergencia_pares_comparaveis": 1.497706,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.502294,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_evaluator": 48943,
+          "n_pares_status_preenchidos": 48943,
+          "n_status_divergentes": 1244,
+          "n_status_iguais": 47699,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.541732,
+          "percentual_divergencia_pares_comparaveis": 2.541732,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.458268,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_evaluator": 432635,
+          "n_pares_status_preenchidos": 432635,
+          "n_status_divergentes": 6635,
+          "n_status_iguais": 426000,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.533625,
+          "percentual_divergencia_pares_comparaveis": 1.533625,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.466375,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_evaluator": 23136,
+          "n_pares_status_preenchidos": 23136,
+          "n_status_divergentes": 612,
+          "n_status_iguais": 22524,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.645228,
+          "percentual_divergencia_pares_comparaveis": 2.645228,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.354772,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "origem_contagens": "IND-022",
+        "minimum_group_count": 30
+      },
+      "ano": 2023
+    },
+    {
+      "brasil": {
+        "n_pop_evaluator": 3167955,
+        "n_pares_status_preenchidos": 3167955,
+        "n_status_divergentes": 49778,
+        "n_status_iguais": 3118177,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.571298,
+        "percentual_divergencia_pares_comparaveis": 1.571298,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.428702,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_publicada_celulas_raras",
+          "celulas": [],
+          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+        },
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_evaluator": 18156,
+          "n_pares_status_preenchidos": 18156,
+          "n_status_divergentes": 392,
+          "n_status_iguais": 17764,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.159066,
+          "percentual_divergencia_pares_comparaveis": 2.159066,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.840934,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_evaluator": 65554,
+          "n_pares_status_preenchidos": 65554,
+          "n_status_divergentes": 1428,
+          "n_status_iguais": 64126,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.178357,
+          "percentual_divergencia_pares_comparaveis": 2.178357,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.821643,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_evaluator": 58469,
+          "n_pares_status_preenchidos": 58469,
+          "n_status_divergentes": 1564,
+          "n_status_iguais": 56905,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.674922,
+          "percentual_divergencia_pares_comparaveis": 2.674922,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.325078,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_evaluator": 21545,
+          "n_pares_status_preenchidos": 21545,
+          "n_status_divergentes": 455,
+          "n_status_iguais": 21090,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.111859,
+          "percentual_divergencia_pares_comparaveis": 2.111859,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.888141,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_evaluator": 271913,
+          "n_pares_status_preenchidos": 271913,
+          "n_status_divergentes": 5135,
+          "n_status_iguais": 266778,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.888472,
+          "percentual_divergencia_pares_comparaveis": 1.888472,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.111528,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_evaluator": 196389,
+          "n_pares_status_preenchidos": 196389,
+          "n_status_divergentes": 3844,
+          "n_status_iguais": 192545,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.95734,
+          "percentual_divergencia_pares_comparaveis": 1.95734,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.04266,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_evaluator": 55485,
+          "n_pares_status_preenchidos": 55485,
+          "n_status_divergentes": 575,
+          "n_status_iguais": 54910,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.036316,
+          "percentual_divergencia_pares_comparaveis": 1.036316,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.963684,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_evaluator": 55229,
+          "n_pares_status_preenchidos": 55229,
+          "n_status_divergentes": 608,
+          "n_status_iguais": 54621,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.100871,
+          "percentual_divergencia_pares_comparaveis": 1.100871,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.899129,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_evaluator": 109657,
+          "n_pares_status_preenchidos": 109657,
+          "n_status_divergentes": 1541,
+          "n_status_iguais": 108116,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.405291,
+          "percentual_divergencia_pares_comparaveis": 1.405291,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.594709,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_evaluator": 133502,
+          "n_pares_status_preenchidos": 133502,
+          "n_status_divergentes": 2990,
+          "n_status_iguais": 130512,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.239667,
+          "percentual_divergencia_pares_comparaveis": 2.239667,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.760333,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_evaluator": 293350,
+          "n_pares_status_preenchidos": 293350,
+          "n_status_divergentes": 3393,
+          "n_status_iguais": 289957,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.156639,
+          "percentual_divergencia_pares_comparaveis": 1.156639,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.843361,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_evaluator": 36421,
+          "n_pares_status_preenchidos": 36421,
+          "n_status_divergentes": 588,
+          "n_status_iguais": 35833,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.614453,
+          "percentual_divergencia_pares_comparaveis": 1.614453,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.385547,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_evaluator": 46774,
+          "n_pares_status_preenchidos": 46774,
+          "n_status_divergentes": 850,
+          "n_status_iguais": 45924,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.817249,
+          "percentual_divergencia_pares_comparaveis": 1.817249,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.182751,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_evaluator": 185532,
+          "n_pares_status_preenchidos": 185532,
+          "n_status_divergentes": 4215,
+          "n_status_iguais": 181317,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.271845,
+          "percentual_divergencia_pares_comparaveis": 2.271845,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.728155,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_evaluator": 97439,
+          "n_pares_status_preenchidos": 97439,
+          "n_status_divergentes": 1631,
+          "n_status_iguais": 95808,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.673868,
+          "percentual_divergencia_pares_comparaveis": 1.673868,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.326132,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_evaluator": 180632,
+          "n_pares_status_preenchidos": 180632,
+          "n_status_divergentes": 2963,
+          "n_status_iguais": 177669,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.640352,
+          "percentual_divergencia_pares_comparaveis": 1.640352,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.359648,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_evaluator": 83074,
+          "n_pares_status_preenchidos": 83074,
+          "n_status_divergentes": 2011,
+          "n_status_iguais": 81063,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.420733,
+          "percentual_divergencia_pares_comparaveis": 2.420733,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.579267,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_evaluator": 134843,
+          "n_pares_status_preenchidos": 134843,
+          "n_status_divergentes": 1668,
+          "n_status_iguais": 133175,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.236994,
+          "percentual_divergencia_pares_comparaveis": 1.236994,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.763006,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_evaluator": 213345,
+          "n_pares_status_preenchidos": 213345,
+          "n_status_divergentes": 2655,
+          "n_status_iguais": 210690,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.244463,
+          "percentual_divergencia_pares_comparaveis": 1.244463,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.755537,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_evaluator": 78857,
+          "n_pares_status_preenchidos": 78857,
+          "n_status_divergentes": 1195,
+          "n_status_iguais": 77662,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.515401,
+          "percentual_divergencia_pares_comparaveis": 1.515401,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.484599,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_evaluator": 27275,
+          "n_pares_status_preenchidos": 27275,
+          "n_status_divergentes": 497,
+          "n_status_iguais": 26778,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.822181,
+          "percentual_divergencia_pares_comparaveis": 1.822181,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.177819,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_evaluator": 9008,
+          "n_pares_status_preenchidos": 9008,
+          "n_status_divergentes": 167,
+          "n_status_iguais": 8841,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.853908,
+          "percentual_divergencia_pares_comparaveis": 1.853908,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.146092,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_evaluator": 156726,
+          "n_pares_status_preenchidos": 156726,
+          "n_status_divergentes": 2250,
+          "n_status_iguais": 154476,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.435627,
+          "percentual_divergencia_pares_comparaveis": 1.435627,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.564373,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_evaluator": 70683,
+          "n_pares_status_preenchidos": 70683,
+          "n_status_divergentes": 669,
+          "n_status_iguais": 70014,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.946479,
+          "percentual_divergencia_pares_comparaveis": 0.946479,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.053521,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_evaluator": 54338,
+          "n_pares_status_preenchidos": 54338,
+          "n_status_divergentes": 943,
+          "n_status_iguais": 53395,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.735434,
+          "percentual_divergencia_pares_comparaveis": 1.735434,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.264566,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_evaluator": 488738,
+          "n_pares_status_preenchidos": 488738,
+          "n_status_divergentes": 5042,
+          "n_status_iguais": 483696,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.031637,
+          "percentual_divergencia_pares_comparaveis": 1.031637,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.968363,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_evaluator": 25021,
+          "n_pares_status_preenchidos": 25021,
+          "n_status_divergentes": 509,
+          "n_status_iguais": 24512,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.034291,
+          "percentual_divergencia_pares_comparaveis": 2.034291,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.965709,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "origem_contagens": "IND-022",
+        "minimum_group_count": 30
+      },
+      "ano": 2024
+    },
+    {
+      "brasil": {
+        "n_pop_evaluator": 3457555,
+        "n_pares_status_preenchidos": 3457555,
+        "n_status_divergentes": 61639,
+        "n_status_iguais": 3395916,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.782734,
+        "percentual_divergencia_pares_comparaveis": 1.782734,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.217266,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_publicada_celulas_raras",
+          "celulas": [],
+          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+        },
+        "sem_dados_individuais": true
+      },
+      "ufs": [
+        {
+          "uf": "AC",
+          "n_pop_evaluator": 18991,
+          "n_pares_status_preenchidos": 18991,
+          "n_status_divergentes": 395,
+          "n_status_iguais": 18596,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.079933,
+          "percentual_divergencia_pares_comparaveis": 2.079933,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.920067,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AL",
+          "n_pop_evaluator": 70880,
+          "n_pares_status_preenchidos": 70880,
+          "n_status_divergentes": 1500,
+          "n_status_iguais": 69380,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.116253,
+          "percentual_divergencia_pares_comparaveis": 2.116253,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.883747,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AM",
+          "n_pop_evaluator": 65626,
+          "n_pares_status_preenchidos": 65626,
+          "n_status_divergentes": 2409,
+          "n_status_iguais": 63217,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 3.670801,
+          "percentual_divergencia_pares_comparaveis": 3.670801,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 96.329199,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "AP",
+          "n_pop_evaluator": 22944,
+          "n_pares_status_preenchidos": 22944,
+          "n_status_divergentes": 525,
+          "n_status_iguais": 22419,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.28818,
+          "percentual_divergencia_pares_comparaveis": 2.28818,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.71182,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "BA",
+          "n_pop_evaluator": 302415,
+          "n_pares_status_preenchidos": 302415,
+          "n_status_divergentes": 6064,
+          "n_status_iguais": 296351,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.005192,
+          "percentual_divergencia_pares_comparaveis": 2.005192,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.994808,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "CE",
+          "n_pop_evaluator": 216181,
+          "n_pares_status_preenchidos": 216181,
+          "n_status_divergentes": 5385,
+          "n_status_iguais": 210796,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.490968,
+          "percentual_divergencia_pares_comparaveis": 2.490968,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.509032,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "DF",
+          "n_pop_evaluator": 60673,
+          "n_pares_status_preenchidos": 60673,
+          "n_status_divergentes": 533,
+          "n_status_iguais": 60140,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 0.87848,
+          "percentual_divergencia_pares_comparaveis": 0.87848,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 99.12152,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "ES",
+          "n_pop_evaluator": 60911,
+          "n_pares_status_preenchidos": 60911,
+          "n_status_divergentes": 840,
+          "n_status_iguais": 60071,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.379061,
+          "percentual_divergencia_pares_comparaveis": 1.379061,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.620939,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "GO",
+          "n_pop_evaluator": 118643,
+          "n_pares_status_preenchidos": 118643,
+          "n_status_divergentes": 1476,
+          "n_status_iguais": 117167,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.244068,
+          "percentual_divergencia_pares_comparaveis": 1.244068,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.755932,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MA",
+          "n_pop_evaluator": 152518,
+          "n_pares_status_preenchidos": 152518,
+          "n_status_divergentes": 4139,
+          "n_status_iguais": 148379,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.713778,
+          "percentual_divergencia_pares_comparaveis": 2.713778,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.286222,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MG",
+          "n_pop_evaluator": 326835,
+          "n_pares_status_preenchidos": 326835,
+          "n_status_divergentes": 4839,
+          "n_status_iguais": 321996,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.480564,
+          "percentual_divergencia_pares_comparaveis": 1.480564,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.519436,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MS",
+          "n_pop_evaluator": 40989,
+          "n_pares_status_preenchidos": 40989,
+          "n_status_divergentes": 696,
+          "n_status_iguais": 40293,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.698017,
+          "percentual_divergencia_pares_comparaveis": 1.698017,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.301983,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "MT",
+          "n_pop_evaluator": 51597,
+          "n_pares_status_preenchidos": 51597,
+          "n_status_divergentes": 1006,
+          "n_status_iguais": 50591,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.949726,
+          "percentual_divergencia_pares_comparaveis": 1.949726,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.050274,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PA",
+          "n_pop_evaluator": 202633,
+          "n_pares_status_preenchidos": 202633,
+          "n_status_divergentes": 5431,
+          "n_status_iguais": 197202,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.680215,
+          "percentual_divergencia_pares_comparaveis": 2.680215,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.319785,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PB",
+          "n_pop_evaluator": 105666,
+          "n_pares_status_preenchidos": 105666,
+          "n_status_divergentes": 1895,
+          "n_status_iguais": 103771,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.793387,
+          "percentual_divergencia_pares_comparaveis": 1.793387,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.206613,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PE",
+          "n_pop_evaluator": 202852,
+          "n_pares_status_preenchidos": 202852,
+          "n_status_divergentes": 4147,
+          "n_status_iguais": 198705,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.044348,
+          "percentual_divergencia_pares_comparaveis": 2.044348,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.955652,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PI",
+          "n_pop_evaluator": 89161,
+          "n_pares_status_preenchidos": 89161,
+          "n_status_divergentes": 2706,
+          "n_status_iguais": 86455,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 3.034959,
+          "percentual_divergencia_pares_comparaveis": 3.034959,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 96.965041,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "PR",
+          "n_pop_evaluator": 142507,
+          "n_pares_status_preenchidos": 142507,
+          "n_status_divergentes": 1915,
+          "n_status_iguais": 140592,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.343794,
+          "percentual_divergencia_pares_comparaveis": 1.343794,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.656206,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RJ",
+          "n_pop_evaluator": 235563,
+          "n_pares_status_preenchidos": 235563,
+          "n_status_divergentes": 2951,
+          "n_status_iguais": 232612,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.252743,
+          "percentual_divergencia_pares_comparaveis": 1.252743,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.747257,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RN",
+          "n_pop_evaluator": 85759,
+          "n_pares_status_preenchidos": 85759,
+          "n_status_divergentes": 1285,
+          "n_status_iguais": 84474,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.498385,
+          "percentual_divergencia_pares_comparaveis": 1.498385,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.501615,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RO",
+          "n_pop_evaluator": 31620,
+          "n_pares_status_preenchidos": 31620,
+          "n_status_divergentes": 803,
+          "n_status_iguais": 30817,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.539532,
+          "percentual_divergencia_pares_comparaveis": 2.539532,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.460468,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RR",
+          "n_pop_evaluator": 9030,
+          "n_pares_status_preenchidos": 9030,
+          "n_status_divergentes": 243,
+          "n_status_iguais": 8787,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.69103,
+          "percentual_divergencia_pares_comparaveis": 2.69103,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.30897,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "RS",
+          "n_pop_evaluator": 132433,
+          "n_pares_status_preenchidos": 132433,
+          "n_status_divergentes": 1364,
+          "n_status_iguais": 131069,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.029955,
+          "percentual_divergencia_pares_comparaveis": 1.029955,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.970045,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SC",
+          "n_pop_evaluator": 79740,
+          "n_pares_status_preenchidos": 79740,
+          "n_status_divergentes": 804,
+          "n_status_iguais": 78936,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.008277,
+          "percentual_divergencia_pares_comparaveis": 1.008277,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.991723,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SE",
+          "n_pop_evaluator": 59927,
+          "n_pares_status_preenchidos": 59927,
+          "n_status_divergentes": 1154,
+          "n_status_iguais": 58773,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.925676,
+          "percentual_divergencia_pares_comparaveis": 1.925676,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.074324,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "SP",
+          "n_pop_evaluator": 544811,
+          "n_pares_status_preenchidos": 544811,
+          "n_status_divergentes": 6518,
+          "n_status_iguais": 538293,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 1.196378,
+          "percentual_divergencia_pares_comparaveis": 1.196378,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 98.803622,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        },
+        {
+          "uf": "TO",
+          "n_pop_evaluator": 26650,
+          "n_pares_status_preenchidos": 26650,
+          "n_status_divergentes": 616,
+          "n_status_iguais": 26034,
+          "n_status_nao_comparaveis": 0,
+          "percentual_divergencia_pop_evaluator": 2.311445,
+          "percentual_divergencia_pares_comparaveis": 2.311445,
+          "percentual_cobertura_status": 100.0,
+          "percentual_iguais_pares_comparaveis": 97.688555,
+          "populacao": "POP_EVALUATOR",
+          "matriz_status": {
+            "status": "nao_publicada_celulas_raras",
+            "celulas": [],
+            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          },
+          "sem_dados_individuais": true
+        }
+      ],
+      "qualidade": {
+        "status": "ok",
+        "soma_27_ufs_igual_brasil": true,
+        "origem_contagens": "IND-022",
+        "minimum_group_count": 30
+      },
+      "ano": 2025
+    }
+  ],
+  "historical": {
+    "brasil": {
+      "n_pop_evaluator": 20774243,
+      "n_pares_status_preenchidos": 20774243,
+      "n_status_divergentes": 277616,
+      "n_status_iguais": 20496627,
+      "n_status_nao_comparaveis": 0,
+      "percentual_divergencia_pop_evaluator": 1.336347,
+      "percentual_divergencia_pares_comparaveis": 1.336347,
+      "percentual_cobertura_status": 100.0,
+      "percentual_iguais_pares_comparaveis": 98.663653,
+      "populacao": "POP_EVALUATOR",
+      "matriz_status": {
+        "status": "nao_aplicavel_historico",
+        "celulas": [],
+        "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+      },
+      "sem_dados_individuais": true
+    },
+    "ufs": [
+      {
+        "uf": "AC",
+        "n_pop_evaluator": 130677,
+        "n_pares_status_preenchidos": 130677,
+        "n_status_divergentes": 2128,
+        "n_status_iguais": 128549,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.628443,
+        "percentual_divergencia_pares_comparaveis": 1.628443,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.371557,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "AL",
+        "n_pop_evaluator": 401039,
+        "n_pares_status_preenchidos": 401039,
+        "n_status_divergentes": 6672,
+        "n_status_iguais": 394367,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.663679,
+        "percentual_divergencia_pares_comparaveis": 1.663679,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.336321,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "AM",
+        "n_pop_evaluator": 397705,
+        "n_pares_status_preenchidos": 397705,
+        "n_status_divergentes": 9690,
+        "n_status_iguais": 388015,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 2.436479,
+        "percentual_divergencia_pares_comparaveis": 2.436479,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 97.563521,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "AP",
+        "n_pop_evaluator": 144825,
+        "n_pares_status_preenchidos": 144825,
+        "n_status_divergentes": 2417,
+        "n_status_iguais": 142408,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.668911,
+        "percentual_divergencia_pares_comparaveis": 1.668911,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.331089,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "BA",
+        "n_pop_evaluator": 1686511,
+        "n_pares_status_preenchidos": 1686511,
+        "n_status_divergentes": 24772,
+        "n_status_iguais": 1661739,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.468831,
+        "percentual_divergencia_pares_comparaveis": 1.468831,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.531169,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "CE",
+        "n_pop_evaluator": 1291359,
+        "n_pares_status_preenchidos": 1291359,
+        "n_status_divergentes": 23326,
+        "n_status_iguais": 1268033,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.806314,
+        "percentual_divergencia_pares_comparaveis": 1.806314,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.193686,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "DF",
+        "n_pop_evaluator": 389119,
+        "n_pares_status_preenchidos": 389119,
+        "n_status_divergentes": 3412,
+        "n_status_iguais": 385707,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 0.876853,
+        "percentual_divergencia_pares_comparaveis": 0.876853,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 99.123147,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "ES",
+        "n_pop_evaluator": 381285,
+        "n_pares_status_preenchidos": 381285,
+        "n_status_divergentes": 4020,
+        "n_status_iguais": 377265,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.054329,
+        "percentual_divergencia_pares_comparaveis": 1.054329,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.945671,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "GO",
+        "n_pop_evaluator": 737685,
+        "n_pares_status_preenchidos": 737685,
+        "n_status_divergentes": 8645,
+        "n_status_iguais": 729040,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.171909,
+        "percentual_divergencia_pares_comparaveis": 1.171909,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.828091,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "MA",
+        "n_pop_evaluator": 869006,
+        "n_pares_status_preenchidos": 869006,
+        "n_status_divergentes": 16417,
+        "n_status_iguais": 852589,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.88917,
+        "percentual_divergencia_pares_comparaveis": 1.88917,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.11083,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "MG",
+        "n_pop_evaluator": 2005151,
+        "n_pares_status_preenchidos": 2005151,
+        "n_status_divergentes": 20802,
+        "n_status_iguais": 1984349,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.037428,
+        "percentual_divergencia_pares_comparaveis": 1.037428,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.962572,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "MS",
+        "n_pop_evaluator": 254778,
+        "n_pares_status_preenchidos": 254778,
+        "n_status_divergentes": 3354,
+        "n_status_iguais": 251424,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.31644,
+        "percentual_divergencia_pares_comparaveis": 1.31644,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.68356,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "MT",
+        "n_pop_evaluator": 324184,
+        "n_pares_status_preenchidos": 324184,
+        "n_status_divergentes": 4786,
+        "n_status_iguais": 319398,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.476322,
+        "percentual_divergencia_pares_comparaveis": 1.476322,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.523678,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PA",
+        "n_pop_evaluator": 1187354,
+        "n_pares_status_preenchidos": 1187354,
+        "n_status_divergentes": 21839,
+        "n_status_iguais": 1165515,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.8393,
+        "percentual_divergencia_pares_comparaveis": 1.8393,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.1607,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PB",
+        "n_pop_evaluator": 645535,
+        "n_pares_status_preenchidos": 645535,
+        "n_status_divergentes": 9348,
+        "n_status_iguais": 636187,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.448101,
+        "percentual_divergencia_pares_comparaveis": 1.448101,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.551899,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PE",
+        "n_pop_evaluator": 1180574,
+        "n_pares_status_preenchidos": 1180574,
+        "n_status_divergentes": 17710,
+        "n_status_iguais": 1162864,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.500118,
+        "percentual_divergencia_pares_comparaveis": 1.500118,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.499882,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PI",
+        "n_pop_evaluator": 530418,
+        "n_pares_status_preenchidos": 530418,
+        "n_status_divergentes": 10601,
+        "n_status_iguais": 519817,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.998612,
+        "percentual_divergencia_pares_comparaveis": 1.998612,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.001388,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "PR",
+        "n_pop_evaluator": 878231,
+        "n_pares_status_preenchidos": 878231,
+        "n_status_divergentes": 9599,
+        "n_status_iguais": 868632,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.092993,
+        "percentual_divergencia_pares_comparaveis": 1.092993,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.907007,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RJ",
+        "n_pop_evaluator": 1425079,
+        "n_pares_status_preenchidos": 1425079,
+        "n_status_divergentes": 15759,
+        "n_status_iguais": 1409320,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.105833,
+        "percentual_divergencia_pares_comparaveis": 1.105833,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.894167,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RN",
+        "n_pop_evaluator": 523511,
+        "n_pares_status_preenchidos": 523511,
+        "n_status_divergentes": 6627,
+        "n_status_iguais": 516884,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.265876,
+        "percentual_divergencia_pares_comparaveis": 1.265876,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.734124,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RO",
+        "n_pop_evaluator": 190580,
+        "n_pares_status_preenchidos": 190580,
+        "n_status_divergentes": 3174,
+        "n_status_iguais": 187406,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.665442,
+        "percentual_divergencia_pares_comparaveis": 1.665442,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.334558,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RR",
+        "n_pop_evaluator": 50925,
+        "n_pares_status_preenchidos": 50925,
+        "n_status_divergentes": 881,
+        "n_status_iguais": 50044,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.729995,
+        "percentual_divergencia_pares_comparaveis": 1.729995,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.270005,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "RS",
+        "n_pop_evaluator": 902723,
+        "n_pares_status_preenchidos": 902723,
+        "n_status_divergentes": 8812,
+        "n_status_iguais": 893911,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 0.976158,
+        "percentual_divergencia_pares_comparaveis": 0.976158,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 99.023842,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "SC",
+        "n_pop_evaluator": 473872,
+        "n_pares_status_preenchidos": 473872,
+        "n_status_divergentes": 4177,
+        "n_status_iguais": 469695,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 0.881462,
+        "percentual_divergencia_pares_comparaveis": 0.881462,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 99.118538,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "SE",
+        "n_pop_evaluator": 352155,
+        "n_pares_status_preenchidos": 352155,
+        "n_status_divergentes": 5369,
+        "n_status_iguais": 346786,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.524613,
+        "percentual_divergencia_pares_comparaveis": 1.524613,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.475387,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "SP",
+        "n_pop_evaluator": 3244031,
+        "n_pares_status_preenchidos": 3244031,
+        "n_status_divergentes": 30514,
+        "n_status_iguais": 3213517,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 0.94062,
+        "percentual_divergencia_pares_comparaveis": 0.94062,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 99.05938,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      },
+      {
+        "uf": "TO",
+        "n_pop_evaluator": 175931,
+        "n_pares_status_preenchidos": 175931,
+        "n_status_divergentes": 2765,
+        "n_status_iguais": 173166,
+        "n_status_nao_comparaveis": 0,
+        "percentual_divergencia_pop_evaluator": 1.571639,
+        "percentual_divergencia_pares_comparaveis": 1.571639,
+        "percentual_cobertura_status": 100.0,
+        "percentual_iguais_pares_comparaveis": 98.428361,
+        "populacao": "POP_EVALUATOR",
+        "matriz_status": {
+          "status": "nao_aplicavel_historico",
+          "celulas": [],
+          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        },
+        "sem_dados_individuais": true
+      }
+    ],
+    "qualidade": {
+      "status": "ok",
+      "soma_27_ufs_igual_brasil": true,
+      "origem_contagens": "IND-022",
+      "minimum_group_count": 30
+    },
+    "periodo": "2019-2025"
+  },
+  "dashboard_files": [
+    "dashboard_enem_2019.json",
+    "dashboard_enem_2020.json",
+    "dashboard_enem_2021.json",
+    "dashboard_enem_2022.json",
+    "dashboard_enem_2023.json",
+    "dashboard_enem_2024.json",
+    "dashboard_enem_2025.json"
+  ]
+}
