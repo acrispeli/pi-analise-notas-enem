@@ -225,3 +225,14 @@ data/raw/*
 data/processed/*
 
 /outputs/ind020_sql_*/
+
+# Backups e instaladores temporários do Streamlit
+/Atualizacao_Streamlit_IND041/
+/Correcao_Streamlit_Paginas_IND041/
+/Correcao_Streamlit_Paginas_IND041.zip
+/backups/
+
+# Backups dos dashboards
+/outputs/json/*.bak_antes_ind041
+/outputs/json/*.bak_antes_ind042
+
