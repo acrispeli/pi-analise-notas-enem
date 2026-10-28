@@ -1,9 +1,9 @@
 # Validação técnica — IND-013: Correlação entre competências C1–C5
 
-**Projeto Integrador IV — UNIVESP**  
-**Indicador:** IND-013 — Correlação entre competências  
-**Edições:** ENEM 2019–2025  
-**Data da auditoria:** 18/10/2026  
+**Projeto Integrador IV — UNIVESP**
+**Indicador:** IND-013 — Correlação entre competências
+**Edições:** ENEM 2019–2025
+**Data da auditoria:** 18/10/2026
 **Status:** **APROVADO TECNICAMENTE PARA ANÁLISE INTERNA**, com ressalvas acadêmicas, de publicação e de verificação independente da correlação de Spearman.
 
 ## 1. Insumos verificados

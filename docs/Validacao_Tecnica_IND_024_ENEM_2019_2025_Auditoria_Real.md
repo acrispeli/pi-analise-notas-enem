@@ -1,9 +1,9 @@
 # Validação técnica — IND-024 | Frequência de terceiro avaliador (AV3) | ENEM 2019–2025
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Data desta auditoria:** 22/10/2026  
-**Fontes examinadas:** CSV e JSON gerados pelo processamento local; saídas de referência de indicadores anteriores; código e testes sintéticos da implementação.  
-**Status:** **Aprovado na auditoria computacional dos resultados agregados**, com **3.537 verificações aprovadas e 0 falhas**. Permanece `draft`; divulgação pública não aprovada.  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Data desta auditoria:** 22/10/2026
+**Fontes examinadas:** CSV e JSON gerados pelo processamento local; saídas de referência de indicadores anteriores; código e testes sintéticos da implementação.
+**Status:** **Aprovado na auditoria computacional dos resultados agregados**, com **3.537 verificações aprovadas e 0 falhas**. Permanece `draft`; divulgação pública não aprovada.
 **Escopo:** sete edições (2019–2025), Brasil e 27 UFs por edição, mais consolidado histórico; 224 linhas do CSV.
 
 ## 1. Objetivo e definição metodológica

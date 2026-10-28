@@ -1,10 +1,10 @@
 # Relatório de Validação Técnica — IND-011
 
-**Projeto Integrador IV — UNIVESP**  
-**Indicador:** IND-011 — Dispersão C1–C5  
-**Período:** ENEM 2019–2025  
-**Data de auditoria:** 18/10/2026  
-**Resultado:** **APROVADO TECNICAMENTE PARA ANÁLISE INTERNA**, com ressalvas documentadas  
+**Projeto Integrador IV — UNIVESP**
+**Indicador:** IND-011 — Dispersão C1–C5
+**Período:** ENEM 2019–2025
+**Data de auditoria:** 18/10/2026
+**Resultado:** **APROVADO TECNICAMENTE PARA ANÁLISE INTERNA**, com ressalvas documentadas
 **Situação de publicação:** `draft` — pendente de aprovação acadêmica e revisão geral de privacidade.
 
 ## 1. Artefatos auditados

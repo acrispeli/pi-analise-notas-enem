@@ -1,10 +1,10 @@
 # Validação Técnica — IND-020 | Diferença total entre AV1 e AV2 — ENEM 2019–2025
 
-**Projeto Integrador IV — UNIVESP**  
-**Parecer:** **APROVADO TECNICAMENTE COM RESSALVAS** para análise interna; publicação externa requer revisão acadêmica e de privacidade.  
-**Auditoria independente dos artefatos agregados:** **75.302 verificações**, **0 divergências**.  
-**Escopo:** CSV completo do IND-020 (2.182 linhas), JSON modular completo (7 anos e histórico, Brasil e 27 UFs), dashboard cumulativo de **2024**.  
-**Data da geração registrada nas saídas:** `2026-10-19T02:42:18+00:00`.  
+**Projeto Integrador IV — UNIVESP**
+**Parecer:** **APROVADO TECNICAMENTE COM RESSALVAS** para análise interna; publicação externa requer revisão acadêmica e de privacidade.
+**Auditoria independente dos artefatos agregados:** **75.302 verificações**, **0 divergências**.
+**Escopo:** CSV completo do IND-020 (2.182 linhas), JSON modular completo (7 anos e histórico, Brasil e 27 UFs), dashboard cumulativo de **2024**.
+**Data da geração registrada nas saídas:** `2026-10-19T02:42:18+00:00`.
 **Natureza da auditoria:** verificação computacional dos arquivos de saída; os microdados individuais NÃO foram relidos nem as diferenças AV1×AV2 calculadas novamente registro a registro.
 
 ## 1. Objeto e população

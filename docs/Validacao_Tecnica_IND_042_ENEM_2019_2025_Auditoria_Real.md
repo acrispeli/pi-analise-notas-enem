@@ -1,9 +1,9 @@
 # Validação Técnica — IND-042: Renda familiar × competências C1–C5 da redação
 
-**Projeto Integrador IV — UNIVESP**  
-**Período auditado:** ENEM 2019–2024 (2025 indisponível)  
-**Data da auditoria:** 23/10/2026  
-**Status:** **APROVAÇÃO COMPUTACIONAL PARCIAL, COM BLOQUEIO DE DIVULGAÇÃO DAS CÉLULAS PEQUENAS**  
+**Projeto Integrador IV — UNIVESP**
+**Período auditado:** ENEM 2019–2024 (2025 indisponível)
+**Data da auditoria:** 23/10/2026
+**Status:** **APROVAÇÃO COMPUTACIONAL PARCIAL, COM BLOQUEIO DE DIVULGAÇÃO DAS CÉLULAS PEQUENAS**
 **Escopo da conclusão:** consistência dos produtos agregados; não corresponde à validação independente dos microdados.
 
 ## 1. Resumo executivo

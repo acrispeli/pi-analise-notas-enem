@@ -1,9 +1,9 @@
 # Validação Técnica — IND-019 | Qualidade do clustering — ENEM 2019–2025
 
-**Projeto Integrador IV — UNIVESP**  
-**Situação:** APROVADO TECNICAMENTE COM RESSALVAS para análise interna; **não liberado para publicação externa**.  
-**Testes de consistência:** 9.110 verificações; 0 divergências (baseadas em resultados agregados, sem reexecutar microdados).  
-**Escopo efetivamente auditado:** IND-019 CSV e JSON completos; fontes agregadas IND-014, IND-017 e IND-018; dashboard cumulativo de 2024. Outros seis dashboards não foram recebidos para verificação de conteúdo.  
+**Projeto Integrador IV — UNIVESP**
+**Situação:** APROVADO TECNICAMENTE COM RESSALVAS para análise interna; **não liberado para publicação externa**.
+**Testes de consistência:** 9.110 verificações; 0 divergências (baseadas em resultados agregados, sem reexecutar microdados).
+**Escopo efetivamente auditado:** IND-019 CSV e JSON completos; fontes agregadas IND-014, IND-017 e IND-018; dashboard cumulativo de 2024. Outros seis dashboards não foram recebidos para verificação de conteúdo.
 **Data registrada de geração dos resultados:** 2026-10-19T00:44:44+00:00
 
 ## 1. Objetivo e escopo

@@ -1,8 +1,8 @@
 # Validação técnica IND-030 — Distribuição de alto desempenho (faixas 900–1000)
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Período analisado:** ENEM 2019 a 2025 e histórico 2019–2025  
-**Data da auditoria:** 22 de outubro de 2026  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Período analisado:** ENEM 2019 a 2025 e histórico 2019–2025
+**Data da auditoria:** 22 de outubro de 2026
 **Estado da análise:** `draft`; resultados reais agregados, com revisão acadêmica e de privacidade ainda pendentes.
 
 ## 1. Objetivo e arquivos examinados

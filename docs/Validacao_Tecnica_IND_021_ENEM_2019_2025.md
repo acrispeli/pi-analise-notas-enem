@@ -1,8 +1,8 @@
 # Validação técnica — IND-021: Diferença por competência entre AV1 e AV2
 
-**Projeto Integrador IV — UNIVESP**  
-**Abrangência:** ENEM 2019–2025, Brasil, 27 UFs e histórico 2019–2025  
-**Status:** **APROVADO TECNICAMENTE NOS AGREGADOS**, com ressalvas metodológicas e de divulgação  
+**Projeto Integrador IV — UNIVESP**
+**Abrangência:** ENEM 2019–2025, Brasil, 27 UFs e histórico 2019–2025
+**Status:** **APROVADO TECNICAMENTE NOS AGREGADOS**, com ressalvas metodológicas e de divulgação
 **Base da conferência:** arquivos processados fornecidos pelo projeto, não uma nova execução sobre os microdados individuais
 
 ## 1. Objetivo e definição do indicador

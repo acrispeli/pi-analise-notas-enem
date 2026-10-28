@@ -1,9 +1,9 @@
 # Validação técnica independente — IND-023 (ENEM 2019–2025)
 
-**Projeto Integrador IV — UNIVESP**  
-**Indicador:** IND-023 — Divergência de status AV1 × AV2  
-**Auditoria dos arquivos reais recebidos:** 20/10/2026  
-**Resultado:** **APROVADO NOS AGREGADOS** — 8.559 verificações, 0 falhas  
+**Projeto Integrador IV — UNIVESP**
+**Indicador:** IND-023 — Divergência de status AV1 × AV2
+**Auditoria dos arquivos reais recebidos:** 20/10/2026
+**Resultado:** **APROVADO NOS AGREGADOS** — 8.559 verificações, 0 falhas
 **Status editorial:** `draft`; aprovação acadêmica e avaliação de privacidade pendentes.
 
 ## 1. Arquivos e escopo

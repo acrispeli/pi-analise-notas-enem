@@ -1,9 +1,9 @@
 # Validação técnica — IND-005: Percentis da nota da redação
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Período:** ENEM 2019–2025  
-**Data da revisão:** 17/10/2026  
-**Status técnico:** aprovado na auditoria dos arquivos agregados e em testes sintéticos do algoritmo  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Período:** ENEM 2019–2025
+**Data da revisão:** 17/10/2026
+**Status técnico:** aprovado na auditoria dos arquivos agregados e em testes sintéticos do algoritmo
 **Status acadêmico:** `draft` — sujeito à revisão e aprovação acadêmica
 
 ## 1. Arquivos examinados

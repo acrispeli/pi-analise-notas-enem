@@ -1,8 +1,8 @@
 # Relatório de validação técnica — IND-002
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Indicador:** IND-002 — Nota média da redação  
-**Período:** ENEM 2019–2025  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Indicador:** IND-002 — Nota média da redação
+**Período:** ENEM 2019–2025
 **Estado:** Validado tecnicamente sobre os arquivos agregados; **aguarda aprovação acadêmica** para publicação.
 
 ## Escopo dos arquivos conferidos

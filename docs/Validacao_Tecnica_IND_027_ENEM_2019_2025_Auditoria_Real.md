@@ -1,9 +1,9 @@
 # Validação Técnica — IND-027: Concordância da Nota Total entre Avaliadores (ENEM 2019–2025)
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Data da auditoria:** 22/10/2026  
-**Indicador:** IND-027 — Concordância total  
-**Situação técnica:** **APROVADO NOS AGREGADOS — 5.787 verificações, 0 falhas**  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Data da auditoria:** 22/10/2026
+**Indicador:** IND-027 — Concordância total
+**Situação técnica:** **APROVADO NOS AGREGADOS — 5.787 verificações, 0 falhas**
 **Situação para publicação:** **DRAFT** — revisão acadêmica e de privacidade complementar pendentes.
 
 ## 1. Objetivo e escopo

@@ -1,10 +1,10 @@
 # Validação técnica do IND-040 — Perfil socioeconômico descritivo
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Período:** ENEM 2019–2025  
-**Data da auditoria:** 23 de outubro de 2026  
-**Material auditado:** dados agregados efetivos fornecidos em CSV/JSON e dashboards disponíveis; **sem reprocessamento de microdados individuais**.  
-**Parecer:** **APROVADO PARCIALMENTE** quanto às distribuições anuais e à integração verificada. **NÃO APROVADO INTEGRALMENTE** enquanto o histórico 2019–2025 permanecer inconsistente. **Correção obrigatória antes da homologação ou publicação acadêmica do histórico.**  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Período:** ENEM 2019–2025
+**Data da auditoria:** 23 de outubro de 2026
+**Material auditado:** dados agregados efetivos fornecidos em CSV/JSON e dashboards disponíveis; **sem reprocessamento de microdados individuais**.
+**Parecer:** **APROVADO PARCIALMENTE** quanto às distribuições anuais e à integração verificada. **NÃO APROVADO INTEGRALMENTE** enquanto o histórico 2019–2025 permanecer inconsistente. **Correção obrigatória antes da homologação ou publicação acadêmica do histórico.**
 **Estado da fonte:** `draft`; revisão acadêmica e privacidade cruzada pendentes.
 
 ## 1. Objetivo e escopo

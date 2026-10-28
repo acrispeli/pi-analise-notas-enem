@@ -1,9 +1,9 @@
 # Validação técnica — IND-014: Variância explicada por PCA
 
-**Projeto Integrador IV — UNIVESP**  
-**Indicador:** IND-014 — Variância explicada PCA (competências C1–C5)  
-**Edições:** ENEM 2019–2025 e consolidado histórico  
-**Data da auditoria:** 18/10/2026  
+**Projeto Integrador IV — UNIVESP**
+**Indicador:** IND-014 — Variância explicada PCA (competências C1–C5)
+**Edições:** ENEM 2019–2025 e consolidado histórico
+**Data da auditoria:** 18/10/2026
 **Status:** **APROVADO TECNICAMENTE PARA ANÁLISE INTERNA**, com pendências acadêmicas, de privacidade e de verificação dos microdados brutos.
 
 ## 1. Arquivos e referências usados

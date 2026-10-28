@@ -1,9 +1,9 @@
 # Relatório de validação técnica — IND-006
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Indicador:** IND-006 — Distribuição das notas da redação  
-**Período:** ENEM 2019–2025  
-**Data:** 17/10/2026 (Brasil)  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Indicador:** IND-006 — Distribuição das notas da redação
+**Período:** ENEM 2019–2025
+**Data:** 17/10/2026 (Brasil)
 **Decisão:** Aprovado para análise técnica interna; publicação pública depende de revisão de células pequenas e aprovação acadêmica.
 
 ## 1. Escopo e resultado

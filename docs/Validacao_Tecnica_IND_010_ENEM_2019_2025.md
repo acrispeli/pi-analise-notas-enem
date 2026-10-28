@@ -1,8 +1,8 @@
 # Validação Técnica — IND-010 | Mediana das competências C1–C5 (ENEM 2019–2025)
 
-**Projeto Integrador IV — UNIVESP**  
-**Data da auditoria:** 18/10/2026  
-**Estado:** APROVADO TECNICAMENTE para análise interna, condicionado à revisão acadêmica e à política de divulgação.  
+**Projeto Integrador IV — UNIVESP**
+**Data da auditoria:** 18/10/2026
+**Estado:** APROVADO TECNICAMENTE para análise interna, condicionado à revisão acadêmica e à política de divulgação.
 **Estado dos dados:** `draft`.
 
 ## 1. Escopo e arquivos

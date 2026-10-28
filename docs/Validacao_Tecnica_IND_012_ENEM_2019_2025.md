@@ -1,9 +1,9 @@
 # Validação Técnica — IND-012 | Distribuição dos níveis das competências C1–C5
 
-**Projeto Integrador IV — UNIVESP**  
-**Período:** ENEM 2019–2025  
-**Data da auditoria:** 18/10/2026  
-**Conclusão:** **APROVADO TECNICAMENTE PARA ANÁLISE INTERNA, COM RESSALVAS DE PUBLICAÇÃO**.  
+**Projeto Integrador IV — UNIVESP**
+**Período:** ENEM 2019–2025
+**Data da auditoria:** 18/10/2026
+**Conclusão:** **APROVADO TECNICAMENTE PARA ANÁLISE INTERNA, COM RESSALVAS DE PUBLICAÇÃO**.
 **Status dos dados:** `draft` — não liberados para divulgação pública.
 
 ## 1. Escopo, fontes e definição

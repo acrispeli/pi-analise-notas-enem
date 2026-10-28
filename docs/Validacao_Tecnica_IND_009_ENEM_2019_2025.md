@@ -1,9 +1,9 @@
 # Validação técnica — IND-009: Média C1–C5 (ENEM 2019–2025)
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Data:** 18 de outubro de 2026  
-**Status:** **APROVADO TECNICAMENTE PARA ANÁLISE INTERNA, COM RESSALVA DE INTEGRIDADE DA FONTE.**  
-**Estado da publicação:** `draft` — revisão acadêmica pendente.  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Data:** 18 de outubro de 2026
+**Status:** **APROVADO TECNICAMENTE PARA ANÁLISE INTERNA, COM RESSALVA DE INTEGRIDADE DA FONTE.**
+**Estado da publicação:** `draft` — revisão acadêmica pendente.
 **Versão analítica:** `2.8.1-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009`.
 
 ## 1. Objetivo, população e definição

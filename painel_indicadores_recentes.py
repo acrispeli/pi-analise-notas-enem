@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Leitura sem Streamlit dos indicadores IND-023..031 e IND-040..041.
+"""Leitura sem Streamlit dos indicadores IND-023..045 disponíveis.
 
 Não lê microdados, não altera dashboard e não preenche resultados ausentes.
 """
@@ -16,9 +16,21 @@ INDICADORES = {
     28: ('evaluators', 'divergence_clusters'),
     29: ('evaluators', 'anomalies'),
     30: ('high_performance', 'score_bands'),
+    32: ('high_performance', 'discount_frequency'),
+    33: ('high_performance', 'loss_share'),
+    34: ('high_performance', 'single_blocker'),
+    35: ('high_performance', 'co_loss_patterns'),
+    36: ('high_performance', 'association_rules'),
+    37: ('high_performance', 'tests'),
+    38: ('high_performance', 'reviewer_agreement'),
+    39: ('high_performance', 'score_competency_heatmap'),
     31: ('high_performance', 'loss_by_competency'),
     40: ('socioeconomic', 'profile'),
     41: ('socioeconomic', 'income_total'),
+    42: ('socioeconomic', 'income_competencies'),
+    43: ('socioeconomic', 'parent_education_total'),
+    44: ('socioeconomic', 'parent_education_competencies'),
+    45: ('socioeconomic', 'school_type_total'),
 }
 FAIXAS_RENDA = tuple('ABCDEFGHIJKLMNOPQ')
 
@@ -30,6 +42,12 @@ def bloco(dashboard: Mapping | None, indicador: int) -> dict | None:
     pagina, chave = INDICADORES[indicador]
     pagina_obj = dashboard.get('pages', {}).get(pagina, {})
     obj = pagina_obj.get(chave)
+    # IND-038 é serializado no dashboard como uma lista plana de 5 competências
+    # por UF, diferentemente dos demais módulos (blocos BR/by_uf).
+    if indicador == 38 and isinstance(obj, list):
+        if any(isinstance(item, dict) and item.get('indicator_id') == 'IND-038' for item in obj):
+            return {'indicator_id': 'IND-038', 'rows': obj}
+        return None
     if not isinstance(obj, dict) or obj.get('indicator_id') != f'IND-{indicador:03d}':
         return None
     return obj
@@ -40,7 +58,15 @@ def recorte(dashboard: Mapping | None, indicador: int, uf: str = 'BR') -> dict |
     obj = bloco(dashboard, indicador)
     if obj is None:
         return None
-    if indicador == 41:
+    if indicador == 38 and 'rows' in obj:
+        dados = [item for item in obj['rows'] if isinstance(item, dict)
+                 and item.get('indicator_id') == 'IND-038' and item.get('uf') == uf]
+        if not dados:
+            return None
+        return {'uf': uf, 'competencias': dados,
+                'n_pop_near': dados[0].get('n_pop_near'),
+                'n_near_evaluator': dados[0].get('n_near_evaluator')}
+    if indicador in (41, 42, 43, 44, 45):
         if uf == 'BR':
             return obj.get('national')
         return obj.get('states', {}).get(uf)

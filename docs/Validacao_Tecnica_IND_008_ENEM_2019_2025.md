@@ -1,9 +1,9 @@
 # Validação técnica — IND-008: Notas 1000 (ENEM 2019–2025)
 
-**Projeto Integrador IV — UNIVESP**  
-**Indicador:** IND-008 — Notas 1000  
-**Resultado:** **APROVADO para análise interna**, **não liberado para publicação pública**  
-**Situação acadêmica:** `draft`, pendente de revisão e aprovação  
+**Projeto Integrador IV — UNIVESP**
+**Indicador:** IND-008 — Notas 1000
+**Resultado:** **APROVADO para análise interna**, **não liberado para publicação pública**
+**Situação acadêmica:** `draft`, pendente de revisão e aprovação
 **Fontes da auditoria:** arquivos agregados produzidos pelo processamento local e script gerador; não houve reprocessamento independente dos microdados originais.
 
 ## 1. Escopo

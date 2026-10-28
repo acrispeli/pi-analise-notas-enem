@@ -1,10 +1,10 @@
 # Validação Técnica — IND-043: Escolaridade dos responsáveis × nota total da redação
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Indicador:** IND-043  
-**Escopo temporal solicitado:** ENEM 2019–2025  
-**Período efetivamente disponível:** 2019–2024 (2025 indisponível)  
-**Data da auditoria:** 23/10/2026  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Indicador:** IND-043
+**Escopo temporal solicitado:** ENEM 2019–2025
+**Período efetivamente disponível:** 2019–2024 (2025 indisponível)
+**Data da auditoria:** 23/10/2026
 **Parecer:** **APROVADO PARCIALMENTE — consistência agregada aprovada, publicação de células pequenas bloqueada até correção de privacidade.**
 
 ## 1. Sumário executivo

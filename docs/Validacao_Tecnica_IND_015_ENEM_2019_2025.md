@@ -1,9 +1,9 @@
 # Validação técnica — IND-015: Loadings PCA
 
-**Projeto Integrador IV — UNIVESP**  
-**Indicador:** IND-015 — Loadings PCA das competências C1–C5  
-**Edições:** ENEM 2019–2025, Brasil e 27 UFs, e consolidado histórico  
-**Data da auditoria:** 18/10/2026  
+**Projeto Integrador IV — UNIVESP**
+**Indicador:** IND-015 — Loadings PCA das competências C1–C5
+**Edições:** ENEM 2019–2025, Brasil e 27 UFs, e consolidado histórico
+**Data da auditoria:** 18/10/2026
 **Status:** **APROVADO TECNICAMENTE PARA ANÁLISE INTERNA**. Permanece `data_status = draft`, sem liberação para publicação.
 
 ## 1. Objetivo e arquivos examinados

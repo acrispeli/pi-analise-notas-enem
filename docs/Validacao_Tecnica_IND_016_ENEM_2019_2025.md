@@ -1,10 +1,10 @@
 # Validação técnica — IND-016: Mapa PC1 × PC2
 
-**Projeto Integrador IV — UNIVESP**  
-**Dados:** ENEM 2019–2025, Brasil e 27 UFs por `SG_UF_PROVA` (local da aplicação da prova)  
-**Indicador:** IND-016 — Mapa PC1 × PC2  
-**Data da auditoria:** 18 de outubro de 2026  
-**Situação técnica:** **APROVADO PARA ANÁLISE INTERNA**  
+**Projeto Integrador IV — UNIVESP**
+**Dados:** ENEM 2019–2025, Brasil e 27 UFs por `SG_UF_PROVA` (local da aplicação da prova)
+**Indicador:** IND-016 — Mapa PC1 × PC2
+**Data da auditoria:** 18 de outubro de 2026
+**Situação técnica:** **APROVADO PARA ANÁLISE INTERNA**
 **Situação de divulgação:** `draft`; **não publicar** até revisão acadêmica, avaliação de privacidade e supressão complementar.
 
 ## 1. Objetivo e escopo

@@ -1,9 +1,9 @@
 # Validação técnica IND-041 — Renda familiar × nota total da redação
 
-**Projeto:** Projeto Integrador IV — UNIVESP  
-**Período solicitado:** ENEM 2019–2025; **dados efetivamente cruzáveis:** 2019–2024  
-**Data da auditoria:** 22 de outubro de 2026  
-**Estado da análise:** `draft`; saídas reais agregadas examinadas, sem recálculo independente dos microdados de origem.  
+**Projeto:** Projeto Integrador IV — UNIVESP
+**Período solicitado:** ENEM 2019–2025; **dados efetivamente cruzáveis:** 2019–2024
+**Data da auditoria:** 22 de outubro de 2026
+**Estado da análise:** `draft`; saídas reais agregadas examinadas, sem recálculo independente dos microdados de origem.
 **Parecer:** **APROVADO quanto à aritmética, consistência agregada e aderência ao objetivo descritivo; COM RESSALVAS** para documentação, células raras, auditoria da junção de 2024 e publicação externa.
 
 ## 1. Objetivo e arquivos examinados

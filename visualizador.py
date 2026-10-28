@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-r"""Visualizador ENEM 2019–2025 | IND-001–031 e IND-040–041.
+r"""Visualizador ENEM 2019–2025 | IND-001–039 e IND-040–045.
 
 Instalar: .\.venv\Scripts\python.exe -m pip install -r requirements_visualizador.txt
 Executar: .\.venv\Scripts\python.exe -m streamlit run visualizador.py
@@ -15,6 +15,10 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+
+from painel_visualizacoes_novas import (
+    alto_desempenho_novos, socioeconomico_novos,
+)
 
 from painel_indicadores_recentes import (
     bloco as bloco_recente, recorte as recorte_recente_dados,
@@ -130,7 +134,7 @@ def imprimir_menu_lateral(pagina_atual: str, recorte: str) -> None:
         f'{itens}'
         '<div class="print-nav-recorte"><strong>Recorte da impressão</strong><div>'
         f'{escape(recorte)}</div></div>'
-        '<div class="print-nav-fim">Indicadores disponíveis: IND-001 a IND-041</div>'
+        '<div class="print-nav-fim">Indicadores disponíveis: IND-001 a IND-045</div>'
         '<div class="print-nav-fim">Projeto Integrador IV · UNIVESP</div>'
         '</aside>'
     )
@@ -970,7 +974,7 @@ def grafico_renda_ano(dashboard):
 
 def pagina_socioeconomica():
     st.title('Contexto socioeconômico')
-    st.caption('Distribuição das respostas do questionário (IND-040) e relação entre renda familiar e redação (IND-041).')
+    st.caption('IND-040 a IND-045: perfil, renda, escolaridade dos responsáveis e tipo de escola, sempre a partir de resultados agregados.')
     aba40,aba41 = st.tabs(['Perfil socioeconômico · IND-040','Renda × nota · IND-041'])
     with aba40:
         if ano is None:
@@ -1024,10 +1028,12 @@ def pagina_socioeconomica():
             else:
                 st.info('IND-041 indisponível para este ano: não se estima renda × nota a partir de dados sem ligação individual válida.')
 
+    socioeconomico_novos(st, grafico, ano, uf, dashboards_disponiveis() if ano is None else {ano: dashboard_do_filtro()})
+
 
 def pagina_alto_desempenho():
     st.title('Alto desempenho')
-    st.caption('IND-030: distribuição das notas 900–1000. IND-031: pontos perdidos por competência entre 900 e 980.')
+    st.caption('IND-030 a IND-039: faixas de alto desempenho, descontos, associação Apriori, testes estatísticos, concordância e heatmap.')
     if ano is None:
         hist = []
         perdas=[]
@@ -1050,6 +1056,7 @@ def pagina_alto_desempenho():
             bloco('Perda média por competência', 'Redações válidas entre 900 e 980 pontos (sem nota 1.000).','IND-031')
             fig=px.line(pd.DataFrame(perdas),x='Ano',y='Pontos de perda',color='Competência',markers=True,color_discrete_sequence=ESCALA[::-1])
             grafico(fig)
+        alto_desempenho_novos(st, grafico, ano, uf, dashboards_disponiveis())
         return
     a,b=recorte_recente(30),recorte_recente(31)
     tab30,tab31=st.tabs(['Faixas 900–1000 · IND-030','Perda por competência · IND-031'])
@@ -1080,6 +1087,8 @@ def pagina_alto_desempenho():
                 st.dataframe(df,hide_index=True,use_container_width=True)
             st.caption('Perda = 200 − nota de cada competência. A amostra exclui notas 1.000; não é a totalidade das redações.')
         else: sem_dados()
+
+    alto_desempenho_novos(st, grafico, ano, uf, {ano: dashboard_do_filtro()})
 
 
 def pagina_avaliadores_adicionais():
@@ -1193,12 +1202,28 @@ def metodologia():
                 'renda Q006 até 2023 e Q007 em 2024. 2025 não foi estimado. As faixas A–Q mudam de limites '
                 'monetários ao longo do tempo. Grupos com n pequeno ficam sinalizados e não são automaticamente excluídos. '
                 'Associação não prova causalidade.')
+    st.markdown('''**Alto desempenho (IND-032 a IND-039):** frequências de desconto e participação nas perdas
+são descritivas. O IND-036 emprega Apriori em transações de competências com desconto; suporte,
+confiança e lift expressam associações condicionais à nota 900–980, sem implicar causalidade.
+O IND-037 utiliza Q de Cochran, Friedman, McNemar e Wilcoxon com ajuste Holm; o W de Kendall
+complementa os p-valores como tamanho de efeito. O IND-038 compara AV1 e AV2, não as notas
+finais, usando concordância binária e kappa. O IND-039 inclui a faixa de nota 1000.
+
+**Contexto socioeconômico (IND-042 a IND-045):** relações entre renda, escolaridade e notas
+são observacionais. As faixas de renda não preservam os mesmos valores monetários em
+anos diferentes. O IND-045 usa variáveis que não são diretamente harmonizáveis entre
+2019–2023 e 2024. A falta de cruzamento em 2025 é indicada como indisponibilidade.
+
+**Divulgação:** a versão corrigida do IND-039 mostra agregados com contagens de 1 a 29;
+os IND-036/037 não bloqueiam recortes inteiros por máscaras raras. A ausência de linhas
+individuais não garante, isoladamente, anonimização. Todos esses módulos seguem em
+status `draft` e requerem revisão acadêmica e de divulgação antes de publicação externa.''')
     with st.expander('Fontes locais utilizadas'):
         for y,p in sorted(arquivos.items()):st.write(f'{y}: `{p}`')
         st.write('Nenhum CSV de microdados é lido pelo visualizador.')
-    with st.expander('Método de cada indicador disponível (IND-001 a IND-041)'):
+    with st.expander('Método de cada indicador disponível (IND-001 a IND-045)'):
         m=referencia.get('pages',{}).get('methodology',{})
-        for i in list(range(1,32)) + [40,41]:
+        for i in list(range(1,46)):
             entry=m if i==1 else m.get(f'ind{i:03d}',{})
             if entry:
                 with st.expander(f'IND-{i:03d}'):
@@ -1217,14 +1242,14 @@ def ler_cached(caminho: Path):
 with st.sidebar:
     st.markdown('### Redação no ENEM')
     st.caption('Painel de indicadores · UNIVESP')
-    st.caption('Versão IND-041 · páginas Alto desempenho e Contexto socioeconômico ativas')
+    st.caption('Versão IND-045 · indicadores de 2019 a 2025')
     st.markdown('---')
     st.caption('NAVEGAÇÃO')
     pagina=st.radio('Páginas',PAGINAS,label_visibility='collapsed',key='pagina_ativa')
     st.markdown('---')
-    st.caption('Disponíveis: IND-001 a IND-031, IND-040 e IND-041')
-    st.caption('IND-032–039 em preparação')
-    st.caption('Para visualizar IND-030/031/040/041, escolha as duas últimas páginas temáticas acima.')
+    st.caption('Disponíveis: IND-001 a IND-045, conforme os JSONs de cada edição')
+    st.caption('IND-032–039: Alto desempenho · IND-042–045: Contexto socioeconômico')
+    st.caption('Alguns cruzamentos não estão disponíveis em todas as edições.')
     if st.button('Atualizar dados', use_container_width=True):
         st.cache_data.clear()
         st.rerun()
