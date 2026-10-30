@@ -153,6 +153,14 @@ def perdas_por_competencia(recorte: dict, ano: int, uf: str) -> tuple[int, dict[
                 campos = faixa.get('competencias')
                 if not isinstance(campos, list):
                     raise ValueError(f'{contexto}: faixa sem competências.')
+                # O IND-031 pode representar uma faixa com N=0 por lista vazia.
+                # Ela não contribui para as perdas, mas precisa continuar no
+                # somatório de N, validado acima. Não aceitar essa exceção
+                # quando houver redações: continuam obrigatórias C1..C5.
+                n_faixa = inteiro_nao_negativo(
+                    faixa.get('n_redacoes'), f'{contexto}/faixa/n')
+                if n_faixa == 0 and not campos:
+                    continue
                 encontrados = [x for x in campos if x.get('competencia') == cod]
                 if len(encontrados) != 1:
                     raise ValueError(f'{contexto}/{cod}: faixa com competência ausente/duplicada.')
@@ -212,23 +220,14 @@ def avaliar_fonte(ano: int, origem: dict) -> tuple[dict, dict]:
 
 
 def calcular_recortes(bruto: dict, ano: int) -> tuple[dict, dict]:
-    """Suprime recortes N<30 e um complemento geográfico quando necessário.
+    """Exibe agregados sem ocultar os recortes de 1 a 29 redações.
 
     A proteção cruzada NÃO está resolvida: os dados-base IND-031 também são
     divulgados, e requerem avaliação conjunta de privacidade.
     """
-    pequenas = [uf for uf in UFS if 0 < bruto[uf][0] < MIN_N]
-    ocultas = set(pequenas)
+    pequenas = []
+    ocultas = set()
     complementares = []
-    if len(pequenas) == 1:
-        candidatas = [uf for uf in UFS if uf not in ocultas and bruto[uf][0] >= MIN_N]
-        if candidatas:
-            complemento = max(candidatas, key=lambda uf: bruto[uf][0])
-            ocultas.add(complemento)
-            complementares.append(complemento)
-        else:
-            ocultas.add('BR')
-            complementares.append('BR')
 
     recortes = {}
     for uf in ('BR', *UFS):
@@ -429,7 +428,7 @@ def executar(base: Path, saida: Path, anos: tuple[int, ...],
             'ind031_requerido': True,
             'nao_ler_microdados_novamente': True,
             'ano_2025': 'calculável quando IND-031/2025 estiver disponível',
-            'privacidade': 'Suprime recortes com 1..29 redações e complemento estadual; '
+            'privacidade': 'Não suprime automaticamente agregados com 1..29 redações; '
                            'proteção cruzada com IND-031 e outros indicadores pendente.',
             'cautelas': [
                 'O percentual é participação no total da perda, não proporção de redações com desconto (IND-032).',

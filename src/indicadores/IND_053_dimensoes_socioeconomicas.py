@@ -222,7 +222,7 @@ def amostrar_ano(arquivo: Path, ano: int, limite: int, bloco: int,
         'seed_efetiva': seed + ano, 'ordem_csv_relevante': True,
         'sem_notas_sem_join': True,
         'codigos_invalidos_na_amostra_por_questao': {
-            q: (0 if v == 0 else '1_a_29_suprimido' if v < LIMIAR else v)
+            q: int(v)  # Auditoria agregada: não mascarar contagens pequenas.
             for q, v in n_invalidos.items()},
     }
 

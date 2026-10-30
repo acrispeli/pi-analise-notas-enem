@@ -1,9 +1,9 @@
 {
   "meta": {
     "schema_version": "1.0.0",
-    "analysis_version": "2.40.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023-ind030-ind031-ind040",
+    "analysis_version": "2.28.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023-ind024-ind025-ind026-ind027-ind028-ind029",
     "dataset_version": "enem-2025-csv-publico",
-    "generated_at": "2026-10-30T02:41:05+00:00",
+    "generated_at": "2026-10-30T15:32:20+00:00",
     "year": 2025,
     "data_status": "draft",
     "source_files": [
@@ -55622,7 +55622,7 @@
     },
     "evaluators": {
       "status": "partial",
-      "reason": "IND-020 a IND-023 disponíveis; restantes ainda pendentes",
+      "reason": "IND-020 a IND-029 disponíveis; demais análises pendentes",
       "total_difference": {
         "indicator_id": "IND-020",
         "population": "POP_EVALUATOR",
@@ -62775,7 +62775,7 @@
             "sem_dados_individuais": true
           }
         ],
-        "notes": "Diferenças absolutas por competência são medidas exploratórias de concordância AV1×AV2, não avaliações de desempenho de corretores nem prova de erro. A POP_EVALUATOR tem as duas notas totais presentes (IND-020); o IND-021 usa, dentro dela, casos completos nas dez notas de competências. Não se imputam notas de competências ausentes. Todas as cinco competências usam o mesmo denominador dentro de cada recorte, que pode ser inferior à POP_EVALUATOR; verificar cobertura. UF é local de prova, não residência. Modelos históricos somam participações, não pessoas únicas. Somente estatísticas agregadas de grupos com n>=30 são exportadas. Status draft; revisão acadêmica e privacidade complementar pendentes."
+        "notes": "Diferenças absolutas por competência são medidas exploratórias de concordância AV1×AV2, não avaliações de desempenho de corretores nem prova de erro. A POP_EVALUATOR tem as duas notas totais presentes (IND-020); o IND-021 usa, dentro dela, casos completos nas dez notas de competências. Não se imputam notas de competências ausentes. Todas as cinco competências usam o mesmo denominador dentro de cada recorte, que pode ser inferior à POP_EVALUATOR; verificar cobertura. UF é local de prova, não residência. Modelos históricos somam participações, não pessoas únicas. Agregados com N de 1 a 29 são exportados, mas demandam cuidado interpretativo. Status draft; revisão acadêmica e privacidade complementar pendentes."
       },
       "official_discrepancy": {
         "indicator_id": "IND-022",
@@ -64281,7 +64281,7 @@
           }
         ],
         "method": "presenca_nota_ou_status_av3_sobre_pop_all",
-        "note": "Proxy de convocação: nota AV3 ou status AV3 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV3, não comprova o registro administrativo da convocação. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas inferiores a 30 na medida ou no complemento bloqueiam a publicação do recorte (e a execução, para impedir reconstruções). Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
+        "note": "Proxy de convocação: nota AV3 ou status AV3 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV3, não comprova o registro administrativo da convocação. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas de 1 a 29 na medida e no complemento são exibidas em agregados e requerem revisão contextual de privacidade. Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
       },
       "panel_rate": 3.864785,
       "panel_details": {
@@ -64569,7 +64569,7 @@
           }
         ],
         "method": "presenca_nota_ou_status_av4_sobre_pop_all",
-        "note": "Proxy de convocação de banca de três avaliadores: nota AV4 ou status AV4 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV4, não comprova o registro administrativo da convocação. AV4 designa banca de três avaliadores no dicionário dos microdados; não é quarto corretor individual. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas inferiores a 30 na medida ou no complemento bloqueiam a publicação do recorte (e a execução, para impedir reconstruções). Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
+        "note": "Proxy de convocação de banca de três avaliadores: nota AV4 ou status AV4 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV4, não comprova o registro administrativo da convocação. AV4 designa banca de três avaliadores no dicionário dos microdados; não é quarto corretor individual. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas de 1 a 29 na medida e no complemento são exibidas em agregados e requerem revisão contextual de privacidade. Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
       },
       "weighted_kappa": {
         "indicator_id": "IND-026",
@@ -66117,7 +66117,7 @@
           }
         ],
         "method": "cohen_kappa_ponderado_quadratico_por_competencia_momentos_exatos",
-        "note": "Kappa de Cohen ponderado quadrático por competência para pares AV1/AV2 completos em C1–C5 dentro da POP_EVALUATOR (duas notas totais válidas). Os pesos de discordância são (nota_AV1 - nota_AV2)^2/200^2, mantendo a distância real entre categorias numéricas ordenadas. Calculado sobre toda a população elegível sem amostragem, a partir dos momentos e produtos cruzados. Kappa é indefinido se o desacordo esperado for zero; não forçar a zero/um. Não compara desempenho nem identifica erros de um corretor; medidas de concordância dependem também da distribuição de notas. UF indica local de prova. O histórico soma participações de edições, não pessoas únicas, e é uma concordância ponderada pelo volume, não média de Kappas anuais. Somente estatísticas agregadas com ao menos 30 pares por recorte; percentual de concordância exata suprimido quando revelaria células positivas menores que 30; sem marginais/células de contingência exportadas. Status draft; revisão acadêmica, comparabilidade entre anos e privacidade pendentes."
+        "note": "Kappa de Cohen ponderado quadrático por competência para pares AV1/AV2 completos em C1–C5 dentro da POP_EVALUATOR (duas notas totais válidas). Os pesos de discordância são (nota_AV1 - nota_AV2)^2/200^2, mantendo a distância real entre categorias numéricas ordenadas. Calculado sobre toda a população elegível sem amostragem, a partir dos momentos e produtos cruzados. Kappa é indefinido se o desacordo esperado for zero; não forçar a zero/um. Não compara desempenho nem identifica erros de um corretor; medidas de concordância dependem também da distribuição de notas. UF indica local de prova. O histórico soma participações de edições, não pessoas únicas, e é uma concordância ponderada pelo volume, não média de Kappas anuais. Somente estatísticas agregadas com ao menos 30 pares por recorte; percentual de concordância exata divulgado em agregados mesmo com 1 a 29 acordos; sem marginais/células de contingência exportadas. Status draft; revisão acadêmica, comparabilidade entre anos e privacidade pendentes."
       },
       "icc": {
         "indicator_id": "IND-027",
@@ -74931,7 +74931,7 @@
             "cobertura_competencias_pct": 100.0
           }
         ],
-        "notes": "Detecção exploratória de padrões estatisticamente atípicos usando Isolation Forest. Atributos: diferença ASSINADA da nota total (AV1−AV2) e diferenças ABSOLUTAS das cinco competências. Não significa erro de correção, fraude nem identifica avaliador individual: AV1/AV2 são apenas posições no fluxo. A população é AMOSTRA_ML_EVALUATOR da POP_EVALUATOR com cinco pares completos, idêntica à amostra bottom-k do IND-028 em cada recorte. Modelo independente por ano/UF e por consolidado histórico, sem extrapolar frequências amostrais à população. contamination=\"auto\" usa decisão por score_samples<-0.5, correspondente a escore de anomalia (-score_samples)>0.5; escore maior significa mais atípico. Limiar não é calibração de uma probabilidade real de erro. As cinco faixas de distribuição têm tamanho aproximadamente igual por ranking; empates podem cruzar suas fronteiras. Taxas de limiares alternativos representam sensibilidade de corte sobre o MESMO modelo, não validação de estabilidade. Valores de células de 1 a 29 são suprimidos; nenhuma saída inclui notas, escores ou identificadores individuais. UF é da prova. Histórico agrega participações, não pessoas únicas. Dados draft: revisão acadêmica e de privacidade complementar pendentes."
+        "notes": "Detecção exploratória de padrões estatisticamente atípicos usando Isolation Forest. Atributos: diferença ASSINADA da nota total (AV1−AV2) e diferenças ABSOLUTAS das cinco competências. Não significa erro de correção, fraude nem identifica avaliador individual: AV1/AV2 são apenas posições no fluxo. A população é AMOSTRA_ML_EVALUATOR da POP_EVALUATOR com cinco pares completos, idêntica à amostra bottom-k do IND-028 em cada recorte. Modelo independente por ano/UF e por consolidado histórico, sem extrapolar frequências amostrais à população. contamination=\"auto\" usa decisão por score_samples<-0.5, correspondente a escore de anomalia (-score_samples)>0.5; escore maior significa mais atípico. Limiar não é calibração de uma probabilidade real de erro. As cinco faixas de distribuição têm tamanho aproximadamente igual por ranking; empates podem cruzar suas fronteiras. Taxas de limiares alternativos representam sensibilidade de corte sobre o MESMO modelo, não validação de estabilidade. Contagens agregadas de 1 a 29 são divulgadas sem ocultação automática; nenhuma saída inclui notas, escores ou identificadores individuais. UF é da prova. Histórico agrega participações, não pessoas únicas. Dados draft: revisão acadêmica e de privacidade complementar pendentes."
       }
     },
     "high_performance": {
@@ -164020,7 +164020,43 @@
                 -0.0,
                 -0.0
               ],
-              "perfil_exploratorio": []
+              "perfil_exploratorio": [
+                {
+                  "variavel": "aspirador",
+                  "categoria": "SEM_RESPOSTA",
+                  "prevalencia_grupo_aprox_pct": 100,
+                  "prevalencia_amostra_aprox_pct": 0,
+                  "diferenca_aprox_pp": 100
+                },
+                {
+                  "variavel": "banheiros",
+                  "categoria": "SEM_RESPOSTA",
+                  "prevalencia_grupo_aprox_pct": 100,
+                  "prevalencia_amostra_aprox_pct": 0,
+                  "diferenca_aprox_pp": 100
+                },
+                {
+                  "variavel": "carros",
+                  "categoria": "SEM_RESPOSTA",
+                  "prevalencia_grupo_aprox_pct": 100,
+                  "prevalencia_amostra_aprox_pct": 0,
+                  "diferenca_aprox_pp": 100
+                },
+                {
+                  "variavel": "celulares_domicilio",
+                  "categoria": "SEM_RESPOSTA",
+                  "prevalencia_grupo_aprox_pct": 100,
+                  "prevalencia_amostra_aprox_pct": 0,
+                  "diferenca_aprox_pp": 100
+                },
+                {
+                  "variavel": "escolaridade_mae",
+                  "categoria": "SEM_RESPOSTA",
+                  "prevalencia_grupo_aprox_pct": 100,
+                  "prevalencia_amostra_aprox_pct": 0,
+                  "diferenca_aprox_pp": 100
+                }
+              ]
             }
           ],
           "method": "MCA_escores_principais_KMeans",
@@ -241631,7 +241667,7 @@
             "sem_dados_individuais": true
           }
         ],
-        "note": "Diferenças absolutas por competência são medidas exploratórias de concordância AV1×AV2, não avaliações de desempenho de corretores nem prova de erro. A POP_EVALUATOR tem as duas notas totais presentes (IND-020); o IND-021 usa, dentro dela, casos completos nas dez notas de competências. Não se imputam notas de competências ausentes. Todas as cinco competências usam o mesmo denominador dentro de cada recorte, que pode ser inferior à POP_EVALUATOR; verificar cobertura. UF é local de prova, não residência. Modelos históricos somam participações, não pessoas únicas. Somente estatísticas agregadas de grupos com n>=30 são exportadas. Status draft; revisão acadêmica e privacidade complementar pendentes."
+        "note": "Diferenças absolutas por competência são medidas exploratórias de concordância AV1×AV2, não avaliações de desempenho de corretores nem prova de erro. A POP_EVALUATOR tem as duas notas totais presentes (IND-020); o IND-021 usa, dentro dela, casos completos nas dez notas de competências. Não se imputam notas de competências ausentes. Todas as cinco competências usam o mesmo denominador dentro de cada recorte, que pode ser inferior à POP_EVALUATOR; verificar cobertura. UF é local de prova, não residência. Modelos históricos somam participações, não pessoas únicas. Agregados com N de 1 a 29 são exportados, mas demandam cuidado interpretativo. Status draft; revisão acadêmica e privacidade complementar pendentes."
       },
       "ind022": {
         "indicator_id": "IND-022",
@@ -268670,8 +268706,8 @@
         "percentiles": "Hyndman-Fan tipo 7, exato via distribuição de frequências",
         "standard_deviation_ddof": 0,
         "boxplot": "Tukey 1.5 IQR com bigodes nos valores observados, sem exibir pontos individuais",
-        "min_group_count": 30,
-        "limitations": "Diferenças absolutas por competência são medidas exploratórias de concordância AV1×AV2, não avaliações de desempenho de corretores nem prova de erro. A POP_EVALUATOR tem as duas notas totais presentes (IND-020); o IND-021 usa, dentro dela, casos completos nas dez notas de competências. Não se imputam notas de competências ausentes. Todas as cinco competências usam o mesmo denominador dentro de cada recorte, que pode ser inferior à POP_EVALUATOR; verificar cobertura. UF é local de prova, não residência. Modelos históricos somam participações, não pessoas únicas. Somente estatísticas agregadas de grupos com n>=30 são exportadas. Status draft; revisão acadêmica e privacidade complementar pendentes."
+        "min_group_count": 1,
+        "limitations": "Diferenças absolutas por competência são medidas exploratórias de concordância AV1×AV2, não avaliações de desempenho de corretores nem prova de erro. A POP_EVALUATOR tem as duas notas totais presentes (IND-020); o IND-021 usa, dentro dela, casos completos nas dez notas de competências. Não se imputam notas de competências ausentes. Todas as cinco competências usam o mesmo denominador dentro de cada recorte, que pode ser inferior à POP_EVALUATOR; verificar cobertura. UF é local de prova, não residência. Modelos históricos somam participações, não pessoas únicas. Agregados com N de 1 a 29 são exportados, mas demandam cuidado interpretativo. Status draft; revisão acadêmica e privacidade complementar pendentes."
       },
       "ind022": {
         "definition": "Discrepância segundo o critério do edital ENEM 2024, item 14.5.3.",
@@ -268688,7 +268724,7 @@
         },
         "join": "SG_UF_PROVA_mesma_linha",
         "normative_scope": "regra ENEM 2024 aplicada analiticamente a 2019–2025",
-        "minimum_group_n": 30,
+        "minimum_group_n": 1,
         "limitations": "Critério operativo do edital ENEM 2024, item 14.5.3: |nota AV1−AV2|>100 OU qualquer |competência AV1−AV2|>80 OU situação divergente. Limiares estritos: diferenças exatamente 100 ou 80, isoladamente, não disparam a regra. Entre 2019–2023 e 2025 trata-se de aplicação padronizada do critério de 2024, sem certificar identidade normativa de todos os editais. Denominador POP_EVALUATOR (notas totais AV1 e AV2 válidas), que difere da população de redações válidas. A ausência de informação não é interpretada como concordância: há categoria indeterminada quando nenhum critério foi comprovado e algum permanece desconhecido. Contagens de motivos podem se sobrepor. A UF representa o local de prova, não residência. O histórico reúne participações, não pessoas únicas. Saída contém apenas agregados e fica em draft até revisão acadêmica e revisão de privacidade complementar; não é taxa oficial publicada pelo INEP."
       },
       "ind023": {
@@ -268710,8 +268746,8 @@
         "method": "presenca_nota_ou_status_av3_sobre_pop_all",
         "join": "NU_INSCRICAO+NU_ANO em 2019-2024; fonte conjunta em 2025",
         "geography": "SG_UF_PROVA (UF de aplicação)",
-        "minimum_positive_cell_count": 30,
-        "limitations": "Proxy de convocação: nota AV3 ou status AV3 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV3, não comprova o registro administrativo da convocação. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas inferiores a 30 na medida ou no complemento bloqueiam a publicação do recorte (e a execução, para impedir reconstruções). Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
+        "minimum_positive_cell_count": 1,
+        "limitations": "Proxy de convocação: nota AV3 ou status AV3 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV3, não comprova o registro administrativo da convocação. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas de 1 a 29 na medida e no complemento são exibidas em agregados e requerem revisão contextual de privacidade. Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
       },
       "ind025": {
         "definition": "Frequência observada da banca de três avaliadores (AV4), por campos preenchidos.",
@@ -268721,8 +268757,8 @@
         "method": "presenca_nota_ou_status_av4_sobre_pop_all",
         "join": "NU_INSCRICAO+NU_ANO em 2019-2024; fonte conjunta em 2025",
         "geography": "SG_UF_PROVA (UF de aplicação)",
-        "minimum_positive_cell_count": 30,
-        "limitations": "Proxy de convocação de banca de três avaliadores: nota AV4 ou status AV4 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV4, não comprova o registro administrativo da convocação. AV4 designa banca de três avaliadores no dicionário dos microdados; não é quarto corretor individual. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas inferiores a 30 na medida ou no complemento bloqueiam a publicação do recorte (e a execução, para impedir reconstruções). Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
+        "minimum_positive_cell_count": 1,
+        "limitations": "Proxy de convocação de banca de três avaliadores: nota AV4 ou status AV4 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV4, não comprova o registro administrativo da convocação. AV4 designa banca de três avaliadores no dicionário dos microdados; não é quarto corretor individual. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas de 1 a 29 na medida e no complemento são exibidas em agregados e requerem revisão contextual de privacidade. Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
       },
       "ind026": {
         "definition": "Concordância ordinal AV1 × AV2 por competência C1–C5.",
@@ -268732,7 +268768,7 @@
         "formula": "kappa=1 - E_obs[(X-Y)^2]/E_indep[(X-Y)^2]",
         "join": "NU_INSCRICAO+NU_ANO em 2019–2024; fonte direta em 2025",
         "minimum_pair_count": 30,
-        "limitations": "Kappa de Cohen ponderado quadrático por competência para pares AV1/AV2 completos em C1–C5 dentro da POP_EVALUATOR (duas notas totais válidas). Os pesos de discordância são (nota_AV1 - nota_AV2)^2/200^2, mantendo a distância real entre categorias numéricas ordenadas. Calculado sobre toda a população elegível sem amostragem, a partir dos momentos e produtos cruzados. Kappa é indefinido se o desacordo esperado for zero; não forçar a zero/um. Não compara desempenho nem identifica erros de um corretor; medidas de concordância dependem também da distribuição de notas. UF indica local de prova. O histórico soma participações de edições, não pessoas únicas, e é uma concordância ponderada pelo volume, não média de Kappas anuais. Somente estatísticas agregadas com ao menos 30 pares por recorte; percentual de concordância exata suprimido quando revelaria células positivas menores que 30; sem marginais/células de contingência exportadas. Status draft; revisão acadêmica, comparabilidade entre anos e privacidade pendentes."
+        "limitations": "Kappa de Cohen ponderado quadrático por competência para pares AV1/AV2 completos em C1–C5 dentro da POP_EVALUATOR (duas notas totais válidas). Os pesos de discordância são (nota_AV1 - nota_AV2)^2/200^2, mantendo a distância real entre categorias numéricas ordenadas. Calculado sobre toda a população elegível sem amostragem, a partir dos momentos e produtos cruzados. Kappa é indefinido se o desacordo esperado for zero; não forçar a zero/um. Não compara desempenho nem identifica erros de um corretor; medidas de concordância dependem também da distribuição de notas. UF indica local de prova. O histórico soma participações de edições, não pessoas únicas, e é uma concordância ponderada pelo volume, não média de Kappas anuais. Somente estatísticas agregadas com ao menos 30 pares por recorte; percentual de concordância exata divulgado em agregados mesmo com 1 a 29 acordos; sem marginais/células de contingência exportadas. Status draft; revisão acadêmica, comparabilidade entre anos e privacidade pendentes."
       },
       "ind027": {
         "definition": "Concordância da nota total do primeiro e segundo avaliadores",
@@ -268776,7 +268812,7 @@
         "seed_model": 42,
         "anomaly_threshold": 0.5,
         "threshold_source": "sklearn offset_=-0.5",
-        "limitations": "Detecção exploratória de padrões estatisticamente atípicos usando Isolation Forest. Atributos: diferença ASSINADA da nota total (AV1−AV2) e diferenças ABSOLUTAS das cinco competências. Não significa erro de correção, fraude nem identifica avaliador individual: AV1/AV2 são apenas posições no fluxo. A população é AMOSTRA_ML_EVALUATOR da POP_EVALUATOR com cinco pares completos, idêntica à amostra bottom-k do IND-028 em cada recorte. Modelo independente por ano/UF e por consolidado histórico, sem extrapolar frequências amostrais à população. contamination=\"auto\" usa decisão por score_samples<-0.5, correspondente a escore de anomalia (-score_samples)>0.5; escore maior significa mais atípico. Limiar não é calibração de uma probabilidade real de erro. As cinco faixas de distribuição têm tamanho aproximadamente igual por ranking; empates podem cruzar suas fronteiras. Taxas de limiares alternativos representam sensibilidade de corte sobre o MESMO modelo, não validação de estabilidade. Valores de células de 1 a 29 são suprimidos; nenhuma saída inclui notas, escores ou identificadores individuais. UF é da prova. Histórico agrega participações, não pessoas únicas. Dados draft: revisão acadêmica e de privacidade complementar pendentes."
+        "limitations": "Detecção exploratória de padrões estatisticamente atípicos usando Isolation Forest. Atributos: diferença ASSINADA da nota total (AV1−AV2) e diferenças ABSOLUTAS das cinco competências. Não significa erro de correção, fraude nem identifica avaliador individual: AV1/AV2 são apenas posições no fluxo. A população é AMOSTRA_ML_EVALUATOR da POP_EVALUATOR com cinco pares completos, idêntica à amostra bottom-k do IND-028 em cada recorte. Modelo independente por ano/UF e por consolidado histórico, sem extrapolar frequências amostrais à população. contamination=\"auto\" usa decisão por score_samples<-0.5, correspondente a escore de anomalia (-score_samples)>0.5; escore maior significa mais atípico. Limiar não é calibração de uma probabilidade real de erro. As cinco faixas de distribuição têm tamanho aproximadamente igual por ranking; empates podem cruzar suas fronteiras. Taxas de limiares alternativos representam sensibilidade de corte sobre o MESMO modelo, não validação de estabilidade. Contagens agregadas de 1 a 29 são divulgadas sem ocultação automática; nenhuma saída inclui notas, escores ou identificadores individuais. UF é da prova. Histórico agrega participações, não pessoas únicas. Dados draft: revisão acadêmica e de privacidade complementar pendentes."
       },
       "ind030": {
         "definition": "Distribuição das redações válidas de 900 a 1000 pontos",

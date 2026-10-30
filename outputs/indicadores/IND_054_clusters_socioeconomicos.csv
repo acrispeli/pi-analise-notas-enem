@@ -31,6 +31,11 @@ anual_2020;2020;centroide;C1;15000;14752;100;2;;;;;;3;-0.0;;;;;;
 anual_2020;2020;centroide;C2;15000;248;0;2;;;;;;1;7.712579;;;;;;
 anual_2020;2020;centroide;C2;15000;248;0;2;;;;;;2;-0.0;;;;;;
 anual_2020;2020;centroide;C2;15000;248;0;2;;;;;;3;-0.0;;;;;;
+anual_2020;2020;perfil;C2;15000;248;0;2;;;;;;;;Q001;SEM_RESPOSTA;100;0;100;
+anual_2020;2020;perfil;C2;15000;248;0;2;;;;;;;;Q002;SEM_RESPOSTA;100;0;100;
+anual_2020;2020;perfil;C2;15000;248;0;2;;;;;;;;Q003;SEM_RESPOSTA;100;0;100;
+anual_2020;2020;perfil;C2;15000;248;0;2;;;;;;;;Q004;SEM_RESPOSTA;100;0;100;
+anual_2020;2020;perfil;C2;15000;248;0;2;;;;;;;;Q005;SEM_RESPOSTA;100;0;100;
 anual_2021;2021;selecao_k;;15000;;;2;2;0.437564;1.008979;10054.8705;0.996986;;;;;;;;"K avaliado; K final no JSON"
 anual_2021;2021;selecao_k;;15000;;;2;3;0.401882;0.874081;11422.1134;1.0;;;;;;;;"K avaliado; K final no JSON"
 anual_2021;2021;selecao_k;;15000;;;2;4;0.382411;0.791872;13057.6954;0.962985;;;;;;;;"K avaliado; K final no JSON"
@@ -147,3 +152,8 @@ nucleo_harmonizado_conjunto;2019_2025;centroide;C1;105000;104752;100;2;;;;;;3;0.
 nucleo_harmonizado_conjunto;2019_2025;centroide;C2;105000;248;0;2;;;;;;1;20.552058;;;;;;
 nucleo_harmonizado_conjunto;2019_2025;centroide;C2;105000;248;0;2;;;;;;2;-0.0;;;;;;
 nucleo_harmonizado_conjunto;2019_2025;centroide;C2;105000;248;0;2;;;;;;3;-0.0;;;;;;
+nucleo_harmonizado_conjunto;2019_2025;perfil;C2;105000;248;0;2;;;;;;;;aspirador;SEM_RESPOSTA;100;0;100;
+nucleo_harmonizado_conjunto;2019_2025;perfil;C2;105000;248;0;2;;;;;;;;banheiros;SEM_RESPOSTA;100;0;100;
+nucleo_harmonizado_conjunto;2019_2025;perfil;C2;105000;248;0;2;;;;;;;;carros;SEM_RESPOSTA;100;0;100;
+nucleo_harmonizado_conjunto;2019_2025;perfil;C2;105000;248;0;2;;;;;;;;celulares_domicilio;SEM_RESPOSTA;100;0;100;
+nucleo_harmonizado_conjunto;2019_2025;perfil;C2;105000;248;0;2;;;;;;;;escolaridade_mae;SEM_RESPOSTA;100;0;100;

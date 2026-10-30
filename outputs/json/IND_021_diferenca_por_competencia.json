@@ -4,7 +4,7 @@
     "module_schema_version": "ind021-module-1.0.0",
     "analysis_version": "2.20.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021",
     "dataset_version": "enem-2019-2025-csv-publico",
-    "generated_at": "2026-10-19T13:02:39+00:00",
+    "generated_at": "2026-10-30T13:42:59+00:00",
     "data_status": "draft",
     "source_files": {
       "2019": {
@@ -40,7 +40,7 @@
     "source_indicator": "IND-020",
     "geographic_dimension": "SG_UF_PROVA",
     "method": "abs_nota_competencia_av1_av2_pop_evaluator_cinco_pares_completos",
-    "minimum_group_count": 30,
+    "minimum_group_count": 1,
     "quantile_type": "Hyndman-Fan tipo 7",
     "quality_by_year": {
       "2019": {
@@ -142,7 +142,7 @@
       }
     },
     "publication_status": "draft; revisão acadêmica e privacidade complementar pendentes",
-    "notes": "Diferenças absolutas por competência são medidas exploratórias de concordância AV1×AV2, não avaliações de desempenho de corretores nem prova de erro. A POP_EVALUATOR tem as duas notas totais presentes (IND-020); o IND-021 usa, dentro dela, casos completos nas dez notas de competências. Não se imputam notas de competências ausentes. Todas as cinco competências usam o mesmo denominador dentro de cada recorte, que pode ser inferior à POP_EVALUATOR; verificar cobertura. UF é local de prova, não residência. Modelos históricos somam participações, não pessoas únicas. Somente estatísticas agregadas de grupos com n>=30 são exportadas. Status draft; revisão acadêmica e privacidade complementar pendentes."
+    "notes": "Diferenças absolutas por competência são medidas exploratórias de concordância AV1×AV2, não avaliações de desempenho de corretores nem prova de erro. A POP_EVALUATOR tem as duas notas totais presentes (IND-020); o IND-021 usa, dentro dela, casos completos nas dez notas de competências. Não se imputam notas de competências ausentes. Todas as cinco competências usam o mesmo denominador dentro de cada recorte, que pode ser inferior à POP_EVALUATOR; verificar cobertura. UF é local de prova, não residência. Modelos históricos somam participações, não pessoas únicas. Agregados com N de 1 a 29 são exportados, mas demandam cuidado interpretativo. Status draft; revisão acadêmica e privacidade complementar pendentes."
   },
   "indicator": {
     "id": "IND-021",

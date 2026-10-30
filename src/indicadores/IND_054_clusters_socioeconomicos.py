@@ -176,11 +176,10 @@ def selecionar_k(x: np.ndarray, seed: int, max_k: int = 6,
 
 def perfis_publicaveis(dados: pd.DataFrame, labels: np.ndarray,
                        k: int, max_achados: int = 5) -> list[dict]:
-    """Perfil agregado com percentuais aproximados, apenas margens divulgáveis.
+    """Perfil agregado com percentuais aproximados, sem ocultação automática.
 
-    Não revela contagens pequenas; publica categoria quando há pelo menos
-    30 no grupo, 30 no complemento e 30 fora do grupo, para bloquear
-    reconstruções triviais de margens. Revisão cruzada ainda pendente.
+    Não publica contagens de modalidades; percentuais aproximados de 5 pp.
+    Modalidades raras podem ser estatisticamente instáveis; resultados draft.
     """
     n = len(dados)
     resultado = []
@@ -195,8 +194,8 @@ def perfis_publicaveis(dados: pd.DataFrame, labels: np.ndarray,
                 a = int(numero)
                 tot = int(f_global[categoria])
                 fora = tot - a
-                if min(a, n_grupo - a, fora, n - n_grupo - fora) < LIMIAR:
-                    continue
+                # Não excluir modalidades apenas pela frequência de 1..29.
+                # O tamanho mínimo de cada cluster continua sendo do modelo.
                 p = a / n_grupo
                 p_total = tot / n
                 diferenca = 100 * (p - p_total)
@@ -299,6 +298,7 @@ def montar_documento(registros: dict[int, dict], combinado: dict | None,
             'privacy': {'minimum_cluster_size': LIMIAR,
                         'category_modalities_collapsed_below_n': LIMIAR,
                         'profile_percentages_rounded_to_5pp': True,
+                        'profile_category_count_threshold': None,
                         'cross_indicator_disclosure_review': 'pendente'},
             'no_personal_identifiers_scores_or_individual_assignments_exported': True,
             'join_diagnostics': {'status': 'nao_aplicavel', 'reason': 'questionário sem notas ou identificadores'},

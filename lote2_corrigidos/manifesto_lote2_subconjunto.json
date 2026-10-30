@@ -1,0 +1,77 @@
+{
+  "scripts": {
+    "021": {
+      "file": "IND_021_diferenca_por_competencia.py",
+      "original_sha256": "a422b2ae0ac3ea7550f55e468aa67eb43e686fc3dc9316e455ff03b38adfbf5d",
+      "updated_sha256": "c7f0f25d5f85ed0b1c6980c0e76ffcbc8793010c193ed683f41ea9485b47863a",
+      "args": [
+        "--sobrescrever"
+      ]
+    },
+    "022": {
+      "file": "IND_022_discrepancia_oficial.py",
+      "original_sha256": "c60bad3e64da5902927cdfc76d35ec7180701a035bffaa6adb1274f85e3ae1e5",
+      "updated_sha256": "e9b1bd2efde85c8f73a0b771aa45916e12eb52cf87d2ceb14dd027a424036586",
+      "args": [
+        "--sobrescrever"
+      ]
+    },
+    "024": {
+      "file": "IND_024_terceiro_avaliador.py",
+      "original_sha256": "0268649a8379b22e8efd0336a2f97198cd1ceaaf862691632efb7d58aa1a97b9",
+      "updated_sha256": "25fcefe6dba18642bd4484884ba94b233bee280009573baf0c256a6b2f4fcd99",
+      "args": [
+        "--sobrescrever"
+      ]
+    },
+    "025": {
+      "file": "IND_025_banca.py",
+      "original_sha256": "2e1fb10cfc16b1f494750c20461747b534c99f430355e41226ec0043881e1137",
+      "updated_sha256": "8dd6e9e4176ecf32553628aaa6aa71c305ab58e56f792d72f7e6b6d58276ebd0",
+      "args": [
+        "--sobrescrever"
+      ]
+    },
+    "026": {
+      "file": "IND_026_concordancia_competencias.py",
+      "original_sha256": "01eceeacf3b77b52b810f52df67bc60aa341572408d03142546b92b6ca734807",
+      "updated_sha256": "79bf25c5062319f69ac0cd026181601890d9396cb5fe63dc1b1bb1ace177d338",
+      "args": [
+        "--sobrescrever"
+      ]
+    },
+    "029": {
+      "file": "IND_029_avaliacoes_atipicas.py",
+      "original_sha256": "2489fed10aac79fa1c0079c912426291fee2b80bf3e3485ff3ad6f755c7c509e",
+      "updated_sha256": "227a5d67f516738382656fe6760f5b32490afef729e585475c604b5e8045670a",
+      "args": [
+        "--sobrescrever"
+      ]
+    },
+    "033": {
+      "file": "IND_033_participacao_perda_total.py",
+      "original_sha256": "b046cd4329813576b847fab73bb4fa78b5d573da5d3eba9a751623c805f68080",
+      "updated_sha256": "9bfb872755b54f137fe0a10daba2e5b1f71792cd3e11b4dddb82285754b0093b",
+      "args": [
+        "--sobrescrever"
+      ]
+    },
+    "053": {
+      "file": "IND_053_dimensoes_socioeconomicas.py",
+      "original_sha256": "95a4da59f6ed3dd59de93e85470c39a224a318ef3d522549c6145564d4e2ef4f",
+      "updated_sha256": "2ca14cefb67d182481f32ed499bea62a1d1224fdeb20bdb6d099d64a65d15c63",
+      "args": [
+        "--sobrescrever"
+      ]
+    },
+    "054": {
+      "file": "IND_054_clusters_socioeconomicos.py",
+      "original_sha256": "4f242d9799150f251754babafe6d9d12bfe7d1bf79516a47104f417ebd95976c",
+      "updated_sha256": "488e790b9e0fca06e62aeea249683cf1d0aba632313e21a663b791f73aa00402",
+      "args": [
+        "--sobrescrever"
+      ]
+    }
+  },
+  "note": "Contagens 1-29 em agregados; limites de robustez de modelos preservados; estado draft"
+}

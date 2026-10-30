@@ -4,7 +4,7 @@
     "module_schema_version": "ind022-module-1.0.0",
     "analysis_version": "2.21.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022",
     "dataset_version": "enem-2019-2025-csv-publico",
-    "generated_at": "2026-10-19T17:18:29+00:00",
+    "generated_at": "2026-10-30T14:10:31+00:00",
     "data_status": "draft",
     "source_files": {
       "2019": {
@@ -825,7 +825,7 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "min_group_n": 30,
+        "min_group_n": 1,
         "particao_sim_nao_indeterminado": true,
         "motivos_nao_exclusivos": true
       },
@@ -1521,7 +1521,7 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "min_group_n": 30,
+        "min_group_n": 1,
         "particao_sim_nao_indeterminado": true,
         "motivos_nao_exclusivos": true
       },
@@ -2217,7 +2217,7 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "min_group_n": 30,
+        "min_group_n": 1,
         "particao_sim_nao_indeterminado": true,
         "motivos_nao_exclusivos": true
       },
@@ -2913,7 +2913,7 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "min_group_n": 30,
+        "min_group_n": 1,
         "particao_sim_nao_indeterminado": true,
         "motivos_nao_exclusivos": true
       },
@@ -3609,7 +3609,7 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "min_group_n": 30,
+        "min_group_n": 1,
         "particao_sim_nao_indeterminado": true,
         "motivos_nao_exclusivos": true
       },
@@ -4305,7 +4305,7 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "min_group_n": 30,
+        "min_group_n": 1,
         "particao_sim_nao_indeterminado": true,
         "motivos_nao_exclusivos": true
       },
@@ -5001,7 +5001,7 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "min_group_n": 30,
+        "min_group_n": 1,
         "particao_sim_nao_indeterminado": true,
         "motivos_nao_exclusivos": true
       },
@@ -5697,7 +5697,7 @@
     "qualidade": {
       "status": "ok",
       "soma_27_ufs_igual_brasil": true,
-      "min_group_n": 30,
+      "min_group_n": 1,
       "particao_sim_nao_indeterminado": true,
       "motivos_nao_exclusivos": true
     },

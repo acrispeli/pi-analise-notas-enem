@@ -61,7 +61,7 @@ NOTAS = (
     'As cinco faixas de distribuição têm tamanho aproximadamente igual por ranking; '
     'empates podem cruzar suas fronteiras. Taxas de limiares alternativos representam '
     'sensibilidade de corte sobre o MESMO modelo, não validação de estabilidade. '
-    'Valores de células de 1 a 29 são suprimidos; nenhuma saída inclui notas, '
+    'Contagens agregadas de 1 a 29 são divulgadas sem ocultação automática; nenhuma saída inclui notas, '
     'escores ou identificadores individuais. UF é da prova. Histórico agrega '
     'participações, não pessoas únicas. Dados draft: revisão acadêmica e '
     'de privacidade complementar pendentes.'
@@ -249,7 +249,8 @@ def processar_ano(raiz: Path, ano: int, grupos: dict, hist: dict, bloco: int, tm
 
 
 def contagem_publicavel(qtd: int, n: int, minimo: int) -> bool:
-    return (qtd == 0 or qtd >= minimo) and (n-qtd == 0 or n-qtd >= minimo)
+    # Limite mínimo preservado para AJUSTE do modelo, não divulgação de agregados.
+    return 0 <= qtd <= n
 
 
 def percentil(x: np.ndarray, q: float) -> float:
@@ -308,10 +309,10 @@ def avaliar(a: Amostra6, n_estimators: int, min_n: int, seed: int) -> dict:
         ret['n_sinalizados_auto'] = n_auto
         ret['percentual_sinalizados_auto'] = round(100*n_auto/n,6)
         if n_auto >= min_n:
+            # Média condicionada ao tamanho amostral mínimo para estabilidade estatística.
             ret['media_atributos_sinalizados'] = {
                 c:round(float(v),6) for c,v in zip(ATRIBUTOS,a.x[mascara].mean(axis=0))}
-    # Proteção complementar: a subtração de dois limiares publicados
-    # também não pode revelar grupos positivos com menos de 30 casos.
+    # Divulgar os totais agregados de cada limiar, inclusive 1..29.
     counts_publicados = [n_auto] if visivel else []
     # Limite 0.50 primeiro, depois vizinhos; prioridade ao limiar primário.
     calculados = {cutoff:int(np.count_nonzero(scores > cutoff)) for cutoff in LIMIARES}
@@ -319,9 +320,6 @@ def avaliar(a: Amostra6, n_estimators: int, min_n: int, seed: int) -> dict:
     for cutoff in (0.50,0.45,0.55):
         qty = calculados[cutoff]
         permitido = contagem_publicavel(qty,n,min_n)
-        if permitido:
-            permitido = all(abs(qty - v) == 0 or abs(qty - v) >= min_n
-                            for v in counts_publicados)
         permitidos[cutoff] = permitido
         if permitido: counts_publicados.append(qty)
     for cutoff in LIMIARES:

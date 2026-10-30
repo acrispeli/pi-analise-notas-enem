@@ -4,13 +4,13 @@
     "module_schema_version": "ind025-module-1.0.0",
     "analysis_version": "2.24.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023-ind024-ind025",
     "dataset_version": "enem-2019-2025-csv-publico",
-    "generated_at": "2026-10-22T01:40:36+00:00",
+    "generated_at": "2026-10-30T14:40:33+00:00",
     "data_status": "draft",
     "source_indicator": "IND-007",
     "population_definition": "POP_ALL: todos os registros dos resultados",
     "geographic_dimension": "SG_UF_PROVA",
     "method": "presenca_nota_ou_status_av4_sobre_pop_all",
-    "minimum_group_count": 30,
+    "minimum_group_count": 1,
     "source_qa": {
       "2019": {
         "arquivo_av4": "COMPETENCIAS_REDACAO_2019.csv",
@@ -84,7 +84,7 @@
       }
     },
     "publication_status": "draft; revisão acadêmica e privacidade complementar pendentes",
-    "notes": "Proxy de convocação de banca de três avaliadores: nota AV4 ou status AV4 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV4, não comprova o registro administrativo da convocação. AV4 designa banca de três avaliadores no dicionário dos microdados; não é quarto corretor individual. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas inferiores a 30 na medida ou no complemento bloqueiam a publicação do recorte (e a execução, para impedir reconstruções). Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
+    "notes": "Proxy de convocação de banca de três avaliadores: nota AV4 ou status AV4 preenchido (OU inclusivo), contando cada participação uma vez. Não é a razão sobre POP_EVALUATOR, POP_VALID nem a discrepância oficial do IND-022. Nota zero conta como preenchida. A presença do campo indica evidência de avaliação AV4, não comprova o registro administrativo da convocação. AV4 designa banca de três avaliadores no dicionário dos microdados; não é quarto corretor individual. UF é de prova. O histórico agrega participações, não pessoas únicas. Nenhum ID ou registro individual é exportado. Contagens positivas de 1 a 29 na medida e no complemento são exibidas em agregados e requerem revisão contextual de privacidade. Resultados draft, aguardando revisão metodológica, acadêmica e de privacidade complementar."
   },
   "indicator": {
     "id": "IND-025",
@@ -379,7 +379,8 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "celulas_positivas_inferiores_30": 0
+        "celulas_positivas_inferiores_30": 0,
+        "politica_divulgacao": "agregados_sem_supressao_1_29_draft"
       },
       "ano": 2019,
       "qualidade_fonte": {
@@ -678,7 +679,8 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "celulas_positivas_inferiores_30": 0
+        "celulas_positivas_inferiores_30": 0,
+        "politica_divulgacao": "agregados_sem_supressao_1_29_draft"
       },
       "ano": 2020,
       "qualidade_fonte": {
@@ -977,7 +979,8 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "celulas_positivas_inferiores_30": 0
+        "celulas_positivas_inferiores_30": 0,
+        "politica_divulgacao": "agregados_sem_supressao_1_29_draft"
       },
       "ano": 2021,
       "qualidade_fonte": {
@@ -1276,7 +1279,8 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "celulas_positivas_inferiores_30": 0
+        "celulas_positivas_inferiores_30": 0,
+        "politica_divulgacao": "agregados_sem_supressao_1_29_draft"
       },
       "ano": 2022,
       "qualidade_fonte": {
@@ -1575,7 +1579,8 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "celulas_positivas_inferiores_30": 0
+        "celulas_positivas_inferiores_30": 0,
+        "politica_divulgacao": "agregados_sem_supressao_1_29_draft"
       },
       "ano": 2023,
       "qualidade_fonte": {
@@ -1874,7 +1879,8 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "celulas_positivas_inferiores_30": 0
+        "celulas_positivas_inferiores_30": 0,
+        "politica_divulgacao": "agregados_sem_supressao_1_29_draft"
       },
       "ano": 2024,
       "qualidade_fonte": {
@@ -2173,7 +2179,8 @@
       "qualidade": {
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
-        "celulas_positivas_inferiores_30": 0
+        "celulas_positivas_inferiores_30": 0,
+        "politica_divulgacao": "agregados_sem_supressao_1_29_draft"
       },
       "ano": 2025,
       "qualidade_fonte": {
@@ -2473,7 +2480,8 @@
     "qualidade": {
       "status": "ok",
       "soma_27_ufs_igual_brasil": true,
-      "celulas_positivas_inferiores_30": 0
+      "celulas_positivas_inferiores_30": 0,
+      "politica_divulgacao": "agregados_sem_supressao_1_29_draft"
     },
     "periodo": "2019-2025"
   },

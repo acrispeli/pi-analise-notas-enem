@@ -60,7 +60,7 @@ NOTAS = (
     'O histórico soma participações de edições, não pessoas únicas, e é uma '
     'concordância ponderada pelo volume, não média de Kappas anuais. '
     'Somente estatísticas agregadas com ao menos 30 pares por recorte; '
-    'percentual de concordância exata suprimido quando revelaria células positivas menores que 30; '
+    'percentual de concordância exata divulgado em agregados mesmo com 1 a 29 acordos; '
     'sem marginais/células de contingência exportadas. '
     'Status draft; revisão acadêmica, comparabilidade entre anos e privacidade pendentes.'
 )
@@ -117,12 +117,9 @@ class MomentosKappa:
         k=None if exp<=1e-10 else 1-obs/exp
         if k is not None and not -1.000001<=k<=1.000001:
             raise AssertionError(f'Kappa fora do intervalo [-1,1]: {k}')
-        # Um percentual exato, associado ao denominador divulgado, pode
-        # permitir reconstituir uma contagem rara de acordos ou desacordos.
-        # Por isso a taxa bruta só é exibida quando ambas as células
-        # positivas têm N >= 30, ou quando a célula é zero.
-        discordantes=n-self.iguais
-        mostrar_pct=not (0<self.iguais<MIN_N or 0<discordantes<MIN_N)
+        # O N>=30 mínimo protege a interpretação do Kappa, não oculta
+        # o percentual de concordância dos pares que já foram analisados.
+        mostrar_pct=True
         return {'n_pares_validos':n,
                 'kappa_ponderado_quadratico':None if k is None else round(float(k),6),
                 'situacao':'indefinido_sem_discordancia_esperada' if k is None else 'ok',

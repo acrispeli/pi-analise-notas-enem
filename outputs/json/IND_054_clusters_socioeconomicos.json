@@ -3,7 +3,7 @@
   "slug": "IND_054_clusters_socioeconomicos",
   "title": "Clusters socioeconômicos — MCA + K-Means",
   "module_schema_version": "ind054-module-1.0.0",
-  "generated_at": "2026-10-29T21:15:11.680756+00:00",
+  "generated_at": "2026-10-30T16:30:42.853940+00:00",
   "data_status": "draft",
   "population": "AMOSTRA_SOCIO_ML",
   "population_source": "POP_SOCIO",
@@ -287,7 +287,43 @@
               -0.0,
               -0.0
             ],
-            "perfil_exploratorio": []
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q001",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              },
+              {
+                "variavel": "Q002",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              },
+              {
+                "variavel": "Q003",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              },
+              {
+                "variavel": "Q004",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              },
+              {
+                "variavel": "Q005",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              }
+            ]
           }
         ],
         "method": "MCA_escores_principais_KMeans",
@@ -1266,7 +1302,43 @@
           -0.0,
           -0.0
         ],
-        "perfil_exploratorio": []
+        "perfil_exploratorio": [
+          {
+            "variavel": "aspirador",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          },
+          {
+            "variavel": "banheiros",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          },
+          {
+            "variavel": "carros",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          },
+          {
+            "variavel": "celulares_domicilio",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          },
+          {
+            "variavel": "escolaridade_mae",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          }
+        ]
       }
     ],
     "method": "MCA_escores_principais_KMeans",
@@ -1651,6 +1723,7 @@
       "minimum_cluster_size": 30,
       "category_modalities_collapsed_below_n": 30,
       "profile_percentages_rounded_to_5pp": true,
+      "profile_category_count_threshold": null,
       "cross_indicator_disclosure_review": "pendente"
     },
     "no_personal_identifiers_scores_or_individual_assignments_exported": true,
