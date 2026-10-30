@@ -1,0 +1,747 @@
+{
+  "indicator_id": "IND-034",
+  "supplement_id": "IND-034-980",
+  "titulo": "Recorte exclusivo da nota definitiva 980: competência limitante",
+  "status": "draft",
+  "gerado_em_utc": "2026-10-29T21:24:33.630839+00:00",
+  "population": "POP_980_FINAL",
+  "geography": "BR",
+  "methodology": {
+    "universe": "TP_STATUS_REDACAO=1 e NU_NOTA_REDACAO FINAL=980",
+    "competence_source": "NU_NOTA_COMP1..5 definitivas; NÃO recalcular com AV1/AV2",
+    "pathway": "AV1+AV2; AV1+AV3; AV2+AV3; banca AV4 conferidos por comparação do vetor de competências quando disponível; empates sinalizados",
+    "pattern": "4 competências=200 e 1=180; outros perfis não atribuídos a uma competência",
+    "publication": "Brasil por ano; supressão <30 e complementar; sem cruzamento por percurso ou UF",
+    "privacy": "draft sujeito a revisão cruzada e acadêmica"
+  },
+  "years": {
+    "2019": {
+      "status": "draft",
+      "n_980_total": 9364,
+      "n_980_padrao_4x200_1x180": 9364,
+      "n_980_outros_perfis": 0,
+      "n_percursos_nao_reconciliados": 0,
+      "resumo_competencias": [
+        {
+          "competencia": "C1",
+          "n_980_competencia": 7173,
+          "percentual_entre_980_classificadas": 76.60188,
+          "suprimido": false
+        },
+        {
+          "competencia": "C2",
+          "n_980_competencia": 179,
+          "percentual_entre_980_classificadas": 1.911576,
+          "suprimido": false
+        },
+        {
+          "competencia": "C3",
+          "n_980_competencia": 790,
+          "percentual_entre_980_classificadas": 8.436566,
+          "suprimido": false
+        },
+        {
+          "competencia": "C4",
+          "n_980_competencia": 460,
+          "percentual_entre_980_classificadas": 4.912431,
+          "suprimido": false
+        },
+        {
+          "competencia": "C5",
+          "n_980_competencia": 762,
+          "percentual_entre_980_classificadas": 8.137548,
+          "suprimido": false
+        }
+      ],
+      "percursos_avaliacao": [
+        {
+          "percurso": "AV1_AV2",
+          "n_redacoes": 7231,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV3",
+          "n_redacoes": 1008,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV2_AV3",
+          "n_redacoes": 1125,
+          "suprimido": false
+        },
+        {
+          "percurso": "BANCA_AV4",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "MULTIPLOS_PARES_COMPATIVEIS",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV2_COM_AV3_PRESENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "NAO_RECONCILIADO",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "SEM_DETALHE_SUFICIENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        }
+      ],
+      "privacidade": {
+        "limiar": 30,
+        "complemento_competencias": [],
+        "complemento_percursos": [],
+        "sem_cruzamento_percurso_competencia": true,
+        "ufs_nao_publicadas": true
+      },
+      "qa": {
+        "soma_competencias_fechou": true,
+        "total_percursos_fechou": true,
+        "fonte_colunas_finais": [
+          "NU_NOTA_COMP1",
+          "NU_NOTA_COMP2",
+          "NU_NOTA_COMP3",
+          "NU_NOTA_COMP4",
+          "NU_NOTA_COMP5"
+        ],
+        "soma_final_igual_980": true
+      },
+      "ano": 2019,
+      "fonte": "COMPETENCIAS_REDACAO_2019.csv"
+    },
+    "2020": {
+      "status": "draft",
+      "n_980_total": 12255,
+      "n_980_padrao_4x200_1x180": 12255,
+      "n_980_outros_perfis": 0,
+      "n_percursos_nao_reconciliados": 0,
+      "resumo_competencias": [
+        {
+          "competencia": "C1",
+          "n_980_competencia": 9707,
+          "percentual_entre_980_classificadas": 79.208486,
+          "suprimido": false
+        },
+        {
+          "competencia": "C2",
+          "n_980_competencia": 206,
+          "percentual_entre_980_classificadas": 1.680947,
+          "suprimido": false
+        },
+        {
+          "competencia": "C3",
+          "n_980_competencia": 1176,
+          "percentual_entre_980_classificadas": 9.596083,
+          "suprimido": false
+        },
+        {
+          "competencia": "C4",
+          "n_980_competencia": 465,
+          "percentual_entre_980_classificadas": 3.79437,
+          "suprimido": false
+        },
+        {
+          "competencia": "C5",
+          "n_980_competencia": 701,
+          "percentual_entre_980_classificadas": 5.720114,
+          "suprimido": false
+        }
+      ],
+      "percursos_avaliacao": [
+        {
+          "percurso": "AV1_AV2",
+          "n_redacoes": 9741,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV3",
+          "n_redacoes": 1263,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV2_AV3",
+          "n_redacoes": 1251,
+          "suprimido": false
+        },
+        {
+          "percurso": "BANCA_AV4",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "MULTIPLOS_PARES_COMPATIVEIS",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV2_COM_AV3_PRESENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "NAO_RECONCILIADO",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "SEM_DETALHE_SUFICIENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        }
+      ],
+      "privacidade": {
+        "limiar": 30,
+        "complemento_competencias": [],
+        "complemento_percursos": [],
+        "sem_cruzamento_percurso_competencia": true,
+        "ufs_nao_publicadas": true
+      },
+      "qa": {
+        "soma_competencias_fechou": true,
+        "total_percursos_fechou": true,
+        "fonte_colunas_finais": [
+          "NU_NOTA_COMP1",
+          "NU_NOTA_COMP2",
+          "NU_NOTA_COMP3",
+          "NU_NOTA_COMP4",
+          "NU_NOTA_COMP5"
+        ],
+        "soma_final_igual_980": true
+      },
+      "ano": 2020,
+      "fonte": "COMPETENCIAS_REDACAO_2020.csv"
+    },
+    "2021": {
+      "status": "draft",
+      "n_980_total": 5295,
+      "n_980_padrao_4x200_1x180": 5295,
+      "n_980_outros_perfis": 0,
+      "n_percursos_nao_reconciliados": 0,
+      "resumo_competencias": [
+        {
+          "competencia": "C1",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        },
+        {
+          "competencia": "C2",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        },
+        {
+          "competencia": "C3",
+          "n_980_competencia": 843,
+          "percentual_entre_980_classificadas": 15.92068,
+          "suprimido": false
+        },
+        {
+          "competencia": "C4",
+          "n_980_competencia": 175,
+          "percentual_entre_980_classificadas": 3.305005,
+          "suprimido": false
+        },
+        {
+          "competencia": "C5",
+          "n_980_competencia": 110,
+          "percentual_entre_980_classificadas": 2.077432,
+          "suprimido": false
+        }
+      ],
+      "percursos_avaliacao": [
+        {
+          "percurso": "AV1_AV2",
+          "n_redacoes": 4316,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV3",
+          "n_redacoes": 466,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV2_AV3",
+          "n_redacoes": 513,
+          "suprimido": false
+        },
+        {
+          "percurso": "BANCA_AV4",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "MULTIPLOS_PARES_COMPATIVEIS",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV2_COM_AV3_PRESENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "NAO_RECONCILIADO",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "SEM_DETALHE_SUFICIENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        }
+      ],
+      "privacidade": {
+        "limiar": 30,
+        "complemento_competencias": [
+          "C1",
+          "C2"
+        ],
+        "complemento_percursos": [],
+        "sem_cruzamento_percurso_competencia": true,
+        "ufs_nao_publicadas": true
+      },
+      "qa": {
+        "soma_competencias_fechou": true,
+        "total_percursos_fechou": true,
+        "fonte_colunas_finais": [
+          "NU_NOTA_COMP1",
+          "NU_NOTA_COMP2",
+          "NU_NOTA_COMP3",
+          "NU_NOTA_COMP4",
+          "NU_NOTA_COMP5"
+        ],
+        "soma_final_igual_980": true
+      },
+      "ano": 2021,
+      "fonte": "COMPETENCIAS_REDACAO_2021.csv"
+    },
+    "2022": {
+      "status": "draft",
+      "n_980_total": 6042,
+      "n_980_padrao_4x200_1x180": 6042,
+      "n_980_outros_perfis": 0,
+      "n_percursos_nao_reconciliados": 0,
+      "resumo_competencias": [
+        {
+          "competencia": "C1",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        },
+        {
+          "competencia": "C2",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        },
+        {
+          "competencia": "C3",
+          "n_980_competencia": 920,
+          "percentual_entre_980_classificadas": 15.226746,
+          "suprimido": false
+        },
+        {
+          "competencia": "C4",
+          "n_980_competencia": 158,
+          "percentual_entre_980_classificadas": 2.615028,
+          "suprimido": false
+        },
+        {
+          "competencia": "C5",
+          "n_980_competencia": 145,
+          "percentual_entre_980_classificadas": 2.399868,
+          "suprimido": false
+        }
+      ],
+      "percursos_avaliacao": [
+        {
+          "percurso": "AV1_AV2",
+          "n_redacoes": 4915,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV3",
+          "n_redacoes": 567,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV2_AV3",
+          "n_redacoes": 560,
+          "suprimido": false
+        },
+        {
+          "percurso": "BANCA_AV4",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "MULTIPLOS_PARES_COMPATIVEIS",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV2_COM_AV3_PRESENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "NAO_RECONCILIADO",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "SEM_DETALHE_SUFICIENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        }
+      ],
+      "privacidade": {
+        "limiar": 30,
+        "complemento_competencias": [
+          "C1",
+          "C2"
+        ],
+        "complemento_percursos": [],
+        "sem_cruzamento_percurso_competencia": true,
+        "ufs_nao_publicadas": true
+      },
+      "qa": {
+        "soma_competencias_fechou": true,
+        "total_percursos_fechou": true,
+        "fonte_colunas_finais": [
+          "NU_NOTA_COMP1",
+          "NU_NOTA_COMP2",
+          "NU_NOTA_COMP3",
+          "NU_NOTA_COMP4",
+          "NU_NOTA_COMP5"
+        ],
+        "soma_final_igual_980": true
+      },
+      "ano": 2022,
+      "fonte": "COMPETENCIAS_REDACAO_2022.csv"
+    },
+    "2023": {
+      "status": "draft",
+      "n_980_total": 12836,
+      "n_980_padrao_4x200_1x180": 12836,
+      "n_980_outros_perfis": 0,
+      "n_percursos_nao_reconciliados": 0,
+      "resumo_competencias": [
+        {
+          "competencia": "C1",
+          "n_980_competencia": 11128,
+          "percentual_entre_980_classificadas": 86.693674,
+          "suprimido": false
+        },
+        {
+          "competencia": "C2",
+          "n_980_competencia": 107,
+          "percentual_entre_980_classificadas": 0.833593,
+          "suprimido": false
+        },
+        {
+          "competencia": "C3",
+          "n_980_competencia": 873,
+          "percentual_entre_980_classificadas": 6.801184,
+          "suprimido": false
+        },
+        {
+          "competencia": "C4",
+          "n_980_competencia": 247,
+          "percentual_entre_980_classificadas": 1.924275,
+          "suprimido": false
+        },
+        {
+          "competencia": "C5",
+          "n_980_competencia": 481,
+          "percentual_entre_980_classificadas": 3.747273,
+          "suprimido": false
+        }
+      ],
+      "percursos_avaliacao": [
+        {
+          "percurso": "AV1_AV2",
+          "n_redacoes": 9590,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV3",
+          "n_redacoes": 1592,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV2_AV3",
+          "n_redacoes": 1654,
+          "suprimido": false
+        },
+        {
+          "percurso": "BANCA_AV4",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "MULTIPLOS_PARES_COMPATIVEIS",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV2_COM_AV3_PRESENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "NAO_RECONCILIADO",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "SEM_DETALHE_SUFICIENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        }
+      ],
+      "privacidade": {
+        "limiar": 30,
+        "complemento_competencias": [],
+        "complemento_percursos": [],
+        "sem_cruzamento_percurso_competencia": true,
+        "ufs_nao_publicadas": true
+      },
+      "qa": {
+        "soma_competencias_fechou": true,
+        "total_percursos_fechou": true,
+        "fonte_colunas_finais": [
+          "NU_NOTA_COMP1",
+          "NU_NOTA_COMP2",
+          "NU_NOTA_COMP3",
+          "NU_NOTA_COMP4",
+          "NU_NOTA_COMP5"
+        ],
+        "soma_final_igual_980": true
+      },
+      "ano": 2023,
+      "fonte": "COMPETENCIAS_REDACAO_2023.csv"
+    },
+    "2024": {
+      "status": "draft",
+      "n_980_total": 2308,
+      "n_980_padrao_4x200_1x180": 2308,
+      "n_980_outros_perfis": 0,
+      "n_percursos_nao_reconciliados": 0,
+      "resumo_competencias": [
+        {
+          "competencia": "C1",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        },
+        {
+          "competencia": "C2",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        },
+        {
+          "competencia": "C3",
+          "n_980_competencia": 254,
+          "percentual_entre_980_classificadas": 11.005199,
+          "suprimido": false
+        },
+        {
+          "competencia": "C4",
+          "n_980_competencia": 47,
+          "percentual_entre_980_classificadas": 2.036395,
+          "suprimido": false
+        },
+        {
+          "competencia": "C5",
+          "n_980_competencia": 47,
+          "percentual_entre_980_classificadas": 2.036395,
+          "suprimido": false
+        }
+      ],
+      "percursos_avaliacao": [
+        {
+          "percurso": "AV1_AV2",
+          "n_redacoes": 1797,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV3",
+          "n_redacoes": 233,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV2_AV3",
+          "n_redacoes": 278,
+          "suprimido": false
+        },
+        {
+          "percurso": "BANCA_AV4",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "MULTIPLOS_PARES_COMPATIVEIS",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV2_COM_AV3_PRESENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "NAO_RECONCILIADO",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "SEM_DETALHE_SUFICIENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        }
+      ],
+      "privacidade": {
+        "limiar": 30,
+        "complemento_competencias": [
+          "C1",
+          "C2"
+        ],
+        "complemento_percursos": [],
+        "sem_cruzamento_percurso_competencia": true,
+        "ufs_nao_publicadas": true
+      },
+      "qa": {
+        "soma_competencias_fechou": true,
+        "total_percursos_fechou": true,
+        "fonte_colunas_finais": [
+          "NU_NOTA_COMP1",
+          "NU_NOTA_COMP2",
+          "NU_NOTA_COMP3",
+          "NU_NOTA_COMP4",
+          "NU_NOTA_COMP5"
+        ],
+        "soma_final_igual_980": true
+      },
+      "ano": 2024,
+      "fonte": "COMPETENCIAS_REDACAO_2024.csv"
+    },
+    "2025": {
+      "status": "draft",
+      "n_980_total": 840,
+      "n_980_padrao_4x200_1x180": 840,
+      "n_980_outros_perfis": 0,
+      "n_percursos_nao_reconciliados": 0,
+      "resumo_competencias": [
+        {
+          "competencia": "C1",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        },
+        {
+          "competencia": "C2",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        },
+        {
+          "competencia": "C3",
+          "n_980_competencia": 96,
+          "percentual_entre_980_classificadas": 11.428571,
+          "suprimido": false
+        },
+        {
+          "competencia": "C4",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        },
+        {
+          "competencia": "C5",
+          "n_980_competencia": null,
+          "percentual_entre_980_classificadas": null,
+          "suprimido": true
+        }
+      ],
+      "percursos_avaliacao": [
+        {
+          "percurso": "AV1_AV2",
+          "n_redacoes": 615,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV3",
+          "n_redacoes": 113,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV2_AV3",
+          "n_redacoes": 112,
+          "suprimido": false
+        },
+        {
+          "percurso": "BANCA_AV4",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "MULTIPLOS_PARES_COMPATIVEIS",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "AV1_AV2_COM_AV3_PRESENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "NAO_RECONCILIADO",
+          "n_redacoes": 0,
+          "suprimido": false
+        },
+        {
+          "percurso": "SEM_DETALHE_SUFICIENTE",
+          "n_redacoes": 0,
+          "suprimido": false
+        }
+      ],
+      "privacidade": {
+        "limiar": 30,
+        "complemento_competencias": [
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "complemento_percursos": [],
+        "sem_cruzamento_percurso_competencia": true,
+        "ufs_nao_publicadas": true
+      },
+      "qa": {
+        "soma_competencias_fechou": true,
+        "total_percursos_fechou": true,
+        "fonte_colunas_finais": [
+          "NU_NOTA_COMP1",
+          "NU_NOTA_COMP2",
+          "NU_NOTA_COMP3",
+          "NU_NOTA_COMP4",
+          "NU_NOTA_COMP5"
+        ],
+        "soma_final_igual_980": true
+      },
+      "ano": 2025,
+      "fonte": "RESULTADOS_2025.csv"
+    }
+  }
+}
