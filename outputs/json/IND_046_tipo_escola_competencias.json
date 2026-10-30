@@ -3,7 +3,7 @@
   "titulo": "Tipo de escola × competências C1–C5",
   "population": "POP_SOCIO_VALID",
   "status": "draft",
-  "generated_utc": "2026-10-28T23:38:23.784877+00:00",
+  "generated_utc": "2026-10-30T03:05:22.151841+00:00",
   "anos_solicitados": [
     2019,
     2020,
@@ -48631,11 +48631,8 @@
         "histogramas_c1_c5_reconciliados": true,
         "supressao_identica_ao_ind045": true,
         "n_redacoes_com_soma_competencias_divergente": 0,
-        "categorias_suprimidas_globalmente": {
-          "F": "primaria_grupo_pequeno_em_alguma_uf",
-          "C": "complementar_contra_inferencia_por_totais"
-        },
-        "categorias_geograficas_suprimidas": 56,
+        "categorias_suprimidas_globalmente": {},
+        "categorias_geograficas_suprimidas": 0,
         "revisao_privacidade_cruzada_pendente": true
       },
       "recortes": {
@@ -48762,55 +48759,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 58229,
+              "percentual_total_validas": 1.939215,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 58229,
+                  "media": 128.7403,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 24.0089
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 58229,
+                  "media": 155.9611,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 33.4474
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 58229,
+                  "media": 127.5581,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 30.9645
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 58229,
+                  "media": 138.7123,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.8909
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 58229,
+                  "media": 123.9984,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.6402
                 }
               }
             },
@@ -48930,55 +48927,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 8079,
+              "percentual_total_validas": 0.269057,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 8079,
+                  "media": 122.0597,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 26.1318
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 8079,
+                  "media": 144.4758,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 36.5483
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 8079,
+                  "media": 117.2249,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.2276
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 8079,
+                  "media": 127.7213,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 160.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.0826
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 8079,
+                  "media": 106.585,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 57.7578
                 }
               }
             },
@@ -49220,55 +49217,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 203,
+              "percentual_total_validas": 1.179752,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 203,
+                  "media": 127.2906,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 150.0,
+                  "iqr": 30.0,
+                  "desvio_padrao": 25.8463
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 203,
+                  "media": 157.2414,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.1581
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 203,
+                  "media": 128.7685,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.8056
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 203,
+                  "media": 142.9557,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 36.2685
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 203,
+                  "media": 128.5714,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 58.8178
                 }
               }
             },
@@ -49388,55 +49385,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 36,
+              "percentual_total_validas": 0.209217,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 36,
+                  "media": 121.6667,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 25.5495
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 36,
+                  "media": 140.0,
+                  "mediana": 130.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.9603
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 36,
+                  "media": 117.7778,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 125.0,
+                  "iqr": 25.0,
+                  "desvio_padrao": 31.5446
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 36,
+                  "media": 128.8889,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 28.0652
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 36,
+                  "media": 106.6667,
+                  "mediana": 100.0,
+                  "q1": 80.0,
+                  "q3": 140.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 49.8888
                 }
               }
             },
@@ -49678,55 +49675,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 1012,
+              "percentual_total_validas": 1.684813,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1012,
+                  "media": 124.8814,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 24.1268
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1012,
+                  "media": 151.3439,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.3686
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1012,
+                  "media": 122.5494,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 30.6746
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1012,
+                  "media": 132.3715,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.2207
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1012,
+                  "media": 114.6245,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 57.8566
                 }
               }
             },
@@ -49846,55 +49843,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 135,
+              "percentual_total_validas": 0.224753,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 135,
+                  "media": 116.7407,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 120.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 24.2466
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 135,
+                  "media": 136.5926,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.656
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 135,
+                  "media": 108.4444,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 120.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 31.5962
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 135,
+                  "media": 118.6667,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.3576
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 135,
+                  "media": 90.2222,
+                  "mediana": 80.0,
+                  "q1": 40.0,
+                  "q3": 140.0,
+                  "iqr": 100.0,
+                  "desvio_padrao": 57.9075
                 }
               }
             },
@@ -50136,55 +50133,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 233,
+              "percentual_total_validas": 1.169679,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 233,
+                  "media": 126.7811,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 22.089
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 233,
+                  "media": 151.073,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.1564
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 233,
+                  "media": 124.6352,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.4318
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 233,
+                  "media": 136.4807,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.2963
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 233,
+                  "media": 117.5107,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 57.2831
                 }
               }
             },
@@ -50304,55 +50301,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 70,
+              "percentual_total_validas": 0.351406,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 70,
+                  "media": 113.4286,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 120.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 26.3431
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 70,
+                  "media": 127.7143,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 32.4773
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 70,
+                  "media": 102.5714,
+                  "mediana": 100.0,
+                  "q1": 80.0,
+                  "q3": 120.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 29.8418
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 70,
+                  "media": 111.4286,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 120.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 32.5263
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 70,
+                  "media": 80.5714,
+                  "mediana": 80.0,
+                  "q1": 40.0,
+                  "q3": 115.0,
+                  "iqr": 75.0,
+                  "desvio_padrao": 53.8751
                 }
               }
             },
@@ -50594,55 +50591,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 755,
+              "percentual_total_validas": 1.416006,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 755,
+                  "media": 128.8477,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 23.4534
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 755,
+                  "media": 149.245,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.8191
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 755,
+                  "media": 124.6623,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.1627
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 755,
+                  "media": 135.4702,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.421
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 755,
+                  "media": 109.6689,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 58.0593
                 }
               }
             },
@@ -50762,55 +50759,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 156,
+              "percentual_total_validas": 0.292579,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 156,
+                  "media": 122.5641,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 24.3603
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 156,
+                  "media": 141.5385,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.9335
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 156,
+                  "media": 117.6923,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.1293
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 156,
+                  "media": 125.8974,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.9115
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 156,
+                  "media": 109.2308,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 140.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 52.6909
                 }
               }
             },
@@ -51052,55 +51049,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 4875,
+              "percentual_total_validas": 1.913708,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 4875,
+                  "media": 125.7559,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 24.543
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 4875,
+                  "media": 153.9241,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.4725
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 4875,
+                  "media": 125.2923,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 30.8813
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 4875,
+                  "media": 135.4379,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.4336
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 4875,
+                  "media": 119.7785,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 56.1999
                 }
               }
             },
@@ -51220,55 +51217,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 619,
+              "percentual_total_validas": 0.242992,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 619,
+                  "media": 120.4523,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 27.0425
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 619,
+                  "media": 145.622,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.5986
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 619,
+                  "media": 118.4491,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.2815
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 619,
+                  "media": 127.4313,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 160.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 33.9394
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 619,
+                  "media": 108.0129,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 57.8709
                 }
               }
             },
@@ -51510,55 +51507,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 2012,
+              "percentual_total_validas": 1.112217,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2012,
+                  "media": 131.5905,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 24.8665
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2012,
+                  "media": 159.7217,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 33.1801
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2012,
+                  "media": 132.1769,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.2661
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2012,
+                  "media": 143.8072,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.4456
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2012,
+                  "media": 131.5805,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.8584
                 }
               }
             },
@@ -51678,55 +51675,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 630,
+              "percentual_total_validas": 0.348259,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 630,
+                  "media": 129.6508,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 24.421
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 630,
+                  "media": 154.0317,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.5299
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 630,
+                  "media": 126.5714,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 32.4745
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 630,
+                  "media": 139.3651,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.3036
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 630,
+                  "media": 124.2857,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 53.9728
                 }
               }
             },
@@ -51968,55 +51965,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 1091,
+              "percentual_total_validas": 2.040396,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1091,
+                  "media": 128.6893,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 22.9299
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1091,
+                  "media": 153.9322,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 32.3624
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1091,
+                  "media": 126.4345,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 28.4657
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1091,
+                  "media": 136.8836,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.5416
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1091,
+                  "media": 118.6618,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 53.8257
                 }
               }
             },
@@ -52136,55 +52133,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 229,
+              "percentual_total_validas": 0.428278,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 229,
+                  "media": 128.559,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 27.1519
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 229,
+                  "media": 149.1703,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 36.5034
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 229,
+                  "media": 124.5415,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 160.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.469
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 229,
+                  "media": 133.2751,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.7358
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 229,
+                  "media": 112.8384,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.5817
                 }
               }
             },
@@ -52426,55 +52423,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 741,
+              "percentual_total_validas": 1.410837,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 741,
+                  "media": 130.9312,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 24.2751
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 741,
+                  "media": 157.9217,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 33.5807
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 741,
+                  "media": 129.9865,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.2514
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 741,
+                  "media": 140.3779,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.9066
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 741,
+                  "media": 130.2564,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 54.9475
                 }
               }
             },
@@ -52594,55 +52591,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 88,
+              "percentual_total_validas": 0.167549,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 88,
+                  "media": 120.2273,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 26.713
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 88,
+                  "media": 145.9091,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 32.3558
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 88,
+                  "media": 115.4545,
+                  "mediana": 120.0,
+                  "q1": 95.0,
+                  "q3": 140.0,
+                  "iqr": 45.0,
+                  "desvio_padrao": 34.8669
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 88,
+                  "media": 127.2727,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 160.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.1855
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 88,
+                  "media": 104.0909,
+                  "mediana": 100.0,
+                  "q1": 80.0,
+                  "q3": 145.0,
+                  "iqr": 65.0,
+                  "desvio_padrao": 57.5373
                 }
               }
             },
@@ -52884,55 +52881,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 1953,
+              "percentual_total_validas": 1.859929,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1953,
+                  "media": 129.7491,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 24.1261
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1953,
+                  "media": 159.0374,
+                  "mediana": 160.0,
+                  "q1": 140.0,
+                  "q3": 180.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.7709
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1953,
+                  "media": 129.7696,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 30.7343
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1953,
+                  "media": 142.6523,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.9291
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1953,
+                  "media": 131.0087,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.0925
                 }
               }
             },
@@ -53052,55 +53049,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 377,
+              "percentual_total_validas": 0.359034,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 377,
+                  "media": 127.1088,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 27.3764
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 377,
+                  "media": 152.3077,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.0101
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 377,
+                  "media": 122.7586,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.0072
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 377,
+                  "media": 136.3926,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 36.0921
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 377,
+                  "media": 116.6048,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.2125
                 }
               }
             },
@@ -53342,55 +53339,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 2164,
+              "percentual_total_validas": 1.755838,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2164,
+                  "media": 127.7172,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 25.2192
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2164,
+                  "media": 156.0259,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.5891
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2164,
+                  "media": 127.2828,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.661
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2164,
+                  "media": 139.5379,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.8649
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2164,
+                  "media": 123.9741,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 180.0,
+                  "iqr": 100.0,
+                  "desvio_padrao": 56.892
                 }
               }
             },
@@ -53510,55 +53507,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 364,
+              "percentual_total_validas": 0.295344,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 364,
+                  "media": 122.6374,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 27.8471
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 364,
+                  "media": 147.967,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 38.5911
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 364,
+                  "media": 120.3846,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.8088
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 364,
+                  "media": 130.8791,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 37.8879
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 364,
+                  "media": 111.3187,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 59.1461
                 }
               }
             },
@@ -53800,55 +53797,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 5420,
+              "percentual_total_validas": 1.906651,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5420,
+                  "media": 134.6827,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 23.5954
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5420,
+                  "media": 162.8893,
+                  "mediana": 160.0,
+                  "q1": 140.0,
+                  "q3": 200.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 32.148
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5420,
+                  "media": 135.2103,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.0637
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5420,
+                  "media": 147.2768,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.4343
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5420,
+                  "media": 138.2509,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 53.0839
                 }
               }
             },
@@ -53968,55 +53965,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 674,
+              "percentual_total_validas": 0.2371,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 674,
+                  "media": 125.8754,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 24.9133
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 674,
+                  "media": 149.0208,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.7612
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 674,
+                  "media": 121.7804,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.1962
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 674,
+                  "media": 133.2047,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.8902
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 674,
+                  "media": 113.6795,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 57.7608
                 }
               }
             },
@@ -54258,55 +54255,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 819,
+              "percentual_total_validas": 2.370409,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 819,
+                  "media": 129.0598,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 23.3353
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 819,
+                  "media": 153.2112,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 33.1323
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 819,
+                  "media": 126.862,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 30.7861
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 819,
+                  "media": 137.6068,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.137
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 819,
+                  "media": 119.8046,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 56.3693
                 }
               }
             },
@@ -54426,55 +54423,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 137,
+              "percentual_total_validas": 0.396515,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 137,
+                  "media": 116.9343,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 26.1261
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 137,
+                  "media": 135.1825,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.8851
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 137,
+                  "media": 110.8029,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 120.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.4851
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 137,
+                  "media": 119.4161,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.8258
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 137,
+                  "media": 87.5912,
+                  "mediana": 100.0,
+                  "q1": 40.0,
+                  "q3": 120.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 56.6784
                 }
               }
             },
@@ -54716,55 +54713,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 1051,
+              "percentual_total_validas": 2.404099,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1051,
+                  "media": 128.1827,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 23.2151
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1051,
+                  "media": 155.6422,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 33.4568
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1051,
+                  "media": 126.6984,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 31.1536
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1051,
+                  "media": 139.3149,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.0971
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1051,
+                  "media": 124.1865,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 180.0,
+                  "iqr": 100.0,
+                  "desvio_padrao": 56.231
                 }
               }
             },
@@ -54884,55 +54881,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 140,
+              "percentual_total_validas": 0.320242,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 140,
+                  "media": 122.5714,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 25.7286
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 140,
+                  "media": 144.1429,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 36.9166
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 140,
+                  "media": 117.2857,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.9925
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 140,
+                  "media": 124.4286,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.8091
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 140,
+                  "media": 104.2857,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 140.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 55.0213
                 }
               }
             },
@@ -55174,55 +55171,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 2663,
+              "percentual_total_validas": 1.547725,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2663,
+                  "media": 127.5554,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 25.5322
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2663,
+                  "media": 155.0131,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.313
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2663,
+                  "media": 127.3676,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.8028
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2663,
+                  "media": 140.6684,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.3939
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2663,
+                  "media": 125.0244,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 180.0,
+                  "iqr": 100.0,
+                  "desvio_padrao": 58.1023
                 }
               }
             },
@@ -55342,55 +55339,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 515,
+              "percentual_total_validas": 0.299316,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 515,
+                  "media": 117.7087,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 25.4549
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 515,
+                  "media": 139.767,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 36.122
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 515,
+                  "media": 112.5049,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.7707
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 515,
+                  "media": 123.7282,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.6297
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 515,
+                  "media": 102.5243,
+                  "mediana": 100.0,
+                  "q1": 60.0,
+                  "q3": 140.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 57.4459
                 }
               }
             },
@@ -55632,55 +55629,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 1662,
+              "percentual_total_validas": 1.820652,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1662,
+                  "media": 128.1829,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 25.7629
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1662,
+                  "media": 156.8472,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 32.7654
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1662,
+                  "media": 127.8099,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.1757
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1662,
+                  "media": 140.8063,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.029
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1662,
+                  "media": 129.2539,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 56.0883
                 }
               }
             },
@@ -55800,55 +55797,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 352,
+              "percentual_total_validas": 0.385601,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 352,
+                  "media": 125.3977,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 26.0542
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 352,
+                  "media": 152.7273,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 36.1728
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 352,
+                  "media": 123.1818,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.4579
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 352,
+                  "media": 134.6591,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.241
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 352,
+                  "media": 119.8864,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 59.1991
                 }
               }
             },
@@ -56090,55 +56087,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 2814,
+              "percentual_total_validas": 1.675449,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2814,
+                  "media": 124.6979,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 25.0876
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2814,
+                  "media": 154.1436,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.6671
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2814,
+                  "media": 125.2026,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.4187
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2814,
+                  "media": 135.963,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.579
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2814,
+                  "media": 118.4719,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 57.2238
                 }
               }
             },
@@ -56258,55 +56255,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 528,
+              "percentual_total_validas": 0.31437,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 528,
+                  "media": 127.803,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 26.1063
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 528,
+                  "media": 154.2424,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.9918
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 528,
+                  "media": 126.4015,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 30.8086
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 528,
+                  "media": 137.2348,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.5195
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 528,
+                  "media": 119.5455,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 56.9272
                 }
               }
             },
@@ -56548,55 +56545,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 1446,
+              "percentual_total_validas": 1.836704,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1446,
+                  "media": 131.5491,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 25.3377
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1446,
+                  "media": 162.3928,
+                  "mediana": 160.0,
+                  "q1": 140.0,
+                  "q3": 200.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.3857
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1446,
+                  "media": 133.9419,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.6664
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1446,
+                  "media": 147.9391,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 36.6892
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1446,
+                  "media": 133.7068,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 57.1035
                 }
               }
             },
@@ -56716,55 +56713,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 247,
+              "percentual_total_validas": 0.313738,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 247,
+                  "media": 126.5587,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 25.2096
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 247,
+                  "media": 153.0364,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.4966
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 247,
+                  "media": 125.1822,
+                  "mediana": 120.0,
+                  "q1": 110.0,
+                  "q3": 140.0,
+                  "iqr": 30.0,
+                  "desvio_padrao": 31.7739
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 247,
+                  "media": 138.4615,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 36.9602
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 247,
+                  "media": 120.2429,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.1914
                 }
               }
             },
@@ -57006,55 +57003,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 2936,
+              "percentual_total_validas": 2.251793,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2936,
+                  "media": 128.8079,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 22.65
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2936,
+                  "media": 156.0354,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 32.1835
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2936,
+                  "media": 125.9401,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 29.8658
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2936,
+                  "media": 136.2943,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.8015
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 2936,
+                  "media": 121.6894,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 51.6921
                 }
               }
             },
@@ -57174,55 +57171,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 221,
+              "percentual_total_validas": 0.169498,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 221,
+                  "media": 117.5566,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 120.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 23.9797
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 221,
+                  "media": 135.9276,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 37.7138
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 221,
+                  "media": 109.3213,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 140.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.5689
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 221,
+                  "media": 118.914,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.6603
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 221,
+                  "media": 93.9367,
+                  "mediana": 100.0,
+                  "q1": 60.0,
+                  "q3": 120.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 53.0122
                 }
               }
             },
@@ -57464,55 +57461,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 5881,
+              "percentual_total_validas": 2.885417,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5881,
+                  "media": 127.6654,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 23.2566
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5881,
+                  "media": 153.2392,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 33.1921
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5881,
+                  "media": 125.1522,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 29.9097
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5881,
+                  "media": 135.8612,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.0063
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 5881,
+                  "media": 117.1501,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 56.889
                 }
               }
             },
@@ -57632,55 +57629,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 570,
+              "percentual_total_validas": 0.279661,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 570,
+                  "media": 114.4912,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 120.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 23.9261
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 570,
+                  "media": 134.1754,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.7135
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 570,
+                  "media": 107.614,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 120.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 29.5983
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 570,
+                  "media": 116.8772,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 120.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 29.5119
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 570,
+                  "media": 90.386,
+                  "mediana": 80.0,
+                  "q1": 60.0,
+                  "q3": 120.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 52.5176
                 }
               }
             },
@@ -57922,55 +57919,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 935,
+              "percentual_total_validas": 1.247049,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 935,
+                  "media": 125.6471,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 23.7046
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 935,
+                  "media": 152.0428,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 32.4935
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 935,
+                  "media": 124.2353,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 30.3989
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 935,
+                  "media": 134.8663,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.8755
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 935,
+                  "media": 119.9572,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.438
                 }
               }
             },
@@ -58090,55 +58087,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 146,
+              "percentual_total_validas": 0.194726,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 146,
+                  "media": 129.1781,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 29.1549
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 146,
+                  "media": 156.0274,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 200.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 37.1314
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 146,
+                  "media": 128.6301,
+                  "mediana": 120.0,
+                  "q1": 105.0,
+                  "q3": 160.0,
+                  "iqr": 55.0,
+                  "desvio_padrao": 35.027
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 146,
+                  "media": 141.2329,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 38.4795
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 146,
+                  "media": 130.5479,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 58.6233
                 }
               }
             },
@@ -58380,55 +58377,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 486,
+              "percentual_total_validas": 1.911805,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 486,
+                  "media": 128.642,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 24.5664
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 486,
+                  "media": 157.6132,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 33.396
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 486,
+                  "media": 128.2716,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.0034
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 486,
+                  "media": 138.642,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.8571
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 486,
+                  "media": 127.572,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.8536
                 }
               }
             },
@@ -58548,55 +58545,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 86,
+              "percentual_total_validas": 0.338303,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 86,
+                  "media": 116.0465,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 29.066
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 86,
+                  "media": 140.6977,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 40.8568
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 86,
+                  "media": 112.7907,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 140.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.6876
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 86,
+                  "media": 123.9535,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 160.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 40.3265
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 86,
+                  "media": 102.7907,
+                  "mediana": 100.0,
+                  "q1": 60.0,
+                  "q3": 160.0,
+                  "iqr": 100.0,
+                  "desvio_padrao": 59.3894
                 }
               }
             },
@@ -58838,55 +58835,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 112,
+              "percentual_total_validas": 1.362033,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 112,
+                  "media": 126.25,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 24.6448
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 112,
+                  "media": 149.4643,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 36.4456
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 112,
+                  "media": 119.8214,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.3481
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 112,
+                  "media": 129.1071,
+                  "mediana": 120.0,
+                  "q1": 115.0,
+                  "q3": 160.0,
+                  "iqr": 45.0,
+                  "desvio_padrao": 32.281
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 112,
+                  "media": 103.75,
+                  "mediana": 120.0,
+                  "q1": 75.0,
+                  "q3": 160.0,
+                  "iqr": 85.0,
+                  "desvio_padrao": 58.8297
                 }
               }
             },
@@ -59006,55 +59003,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 11,
+              "percentual_total_validas": 0.133771,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 11,
+                  "media": 125.4545,
+                  "mediana": 120.0,
+                  "q1": 110.0,
+                  "q3": 140.0,
+                  "iqr": 30.0,
+                  "desvio_padrao": 19.2418
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 11,
+                  "media": 149.0909,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 170.0,
+                  "iqr": 50.0,
+                  "desvio_padrao": 27.4539
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 11,
+                  "media": 116.3636,
+                  "mediana": 120.0,
+                  "q1": 90.0,
+                  "q3": 140.0,
+                  "iqr": 50.0,
+                  "desvio_padrao": 30.5325
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 11,
+                  "media": 134.5455,
+                  "mediana": 160.0,
+                  "q1": 100.0,
+                  "q3": 160.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 40.9797
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 11,
+                  "media": 92.7273,
+                  "mediana": 80.0,
+                  "q1": 40.0,
+                  "q3": 140.0,
+                  "iqr": 100.0,
+                  "desvio_padrao": 65.1001
                 }
               }
             },
@@ -59296,55 +59293,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 3490,
+              "percentual_total_validas": 2.352307,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 3490,
+                  "media": 125.8395,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 23.5416
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 3490,
+                  "media": 149.2722,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.151
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 3490,
+                  "media": 121.255,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 30.9529
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 3490,
+                  "media": 131.3467,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.385
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 3490,
+                  "media": 113.1748,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 160.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.7178
                 }
               }
             },
@@ -59464,55 +59461,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 622,
+              "percentual_total_validas": 0.419236,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 622,
+                  "media": 109.4534,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 120.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 25.0149
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 622,
+                  "media": 124.5659,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 34.8038
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 622,
+                  "media": 98.4887,
+                  "mediana": 100.0,
+                  "q1": 80.0,
+                  "q3": 120.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.3003
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 622,
+                  "media": 107.6206,
+                  "mediana": 100.0,
+                  "q1": 80.0,
+                  "q3": 120.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 30.7327
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 622,
+                  "media": 76.9132,
+                  "mediana": 80.0,
+                  "q1": 40.0,
+                  "q3": 120.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 53.3217
                 }
               }
             },
@@ -59754,55 +59751,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 1490,
+              "percentual_total_validas": 2.194436,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1490,
+                  "media": 131.3691,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 22.8183
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1490,
+                  "media": 160.4027,
+                  "mediana": 160.0,
+                  "q1": 140.0,
+                  "q3": 180.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.582
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1490,
+                  "media": 130.7517,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 29.5578
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1490,
+                  "media": 141.9463,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 33.3253
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 1490,
+                  "media": 128.698,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 160.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 53.791
                 }
               }
             },
@@ -59922,55 +59919,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 115,
+              "percentual_total_validas": 0.169369,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 115,
+                  "media": 119.3043,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 25.5623
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 115,
+                  "media": 138.4348,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 37.685
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 115,
+                  "media": 111.3043,
+                  "mediana": 100.0,
+                  "q1": 90.0,
+                  "q3": 130.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.2091
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 115,
+                  "media": 119.4783,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.4598
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 115,
+                  "media": 93.3913,
+                  "mediana": 100.0,
+                  "q1": 60.0,
+                  "q3": 130.0,
+                  "iqr": 70.0,
+                  "desvio_padrao": 56.9193
                 }
               }
             },
@@ -60212,55 +60209,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 916,
+              "percentual_total_validas": 1.799501,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 916,
+                  "media": 127.4672,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 25.4077
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 916,
+                  "media": 158.1004,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 34.0994
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 916,
+                  "media": 127.7293,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.7962
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 916,
+                  "media": 140.3493,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.1523
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 916,
+                  "media": 129.8253,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 57.2703
                 }
               }
             },
@@ -60380,55 +60377,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 197,
+              "percentual_total_validas": 0.387011,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 197,
+                  "media": 125.3807,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 25.4399
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 197,
+                  "media": 153.2995,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 35.1902
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 197,
+                  "media": 123.1472,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.1204
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 197,
+                  "media": 135.6345,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 35.7548
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 197,
+                  "media": 123.2487,
+                  "mediana": 120.0,
+                  "q1": 80.0,
+                  "q3": 180.0,
+                  "iqr": 100.0,
+                  "desvio_padrao": 57.4023
                 }
               }
             },
@@ -60670,55 +60667,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 10697,
+              "percentual_total_validas": 2.245085,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 10697,
+                  "media": 129.5167,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 22.7558
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 10697,
+                  "media": 156.3242,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 32.291
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 10697,
+                  "media": 127.7611,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 29.1426
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 10697,
+                  "media": 137.9695,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 31.6093
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 10697,
+                  "media": 124.5845,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 160.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 52.6717
                 }
               }
             },
@@ -60838,55 +60835,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 717,
+              "percentual_total_validas": 0.150484,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 717,
+                  "media": 122.622,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 23.1143
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 717,
+                  "media": 141.2273,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.4172
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 717,
+                  "media": 114.6722,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 120.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 30.8333
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 717,
+                  "media": 123.152,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 140.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 30.5705
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 717,
+                  "media": 98.2706,
+                  "mediana": 100.0,
+                  "q1": 60.0,
+                  "q3": 140.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 55.7572
                 }
               }
             },
@@ -61128,55 +61125,55 @@
               "codigo_escola": "C",
               "descricao_categoria": "Parte pública e parte privada com bolsa integral",
               "ordem": 2,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar_contra_inferencia_por_totais",
+              "n_redacoes": 372,
+              "percentual_total_validas": 1.596772,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 372,
+                  "media": 128.7097,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 24.4829
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 372,
+                  "media": 155.3226,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 32.9655
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 372,
+                  "media": 127.7419,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.3
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 372,
+                  "media": 141.3441,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 34.4124
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 372,
+                  "media": 124.8387,
+                  "mediana": 120.0,
+                  "q1": 100.0,
+                  "q3": 180.0,
+                  "iqr": 80.0,
+                  "desvio_padrao": 56.6656
                 }
               }
             },
@@ -61296,55 +61293,55 @@
               "codigo_escola": "F",
               "descricao_categoria": "Não frequentou ensino médio",
               "ordem": 5,
-              "n_redacoes": null,
-              "percentual_total_validas": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria_grupo_pequeno_em_alguma_uf",
+              "n_redacoes": 97,
+              "percentual_total_validas": 0.416363,
+              "suprimido": false,
+              "motivo_supressao": null,
               "competencias": {
                 "C1": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 97,
+                  "media": 130.9278,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 22.9784
                 },
                 "C2": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 97,
+                  "media": 157.1134,
+                  "mediana": 160.0,
+                  "q1": 120.0,
+                  "q3": 180.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 32.6164
                 },
                 "C3": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 97,
+                  "media": 127.4227,
+                  "mediana": 120.0,
+                  "q1": 120.0,
+                  "q3": 140.0,
+                  "iqr": 20.0,
+                  "desvio_padrao": 29.6119
                 },
                 "C4": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 97,
+                  "media": 140.2062,
+                  "mediana": 140.0,
+                  "q1": 120.0,
+                  "q3": 160.0,
+                  "iqr": 40.0,
+                  "desvio_padrao": 32.0431
                 },
                 "C5": {
-                  "n_redacoes": null,
-                  "media": null,
-                  "mediana": null,
-                  "q1": null,
-                  "q3": null,
-                  "iqr": null,
-                  "desvio_padrao": null
+                  "n_redacoes": 97,
+                  "media": 125.7732,
+                  "mediana": 140.0,
+                  "q1": 100.0,
+                  "q3": 160.0,
+                  "iqr": 60.0,
+                  "desvio_padrao": 51.9285
                 }
               }
             },

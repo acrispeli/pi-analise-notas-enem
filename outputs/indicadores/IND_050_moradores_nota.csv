@@ -257,8 +257,8 @@
 2020;BR;Q005;4;4 moradores;3;892506;33.365783;606.0358;600.0;480.0;740.0;260.0;179.839;False;
 2020;BR;Q005;5_6;5 a 6 moradores;4;550992;20.598494;581.4621;560.0;460.0;680.0;220.0;173.9383;False;
 2020;BR;Q005;7_9;7 a 9 moradores;5;80980;3.027387;545.7743;540.0;440.0;640.0;200.0;160.1917;False;
-2020;BR;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;BR;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;BR;Q005;10_20;10 a 20 (códigos disponíveis);6;8819;0.329693;525.7716;520.0;420.0;600.0;180.0;153.3371;False;
+2020;BR;Q005;SEM_RESPOSTA;Não informou;7;29047;1.085904;576.6447;580.0;520.0;640.0;120.0;126.7896;False;
 2020;BR;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;AC;Q005;1;1 morador;0;615;3.136315;519.9675;540.0;400.0;600.0;200.0;152.7525;False;
 2020;AC;Q005;2;2 moradores;1;2311;11.785405;525.6685;520.0;400.0;600.0;200.0;159.422;False;
@@ -266,8 +266,8 @@
 2020;AC;Q005;4;4 moradores;3;5345;27.257892;557.8447;560.0;440.0;640.0;200.0;169.859;False;
 2020;AC;Q005;5_6;5 a 6 moradores;4;5237;26.707124;544.3307;540.0;420.0;640.0;220.0;162.9442;False;
 2020;AC;Q005;7_9;7 a 9 moradores;5;1321;6.736703;526.2226;540.0;420.0;600.0;180.0;144.4414;False;
-2020;AC;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AC;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AC;Q005;10_20;10 a 20 (códigos disponíveis);6;155;0.790453;515.3548;520.0;400.0;610.0;210.0;149.0411;False;
+2020;AC;Q005;SEM_RESPOSTA;Não informou;7;385;1.963384;556.4156;560.0;500.0;620.0;120.0;122.165;False;
 2020;AC;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;AL;Q005;1;1 morador;0;1355;2.573062;547.3801;560.0;420.0;640.0;220.0;164.0282;False;
 2020;AL;Q005;2;2 moradores;1;6372;12.100036;559.9121;560.0;440.0;660.0;220.0;169.6686;False;
@@ -275,8 +275,8 @@
 2020;AL;Q005;4;4 moradores;3;17067;32.409183;592.5248;580.0;460.0;700.0;240.0;179.2148;False;
 2020;AL;Q005;5_6;5 a 6 moradores;4;12327;23.408215;578.3889;560.0;460.0;680.0;220.0;174.8374;False;
 2020;AL;Q005;7_9;7 a 9 moradores;5;1987;3.773191;549.2199;540.0;440.0;640.0;200.0;162.8692;False;
-2020;AL;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AL;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AL;Q005;10_20;10 a 20 (códigos disponíveis);6;173;0.328516;504.3931;500.0;380.0;600.0;220.0;157.8149;False;
+2020;AL;Q005;SEM_RESPOSTA;Não informou;7;644;1.222916;575.4969;580.0;520.0;640.0;120.0;131.9193;False;
 2020;AL;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;AP;Q005;1;1 morador;0;413;2.016897;526.7312;520.0;400.0;620.0;220.0;156.0475;False;
 2020;AP;Q005;2;2 moradores;1;1658;8.096889;550.386;560.0;440.0;640.0;200.0;160.1295;False;
@@ -284,8 +284,8 @@
 2020;AP;Q005;4;4 moradores;3;5051;24.666699;562.6727;560.0;460.0;640.0;180.0;161.7698;False;
 2020;AP;Q005;5_6;5 a 6 moradores;4;6381;31.161791;545.0086;540.0;440.0;620.0;180.0;156.9282;False;
 2020;AP;Q005;7_9;7 a 9 moradores;5;2487;12.145334;526.4817;540.0;420.0;600.0;180.0;145.8206;False;
-2020;AP;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AP;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AP;Q005;10_20;10 a 20 (códigos disponíveis);6;560;2.734776;521.2857;520.0;440.0;600.0;160.0;134.2324;False;
+2020;AP;Q005;SEM_RESPOSTA;Não informou;7;267;1.303902;578.2772;560.0;520.0;640.0;120.0;124.7681;False;
 2020;AP;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;AM;Q005;1;1 morador;0;1296;2.641286;540.1389;560.0;460.0;600.0;140.0;135.6909;False;
 2020;AM;Q005;2;2 moradores;1;4883;9.951699;555.4372;560.0;480.0;620.0;140.0;138.7224;False;
@@ -293,8 +293,8 @@
 2020;AM;Q005;4;4 moradores;3;13043;26.582021;564.7765;560.0;480.0;640.0;160.0;145.7266;False;
 2020;AM;Q005;5_6;5 a 6 moradores;4;13923;28.375487;547.8489;560.0;480.0;620.0;140.0;137.5803;False;
 2020;AM;Q005;7_9;7 a 9 moradores;5;4443;9.054966;530.8755;540.0;460.0;600.0;140.0;131.1499;False;
-2020;AM;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AM;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AM;Q005;10_20;10 a 20 (códigos disponíveis);6;879;1.791428;510.2389;520.0;420.0;580.0;160.0;127.9641;False;
+2020;AM;Q005;SEM_RESPOSTA;Não informou;7;908;1.850531;540.793;540.0;480.0;600.0;120.0;120.0818;False;
 2020;AM;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;BA;Q005;1;1 morador;0;6510;3.067499;537.7942;540.0;400.0;640.0;240.0;168.9197;False;
 2020;BA;Q005;2;2 moradores;1;29387;13.847096;562.0363;560.0;440.0;660.0;220.0;172.2073;False;
@@ -302,8 +302,8 @@
 2020;BA;Q005;4;4 moradores;3;68273;32.170102;587.3757;580.0;460.0;700.0;240.0;178.1015;False;
 2020;BA;Q005;5_6;5 a 6 moradores;4;43215;20.362822;565.3967;560.0;440.0;660.0;220.0;172.5122;False;
 2020;BA;Q005;7_9;7 a 9 moradores;5;6233;2.936977;533.9868;540.0;400.0;620.0;220.0;162.199;False;
-2020;BA;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;BA;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;BA;Q005;10_20;10 a 20 (códigos disponíveis);6;642;0.302509;503.7383;520.0;400.0;580.0;180.0;144.2211;False;
+2020;BA;Q005;SEM_RESPOSTA;Não informou;7;1067;0.502768;574.8828;580.0;520.0;640.0;120.0;129.324;False;
 2020;BA;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;CE;Q005;1;1 morador;0;3109;1.916439;562.6954;560.0;440.0;660.0;220.0;173.6004;False;
 2020;CE;Q005;2;2 moradores;1;16799;10.355179;588.0338;580.0;480.0;700.0;220.0;177.1779;False;
@@ -311,8 +311,8 @@
 2020;CE;Q005;4;4 moradores;3;57595;35.502503;601.472;600.0;480.0;740.0;260.0;185.1648;False;
 2020;CE;Q005;5_6;5 a 6 moradores;4;37285;22.983086;592.0703;580.0;460.0;720.0;260.0;182.2447;False;
 2020;CE;Q005;7_9;7 a 9 moradores;5;5262;3.243583;571.642;560.0;440.0;680.0;240.0;172.4644;False;
-2020;CE;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;CE;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;CE;Q005;10_20;10 a 20 (códigos disponíveis);6;525;0.323619;548.5714;540.0;420.0;660.0;240.0;171.52;False;
+2020;CE;Q005;SEM_RESPOSTA;Não informou;7;1015;0.625663;592.197;580.0;520.0;660.0;140.0;127.5946;False;
 2020;CE;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;DF;Q005;1;1 morador;0;1913;3.491513;537.9509;540.0;420.0;620.0;200.0;152.5472;False;
 2020;DF;Q005;2;2 moradores;1;7022;12.816207;571.1222;560.0;460.0;660.0;200.0;166.6633;False;
@@ -320,8 +320,8 @@
 2020;DF;Q005;4;4 moradores;3;17582;32.089797;611.7404;600.0;500.0;740.0;240.0;175.5785;False;
 2020;DF;Q005;5_6;5 a 6 moradores;4;12374;22.584413;591.0409;580.0;480.0;700.0;220.0;171.9091;False;
 2020;DF;Q005;7_9;7 a 9 moradores;5;1946;3.551743;560.1439;560.0;440.0;640.0;200.0;162.616;False;
-2020;DF;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;DF;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;DF;Q005;10_20;10 a 20 (códigos disponíveis);6;201;0.366855;540.8955;540.0;400.0;640.0;240.0;164.3718;False;
+2020;DF;Q005;SEM_RESPOSTA;Não informou;7;1219;2.224859;595.3404;580.0;540.0;660.0;120.0;131.4198;False;
 2020;DF;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;ES;Q005;1;1 morador;0;1628;3.366836;549.484;560.0;420.0;640.0;220.0;170.044;False;
 2020;ES;Q005;2;2 moradores;1;6694;13.843736;582.8653;580.0;460.0;680.0;220.0;178.1231;False;
@@ -329,8 +329,8 @@
 2020;ES;Q005;4;4 moradores;3;16703;34.543161;620.4083;600.0;500.0;760.0;260.0;186.104;False;
 2020;ES;Q005;5_6;5 a 6 moradores;4;8307;17.179551;591.778;580.0;460.0;700.0;240.0;180.2924;False;
 2020;ES;Q005;7_9;7 a 9 moradores;5;820;1.695827;539.0488;540.0;400.0;640.0;240.0;164.5291;False;
-2020;ES;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;ES;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;ES;Q005;10_20;10 a 20 (códigos disponíveis);6;70;0.144766;500.2857;490.0;400.0;575.0;175.0;155.2691;False;
+2020;ES;Q005;SEM_RESPOSTA;Não informou;7;451;0.932705;589.7118;580.0;520.0;640.0;120.0;127.4156;False;
 2020;ES;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;GO;Q005;1;1 morador;0;2841;3.034219;562.4358;560.0;440.0;660.0;220.0;179.1127;False;
 2020;GO;Q005;2;2 moradores;1;11262;12.027939;578.3999;560.0;460.0;680.0;220.0;178.1035;False;
@@ -338,8 +338,8 @@
 2020;GO;Q005;4;4 moradores;3;34301;36.633843;609.8924;600.0;480.0;760.0;280.0;187.0359;False;
 2020;GO;Q005;5_6;5 a 6 moradores;4;19501;20.827281;584.0572;560.0;460.0;700.0;240.0;180.6068;False;
 2020;GO;Q005;7_9;7 a 9 moradores;5;2068;2.208647;544.3617;540.0;440.0;640.0;200.0;163.2875;False;
-2020;GO;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;GO;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;GO;Q005;10_20;10 a 20 (códigos disponíveis);6;148;0.158066;510.4054;520.0;415.0;600.0;185.0;147.858;False;
+2020;GO;Q005;SEM_RESPOSTA;Não informou;7;524;0.559638;602.0992;580.0;540.0;680.0;140.0;139.3804;False;
 2020;GO;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;MA;Q005;1;1 morador;0;2160;1.863885;533.2963;540.0;400.0;620.0;220.0;162.3994;False;
 2020;MA;Q005;2;2 moradores;1;11238;9.697378;553.7195;560.0;440.0;640.0;200.0;165.0451;False;
@@ -347,8 +347,8 @@
 2020;MA;Q005;4;4 moradores;3;36498;31.494473;568.784;560.0;440.0;660.0;220.0;172.8883;False;
 2020;MA;Q005;5_6;5 a 6 moradores;4;33080;28.545048;555.0459;540.0;440.0;640.0;200.0;167.0054;False;
 2020;MA;Q005;7_9;7 a 9 moradores;5;6636;5.726268;531.8083;540.0;420.0;620.0;200.0;156.1183;False;
-2020;MA;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MA;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MA;Q005;10_20;10 a 20 (códigos disponíveis);6;739;0.63769;520.8119;520.0;400.0;600.0;200.0;151.9931;False;
+2020;MA;Q005;SEM_RESPOSTA;Não informou;7;524;0.452165;580.687;580.0;520.0;640.0;120.0;128.0904;False;
 2020;MA;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;MG;Q005;1;1 morador;0;8480;3.198045;574.4033;560.0;440.0;680.0;240.0;179.6003;False;
 2020;MG;Q005;2;2 moradores;1;33015;12.450879;601.4224;580.0;480.0;720.0;240.0;182.532;False;
@@ -356,8 +356,8 @@
 2020;MG;Q005;4;4 moradores;3;94163;35.511499;637.0058;620.0;500.0;800.0;300.0;188.7514;False;
 2020;MG;Q005;5_6;5 a 6 moradores;4;49418;18.636909;607.3722;600.0;480.0;740.0;260.0;183.6785;False;
 2020;MG;Q005;7_9;7 a 9 moradores;5;5221;1.968985;553.2082;540.0;440.0;640.0;200.0;166.2666;False;
-2020;MG;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MG;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MG;Q005;10_20;10 a 20 (códigos disponíveis);6;391;0.147457;524.5524;520.0;400.0;600.0;200.0;158.886;False;
+2020;MG;Q005;SEM_RESPOSTA;Não informou;7;2813;1.060861;598.7202;600.0;540.0;660.0;120.0;127.0097;False;
 2020;MG;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;MS;Q005;1;1 morador;0;1296;3.808069;537.8858;540.0;400.0;640.0;240.0;168.4026;False;
 2020;MS;Q005;2;2 moradores;1;4719;13.865954;546.7981;540.0;420.0;640.0;220.0;165.3648;False;
@@ -365,8 +365,8 @@
 2020;MS;Q005;4;4 moradores;3;11170;32.821085;582.0824;560.0;460.0;700.0;240.0;176.5444;False;
 2020;MS;Q005;5_6;5 a 6 moradores;4;6707;19.707343;559.511;560.0;440.0;660.0;220.0;167.7183;False;
 2020;MS;Q005;7_9;7 a 9 moradores;5;792;2.327153;530.9343;540.0;420.0;620.0;200.0;152.1965;False;
-2020;MS;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MS;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MS;Q005;10_20;10 a 20 (códigos disponíveis);6;64;0.188053;503.75;490.0;420.0;580.0;160.0;127.224;False;
+2020;MS;Q005;SEM_RESPOSTA;Não informou;7;519;1.52499;563.5067;580.0;500.0;620.0;120.0;123.5351;False;
 2020;MS;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;MT;Q005;1;1 morador;0;1808;4.355157;529.2146;520.0;380.0;620.0;240.0;168.9434;False;
 2020;MT;Q005;2;2 moradores;1;5481;13.202775;551.0673;540.0;420.0;640.0;220.0;172.9229;False;
@@ -374,8 +374,8 @@
 2020;MT;Q005;4;4 moradores;3;13445;32.386665;583.6564;580.0;460.0;700.0;240.0;179.1584;False;
 2020;MT;Q005;5_6;5 a 6 moradores;4;8489;20.448523;562.6858;560.0;440.0;660.0;220.0;171.8526;False;
 2020;MT;Q005;7_9;7 a 9 moradores;5;989;2.382329;526.8756;520.0;420.0;600.0;180.0;159.1244;False;
-2020;MT;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MT;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MT;Q005;10_20;10 a 20 (códigos disponíveis);6;98;0.236065;505.9184;520.0;400.0;580.0;180.0;146.0559;False;
+2020;MT;Q005;SEM_RESPOSTA;Não informou;7;797;1.919834;556.261;560.0;480.0;620.0;140.0;129.8414;False;
 2020;MT;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;PA;Q005;1;1 morador;0;3508;2.220576;536.8415;540.0;420.0;620.0;200.0;159.6213;False;
 2020;PA;Q005;2;2 moradores;1;16289;10.310995;557.4412;560.0;440.0;640.0;200.0;165.5506;False;
@@ -383,8 +383,8 @@
 2020;PA;Q005;4;4 moradores;3;47792;30.252505;579.987;560.0;460.0;680.0;220.0;176.3496;False;
 2020;PA;Q005;5_6;5 a 6 moradores;4;43042;27.245738;565.1438;560.0;440.0;660.0;220.0;168.0209;False;
 2020;PA;Q005;7_9;7 a 9 moradores;5;10292;6.514872;542.0424;540.0;440.0;620.0;180.0;157.7886;False;
-2020;PA;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PA;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PA;Q005;10_20;10 a 20 (códigos disponíveis);6;1565;0.990651;532.4217;540.0;420.0;620.0;200.0;151.8148;False;
+2020;PA;Q005;SEM_RESPOSTA;Não informou;7;226;0.143059;592.8319;580.0;505.0;660.0;155.0;143.2244;False;
 2020;PA;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;PB;Q005;1;1 morador;0;2248;2.570524;550.9431;560.0;400.0;640.0;240.0;174.5217;False;
 2020;PB;Q005;2;2 moradores;1;10431;11.92755;565.9572;560.0;440.0;660.0;220.0;174.07;False;
@@ -392,8 +392,8 @@
 2020;PB;Q005;4;4 moradores;3;28941;33.093204;604.6888;600.0;480.0;740.0;260.0;183.1159;False;
 2020;PB;Q005;5_6;5 a 6 moradores;4;19988;22.855705;588.7062;580.0;460.0;700.0;240.0;178.1948;False;
 2020;PB;Q005;7_9;7 a 9 moradores;5;2746;3.139972;553.2411;540.0;440.0;660.0;220.0;165.3319;False;
-2020;PB;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PB;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PB;Q005;10_20;10 a 20 (códigos disponíveis);6;205;0.234412;537.0732;560.0;400.0;640.0;240.0;163.6869;False;
+2020;PB;Q005;SEM_RESPOSTA;Não informou;7;1238;1.415618;580.517;580.0;520.0;640.0;120.0;130.4338;False;
 2020;PB;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;PE;Q005;1;1 morador;0;3777;2.417589;545.9253;540.0;400.0;640.0;240.0;170.1554;False;
 2020;PE;Q005;2;2 moradores;1;19347;12.383665;568.0147;560.0;440.0;660.0;220.0;173.6467;False;
@@ -401,8 +401,8 @@
 2020;PE;Q005;4;4 moradores;3;53080;33.975549;597.1469;580.0;480.0;720.0;240.0;180.1915;False;
 2020;PE;Q005;5_6;5 a 6 moradores;4;33701;21.571401;582.3519;580.0;460.0;700.0;240.0;176.4053;False;
 2020;PE;Q005;7_9;7 a 9 moradores;5;4889;3.129361;548.4639;540.0;440.0;640.0;200.0;164.5262;False;
-2020;PE;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PE;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PE;Q005;10_20;10 a 20 (códigos disponíveis);6;390;0.249632;531.9487;540.0;400.0;640.0;240.0;168.1568;False;
+2020;PE;Q005;SEM_RESPOSTA;Não informou;7;889;0.569033;577.2328;580.0;520.0;640.0;120.0;125.9564;False;
 2020;PE;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;PI;Q005;1;1 morador;0;1391;2.036216;558.706;560.0;430.0;640.0;210.0;175.4249;False;
 2020;PI;Q005;2;2 moradores;1;7008;10.258662;567.851;560.0;440.0;660.0;220.0;178.8314;False;
@@ -410,8 +410,8 @@
 2020;PI;Q005;4;4 moradores;3;23210;33.975964;596.0457;580.0;460.0;740.0;280.0;188.9579;False;
 2020;PI;Q005;5_6;5 a 6 moradores;4;17565;25.712529;578.0529;560.0;440.0;680.0;240.0;182.0;False;
 2020;PI;Q005;7_9;7 a 9 moradores;5;2849;4.170509;547.1113;540.0;420.0;640.0;220.0;167.8484;False;
-2020;PI;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PI;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PI;Q005;10_20;10 a 20 (códigos disponíveis);6;298;0.436227;518.8591;520.0;405.0;600.0;195.0;154.4248;False;
+2020;PI;Q005;SEM_RESPOSTA;Não informou;7;466;0.682154;585.6652;580.0;520.0;640.0;120.0;131.9273;False;
 2020;PI;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;PR;Q005;1;1 morador;0;3842;3.443918;560.1301;560.0;440.0;660.0;220.0;169.7366;False;
 2020;PR;Q005;2;2 moradores;1;14543;13.036151;571.3718;560.0;460.0;660.0;200.0;164.8491;False;
@@ -419,8 +419,8 @@
 2020;PR;Q005;4;4 moradores;3;39654;35.545317;599.2561;580.0;500.0;720.0;220.0;168.0403;False;
 2020;PR;Q005;5_6;5 a 6 moradores;4;18530;16.610045;577.32;560.0;480.0;680.0;200.0;161.35;False;
 2020;PR;Q005;7_9;7 a 9 moradores;5;1508;1.351751;540.2387;540.0;440.0;620.0;180.0;149.526;False;
-2020;PR;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PR;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PR;Q005;10_20;10 a 20 (códigos disponíveis);6;108;0.09681;541.4815;530.0;415.0;640.0;225.0;159.2506;False;
+2020;PR;Q005;SEM_RESPOSTA;Não informou;7;2051;1.838489;573.057;580.0;520.0;640.0;120.0;119.1198;False;
 2020;PR;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;RJ;Q005;1;1 morador;0;5730;3.18636;545.7277;540.0;420.0;640.0;220.0;162.1404;False;
 2020;RJ;Q005;2;2 moradores;1;28038;15.591479;591.819;580.0;480.0;700.0;220.0;174.7849;False;
@@ -428,8 +428,8 @@
 2020;RJ;Q005;4;4 moradores;3;58133;32.326822;631.8989;620.0;520.0;780.0;260.0;181.4088;False;
 2020;RJ;Q005;5_6;5 a 6 moradores;4;29217;16.247101;604.3639;580.0;480.0;720.0;240.0;176.4087;False;
 2020;RJ;Q005;7_9;7 a 9 moradores;5;3173;1.764454;564.7022;560.0;460.0;660.0;200.0;165.7236;False;
-2020;RJ;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RJ;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RJ;Q005;10_20;10 a 20 (códigos disponíveis);6;255;0.141801;559.0588;560.0;440.0;660.0;220.0;176.828;False;
+2020;RJ;Q005;SEM_RESPOSTA;Não informou;7;2303;1.280661;573.7907;580.0;500.0;640.0;140.0;133.3004;False;
 2020;RJ;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;RN;Q005;1;1 morador;0;2033;3.009533;553.0841;560.0;420.0;640.0;220.0;165.1781;False;
 2020;RN;Q005;2;2 moradores;1;8701;12.880448;574.0559;560.0;460.0;680.0;220.0;172.7996;False;
@@ -437,8 +437,8 @@
 2020;RN;Q005;4;4 moradores;3;21706;32.132283;609.1726;600.0;480.0;740.0;260.0;181.0519;False;
 2020;RN;Q005;5_6;5 a 6 moradores;4;14217;21.046009;594.4503;580.0;480.0;720.0;240.0;179.0402;False;
 2020;RN;Q005;7_9;7 a 9 moradores;5;2057;3.045062;558.4735;560.0;440.0;640.0;200.0;167.0209;False;
-2020;RN;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RN;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RN;Q005;10_20;10 a 20 (códigos disponíveis);6;171;0.253138;550.5263;540.0;440.0;640.0;200.0;170.4938;False;
+2020;RN;Q005;SEM_RESPOSTA;Não informou;7;737;1.091011;592.2388;580.0;540.0;660.0;120.0;130.6222;False;
 2020;RN;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;RO;Q005;1;1 morador;0;1107;4.64521;523.8844;520.0;400.0;600.0;200.0;158.2118;False;
 2020;RO;Q005;2;2 moradores;1;3495;14.665771;536.1602;540.0;420.0;620.0;200.0;159.829;False;
@@ -446,8 +446,8 @@
 2020;RO;Q005;4;4 moradores;3;7323;30.728883;561.5458;560.0;440.0;660.0;220.0;172.0789;False;
 2020;RO;Q005;5_6;5 a 6 moradores;4;4780;20.057908;551.5146;560.0;440.0;640.0;200.0;164.6235;False;
 2020;RO;Q005;7_9;7 a 9 moradores;5;613;2.57228;510.6362;520.0;400.0;600.0;200.0;143.2656;False;
-2020;RO;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RO;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RO;Q005;10_20;10 a 20 (códigos disponíveis);6;57;0.239184;486.3158;480.0;380.0;560.0;180.0;124.1481;False;
+2020;RO;Q005;SEM_RESPOSTA;Não informou;7;257;1.078427;559.3774;560.0;500.0;620.0;120.0;120.4903;False;
 2020;RO;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;RR;Q005;1;1 morador;0;164;2.484472;497.439;500.0;360.0;580.0;220.0;154.7643;False;
 2020;RR;Q005;2;2 moradores;1;665;10.074231;546.4662;540.0;420.0;640.0;220.0;160.307;False;
@@ -455,8 +455,8 @@
 2020;RR;Q005;4;4 moradores;3;1904;28.844115;561.1555;560.0;440.0;660.0;220.0;170.3171;False;
 2020;RR;Q005;5_6;5 a 6 moradores;4;1939;29.374337;542.197;540.0;420.0;620.0;200.0;164.8677;False;
 2020;RR;Q005;7_9;7 a 9 moradores;5;460;6.968641;509.2609;500.0;400.0;580.0;180.0;147.8259;False;
-2020;RR;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RR;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RR;Q005;10_20;10 a 20 (códigos disponíveis);6;80;1.211938;510.5;520.0;415.0;580.0;165.0;136.7105;False;
+2020;RR;Q005;SEM_RESPOSTA;Não informou;7;16;0.242388;583.75;580.0;560.0;650.0;90.0;124.7435;False;
 2020;RR;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;RS;Q005;1;1 morador;0;5834;5.009703;558.1796;560.0;440.0;640.0;200.0;169.7373;False;
 2020;RS;Q005;2;2 moradores;1;20575;17.66792;576.312;560.0;460.0;680.0;220.0;169.6827;False;
@@ -464,8 +464,8 @@
 2020;RS;Q005;4;4 moradores;3;35160;30.192179;608.8549;600.0;500.0;720.0;220.0;175.5238;False;
 2020;RS;Q005;5_6;5 a 6 moradores;4;15377;13.204355;579.1338;560.0;460.0;680.0;220.0;169.8061;False;
 2020;RS;Q005;7_9;7 a 9 moradores;5;1504;1.291497;549.4282;540.0;440.0;620.0;180.0;151.9998;False;
-2020;RS;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RS;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RS;Q005;10_20;10 a 20 (códigos disponíveis);6;128;0.109915;516.25;530.0;380.0;580.0;200.0;151.1363;False;
+2020;RS;Q005;SEM_RESPOSTA;Não informou;7;985;0.845828;567.6345;560.0;520.0;640.0;120.0;127.6042;False;
 2020;RS;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;SC;Q005;1;1 morador;0;2183;3.949201;552.7073;560.0;440.0;640.0;200.0;162.6542;False;
 2020;SC;Q005;2;2 moradores;1;7624;13.792355;582.2665;580.0;480.0;680.0;200.0;169.2723;False;
@@ -473,8 +473,8 @@
 2020;SC;Q005;4;4 moradores;3;19198;34.730539;610.2459;600.0;500.0;740.0;240.0;173.4696;False;
 2020;SC;Q005;5_6;5 a 6 moradores;4;8117;14.684227;583.2623;580.0;480.0;680.0;200.0;168.5375;False;
 2020;SC;Q005;7_9;7 a 9 moradores;5;747;1.351376;554.7256;540.0;460.0;640.0;180.0;155.6522;False;
-2020;SC;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;SC;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;SC;Q005;10_20;10 a 20 (códigos disponíveis);6;55;0.099499;546.1818;560.0;430.0;650.0;220.0;156.6872;False;
+2020;SC;Q005;SEM_RESPOSTA;Não informou;7;824;1.490674;593.4466;580.0;540.0;660.0;120.0;123.7276;False;
 2020;SC;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;SE;Q005;1;1 morador;0;1394;3.070552;558.6801;560.0;420.0;640.0;220.0;173.5063;False;
 2020;SE;Q005;2;2 moradores;1;5985;13.18311;583.5188;580.0;460.0;700.0;240.0;180.1152;False;
@@ -482,8 +482,8 @@
 2020;SE;Q005;4;4 moradores;3;14241;31.368532;619.2852;600.0;480.0;760.0;280.0;189.0679;False;
 2020;SE;Q005;5_6;5 a 6 moradores;4;9779;21.540122;597.3433;580.0;480.0;720.0;240.0;181.7262;False;
 2020;SE;Q005;7_9;7 a 9 moradores;5;1630;3.590387;561.7669;560.0;440.0;660.0;220.0;169.0357;False;
-2020;SE;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;SE;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;SE;Q005;10_20;10 a 20 (códigos disponíveis);6;204;0.449349;539.5098;540.0;420.0;620.0;200.0;161.3234;False;
+2020;SE;Q005;SEM_RESPOSTA;Não informou;7;474;1.044076;574.5992;560.0;520.0;640.0;120.0;132.7014;False;
 2020;SE;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;SP;Q005;1;1 morador;0;10346;2.566252;544.999;540.0;420.0;640.0;220.0;165.7086;False;
 2020;SP;Q005;2;2 moradores;1;49222;12.20917;584.6723;580.0;480.0;680.0;200.0;168.4722;False;
@@ -491,8 +491,8 @@
 2020;SP;Q005;4;4 moradores;3;143653;35.632113;622.4669;600.0;520.0;760.0;240.0;171.6417;False;
 2020;SP;Q005;5_6;5 a 6 moradores;4;71733;17.792864;594.7034;580.0;480.0;700.0;220.0;168.3666;False;
 2020;SP;Q005;7_9;7 a 9 moradores;5;7430;1.842959;555.9246;560.0;440.0;640.0;200.0;158.7996;False;
-2020;SP;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;SP;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;SP;Q005;10_20;10 a 20 (códigos disponíveis);6;574;0.142377;539.8258;540.0;420.0;620.0;200.0;160.7711;False;
+2020;SP;Q005;SEM_RESPOSTA;Não informou;7;7216;1.789878;567.6136;580.0;520.0;620.0;100.0;119.7645;False;
 2020;SP;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2020;TO;Q005;1;1 morador;0;848;3.306816;545.283;540.0;400.0;620.0;220.0;175.0159;False;
 2020;TO;Q005;2;2 moradores;1;2891;11.273592;550.2802;540.0;420.0;640.0;220.0;167.4875;False;
@@ -500,8 +500,8 @@
 2020;TO;Q005;4;4 moradores;3;8275;32.268757;568.3915;560.0;440.0;680.0;240.0;176.4352;False;
 2020;TO;Q005;5_6;5 a 6 moradores;4;6763;26.372641;555.2447;540.0;420.0;640.0;220.0;171.2156;False;
 2020;TO;Q005;7_9;7 a 9 moradores;5;877;3.419903;526.4766;520.0;400.0;620.0;220.0;165.3496;False;
-2020;TO;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;TO;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;TO;Q005;10_20;10 a 20 (códigos disponíveis);6;84;0.327562;494.5238;500.0;375.0;560.0;185.0;141.9038;False;
+2020;TO;Q005;SEM_RESPOSTA;Não informou;7;232;0.904695;569.3966;570.0;500.0;620.0;120.0;130.3562;False;
 2020;TO;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;BR;Q005;1;1 morador;0;50638;2.207606;602.1616;580.0;520.0;680.0;160.0;142.4762;False;
 2021;BR;Q005;2;2 moradores;1;278399;12.137037;625.5354;600.0;520.0;720.0;200.0;148.8472;False;
@@ -509,8 +509,8 @@
 2021;BR;Q005;4;4 moradores;3;812217;35.40928;647.7842;620.0;540.0;760.0;220.0;154.3453;False;
 2021;BR;Q005;5_6;5 a 6 moradores;4;459528;20.033508;625.3427;600.0;520.0;720.0;200.0;152.0485;False;
 2021;BR;Q005;7_9;7 a 9 moradores;5;58662;2.557419;589.2551;580.0;500.0;660.0;160.0;143.7995;False;
-2021;BR;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;BR;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;BR;Q005;10_20;10 a 20 (códigos disponíveis);6;6045;0.263537;565.1348;560.0;480.0;640.0;160.0;137.0036;False;
+2021;BR;Q005;SEM_RESPOSTA;Não informou;7;1;4.4e-05;520.0;520.0;520.0;520.0;0.0;0.0;False;
 2021;BR;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;AC;Q005;1;1 morador;0;339;2.554635;591.3274;580.0;510.0;660.0;150.0;139.1812;False;
 2021;AC;Q005;2;2 moradores;1;1544;11.635268;591.6192;580.0;500.0;660.0;160.0;141.8292;False;
@@ -518,8 +518,8 @@
 2021;AC;Q005;4;4 moradores;3;3993;30.09043;612.8024;580.0;520.0;700.0;180.0;151.793;False;
 2021;AC;Q005;5_6;5 a 6 moradores;4;3467;26.126601;597.1214;580.0;500.0;680.0;180.0;146.0303;False;
 2021;AC;Q005;7_9;7 a 9 moradores;5;705;5.312735;580.6525;560.0;480.0;640.0;160.0;143.9981;False;
-2021;AC;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AC;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AC;Q005;10_20;10 a 20 (códigos disponíveis);6;94;0.708365;539.7872;540.0;460.0;600.0;140.0;127.5462;False;
+2021;AC;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;AC;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;AL;Q005;1;1 morador;0;738;1.884384;595.122;580.0;500.0;660.0;160.0;141.3065;False;
 2021;AL;Q005;2;2 moradores;1;4407;11.252681;618.5069;600.0;520.0;720.0;200.0;150.46;False;
@@ -527,8 +527,8 @@
 2021;AL;Q005;4;4 moradores;3;13715;35.019406;645.6989;620.0;540.0;760.0;220.0;156.552;False;
 2021;AL;Q005;5_6;5 a 6 moradores;4;9118;23.281585;630.6449;600.0;520.0;740.0;220.0;152.3843;False;
 2021;AL;Q005;7_9;7 a 9 moradores;5;1259;3.214687;608.3717;580.0;520.0;720.0;200.0;153.1085;False;
-2021;AL;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AL;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AL;Q005;10_20;10 a 20 (códigos disponíveis);6;99;0.252783;590.9091;580.0;520.0;640.0;120.0;130.1211;False;
+2021;AL;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;AL;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;AP;Q005;1;1 morador;0;222;1.649331;588.2883;580.0;520.0;640.0;120.0;134.3913;False;
 2021;AP;Q005;2;2 moradores;1;1150;8.543834;609.113;580.0;520.0;680.0;160.0;142.6668;False;
@@ -536,8 +536,8 @@
 2021;AP;Q005;4;4 moradores;3;3717;27.615156;614.8776;600.0;520.0;700.0;180.0;147.619;False;
 2021;AP;Q005;5_6;5 a 6 moradores;4;4151;30.839525;596.3093;580.0;500.0;660.0;160.0;141.8903;False;
 2021;AP;Q005;7_9;7 a 9 moradores;5;1351;10.037147;573.057;560.0;500.0;640.0;140.0;130.3326;False;
-2021;AP;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AP;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AP;Q005;10_20;10 a 20 (códigos disponíveis);6;310;2.30312;555.8065;540.0;480.0;620.0;140.0;126.0178;False;
+2021;AP;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;AP;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;AM;Q005;1;1 morador;0;844;1.825141;563.7915;560.0;480.0;620.0;140.0;126.3443;False;
 2021;AM;Q005;2;2 moradores;1;4407;9.530091;581.5158;560.0;500.0;640.0;140.0;136.2983;False;
@@ -545,8 +545,8 @@
 2021;AM;Q005;4;4 moradores;3;13254;28.661635;581.6689;560.0;480.0;660.0;180.0;141.0951;False;
 2021;AM;Q005;5_6;5 a 6 moradores;4;13334;28.834634;559.9565;560.0;480.0;620.0;140.0;133.8819;False;
 2021;AM;Q005;7_9;7 a 9 moradores;5;4138;8.948381;538.9657;540.0;460.0;600.0;140.0;125.6165;False;
-2021;AM;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AM;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AM;Q005;10_20;10 a 20 (códigos disponíveis);6;815;1.762429;522.5521;520.0;440.0;600.0;160.0;118.6979;False;
+2021;AM;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;AM;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;BA;Q005;1;1 morador;0;4170;2.329141;594.0815;580.0;520.0;660.0;140.0;137.2134;False;
 2021;BA;Q005;2;2 moradores;1;23839;13.315199;616.3279;600.0;520.0;700.0;180.0;147.1098;False;
@@ -554,8 +554,8 @@
 2021;BA;Q005;4;4 moradores;3;61321;34.250653;636.3376;620.0;540.0;740.0;200.0;152.8567;False;
 2021;BA;Q005;5_6;5 a 6 moradores;4;35200;19.66085;617.633;600.0;520.0;720.0;200.0;150.0712;False;
 2021;BA;Q005;7_9;7 a 9 moradores;5;4484;2.504524;583.2605;580.0;480.0;660.0;180.0;142.323;False;
-2021;BA;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;BA;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;BA;Q005;10_20;10 a 20 (códigos disponíveis);6;429;0.239617;558.3683;560.0;480.0;620.0;140.0;131.9113;False;
+2021;BA;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;BA;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;CE;Q005;1;1 morador;0;1960;1.383048;609.6224;600.0;520.0;700.0;180.0;151.0786;False;
 2021;CE;Q005;2;2 moradores;1;13933;9.831635;633.73;620.0;540.0;740.0;200.0;154.62;False;
@@ -563,8 +563,8 @@
 2021;CE;Q005;4;4 moradores;3;51425;36.287363;633.4534;620.0;520.0;760.0;240.0;164.1325;False;
 2021;CE;Q005;5_6;5 a 6 moradores;4;32933;23.238731;622.963;600.0;520.0;740.0;220.0;161.9474;False;
 2021;CE;Q005;7_9;7 a 9 moradores;5;4152;2.929803;597.5578;580.0;500.0;680.0;180.0;155.4821;False;
-2021;CE;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;CE;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;CE;Q005;10_20;10 a 20 (códigos disponíveis);6;361;0.254735;582.8255;580.0;480.0;660.0;180.0;157.599;False;
+2021;CE;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;CE;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;DF;Q005;1;1 morador;0;1353;2.913248;591.5595;580.0;520.0;660.0;140.0;133.1477;False;
 2021;DF;Q005;2;2 moradores;1;5838;12.570247;626.9647;600.0;540.0;720.0;180.0;144.5436;False;
@@ -572,8 +572,8 @@
 2021;DF;Q005;4;4 moradores;3;16235;34.956829;655.9249;640.0;560.0;760.0;200.0;150.9297;False;
 2021;DF;Q005;5_6;5 a 6 moradores;4;10240;22.048533;632.8086;600.0;540.0;720.0;180.0;147.9551;False;
 2021;DF;Q005;7_9;7 a 9 moradores;5;1357;2.921861;608.4598;580.0;520.0;700.0;180.0;143.3027;False;
-2021;DF;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;DF;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;DF;Q005;10_20;10 a 20 (códigos disponíveis);6;134;0.288526;586.5672;580.0;500.0;640.0;140.0;128.1971;False;
+2021;DF;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;DF;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;ES;Q005;1;1 morador;0;1146;2.640066;597.8534;580.0;520.0;680.0;160.0;140.1717;False;
 2021;ES;Q005;2;2 moradores;1;5857;13.492905;633.2525;620.0;540.0;740.0;200.0;148.266;False;
@@ -581,8 +581,8 @@
 2021;ES;Q005;4;4 moradores;3;15792;36.380391;661.7541;640.0;560.0;780.0;220.0;155.0847;False;
 2021;ES;Q005;5_6;5 a 6 moradores;4;7051;16.24355;636.4913;620.0;540.0;740.0;200.0;152.6574;False;
 2021;ES;Q005;7_9;7 a 9 moradores;5;656;1.511242;587.4695;580.0;500.0;660.0;160.0;135.7848;False;
-2021;ES;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;ES;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;ES;Q005;10_20;10 a 20 (códigos disponíveis);6;34;0.078327;568.2353;560.0;465.0;670.0;205.0;148.9665;False;
+2021;ES;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;ES;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;GO;Q005;1;1 morador;0;1863;2.149954;607.7187;580.0;500.0;700.0;200.0;153.4331;False;
 2021;GO;Q005;2;2 moradores;1;9519;10.985194;628.1017;600.0;520.0;740.0;220.0;154.662;False;
@@ -590,8 +590,8 @@
 2021;GO;Q005;4;4 moradores;3;33836;39.047696;645.9652;620.0;540.0;760.0;220.0;159.4777;False;
 2021;GO;Q005;5_6;5 a 6 moradores;4;17524;20.223189;626.0968;600.0;520.0;740.0;220.0;156.6168;False;
 2021;GO;Q005;7_9;7 a 9 moradores;5;1706;1.968772;580.9496;560.0;480.0;660.0;180.0;145.6369;False;
-2021;GO;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;GO;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;GO;Q005;10_20;10 a 20 (códigos disponíveis);6;121;0.139637;581.3223;560.0;500.0;680.0;180.0;143.5957;False;
+2021;GO;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;GO;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;MA;Q005;1;1 morador;0;1192;1.388533;607.0134;580.0;520.0;680.0;160.0;146.3303;False;
 2021;MA;Q005;2;2 moradores;1;7773;9.054586;611.0742;580.0;520.0;700.0;180.0;151.3779;False;
@@ -599,8 +599,8 @@
 2021;MA;Q005;4;4 moradores;3;28614;33.33178;624.8473;600.0;520.0;740.0;220.0;155.6068;False;
 2021;MA;Q005;5_6;5 a 6 moradores;4;24644;28.70722;612.7544;600.0;500.0;720.0;220.0;153.5274;False;
 2021;MA;Q005;7_9;7 a 9 moradores;5;4292;4.999651;581.8686;560.0;480.0;660.0;180.0;144.3337;False;
-2021;MA;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MA;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MA;Q005;10_20;10 a 20 (códigos disponíveis);6;492;0.573119;562.4797;560.0;480.0;640.0;160.0;140.6877;False;
+2021;MA;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;MA;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;MG;Q005;1;1 morador;0;5267;2.335015;623.1099;600.0;520.0;720.0;200.0;147.6668;False;
 2021;MG;Q005;2;2 moradores;1;27263;12.086485;648.8017;620.0;540.0;760.0;220.0;155.0939;False;
@@ -608,8 +608,8 @@
 2021;MG;Q005;4;4 moradores;3;84807;37.597422;677.0646;660.0;560.0;820.0;260.0;158.5145;False;
 2021;MG;Q005;5_6;5 a 6 moradores;4;40577;17.98897;653.7383;640.0;540.0;780.0;240.0;156.3853;False;
 2021;MG;Q005;7_9;7 a 9 moradores;5;3380;1.498453;603.6805;580.0;500.0;680.0;180.0;146.7758;False;
-2021;MG;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MG;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MG;Q005;10_20;10 a 20 (códigos disponíveis);6;212;0.093986;570.9434;560.0;475.0;660.0;185.0;149.3794;False;
+2021;MG;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;MG;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;MS;Q005;1;1 morador;0;759;2.724043;588.0896;560.0;500.0;660.0;160.0;143.1783;False;
 2021;MS;Q005;2;2 moradores;1;3645;13.081865;607.6708;580.0;500.0;700.0;200.0;146.8289;False;
@@ -617,8 +617,8 @@
 2021;MS;Q005;4;4 moradores;3;9917;35.592004;629.4283;600.0;520.0;740.0;220.0;151.89;False;
 2021;MS;Q005;5_6;5 a 6 moradores;4;5363;19.247748;607.1751;580.0;500.0;700.0;200.0;146.949;False;
 2021;MS;Q005;7_9;7 a 9 moradores;5;571;2.049313;567.0403;560.0;480.0;640.0;160.0;133.4921;False;
-2021;MS;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MS;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MS;Q005;10_20;10 a 20 (códigos disponíveis);6;47;0.168682;558.7234;540.0;470.0;610.0;140.0;114.0664;False;
+2021;MS;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;MS;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;MT;Q005;1;1 morador;0;1138;3.157778;586.4675;560.0;480.0;660.0;180.0;150.4031;False;
 2021;MT;Q005;2;2 moradores;1;4456;12.364726;599.9686;580.0;500.0;680.0;180.0;148.3424;False;
@@ -626,8 +626,8 @@
 2021;MT;Q005;4;4 moradores;3;12766;35.423719;627.3492;600.0;520.0;740.0;220.0;155.2722;False;
 2021;MT;Q005;5_6;5 a 6 moradores;4;7276;20.1898;607.6416;580.0;500.0;700.0;200.0;152.2551;False;
 2021;MT;Q005;7_9;7 a 9 moradores;5;765;2.122759;573.4118;560.0;480.0;640.0;160.0;138.8599;False;
-2021;MT;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MT;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MT;Q005;10_20;10 a 20 (códigos disponíveis);6;60;0.166491;557.3333;560.0;480.0;640.0;160.0;148.704;False;
+2021;MT;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;MT;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;PA;Q005;1;1 morador;0;2137;1.752228;596.6776;580.0;520.0;660.0;140.0;134.1508;False;
 2021;PA;Q005;2;2 moradores;1;12189;9.994342;614.5804;600.0;520.0;700.0;180.0;147.43;False;
@@ -635,8 +635,8 @@
 2021;PA;Q005;4;4 moradores;3;39024;31.997639;633.1171;600.0;520.0;740.0;220.0;154.6384;False;
 2021;PA;Q005;5_6;5 a 6 moradores;4;32776;26.874605;615.7927;600.0;520.0;700.0;180.0;149.8359;False;
 2021;PA;Q005;7_9;7 a 9 moradores;5;6980;5.723235;590.384;580.0;500.0;660.0;160.0;141.5927;False;
-2021;PA;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PA;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PA;Q005;10_20;10 a 20 (códigos disponíveis);6;1001;0.820768;573.1868;560.0;480.0;640.0;160.0;131.3768;False;
+2021;PA;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;PA;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;PB;Q005;1;1 morador;0;1412;1.981448;603.1728;580.0;520.0;680.0;160.0;145.4119;False;
 2021;PB;Q005;2;2 moradores;1;8118;11.391925;620.6011;600.0;520.0;720.0;200.0;150.3837;False;
@@ -644,8 +644,8 @@
 2021;PB;Q005;4;4 moradores;3;24818;34.826904;651.2572;620.0;540.0;780.0;240.0;158.9918;False;
 2021;PB;Q005;5_6;5 a 6 moradores;4;16710;23.449011;634.7193;620.0;520.0;760.0;240.0;157.2023;False;
 2021;PB;Q005;7_9;7 a 9 moradores;5;1993;2.796761;607.4962;580.0;520.0;700.0;180.0;147.2157;False;
-2021;PB;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PB;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PB;Q005;10_20;10 a 20 (códigos disponíveis);6;155;0.21751;572.129;560.0;480.0;630.0;150.0;142.231;False;
+2021;PB;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;PB;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;PE;Q005;1;1 morador;0;2484;1.878303;601.1353;580.0;520.0;680.0;160.0;141.6677;False;
 2021;PE;Q005;2;2 moradores;1;15631;11.81955;621.8451;600.0;520.0;720.0;200.0;149.9728;False;
@@ -653,8 +653,8 @@
 2021;PE;Q005;4;4 moradores;3;46942;35.495701;642.593;620.0;540.0;760.0;220.0;156.425;False;
 2021;PE;Q005;5_6;5 a 6 moradores;4;28509;21.557389;625.707;600.0;520.0;740.0;220.0;154.258;False;
 2021;PE;Q005;7_9;7 a 9 moradores;5;3612;2.731253;599.7619;580.0;500.0;680.0;180.0;148.1232;False;
-2021;PE;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PE;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PE;Q005;10_20;10 a 20 (códigos disponíveis);6;292;0.220799;589.863;580.0;500.0;680.0;180.0;149.0288;False;
+2021;PE;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;PE;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;PI;Q005;1;1 morador;0;803;1.41157;626.4757;600.0;520.0;720.0;200.0;151.6367;False;
 2021;PI;Q005;2;2 moradores;1;5305;9.325505;631.0386;600.0;520.0;740.0;220.0;159.86;False;
@@ -662,8 +662,8 @@
 2021;PI;Q005;4;4 moradores;3;20505;36.045142;650.8364;620.0;540.0;780.0;240.0;164.9818;False;
 2021;PI;Q005;5_6;5 a 6 moradores;4;14570;25.612179;631.5182;600.0;520.0;760.0;240.0;161.5933;False;
 2021;PI;Q005;7_9;7 a 9 moradores;5;2056;3.614183;599.572;580.0;500.0;680.0;180.0;149.9786;False;
-2021;PI;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PI;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PI;Q005;10_20;10 a 20 (códigos disponíveis);6;200;0.351574;585.7;570.0;480.0;660.0;180.0;139.4328;False;
+2021;PI;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;PI;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;PR;Q005;1;1 morador;0;2453;2.463371;613.3795;600.0;520.0;700.0;180.0;145.1177;False;
 2021;PR;Q005;2;2 moradores;1;12543;12.596029;610.4871;600.0;520.0;700.0;180.0;140.9746;False;
@@ -671,8 +671,8 @@
 2021;PR;Q005;4;4 moradores;3;37675;37.834282;630.7997;600.0;540.0;720.0;180.0;142.0271;False;
 2021;PR;Q005;5_6;5 a 6 moradores;4;16389;16.458289;612.5328;600.0;520.0;700.0;180.0;138.9035;False;
 2021;PR;Q005;7_9;7 a 9 moradores;5;1172;1.176955;580.6826;560.0;500.0;640.0;140.0;132.4779;False;
-2021;PR;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PR;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PR;Q005;10_20;10 a 20 (códigos disponíveis);6;74;0.074313;565.4054;560.0;520.0;620.0;100.0;108.6675;False;
+2021;PR;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;PR;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;RJ;Q005;1;1 morador;0;4135;2.528232;592.4498;580.0;510.0;660.0;150.0;136.2194;False;
 2021;RJ;Q005;2;2 moradores;1;24538;15.003088;634.8186;620.0;540.0;740.0;200.0;148.7188;False;
@@ -680,8 +680,8 @@
 2021;RJ;Q005;4;4 moradores;3;55455;33.90644;664.3073;640.0;560.0;780.0;220.0;154.3124;False;
 2021;RJ;Q005;5_6;5 a 6 moradores;4;26213;16.027221;641.7686;620.0;540.0;760.0;220.0;151.4936;False;
 2021;RJ;Q005;7_9;7 a 9 moradores;5;2524;1.543231;603.3597;580.0;520.0;680.0;160.0;145.4567;False;
-2021;RJ;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RJ;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RJ;Q005;10_20;10 a 20 (códigos disponíveis);6;205;0.125342;562.9268;560.0;480.0;640.0;160.0;132.0429;False;
+2021;RJ;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;RJ;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;RN;Q005;1;1 morador;0;1394;2.431325;601.1908;580.0;520.0;680.0;160.0;133.3511;False;
 2021;RN;Q005;2;2 moradores;1;7397;12.901369;627.2164;600.0;540.0;720.0;180.0;148.705;False;
@@ -689,8 +689,8 @@
 2021;RN;Q005;4;4 moradores;3;19249;33.572861;652.6988;620.0;540.0;780.0;240.0;155.7717;False;
 2021;RN;Q005;5_6;5 a 6 moradores;4;11903;20.760443;636.9856;620.0;540.0;740.0;200.0;154.4381;False;
 2021;RN;Q005;7_9;7 a 9 moradores;5;1543;2.691201;607.3623;600.0;520.0;700.0;180.0;144.5909;False;
-2021;RN;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RN;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RN;Q005;10_20;10 a 20 (códigos disponíveis);6;124;0.216273;565.1613;570.0;480.0;640.0;160.0;136.7803;False;
+2021;RN;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;RN;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;RO;Q005;1;1 morador;0;646;3.295582;587.3684;560.0;500.0;675.0;175.0;151.1695;False;
 2021;RO;Q005;2;2 moradores;1;2667;13.605755;588.3765;580.0;500.0;660.0;160.0;140.7757;False;
@@ -698,8 +698,8 @@
 2021;RO;Q005;4;4 moradores;3;6692;34.139374;612.6689;600.0;520.0;700.0;180.0;149.4368;False;
 2021;RO;Q005;5_6;5 a 6 moradores;4;3908;19.936741;596.0696;580.0;500.0;680.0;180.0;147.6528;False;
 2021;RO;Q005;7_9;7 a 9 moradores;5;433;2.208958;574.4111;560.0;480.0;660.0;180.0;133.4813;False;
-2021;RO;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RO;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RO;Q005;10_20;10 a 20 (códigos disponíveis);6;34;0.173452;540.5882;540.0;460.0;600.0;140.0;121.3149;False;
+2021;RO;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;RO;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;RR;Q005;1;1 morador;0;114;2.290536;608.4211;580.0;520.0;660.0;140.0;149.5231;False;
 2021;RR;Q005;2;2 moradores;1;519;10.427969;606.8593;600.0;500.0;720.0;220.0;150.7156;False;
@@ -707,8 +707,8 @@
 2021;RR;Q005;4;4 moradores;3;1502;30.178823;618.775;600.0;520.0;720.0;200.0;151.5305;False;
 2021;RR;Q005;5_6;5 a 6 moradores;4;1381;27.747639;588.9935;580.0;500.0;660.0;160.0;139.1957;False;
 2021;RR;Q005;7_9;7 a 9 moradores;5;277;5.565602;576.5343;560.0;480.0;640.0;160.0;140.2714;False;
-2021;RR;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RR;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RR;Q005;10_20;10 a 20 (códigos disponíveis);6;41;0.823789;535.6098;520.0;440.0;600.0;160.0;137.8944;False;
+2021;RR;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;RR;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;RS;Q005;1;1 morador;0;4074;3.904131;611.9686;580.0;520.0;680.0;160.0;143.0048;False;
 2021;RS;Q005;2;2 moradores;1;17784;17.042482;624.5816;600.0;520.0;720.0;200.0;146.9347;False;
@@ -716,8 +716,8 @@
 2021;RS;Q005;4;4 moradores;3;33423;32.029401;652.2012;620.0;540.0;760.0;220.0;149.9884;False;
 2021;RS;Q005;5_6;5 a 6 moradores;4;13357;12.800069;621.3611;600.0;520.0;720.0;200.0;142.9885;False;
 2021;RS;Q005;7_9;7 a 9 moradores;5;1201;1.150923;581.4988;560.0;500.0;640.0;140.0;138.8201;False;
-2021;RS;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RS;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RS;Q005;10_20;10 a 20 (códigos disponíveis);6;85;0.081456;567.5294;560.0;500.0;620.0;120.0;130.2297;False;
+2021;RS;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;RS;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;SC;Q005;1;1 morador;0;1610;2.843619;608.2981;600.0;520.0;680.0;160.0;135.8652;False;
 2021;SC;Q005;2;2 moradores;1;7567;13.365008;629.5996;600.0;540.0;720.0;180.0;142.5051;False;
@@ -725,8 +725,8 @@
 2021;SC;Q005;4;4 moradores;3;20477;36.166943;647.7541;620.0;560.0;760.0;200.0;143.4183;False;
 2021;SC;Q005;5_6;5 a 6 moradores;4;8289;14.64022;623.4697;600.0;520.0;720.0;200.0;141.3214;False;
 2021;SC;Q005;7_9;7 a 9 moradores;5;637;1.125084;586.3422;580.0;500.0;660.0;160.0;136.8127;False;
-2021;SC;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;SC;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;SC;Q005;10_20;10 a 20 (códigos disponíveis);6;46;0.081246;606.087;600.0;520.0;680.0;160.0;127.0994;False;
+2021;SC;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;SC;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;SE;Q005;1;1 morador;0;855;2.263581;605.1228;600.0;500.0;680.0;180.0;146.4479;False;
 2021;SE;Q005;2;2 moradores;1;4855;12.853436;633.7013;620.0;520.0;740.0;220.0;156.4133;False;
@@ -734,8 +734,8 @@
 2021;SE;Q005;4;4 moradores;3;12620;33.410992;661.2441;640.0;540.0;800.0;260.0;162.7264;False;
 2021;SE;Q005;5_6;5 a 6 moradores;4;7920;20.967913;637.6894;620.0;520.0;760.0;240.0;158.3088;False;
 2021;SE;Q005;7_9;7 a 9 moradores;5;1144;3.028699;611.7483;600.0;520.0;700.0;180.0;150.7641;False;
-2021;SE;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;SE;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;SE;Q005;10_20;10 a 20 (códigos disponíveis);6;126;0.33358;570.6349;540.0;480.0;660.0;180.0;143.2433;False;
+2021;SE;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;SE;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;SP;Q005;1;1 morador;0;7050;1.944345;594.2411;580.0;500.0;660.0;160.0;139.5554;False;
 2021;SP;Q005;2;2 moradores;1;43524;12.00364;630.829;600.0;540.0;720.0;180.0;142.7828;False;
@@ -743,8 +743,8 @@
 2021;SP;Q005;4;4 moradores;3;137266;37.857084;657.6648;640.0;560.0;760.0;200.0;144.2863;False;
 2021;SP;Q005;5_6;5 a 6 moradores;4;61437;16.943931;633.9772;620.0;540.0;740.0;200.0;143.354;False;
 2021;SP;Q005;7_9;7 a 9 moradores;5;5624;1.551063;598.0974;580.0;500.0;680.0;180.0;137.4551;False;
-2021;SP;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;SP;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;SP;Q005;10_20;10 a 20 (códigos disponíveis);6;406;0.111972;591.9704;580.0;500.0;660.0;160.0;144.4799;False;
+2021;SP;Q005;SEM_RESPOSTA;Não informou;7;1;0.000276;520.0;520.0;520.0;520.0;0.0;0.0;False;
 2021;SP;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2021;TO;Q005;1;1 morador;0;480;2.357564;611.2917;580.0;520.0;700.0;180.0;151.2944;False;
 2021;TO;Q005;2;2 moradores;1;2131;10.466601;605.0117;580.0;500.0;700.0;200.0;147.3254;False;
@@ -752,8 +752,8 @@
 2021;TO;Q005;4;4 moradores;3;7177;35.250491;624.4197;600.0;520.0;740.0;220.0;154.3696;False;
 2021;TO;Q005;5_6;5 a 6 moradores;4;5288;25.972495;608.2073;580.0;500.0;700.0;200.0;153.6715;False;
 2021;TO;Q005;7_9;7 a 9 moradores;5;650;3.192534;574.1538;560.0;480.0;640.0;160.0;142.6226;False;
-2021;TO;Q005;10_20;10 a 20 (códigos disponíveis);6;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;TO;Q005;SEM_RESPOSTA;Não informou;7;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;TO;Q005;10_20;10 a 20 (códigos disponíveis);6;48;0.235756;527.0833;520.0;460.0;565.0;105.0;127.0492;False;
+2021;TO;Q005;SEM_RESPOSTA;Não informou;7;0;0.0;;;;;;;False;
 2021;TO;Q005;CODIGO_NAO_RECONHECIDO;Código não reconhecido;8;0;0.0;;;;;;;False;
 2022;BR;Q005;1;1 morador;0;48743;2.062222;615.1045;600.0;520.0;720.0;200.0;157.3805;False;
 2022;BR;Q005;2;2 moradores;1;289409;12.244338;641.8749;620.0;540.0;760.0;220.0;158.0876;False;

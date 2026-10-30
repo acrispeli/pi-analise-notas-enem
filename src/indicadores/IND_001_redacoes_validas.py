@@ -267,11 +267,11 @@ def agregar_historico(dados: list[dict]) -> dict:
 def validar_privacidade(dados: list[dict], historico: dict) -> None:
     """Impede publicação de valores positivos inferiores ao limiar do projeto.
 
-    O limiar 30 é decisão prudencial da equipe, não critério oficial do Inep.
+    O antigo limiar 30 foi retirado como bloqueio automático de publicação.
     O IND-001 divulga somente totais estaduais e nacionais. Em caso de
     exceção, a saída deve ser revista em vez de contornar a proteção.
     """
-    limite = 30
+    limite = 1  # Contagens agregadas positivas são divulgáveis; sem piso automático de 30.
     for d in dados:
         for item in [d["brasil"], *d["ufs"]]:
             n = item["redacoes_validas"]
@@ -370,11 +370,10 @@ def contrato_por_ano(d: dict, dados: list[dict], historico: dict, gerado: str) -
                 },
             ],
             "suppression": {
-                "min_group_n": 30,
+                "min_group_n": 1,
                 "suppressed_cells": 0,
                 "note": (
-                    "Limiar de 30 verificado para Brasil e UF; publicação "
-                    "é bloqueada se houver contagem positiva inferior a 30."
+                    "Nenhuma supressão automática por contagem menor que 30; apenas agregados."
                 )
             },
             "indicator_validation": d["qualidade"],

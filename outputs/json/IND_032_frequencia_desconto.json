@@ -2,7 +2,7 @@
   "indicator_id": "IND-032",
   "titulo": "Frequência de desconto por competência",
   "status": "draft",
-  "gerado_em_utc": "2026-10-27T23:00:59.658514+00:00",
+  "gerado_em_utc": "2026-10-30T01:53:12.087539+00:00",
   "anos_solicitados": [
     2019,
     2020,
@@ -59,10 +59,10 @@
       },
       "controle_ind031": "aprovado",
       "privacidade": {
-        "supressoes_primarias": 4,
+        "supressoes_primarias": 0,
         "supressoes_complementares": 0,
-        "celulas_suprimidas": 4,
-        "regra": "0<N<30, 0<n_desconto<30 ou 0<n_sem_desconto<30; complemento geográfico"
+        "celulas_suprimidas": 0,
+        "regra": "sem supressão automática por n<30; agregados são publicados"
       },
       "recortes": {
         "BR": {
@@ -145,12 +145,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 660,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 639,
+              "n_sem_desconto": 21,
+              "frequencia_desconto": 0.96818182,
+              "percentual_desconto": 96.818182,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -277,12 +277,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 561,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 547,
+              "n_sem_desconto": 14,
+              "frequencia_desconto": 0.97504456,
+              "percentual_desconto": 97.504456,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -1465,12 +1465,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 710,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 693,
+              "n_sem_desconto": 17,
+              "frequencia_desconto": 0.97605634,
+              "percentual_desconto": 97.605634,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -1531,12 +1531,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 202,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 195,
+              "n_sem_desconto": 7,
+              "frequencia_desconto": 0.96534653,
+              "percentual_desconto": 96.534653,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -1927,10 +1927,10 @@
       },
       "controle_ind031": "aprovado",
       "privacidade": {
-        "supressoes_primarias": 5,
+        "supressoes_primarias": 0,
         "supressoes_complementares": 0,
-        "celulas_suprimidas": 5,
-        "regra": "0<N<30, 0<n_desconto<30 ou 0<n_sem_desconto<30; complemento geográfico"
+        "celulas_suprimidas": 0,
+        "regra": "sem supressão automática por n<30; agregados são publicados"
       },
       "recortes": {
         "BR": {
@@ -2013,12 +2013,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 764,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 737,
+              "n_sem_desconto": 27,
+              "frequencia_desconto": 0.96465969,
+              "percentual_desconto": 96.465969,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -2145,12 +2145,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 701,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 676,
+              "n_sem_desconto": 25,
+              "frequencia_desconto": 0.96433666,
+              "percentual_desconto": 96.433666,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -2211,12 +2211,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1087,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1071,
+              "n_sem_desconto": 16,
+              "frequencia_desconto": 0.98528059,
+              "percentual_desconto": 98.528059,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -3333,12 +3333,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 880,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 858,
+              "n_sem_desconto": 22,
+              "frequencia_desconto": 0.975,
+              "percentual_desconto": 97.5,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -3399,12 +3399,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 254,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 240,
+              "n_sem_desconto": 14,
+              "frequencia_desconto": 0.94488189,
+              "percentual_desconto": 94.488189,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -3795,10 +3795,10 @@
       },
       "controle_ind031": "aprovado",
       "privacidade": {
-        "supressoes_primarias": 7,
-        "supressoes_complementares": 1,
-        "celulas_suprimidas": 8,
-        "regra": "0<N<30, 0<n_desconto<30 ou 0<n_sem_desconto<30; complemento geográfico"
+        "supressoes_primarias": 0,
+        "supressoes_complementares": 0,
+        "celulas_suprimidas": 0,
+        "regra": "sem supressão automática por n<30; agregados são publicados"
       },
       "recortes": {
         "BR": {
@@ -3881,12 +3881,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 660,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 655,
+              "n_sem_desconto": 5,
+              "frequencia_desconto": 0.99242424,
+              "percentual_desconto": 99.242424,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -4013,12 +4013,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 625,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 611,
+              "n_sem_desconto": 14,
+              "frequencia_desconto": 0.9776,
+              "percentual_desconto": 97.76,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -4079,12 +4079,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1240,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1222,
+              "n_sem_desconto": 18,
+              "frequencia_desconto": 0.98548387,
+              "percentual_desconto": 98.548387,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -4551,12 +4551,12 @@
             {
               "competencia": "C2",
               "n_redacoes": 23945,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar"
+              "n_com_desconto": 1542,
+              "n_sem_desconto": 22403,
+              "frequencia_desconto": 0.06439758,
+              "percentual_desconto": 6.439758,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C3",
@@ -5201,12 +5201,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 835,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 823,
+              "n_sem_desconto": 12,
+              "frequencia_desconto": 0.98562874,
+              "percentual_desconto": 98.562874,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -5267,22 +5267,22 @@
             {
               "competencia": "C1",
               "n_redacoes": 244,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 241,
+              "n_sem_desconto": 3,
+              "frequencia_desconto": 0.98770492,
+              "percentual_desconto": 98.770492,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
               "n_redacoes": 244,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 10,
+              "n_sem_desconto": 234,
+              "frequencia_desconto": 0.04098361,
+              "percentual_desconto": 4.098361,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C3",
@@ -5597,12 +5597,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1148,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1135,
+              "n_sem_desconto": 13,
+              "frequencia_desconto": 0.98867596,
+              "percentual_desconto": 98.867596,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -5663,10 +5663,10 @@
       },
       "controle_ind031": "aprovado",
       "privacidade": {
-        "supressoes_primarias": 9,
-        "supressoes_complementares": 1,
-        "celulas_suprimidas": 10,
-        "regra": "0<N<30, 0<n_desconto<30 ou 0<n_sem_desconto<30; complemento geográfico"
+        "supressoes_primarias": 0,
+        "supressoes_complementares": 0,
+        "celulas_suprimidas": 0,
+        "regra": "sem supressão automática por n<30; agregados são publicados"
       },
       "recortes": {
         "BR": {
@@ -5749,12 +5749,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 852,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 842,
+              "n_sem_desconto": 10,
+              "frequencia_desconto": 0.98826291,
+              "percentual_desconto": 98.826291,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -5881,12 +5881,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 770,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 760,
+              "n_sem_desconto": 10,
+              "frequencia_desconto": 0.98701299,
+              "percentual_desconto": 98.701299,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -5947,12 +5947,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1391,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1364,
+              "n_sem_desconto": 27,
+              "frequencia_desconto": 0.9805895,
+              "percentual_desconto": 98.05895,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -6475,12 +6475,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1875,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1849,
+              "n_sem_desconto": 26,
+              "frequencia_desconto": 0.98613333,
+              "percentual_desconto": 98.613333,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -6541,12 +6541,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 2595,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 2567,
+              "n_sem_desconto": 28,
+              "frequencia_desconto": 0.98921002,
+              "percentual_desconto": 98.921002,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -7069,12 +7069,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1032,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1022,
+              "n_sem_desconto": 10,
+              "frequencia_desconto": 0.99031008,
+              "percentual_desconto": 99.031008,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -7135,22 +7135,22 @@
             {
               "competencia": "C1",
               "n_redacoes": 248,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 244,
+              "n_sem_desconto": 4,
+              "frequencia_desconto": 0.98387097,
+              "percentual_desconto": 98.387097,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
               "n_redacoes": 248,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 10,
+              "n_sem_desconto": 238,
+              "frequencia_desconto": 0.04032258,
+              "percentual_desconto": 4.032258,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C3",
@@ -7409,12 +7409,12 @@
             {
               "competencia": "C2",
               "n_redacoes": 27419,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "complementar"
+              "n_com_desconto": 1512,
+              "n_sem_desconto": 25907,
+              "frequencia_desconto": 0.05514424,
+              "percentual_desconto": 5.514424,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C3",
@@ -7465,12 +7465,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1323,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1297,
+              "n_sem_desconto": 26,
+              "frequencia_desconto": 0.98034769,
+              "percentual_desconto": 98.034769,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -7531,10 +7531,10 @@
       },
       "controle_ind031": "aprovado",
       "privacidade": {
-        "supressoes_primarias": 5,
+        "supressoes_primarias": 0,
         "supressoes_complementares": 0,
-        "celulas_suprimidas": 5,
-        "regra": "0<N<30, 0<n_desconto<30 ou 0<n_sem_desconto<30; complemento geográfico"
+        "celulas_suprimidas": 0,
+        "regra": "sem supressão automática por n<30; agregados são publicados"
       },
       "recortes": {
         "BR": {
@@ -7617,12 +7617,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1254,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1238,
+              "n_sem_desconto": 16,
+              "frequencia_desconto": 0.98724083,
+              "percentual_desconto": 98.724083,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -7749,12 +7749,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1461,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1445,
+              "n_sem_desconto": 16,
+              "frequencia_desconto": 0.9890486,
+              "percentual_desconto": 98.90486,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -8937,12 +8937,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1718,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1709,
+              "n_sem_desconto": 9,
+              "frequencia_desconto": 0.99476135,
+              "percentual_desconto": 99.476135,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -9003,12 +9003,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 471,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 463,
+              "n_sem_desconto": 8,
+              "frequencia_desconto": 0.98301486,
+              "percentual_desconto": 98.301486,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -9333,12 +9333,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1966,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1949,
+              "n_sem_desconto": 17,
+              "frequencia_desconto": 0.991353,
+              "percentual_desconto": 99.1353,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -9403,10 +9403,10 @@
       },
       "controle_ind031": "aprovado",
       "privacidade": {
-        "supressoes_primarias": 9,
+        "supressoes_primarias": 0,
         "supressoes_complementares": 0,
-        "celulas_suprimidas": 9,
-        "regra": "0<N<30, 0<n_desconto<30 ou 0<n_sem_desconto<30; complemento geográfico"
+        "celulas_suprimidas": 0,
+        "regra": "sem supressão automática por n<30; agregados são publicados"
       },
       "recortes": {
         "BR": {
@@ -9489,12 +9489,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1275,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1270,
+              "n_sem_desconto": 5,
+              "frequencia_desconto": 0.99607843,
+              "percentual_desconto": 99.607843,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -9621,12 +9621,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1473,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1460,
+              "n_sem_desconto": 13,
+              "frequencia_desconto": 0.99117447,
+              "percentual_desconto": 99.117447,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -9687,12 +9687,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 2408,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 2386,
+              "n_sem_desconto": 22,
+              "frequencia_desconto": 0.99086379,
+              "percentual_desconto": 99.086379,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -10215,12 +10215,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 2551,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 2537,
+              "n_sem_desconto": 14,
+              "frequencia_desconto": 0.99451196,
+              "percentual_desconto": 99.451196,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -10281,12 +10281,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 3793,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 3774,
+              "n_sem_desconto": 19,
+              "frequencia_desconto": 0.99499077,
+              "percentual_desconto": 99.499077,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -10809,12 +10809,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1804,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1796,
+              "n_sem_desconto": 8,
+              "frequencia_desconto": 0.99556541,
+              "percentual_desconto": 99.556541,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -10875,12 +10875,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 432,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 429,
+              "n_sem_desconto": 3,
+              "frequencia_desconto": 0.99305556,
+              "percentual_desconto": 99.305556,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -11073,12 +11073,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 5861,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 5836,
+              "n_sem_desconto": 25,
+              "frequencia_desconto": 0.99573452,
+              "percentual_desconto": 99.573452,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -11205,12 +11205,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1851,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1841,
+              "n_sem_desconto": 10,
+              "frequencia_desconto": 0.99459751,
+              "percentual_desconto": 99.459751,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -11271,10 +11271,10 @@
       },
       "controle_ind031": "aprovado",
       "privacidade": {
-        "supressoes_primarias": 12,
+        "supressoes_primarias": 0,
         "supressoes_complementares": 0,
-        "celulas_suprimidas": 12,
-        "regra": "0<N<30, 0<n_desconto<30 ou 0<n_sem_desconto<30; complemento geográfico"
+        "celulas_suprimidas": 0,
+        "regra": "sem supressão automática por n<30; agregados são publicados"
       },
       "recortes": {
         "BR": {
@@ -11357,12 +11357,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 717,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 709,
+              "n_sem_desconto": 8,
+              "frequencia_desconto": 0.9888424,
+              "percentual_desconto": 98.88424,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -11489,12 +11489,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 834,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 830,
+              "n_sem_desconto": 4,
+              "frequencia_desconto": 0.99520384,
+              "percentual_desconto": 99.520384,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -11555,12 +11555,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1351,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1341,
+              "n_sem_desconto": 10,
+              "frequencia_desconto": 0.99259808,
+              "percentual_desconto": 99.259808,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -11753,12 +11753,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 3767,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 3740,
+              "n_sem_desconto": 27,
+              "frequencia_desconto": 0.99283249,
+              "percentual_desconto": 99.283249,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -11819,12 +11819,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 3761,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 3734,
+              "n_sem_desconto": 27,
+              "frequencia_desconto": 0.99282106,
+              "percentual_desconto": 99.282106,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -12083,12 +12083,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 1525,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 1513,
+              "n_sem_desconto": 12,
+              "frequencia_desconto": 0.99213115,
+              "percentual_desconto": 99.213115,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -12149,12 +12149,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 2405,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 2392,
+              "n_sem_desconto": 13,
+              "frequencia_desconto": 0.99459459,
+              "percentual_desconto": 99.459459,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -12677,12 +12677,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 908,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 905,
+              "n_sem_desconto": 3,
+              "frequencia_desconto": 0.99669604,
+              "percentual_desconto": 99.669604,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -12743,12 +12743,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 223,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 221,
+              "n_sem_desconto": 2,
+              "frequencia_desconto": 0.99103139,
+              "percentual_desconto": 99.103139,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -12875,12 +12875,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 3593,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 3569,
+              "n_sem_desconto": 24,
+              "frequencia_desconto": 0.99332035,
+              "percentual_desconto": 99.332035,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -12941,12 +12941,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 3714,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 3696,
+              "n_sem_desconto": 18,
+              "frequencia_desconto": 0.99515347,
+              "percentual_desconto": 99.515347,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",
@@ -13073,12 +13073,12 @@
             {
               "competencia": "C1",
               "n_redacoes": 969,
-              "n_com_desconto": null,
-              "n_sem_desconto": null,
-              "frequencia_desconto": null,
-              "percentual_desconto": null,
-              "suprimido": true,
-              "motivo_supressao": "primaria"
+              "n_com_desconto": 963,
+              "n_sem_desconto": 6,
+              "frequencia_desconto": 0.99380805,
+              "percentual_desconto": 99.380805,
+              "suprimido": false,
+              "motivo_supressao": null
             },
             {
               "competencia": "C2",

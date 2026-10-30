@@ -2,9 +2,9 @@
   "meta": {
     "indicator_id": "IND-030",
     "module_schema_version": "ind030-module-1.0.0",
-    "analysis_version": "2.30.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023-ind024-ind025-ind026-ind027-ind028-ind029-ind030",
+    "analysis_version": "2.30.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023-ind030",
     "dataset_version": "enem-2019-2025-csv-publico",
-    "generated_at": "2026-10-22T16:42:36+00:00",
+    "generated_at": "2026-10-30T01:41:37+00:00",
     "data_status": "draft",
     "source_indicators": [
       "IND-001",
@@ -14,7 +14,7 @@
     "population_definition": "POP_HIGH = POP_VALID e 900 <= NU_NOTA_REDACAO <= 1000",
     "geographic_dimension": "SG_UF_PROVA",
     "method": "contagens_exatas_pop_high_com_agregacao_adaptativa_privacidade",
-    "minimum_published_cell": 30,
+    "minimum_published_cell": 1,
     "source_qa": {
       "2019": {
         "arquivo": "MICRODADOS_ENEM_2019.csv",
@@ -312,7 +312,7 @@
           "n_validas": 30681,
           "n_high": 561,
           "percentual_high_sobre_validas": 1.8285,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -342,13 +342,22 @@
               "percentual": 23.5294
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 66,
+              "proporcao": 0.11764706,
+              "percentual": 11.7647
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 89,
-              "proporcao": 0.15864528,
-              "percentual": 15.8645
+              "quantidade": 23,
+              "proporcao": 0.04099822,
+              "percentual": 4.0998
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -1272,7 +1281,7 @@
           "n_validas": 41709,
           "n_high": 710,
           "percentual_high_sobre_validas": 1.7023,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -1302,13 +1311,22 @@
               "percentual": 21.2676
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 81,
+              "proporcao": 0.11408451,
+              "percentual": 11.4085
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 104,
-              "proporcao": 0.14647887,
-              "percentual": 14.6479
+              "quantidade": 23,
+              "proporcao": 0.03239437,
+              "percentual": 3.2394
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -1320,7 +1338,7 @@
           "n_validas": 9045,
           "n_high": 202,
           "percentual_high_sobre_validas": 2.2333,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -1350,13 +1368,22 @@
               "percentual": 20.297
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 26,
+              "proporcao": 0.12871287,
+              "percentual": 12.8713
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 33,
-              "proporcao": 0.16336634,
-              "percentual": 16.3366
+              "quantidade": 7,
+              "proporcao": 0.03465347,
+              "percentual": 3.4653
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -1653,7 +1680,7 @@
         "soma_27_ufs_igual_brasil": true,
         "faixas_internas_fecham": true,
         "recortes_suprimidos": 0,
-        "recortes_faixas_mescladas": 3,
+        "recortes_faixas_mescladas": 0,
         "sem_identificadores": true
       },
       "ano": 2019,
@@ -2920,7 +2947,7 @@
           "n_validas": 6601,
           "n_high": 254,
           "percentual_high_sobre_validas": 3.8479,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -2950,13 +2977,22 @@
               "percentual": 24.0157
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 39,
+              "proporcao": 0.15354331,
+              "percentual": 15.3543
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 61,
-              "proporcao": 0.24015748,
-              "percentual": 24.0157
+              "quantidade": 22,
+              "proporcao": 0.08661417,
+              "percentual": 8.6614
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -3253,7 +3289,7 @@
         "soma_27_ufs_igual_brasil": true,
         "faixas_internas_fecham": true,
         "recortes_suprimidos": 0,
-        "recortes_faixas_mescladas": 1,
+        "recortes_faixas_mescladas": 0,
         "sem_identificadores": true
       },
       "ano": 2020,
@@ -3323,7 +3359,7 @@
           "n_validas": 13270,
           "n_high": 660,
           "percentual_high_sobre_validas": 4.9736,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -3353,13 +3389,22 @@
               "percentual": 21.5152
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 64,
+              "proporcao": 0.0969697,
+              "percentual": 9.697
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 84,
-              "proporcao": 0.12727273,
-              "percentual": 12.7273
+              "quantidade": 20,
+              "proporcao": 0.03030303,
+              "percentual": 3.0303
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -3485,7 +3530,7 @@
           "n_validas": 13460,
           "n_high": 625,
           "percentual_high_sobre_validas": 4.6434,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -3515,13 +3560,22 @@
               "percentual": 19.68
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 62,
+              "proporcao": 0.0992,
+              "percentual": 9.92
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 83,
-              "proporcao": 0.1328,
-              "percentual": 13.28
+              "quantidade": 21,
+              "proporcao": 0.0336,
+              "percentual": 3.36
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -4445,7 +4499,7 @@
           "n_validas": 19602,
           "n_high": 835,
           "percentual_high_sobre_validas": 4.2598,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -4475,13 +4529,22 @@
               "percentual": 21.7964
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 96,
+              "proporcao": 0.11497006,
+              "percentual": 11.497
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 114,
-              "proporcao": 0.13652695,
-              "percentual": 13.6527
+              "quantidade": 18,
+              "proporcao": 0.02155689,
+              "percentual": 2.1557
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -4493,7 +4556,7 @@
           "n_validas": 4977,
           "n_high": 244,
           "percentual_high_sobre_validas": 4.9026,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -4514,13 +4577,31 @@
               "percentual": 33.6066
             },
             {
-              "faixa": "940–1000",
+              "faixa": "940–<960",
               "limite_inferior": 940,
+              "limite_superior": 960,
+              "superior_inclusivo": false,
+              "quantidade": 46,
+              "proporcao": 0.18852459,
+              "percentual": 18.8525
+            },
+            {
+              "faixa": "960–<980",
+              "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 22,
+              "proporcao": 0.09016393,
+              "percentual": 9.0164
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 72,
-              "proporcao": 0.29508197,
-              "percentual": 29.5082
+              "quantidade": 4,
+              "proporcao": 0.01639344,
+              "percentual": 1.6393
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -4817,7 +4898,7 @@
         "soma_27_ufs_igual_brasil": true,
         "faixas_internas_fecham": true,
         "recortes_suprimidos": 0,
-        "recortes_faixas_mescladas": 4,
+        "recortes_faixas_mescladas": 0,
         "sem_identificadores": true
       },
       "ano": 2021,
@@ -4887,7 +4968,7 @@
           "n_validas": 14596,
           "n_high": 852,
           "percentual_high_sobre_validas": 5.8372,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -4917,13 +4998,22 @@
               "percentual": 21.831
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 91,
+              "proporcao": 0.10680751,
+              "percentual": 10.6808
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 107,
-              "proporcao": 0.12558685,
-              "percentual": 12.5587
+              "quantidade": 16,
+              "proporcao": 0.01877934,
+              "percentual": 1.8779
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -4992,7 +5082,7 @@
           "n_validas": 41841,
           "n_high": 1392,
           "percentual_high_sobre_validas": 3.3269,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -5022,13 +5112,22 @@
               "percentual": 20.6178
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 127,
+              "proporcao": 0.09123563,
+              "percentual": 9.1236
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 153,
-              "proporcao": 0.10991379,
-              "percentual": 10.9914
+              "quantidade": 26,
+              "proporcao": 0.01867816,
+              "percentual": 1.8678
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -5040,7 +5139,7 @@
           "n_validas": 14455,
           "n_high": 770,
           "percentual_high_sobre_validas": 5.3269,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -5070,13 +5169,22 @@
               "percentual": 20.2597
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 89,
+              "proporcao": 0.11558442,
+              "percentual": 11.5584
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 101,
-              "proporcao": 0.13116883,
-              "percentual": 13.1169
+              "quantidade": 12,
+              "proporcao": 0.01558442,
+              "percentual": 1.5584
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -6000,7 +6108,7 @@
           "n_validas": 19720,
           "n_high": 1032,
           "percentual_high_sobre_validas": 5.2333,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -6030,13 +6138,22 @@
               "percentual": 20.155
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 68,
+              "proporcao": 0.06589147,
+              "percentual": 6.5891
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 96,
-              "proporcao": 0.09302326,
-              "percentual": 9.3023
+              "quantidade": 28,
+              "proporcao": 0.02713178,
+              "percentual": 2.7132
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -6048,7 +6165,7 @@
           "n_validas": 4953,
           "n_high": 248,
           "percentual_high_sobre_validas": 5.0071,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -6069,13 +6186,31 @@
               "percentual": 28.629
             },
             {
-              "faixa": "940–1000",
+              "faixa": "940–<960",
               "limite_inferior": 940,
+              "limite_superior": 960,
+              "superior_inclusivo": false,
+              "quantidade": 50,
+              "proporcao": 0.2016129,
+              "percentual": 20.1613
+            },
+            {
+              "faixa": "960–<980",
+              "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 23,
+              "proporcao": 0.09274194,
+              "percentual": 9.2742
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 78,
-              "proporcao": 0.31451613,
-              "percentual": 31.4516
+              "quantidade": 5,
+              "proporcao": 0.02016129,
+              "percentual": 2.0161
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -6372,7 +6507,7 @@
         "soma_27_ufs_igual_brasil": true,
         "faixas_internas_fecham": true,
         "recortes_suprimidos": 0,
-        "recortes_faixas_mescladas": 5,
+        "recortes_faixas_mescladas": 0,
         "sem_identificadores": true
       },
       "ano": 2022,
@@ -7639,7 +7774,7 @@
           "n_validas": 6140,
           "n_high": 471,
           "percentual_high_sobre_validas": 7.671,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -7669,13 +7804,22 @@
               "percentual": 22.0807
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 61,
+              "proporcao": 0.12951168,
+              "percentual": 12.9512
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 77,
-              "proporcao": 0.16348195,
-              "percentual": 16.3482
+              "quantidade": 16,
+              "proporcao": 0.03397028,
+              "percentual": 3.397
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -7972,7 +8116,7 @@
         "soma_27_ufs_igual_brasil": true,
         "faixas_internas_fecham": true,
         "recortes_suprimidos": 0,
-        "recortes_faixas_mescladas": 1,
+        "recortes_faixas_mescladas": 0,
         "sem_identificadores": true
       },
       "ano": 2023,
@@ -8042,7 +8186,7 @@
           "n_validas": 17207,
           "n_high": 1275,
           "percentual_high_sobre_validas": 7.4098,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -8072,13 +8216,22 @@
               "percentual": 24.7843
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 130,
+              "proporcao": 0.10196078,
+              "percentual": 10.1961
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 135,
-              "proporcao": 0.10588235,
-              "percentual": 10.5882
+              "quantidade": 5,
+              "proporcao": 0.00392157,
+              "percentual": 0.3922
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -8147,7 +8300,7 @@
           "n_validas": 53319,
           "n_high": 2408,
           "percentual_high_sobre_validas": 4.5162,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -8177,13 +8330,22 @@
               "percentual": 22.3837
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 216,
+              "proporcao": 0.089701,
+              "percentual": 8.9701
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 227,
-              "proporcao": 0.0942691,
-              "percentual": 9.4269
+              "quantidade": 11,
+              "proporcao": 0.00456811,
+              "percentual": 0.4568
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -8195,7 +8357,7 @@
           "n_validas": 19920,
           "n_high": 1473,
           "percentual_high_sobre_validas": 7.3946,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -8225,13 +8387,22 @@
               "percentual": 22.6748
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 150,
+              "proporcao": 0.10183299,
+              "percentual": 10.1833
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 165,
-              "proporcao": 0.11201629,
-              "percentual": 11.2016
+              "quantidade": 15,
+              "proporcao": 0.0101833,
+              "percentual": 1.0183
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -8642,7 +8813,7 @@
           "n_validas": 34551,
           "n_high": 2551,
           "percentual_high_sobre_validas": 7.3833,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -8672,13 +8843,22 @@
               "percentual": 22.5794
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 273,
+              "proporcao": 0.10701686,
+              "percentual": 10.7017
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 296,
-              "proporcao": 0.11603293,
-              "percentual": 11.6033
+              "quantidade": 23,
+              "proporcao": 0.00901607,
+              "percentual": 0.9016
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -8690,7 +8870,7 @@
           "n_validas": 43717,
           "n_high": 3793,
           "percentual_high_sobre_validas": 8.6763,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -8720,13 +8900,22 @@
               "percentual": 24.097
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 434,
+              "proporcao": 0.1144213,
+              "percentual": 11.4421
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 462,
-              "proporcao": 0.12180332,
-              "percentual": 12.1803
+              "quantidade": 28,
+              "proporcao": 0.00738202,
+              "percentual": 0.7382
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -9137,7 +9326,7 @@
           "n_validas": 25421,
           "n_high": 1804,
           "percentual_high_sobre_validas": 7.0965,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -9167,13 +9356,22 @@
               "percentual": 21.2306
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 152,
+              "proporcao": 0.08425721,
+              "percentual": 8.4257
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 162,
-              "proporcao": 0.08980044,
-              "percentual": 8.98
+              "quantidade": 10,
+              "proporcao": 0.00554324,
+              "percentual": 0.5543
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -9185,7 +9383,7 @@
           "n_validas": 8223,
           "n_high": 432,
           "percentual_high_sobre_validas": 5.2536,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -9215,13 +9413,22 @@
               "percentual": 18.75
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 44,
+              "proporcao": 0.10185185,
+              "percentual": 10.1852
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 45,
-              "proporcao": 0.10416667,
-              "percentual": 10.4167
+              "quantidade": 1,
+              "proporcao": 0.00231481,
+              "percentual": 0.2315
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -9461,7 +9668,7 @@
           "n_validas": 23297,
           "n_high": 1851,
           "percentual_high_sobre_validas": 7.9452,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -9491,13 +9698,22 @@
               "percentual": 23.5548
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 178,
+              "proporcao": 0.09616424,
+              "percentual": 9.6164
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 191,
-              "proporcao": 0.10318747,
-              "percentual": 10.3187
+              "quantidade": 13,
+              "proporcao": 0.00702323,
+              "percentual": 0.7023
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -9509,7 +9725,7 @@
         "soma_27_ufs_igual_brasil": true,
         "faixas_internas_fecham": true,
         "recortes_suprimidos": 0,
-        "recortes_faixas_mescladas": 8,
+        "recortes_faixas_mescladas": 0,
         "sem_identificadores": true
       },
       "ano": 2024,
@@ -9579,7 +9795,7 @@
           "n_validas": 17895,
           "n_high": 717,
           "percentual_high_sobre_validas": 4.0067,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -9609,13 +9825,22 @@
               "percentual": 22.1757
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 60,
+              "proporcao": 0.08368201,
+              "percentual": 8.3682
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 66,
-              "proporcao": 0.09205021,
-              "percentual": 9.205
+              "quantidade": 6,
+              "proporcao": 0.0083682,
+              "percentual": 0.8368
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -9627,7 +9852,7 @@
           "n_validas": 62984,
           "n_high": 3216,
           "percentual_high_sobre_validas": 5.1061,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -9657,13 +9882,22 @@
               "percentual": 22.2326
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 284,
+              "proporcao": 0.08830846,
+              "percentual": 8.8308
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 307,
-              "proporcao": 0.0954602,
-              "percentual": 9.546
+              "quantidade": 23,
+              "proporcao": 0.00715174,
+              "percentual": 0.7152
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -9675,7 +9909,7 @@
           "n_validas": 58405,
           "n_high": 1351,
           "percentual_high_sobre_validas": 2.3132,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -9705,13 +9939,22 @@
               "percentual": 19.4671
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 92,
+              "proporcao": 0.06809771,
+              "percentual": 6.8098
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 98,
-              "proporcao": 0.07253886,
-              "percentual": 7.2539
+              "quantidade": 6,
+              "proporcao": 0.00444115,
+              "percentual": 0.4441
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -9723,7 +9966,7 @@
           "n_validas": 21072,
           "n_high": 834,
           "percentual_high_sobre_validas": 3.9579,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -9753,13 +9996,22 @@
               "percentual": 20.5036
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 88,
+              "proporcao": 0.10551559,
+              "percentual": 10.5516
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 91,
-              "proporcao": 0.10911271,
-              "percentual": 10.9113
+              "quantidade": 3,
+              "proporcao": 0.00359712,
+              "percentual": 0.3597
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -9885,7 +10137,7 @@
           "n_validas": 58214,
           "n_high": 3767,
           "percentual_high_sobre_validas": 6.471,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -9915,13 +10167,22 @@
               "percentual": 22.0334
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 343,
+              "proporcao": 0.09105389,
+              "percentual": 9.1054
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 368,
-              "proporcao": 0.09769047,
-              "percentual": 9.769
+              "quantidade": 25,
+              "proporcao": 0.00663658,
+              "percentual": 0.6637
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -9933,7 +10194,7 @@
           "n_validas": 57041,
           "n_high": 3761,
           "percentual_high_sobre_validas": 6.5935,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -9963,13 +10224,22 @@
               "percentual": 24.6477
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 347,
+              "proporcao": 0.0922627,
+              "percentual": 9.2263
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 363,
-              "proporcao": 0.09651688,
-              "percentual": 9.6517
+              "quantidade": 16,
+              "proporcao": 0.00425419,
+              "percentual": 0.4254
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10038,7 +10308,7 @@
           "n_validas": 138346,
           "n_high": 6083,
           "percentual_high_sobre_validas": 4.3969,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10068,13 +10338,22 @@
               "percentual": 23.541
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 515,
+              "proporcao": 0.08466217,
+              "percentual": 8.4662
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 539,
-              "proporcao": 0.08860759,
-              "percentual": 8.8608
+              "quantidade": 24,
+              "proporcao": 0.00394542,
+              "percentual": 0.3945
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10143,7 +10422,7 @@
           "n_validas": 38579,
           "n_high": 1525,
           "percentual_high_sobre_validas": 3.9529,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10173,13 +10452,22 @@
               "percentual": 20.0
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 117,
+              "proporcao": 0.07672131,
+              "percentual": 7.6721
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 124,
-              "proporcao": 0.08131148,
-              "percentual": 8.1311
+              "quantidade": 7,
+              "proporcao": 0.00459016,
+              "percentual": 0.459
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10191,7 +10479,7 @@
           "n_validas": 47849,
           "n_high": 2405,
           "percentual_high_sobre_validas": 5.0262,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10221,13 +10509,22 @@
               "percentual": 23.2017
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 227,
+              "proporcao": 0.09438669,
+              "percentual": 9.4387
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 240,
-              "proporcao": 0.0997921,
-              "percentual": 9.9792
+              "quantidade": 13,
+              "proporcao": 0.00540541,
+              "percentual": 0.5405
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10239,7 +10536,7 @@
           "n_validas": 184690,
           "n_high": 7299,
           "percentual_high_sobre_validas": 3.952,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10269,13 +10566,22 @@
               "percentual": 21.9619
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 598,
+              "proporcao": 0.08192903,
+              "percentual": 8.1929
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 622,
-              "proporcao": 0.08521715,
-              "percentual": 8.5217
+              "quantidade": 24,
+              "proporcao": 0.00328812,
+              "percentual": 0.3288
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10287,7 +10593,7 @@
           "n_validas": 96886,
           "n_high": 6131,
           "percentual_high_sobre_validas": 6.3281,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10317,13 +10623,22 @@
               "percentual": 22.7858
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 532,
+              "proporcao": 0.08677214,
+              "percentual": 8.6772
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 550,
-              "proporcao": 0.08970804,
-              "percentual": 8.9708
+              "quantidade": 18,
+              "proporcao": 0.0029359,
+              "percentual": 0.2936
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10392,7 +10707,7 @@
           "n_validas": 82823,
           "n_high": 5569,
           "percentual_high_sobre_validas": 6.724,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10422,13 +10737,22 @@
               "percentual": 23.9361
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 623,
+              "proporcao": 0.11186928,
+              "percentual": 11.1869
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 650,
-              "proporcao": 0.11671754,
-              "percentual": 11.6718
+              "quantidade": 27,
+              "proporcao": 0.00484827,
+              "percentual": 0.4848
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10440,7 +10764,7 @@
           "n_validas": 136868,
           "n_high": 4848,
           "percentual_high_sobre_validas": 3.5421,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10470,13 +10794,22 @@
               "percentual": 21.7203
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 380,
+              "proporcao": 0.07838284,
+              "percentual": 7.8383
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 398,
-              "proporcao": 0.08209571,
-              "percentual": 8.2096
+              "quantidade": 18,
+              "proporcao": 0.00371287,
+              "percentual": 0.3713
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10602,7 +10935,7 @@
           "n_validas": 28916,
           "n_high": 908,
           "percentual_high_sobre_validas": 3.1401,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10632,13 +10965,22 @@
               "percentual": 18.8326
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 56,
+              "proporcao": 0.06167401,
+              "percentual": 6.1674
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 57,
-              "proporcao": 0.06277533,
-              "percentual": 6.2775
+              "quantidade": 1,
+              "proporcao": 0.00110132,
+              "percentual": 0.1101
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10650,7 +10992,7 @@
           "n_validas": 8097,
           "n_high": 223,
           "percentual_high_sobre_validas": 2.7541,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10671,13 +11013,31 @@
               "percentual": 35.426
             },
             {
-              "faixa": "940–1000",
+              "faixa": "940–<960",
               "limite_inferior": 940,
+              "limite_superior": 960,
+              "superior_inclusivo": false,
+              "quantidade": 49,
+              "proporcao": 0.21973094,
+              "percentual": 21.9731
+            },
+            {
+              "faixa": "960–<980",
+              "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 15,
+              "proporcao": 0.06726457,
+              "percentual": 6.7265
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 64,
-              "proporcao": 0.28699552,
-              "percentual": 28.6996
+              "quantidade": 0,
+              "proporcao": 0.0,
+              "percentual": 0.0
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10746,7 +11106,7 @@
           "n_validas": 75867,
           "n_high": 3593,
           "percentual_high_sobre_validas": 4.7359,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10776,13 +11136,22 @@
               "percentual": 21.1801
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 252,
+              "proporcao": 0.07013638,
+              "percentual": 7.0136
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 269,
-              "proporcao": 0.0748678,
-              "percentual": 7.4868
+              "quantidade": 17,
+              "proporcao": 0.00473142,
+              "percentual": 0.4731
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10794,7 +11163,7 @@
           "n_validas": 55214,
           "n_high": 3714,
           "percentual_high_sobre_validas": 6.7266,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10824,13 +11193,22 @@
               "percentual": 23.1826
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 350,
+              "proporcao": 0.09423802,
+              "percentual": 9.4238
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 366,
-              "proporcao": 0.09854604,
-              "percentual": 9.8546
+              "quantidade": 16,
+              "proporcao": 0.00430802,
+              "percentual": 0.4308
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10899,7 +11277,7 @@
           "n_validas": 24428,
           "n_high": 969,
           "percentual_high_sobre_validas": 3.9668,
-          "status_publicacao": "agregado_para_privacidade",
+          "status_publicacao": "ok",
           "faixas": [
             {
               "faixa": "900–<920",
@@ -10929,13 +11307,22 @@
               "percentual": 23.1166
             },
             {
-              "faixa": "960–1000",
+              "faixa": "960–<980",
               "limite_inferior": 960,
+              "limite_superior": 980,
+              "superior_inclusivo": false,
+              "quantidade": 53,
+              "proporcao": 0.05469556,
+              "percentual": 5.4696
+            },
+            {
+              "faixa": "980–1000",
+              "limite_inferior": 980,
               "limite_superior": 1000,
               "superior_inclusivo": true,
-              "quantidade": 59,
-              "proporcao": 0.06088751,
-              "percentual": 6.0888
+              "quantidade": 6,
+              "proporcao": 0.00619195,
+              "percentual": 0.6192
             }
           ],
           "total_faixas_fecha_pop_high": true,
@@ -10947,7 +11334,7 @@
         "soma_27_ufs_igual_brasil": true,
         "faixas_internas_fecham": true,
         "recortes_suprimidos": 0,
-        "recortes_faixas_mescladas": 18,
+        "recortes_faixas_mescladas": 0,
         "sem_identificadores": true
       },
       "ano": 2025,

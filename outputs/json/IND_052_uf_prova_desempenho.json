@@ -3,7 +3,7 @@
   "titulo": "UF da prova × desempenho",
   "status": "draft",
   "population": "POP_SOCIO_VALID",
-  "generated_utc": "2026-10-29T18:01:06.733428+00:00",
+  "generated_utc": "2026-10-30T03:55:50.849853+00:00",
   "anos_solicitados": [
     2019,
     2020,
@@ -82,7 +82,7 @@
           "n_ufs_com_celulas_pequenas": 0,
           "ufs_suprimidas_globalmente": false,
           "n_ufs_visiveis": 27,
-          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR visível apenas se N>=30; revisão cruzada pendente."
+          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR e UFs publicados sem supressão automática por N<30; sem microdados individuais."
         }
       },
       "recortes": {
@@ -2413,7 +2413,7 @@
           "n_ufs_com_celulas_pequenas": 0,
           "ufs_suprimidas_globalmente": false,
           "n_ufs_visiveis": 27,
-          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR visível apenas se N>=30; revisão cruzada pendente."
+          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR e UFs publicados sem supressão automática por N<30; sem microdados individuais."
         }
       },
       "recortes": {
@@ -4744,7 +4744,7 @@
           "n_ufs_com_celulas_pequenas": 0,
           "ufs_suprimidas_globalmente": false,
           "n_ufs_visiveis": 27,
-          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR visível apenas se N>=30; revisão cruzada pendente."
+          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR e UFs publicados sem supressão automática por N<30; sem microdados individuais."
         }
       },
       "recortes": {
@@ -7075,7 +7075,7 @@
           "n_ufs_com_celulas_pequenas": 0,
           "ufs_suprimidas_globalmente": false,
           "n_ufs_visiveis": 27,
-          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR visível apenas se N>=30; revisão cruzada pendente."
+          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR e UFs publicados sem supressão automática por N<30; sem microdados individuais."
         }
       },
       "recortes": {
@@ -9406,7 +9406,7 @@
           "n_ufs_com_celulas_pequenas": 0,
           "ufs_suprimidas_globalmente": false,
           "n_ufs_visiveis": 27,
-          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR visível apenas se N>=30; revisão cruzada pendente."
+          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR e UFs publicados sem supressão automática por N<30; sem microdados individuais."
         }
       },
       "recortes": {
@@ -11737,7 +11737,7 @@
           "n_ufs_com_celulas_pequenas": 0,
           "ufs_suprimidas_globalmente": false,
           "n_ufs_visiveis": 27,
-          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR visível apenas se N>=30; revisão cruzada pendente."
+          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR e UFs publicados sem supressão automática por N<30; sem microdados individuais."
         }
       },
       "recortes": {
@@ -14068,7 +14068,7 @@
           "n_ufs_com_celulas_pequenas": 0,
           "ufs_suprimidas_globalmente": false,
           "n_ufs_visiveis": 27,
-          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR visível apenas se N>=30; revisão cruzada pendente."
+          "politica": "Se existe UF com N=1..29, todas as UFs são ocultadas; BR e UFs publicados sem supressão automática por N<30; sem microdados individuais."
         }
       },
       "recortes": {

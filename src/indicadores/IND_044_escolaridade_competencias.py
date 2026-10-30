@@ -69,7 +69,7 @@ QUESTOES = ('Q001', 'Q002')
 COMPETENCIAS = tuple(f'C{i}' for i in range(1, 6))
 NOTAS_COMP = tuple(f'NU_NOTA_COMP{i}' for i in range(1, 6))
 CODIGOS = set('ABCDEFGH')
-MIN_N = 30
+MIN_N = 1
 RESPONSAVEIS = {'Q001': 'Pai ou homem responsável',
                 'Q002': 'Mãe ou mulher responsável'}
 CAMPOS_CSV = (

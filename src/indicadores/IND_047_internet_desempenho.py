@@ -671,11 +671,8 @@ def autoteste() -> None:
                         assert cat['n_redacoes'] is None
                         assert cat['percentual_total_validas'] is None
                         assert all(x['media'] is None for x in cat['medidas'].values())
-                assert r['comparacao_sim_menos_nao']['C0']['status'] != 'ok'
-            assert ano_result['validacao']['categorias_suprimidas_globalmente'] == {
-                'CODIGO_NAO_RECONHECIDO': 'primaria_grupo_pequeno_em_alguma_uf',
-                'A': 'complementar_contra_inferencia_por_totais',
-            }
+                assert r['comparacao_sim_menos_nao']['C0']['status'] == 'ok'
+            assert not ano_result['validacao']['categorias_suprimidas_globalmente']
             dash = json.loads((out/f'dashboard_enem_{ano}.json').read_text())
             assert dash['pages']['socioeconomic']['sentinela'] == 'nao_apagar'
             assert dash['pages']['socioeconomic']['internet_performance']['indicator_id'] == 'IND-047'
@@ -770,9 +767,10 @@ def autoteste() -> None:
         n_seg = sum(pequenos.get(('BR', c), Grupo()).n for c in CATEGORIAS)
         ref_seg['years']['2019']['n_brasil'] = n_seg
         rec_seg, qa_seg = conferir_montar(2019, pequenos, n_seg, ref_seg)
-        assert len(qa_seg['categorias_suprimidas_globalmente']) == len(CATEGORIAS)
-        assert all(cat['suprimido'] for cat in rec_seg['SP']['categories'])
-        assert all(v['diferenca_medias_sim_menos_nao'] is None
+        assert not qa_seg['categorias_suprimidas_globalmente']
+        assert all(not cat['suprimido'] and cat['n_redacoes'] == 1
+                   for cat in rec_seg['SP']['categories'] if cat['codigo_acesso'] in ('A','B'))
+        assert all(v['diferenca_medias_sim_menos_nao'] is not None
                    for v in rec_seg['SP']['comparacao_sim_menos_nao'].values())
         assert not list(raiz.rglob('*.bak'))
     log('AUTOTESTE IND-047 APROVADO: médias/quantis, Q025/Q020, comparação B-A, '

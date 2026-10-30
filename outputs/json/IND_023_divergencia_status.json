@@ -4,7 +4,7 @@
     "module_schema_version": "ind023-module-1.0.0",
     "analysis_version": "2.22.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023",
     "dataset_version": "enem-2019-2025-csv-publico",
-    "generated_at": "2026-10-20T14:24:46+00:00",
+    "generated_at": "2026-10-30T01:36:53+00:00",
     "data_status": "draft",
     "source_indicator_files": [
       "IND_022_discrepancia_oficial.json",
@@ -13,58 +13,9 @@
     "geographic_dimension": "SG_UF_PROVA",
     "population_definition": "POP_EVALUATOR: duas notas totais AV1/AV2 válidas, como IND-020",
     "method": "taxa_status_av1_av2_na_pop_evaluator_a_partir_ind022_auditado",
-    "matrix_mode": "matriz",
-    "source_qa": {
-      "2019": {
-        "linhas_fonte": 5095171,
-        "n_pop_evaluator": 3779355,
-        "n_pares_status": 3779355,
-        "n_ausentes": 0,
-        "registros_geografia": 5095171
-      },
-      "2020": {
-        "linhas_fonte": 5783109,
-        "n_pop_evaluator": 2674914,
-        "n_pares_status": 2674914,
-        "n_ausentes": 0,
-        "registros_geografia": 5783109
-      },
-      "2021": {
-        "linhas_fonte": 3389832,
-        "n_pop_evaluator": 2378379,
-        "n_pares_status": 2378379,
-        "n_ausentes": 0,
-        "registros_geografia": 3389832
-      },
-      "2022": {
-        "linhas_fonte": 3476105,
-        "n_pop_evaluator": 2493442,
-        "n_pares_status": 2493442,
-        "n_ausentes": 0,
-        "registros_geografia": 3476105
-      },
-      "2023": {
-        "linhas_fonte": 3933955,
-        "n_pop_evaluator": 2822643,
-        "n_pares_status": 2822643,
-        "n_ausentes": 0,
-        "registros_geografia": 3933955
-      },
-      "2024": {
-        "linhas_fonte": 4332944,
-        "n_pop_evaluator": 3167955,
-        "n_pares_status": 3167955,
-        "n_ausentes": 0,
-        "registros_geografia": 4332944
-      },
-      "2025": {
-        "linhas_fonte": 4810772,
-        "n_pop_evaluator": 3457555,
-        "n_pares_status": 3457555,
-        "n_ausentes": 0
-      }
-    },
-    "minimum_group_count": 30,
+    "matrix_mode": "agregados",
+    "source_qa": {},
+    "minimum_group_count": 1,
     "publication_status": "draft; revisão acadêmica e privacidade complementar pendentes",
     "notes": "Compara exclusivamente TP_STATUS_REDACAO_AV1 com TP_STATUS_REDACAO_AV2 entre participações da POP_EVALUATOR (duas notas totais AV1/AV2 válidas). Status ausente não é classificado como igual. A taxa principal usa como denominador a POP_EVALUATOR; a taxa entre pares de status conhecidos é adicional e requer apresentar a cobertura. Contagens do IND-022 são a fonte exata já calculada do motivo status divergente. A matriz de transições detalhadas só é gerada a partir dos microdados no modo matriz, podendo ser inteiramente retida se houver células positivas <30. Códigos de status sem validação interanual não são agregados em matriz histórica. Divergência de situação não significa erro do avaliador nem mede a nota final; UF é local de prova. Histórico soma participações, não pessoas únicas. Uso exploratório, data_status=draft; revisão acadêmica e privacidade complementar pendentes."
   },
@@ -89,9 +40,9 @@
         "percentual_iguais_pares_comparaveis": 99.466099,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_publicada_celulas_raras",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -109,9 +60,9 @@
           "percentual_iguais_pares_comparaveis": 99.289415,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -128,9 +79,9 @@
           "percentual_iguais_pares_comparaveis": 99.397751,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -147,9 +98,9 @@
           "percentual_iguais_pares_comparaveis": 99.114767,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -166,9 +117,9 @@
           "percentual_iguais_pares_comparaveis": 99.354649,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -185,9 +136,9 @@
           "percentual_iguais_pares_comparaveis": 99.458324,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -204,9 +155,9 @@
           "percentual_iguais_pares_comparaveis": 99.319756,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -223,9 +174,9 @@
           "percentual_iguais_pares_comparaveis": 99.588843,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -242,9 +193,9 @@
           "percentual_iguais_pares_comparaveis": 99.609596,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -261,9 +212,9 @@
           "percentual_iguais_pares_comparaveis": 99.496416,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -280,9 +231,9 @@
           "percentual_iguais_pares_comparaveis": 99.214161,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -299,9 +250,9 @@
           "percentual_iguais_pares_comparaveis": 99.526171,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -318,9 +269,9 @@
           "percentual_iguais_pares_comparaveis": 99.4464,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -337,9 +288,9 @@
           "percentual_iguais_pares_comparaveis": 99.429107,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -356,9 +307,9 @@
           "percentual_iguais_pares_comparaveis": 99.317115,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -375,9 +326,9 @@
           "percentual_iguais_pares_comparaveis": 99.421686,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -394,9 +345,9 @@
           "percentual_iguais_pares_comparaveis": 99.343455,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -413,9 +364,9 @@
           "percentual_iguais_pares_comparaveis": 99.243338,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -432,9 +383,9 @@
           "percentual_iguais_pares_comparaveis": 99.59846,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -451,9 +402,9 @@
           "percentual_iguais_pares_comparaveis": 99.53502,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -470,9 +421,9 @@
           "percentual_iguais_pares_comparaveis": 99.485264,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -489,9 +440,9 @@
           "percentual_iguais_pares_comparaveis": 99.321489,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -508,9 +459,9 @@
           "percentual_iguais_pares_comparaveis": 99.447208,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -527,9 +478,9 @@
           "percentual_iguais_pares_comparaveis": 99.679005,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -546,9 +497,9 @@
           "percentual_iguais_pares_comparaveis": 99.644874,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -565,9 +516,9 @@
           "percentual_iguais_pares_comparaveis": 99.414582,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -584,9 +535,9 @@
           "percentual_iguais_pares_comparaveis": 99.586903,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -603,9 +554,9 @@
           "percentual_iguais_pares_comparaveis": 99.486271,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         }
@@ -614,7 +565,7 @@
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
         "origem_contagens": "IND-022",
-        "minimum_group_count": 30
+        "minimum_group_count": 1
       },
       "ano": 2019
     },
@@ -631,9 +582,9 @@
         "percentual_iguais_pares_comparaveis": 99.294295,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_publicada_celulas_raras",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -651,9 +602,9 @@
           "percentual_iguais_pares_comparaveis": 99.102453,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -670,9 +621,9 @@
           "percentual_iguais_pares_comparaveis": 99.198648,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -689,9 +640,9 @@
           "percentual_iguais_pares_comparaveis": 98.326778,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -708,9 +659,9 @@
           "percentual_iguais_pares_comparaveis": 99.208868,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -727,9 +678,9 @@
           "percentual_iguais_pares_comparaveis": 99.254094,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -746,9 +697,9 @@
           "percentual_iguais_pares_comparaveis": 99.283108,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -765,9 +716,9 @@
           "percentual_iguais_pares_comparaveis": 99.448805,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -784,9 +735,9 @@
           "percentual_iguais_pares_comparaveis": 99.344418,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -803,9 +754,9 @@
           "percentual_iguais_pares_comparaveis": 99.367738,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -822,9 +773,9 @@
           "percentual_iguais_pares_comparaveis": 99.148308,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -841,9 +792,9 @@
           "percentual_iguais_pares_comparaveis": 99.392824,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -860,9 +811,9 @@
           "percentual_iguais_pares_comparaveis": 99.238974,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -879,9 +830,9 @@
           "percentual_iguais_pares_comparaveis": 99.246037,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -898,9 +849,9 @@
           "percentual_iguais_pares_comparaveis": 99.115694,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -917,9 +868,9 @@
           "percentual_iguais_pares_comparaveis": 99.245309,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -936,9 +887,9 @@
           "percentual_iguais_pares_comparaveis": 99.264546,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -955,9 +906,9 @@
           "percentual_iguais_pares_comparaveis": 99.175852,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -974,9 +925,9 @@
           "percentual_iguais_pares_comparaveis": 99.41466,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -993,9 +944,9 @@
           "percentual_iguais_pares_comparaveis": 99.317129,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1012,9 +963,9 @@
           "percentual_iguais_pares_comparaveis": 99.341248,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1031,9 +982,9 @@
           "percentual_iguais_pares_comparaveis": 99.139776,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1050,9 +1001,9 @@
           "percentual_iguais_pares_comparaveis": 99.03045,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1069,9 +1020,9 @@
           "percentual_iguais_pares_comparaveis": 99.445275,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1088,9 +1039,9 @@
           "percentual_iguais_pares_comparaveis": 99.388534,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1107,9 +1058,9 @@
           "percentual_iguais_pares_comparaveis": 99.257693,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1126,9 +1077,9 @@
           "percentual_iguais_pares_comparaveis": 99.427021,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1145,9 +1096,9 @@
           "percentual_iguais_pares_comparaveis": 99.317579,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         }
@@ -1156,7 +1107,7 @@
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
         "origem_contagens": "IND-022",
-        "minimum_group_count": 30
+        "minimum_group_count": 1
       },
       "ano": 2020
     },
@@ -1173,9 +1124,9 @@
         "percentual_iguais_pares_comparaveis": 99.118896,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_publicada_celulas_raras",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -1193,9 +1144,9 @@
           "percentual_iguais_pares_comparaveis": 98.873628,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1212,9 +1163,9 @@
           "percentual_iguais_pares_comparaveis": 99.032076,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1231,9 +1182,9 @@
           "percentual_iguais_pares_comparaveis": 98.26759,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1250,9 +1201,9 @@
           "percentual_iguais_pares_comparaveis": 98.855447,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1269,9 +1220,9 @@
           "percentual_iguais_pares_comparaveis": 99.125749,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1288,9 +1239,9 @@
           "percentual_iguais_pares_comparaveis": 98.631359,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1307,9 +1258,9 @@
           "percentual_iguais_pares_comparaveis": 99.376791,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1326,9 +1277,9 @@
           "percentual_iguais_pares_comparaveis": 99.175702,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1345,9 +1296,9 @@
           "percentual_iguais_pares_comparaveis": 99.172576,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1364,9 +1315,9 @@
           "percentual_iguais_pares_comparaveis": 98.783863,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1383,9 +1334,9 @@
           "percentual_iguais_pares_comparaveis": 99.294933,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1402,9 +1353,9 @@
           "percentual_iguais_pares_comparaveis": 99.060773,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1421,9 +1372,9 @@
           "percentual_iguais_pares_comparaveis": 99.022232,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1440,9 +1391,9 @@
           "percentual_iguais_pares_comparaveis": 98.885602,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1459,9 +1410,9 @@
           "percentual_iguais_pares_comparaveis": 99.082086,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1478,9 +1429,9 @@
           "percentual_iguais_pares_comparaveis": 98.986933,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1497,9 +1448,9 @@
           "percentual_iguais_pares_comparaveis": 98.891431,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1516,9 +1467,9 @@
           "percentual_iguais_pares_comparaveis": 99.342086,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1535,9 +1486,9 @@
           "percentual_iguais_pares_comparaveis": 99.21243,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1554,9 +1505,9 @@
           "percentual_iguais_pares_comparaveis": 99.124952,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1573,9 +1524,9 @@
           "percentual_iguais_pares_comparaveis": 98.95555,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1592,9 +1543,9 @@
           "percentual_iguais_pares_comparaveis": 99.012346,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1611,9 +1562,9 @@
           "percentual_iguais_pares_comparaveis": 99.363915,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1630,9 +1581,9 @@
           "percentual_iguais_pares_comparaveis": 99.346192,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1649,9 +1600,9 @@
           "percentual_iguais_pares_comparaveis": 98.972272,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1668,9 +1619,9 @@
           "percentual_iguais_pares_comparaveis": 99.387189,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1687,9 +1638,9 @@
           "percentual_iguais_pares_comparaveis": 98.942848,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         }
@@ -1698,7 +1649,7 @@
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
         "origem_contagens": "IND-022",
-        "minimum_group_count": 30
+        "minimum_group_count": 1
       },
       "ano": 2021
     },
@@ -1715,9 +1666,9 @@
         "percentual_iguais_pares_comparaveis": 98.184197,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_publicada_celulas_raras",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -1735,9 +1686,9 @@
           "percentual_iguais_pares_comparaveis": 97.861309,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1754,9 +1705,9 @@
           "percentual_iguais_pares_comparaveis": 97.913403,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1773,9 +1724,9 @@
           "percentual_iguais_pares_comparaveis": 96.914373,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1792,9 +1743,9 @@
           "percentual_iguais_pares_comparaveis": 97.890323,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1811,9 +1762,9 @@
           "percentual_iguais_pares_comparaveis": 98.134344,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1830,9 +1781,9 @@
           "percentual_iguais_pares_comparaveis": 97.39817,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1849,9 +1800,9 @@
           "percentual_iguais_pares_comparaveis": 98.75058,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1868,9 +1819,9 @@
           "percentual_iguais_pares_comparaveis": 98.50308,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1887,9 +1838,9 @@
           "percentual_iguais_pares_comparaveis": 98.211197,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1906,9 +1857,9 @@
           "percentual_iguais_pares_comparaveis": 97.628343,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1925,9 +1876,9 @@
           "percentual_iguais_pares_comparaveis": 98.566752,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1944,9 +1895,9 @@
           "percentual_iguais_pares_comparaveis": 98.226507,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1963,9 +1914,9 @@
           "percentual_iguais_pares_comparaveis": 97.947692,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -1982,9 +1933,9 @@
           "percentual_iguais_pares_comparaveis": 97.752088,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2001,9 +1952,9 @@
           "percentual_iguais_pares_comparaveis": 97.944918,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2020,9 +1971,9 @@
           "percentual_iguais_pares_comparaveis": 97.871368,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2039,9 +1990,9 @@
           "percentual_iguais_pares_comparaveis": 97.416751,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2058,9 +2009,9 @@
           "percentual_iguais_pares_comparaveis": 98.367263,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2077,9 +2028,9 @@
           "percentual_iguais_pares_comparaveis": 98.415419,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2096,9 +2047,9 @@
           "percentual_iguais_pares_comparaveis": 98.214942,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2115,9 +2066,9 @@
           "percentual_iguais_pares_comparaveis": 97.70798,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2134,9 +2085,9 @@
           "percentual_iguais_pares_comparaveis": 98.00148,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2153,9 +2104,9 @@
           "percentual_iguais_pares_comparaveis": 98.685521,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2172,9 +2123,9 @@
           "percentual_iguais_pares_comparaveis": 98.850766,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2191,9 +2142,9 @@
           "percentual_iguais_pares_comparaveis": 97.880299,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2210,9 +2161,9 @@
           "percentual_iguais_pares_comparaveis": 98.681978,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2229,9 +2180,9 @@
           "percentual_iguais_pares_comparaveis": 97.771901,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         }
@@ -2240,7 +2191,7 @@
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
         "origem_contagens": "IND-022",
-        "minimum_group_count": 30
+        "minimum_group_count": 1
       },
       "ano": 2022
     },
@@ -2257,9 +2208,9 @@
         "percentual_iguais_pares_comparaveis": 97.842023,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_publicada_celulas_raras",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -2277,9 +2228,9 @@
           "percentual_iguais_pares_comparaveis": 97.048633,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2296,9 +2247,9 @@
           "percentual_iguais_pares_comparaveis": 97.295753,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2315,9 +2266,9 @@
           "percentual_iguais_pares_comparaveis": 96.288063,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2334,9 +2285,9 @@
           "percentual_iguais_pares_comparaveis": 96.988322,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2353,9 +2304,9 @@
           "percentual_iguais_pares_comparaveis": 97.748229,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2372,9 +2323,9 @@
           "percentual_iguais_pares_comparaveis": 97.195491,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2391,9 +2342,9 @@
           "percentual_iguais_pares_comparaveis": 98.448344,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2410,9 +2361,9 @@
           "percentual_iguais_pares_comparaveis": 98.24548,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2429,9 +2380,9 @@
           "percentual_iguais_pares_comparaveis": 98.120198,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2448,9 +2399,9 @@
           "percentual_iguais_pares_comparaveis": 96.908698,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2467,9 +2418,9 @@
           "percentual_iguais_pares_comparaveis": 98.402557,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2486,9 +2437,9 @@
           "percentual_iguais_pares_comparaveis": 97.844634,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2505,9 +2456,9 @@
           "percentual_iguais_pares_comparaveis": 97.594719,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2524,9 +2475,9 @@
           "percentual_iguais_pares_comparaveis": 97.078596,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2543,9 +2494,9 @@
           "percentual_iguais_pares_comparaveis": 97.51615,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2562,9 +2513,9 @@
           "percentual_iguais_pares_comparaveis": 97.635477,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2581,9 +2532,9 @@
           "percentual_iguais_pares_comparaveis": 96.832659,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2600,9 +2551,9 @@
           "percentual_iguais_pares_comparaveis": 98.110641,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2619,9 +2570,9 @@
           "percentual_iguais_pares_comparaveis": 98.175223,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2638,9 +2589,9 @@
           "percentual_iguais_pares_comparaveis": 97.948555,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2657,9 +2608,9 @@
           "percentual_iguais_pares_comparaveis": 97.187551,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2676,9 +2627,9 @@
           "percentual_iguais_pares_comparaveis": 97.002435,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2695,9 +2646,9 @@
           "percentual_iguais_pares_comparaveis": 98.385787,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2714,9 +2665,9 @@
           "percentual_iguais_pares_comparaveis": 98.502294,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2733,9 +2684,9 @@
           "percentual_iguais_pares_comparaveis": 97.458268,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2752,9 +2703,9 @@
           "percentual_iguais_pares_comparaveis": 98.466375,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2771,9 +2722,9 @@
           "percentual_iguais_pares_comparaveis": 97.354772,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         }
@@ -2782,7 +2733,7 @@
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
         "origem_contagens": "IND-022",
-        "minimum_group_count": 30
+        "minimum_group_count": 1
       },
       "ano": 2023
     },
@@ -2799,9 +2750,9 @@
         "percentual_iguais_pares_comparaveis": 98.428702,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_publicada_celulas_raras",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -2819,9 +2770,9 @@
           "percentual_iguais_pares_comparaveis": 97.840934,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2838,9 +2789,9 @@
           "percentual_iguais_pares_comparaveis": 97.821643,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2857,9 +2808,9 @@
           "percentual_iguais_pares_comparaveis": 97.325078,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2876,9 +2827,9 @@
           "percentual_iguais_pares_comparaveis": 97.888141,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2895,9 +2846,9 @@
           "percentual_iguais_pares_comparaveis": 98.111528,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2914,9 +2865,9 @@
           "percentual_iguais_pares_comparaveis": 98.04266,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2933,9 +2884,9 @@
           "percentual_iguais_pares_comparaveis": 98.963684,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2952,9 +2903,9 @@
           "percentual_iguais_pares_comparaveis": 98.899129,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2971,9 +2922,9 @@
           "percentual_iguais_pares_comparaveis": 98.594709,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -2990,9 +2941,9 @@
           "percentual_iguais_pares_comparaveis": 97.760333,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3009,9 +2960,9 @@
           "percentual_iguais_pares_comparaveis": 98.843361,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3028,9 +2979,9 @@
           "percentual_iguais_pares_comparaveis": 98.385547,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3047,9 +2998,9 @@
           "percentual_iguais_pares_comparaveis": 98.182751,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3066,9 +3017,9 @@
           "percentual_iguais_pares_comparaveis": 97.728155,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3085,9 +3036,9 @@
           "percentual_iguais_pares_comparaveis": 98.326132,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3104,9 +3055,9 @@
           "percentual_iguais_pares_comparaveis": 98.359648,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3123,9 +3074,9 @@
           "percentual_iguais_pares_comparaveis": 97.579267,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3142,9 +3093,9 @@
           "percentual_iguais_pares_comparaveis": 98.763006,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3161,9 +3112,9 @@
           "percentual_iguais_pares_comparaveis": 98.755537,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3180,9 +3131,9 @@
           "percentual_iguais_pares_comparaveis": 98.484599,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3199,9 +3150,9 @@
           "percentual_iguais_pares_comparaveis": 98.177819,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3218,9 +3169,9 @@
           "percentual_iguais_pares_comparaveis": 98.146092,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3237,9 +3188,9 @@
           "percentual_iguais_pares_comparaveis": 98.564373,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3256,9 +3207,9 @@
           "percentual_iguais_pares_comparaveis": 99.053521,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3275,9 +3226,9 @@
           "percentual_iguais_pares_comparaveis": 98.264566,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3294,9 +3245,9 @@
           "percentual_iguais_pares_comparaveis": 98.968363,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3313,9 +3264,9 @@
           "percentual_iguais_pares_comparaveis": 97.965709,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         }
@@ -3324,7 +3275,7 @@
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
         "origem_contagens": "IND-022",
-        "minimum_group_count": 30
+        "minimum_group_count": 1
       },
       "ano": 2024
     },
@@ -3341,9 +3292,9 @@
         "percentual_iguais_pares_comparaveis": 98.217266,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_publicada_celulas_raras",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -3361,9 +3312,9 @@
           "percentual_iguais_pares_comparaveis": 97.920067,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3380,9 +3331,9 @@
           "percentual_iguais_pares_comparaveis": 97.883747,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3399,9 +3350,9 @@
           "percentual_iguais_pares_comparaveis": 96.329199,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3418,9 +3369,9 @@
           "percentual_iguais_pares_comparaveis": 97.71182,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3437,9 +3388,9 @@
           "percentual_iguais_pares_comparaveis": 97.994808,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3456,9 +3407,9 @@
           "percentual_iguais_pares_comparaveis": 97.509032,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3475,9 +3426,9 @@
           "percentual_iguais_pares_comparaveis": 99.12152,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3494,9 +3445,9 @@
           "percentual_iguais_pares_comparaveis": 98.620939,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3513,9 +3464,9 @@
           "percentual_iguais_pares_comparaveis": 98.755932,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3532,9 +3483,9 @@
           "percentual_iguais_pares_comparaveis": 97.286222,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3551,9 +3502,9 @@
           "percentual_iguais_pares_comparaveis": 98.519436,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3570,9 +3521,9 @@
           "percentual_iguais_pares_comparaveis": 98.301983,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3589,9 +3540,9 @@
           "percentual_iguais_pares_comparaveis": 98.050274,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3608,9 +3559,9 @@
           "percentual_iguais_pares_comparaveis": 97.319785,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3627,9 +3578,9 @@
           "percentual_iguais_pares_comparaveis": 98.206613,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3646,9 +3597,9 @@
           "percentual_iguais_pares_comparaveis": 97.955652,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3665,9 +3616,9 @@
           "percentual_iguais_pares_comparaveis": 96.965041,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3684,9 +3635,9 @@
           "percentual_iguais_pares_comparaveis": 98.656206,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3703,9 +3654,9 @@
           "percentual_iguais_pares_comparaveis": 98.747257,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3722,9 +3673,9 @@
           "percentual_iguais_pares_comparaveis": 98.501615,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3741,9 +3692,9 @@
           "percentual_iguais_pares_comparaveis": 97.460468,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3760,9 +3711,9 @@
           "percentual_iguais_pares_comparaveis": 97.30897,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3779,9 +3730,9 @@
           "percentual_iguais_pares_comparaveis": 98.970045,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3798,9 +3749,9 @@
           "percentual_iguais_pares_comparaveis": 98.991723,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3817,9 +3768,9 @@
           "percentual_iguais_pares_comparaveis": 98.074324,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3836,9 +3787,9 @@
           "percentual_iguais_pares_comparaveis": 98.803622,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         },
@@ -3855,9 +3806,9 @@
           "percentual_iguais_pares_comparaveis": 97.688555,
           "populacao": "POP_EVALUATOR",
           "matriz_status": {
-            "status": "nao_publicada_celulas_raras",
+            "status": "nao_calculada_requer_microdados",
             "celulas": [],
-            "nota": "Matriz inteira retida para impedir inferência de células pequenas."
+            "nota": "Contagem cruzada não pode ser inferida do IND-022."
           },
           "sem_dados_individuais": true
         }
@@ -3866,7 +3817,7 @@
         "status": "ok",
         "soma_27_ufs_igual_brasil": true,
         "origem_contagens": "IND-022",
-        "minimum_group_count": 30
+        "minimum_group_count": 1
       },
       "ano": 2025
     }
@@ -3884,9 +3835,9 @@
       "percentual_iguais_pares_comparaveis": 98.663653,
       "populacao": "POP_EVALUATOR",
       "matriz_status": {
-        "status": "nao_aplicavel_historico",
+        "status": "nao_calculada_requer_microdados",
         "celulas": [],
-        "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+        "nota": "Contagem cruzada não pode ser inferida do IND-022."
       },
       "sem_dados_individuais": true
     },
@@ -3904,9 +3855,9 @@
         "percentual_iguais_pares_comparaveis": 98.371557,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -3923,9 +3874,9 @@
         "percentual_iguais_pares_comparaveis": 98.336321,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -3942,9 +3893,9 @@
         "percentual_iguais_pares_comparaveis": 97.563521,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -3961,9 +3912,9 @@
         "percentual_iguais_pares_comparaveis": 98.331089,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -3980,9 +3931,9 @@
         "percentual_iguais_pares_comparaveis": 98.531169,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -3999,9 +3950,9 @@
         "percentual_iguais_pares_comparaveis": 98.193686,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4018,9 +3969,9 @@
         "percentual_iguais_pares_comparaveis": 99.123147,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4037,9 +3988,9 @@
         "percentual_iguais_pares_comparaveis": 98.945671,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4056,9 +4007,9 @@
         "percentual_iguais_pares_comparaveis": 98.828091,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4075,9 +4026,9 @@
         "percentual_iguais_pares_comparaveis": 98.11083,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4094,9 +4045,9 @@
         "percentual_iguais_pares_comparaveis": 98.962572,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4113,9 +4064,9 @@
         "percentual_iguais_pares_comparaveis": 98.68356,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4132,9 +4083,9 @@
         "percentual_iguais_pares_comparaveis": 98.523678,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4151,9 +4102,9 @@
         "percentual_iguais_pares_comparaveis": 98.1607,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4170,9 +4121,9 @@
         "percentual_iguais_pares_comparaveis": 98.551899,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4189,9 +4140,9 @@
         "percentual_iguais_pares_comparaveis": 98.499882,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4208,9 +4159,9 @@
         "percentual_iguais_pares_comparaveis": 98.001388,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4227,9 +4178,9 @@
         "percentual_iguais_pares_comparaveis": 98.907007,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4246,9 +4197,9 @@
         "percentual_iguais_pares_comparaveis": 98.894167,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4265,9 +4216,9 @@
         "percentual_iguais_pares_comparaveis": 98.734124,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4284,9 +4235,9 @@
         "percentual_iguais_pares_comparaveis": 98.334558,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4303,9 +4254,9 @@
         "percentual_iguais_pares_comparaveis": 98.270005,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4322,9 +4273,9 @@
         "percentual_iguais_pares_comparaveis": 99.023842,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4341,9 +4292,9 @@
         "percentual_iguais_pares_comparaveis": 99.118538,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4360,9 +4311,9 @@
         "percentual_iguais_pares_comparaveis": 98.475387,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4379,9 +4330,9 @@
         "percentual_iguais_pares_comparaveis": 99.05938,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       },
@@ -4398,9 +4349,9 @@
         "percentual_iguais_pares_comparaveis": 98.428361,
         "populacao": "POP_EVALUATOR",
         "matriz_status": {
-          "status": "nao_aplicavel_historico",
+          "status": "nao_calculada_requer_microdados",
           "celulas": [],
-          "nota": "Códigos de situação podem mudar entre edições; a matriz histórica não é construída."
+          "nota": "Contagem cruzada não pode ser inferida do IND-022."
         },
         "sem_dados_individuais": true
       }
@@ -4409,7 +4360,7 @@
       "status": "ok",
       "soma_27_ufs_igual_brasil": true,
       "origem_contagens": "IND-022",
-      "minimum_group_count": 30
+      "minimum_group_count": 1
     },
     "periodo": "2019-2025"
   },

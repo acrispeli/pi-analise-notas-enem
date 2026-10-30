@@ -68,7 +68,7 @@ UFS = ('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG',
        'RS', 'SC', 'SE', 'SP', 'TO')
 COMPETENCIAS = tuple(f'C{i}' for i in range(1, 6))
 COLUNAS_C = tuple(f'NU_NOTA_COMP{i}' for i in range(1, 6))
-MIN_N = 30
+MIN_N = 1
 POP_NEAR_REFERENCIA = {
     2019: 172_548, 2020: 183_343, 2021: 163_747,
     2022: 197_083, 2023: 288_602, 2024: 291_111,
@@ -697,12 +697,11 @@ def autoteste() -> None:
         adicionar_histograma(grande, uf, h)
     validar_histogramas(grande, 2024, int(grande['BR'].sum()), False)
     ocultar, qa = calcular_privacidade(grande)
-    assert 'SP' in ocultar and len(ocultar) >= 2
-    assert 'BR' not in ocultar
+    assert not ocultar and qa['celulas_suprimidas'] == 0
     pub = montar_recortes(grande, ocultar)
-    assert all(x['n_redacoes_com_desconto_conjunto'] is None for x in pub['SP']['combinacoes'])
+    assert all(x['n_redacoes_com_desconto_conjunto'] is not None for x in pub['SP']['combinacoes'])
     assert all(x['n_redacoes_com_desconto_conjunto'] is not None for x in pub['BR']['combinacoes'])
-    assert qa['celulas_suprimidas'] >= 40
+    assert pub['SP']['combinacoes'][0]['n_redacoes_com_desconto_conjunto'] is not None
     # Testa leitura das fontes, junção SQLite, saída JSON/CSV e integração isolada.
     with _tempfile.TemporaryDirectory(prefix='teste_ind035_') as tmp:
         raiz = Path(tmp)

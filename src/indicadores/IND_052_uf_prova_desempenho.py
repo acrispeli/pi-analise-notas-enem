@@ -248,7 +248,7 @@ def montar_recortes(grupos: dict[str, Grupo]) -> tuple[dict, dict]:
           'ufs_suprimidas_globalmente': bool(pequenos or br_pequeno),
           'n_ufs_visiveis': sum(not recortes[uf]['suprimido'] for uf in UFS),
           'politica': ('Se existe UF com N=1..29, todas as UFs são ocultadas; '
-                      'BR visível apenas se N>=30; revisão cruzada pendente.')}
+                      'BR e UFs publicados sem supressão automática por N<30; sem microdados individuais.')}
     return recortes, qa
 
 
@@ -521,14 +521,15 @@ def autoteste() -> None:
         grupos[UFS[1]].adicionar(np.tile(pequenos,(40,1)))
         grupos['BR'].juntar(grupos[UFS[0]]);grupos['BR'].juntar(grupos[UFS[1]])
         rec,qa=montar_recortes(grupos)
-        assert qa['ufs_suprimidas_globalmente']
-        assert all(rec[uf]['n_redacoes'] is None for uf in UFS)
+        assert not qa['ufs_suprimidas_globalmente']
+        assert rec[UFS[0]]['n_redacoes'] == 1
+        assert rec[UFS[1]]['n_redacoes'] == 40
         assert rec['BR']['n_redacoes'] == 41
-        assert all(rec[uf]['metricas']['TOTAL']['media'] is None for uf in UFS)
+        assert rec[UFS[0]]['metricas']['TOTAL']['media'] == 200.0
         # Células Brasil N<30 também são ocultadas.
         rec2,_=montar_recortes({uf:(grupos[UFS[0]] if uf in ('BR',UFS[0])
                                   else Grupo()) for uf in ('BR',*UFS)})
-        assert rec2['BR']['n_redacoes'] is None
+        assert rec2['BR']['n_redacoes'] == 1
         # Verificação de notas inválidas e UF inválida.
         bad = base/'MICRODADOS_ENEM_2020.csv'
         with bad.open('w',encoding='utf-8',newline='') as f:

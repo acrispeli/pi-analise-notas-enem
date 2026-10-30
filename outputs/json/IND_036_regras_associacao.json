@@ -2,7 +2,7 @@
   "indicator_id": "IND-036",
   "titulo": "Regras de associação de descontos",
   "status": "draft",
-  "gerado_em_utc": "2026-10-28T14:21:20.320556+00:00",
+  "gerado_em_utc": "2026-10-30T02:14:07.806451+00:00",
   "anos_solicitados": [
     2019,
     2020,
@@ -29,7 +29,7 @@
     "min_confianca": 0.3,
     "min_lift": 1.0,
     "max_regras_por_recorte": 30,
-    "min_contagem_itemset": 30,
+    "min_contagem_itemset": 1,
     "politica_divulgacao": "regras_agregadas_sem_bloqueio_mascara_rara_v2"
   },
   "methodology": {
@@ -69,10 +69,10 @@
       "controles": {
         "ind031": "aprovado",
         "ind032": "aprovado",
-        "ind035": "aprovado_400_contagens"
+        "ind035": "aprovado_560_contagens"
       },
       "privacidade": {
-        "minimo_contagem_divulgavel": 30,
+        "minimo_contagem_divulgavel": 1,
         "versao_politica_divulgacao": "regras_agregadas_sem_bloqueio_mascara_rara_v2",
         "criterio": "nao_ocultar_recorte_por_mascara_exata_rara; divulgar_apenas_regras_com_antecedente_consequente_uniao_n_maior_igual_30",
         "bloqueio_integral_por_mascara_exata_rara": false,
@@ -80,7 +80,7 @@
         "recortes_suprimidos_primarios": 0,
         "recortes_suprimidos_complementares": 0,
         "revisao_privacidade_cruzada_pendente": true,
-        "regras_publicadas_neste_arquivo": 195
+        "regras_publicadas_neste_arquivo": 212
       },
       "recortes": {
         "BR": {
@@ -205,12 +205,35 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 21,
-            "regras_que_atendem_limiares": 7,
-            "regras_selecionadas": 7,
+            "itemsets_frequentes": 29,
+            "regras_que_atendem_limiares": 10,
+            "regras_selecionadas": 10,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C5"
+              ],
+              "itemset": [
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 25,
+              "n_consequente": 277,
+              "n_ambos": 12,
+              "suporte": 0.0181818182,
+              "suporte_percentual": 1.818182,
+              "confianca": 0.48,
+              "confianca_percentual": 48.0,
+              "lift": 1.1436823105,
+              "leverage": 0.0022842057
+            },
             {
               "antecedente": [
                 "C2"
@@ -231,6 +254,31 @@
               "confianca_percentual": 43.809524,
               "lift": 1.0438370294,
               "leverage": 0.0029269972
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C5"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 23,
+              "n_consequente": 277,
+              "n_ambos": 10,
+              "suporte": 0.0151515152,
+              "suporte_percentual": 1.515152,
+              "confianca": 0.4347826087,
+              "confianca_percentual": 43.478261,
+              "lift": 1.0359441218,
+              "leverage": 0.0005257117
             },
             {
               "antecedente": [
@@ -365,6 +413,31 @@
               "confianca_percentual": 40.0,
               "lift": 1.0038022814,
               "leverage": 0.0002410468
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C5"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 25,
+              "n_consequente": 263,
+              "n_ambos": 10,
+              "suporte": 0.0151515152,
+              "suporte_percentual": 1.515152,
+              "confianca": 0.4,
+              "confianca_percentual": 40.0,
+              "lift": 1.0038022814,
+              "leverage": 5.73921e-05
             }
           ],
           "n_registros_individuais_exportados": 0,
@@ -557,12 +630,108 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 20,
-            "regras_que_atendem_limiares": 4,
-            "regras_selecionadas": 4,
+            "itemsets_frequentes": 29,
+            "regras_que_atendem_limiares": 9,
+            "regras_selecionadas": 9,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 28,
+              "n_consequente": 272,
+              "n_ambos": 15,
+              "suporte": 0.0267379679,
+              "suporte_percentual": 2.673797,
+              "confianca": 0.5357142857,
+              "confianca_percentual": 53.571429,
+              "lift": 1.1049107143,
+              "leverage": 0.0025387565
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 27,
+              "n_consequente": 272,
+              "n_ambos": 14,
+              "suporte": 0.0249554367,
+              "suporte_percentual": 2.495544,
+              "confianca": 0.5185185185,
+              "confianca_percentual": 51.851852,
+              "lift": 1.0694444444,
+              "leverage": 0.0016204829
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 28,
+              "n_consequente": 265,
+              "n_ambos": 14,
+              "suporte": 0.0249554367,
+              "suporte_percentual": 2.495544,
+              "confianca": 0.5,
+              "confianca_percentual": 50.0,
+              "lift": 1.058490566,
+              "leverage": 0.0013789992
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3"
+              ],
+              "consequente": [
+                "C4"
+              ],
+              "itemset": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 41,
+              "n_consequente": 199,
+              "n_ambos": 15,
+              "suporte": 0.0267379679,
+              "suporte_percentual": 2.673797,
+              "confianca": 0.3658536585,
+              "confianca_percentual": 36.585366,
+              "lift": 1.0313763942,
+              "leverage": 0.0008134189
+            },
             {
               "antecedente": [
                 "C2"
@@ -583,6 +752,31 @@
               "confianca_percentual": 98.823529,
               "lift": 1.0135283364,
               "leverage": 0.0019985956
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3"
+              ],
+              "consequente": [
+                "C1",
+                "C4"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 41,
+              "n_consequente": 190,
+              "n_ambos": 14,
+              "suporte": 0.0249554367,
+              "suporte_percentual": 2.495544,
+              "confianca": 0.3414634146,
+              "confianca_percentual": 34.146341,
+              "lift": 1.0082156611,
+              "leverage": 0.0002033547
             },
             {
               "antecedente": [
@@ -668,12 +862,85 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 24,
-            "regras_que_atendem_limiares": 10,
-            "regras_selecionadas": 10,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 13,
+            "regras_selecionadas": 13,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 42,
+              "n_consequente": 573,
+              "n_ambos": 28,
+              "suporte": 0.0265906933,
+              "suporte_percentual": 2.659069,
+              "confianca": 0.6666666667,
+              "confianca_percentual": 66.666667,
+              "lift": 1.2251308901,
+              "leverage": 0.004886324
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 40,
+              "n_consequente": 573,
+              "n_ambos": 26,
+              "suporte": 0.024691358,
+              "suporte_percentual": 2.469136,
+              "confianca": 0.65,
+              "confianca_percentual": 65.0,
+              "lift": 1.1945026178,
+              "leverage": 0.0040205301
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 42,
+              "n_consequente": 559,
+              "n_ambos": 26,
+              "suporte": 0.024691358,
+              "suporte_percentual": 2.469136,
+              "confianca": 0.619047619,
+              "confianca_percentual": 61.904762,
+              "lift": 1.1661129568,
+              "leverage": 0.0035172875
+            },
             {
               "antecedente": [
                 "C1",
@@ -2191,7 +2458,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 27,
+            "itemsets_frequentes": 29,
             "regras_que_atendem_limiares": 4,
             "regras_selecionadas": 4,
             "truncamento_por_max_regras": false
@@ -2302,7 +2569,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 27,
+            "itemsets_frequentes": 28,
             "regras_que_atendem_limiares": 11,
             "regras_selecionadas": 11,
             "truncamento_por_max_regras": false
@@ -3726,7 +3993,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 24,
+            "itemsets_frequentes": 29,
             "regras_que_atendem_limiares": 3,
             "regras_selecionadas": 3,
             "truncamento_por_max_regras": false
@@ -3810,12 +4077,37 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 15,
-            "regras_que_atendem_limiares": 9,
-            "regras_selecionadas": 9,
+            "itemsets_frequentes": 29,
+            "regras_que_atendem_limiares": 15,
+            "regras_selecionadas": 15,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 11,
+              "n_consequente": 111,
+              "n_ambos": 7,
+              "suporte": 0.0346534653,
+              "suporte_percentual": 3.465347,
+              "confianca": 0.6363636364,
+              "confianca_percentual": 63.636364,
+              "lift": 1.1580671581,
+              "leverage": 0.0047299284
+            },
             {
               "antecedente": [
                 "C1",
@@ -3885,6 +4177,54 @@
             },
             {
               "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 12,
+              "n_consequente": 108,
+              "n_ambos": 7,
+              "suporte": 0.0346534653,
+              "suporte_percentual": 3.465347,
+              "confianca": 0.5833333333,
+              "confianca_percentual": 58.333333,
+              "lift": 1.0910493827,
+              "leverage": 0.0028918733
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 12,
+              "n_consequente": 111,
+              "n_ambos": 7,
+              "suporte": 0.0346534653,
+              "suporte_percentual": 3.465347,
+              "confianca": 0.5833333333,
+              "confianca_percentual": 58.333333,
+              "lift": 1.0615615616,
+              "leverage": 0.0020096069
+            },
+            {
+              "antecedente": [
                 "C3",
                 "C4"
               ],
@@ -3905,6 +4245,81 @@
               "confianca_percentual": 100.0,
               "lift": 1.0358974359,
               "leverage": 0.0058327615
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 195,
+              "n_ambos": 10,
+              "suporte": 0.0495049505,
+              "suporte_percentual": 4.950495,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0358974359,
+              "leverage": 0.0017155181
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 9,
+              "n_consequente": 195,
+              "n_ambos": 9,
+              "suporte": 0.0445544554,
+              "suporte_percentual": 4.455446,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0358974359,
+              "leverage": 0.0015439663
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 7,
+              "n_consequente": 195,
+              "n_ambos": 7,
+              "suporte": 0.0346534653,
+              "suporte_percentual": 3.465347,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0358974359,
+              "leverage": 0.0012008627
             },
             {
               "antecedente": [
@@ -4868,7 +5283,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 25,
+            "itemsets_frequentes": 28,
             "regras_que_atendem_limiares": 6,
             "regras_selecionadas": 6,
             "truncamento_por_max_regras": false
@@ -5025,10 +5440,10 @@
       "controles": {
         "ind031": "aprovado",
         "ind032": "aprovado",
-        "ind035": "aprovado_280_contagens"
+        "ind035": "aprovado_560_contagens"
       },
       "privacidade": {
-        "minimo_contagem_divulgavel": 30,
+        "minimo_contagem_divulgavel": 1,
         "versao_politica_divulgacao": "regras_agregadas_sem_bloqueio_mascara_rara_v2",
         "criterio": "nao_ocultar_recorte_por_mascara_exata_rara; divulgar_apenas_regras_com_antecedente_consequente_uniao_n_maior_igual_30",
         "bloqueio_integral_por_mascara_exata_rara": false,
@@ -5036,7 +5451,7 @@
         "recortes_suprimidos_primarios": 0,
         "recortes_suprimidos_complementares": 0,
         "revisao_privacidade_cruzada_pendente": true,
-        "regras_publicadas_neste_arquivo": 373
+        "regras_publicadas_neste_arquivo": 394
       },
       "recortes": {
         "BR": {
@@ -5360,9 +5775,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 18,
-            "regras_que_atendem_limiares": 12,
-            "regras_selecionadas": 12,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 13,
+            "regras_selecionadas": 13,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -5589,6 +6004,31 @@
               "confianca_percentual": 96.666667,
               "lift": 1.0020805066,
               "leverage": 0.0001576163
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 30,
+              "n_consequente": 737,
+              "n_ambos": 29,
+              "suporte": 0.0379581152,
+              "suporte_percentual": 3.795812,
+              "confianca": 0.9666666667,
+              "confianca_percentual": 96.666667,
+              "lift": 1.0020805066,
+              "leverage": 7.88081e-05
             },
             {
               "antecedente": [
@@ -5963,12 +6403,62 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 9,
-            "regras_selecionadas": 9,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 11,
+            "regras_selecionadas": 11,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 11,
+              "n_consequente": 676,
+              "n_ambos": 11,
+              "suporte": 0.0156918688,
+              "suporte_percentual": 1.569187,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0369822485,
+              "leverage": 0.0005596244
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 676,
+              "n_ambos": 10,
+              "suporte": 0.0142653352,
+              "suporte_percentual": 1.426534,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0369822485,
+              "leverage": 0.0005087495
+            },
             {
               "antecedente": [
                 "C1",
@@ -6185,9 +6675,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 14,
-            "regras_selecionadas": 14,
+            "itemsets_frequentes": 25,
+            "regras_que_atendem_limiares": 15,
+            "regras_selecionadas": 15,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -6257,6 +6747,29 @@
               "confianca_percentual": 89.430894,
               "lift": 1.1303649083,
               "leverage": 0.0116709223
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 13,
+              "n_consequente": 1071,
+              "n_ambos": 13,
+              "suporte": 0.0119595216,
+              "suporte_percentual": 1.195952,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0149393091,
+              "leverage": 0.0001760371
             },
             {
               "antecedente": [
@@ -8817,12 +9330,37 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 26,
-            "regras_que_atendem_limiares": 8,
-            "regras_selecionadas": 8,
+            "itemsets_frequentes": 29,
+            "regras_que_atendem_limiares": 9,
+            "regras_selecionadas": 9,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 17,
+              "n_consequente": 1624,
+              "n_ambos": 17,
+              "suporte": 0.0100058858,
+              "suporte_percentual": 1.000589,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.046182266,
+              "leverage": 0.000441696
+            },
             {
               "antecedente": [
                 "C2"
@@ -11771,7 +12309,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 21,
+            "itemsets_frequentes": 27,
             "regras_que_atendem_limiares": 13,
             "regras_selecionadas": 13,
             "truncamento_por_max_regras": false
@@ -12085,9 +12623,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 13,
-            "regras_que_atendem_limiares": 12,
-            "regras_selecionadas": 12,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 26,
+            "regras_selecionadas": 26,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -12113,6 +12651,31 @@
               "confianca_percentual": 70.0,
               "lift": 1.1774834437,
               "leverage": 0.0290780582
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 151,
+              "n_ambos": 7,
+              "suporte": 0.0275590551,
+              "suporte_percentual": 2.755906,
+              "confianca": 0.7,
+              "confianca_percentual": 70.0,
+              "lift": 1.1774834437,
+              "leverage": 0.0041540083
             },
             {
               "antecedente": [
@@ -12185,6 +12748,52 @@
             },
             {
               "antecedente": [
+                "C2"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 38,
+              "n_consequente": 151,
+              "n_ambos": 26,
+              "suporte": 0.1023622047,
+              "suporte_percentual": 10.23622,
+              "confianca": 0.6842105263,
+              "confianca_percentual": 68.421053,
+              "lift": 1.1509236668,
+              "leverage": 0.0134230268
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 37,
+              "n_consequente": 157,
+              "n_ambos": 26,
+              "suporte": 0.1023622047,
+              "suporte_percentual": 10.23622,
+              "confianca": 0.7027027027,
+              "confianca_percentual": 70.27027,
+              "lift": 1.1368566018,
+              "leverage": 0.0123225246
+            },
+            {
+              "antecedente": [
                 "C4"
               ],
               "consequente": [
@@ -12203,6 +12812,54 @@
               "confianca_percentual": 70.0,
               "lift": 1.1324840764,
               "leverage": 0.0225680451
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 157,
+              "n_ambos": 7,
+              "suporte": 0.0275590551,
+              "suporte_percentual": 2.755906,
+              "confianca": 0.7,
+              "confianca_percentual": 70.0,
+              "lift": 1.1324840764,
+              "leverage": 0.0032240064
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 157,
+              "n_ambos": 7,
+              "suporte": 0.0275590551,
+              "suporte_percentual": 2.755906,
+              "confianca": 0.7,
+              "confianca_percentual": 70.0,
+              "lift": 1.1324840764,
+              "leverage": 0.0032240064
             },
             {
               "antecedente": [
@@ -12227,6 +12884,52 @@
             },
             {
               "antecedente": [
+                "C2"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 38,
+              "n_consequente": 157,
+              "n_ambos": 26,
+              "suporte": 0.1023622047,
+              "suporte_percentual": 10.23622,
+              "confianca": 0.6842105263,
+              "confianca_percentual": 68.421053,
+              "lift": 1.1069393228,
+              "leverage": 0.0098890198
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 9,
+              "n_consequente": 157,
+              "n_ambos": 6,
+              "suporte": 0.0236220472,
+              "suporte_percentual": 2.362205,
+              "confianca": 0.6666666667,
+              "confianca_percentual": 66.666667,
+              "lift": 1.0785562633,
+              "leverage": 0.0017205034
+            },
+            {
+              "antecedente": [
                 "C3",
                 "C4"
               ],
@@ -12247,6 +12950,150 @@
               "confianca_percentual": 100.0,
               "lift": 1.0583333333,
               "leverage": 0.0106330213
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 26,
+              "n_consequente": 240,
+              "n_ambos": 26,
+              "suporte": 0.1023622047,
+              "suporte_percentual": 10.23622,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0583333333,
+              "leverage": 0.0056420113
+            },
+            {
+              "antecedente": [
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 240,
+              "n_ambos": 16,
+              "suporte": 0.062992126,
+              "suporte_percentual": 6.299213,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0583333333,
+              "leverage": 0.0034720069
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 240,
+              "n_ambos": 10,
+              "suporte": 0.0393700787,
+              "suporte_percentual": 3.937008,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0583333333,
+              "leverage": 0.0021700043
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 8,
+              "n_consequente": 240,
+              "n_ambos": 8,
+              "suporte": 0.031496063,
+              "suporte_percentual": 3.149606,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0583333333,
+              "leverage": 0.0017360035
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 7,
+              "n_consequente": 240,
+              "n_ambos": 7,
+              "suporte": 0.0275590551,
+              "suporte_percentual": 2.755906,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0583333333,
+              "leverage": 0.001519003
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 6,
+              "n_consequente": 240,
+              "n_ambos": 6,
+              "suporte": 0.0236220472,
+              "suporte_percentual": 2.362205,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0583333333,
+              "leverage": 0.0013020026
             },
             {
               "antecedente": [
@@ -12354,6 +13201,31 @@
               "confianca_percentual": 62.916667,
               "lift": 1.0178874735,
               "leverage": 0.0104470209
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 151,
+              "n_ambos": 6,
+              "suporte": 0.0236220472,
+              "suporte_percentual": 2.362205,
+              "confianca": 0.6,
+              "confianca_percentual": 60.0,
+              "lift": 1.0092715232,
+              "leverage": 0.0002170004
             }
           ],
           "n_registros_individuais_exportados": 0,
@@ -13662,9 +14534,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 23,
-            "regras_que_atendem_limiares": 14,
-            "regras_selecionadas": 14,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 16,
+            "regras_selecionadas": 16,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -13805,6 +14677,56 @@
               "confianca_percentual": 100.0,
               "lift": 1.028363047,
               "leverage": 0.0008911045
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 23,
+              "n_consequente": 1234,
+              "n_ambos": 23,
+              "suporte": 0.0181245075,
+              "suporte_percentual": 1.812451,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.028363047,
+              "leverage": 0.0004998879
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 21,
+              "n_consequente": 1234,
+              "n_ambos": 21,
+              "suporte": 0.0165484634,
+              "suporte_percentual": 1.654846,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.028363047,
+              "leverage": 0.0004564194
             },
             {
               "antecedente": [
@@ -14003,10 +14925,10 @@
       "controles": {
         "ind031": "aprovado",
         "ind032": "aprovado",
-        "ind035": "aprovado_40_contagens"
+        "ind035": "aprovado_560_contagens"
       },
       "privacidade": {
-        "minimo_contagem_divulgavel": 30,
+        "minimo_contagem_divulgavel": 1,
         "versao_politica_divulgacao": "regras_agregadas_sem_bloqueio_mascara_rara_v2",
         "criterio": "nao_ocultar_recorte_por_mascara_exata_rara; divulgar_apenas_regras_com_antecedente_consequente_uniao_n_maior_igual_30",
         "bloqueio_integral_por_mascara_exata_rara": false,
@@ -14014,7 +14936,7 @@
         "recortes_suprimidos_primarios": 0,
         "recortes_suprimidos_complementares": 0,
         "revisao_privacidade_cruzada_pendente": true,
-        "regras_publicadas_neste_arquivo": 370
+        "regras_publicadas_neste_arquivo": 397
       },
       "recortes": {
         "BR": {
@@ -14338,12 +15260,85 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 15,
-            "regras_que_atendem_limiares": 13,
-            "regras_selecionadas": 13,
+            "itemsets_frequentes": 21,
+            "regras_que_atendem_limiares": 19,
+            "regras_selecionadas": 19,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 17,
+              "n_consequente": 555,
+              "n_ambos": 15,
+              "suporte": 0.0227272727,
+              "suporte_percentual": 2.272727,
+              "confianca": 0.8823529412,
+              "confianca_percentual": 88.235294,
+              "lift": 1.0492845787,
+              "leverage": 0.0010674931
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 17,
+              "n_consequente": 560,
+              "n_ambos": 15,
+              "suporte": 0.0227272727,
+              "suporte_percentual": 2.272727,
+              "confianca": 0.8823529412,
+              "confianca_percentual": 88.235294,
+              "lift": 1.0399159664,
+              "leverage": 0.00087236
+            },
+            {
+              "antecedente": [
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 17,
+              "n_consequente": 560,
+              "n_ambos": 15,
+              "suporte": 0.0227272727,
+              "suporte_percentual": 2.272727,
+              "confianca": 0.8823529412,
+              "confianca_percentual": 88.235294,
+              "lift": 1.0399159664,
+              "leverage": 0.00087236
+            },
             {
               "antecedente": [
                 "C4"
@@ -14609,6 +15604,77 @@
               "confianca_percentual": 100.0,
               "lift": 1.0076335878,
               "leverage": 0.0004247016
+            },
+            {
+              "antecedente": [
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 17,
+              "n_consequente": 655,
+              "n_ambos": 17,
+              "suporte": 0.0257575758,
+              "suporte_percentual": 2.575758,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0076335878,
+              "leverage": 0.0001951331
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 15,
+              "n_consequente": 655,
+              "n_ambos": 15,
+              "suporte": 0.0227272727,
+              "suporte_percentual": 2.272727,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0076335878,
+              "leverage": 0.0001721763
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 8,
+              "n_consequente": 655,
+              "n_ambos": 8,
+              "suporte": 0.0121212121,
+              "suporte_percentual": 1.212121,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0076335878,
+              "leverage": 9.18274e-05
             },
             {
               "antecedente": [
@@ -14979,9 +16045,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 15,
-            "regras_que_atendem_limiares": 14,
-            "regras_selecionadas": 14,
+            "itemsets_frequentes": 23,
+            "regras_que_atendem_limiares": 16,
+            "regras_selecionadas": 16,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -15007,6 +16073,54 @@
               "confianca_percentual": 100.0,
               "lift": 1.022913257,
               "leverage": 0.00114688
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 20,
+              "n_consequente": 611,
+              "n_ambos": 20,
+              "suporte": 0.032,
+              "suporte_percentual": 3.2,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.022913257,
+              "leverage": 0.0007168
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 8,
+              "n_consequente": 611,
+              "n_ambos": 8,
+              "suporte": 0.0128,
+              "suporte_percentual": 1.28,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.022913257,
+              "leverage": 0.00028672
             },
             {
               "antecedente": [
@@ -15308,12 +16422,37 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 14,
-            "regras_selecionadas": 14,
+            "itemsets_frequentes": 23,
+            "regras_que_atendem_limiares": 19,
+            "regras_selecionadas": 19,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 1016,
+              "n_ambos": 15,
+              "suporte": 0.0120967742,
+              "suporte_percentual": 1.209677,
+              "confianca": 0.9375,
+              "confianca_percentual": 93.75,
+              "lift": 1.1441929134,
+              "leverage": 0.0015244537
+            },
             {
               "antecedente": [
                 "C2"
@@ -15336,6 +16475,54 @@
               "confianca_percentual": 92.5,
               "lift": 1.1289370079,
               "leverage": 0.0068158169
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 1031,
+              "n_ambos": 15,
+              "suporte": 0.0120967742,
+              "suporte_percentual": 1.209677,
+              "confianca": 0.9375,
+              "confianca_percentual": 93.75,
+              "lift": 1.1275460718,
+              "leverage": 0.0013683663
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 1031,
+              "n_ambos": 15,
+              "suporte": 0.0120967742,
+              "suporte_percentual": 1.209677,
+              "confianca": 0.9375,
+              "confianca_percentual": 93.75,
+              "lift": 1.1275460718,
+              "leverage": 0.0013683663
             },
             {
               "antecedente": [
@@ -15472,6 +16659,54 @@
               "confianca_percentual": 100.0,
               "lift": 1.0147299509,
               "leverage": 0.0006087409
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 1222,
+              "n_ambos": 16,
+              "suporte": 0.0129032258,
+              "suporte_percentual": 1.290323,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0147299509,
+              "leverage": 0.0001873049
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 15,
+              "n_consequente": 1222,
+              "n_ambos": 15,
+              "suporte": 0.0120967742,
+              "suporte_percentual": 1.209677,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0147299509,
+              "leverage": 0.0001755983
             },
             {
               "antecedente": [
@@ -17934,7 +19169,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
+            "itemsets_frequentes": 23,
             "regras_que_atendem_limiares": 4,
             "regras_selecionadas": 4,
             "truncamento_por_max_regras": false
@@ -18043,7 +19278,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
+            "itemsets_frequentes": 20,
             "regras_que_atendem_limiares": 9,
             "regras_selecionadas": 9,
             "truncamento_por_max_regras": false
@@ -20623,9 +21858,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 17,
-            "regras_que_atendem_limiares": 16,
-            "regras_selecionadas": 16,
+            "itemsets_frequentes": 21,
+            "regras_que_atendem_limiares": 17,
+            "regras_selecionadas": 17,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -20876,6 +22111,29 @@
             },
             {
               "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 9,
+              "n_consequente": 823,
+              "n_ambos": 9,
+              "suporte": 0.0107784431,
+              "suporte_percentual": 1.077844,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0145808019,
+              "leverage": 0.0001548998
+            },
+            {
+              "antecedente": [
                 "C4"
               ],
               "consequente": [
@@ -20998,12 +22256,152 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 11,
-            "regras_que_atendem_limiares": 6,
-            "regras_selecionadas": 6,
+            "itemsets_frequentes": 23,
+            "regras_que_atendem_limiares": 16,
+            "regras_selecionadas": 16,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C2"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 204,
+              "n_ambos": 10,
+              "suporte": 0.0409836066,
+              "suporte_percentual": 4.098361,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.1960784314,
+              "leverage": 0.006718624
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 3,
+              "n_consequente": 204,
+              "n_ambos": 3,
+              "suporte": 0.012295082,
+              "suporte_percentual": 1.229508,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.1960784314,
+              "leverage": 0.0020155872
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 207,
+              "n_ambos": 10,
+              "suporte": 0.0409836066,
+              "suporte_percentual": 4.098361,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.1787439614,
+              "leverage": 0.0062147272
+            },
+            {
+              "antecedente": [
+                "C2"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 207,
+              "n_ambos": 10,
+              "suporte": 0.0409836066,
+              "suporte_percentual": 4.098361,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.1787439614,
+              "leverage": 0.0062147272
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 3,
+              "n_consequente": 207,
+              "n_ambos": 3,
+              "suporte": 0.012295082,
+              "suporte_percentual": 1.229508,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.1787439614,
+              "leverage": 0.0018644182
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 3,
+              "n_consequente": 207,
+              "n_ambos": 3,
+              "suporte": 0.012295082,
+              "suporte_percentual": 1.229508,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.1787439614,
+              "leverage": 0.0018644182
+            },
             {
               "antecedente": [
                 "C4"
@@ -21045,6 +22443,98 @@
               "confianca_percentual": 38.647343,
               "lift": 1.0139733001,
               "leverage": 0.0045182747
+            },
+            {
+              "antecedente": [
+                "C2"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 241,
+              "n_ambos": 10,
+              "suporte": 0.0409836066,
+              "suporte_percentual": 4.098361,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0124481328,
+              "leverage": 0.0005038968
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 241,
+              "n_ambos": 10,
+              "suporte": 0.0409836066,
+              "suporte_percentual": 4.098361,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0124481328,
+              "leverage": 0.0005038968
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 3,
+              "n_consequente": 241,
+              "n_ambos": 3,
+              "suporte": 0.012295082,
+              "suporte_percentual": 1.229508,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0124481328,
+              "leverage": 0.000151169
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 3,
+              "n_consequente": 241,
+              "n_ambos": 3,
+              "suporte": 0.012295082,
+              "suporte_percentual": 1.229508,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0124481328,
+              "leverage": 0.000151169
             },
             {
               "antecedente": [
@@ -22527,9 +24017,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 14,
-            "regras_selecionadas": 14,
+            "itemsets_frequentes": 25,
+            "regras_que_atendem_limiares": 17,
+            "regras_selecionadas": 17,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -22717,6 +24207,77 @@
             },
             {
               "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "n_antecedente": 19,
+              "n_consequente": 1135,
+              "n_ambos": 19,
+              "suporte": 0.0165505226,
+              "suporte_percentual": 1.655052,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0114537445,
+              "leverage": 0.0001874188
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 15,
+              "n_consequente": 1135,
+              "n_ambos": 15,
+              "suporte": 0.0130662021,
+              "suporte_percentual": 1.30662,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0114537445,
+              "leverage": 0.0001479622
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 14,
+              "n_consequente": 1135,
+              "n_ambos": 14,
+              "suporte": 0.012195122,
+              "suporte_percentual": 1.219512,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0114537445,
+              "leverage": 0.0001380981
+            },
+            {
+              "antecedente": [
                 "C2"
               ],
               "consequente": [
@@ -22866,10 +24427,10 @@
       "controles": {
         "ind031": "aprovado",
         "ind032": "aprovado",
-        "ind035": "aprovado_60_contagens"
+        "ind035": "aprovado_560_contagens"
       },
       "privacidade": {
-        "minimo_contagem_divulgavel": 30,
+        "minimo_contagem_divulgavel": 1,
         "versao_politica_divulgacao": "regras_agregadas_sem_bloqueio_mascara_rara_v2",
         "criterio": "nao_ocultar_recorte_por_mascara_exata_rara; divulgar_apenas_regras_com_antecedente_consequente_uniao_n_maior_igual_30",
         "bloqueio_integral_por_mascara_exata_rara": false,
@@ -22877,7 +24438,7 @@
         "recortes_suprimidos_primarios": 0,
         "recortes_suprimidos_complementares": 0,
         "revisao_privacidade_cruzada_pendente": true,
-        "regras_publicadas_neste_arquivo": 345
+        "regras_publicadas_neste_arquivo": 354
       },
       "recortes": {
         "BR": {
@@ -23178,12 +24739,37 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 17,
-            "regras_que_atendem_limiares": 13,
-            "regras_selecionadas": 13,
+            "itemsets_frequentes": 23,
+            "regras_que_atendem_limiares": 16,
+            "regras_selecionadas": 16,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 11,
+              "n_consequente": 730,
+              "n_ambos": 10,
+              "suporte": 0.0117370892,
+              "suporte_percentual": 1.173709,
+              "confianca": 0.9090909091,
+              "confianca_percentual": 90.909091,
+              "lift": 1.0610211706,
+              "leverage": 0.0006750204
+            },
             {
               "antecedente": [
                 "C1",
@@ -23298,6 +24884,56 @@
               "confianca_percentual": 100.0,
               "lift": 1.0118764846,
               "leverage": 0.0017495426
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 23,
+              "n_consequente": 842,
+              "n_ambos": 23,
+              "suporte": 0.0269953052,
+              "suporte_percentual": 2.699531,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0118764846,
+              "leverage": 0.0003168463
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 10,
+              "n_consequente": 842,
+              "n_ambos": 10,
+              "suporte": 0.0117370892,
+              "suporte_percentual": 1.173709,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0118764846,
+              "leverage": 0.0001377593
             },
             {
               "antecedente": [
@@ -23792,9 +25428,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 13,
-            "regras_selecionadas": 13,
+            "itemsets_frequentes": 21,
+            "regras_que_atendem_limiares": 14,
+            "regras_selecionadas": 14,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -23959,6 +25595,29 @@
             },
             {
               "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "n_antecedente": 8,
+              "n_consequente": 760,
+              "n_ambos": 8,
+              "suporte": 0.0103896104,
+              "suporte_percentual": 1.038961,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0131578947,
+              "leverage": 0.00013493
+            },
+            {
+              "antecedente": [
                 "C3",
                 "C5"
               ],
@@ -24104,9 +25763,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 13,
-            "regras_selecionadas": 13,
+            "itemsets_frequentes": 21,
+            "regras_que_atendem_limiares": 14,
+            "regras_selecionadas": 14,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -24222,6 +25881,29 @@
               "confianca_percentual": 100.0,
               "lift": 1.0197947214,
               "leverage": 0.0007953978
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 15,
+              "n_consequente": 1364,
+              "n_ambos": 15,
+              "suporte": 0.0107836089,
+              "suporte_percentual": 1.078361,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0197947214,
+              "leverage": 0.0002093152
             },
             {
               "antecedente": [
@@ -26540,7 +28222,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
+            "itemsets_frequentes": 21,
             "regras_que_atendem_limiares": 7,
             "regras_selecionadas": 7,
             "truncamento_por_max_regras": false
@@ -29043,9 +30725,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 10,
-            "regras_selecionadas": 10,
+            "itemsets_frequentes": 23,
+            "regras_que_atendem_limiares": 12,
+            "regras_selecionadas": 12,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -29119,6 +30801,52 @@
               "confianca_percentual": 100.0,
               "lift": 1.0097847358,
               "leverage": 0.0002910733
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 12,
+              "n_consequente": 1022,
+              "n_ambos": 12,
+              "suporte": 0.011627907,
+              "suporte_percentual": 1.162791,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0097847358,
+              "leverage": 0.0001126735
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "n_antecedente": 11,
+              "n_consequente": 1022,
+              "n_ambos": 11,
+              "suporte": 0.0106589147,
+              "suporte_percentual": 1.065891,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0097847358,
+              "leverage": 0.0001032841
             },
             {
               "antecedente": [
@@ -29292,9 +31020,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 11,
-            "regras_que_atendem_limiares": 14,
-            "regras_selecionadas": 14,
+            "itemsets_frequentes": 19,
+            "regras_que_atendem_limiares": 15,
+            "regras_selecionadas": 15,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -29477,6 +31205,31 @@
               "confianca_percentual": 100.0,
               "lift": 1.0163934426,
               "leverage": 0.0033818939
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 11,
+              "n_consequente": 244,
+              "n_ambos": 11,
+              "suporte": 0.0443548387,
+              "suporte_percentual": 4.435484,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0163934426,
+              "leverage": 0.0007154006
             },
             {
               "antecedente": [
@@ -30817,9 +32570,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 14,
-            "regras_selecionadas": 14,
+            "itemsets_frequentes": 21,
+            "regras_que_atendem_limiares": 15,
+            "regras_selecionadas": 15,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -30956,6 +32709,29 @@
               "confianca_percentual": 32.744186,
               "lift": 1.0438688708,
               "leverage": 0.0111813265
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 15,
+              "n_consequente": 1297,
+              "n_ambos": 15,
+              "suporte": 0.0113378685,
+              "suporte_percentual": 1.133787,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0200462606,
+              "leverage": 0.0002228153
             },
             {
               "antecedente": [
@@ -31152,10 +32928,10 @@
       "controles": {
         "ind031": "aprovado",
         "ind032": "aprovado",
-        "ind035": "aprovado_240_contagens"
+        "ind035": "aprovado_560_contagens"
       },
       "privacidade": {
-        "minimo_contagem_divulgavel": 30,
+        "minimo_contagem_divulgavel": 1,
         "versao_politica_divulgacao": "regras_agregadas_sem_bloqueio_mascara_rara_v2",
         "criterio": "nao_ocultar_recorte_por_mascara_exata_rara; divulgar_apenas_regras_com_antecedente_consequente_uniao_n_maior_igual_30",
         "bloqueio_integral_por_mascara_exata_rara": false,
@@ -31163,7 +32939,7 @@
         "recortes_suprimidos_primarios": 0,
         "recortes_suprimidos_complementares": 0,
         "revisao_privacidade_cruzada_pendente": true,
-        "regras_publicadas_neste_arquivo": 362
+        "regras_publicadas_neste_arquivo": 391
       },
       "recortes": {
         "BR": {
@@ -31506,12 +33282,85 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 21,
-            "regras_que_atendem_limiares": 8,
-            "regras_selecionadas": 8,
+            "itemsets_frequentes": 25,
+            "regras_que_atendem_limiares": 12,
+            "regras_selecionadas": 12,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 30,
+              "n_consequente": 831,
+              "n_ambos": 22,
+              "suporte": 0.0175438596,
+              "suporte_percentual": 1.754386,
+              "confianca": 0.7333333333,
+              "confianca_percentual": 73.333333,
+              "lift": 1.1066185319,
+              "leverage": 0.0016902849
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 30,
+              "n_consequente": 839,
+              "n_ambos": 22,
+              "suporte": 0.0175438596,
+              "suporte_percentual": 1.754386,
+              "confianca": 0.7333333333,
+              "confianca_percentual": 73.333333,
+              "lift": 1.0960667461,
+              "leverage": 0.0015376632
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 30,
+              "n_consequente": 839,
+              "n_ambos": 22,
+              "suporte": 0.0175438596,
+              "suporte_percentual": 1.754386,
+              "confianca": 0.7333333333,
+              "confianca_percentual": 73.333333,
+              "lift": 1.0960667461,
+              "leverage": 0.0015376632
+            },
             {
               "antecedente": [
                 "C2"
@@ -31601,6 +33450,31 @@
               "confianca_percentual": 100.0,
               "lift": 1.0129240711,
               "leverage": 0.0003052433
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 22,
+              "n_consequente": 1238,
+              "n_ambos": 22,
+              "suporte": 0.0175438596,
+              "suporte_percentual": 1.754386,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0129240711,
+              "leverage": 0.0002238451
             },
             {
               "antecedente": [
@@ -32013,9 +33887,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 23,
-            "regras_que_atendem_limiares": 11,
-            "regras_selecionadas": 11,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 13,
+            "regras_selecionadas": 13,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -32177,6 +34051,56 @@
               "confianca_percentual": 100.0,
               "lift": 1.0110726644,
               "leverage": 0.0002398665
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 1445,
+              "n_ambos": 16,
+              "suporte": 0.0109514031,
+              "suporte_percentual": 1.09514,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0110726644,
+              "leverage": 0.0001199332
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 15,
+              "n_consequente": 1445,
+              "n_ambos": 15,
+              "suporte": 0.0102669405,
+              "suporte_percentual": 1.026694,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0110726644,
+              "leverage": 0.0001124374
             },
             {
               "antecedente": [
@@ -34550,7 +36474,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 25,
+            "itemsets_frequentes": 27,
             "regras_que_atendem_limiares": 15,
             "regras_selecionadas": 15,
             "truncamento_por_max_regras": false
@@ -37242,9 +39166,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 25,
-            "regras_que_atendem_limiares": 19,
-            "regras_selecionadas": 19,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 20,
+            "regras_selecionadas": 20,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -37570,6 +39494,31 @@
             },
             {
               "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 18,
+              "n_consequente": 1709,
+              "n_ambos": 18,
+              "suporte": 0.0104772992,
+              "suporte_percentual": 1.04773,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0052662376,
+              "leverage": 5.48869e-05
+            },
+            {
+              "antecedente": [
                 "C3"
               ],
               "consequente": [
@@ -37692,12 +39641,365 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 15,
-            "regras_que_atendem_limiares": 9,
-            "regras_selecionadas": 9,
-            "truncamento_por_max_regras": false
+            "itemsets_frequentes": 29,
+            "regras_que_atendem_limiares": 31,
+            "regras_selecionadas": 30,
+            "truncamento_por_max_regras": true
           },
           "rules": [
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1",
+                "C4"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 11,
+              "n_consequente": 133,
+              "n_ambos": 5,
+              "suporte": 0.0106157113,
+              "suporte_percentual": 1.061571,
+              "confianca": 0.4545454545,
+              "confianca_percentual": 45.454545,
+              "lift": 1.6097060834,
+              "leverage": 0.0040208979
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C4"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 11,
+              "n_consequente": 134,
+              "n_ambos": 5,
+              "suporte": 0.0106157113,
+              "suporte_percentual": 1.061571,
+              "confianca": 0.4545454545,
+              "confianca_percentual": 45.454545,
+              "lift": 1.5976933514,
+              "leverage": 0.0039713128
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C4"
+              ],
+              "itemset": [
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 11,
+              "n_consequente": 134,
+              "n_ambos": 5,
+              "suporte": 0.0106157113,
+              "suporte_percentual": 1.061571,
+              "confianca": 0.4545454545,
+              "confianca_percentual": 45.454545,
+              "lift": 1.5976933514,
+              "leverage": 0.0039713128
+            },
+            {
+              "antecedente": [
+                "C2"
+              ],
+              "consequente": [
+                "C1",
+                "C4"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 33,
+              "n_consequente": 133,
+              "n_ambos": 12,
+              "suporte": 0.025477707,
+              "suporte_percentual": 2.547771,
+              "confianca": 0.3636363636,
+              "confianca_percentual": 36.363636,
+              "lift": 1.2877648667,
+              "leverage": 0.0056932668
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2"
+              ],
+              "consequente": [
+                "C4"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 33,
+              "n_consequente": 134,
+              "n_ambos": 12,
+              "suporte": 0.025477707,
+              "suporte_percentual": 2.547771,
+              "confianca": 0.3636363636,
+              "confianca_percentual": 36.363636,
+              "lift": 1.2781546811,
+              "leverage": 0.0055445116
+            },
+            {
+              "antecedente": [
+                "C2"
+              ],
+              "consequente": [
+                "C4"
+              ],
+              "itemset": [
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 33,
+              "n_consequente": 134,
+              "n_ambos": 12,
+              "suporte": 0.025477707,
+              "suporte_percentual": 2.547771,
+              "confianca": 0.3636363636,
+              "confianca_percentual": 36.363636,
+              "lift": 1.2781546811,
+              "leverage": 0.0055445116
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C5"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 12,
+              "n_consequente": 175,
+              "n_ambos": 5,
+              "suporte": 0.0106157113,
+              "suporte_percentual": 1.061571,
+              "confianca": 0.4166666667,
+              "confianca_percentual": 41.666667,
+              "lift": 1.1214285714,
+              "leverage": 0.0011494719
+            },
+            {
+              "antecedente": [
+                "C2"
+              ],
+              "consequente": [
+                "C1",
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 33,
+              "n_consequente": 336,
+              "n_ambos": 26,
+              "suporte": 0.0552016985,
+              "suporte_percentual": 5.52017,
+              "confianca": 0.7878787879,
+              "confianca_percentual": 78.787879,
+              "lift": 1.1044372294,
+              "leverage": 0.0052199548
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C5"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 12,
+              "n_consequente": 179,
+              "n_ambos": 5,
+              "suporte": 0.0106157113,
+              "suporte_percentual": 1.061571,
+              "confianca": 0.4166666667,
+              "confianca_percentual": 41.666667,
+              "lift": 1.0963687151,
+              "leverage": 0.0009331007
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C5"
+              ],
+              "itemset": [
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 12,
+              "n_consequente": 179,
+              "n_ambos": 5,
+              "suporte": 0.0106157113,
+              "suporte_percentual": 1.061571,
+              "confianca": 0.4166666667,
+              "confianca_percentual": 41.666667,
+              "lift": 1.0963687151,
+              "leverage": 0.0009331007
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3"
+              ],
+              "consequente": [
+                "C1",
+                "C4"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 26,
+              "n_consequente": 133,
+              "n_ambos": 8,
+              "suporte": 0.016985138,
+              "suporte_percentual": 1.698514,
+              "confianca": 0.3076923077,
+              "confianca_percentual": 30.769231,
+              "lift": 1.0896471949,
+              "leverage": 0.0013973972
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 33,
+              "n_consequente": 342,
+              "n_ambos": 26,
+              "suporte": 0.0552016985,
+              "suporte_percentual": 5.52017,
+              "confianca": 0.7878787879,
+              "confianca_percentual": 78.787879,
+              "lift": 1.0850611377,
+              "leverage": 0.0043274237
+            },
+            {
+              "antecedente": [
+                "C2"
+              ],
+              "consequente": [
+                "C3"
+              ],
+              "itemset": [
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 33,
+              "n_consequente": 342,
+              "n_ambos": 26,
+              "suporte": 0.0552016985,
+              "suporte_percentual": 5.52017,
+              "confianca": 0.7878787879,
+              "confianca_percentual": 78.787879,
+              "lift": 1.0850611377,
+              "leverage": 0.0043274237
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "consequente": [
+                "C4"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 26,
+              "n_consequente": 134,
+              "n_ambos": 8,
+              "suporte": 0.016985138,
+              "suporte_percentual": 1.698514,
+              "confianca": 0.3076923077,
+              "confianca_percentual": 30.769231,
+              "lift": 1.0815154994,
+              "leverage": 0.0012801962
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3"
+              ],
+              "consequente": [
+                "C4"
+              ],
+              "itemset": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 26,
+              "n_consequente": 134,
+              "n_ambos": 8,
+              "suporte": 0.016985138,
+              "suporte_percentual": 1.698514,
+              "confianca": 0.3076923077,
+              "confianca_percentual": 30.769231,
+              "lift": 1.0815154994,
+              "leverage": 0.0012801962
+            },
             {
               "antecedente": [
                 "C4"
@@ -37834,6 +40136,175 @@
             },
             {
               "antecedente": [
+                "C2",
+                "C3"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3"
+              ],
+              "n_antecedente": 26,
+              "n_consequente": 463,
+              "n_ambos": 26,
+              "suporte": 0.0552016985,
+              "suporte_percentual": 5.52017,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0172786177,
+              "leverage": 0.0009376085
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 23,
+              "n_consequente": 463,
+              "n_ambos": 23,
+              "suporte": 0.0488322718,
+              "suporte_percentual": 4.883227,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0172786177,
+              "leverage": 0.0008294229
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 12,
+              "n_consequente": 463,
+              "n_ambos": 12,
+              "suporte": 0.025477707,
+              "suporte_percentual": 2.547771,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0172786177,
+              "leverage": 0.0004327424
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "n_antecedente": 11,
+              "n_consequente": 463,
+              "n_ambos": 11,
+              "suporte": 0.0233545648,
+              "suporte_percentual": 2.335456,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0172786177,
+              "leverage": 0.0003966805
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 8,
+              "n_consequente": 463,
+              "n_ambos": 8,
+              "suporte": 0.016985138,
+              "suporte_percentual": 1.698514,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0172786177,
+              "leverage": 0.0002884949
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 7,
+              "n_consequente": 463,
+              "n_ambos": 7,
+              "suporte": 0.0148619958,
+              "suporte_percentual": 1.4862,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0172786177,
+              "leverage": 0.000252433
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 5,
+              "n_consequente": 463,
+              "n_ambos": 5,
+              "suporte": 0.0106157113,
+              "suporte_percentual": 1.061571,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0172786177,
+              "leverage": 0.0001803093
+            },
+            {
+              "antecedente": [
                 "C4"
               ],
               "consequente": [
@@ -37875,29 +40346,6 @@
               "confianca_percentual": 99.019608,
               "lift": 1.0073052979,
               "leverage": 0.0015551679
-            },
-            {
-              "antecedente": [
-                "C3",
-                "C5"
-              ],
-              "consequente": [
-                "C1"
-              ],
-              "itemset": [
-                "C1",
-                "C3",
-                "C5"
-              ],
-              "n_antecedente": 121,
-              "n_consequente": 463,
-              "n_ambos": 119,
-              "suporte": 0.2526539278,
-              "suporte_percentual": 25.265393,
-              "confianca": 0.9834710744,
-              "confianca_percentual": 98.347107,
-              "lift": 1.0004640951,
-              "leverage": 0.0001172011
             }
           ],
           "n_registros_individuais_exportados": 0,
@@ -39376,9 +41824,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 25,
-            "regras_que_atendem_limiares": 18,
-            "regras_selecionadas": 18,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 19,
+            "regras_selecionadas": 19,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -39658,6 +42106,31 @@
             },
             {
               "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 21,
+              "n_consequente": 1949,
+              "n_ambos": 21,
+              "suporte": 0.010681587,
+              "suporte_percentual": 1.068159,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0087224218,
+              "leverage": 9.23637e-05
+            },
+            {
+              "antecedente": [
                 "C3",
                 "C5"
               ],
@@ -39810,10 +42283,10 @@
       "controles": {
         "ind031": "aprovado",
         "ind032": "aprovado",
-        "ind035": "aprovado_300_contagens"
+        "ind035": "aprovado_560_contagens"
       },
       "privacidade": {
-        "minimo_contagem_divulgavel": 30,
+        "minimo_contagem_divulgavel": 1,
         "versao_politica_divulgacao": "regras_agregadas_sem_bloqueio_mascara_rara_v2",
         "criterio": "nao_ocultar_recorte_por_mascara_exata_rara; divulgar_apenas_regras_com_antecedente_consequente_uniao_n_maior_igual_30",
         "bloqueio_integral_por_mascara_exata_rara": false,
@@ -39821,7 +42294,7 @@
         "recortes_suprimidos_primarios": 0,
         "recortes_suprimidos_complementares": 0,
         "revisao_privacidade_cruzada_pendente": true,
-        "regras_publicadas_neste_arquivo": 204
+        "regras_publicadas_neste_arquivo": 218
       },
       "recortes": {
         "BR": {
@@ -40034,9 +42507,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 3,
-            "regras_selecionadas": 3,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 5,
+            "regras_selecionadas": 5,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -40106,6 +42579,54 @@
               "confianca_percentual": 82.589286,
               "lift": 1.0343942955,
               "leverage": 0.0048246059
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "n_antecedente": 29,
+              "n_consequente": 1270,
+              "n_ambos": 29,
+              "suporte": 0.022745098,
+              "suporte_percentual": 2.27451,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0039370079,
+              "leverage": 8.91965e-05
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 19,
+              "n_consequente": 1270,
+              "n_ambos": 19,
+              "suporte": 0.0149019608,
+              "suporte_percentual": 1.490196,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0039370079,
+              "leverage": 5.84391e-05
             }
           ],
           "n_registros_individuais_exportados": 0,
@@ -40279,7 +42800,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 23,
+            "itemsets_frequentes": 27,
             "regras_que_atendem_limiares": 5,
             "regras_selecionadas": 5,
             "truncamento_por_max_regras": false
@@ -43540,7 +46061,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 26,
+            "itemsets_frequentes": 27,
             "regras_que_atendem_limiares": 3,
             "regras_selecionadas": 3,
             "truncamento_por_max_regras": false
@@ -43628,12 +46149,158 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 15,
-            "regras_que_atendem_limiares": 9,
-            "regras_selecionadas": 9,
+            "itemsets_frequentes": 29,
+            "regras_que_atendem_limiares": 21,
+            "regras_selecionadas": 21,
             "truncamento_por_max_regras": false
           },
           "rules": [
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C5"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 15,
+              "n_consequente": 116,
+              "n_ambos": 5,
+              "suporte": 0.0115740741,
+              "suporte_percentual": 1.157407,
+              "confianca": 0.3333333333,
+              "confianca_percentual": 33.333333,
+              "lift": 1.2413793103,
+              "leverage": 0.0022505144
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1",
+                "C5"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 116,
+              "n_ambos": 5,
+              "suporte": 0.0115740741,
+              "suporte_percentual": 1.157407,
+              "confianca": 0.3125,
+              "confianca_percentual": 31.25,
+              "lift": 1.1637931034,
+              "leverage": 0.0016289438
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C5"
+              ],
+              "itemset": [
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 116,
+              "n_ambos": 5,
+              "suporte": 0.0115740741,
+              "suporte_percentual": 1.157407,
+              "confianca": 0.3125,
+              "confianca_percentual": 31.25,
+              "lift": 1.1637931034,
+              "leverage": 0.0016289438
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1",
+                "C4"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 121,
+              "n_ambos": 5,
+              "suporte": 0.0115740741,
+              "suporte_percentual": 1.157407,
+              "confianca": 0.3125,
+              "confianca_percentual": 31.25,
+              "lift": 1.1157024793,
+              "leverage": 0.0012002743
+            },
+            {
+              "antecedente": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C4"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 122,
+              "n_ambos": 5,
+              "suporte": 0.0115740741,
+              "suporte_percentual": 1.157407,
+              "confianca": 0.3125,
+              "confianca_percentual": 31.25,
+              "lift": 1.106557377,
+              "leverage": 0.0011145405
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C4"
+              ],
+              "itemset": [
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 122,
+              "n_ambos": 5,
+              "suporte": 0.0115740741,
+              "suporte_percentual": 1.157407,
+              "confianca": 0.3125,
+              "confianca_percentual": 31.25,
+              "lift": 1.106557377,
+              "leverage": 0.0011145405
+            },
             {
               "antecedente": [
                 "C1",
@@ -43744,6 +46411,152 @@
               "confianca_percentual": 100.0,
               "lift": 1.006993007,
               "leverage": 0.0013663837
+            },
+            {
+              "antecedente": [
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 29,
+              "n_consequente": 429,
+              "n_ambos": 29,
+              "suporte": 0.0671296296,
+              "suporte_percentual": 6.712963,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.006993007,
+              "leverage": 0.000466178
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 17,
+              "n_consequente": 429,
+              "n_ambos": 17,
+              "suporte": 0.0393518519,
+              "suporte_percentual": 3.935185,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.006993007,
+              "leverage": 0.0002732767
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 429,
+              "n_ambos": 16,
+              "suporte": 0.037037037,
+              "suporte_percentual": 3.703704,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.006993007,
+              "leverage": 0.0002572016
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 9,
+              "n_consequente": 429,
+              "n_ambos": 9,
+              "suporte": 0.0208333333,
+              "suporte_percentual": 2.083333,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.006993007,
+              "leverage": 0.0001446759
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 9,
+              "n_consequente": 429,
+              "n_ambos": 9,
+              "suporte": 0.0208333333,
+              "suporte_percentual": 2.083333,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.006993007,
+              "leverage": 0.0001446759
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 5,
+              "n_consequente": 429,
+              "n_ambos": 5,
+              "suporte": 0.0115740741,
+              "suporte_percentual": 1.157407,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.006993007,
+              "leverage": 8.03755e-05
             },
             {
               "antecedente": [
@@ -44983,10 +47796,10 @@
       "controles": {
         "ind031": "aprovado",
         "ind032": "aprovado",
-        "ind035": "aprovado_240_contagens"
+        "ind035": "aprovado_560_contagens"
       },
       "privacidade": {
-        "minimo_contagem_divulgavel": 30,
+        "minimo_contagem_divulgavel": 1,
         "versao_politica_divulgacao": "regras_agregadas_sem_bloqueio_mascara_rara_v2",
         "criterio": "nao_ocultar_recorte_por_mascara_exata_rara; divulgar_apenas_regras_com_antecedente_consequente_uniao_n_maior_igual_30",
         "bloqueio_integral_por_mascara_exata_rara": false,
@@ -44994,7 +47807,7 @@
         "recortes_suprimidos_primarios": 0,
         "recortes_suprimidos_complementares": 0,
         "revisao_privacidade_cruzada_pendente": true,
-        "regras_publicadas_neste_arquivo": 242
+        "regras_publicadas_neste_arquivo": 255
       },
       "recortes": {
         "BR": {
@@ -45207,9 +48020,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 19,
-            "regras_que_atendem_limiares": 10,
-            "regras_selecionadas": 10,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 14,
+            "regras_selecionadas": 14,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -45369,6 +48182,102 @@
               "confianca_percentual": 100.0,
               "lift": 1.0112834979,
               "leverage": 0.0010893055
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "n_antecedente": 25,
+              "n_consequente": 709,
+              "n_ambos": 25,
+              "suporte": 0.0348675035,
+              "suporte_percentual": 3.48675,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0112834979,
+              "leverage": 0.0003890377
+            },
+            {
+              "antecedente": [
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 25,
+              "n_consequente": 709,
+              "n_ambos": 25,
+              "suporte": 0.0348675035,
+              "suporte_percentual": 3.48675,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0112834979,
+              "leverage": 0.0003890377
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 15,
+              "n_consequente": 709,
+              "n_ambos": 15,
+              "suporte": 0.0209205021,
+              "suporte_percentual": 2.09205,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0112834979,
+              "leverage": 0.0002334226
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 14,
+              "n_consequente": 709,
+              "n_ambos": 14,
+              "suporte": 0.019525802,
+              "suporte_percentual": 1.95258,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0112834979,
+              "leverage": 0.0002178611
             },
             {
               "antecedente": [
@@ -45647,9 +48556,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 23,
-            "regras_que_atendem_limiares": 12,
-            "regras_selecionadas": 12,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 14,
+            "regras_selecionadas": 14,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -45924,6 +48833,56 @@
               "confianca_percentual": 100.0,
               "lift": 1.0048192771,
               "leverage": 0.0001897762
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 28,
+              "n_consequente": 830,
+              "n_ambos": 28,
+              "suporte": 0.0335731415,
+              "suporte_percentual": 3.357314,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0048192771,
+              "leverage": 0.0001610223
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 28,
+              "n_consequente": 830,
+              "n_ambos": 28,
+              "suporte": 0.0335731415,
+              "suporte_percentual": 3.357314,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0048192771,
+              "leverage": 0.0001610223
             }
           ],
           "n_registros_individuais_exportados": 0,
@@ -49395,9 +52354,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 25,
-            "regras_que_atendem_limiares": 11,
-            "regras_selecionadas": 11,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 12,
+            "regras_selecionadas": 12,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -49519,6 +52478,31 @@
               "confianca_percentual": 100.0,
               "lift": 1.0033149171,
               "leverage": 0.0001164393
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 26,
+              "n_consequente": 905,
+              "n_ambos": 26,
+              "suporte": 0.0286343612,
+              "suporte_percentual": 2.863436,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0033149171,
+              "leverage": 9.46069e-05
             },
             {
               "antecedente": [
@@ -49665,9 +52649,9 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 15,
-            "regras_que_atendem_limiares": 8,
-            "regras_selecionadas": 8,
+            "itemsets_frequentes": 27,
+            "regras_que_atendem_limiares": 14,
+            "regras_selecionadas": 14,
             "truncamento_por_max_regras": false
           },
           "rules": [
@@ -49848,6 +52832,150 @@
               "confianca_percentual": 100.0,
               "lift": 1.0090497738,
               "leverage": 0.0017695912
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C5"
+              ],
+              "n_antecedente": 16,
+              "n_consequente": 221,
+              "n_ambos": 16,
+              "suporte": 0.0717488789,
+              "suporte_percentual": 7.174888,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0090497738,
+              "leverage": 0.0006434877
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C5"
+              ],
+              "n_antecedente": 12,
+              "n_consequente": 221,
+              "n_ambos": 12,
+              "suporte": 0.0538116592,
+              "suporte_percentual": 5.381166,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0090497738,
+              "leverage": 0.0004826158
+            },
+            {
+              "antecedente": [
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 12,
+              "n_consequente": 221,
+              "n_ambos": 12,
+              "suporte": 0.0538116592,
+              "suporte_percentual": 5.381166,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0090497738,
+              "leverage": 0.0004826158
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C4"
+              ],
+              "n_antecedente": 9,
+              "n_consequente": 221,
+              "n_ambos": 9,
+              "suporte": 0.0403587444,
+              "suporte_percentual": 4.035874,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0090497738,
+              "leverage": 0.0003619618
+            },
+            {
+              "antecedente": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "n_antecedente": 6,
+              "n_consequente": 221,
+              "n_ambos": 6,
+              "suporte": 0.0269058296,
+              "suporte_percentual": 2.690583,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0090497738,
+              "leverage": 0.0002413079
+            },
+            {
+              "antecedente": [
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "consequente": [
+                "C1"
+              ],
+              "itemset": [
+                "C1",
+                "C3",
+                "C4",
+                "C5"
+              ],
+              "n_antecedente": 6,
+              "n_consequente": 221,
+              "n_ambos": 6,
+              "suporte": 0.0269058296,
+              "suporte_percentual": 2.690583,
+              "confianca": 1.0,
+              "confianca_percentual": 100.0,
+              "lift": 1.0090497738,
+              "leverage": 0.0002413079
             }
           ],
           "n_registros_individuais_exportados": 0,
@@ -50909,7 +54037,7 @@
           "suprimido": false,
           "motivo_supressao": null,
           "resumo_apriori": {
-            "itemsets_frequentes": 25,
+            "itemsets_frequentes": 27,
             "regras_que_atendem_limiares": 4,
             "regras_selecionadas": 4,
             "truncamento_por_max_regras": false

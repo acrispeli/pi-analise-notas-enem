@@ -841,225 +841,225 @@
 2023;TO;TP_ESCOLA;Tipo de escola do Ensino Médio (variável administrativa);CODIGO_NAO_RECONHECIDO;Código não reconhecido;5;0;;;;;;;0.0;False;
 2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;2133732;624.9714;620.0;520.0;740.0;220.0;157.0454;71.060209;False;
 2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;117419;663.1293;660.0;560.0;780.0;220.0;156.2461;3.910434;False;
-2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;58229;674.9702;680.0;560.0;800.0;240.0;152.6458;1.939215;False;
 2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;545576;765.7423;800.0;660.0;880.0;220.0;138.9667;18.169454;False;
 2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;139675;753.399;780.0;660.0;880.0;220.0;138.9888;4.651631;False;
-2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;8079;618.0666;600.0;500.0;740.0;240.0;163.6745;0.269057;False;
 2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;BR;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;14961;603.8754;600.0;500.0;700.0;200.0;158.2963;86.947173;False;
 2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;391;681.5857;680.0;560.0;840.0;280.0;165.5698;2.272331;False;
-2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;203;684.8276;700.0;560.0;820.0;260.0;164.9312;1.179752;False;
 2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;1316;773.4498;820.0;660.0;900.0;240.0;150.7205;7.64805;False;
 2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;300;742.3333;760.0;640.0;880.0;240.0;147.5711;1.743476;False;
-2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;36;615.0;600.0;515.0;685.0;170.0;144.0197;0.209217;False;
 2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;AC;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;42521;611.8247;600.0;500.0;720.0;220.0;164.1576;70.790464;False;
 2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;2421;642.247;640.0;520.0;760.0;240.0;158.6141;4.030566;False;
-2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;1012;645.7708;640.0;540.0;760.0;220.0;155.2656;1.684813;False;
 2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;11951;753.6173;780.0;640.0;880.0;240.0;146.6407;19.896447;False;
 2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;2026;737.7098;760.0;640.0;860.0;220.0;151.1048;3.372956;False;
-2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;135;570.6667;560.0;480.0;650.0;170.0;157.9836;0.224753;False;
 2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;AL;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;16673;605.6223;600.0;500.0;700.0;200.0;153.7112;83.699799;False;
 2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;631;671.7591;660.0;560.0;800.0;240.0;164.0743;3.167671;False;
-2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;233;656.4807;640.0;560.0;780.0;220.0;151.4552;1.169679;False;
 2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;1946;772.2199;800.0;660.0;900.0;240.0;143.571;9.769076;False;
 2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;367;723.7057;720.0;600.0;860.0;260.0;151.711;1.842369;False;
-2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;70;535.7143;520.0;440.0;615.0;175.0;146.7707;0.351406;False;
 2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;AP;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;45901;576.1761;560.0;480.0;660.0;180.0;148.663;86.087511;False;
 2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;1425;627.7895;600.0;520.0;740.0;220.0;151.9287;2.672593;False;
-2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;755;647.894;640.0;520.0;760.0;240.0;154.2276;1.416006;False;
 2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;3636;725.6821;740.0;600.0;860.0;260.0;151.5427;6.819333;False;
 2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;1446;736.1826;760.0;620.0;860.0;240.0;150.1362;2.711979;False;
-2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;156;616.9231;600.0;520.0;705.0;185.0;151.3216;0.292579;False;
 2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;AM;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;192678;607.6912;600.0;500.0;720.0;220.0;157.1593;75.636823;False;
 2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;10717;646.9516;640.0;540.0;760.0;220.0;156.5159;4.207018;False;
-2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;4875;660.1887;660.0;560.0;780.0;220.0;154.1924;1.913708;False;
 2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;35978;770.5253;800.0;680.0;880.0;200.0;136.1848;14.123365;False;
 2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;9874;754.9119;780.0;660.0;880.0;220.0;140.3634;3.876094;False;
-2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;619;619.9677;620.0;520.0;740.0;220.0;159.4234;0.242992;False;
 2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;BA;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;145096;649.4393;640.0;520.0;780.0;260.0;169.2457;80.20785;False;
 2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;5323;678.1664;680.0;560.0;800.0;240.0;158.4779;2.94251;False;
-2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;2012;698.8767;700.0;580.0;840.0;260.0;155.6738;1.112217;False;
 2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;22940;783.7254;820.0;700.0;900.0;200.0;137.8053;12.681039;False;
 2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;4899;783.9437;820.0;680.0;900.0;220.0;138.6611;2.708126;False;
-2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;630;673.9048;660.0;560.0;800.0;240.0;155.744;0.348259;False;
 2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;CE;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;32490;625.3167;620.0;520.0;720.0;200.0;147.2758;60.763045;False;
 2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;2507;665.9274;660.0;560.0;780.0;220.0;147.1803;4.68861;False;
-2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;1091;664.6013;660.0;560.0;780.0;220.0;142.5617;2.040396;False;
 2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;14137;769.6131;800.0;680.0;880.0;200.0;134.1868;26.439125;False;
 2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;3016;742.8912;760.0;640.0;860.0;220.0;135.1995;5.640546;False;
-2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;229;648.3843;640.0;520.0;780.0;260.0;165.6205;0.428278;False;
 2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;DF;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;39912;659.0559;640.0;560.0;780.0;220.0;156.1959;75.991013;False;
 2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;1650;688.7394;680.0;580.0;820.0;240.0;152.681;3.141541;False;
-2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;741;689.4737;680.0;580.0;820.0;240.0;153.8296;1.410837;False;
 2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;8203;784.179;820.0;680.0;900.0;220.0;134.7279;15.618217;False;
 2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;1928;773.6203;800.0;680.0;880.0;200.0;135.9909;3.670843;False;
-2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;88;612.9545;580.0;500.0;740.0;240.0;160.0295;0.167549;False;
 2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;ES;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;74606;642.1551;640.0;540.0;760.0;220.0;157.9543;71.050627;False;
 2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;5698;682.8887;680.0;580.0;800.0;220.0;152.7426;5.42646;False;
-2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;1953;692.2171;700.0;580.0;820.0;240.0;152.7172;1.859929;False;
 2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;18905;789.8154;820.0;700.0;900.0;200.0;130.9175;18.004076;False;
 2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;3465;778.0722;800.0;680.0;880.0;200.0;131.8961;3.299874;False;
-2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;377;655.1724;660.0;540.0;780.0;240.0;162.1966;0.359034;False;
 2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;GO;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;102392;617.549;600.0;500.0;740.0;240.0;165.4735;83.07937;False;
 2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;3991;660.451;640.0;540.0;800.0;260.0;167.0148;3.238239;False;
-2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;2164;674.5379;660.0;560.0;800.0;240.0;160.0529;1.755838;False;
 2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;10825;772.5654;820.0;660.0;900.0;240.0;149.8832;8.783247;False;
 2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;3510;753.0199;780.0;640.0;880.0;240.0;149.2215;2.847963;False;
-2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;364;633.1868;640.0;520.0;760.0;240.0;173.945;0.295344;False;
 2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;MA;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;206181;650.3845;640.0;540.0;760.0;220.0;154.6487;72.530499;False;
 2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;9585;711.1424;720.0;600.0;840.0;240.0;154.1826;3.371818;False;
-2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;5420;718.31;720.0;600.0;840.0;240.0;151.1406;1.906651;False;
 2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;50357;799.0281;840.0;720.0;900.0;180.0;127.8085;17.714621;False;
 2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;12051;791.3435;820.0;700.0;900.0;200.0;128.0518;4.239309;False;
-2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;674;643.5608;640.0;520.0;775.0;255.0;161.3273;0.2371;False;
 2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;MG;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;25128;602.9497;600.0;500.0;700.0;200.0;149.33;72.727273;False;
 2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;1341;662.7591;660.0;540.0;780.0;240.0;154.6027;3.881219;False;
-2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;819;666.5446;660.0;560.0;800.0;240.0;151.2961;2.370409;False;
 2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;5590;760.3005;780.0;660.0;880.0;220.0;136.1885;16.178982;False;
 2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;1536;742.8125;760.0;640.0;860.0;220.0;138.2909;4.445602;False;
-2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;137;569.927;560.0;460.0;660.0;200.0;157.4083;0.396515;False;
 2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;MS;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;31517;609.4095;600.0;500.0;720.0;220.0;154.5819;72.093236;False;
 2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;2129;660.4415;640.0;540.0;800.0;260.0;164.1878;4.869959;False;
-2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;1051;674.0247;680.0;560.0;800.0;240.0;152.6227;2.404099;False;
 2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;7196;764.1551;800.0;660.0;880.0;220.0;145.0683;16.460416;False;
 2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;1684;751.5914;780.0;655.0;880.0;225.0;145.1712;3.852048;False;
-2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;140;612.7143;620.0;500.0;720.0;220.0;157.7921;0.320242;False;
 2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;MT;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;137480;600.3854;580.0;480.0;700.0;220.0;161.2763;79.902824;False;
 2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;5943;668.0868;660.0;540.0;800.0;260.0;165.1847;3.454048;False;
-2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;2663;675.629;680.0;560.0;820.0;260.0;161.9218;1.547725;False;
 2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;20854;771.6361;800.0;660.0;900.0;240.0;147.6465;12.120261;False;
 2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;4604;756.629;780.0;640.0;880.0;240.0;147.1068;2.675826;False;
-2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;515;596.233;580.0;480.0;700.0;220.0;158.5976;0.299316;False;
 2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;PA;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;65216;637.0121;620.0;520.0;760.0;240.0;161.6622;71.441404;False;
 2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;3520;666.8864;660.0;560.0;800.0;240.0;159.4474;3.856013;False;
-2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;1662;682.9001;680.0;560.0;820.0;260.0;157.7276;1.820652;False;
 2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;16663;781.5171;820.0;680.0;900.0;220.0;139.7186;18.25362;False;
 2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;3873;772.7292;800.0;680.0;900.0;220.0;141.0111;4.24271;False;
-2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;352;655.8523;660.0;540.0;780.0;240.0;164.1848;0.385601;False;
 2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;PB;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;125152;636.0244;620.0;520.0;760.0;240.0;160.7037;74.515198;False;
 2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;7267;647.7501;640.0;540.0;760.0;220.0;157.233;4.326754;False;
-2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;2814;658.479;660.0;560.0;780.0;220.0;160.1854;1.675449;False;
 2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;25827;760.3578;780.0;660.0;880.0;220.0;144.5517;15.377333;False;
 2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;6367;750.0989;780.0;640.0;880.0;240.0;142.8661;3.790896;False;
-2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;528;665.2273;660.0;560.0;800.0;240.0;157.4174;0.31437;False;
 2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;PE;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;60995;623.3609;620.0;500.0;760.0;260.0;168.6403;77.475612;False;
 2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;2322;677.2438;660.0;560.0;840.0;280.0;169.7939;2.949395;False;
-2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;1446;709.5297;720.0;585.0;840.0;255.0;164.6814;1.836704;False;
 2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;10423;803.9528;840.0;720.0;920.0;200.0;136.79;13.239254;False;
 2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;3295;804.5341;840.0;720.0;920.0;200.0;134.1363;4.185296;False;
-2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;247;663.4818;660.0;560.0;800.0;240.0;160.3312;0.313738;False;
 2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;PI;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;91444;611.4474;600.0;520.0;700.0;180.0;143.5888;70.133834;False;
 2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;5173;659.3427;640.0;560.0;780.0;220.0;150.85;3.967481;False;
-2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;2936;668.767;660.0;560.0;780.0;220.0;141.7758;2.251793;False;
 2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;25819;744.0792;760.0;640.0;860.0;220.0;137.8474;19.802124;False;
 2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;4792;728.1928;740.0;620.0;840.0;220.0;139.5272;3.675269;False;
-2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;221;575.6561;580.0;480.0;680.0;200.0;155.1853;0.169498;False;
 2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;PR;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;112015;622.1947;600.0;520.0;720.0;200.0;152.8755;54.958345;False;
 2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;11533;642.492;620.0;540.0;760.0;220.0;152.6846;5.65848;False;
-2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;5881;659.0682;640.0;560.0;780.0;220.0;150.4222;2.885417;False;
 2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;56735;756.6314;780.0;640.0;880.0;240.0;145.3934;27.836109;False;
 2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;17084;740.5256;760.0;640.0;860.0;220.0;142.5806;8.381988;False;
-2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;570;563.5439;560.0;460.0;640.0;180.0;141.1211;0.279661;False;
 2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;RJ;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;55766;634.3819;620.0;520.0;740.0;220.0;157.4572;74.377476;False;
 2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;2765;650.0036;640.0;540.0;760.0;220.0;152.7391;3.687798;False;
-2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;935;656.7487;640.0;540.0;760.0;220.0;151.0056;1.247049;False;
 2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;13154;772.8174;800.0;660.0;900.0;240.0;143.7667;17.544047;False;
 2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;2211;741.4925;760.0;640.0;860.0;220.0;147.0043;2.948904;False;
-2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;146;685.6164;680.0;565.0;875.0;310.0;179.3862;0.194726;False;
 2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;RN;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;21125;628.5775;620.0;520.0;740.0;220.0;157.5696;83.100586;False;
 2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;1037;666.0945;660.0;560.0;800.0;240.0;159.1197;4.079305;False;
-2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;486;680.7407;680.0;560.0;800.0;240.0;153.3154;1.911805;False;
 2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;2111;734.8839;740.0;640.0;860.0;220.0;143.9497;8.304158;False;
 2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;576;724.6181;740.0;600.0;840.0;240.0;150.7027;2.265843;False;
-2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;86;596.2791;620.0;460.0;700.0;240.0;180.3488;0.338303;False;
 2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;RO;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;6817;606.5337;600.0;500.0;700.0;200.0;152.6632;82.901617;False;
 2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;297;657.2391;640.0;540.0;800.0;260.0;154.5858;3.611821;False;
-2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;112;628.3929;630.0;500.0;730.0;230.0;155.3714;1.362033;False;
 2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;810;717.7284;720.0;600.0;840.0;240.0;150.5702;9.85042;False;
 2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;176;701.25;680.0;600.0;840.0;240.0;144.6336;2.140338;False;
-2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;11;618.1818;580.0;490.0;780.0;290.0;161.0092;0.133771;False;
 2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;RR;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;109373;617.2796;600.0;520.0;720.0;200.0;150.4668;73.718869;False;
 2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;5513;642.4306;620.0;520.0;760.0;240.0;160.0459;3.715836;False;
-2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;3490;640.8883;640.0;540.0;760.0;220.0;151.1439;2.352307;False;
 2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;23041;768.0257;800.0;680.0;880.0;200.0;136.2296;15.529943;False;
 2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;6326;723.4904;740.0;620.0;840.0;220.0;142.1744;4.263809;False;
-2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;622;517.0418;500.0;420.0;600.0;180.0;146.7601;0.419236;False;
 2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;RS;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;43661;635.9547;620.0;540.0;740.0;200.0;142.7826;64.302862;False;
 2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;2928;677.6161;680.0;560.0;800.0;240.0;149.1512;4.312287;False;
-2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;1490;693.1678;680.0;600.0;800.0;200.0;144.6023;2.194436;False;
 2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;16411;762.5666;780.0;660.0;880.0;220.0;131.0869;24.169723;False;
 2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;3294;746.187;760.0;640.0;860.0;220.0;134.3286;4.851323;False;
-2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;115;581.913;580.0;460.0;700.0;240.0;157.59;0.169369;False;
 2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;SC;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;36409;641.5265;640.0;520.0;760.0;240.0;163.4772;71.526236;False;
 2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;2293;667.5796;660.0;560.0;800.0;240.0;160.307;4.504646;False;
-2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;916;683.4716;700.0;560.0;820.0;260.0;159.961;1.799501;False;
 2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;9340;780.8223;820.0;680.0;900.0;220.0;139.3955;18.348624;False;
 2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;1748;768.6041;800.0;680.0;880.0;200.0;141.1107;3.433982;False;
-2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;197;660.7107;660.0;540.0;800.0;260.0;164.9904;0.387011;False;
 2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;SE;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;279502;623.0811;620.0;520.0;720.0;200.0;145.3643;58.661848;False;
 2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;18131;660.4302;640.0;560.0;760.0;200.0;145.0037;3.805332;False;
-2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;10697;676.1559;680.0;580.0;780.0;200.0;141.2416;2.245085;False;
 2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;128788;746.8989;760.0;640.0;860.0;220.0;134.2259;27.030011;False;
 2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;38628;745.9175;760.0;640.0;860.0;220.0;131.3441;8.10724;False;
-2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;717;599.9442;600.0;500.0;700.0;200.0;146.6768;0.150484;False;
 2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;SP;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;
 2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;A;Somente escola pública;0;18721;614.0965;600.0;500.0;720.0;220.0;158.7459;80.357986;False;
 2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;B;Parte pública e parte privada sem bolsa integral;1;888;680.8333;680.0;560.0;805.0;245.0;155.5888;3.81165;False;
-2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;;;;;;;;;True;complementar_contra_inferencia_por_totais
+2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;C;Parte pública e parte privada com bolsa integral;2;372;677.957;680.0;560.0;820.0;260.0;156.398;1.596772;False;
 2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;D;Somente escola privada sem bolsa integral;3;2620;781.626;800.0;700.0;900.0;200.0;133.8187;11.246083;False;
 2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;E;Somente escola privada com bolsa integral;4;599;766.5109;800.0;660.0;880.0;220.0;141.4769;2.571146;False;
-2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;F;Não frequentou ensino médio;5;97;681.4433;680.0;600.0;780.0;180.0;140.9905;0.416363;False;
 2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;SEM_RESPOSTA;Não informado;6;0;;;;;;;0.0;False;
 2024;TO;Q023;Trajetória declarada entre escola pública/privada/bolsa;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;;;;;;;0.0;False;

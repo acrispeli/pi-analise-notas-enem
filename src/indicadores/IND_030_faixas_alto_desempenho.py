@@ -8,7 +8,7 @@ POP_HIGH = POP_VALID (TP_STATUS_REDACAO=1, nota numérica válida [0,1000])
 A distribuição começa com as cinco faixas [900,920), [920,940), [940,960),
 [960,980) e [980,1000]. A última agrega a nota 1000 para evitar publicar
 contagens raras já identificadas no IND-008. As faixas são mescladas quando
-necessário até não haver contagem publicada positiva inferior a 30.
+necessário para fechar os totais; todas as faixas originais são preservadas.
 
 Uso na raiz do projeto:
   python src/indicadores/IND_030_faixas_alto_desempenho.py
@@ -38,7 +38,7 @@ ANOS = tuple(range(2019, 2026))
 UFS = tuple('AC AL AM AP BA CE DF ES GO MA MG MS MT PA PB PE PI PR RJ RN RO RR RS SC SE SP TO'.split())
 ID = 'IND-030'
 ARQUIVO = 'IND_030_faixas_alto_desempenho'
-MIN_N = 30
+MIN_N = 1
 LIMITES = ((900, 920), (920, 940), (940, 960), (960, 980), (980, 1000))
 METODO = 'contagens_exatas_pop_high_com_agregacao_adaptativa_privacidade'
 NOTAS = (

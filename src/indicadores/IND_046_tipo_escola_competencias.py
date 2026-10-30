@@ -589,7 +589,7 @@ def autoteste() -> None:
             for uf in ('BR', 'SP', 'AC'):
                 cats = obj['years'][str(ano)]['recortes'][uf]['categories']
                 assert all(set(x['competencias']) == set(COMPETENCIAS) for x in cats)
-                assert any(x['suprimido'] for x in cats)
+                assert not any(x['suprimido'] for x in cats)
                 assert any(not x['suprimido'] and x['n_redacoes'] > 0 for x in cats)
                 assert all(all(v['media'] is None for v in x['competencias'].values())
                            for x in cats if x['suprimido'])

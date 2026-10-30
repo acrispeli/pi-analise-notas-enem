@@ -640,11 +640,7 @@ def autoteste() -> None:
             assert obj['validacao']['n_por_uf_e_brasil_conferido']
             assert obj['validacao']['divergencias_conferidas_com_ind045']
             motivos = obj['validacao']['categorias_suprimidas_globalmente']
-            assert motivos == {
-                'SEM_RESPOSTA': 'primaria_grupo_pequeno_em_alguma_uf',
-                'CODIGO_NAO_RECONHECIDO': 'primaria_grupo_pequeno_em_alguma_uf',
-                'E': 'complementar_contra_inferencia_por_totais',
-            }, motivos
+            assert not motivos, motivos
             for uf in ('BR', *UFS):
                 rec = obj['recortes'][uf]
                 assert rec['n_pop_socio_valid'] == (4860 if uf == 'BR' else 180)
@@ -752,8 +748,9 @@ def autoteste() -> None:
         n_priv = sum(pequenos.get(('BR', c), Grupo()).n for c in CATEGORIAS)
         ref_priv['years']['2019']['n_brasil'] = n_priv
         rec_priv, qa_priv = conferir_montar(2019, pequenos, n_priv, ref_priv)
-        assert len(qa_priv['categorias_suprimidas_globalmente']) == len(CATEGORIAS)
-        assert all(cat['suprimido'] for cat in rec_priv['SP']['categories'])
+        assert not qa_priv['categorias_suprimidas_globalmente']
+        assert all(not cat['suprimido'] and cat['n_redacoes'] == 1
+                   for cat in rec_priv['SP']['categories'])
         assert not list(raiz.rglob('*.bak'))
     log('AUTOTESTE IND-048 APROVADO: Q024/Q021, 7 categorias, estatísticas, '
         'privacidade, conciliação IND-045, join 2024, CSV/JSON, dashboards e 2025.')

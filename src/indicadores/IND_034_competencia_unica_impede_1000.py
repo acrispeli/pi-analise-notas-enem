@@ -56,7 +56,7 @@ UFS = ('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG',
        'RS', 'SC', 'SE', 'SP', 'TO')
 COMPETENCIAS = tuple(f'C{i}' for i in range(1, 6))
 COLUNAS_COMPETENCIAS = tuple(f'NU_NOTA_COMP{i}' for i in range(1, 6))
-MIN_N = 30
+MIN_N = 1
 # Controle cruzado do IND-031/IND-032, por edição; use --sem-controle-populacao
 # apenas para ensaios sintéticos, nunca para divulgação dos resultados reais.
 POP_NEAR_REFERENCIA = {
@@ -704,11 +704,10 @@ def autoteste() -> None:
     c['BR']['multiplas'] -= 1
     validar_contagens(c, 2024, c['BR']['n'], False)
     mascaras, qa = calcular_supressoes(c)
-    assert (('SP', 2) in mascaras and (('BR', 2) in mascaras))
+    assert not mascaras and qa['celulas_primarias_suprimidas'] == 0
     publicado = montar_recortes(c, mascaras)
-    assert publicado['SP']['resumo_competencias'][2]['n_competencia_unica'] is None
-    assert publicado['SP']['n_casos_com_uma_unica_competencia'] is None
-    assert qa['celulas_primarias_suprimidas'] >= 1
+    assert publicado['SP']['resumo_competencias'][2]['n_competencia_unica'] == 1
+    assert publicado['SP']['n_casos_com_uma_unica_competencia'] is not None
     log('Autoteste IND-034 aprovado: exclusividade, soma, fechamentos e privacidade.')
 
 

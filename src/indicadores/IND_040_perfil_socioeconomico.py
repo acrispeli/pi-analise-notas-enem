@@ -45,7 +45,7 @@ GEOS = ('BR', *UFS)
 QUESTOES = tuple(f'Q{i:03d}' for i in range(1, 24))
 INDICADOR = 'IND-040'
 ARQUIVO = 'IND_040_perfil_socioeconomico'
-MIN_N = 30
+MIN_N = 1
 SEM_RESPOSTA = '__SEM_RESPOSTA_FISICA__'
 AGREGADAS = '__CATEGORIAS_AGREGADAS__'
 METODO = 'frequencias_pop_socio_br_uf_por_questao_agregacao_complementar_por_ano'
@@ -253,7 +253,7 @@ def serializar_distribuicao(ano: int, q: str, c: Counter, n: int,
             continue
         categorias.append({
             'codigo': codigo,
-            'rotulo': ('Categorias reunidas por proteção de privacidade'
+            'rotulo': ('Categorias consolidadas por configuração analítica'
                        if codigo == AGREGADAS else
                        'Sem resposta física' if codigo == SEM_RESPOSTA else codigo),
             'quantidade': qtd,
@@ -295,7 +295,11 @@ def montar_ano(ano: int, totais: dict[str, int], bruto: dict
                           'soma_27_ufs_igual_brasil': sum(totais[u] for u in UFS) == totais['BR'],
                           'questoes_processadas': len(QUESTOES),
                           'questoes_com_agregacao_nacional': agrupamentos,
-                          'nenhuma_celula_divulgada_positiva_menor_30': True,
+                          'nenhuma_celula_divulgada_positiva_menor_30': not any(
+                              0 < cat['quantidade'] < 30
+                              for u in GEOS for q in QUESTOES
+                              for cat in final[u][q]['categorias']),
+                          'supressao_automatica_n_menor_30': False,
                           'identidades_individuais_exportadas': 0}}
 
 

@@ -3,7 +3,7 @@
   "supplement_id": "IND-034-980",
   "titulo": "Recorte exclusivo da nota definitiva 980: competência limitante",
   "status": "draft",
-  "gerado_em_utc": "2026-10-29T21:24:33.630839+00:00",
+  "gerado_em_utc": "2026-10-30T01:59:07.404764+00:00",
   "population": "POP_980_FINAL",
   "geography": "BR",
   "methodology": {
@@ -11,7 +11,7 @@
     "competence_source": "NU_NOTA_COMP1..5 definitivas; NÃO recalcular com AV1/AV2",
     "pathway": "AV1+AV2; AV1+AV3; AV2+AV3; banca AV4 conferidos por comparação do vetor de competências quando disponível; empates sinalizados",
     "pattern": "4 competências=200 e 1=180; outros perfis não atribuídos a uma competência",
-    "publication": "Brasil por ano; supressão <30 e complementar; sem cruzamento por percurso ou UF",
+    "publication": "Brasil por ano; sem supressão automática n<30; sem cruzamento por percurso ou UF",
     "privacy": "draft sujeito a revisão cruzada e acadêmica"
   },
   "years": {
@@ -96,7 +96,7 @@
         }
       ],
       "privacidade": {
-        "limiar": 30,
+        "limiar": 1,
         "complemento_competencias": [],
         "complemento_percursos": [],
         "sem_cruzamento_percurso_competencia": true,
@@ -198,7 +198,7 @@
         }
       ],
       "privacidade": {
-        "limiar": 30,
+        "limiar": 1,
         "complemento_competencias": [],
         "complemento_percursos": [],
         "sem_cruzamento_percurso_competencia": true,
@@ -228,15 +228,15 @@
       "resumo_competencias": [
         {
           "competencia": "C1",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 4144,
+          "percentual_entre_980_classificadas": 78.262512,
+          "suprimido": false
         },
         {
           "competencia": "C2",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 23,
+          "percentual_entre_980_classificadas": 0.434372,
+          "suprimido": false
         },
         {
           "competencia": "C3",
@@ -300,11 +300,8 @@
         }
       ],
       "privacidade": {
-        "limiar": 30,
-        "complemento_competencias": [
-          "C1",
-          "C2"
-        ],
+        "limiar": 1,
+        "complemento_competencias": [],
         "complemento_percursos": [],
         "sem_cruzamento_percurso_competencia": true,
         "ufs_nao_publicadas": true
@@ -333,15 +330,15 @@
       "resumo_competencias": [
         {
           "competencia": "C1",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 4793,
+          "percentual_entre_980_classificadas": 79.328037,
+          "suprimido": false
         },
         {
           "competencia": "C2",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 26,
+          "percentual_entre_980_classificadas": 0.430321,
+          "suprimido": false
         },
         {
           "competencia": "C3",
@@ -405,11 +402,8 @@
         }
       ],
       "privacidade": {
-        "limiar": 30,
-        "complemento_competencias": [
-          "C1",
-          "C2"
-        ],
+        "limiar": 1,
+        "complemento_competencias": [],
         "complemento_percursos": [],
         "sem_cruzamento_percurso_competencia": true,
         "ufs_nao_publicadas": true
@@ -510,7 +504,7 @@
         }
       ],
       "privacidade": {
-        "limiar": 30,
+        "limiar": 1,
         "complemento_competencias": [],
         "complemento_percursos": [],
         "sem_cruzamento_percurso_competencia": true,
@@ -540,15 +534,15 @@
       "resumo_competencias": [
         {
           "competencia": "C1",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 1938,
+          "percentual_entre_980_classificadas": 83.968804,
+          "suprimido": false
         },
         {
           "competencia": "C2",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 22,
+          "percentual_entre_980_classificadas": 0.953206,
+          "suprimido": false
         },
         {
           "competencia": "C3",
@@ -612,11 +606,8 @@
         }
       ],
       "privacidade": {
-        "limiar": 30,
-        "complemento_competencias": [
-          "C1",
-          "C2"
-        ],
+        "limiar": 1,
+        "complemento_competencias": [],
         "complemento_percursos": [],
         "sem_cruzamento_percurso_competencia": true,
         "ufs_nao_publicadas": true
@@ -645,15 +636,15 @@
       "resumo_competencias": [
         {
           "competencia": "C1",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 681,
+          "percentual_entre_980_classificadas": 81.071429,
+          "suprimido": false
         },
         {
           "competencia": "C2",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 29,
+          "percentual_entre_980_classificadas": 3.452381,
+          "suprimido": false
         },
         {
           "competencia": "C3",
@@ -663,15 +654,15 @@
         },
         {
           "competencia": "C4",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 14,
+          "percentual_entre_980_classificadas": 1.666667,
+          "suprimido": false
         },
         {
           "competencia": "C5",
-          "n_980_competencia": null,
-          "percentual_entre_980_classificadas": null,
-          "suprimido": true
+          "n_980_competencia": 20,
+          "percentual_entre_980_classificadas": 2.380952,
+          "suprimido": false
         }
       ],
       "percursos_avaliacao": [
@@ -717,13 +708,8 @@
         }
       ],
       "privacidade": {
-        "limiar": 30,
-        "complemento_competencias": [
-          "C1",
-          "C2",
-          "C4",
-          "C5"
-        ],
+        "limiar": 1,
+        "complemento_competencias": [],
         "complemento_percursos": [],
         "sem_cruzamento_percurso_competencia": true,
         "ufs_nao_publicadas": true

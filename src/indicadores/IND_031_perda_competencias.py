@@ -43,7 +43,7 @@ COL_COMP = tuple(f'NU_NOTA_COMP{i}' for i in range(1, 6))
 COLUNAS = ('SG_UF_PROVA', 'TP_STATUS_REDACAO', 'NU_NOTA_REDACAO', *COL_COMP)
 INDICADOR = 'IND-031'
 ARQUIVO = 'IND_031_perda_competencias'
-MIN_N = 30
+MIN_N = 1
 NOTA_MIN, NOTA_MAX = 900, 980
 # As quatro primeiras faixas são [início, fim); a última é a nota 980 exata.
 FAIXAS = ((900, 920), (920, 940), (940, 960), (960, 980), (980, 980))
@@ -53,8 +53,8 @@ NOTA_METODOLOGICA = (
     '900 <= NU_NOTA_REDACAO <= 980. A nota 1000 não participa. '
     'Cada perda é 200 - nota da competência, entre 0 e 200 pontos. '
     'As primeiras faixas são [900,920), [920,940), [940,960), [960,980); '
-    'a última contém a nota 980. Faixas adjacentes pequenas são mescladas, '
-    'e recortes com 1 a 29 redações são suprimidos. Medianas calculadas '
+    'a última contém a nota 980. As faixas originais são preservadas; '
+    'recortes com 1 a 29 redações não são suprimidos. Medianas calculadas '
     'por frequências exatas; histórico recalculado a partir de todas as '
     'participações, sem média de médias/medianas anuais. '
     'UF indica local de prova, não residência; histórico soma participações, '
@@ -284,7 +284,7 @@ def componentes(e: Estatistica) -> list[dict]:
 
 
 def ajustar_faixas(arr: list[Estatistica]) -> tuple[list[dict], str]:
-    """Agrupa faixas adjacentes até toda faixa publicada ter N=0 ou N>=30."""
+    """Mantém faixas originais; não suprime automaticamente N de 1 a 29."""
     total = sum(x.n for x in arr)
     if 0 < total < MIN_N:
         return [], 'suprimido_recorte_pequeno'

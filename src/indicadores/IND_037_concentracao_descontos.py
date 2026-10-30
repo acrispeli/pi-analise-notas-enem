@@ -71,7 +71,8 @@ UFS = ('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG',
 COMPETENCIAS = tuple(f'C{i}' for i in range(1, 6))
 COLUNAS_C = tuple(f'NU_NOTA_COMP{i}' for i in range(1, 6))
 PARES = tuple((a, b) for a in range(5) for b in range(a + 1, 5))
-MIN_N = 30
+MIN_N = 1
+MIN_N_TESTES = 30  # Critério inferencial independente da divulgação de células pequenas.
 ALFA = 0.05
 POLITICA_DIVULGACAO = 'testes_agregados_sem_bloqueio_mascara_rara_v2'
 POP_NEAR_REFERENCIA = {
@@ -367,7 +368,7 @@ def fechar_agregados(agregados: dict[str, Acumulador],
 
 def cochran_q(a: Acumulador) -> dict:
     n, k = a.n, 5
-    if n < MIN_N:
+    if n < MIN_N_TESTES:
         return {'estatistica': None, 'gl': k - 1, 'p_valor': None,
                 'status': 'n_insuficiente'}
     totais = a.descontos.astype(np.float64)
@@ -384,7 +385,7 @@ def cochran_q(a: Acumulador) -> dict:
 
 def friedman(a: Acumulador) -> dict:
     n, k = a.n, 5
-    if n < MIN_N:
+    if n < MIN_N_TESTES:
         return {'estatistica': None, 'gl': k - 1, 'p_valor': None,
                 'kendall_w': None, 'status': 'n_insuficiente'}
     correcao = 1.0 - a.empates_friedman / (n * (k ** 3 - k))
@@ -548,7 +549,7 @@ def supressao_territorial(agregados: dict[str, Acumulador]) -> tuple[dict[str, s
         'min_n_divulgavel': MIN_N,
         'versao_politica_divulgacao': POLITICA_DIVULGACAO,
         'politica': ('nao_suprimir_recorte_por_mascara_exata_rara; '
-                    'proteger_contagens_detalhadas_menores_30_e_complementos'),
+                    'divulgar_contagens_agregadas_sem_piso_n30'),
         'bloqueio_integral_por_mascara_exata_rara': False,
         'mascaras_exatas_exportadas': False,
         'supressoes_primarias': sum(m.startswith('primaria') for m in ocultos.values()),
@@ -887,8 +888,8 @@ def executar(base: Path, saida: Path, anos: tuple[int, ...], bloco: int,
             'posthoc_magnitude': 'Wilcoxon signed-rank, zeros excluídos, ties, normal, 10 pares, Holm',
             'posthoc_families': 'Holm aplicado separadamente à ocorrência e magnitude',
             '2024_join': 'NU_INSCRICAO em SQLite temporário',
-            'privacy': ('testes agregados para N>=30, independentemente de máscaras exatas raras; '
-                        'supressão de contagens pequenas detalhadas e complementos; revisão cruzada pendente'),
+            'privacy': ('testes inferenciais quando N>=30 por critério estatístico; '
+                        'contagens agregadas divulgadas sem corte n<30; sem microdados individuais'),
             'cautions': [
                 'Significância estatística não é causalidade, tamanho prático nem erro de correção.',
                 'POP_NEAR é condicionada à nota total, soma das cinco competências; há dependência estrutural.',
@@ -955,7 +956,7 @@ def autoteste() -> None:
                               [[0, 20, 20, 20, 20]], dtype=np.int16)
     raro = Acumulador()
     raro.adicionar(pequeno_padrao)
-    assert raro.n == 60 and any(0 < int(x) < MIN_N for x in raro.mascaras)
+    assert raro.n == 60 and any(0 < int(x) < 30 for x in raro.mascaras)
     geos = {uf: Acumulador() for uf in ('BR', *UFS)}
     geos['SP'] = raro
     geos['RJ'].adicionar(matriz[:60])
@@ -971,9 +972,9 @@ def autoteste() -> None:
     assert recortes['SP']['tests']['magnitude']['estatistica'] == friedman(raro)['estatistica']
     # Proteção de contagens diretas: se o complemento for menor que 30,
     # não exportar n_com_desconto, percentual, nem par discordante pequeno.
-    assert any(c['suprimido'] for c in recortes['SP']['tests']['ocorrencia']['frequencias_por_competencia'])
+    assert all(not c['suprimido'] for c in recortes['SP']['tests']['ocorrencia']['frequencias_por_competencia'])
     for item in recortes['SP']['tests']['ocorrencia']['frequencias_por_competencia']:
-        assert item['n_com_desconto'] is None or not (0 < item['n_com_desconto'] < MIN_N)
+        assert item['n_com_desconto'] is not None
     # Um recorte com N<30 ainda é ocultado, e seu complemento geográfico também.
     geos2 = {uf: Acumulador() for uf in ('BR', *UFS)}
     geos2['AC'].adicionar(pequeno_padrao[:5])
@@ -981,7 +982,7 @@ def autoteste() -> None:
     geos2['BR'].somar(geos2['AC'])
     geos2['BR'].somar(geos2['SP'])
     ocultos2, _ = supressao_territorial(geos2)
-    assert ocultos2['AC'].startswith('primaria') and ocultos2['SP'] == 'complementar_geografica'
+    assert not ocultos2
     with TemporaryDirectory(prefix='teste_ind037_') as pasta:
         root = Path(pasta)
         raw = root/'data'/'raw'/'2024'

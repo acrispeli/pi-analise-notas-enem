@@ -649,8 +649,7 @@ def autoteste() -> None:
                             assert cat['n_redacoes'] == 0 or cat['n_redacoes'] >= LIMIAR
             for dim in VARIAVEIS:
                 motivos = obj['validacao']['categorias_suprimidas_globalmente_por_dimensao'][dim]
-                assert any(m == 'primaria_grupo_pequeno_em_alguma_uf' for m in motivos.values())
-                assert any(m == 'complementar_contra_inferencia_por_totais' for m in motivos.values())
+                assert not motivos
             dashboard = json.loads((out / f'dashboard_enem_{ano}.json').read_text())
             assert dashboard['pages']['socioeconomic']['sentinela'] == 'preservar'
             assert dashboard['pages']['socioeconomic']['demographics']['indicator_id'] == 'IND-051'
@@ -753,9 +752,9 @@ def autoteste() -> None:
         rec_ext, qa_ext = conferir_montar(2019, extremos, n_ext, ref2)
         for dim in VARIAVEIS:
             motivos = qa_ext['categorias_suprimidas_globalmente_por_dimensao'][dim]
-            assert len(motivos) == len(CATEGORIAS[dim])
-            assert all(x['suprimido'] for x in rec_ext['SP']['dimensoes'][dim]['categories'])
-            assert all(x['suprimido'] for x in rec_ext['BR']['dimensoes'][dim]['categories'])
+            assert not motivos
+            assert all(not x['suprimido'] for x in rec_ext['SP']['dimensoes'][dim]['categories'])
+            assert all(not x['suprimido'] for x in rec_ext['BR']['dimensoes'][dim]['categories'])
     log('AUTOTESTE IND-051 APROVADO: códigos/anos, N Brasil/UF, estatísticas, '
         'supressão, junção, duplicações, vínculo, CSV/JSON e indisponibilidade 2025.')
 

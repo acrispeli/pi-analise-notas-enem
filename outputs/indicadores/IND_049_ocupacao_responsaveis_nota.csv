@@ -452,896 +452,896 @@
 2020;BR;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;611267;22.851837;577.4396;560.0;460.0;680.0;220.0;167.4254;False;
 2020;BR;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;532741;19.916192;658.7212;640.0;540.0;800.0;260.0;179.1438;False;
 2020;BR;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;173032;6.468694;713.0335;720.0;600.0;860.0;260.0;172.8716;False;
-2020;BR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;BR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;BR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;284537;10.637239;558.5727;560.0;440.0;640.0;200.0;164.0088;False;
+2020;BR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;29047;1.085904;576.6447;580.0;520.0;640.0;120.0;126.7896;False;
 2020;BR;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;AC;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;4677;23.851293;508.2574;520.0;380.0;600.0;220.0;146.1014;False;
 2020;AC;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;4949;25.238411;533.1138;540.0;420.0;620.0;200.0;154.0328;False;
 2020;AC;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;3105;15.834566;539.9291;540.0;420.0;620.0;200.0;155.4502;False;
 2020;AC;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;3144;16.033454;606.7176;600.0;480.0;720.0;240.0;181.0421;False;
 2020;AC;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;664;3.3862;684.006;680.0;560.0;840.0;280.0;185.1772;False;
-2020;AC;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AC;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AC;pai_ou_responsavel_masculino;Q003;F;Não sei;5;2685;13.692692;525.4451;520.0;400.0;600.0;200.0;153.4759;False;
+2020;AC;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;385;1.963384;556.4156;560.0;500.0;620.0;120.0;122.165;False;
 2020;AC;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;AL;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;12897;24.49061;536.0673;540.0;400.0;620.0;220.0;161.0885;False;
 2020;AL;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;11912;22.620155;566.9862;560.0;440.0;660.0;220.0;168.1278;False;
 2020;AL;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;10616;20.159131;570.2506;560.0;460.0;660.0;200.0;167.9811;False;
 2020;AL;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;8236;15.639657;656.7751;640.0;540.0;820.0;280.0;183.4429;False;
 2020;AL;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2333;4.430224;694.2649;700.0;560.0;860.0;300.0;181.8018;False;
-2020;AL;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AL;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AL;pai_ou_responsavel_masculino;Q003;F;Não sei;5;6023;11.437307;553.3455;540.0;440.0;640.0;200.0;164.5617;False;
+2020;AL;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;644;1.222916;575.4969;580.0;520.0;640.0;120.0;131.9193;False;
 2020;AL;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;AP;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;4137;20.203155;502.949;520.0;400.0;580.0;180.0;138.2245;False;
 2020;AP;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;5052;24.671583;530.0238;540.0;440.0;600.0;160.0;142.3736;False;
 2020;AP;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;3991;19.49016;541.0524;540.0;440.0;620.0;180.0;147.4952;False;
 2020;AP;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;3359;16.40377;610.914;600.0;500.0;720.0;220.0;175.1712;False;
 2020;AP;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;791;3.862871;681.1884;680.0;560.0;820.0;260.0;177.9902;False;
-2020;AP;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AP;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AP;pai_ou_responsavel_masculino;Q003;F;Não sei;5;2880;14.06456;534.1528;540.0;420.0;620.0;200.0;147.344;False;
+2020;AP;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;267;1.303902;578.2772;560.0;520.0;640.0;120.0;124.7681;False;
 2020;AP;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;AM;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;8609;17.545397;512.5148;540.0;420.0;580.0;160.0;126.6879;False;
 2020;AM;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;10846;22.104469;541.2447;540.0;480.0;600.0;120.0;131.0448;False;
 2020;AM;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;10392;21.179204;551.2837;560.0;480.0;620.0;140.0;134.0357;False;
 2020;AM;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;8482;17.286567;602.78;580.0;520.0;680.0;160.0;149.6888;False;
 2020;AM;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2006;4.088287;665.8325;640.0;560.0;800.0;240.0;164.3176;False;
-2020;AM;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AM;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AM;pai_ou_responsavel_masculino;Q003;F;Não sei;5;7824;15.945544;538.0521;540.0;460.0;600.0;140.0;134.1907;False;
+2020;AM;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;908;1.850531;540.793;540.0;480.0;600.0;120.0;120.0818;False;
 2020;AM;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;BA;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;54962;25.897986;529.1649;520.0;400.0;620.0;220.0;161.2433;False;
 2020;BA;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;45644;21.507362;557.5274;560.0;440.0;660.0;220.0;166.73;False;
 2020;BA;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;45563;21.469195;567.4012;560.0;460.0;660.0;200.0;167.9072;False;
 2020;BA;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;35116;16.54659;657.2337;640.0;540.0;800.0;260.0;180.6143;False;
 2020;BA;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;7858;3.702674;714.5711;720.0;600.0;860.0;260.0;170.389;False;
-2020;BA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;BA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;BA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;22015;10.373424;547.9191;540.0;440.0;640.0;200.0;164.7572;False;
+2020;BA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;1067;0.502768;574.8828;580.0;520.0;640.0;120.0;129.324;False;
 2020;BA;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;CE;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;49392;30.446039;546.8983;540.0;400.0;640.0;240.0;171.7379;False;
 2020;CE;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;36464;22.477008;583.6908;580.0;460.0;700.0;240.0;174.7257;False;
 2020;CE;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;29012;17.883473;596.0961;580.0;480.0;700.0;220.0;172.6675;False;
 2020;CE;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;23733;14.62941;687.1495;680.0;560.0;840.0;280.0;181.8023;False;
 2020;CE;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;6378;3.931504;743.7912;780.0;640.0;880.0;240.0;168.1825;False;
-2020;CE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;CE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;CE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;16234;10.006904;573.5703;560.0;460.0;680.0;220.0;173.0997;False;
+2020;CE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;1015;0.625663;592.197;580.0;520.0;660.0;140.0;127.5946;False;
 2020;CE;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;DF;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;4775;8.715094;502.6052;500.0;380.0;580.0;200.0;152.2541;False;
 2020;DF;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;13365;24.393137;556.4878;560.0;440.0;640.0;200.0;156.9108;False;
 2020;DF;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;9719;17.738638;557.6808;560.0;460.0;640.0;180.0;156.0517;False;
 2020;DF;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;13087;23.885746;650.366;640.0;540.0;780.0;240.0;173.4386;False;
 2020;DF;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;6147;11.219201;712.7444;720.0;600.0;860.0;260.0;165.6072;False;
-2020;DF;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;DF;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;DF;pai_ou_responsavel_masculino;Q003;F;Não sei;5;6478;11.823325;559.0614;560.0;460.0;640.0;180.0;157.2239;False;
+2020;DF;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;1219;2.224859;595.3404;580.0;540.0;660.0;120.0;131.4198;False;
 2020;DF;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;ES;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;7232;14.956363;553.7887;560.0;420.0;660.0;240.0;174.7717;False;
 2020;ES;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;9159;18.941556;568.8394;560.0;440.0;660.0;220.0;170.548;False;
 2020;ES;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;12642;26.144683;581.0125;580.0;460.0;680.0;220.0;172.7703;False;
 2020;ES;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;10328;21.359143;674.5604;660.0;560.0;840.0;280.0;184.9972;False;
 2020;ES;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;3302;6.828804;729.6063;760.0;600.0;880.0;280.0;177.3655;False;
-2020;ES;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;ES;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;ES;pai_ou_responsavel_masculino;Q003;F;Não sei;5;5240;10.836746;561.5115;560.0;440.0;660.0;220.0;168.5543;False;
+2020;ES;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;451;0.932705;589.7118;580.0;520.0;640.0;120.0;127.4156;False;
 2020;ES;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;GO;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;14991;16.010552;526.8521;520.0;400.0;620.0;220.0;165.5149;False;
 2020;GO;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;19941;21.297206;567.1601;560.0;440.0;660.0;220.0;170.0302;False;
 2020;GO;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;22777;24.326085;574.4163;560.0;460.0;680.0;220.0;171.2945;False;
 2020;GO;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;19594;20.926606;672.1894;660.0;540.0;840.0;300.0;185.344;False;
 2020;GO;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;5912;6.314081;733.9648;760.0;600.0;880.0;280.0;177.6523;False;
-2020;GO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;GO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;GO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;9893;10.565832;556.0235;540.0;440.0;640.0;200.0;168.07;False;
+2020;GO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;524;0.559638;602.0992;580.0;540.0;680.0;140.0;139.3804;False;
 2020;GO;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;MA;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;38340;33.083952;516.9108;520.0;400.0;600.0;200.0;150.0964;False;
 2020;MA;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;24064;20.765056;552.5025;540.0;440.0;640.0;200.0;161.1754;False;
 2020;MA;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;20318;17.532596;562.6085;560.0;440.0;640.0;200.0;165.4327;False;
 2020;MA;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;17241;14.877424;636.9944;620.0;520.0;780.0;260.0;183.0294;False;
 2020;MA;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;3390;2.925263;705.233;720.0;580.0;860.0;280.0;183.4545;False;
-2020;MA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;12010;10.363544;544.2431;540.0;440.0;620.0;180.0;158.2765;False;
+2020;MA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;524;0.452165;580.687;580.0;520.0;640.0;120.0;128.0904;False;
 2020;MA;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;MG;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;41585;15.682866;556.4901;560.0;420.0;660.0;240.0;173.5063;False;
 2020;MG;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;50691;19.116993;588.3281;580.0;460.0;700.0;240.0;177.0139;False;
 2020;MG;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;71046;26.793432;602.7607;600.0;480.0;720.0;240.0;178.009;False;
 2020;MG;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;55416;20.898922;693.1594;700.0;560.0;860.0;300.0;183.806;False;
 2020;MG;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;18870;7.116404;747.8007;780.0;620.0;900.0;280.0;172.2899;False;
-2020;MG;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MG;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MG;pai_ou_responsavel_masculino;Q003;F;Não sei;5;24741;9.330522;579.0582;560.0;460.0;680.0;220.0;174.5294;False;
+2020;MG;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;2813;1.060861;598.7202;600.0;540.0;660.0;120.0;127.0097;False;
 2020;MG;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;MS;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;5084;14.938442;506.8961;500.0;380.0;600.0;220.0;154.0241;False;
 2020;MS;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;6753;19.842506;532.3619;540.0;420.0;620.0;200.0;155.579;False;
 2020;MS;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;8190;24.064878;545.2503;540.0;440.0;640.0;200.0;156.8972;False;
 2020;MS;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;7420;21.802368;634.159;620.0;520.0;780.0;260.0;178.0587;False;
 2020;MS;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2494;7.328181;690.2085;700.0;580.0;840.0;260.0;175.209;False;
-2020;MS;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MS;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MS;pai_ou_responsavel_masculino;Q003;F;Não sei;5;3573;10.498634;534.2233;540.0;420.0;620.0;200.0;158.5252;False;
+2020;MS;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;519;1.52499;563.5067;580.0;500.0;620.0;120.0;123.5351;False;
 2020;MS;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;MT;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;7254;17.473623;515.2909;520.0;380.0;600.0;220.0;157.4581;False;
 2020;MT;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;7838;18.880378;537.2672;540.0;420.0;620.0;200.0;161.2114;False;
 2020;MT;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;9700;23.365612;549.1814;540.0;440.0;640.0;200.0;161.2077;False;
 2020;MT;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;8509;20.4967;634.8455;620.0;520.0;780.0;260.0;184.0401;False;
 2020;MT;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2897;6.978369;687.097;680.0;560.0;860.0;300.0;185.1002;False;
-2020;MT;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MT;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MT;pai_ou_responsavel_masculino;Q003;F;Não sei;5;4519;10.885484;535.1405;540.0;420.0;620.0;200.0;159.349;False;
+2020;MT;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;797;1.919834;556.261;560.0;480.0;620.0;140.0;129.8414;False;
 2020;MT;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PA;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;40278;25.496117;516.3499;520.0;400.0;600.0;200.0;147.9218;False;
 2020;PA;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;37449;23.70535;560.9618;560.0;440.0;640.0;200.0;164.2164;False;
 2020;PA;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;30702;19.434475;568.6704;560.0;460.0;660.0;200.0;163.7211;False;
 2020;PA;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;23289;14.742019;647.1081;640.0;520.0;800.0;280.0;184.4746;False;
 2020;PA;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;4771;3.02006;719.6395;740.0;600.0;880.0;280.0;181.6117;False;
-2020;PA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;21262;13.458921;553.3788;540.0;440.0;640.0;200.0;161.744;False;
+2020;PA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;226;0.143059;592.8319;580.0;505.0;660.0;155.0;143.2244;False;
 2020;PA;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PB;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;25140;28.74687;545.1496;540.0;420.0;640.0;220.0;164.7149;False;
 2020;PB;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;18740;21.428653;576.3565;560.0;460.0;680.0;220.0;171.0863;False;
 2020;PB;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;16218;18.544818;578.1268;580.0;460.0;680.0;220.0;171.344;False;
 2020;PB;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;13923;15.920552;664.4962;660.0;540.0;820.0;280.0;187.8993;False;
 2020;PB;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;4106;4.695093;728.0516;760.0;600.0;880.0;280.0;183.9321;False;
-2020;PB;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PB;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PB;pai_ou_responsavel_masculino;Q003;F;Não sei;5;8088;9.248396;561.3205;560.0;440.0;660.0;220.0;169.4117;False;
+2020;PB;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;1238;1.415618;580.517;580.0;520.0;640.0;120.0;130.4338;False;
 2020;PB;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PE;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;34722;22.224925;543.5539;540.0;420.0;640.0;220.0;166.8114;False;
 2020;PE;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;36303;23.236894;571.112;560.0;460.0;680.0;220.0;170.2259;False;
 2020;PE;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;32245;20.639442;575.417;560.0;460.0;680.0;220.0;170.8142;False;
 2020;PE;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;26923;17.232926;651.6599;640.0;540.0;800.0;260.0;181.5374;False;
 2020;PE;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;7492;4.795494;706.0598;720.0;580.0;860.0;280.0;175.861;False;
-2020;PE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;17656;11.301287;551.5032;540.0;440.0;640.0;200.0;165.6077;False;
+2020;PE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;889;0.569033;577.2328;580.0;520.0;640.0;120.0;125.9564;False;
 2020;PE;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PI;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;24157;35.36223;528.8711;520.0;400.0;620.0;220.0;162.0952;False;
 2020;PI;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;13549;19.833707;579.2221;560.0;460.0;680.0;220.0;177.9154;False;
 2020;PI;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;10896;15.950112;585.6755;580.0;460.0;700.0;240.0;178.673;False;
 2020;PI;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;10326;15.115717;682.1945;680.0;560.0;860.0;300.0;192.4611;False;
 2020;PI;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2353;3.44444;739.4475;780.0;600.0;900.0;300.0;185.7257;False;
-2020;PI;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PI;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PI;pai_ou_responsavel_masculino;Q003;F;Não sei;5;6566;9.611641;562.315;560.0;440.0;660.0;220.0;174.271;False;
+2020;PI;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;466;0.682154;585.6652;580.0;520.0;640.0;120.0;131.9273;False;
 2020;PI;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PR;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;13562;12.156796;537.9207;540.0;420.0;620.0;200.0;158.9541;False;
 2020;PR;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;18930;16.9686;559.3936;560.0;460.0;640.0;180.0;157.4327;False;
 2020;PR;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;29977;26.870983;562.8815;560.0;460.0;640.0;180.0;155.4396;False;
 2020;PR;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;26709;23.941591;635.8448;620.0;540.0;760.0;220.0;167.6714;False;
 2020;PR;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;9290;8.327432;679.9526;680.0;580.0;800.0;220.0;164.0602;False;
-2020;PR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;11040;9.896109;555.317;560.0;460.0;640.0;180.0;155.2037;False;
+2020;PR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;2051;1.838489;573.057;580.0;520.0;640.0;120.0;119.1198;False;
 2020;PR;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RJ;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;6626;3.684611;526.556;520.0;400.0;620.0;220.0;161.3069;False;
 2020;RJ;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;43982;24.457679;574.6987;560.0;460.0;680.0;220.0;165.9351;False;
 2020;RJ;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;44092;24.518848;584.7913;580.0;480.0;680.0;200.0;168.27;False;
 2020;RJ;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;44075;24.509395;667.0421;660.0;560.0;820.0;260.0;177.4585;False;
 2020;RJ;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;17244;9.58911;733.2174;760.0;600.0;880.0;280.0;171.9101;False;
-2020;RJ;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RJ;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RJ;pai_ou_responsavel_masculino;Q003;F;Não sei;5;21507;11.959695;571.0206;560.0;460.0;660.0;200.0;166.8042;False;
+2020;RJ;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;2303;1.280661;573.7907;580.0;500.0;640.0;140.0;133.3004;False;
 2020;RJ;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RN;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;17048;25.236855;544.2797;540.0;420.0;640.0;220.0;162.4399;False;
 2020;RN;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;13878;20.544173;579.0388;580.0;460.0;680.0;220.0;168.0613;False;
 2020;RN;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;13043;19.308089;582.0486;580.0;480.0;680.0;200.0;170.3597;False;
 2020;RN;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;12826;18.986855;663.4524;660.0;540.0;820.0;280.0;182.6997;False;
 2020;RN;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;3363;4.978387;739.9346;760.0;620.0;900.0;280.0;174.2266;False;
-2020;RN;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RN;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RN;pai_ou_responsavel_masculino;Q003;F;Não sei;5;6657;9.854631;566.9791;560.0;460.0;660.0;200.0;164.2899;False;
+2020;RN;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;737;1.091011;592.2388;580.0;540.0;660.0;120.0;130.6222;False;
 2020;RN;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RO;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;5608;23.532374;510.1498;520.0;380.0;600.0;220.0;155.6885;False;
 2020;RO;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;5011;21.027233;532.0375;540.0;420.0;620.0;200.0;154.0281;False;
 2020;RO;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;4766;19.999161;544.5699;540.0;440.0;640.0;200.0;157.8151;False;
 2020;RO;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;4294;18.018547;607.1355;600.0;480.0;740.0;260.0;175.9254;False;
 2020;RO;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;940;3.944442;659.9574;640.0;540.0;800.0;260.0;177.1692;False;
-2020;RO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;2955;12.399815;534.2944;540.0;420.0;620.0;200.0;159.7377;False;
+2020;RO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;257;1.078427;559.3774;560.0;500.0;620.0;120.0;120.4903;False;
 2020;RO;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RR;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;1185;17.951825;503.2236;500.0;380.0;580.0;200.0;149.6778;False;
 2020;RR;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;1264;19.148614;531.2658;530.0;420.0;620.0;200.0;154.3022;False;
 2020;RR;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;1219;18.466899;526.087;520.0;400.0;600.0;200.0;154.9533;False;
 2020;RR;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;1493;22.617785;597.9906;580.0;480.0;720.0;240.0;173.2282;False;
 2020;RR;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;462;6.99894;635.974;620.0;505.0;780.0;275.0;186.7291;False;
-2020;RR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;962;14.573549;521.6216;520.0;400.0;600.0;200.0;152.1457;False;
+2020;RR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;16;0.242388;583.75;580.0;560.0;650.0;90.0;124.7435;False;
 2020;RR;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RS;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;16213;13.922235;550.6051;540.0;420.0;640.0;220.0;165.9135;False;
 2020;RS;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;21550;18.505161;560.2729;560.0;460.0;640.0;180.0;160.2192;False;
 2020;RS;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;31459;27.0141;569.8789;560.0;460.0;660.0;200.0;160.9935;False;
 2020;RS;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;25380;21.794013;650.8463;640.0;540.0;800.0;260.0;177.269;False;
 2020;RS;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;9266;7.95679;709.659;720.0;600.0;860.0;260.0;171.9948;False;
-2020;RS;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RS;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RS;pai_ou_responsavel_masculino;Q003;F;Não sei;5;11601;9.961873;556.7261;560.0;460.0;640.0;180.0;159.1786;False;
+2020;RS;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;985;0.845828;567.6345;560.0;520.0;640.0;120.0;127.6042;False;
 2020;RS;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;SC;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;6565;11.876549;544.7586;540.0;420.0;640.0;220.0;162.2977;False;
 2020;SC;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;8434;15.257702;569.6301;560.0;460.0;660.0;200.0;164.8658;False;
 2020;SC;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;15545;28.122004;572.1853;560.0;460.0;660.0;200.0;161.9178;False;
 2020;SC;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;13863;25.079147;641.8741;640.0;540.0;780.0;240.0;171.9064;False;
 2020;SC;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;5158;9.331187;694.5173;700.0;580.0;840.0;260.0;169.1001;False;
-2020;SC;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;SC;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;SC;pai_ou_responsavel_masculino;Q003;F;Não sei;5;4888;8.842737;562.5327;560.0;440.0;660.0;220.0;162.6913;False;
+2020;SC;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;824;1.490674;593.4466;580.0;540.0;660.0;120.0;123.7276;False;
 2020;SC;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;SE;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;13398;29.511663;555.7531;560.0;420.0;660.0;240.0;170.9095;False;
 2020;SE;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;9187;20.236129;585.7473;580.0;460.0;700.0;240.0;176.134;False;
 2020;SE;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;8918;19.643604;595.9318;580.0;480.0;720.0;240.0;179.2465;False;
 2020;SE;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;7048;15.524571;698.269;700.0;560.0;860.0;300.0;186.5581;False;
 2020;SE;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;1928;4.24679;757.5;800.0;640.0;900.0;260.0;171.8033;False;
-2020;SE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;SE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;SE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;4446;9.793167;569.1453;560.0;440.0;660.0;220.0;169.4864;False;
+2020;SE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;474;1.044076;574.5992;560.0;520.0;640.0;120.0;132.7014;False;
 2020;SE;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;SP;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;23715;5.882338;527.2545;520.0;400.0;620.0;220.0;159.2793;False;
 2020;SP;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;75275;18.671432;572.7535;560.0;460.0;680.0;220.0;162.125;False;
 2020;SP;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;110291;27.356904;582.3309;580.0;480.0;680.0;200.0;162.9762;False;
 2020;SP;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;104243;25.85674;655.1609;640.0;540.0;780.0;240.0;168.9288;False;
 2020;SP;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;42262;10.482791;694.7646;700.0;580.0;840.0;260.0;164.4655;False;
-2020;SP;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;SP;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;SP;pai_ou_responsavel_masculino;Q003;F;Não sei;5;40154;9.959916;564.4434;560.0;460.0;660.0;200.0;159.1134;False;
+2020;SP;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;7216;1.789878;567.6136;580.0;520.0;620.0;100.0;119.7645;False;
 2020;SP;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;TO;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;7330;28.583684;503.3315;500.0;380.0;580.0;200.0;149.1465;False;
 2020;TO;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;4578;17.852129;539.7728;540.0;420.0;620.0;200.0;160.3757;False;
 2020;TO;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;4825;18.815317;557.1109;560.0;440.0;660.0;220.0;167.0847;False;
 2020;TO;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;4684;18.265481;634.1588;620.0;520.0;780.0;260.0;182.8058;False;
 2020;TO;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;1355;5.283887;687.0406;700.0;580.0;840.0;260.0;181.7854;False;
-2020;TO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;TO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;TO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;2640;10.294806;533.7727;540.0;420.0;620.0;200.0;159.428;False;
+2020;TO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;232;0.904695;569.3966;570.0;500.0;620.0;120.0;130.3562;False;
 2020;TO;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;BR;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;395258;14.776475;527.0704;520.0;400.0;620.0;220.0;159.236;False;
 2020;BR;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;1112359;41.584851;568.6864;560.0;460.0;660.0;200.0;166.5287;False;
 2020;BR;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;166399;6.220723;577.5166;560.0;460.0;680.0;220.0;167.7455;False;
 2020;BR;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;639645;23.912731;652.9221;640.0;540.0;800.0;260.0;179.624;False;
 2020;BR;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;122388;4.575399;716.2705;720.0;600.0;860.0;260.0;172.9283;False;
-2020;BR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;BR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;BR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;209818;7.843916;572.8653;560.0;460.0;680.0;220.0;171.657;False;
+2020;BR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;29047;1.085904;576.6447;580.0;520.0;640.0;120.0;126.7896;False;
 2020;BR;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;AC;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;3337;17.017696;499.4246;520.0;380.0;580.0;200.0;141.6091;False;
 2020;AC;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;8955;45.667806;532.2792;540.0;420.0;620.0;200.0;154.4235;False;
 2020;AC;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;867;4.421439;530.8651;540.0;400.0;620.0;220.0;153.6621;False;
 2020;AC;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;3972;20.256005;599.5418;580.0;480.0;720.0;240.0;179.0922;False;
 2020;AC;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;444;2.264266;692.027;680.0;580.0;860.0;280.0;181.7196;False;
-2020;AC;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AC;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AC;mae_ou_responsavel_feminino;Q004;F;Não sei;5;1649;8.409404;535.1486;540.0;420.0;620.0;200.0;157.9715;False;
+2020;AC;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;385;1.963384;556.4156;560.0;500.0;620.0;120.0;122.165;False;
 2020;AC;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;AL;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;11256;21.374452;533.5625;540.0;400.0;620.0;220.0;159.4688;False;
 2020;AL;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;21360;40.561326;562.2322;560.0;440.0;660.0;220.0;165.8507;False;
 2020;AL;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;2269;4.308691;575.6368;560.0;460.0;680.0;220.0;168.8793;False;
 2020;AL;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;10431;19.807827;645.7521;640.0;520.0;800.0;280.0;184.6567;False;
 2020;AL;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;1836;3.486451;712.7451;720.0;580.0;880.0;300.0;179.5385;False;
-2020;AL;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AL;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AL;mae_ou_responsavel_feminino;Q004;F;Não sei;5;4865;9.238336;558.5776;560.0;440.0;640.0;200.0;166.8427;False;
+2020;AL;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;644;1.222916;575.4969;580.0;520.0;640.0;120.0;131.9193;False;
 2020;AL;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;AP;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;3150;15.383113;495.6952;500.0;380.0;580.0;200.0;136.5647;False;
 2020;AP;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;9721;47.472774;530.1553;540.0;440.0;600.0;160.0;143.4746;False;
 2020;AP;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;1021;4.986082;539.9216;540.0;440.0;620.0;180.0;145.6923;False;
 2020;AP;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;4139;20.212922;611.3264;600.0;500.0;720.0;220.0;172.1444;False;
 2020;AP;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;543;2.651756;681.105;660.0;560.0;840.0;280.0;181.6161;False;
-2020;AP;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AP;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AP;mae_ou_responsavel_feminino;Q004;F;Não sei;5;1636;7.989452;538.2029;540.0;435.0;620.0;185.0;151.9666;False;
+2020;AP;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;267;1.303902;578.2772;560.0;520.0;640.0;120.0;124.7681;False;
 2020;AP;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;AM;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;7076;14.421098;507.5777;520.0;420.0;580.0;160.0;123.8955;False;
 2020;AM;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;21307;43.424297;543.6476;560.0;480.0;600.0;120.0;132.8886;False;
 2020;AM;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;3796;7.73636;553.3509;560.0;480.0;620.0;140.0;134.2279;False;
 2020;AM;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;9824;20.021603;597.2435;580.0;520.0;680.0;160.0;148.9017;False;
 2020;AM;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;1464;2.983675;674.0847;660.0;560.0;820.0;260.0;165.2527;False;
-2020;AM;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;AM;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;AM;mae_ou_responsavel_feminino;Q004;F;Não sei;5;4692;9.562435;541.3171;540.0;460.0;600.0;140.0;139.4981;False;
+2020;AM;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;908;1.850531;540.793;540.0;480.0;600.0;120.0;120.0818;False;
 2020;AM;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;BA;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;45746;21.555425;521.1179;520.0;400.0;600.0;200.0;157.6083;False;
 2020;BA;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;88284;41.599246;557.4929;560.0;440.0;640.0;200.0;165.9329;False;
 2020;BA;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;10264;4.836376;565.1578;560.0;440.0;660.0;220.0;167.8283;False;
 2020;BA;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;45424;21.403699;647.8694;640.0;520.0;800.0;280.0;180.9247;False;
 2020;BA;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;5897;2.778655;717.8192;740.0;600.0;860.0;260.0;171.9469;False;
-2020;BA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;BA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;BA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;15543;7.323831;554.7102;560.0;440.0;660.0;220.0;169.4224;False;
+2020;BA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;1067;0.502768;574.8828;580.0;520.0;640.0;120.0;129.324;False;
 2020;BA;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;CE;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;43106;26.571245;542.3806;540.0;400.0;640.0;240.0;169.9704;False;
 2020;CE;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;60661;37.392435;584.9238;580.0;460.0;700.0;240.0;174.355;False;
 2020;CE;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;11756;7.246591;587.967;580.0;480.0;700.0;220.0;171.7644;False;
 2020;CE;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;29236;18.02155;680.6129;680.0;560.0;840.0;280.0;182.0727;False;
 2020;CE;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;4462;2.75045;748.4671;780.0;640.0;880.0;240.0;167.2975;False;
-2020;CE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;CE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;CE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;11992;7.392065;578.8259;580.0;460.0;680.0;220.0;177.176;False;
+2020;CE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;1015;0.625663;592.197;580.0;520.0;660.0;140.0;127.5946;False;
 2020;CE;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;DF;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;3448;6.293119;493.2831;500.0;380.0;580.0;200.0;147.2939;False;
 2020;DF;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;24572;44.8476;556.0573;560.0;440.0;640.0;200.0;157.6962;False;
 2020;DF;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;2503;4.568352;565.1698;560.0;460.0;650.0;190.0;161.4308;False;
 2020;DF;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;14161;25.845957;654.29;640.0;540.0;800.0;260.0;173.7643;False;
 2020;DF;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;4196;7.658332;712.2164;720.0;600.0;860.0;260.0;164.0716;False;
-2020;DF;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;DF;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;DF;mae_ou_responsavel_feminino;Q004;F;Não sei;5;4691;8.561781;583.867;580.0;480.0;680.0;200.0;167.644;False;
+2020;DF;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;1219;2.224859;595.3404;580.0;540.0;660.0;120.0;131.4198;False;
 2020;DF;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;ES;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;5077;10.499648;540.9415;540.0;400.0;640.0;240.0;171.5475;False;
 2020;ES;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;20726;42.863052;570.8231;560.0;440.0;680.0;240.0;172.0454;False;
 2020;ES;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;3009;6.222856;583.6557;580.0;480.0;680.0;200.0;171.3448;False;
 2020;ES;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;12815;26.502461;665.8119;660.0;540.0;820.0;280.0;184.6207;False;
 2020;ES;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2241;4.63457;740.5444;780.0;620.0;900.0;280.0;174.4027;False;
-2020;ES;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;ES;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;ES;mae_ou_responsavel_feminino;Q004;F;Não sei;5;4035;8.344708;583.1722;580.0;460.0;700.0;240.0;177.5204;False;
+2020;ES;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;451;0.932705;589.7118;580.0;520.0;640.0;120.0;127.4156;False;
 2020;ES;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;GO;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;8255;8.81643;507.4912;500.0;380.0;600.0;220.0;159.3971;False;
 2020;GO;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;43972;46.962577;564.0862;560.0;440.0;660.0;220.0;169.3731;False;
 2020;GO;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;6530;6.974111;583.8622;580.0;460.0;680.0;220.0;173.8189;False;
 2020;GO;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;23172;24.747949;663.4153;660.0;540.0;820.0;280.0;186.4829;False;
 2020;GO;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;4255;4.544387;738.6792;780.0;620.0;900.0;280.0;177.4838;False;
-2020;GO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;GO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;GO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;6924;7.394908;574.8671;560.0;440.0;680.0;240.0;178.9895;False;
+2020;GO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;524;0.559638;602.0992;580.0;540.0;680.0;140.0;139.3804;False;
 2020;GO;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;MA;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;36101;31.151898;514.2827;520.0;400.0;600.0;200.0;148.0865;False;
 2020;MA;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;41798;36.067894;553.7806;540.0;440.0;640.0;200.0;162.2063;False;
 2020;MA;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;4721;4.073796;559.2883;560.0;440.0;640.0;200.0;167.8169;False;
 2020;MA;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;23458;20.242132;623.0625;600.0;500.0;760.0;260.0;180.9786;False;
 2020;MA;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2302;1.986418;710.8862;720.0;580.0;880.0;300.0;182.0069;False;
-2020;MA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;6983;6.025697;551.1499;540.0;440.0;640.0;200.0;166.9208;False;
+2020;MA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;524;0.452165;580.687;580.0;520.0;640.0;120.0;128.0904;False;
 2020;MA;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;MG;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;25968;9.793258;540.7032;540.0;400.0;640.0;240.0;167.612;False;
 2020;MG;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;116593;43.970478;590.56;580.0;480.0;700.0;220.0;176.6902;False;
 2020;MG;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;17421;6.569946;600.4994;580.0;480.0;720.0;240.0;177.5677;False;
 2020;MG;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;70326;26.5219;684.3404;680.0;560.0;840.0;280.0;185.5848;False;
 2020;MG;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;12696;4.788016;754.0091;800.0;640.0;900.0;260.0;169.2314;False;
-2020;MG;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MG;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MG;mae_ou_responsavel_feminino;Q004;F;Não sei;5;19345;7.29554;598.6384;580.0;480.0;720.0;240.0;184.7037;False;
+2020;MG;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;2813;1.060861;598.7202;600.0;540.0;660.0;120.0;127.0097;False;
 2020;MG;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;MS;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;2777;8.159727;494.4472;500.0;360.0;580.0;220.0;151.8898;False;
 2020;MS;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;15451;45.400053;534.8392;540.0;420.0;620.0;200.0;156.1782;False;
 2020;MS;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;1980;5.817883;549.7677;540.0;420.0;640.0;220.0;163.6013;False;
 2020;MS;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;8701;25.566362;628.1784;620.0;520.0;760.0;240.0;178.3304;False;
 2020;MS;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;1818;5.341874;678.7019;680.0;560.0;840.0;280.0;177.8915;False;
-2020;MS;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MS;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MS;mae_ou_responsavel_feminino;Q004;F;Não sei;5;2787;8.189111;555.5221;540.0;440.0;640.0;200.0;167.0849;False;
+2020;MS;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;519;1.52499;563.5067;580.0;500.0;620.0;120.0;123.5351;False;
 2020;MS;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;MT;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;4049;9.753336;500.6224;500.0;360.0;580.0;220.0;154.6596;False;
 2020;MT;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;18081;43.553982;539.2854;540.0;420.0;620.0;200.0;160.6854;False;
 2020;MT;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;2318;5.583659;546.5315;540.0;420.0;640.0;220.0;164.1312;False;
 2020;MT;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;10746;25.885244;623.2254;600.0;500.0;760.0;260.0;182.4532;False;
 2020;MT;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2184;5.260876;685.5769;690.0;560.0;845.0;285.0;186.609;False;
-2020;MT;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;MT;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;MT;mae_ou_responsavel_feminino;Q004;F;Não sei;5;3339;8.04307;553.3453;540.0;440.0;640.0;200.0;168.5565;False;
+2020;MT;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;797;1.919834;556.261;560.0;480.0;620.0;140.0;129.8414;False;
 2020;MT;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PA;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;33757;21.3683;512.0668;520.0;400.0;600.0;200.0;145.8161;False;
 2020;PA;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;70287;44.49192;560.2319;560.0;440.0;640.0;200.0;162.9655;False;
 2020;PA;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;7703;4.876026;562.3965;560.0;440.0;660.0;220.0;167.494;False;
 2020;PA;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;28954;18.327984;635.1357;620.0;520.0;780.0;260.0;182.7009;False;
 2020;PA;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;3401;2.152845;724.6575;760.0;600.0;880.0;280.0;184.3445;False;
-2020;PA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;13649;8.639865;563.0361;560.0;440.0;660.0;220.0;167.4379;False;
+2020;PA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;226;0.143059;592.8319;580.0;505.0;660.0;155.0;143.2244;False;
 2020;PA;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PB;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;23407;26.765234;542.0686;540.0;420.0;640.0;220.0;163.5009;False;
 2020;PB;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;32262;36.890673;573.3123;560.0;460.0;680.0;220.0;170.979;False;
 2020;PB;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;3858;4.411512;575.9046;560.0;460.0;680.0;220.0;174.4345;False;
 2020;PB;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;16864;19.283501;658.4262;640.0;540.0;820.0;280.0;185.9529;False;
 2020;PB;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;3072;3.512744;735.7161;760.0;600.0;900.0;300.0;182.2176;False;
-2020;PB;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PB;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PB;mae_ou_responsavel_feminino;Q004;F;Não sei;5;6752;7.720719;576.5847;560.0;455.0;680.0;225.0;175.324;False;
+2020;PB;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;1238;1.415618;580.517;580.0;520.0;640.0;120.0;130.4338;False;
 2020;PB;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PE;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;32519;20.814824;538.0073;540.0;420.0;620.0;200.0;163.5928;False;
 2020;PE;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;61766;39.535301;570.7305;560.0;460.0;680.0;220.0;170.2944;False;
 2020;PE;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;8192;5.243551;576.0645;560.0;460.0;680.0;220.0;171.2678;False;
 2020;PE;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;32875;21.042693;646.0672;640.0;520.0;800.0;280.0;181.821;False;
 2020;PE;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;5615;3.59406;714.9492;720.0;600.0;860.0;260.0;172.4559;False;
-2020;PE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;14374;9.200538;557.412;560.0;440.0;660.0;220.0;169.2997;False;
+2020;PE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;889;0.569033;577.2328;580.0;520.0;640.0;120.0;125.9564;False;
 2020;PE;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PI;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;22053;32.282289;524.1219;520.0;400.0;600.0;200.0;159.8368;False;
 2020;PI;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;23683;34.668365;574.7127;560.0;440.0;680.0;240.0;176.1849;False;
 2020;PI;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;2990;4.376912;587.7926;580.0;460.0;700.0;240.0;178.5917;False;
 2020;PI;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;13366;19.565822;669.0723;660.0;540.0;840.0;300.0;193.425;False;
 2020;PI;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;1638;2.397787;751.514;790.0;620.0;900.0;280.0;177.4463;False;
-2020;PI;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PI;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PI;mae_ou_responsavel_feminino;Q004;F;Não sei;5;4117;6.026671;578.3532;560.0;440.0;700.0;260.0;183.2386;False;
+2020;PI;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;466;0.682154;585.6652;580.0;520.0;640.0;120.0;131.9273;False;
 2020;PI;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;PR;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;9031;8.095268;528.3003;520.0;400.0;620.0;220.0;156.4384;False;
 2020;PR;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;45024;40.358913;560.1364;560.0;460.0;640.0;180.0;156.1155;False;
 2020;PR;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;9087;8.145466;561.0807;560.0;460.0;640.0;180.0;155.8941;False;
 2020;PR;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;31585;28.312373;633.6989;620.0;520.0;760.0;240.0;168.5486;False;
 2020;PR;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;6291;5.639169;678.8587;680.0;580.0;800.0;220.0;164.721;False;
-2020;PR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;PR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;PR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;8490;7.610323;566.9093;560.0;460.0;660.0;200.0;161.0981;False;
+2020;PR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;2051;1.838489;573.057;580.0;520.0;640.0;120.0;119.1198;False;
 2020;PR;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RJ;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;4775;2.6553;515.6188;520.0;380.0;600.0;220.0;159.8447;False;
 2020;RJ;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;85806;47.71533;577.8934;560.0;460.0;680.0;220.0;167.1567;False;
 2020;RJ;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;10537;5.859455;584.4889;580.0;480.0;680.0;200.0;167.9452;False;
 2020;RJ;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;47491;26.408977;667.35;660.0;540.0;820.0;280.0;177.9919;False;
 2020;RJ;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;12884;7.164584;737.5132;760.0;620.0;880.0;260.0;170.1438;False;
-2020;RJ;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RJ;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RJ;mae_ou_responsavel_feminino;Q004;F;Não sei;5;16033;8.915692;590.7566;580.0;480.0;700.0;220.0;174.9971;False;
+2020;RJ;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;2303;1.280661;573.7907;580.0;500.0;640.0;140.0;133.3004;False;
 2020;RJ;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RN;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;15589;23.077037;540.6081;540.0;420.0;620.0;200.0;159.3113;False;
 2020;RN;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;25250;37.378612;579.8574;580.0;460.0;680.0;220.0;170.4331;False;
 2020;RN;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;3715;5.499467;580.6353;580.0;460.0;680.0;220.0;170.8332;False;
 2020;RN;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;14470;21.420535;658.3856;640.0;540.0;800.0;260.0;181.3595;False;
 2020;RN;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2260;3.345571;756.4513;800.0;640.0;900.0;260.0;172.6318;False;
-2020;RN;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RN;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RN;mae_ou_responsavel_feminino;Q004;F;Não sei;5;5531;8.187766;581.4934;560.0;460.0;680.0;220.0;172.3292;False;
+2020;RN;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;737;1.091011;592.2388;580.0;540.0;660.0;120.0;130.6222;False;
 2020;RN;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RO;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;3954;16.591834;505.1947;520.0;380.0;600.0;220.0;152.3175;False;
 2020;RO;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;10441;43.812681;533.9527;540.0;420.0;620.0;200.0;155.0235;False;
 2020;RO;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;1299;5.450883;537.8907;540.0;420.0;620.0;200.0;159.3332;False;
 2020;RO;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;5157;21.639881;604.2738;600.0;480.0;740.0;260.0;176.6257;False;
 2020;RO;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;740;3.105199;649.7838;640.0;540.0;800.0;260.0;181.2672;False;
-2020;RO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;1983;8.321094;534.6848;540.0;410.0;620.0;210.0;164.1377;False;
+2020;RO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;257;1.078427;559.3774;560.0;500.0;620.0;120.0;120.4903;False;
 2020;RO;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RR;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;820;12.42236;485.5854;500.0;375.0;560.0;185.0;142.803;False;
 2020;RR;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;2617;39.645508;527.1685;520.0;400.0;600.0;200.0;154.0277;False;
 2020;RR;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;337;5.105287;541.7211;540.0;440.0;640.0;200.0;157.4142;False;
 2020;RR;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;1871;28.34419;589.225;580.0;480.0;700.0;220.0;174.9832;False;
 2020;RR;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;321;4.8629;638.5047;620.0;520.0;760.0;240.0;178.0833;False;
-2020;RR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;619;9.377367;532.8271;520.0;420.0;600.0;180.0;158.0339;False;
+2020;RR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;16;0.242388;583.75;580.0;560.0;650.0;90.0;124.7435;False;
 2020;RR;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;RS;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;10877;9.340169;543.6223;540.0;400.0;640.0;240.0;164.853;False;
 2020;RS;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;49786;42.751644;563.1499;560.0;460.0;640.0;180.0;160.9085;False;
 2020;RS;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;10125;8.69442;574.3743;560.0;480.0;660.0;180.0;162.4636;False;
 2020;RS;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;30270;25.993096;649.1563;640.0;540.0;800.0;260.0;177.3825;False;
 2020;RS;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;6198;5.322273;711.0455;720.0;600.0;860.0;260.0;172.2543;False;
-2020;RS;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;RS;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;RS;mae_ou_responsavel_feminino;Q004;F;Não sei;5;8213;7.05257;567.2592;560.0;460.0;660.0;200.0;165.8602;False;
+2020;RS;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;985;0.845828;567.6345;560.0;520.0;640.0;120.0;127.6042;False;
 2020;RS;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;SC;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;4916;8.893391;540.7282;540.0;400.0;620.0;220.0;160.882;False;
 2020;SC;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;19854;35.917289;568.9272;560.0;460.0;660.0;200.0;163.8342;False;
 2020;SC;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;5824;10.536028;572.318;560.0;460.0;660.0;200.0;160.9364;False;
 2020;SC;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;16830;30.44666;638.858;620.0;520.0;775.0;255.0;172.0418;False;
 2020;SC;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;3454;6.24853;697.0064;700.0;580.0;840.0;260.0;169.6652;False;
-2020;SC;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;SC;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;SC;mae_ou_responsavel_feminino;Q004;F;Não sei;5;3575;6.467428;575.9944;560.0;460.0;680.0;220.0;170.4827;False;
+2020;SC;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;824;1.490674;593.4466;580.0;540.0;660.0;120.0;123.7276;False;
 2020;SC;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;SE;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;12913;28.443358;554.8827;560.0;420.0;660.0;240.0;169.4428;False;
 2020;SE;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;16583;36.527236;585.268;580.0;460.0;700.0;240.0;176.1562;False;
 2020;SE;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;2051;4.517721;598.6933;580.0;480.0;720.0;240.0;178.4123;False;
 2020;SE;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;8631;19.011432;687.7326;700.0;560.0;860.0;300.0;188.6646;False;
 2020;SE;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;1286;2.832662;773.1726;820.0;660.0;920.0;260.0;168.0213;False;
-2020;SE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;SE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;SE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;3461;7.623516;585.1777;580.0;460.0;700.0;240.0;179.4061;False;
+2020;SE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;474;1.044076;574.5992;560.0;520.0;640.0;120.0;132.7014;False;
 2020;SE;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;SP;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;16224;4.024249;512.4174;520.0;380.0;600.0;220.0;154.7979;False;
 2020;SP;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;167872;41.639465;575.8729;560.0;480.0;680.0;200.0;162.495;False;
 2020;SP;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;31132;7.722073;585.2782;580.0;480.0;680.0;200.0;163.8908;False;
 2020;SP;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;117928;29.251208;652.9026;640.0;540.0;780.0;240.0;169.2336;False;
 2020;SP;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;29954;7.429878;693.9915;700.0;580.0;840.0;260.0;165.8836;False;
-2020;SP;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;SP;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;SP;mae_ou_responsavel_feminino;Q004;F;Não sei;5;32830;8.14325;584.0956;580.0;480.0;680.0;200.0;167.0633;False;
+2020;SP;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;7216;1.789878;567.6136;580.0;520.0;620.0;100.0;119.7645;False;
 2020;SP;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2020;TO;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;5077;19.798003;493.6931;500.0;380.0;580.0;200.0;144.0532;False;
 2020;TO;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;9647;37.618936;539.7056;540.0;420.0;620.0;200.0;160.3055;False;
 2020;TO;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;1094;4.266105;550.9872;540.0;420.0;640.0;220.0;168.0242;False;
 2020;TO;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;6948;27.094057;612.7288;600.0;480.0;760.0;280.0;182.2393;False;
 2020;TO;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;936;3.649977;695.6624;720.0;560.0;860.0;300.0;186.2988;False;
-2020;TO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2020;TO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2020;TO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;1710;6.668226;546.7135;540.0;420.0;640.0;220.0;167.8786;False;
+2020;TO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;232;0.904695;569.3966;570.0;500.0;620.0;120.0;130.3562;False;
 2020;TO;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;BR;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;370046;16.132465;586.7066;580.0;500.0;660.0;160.0;145.0599;False;
 2021;BR;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;437545;19.07514;613.2205;600.0;520.0;700.0;180.0;145.0778;False;
 2021;BR;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;517691;22.569172;620.6111;600.0;520.0;720.0;200.0;143.8178;False;
 2021;BR;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;534267;23.291817;685.6427;680.0;580.0;820.0;240.0;150.9645;False;
 2021;BR;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;199627;8.702906;726.3056;740.0;620.0;860.0;240.0;146.7738;False;
-2021;BR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;BR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;BR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;234620;10.228455;601.5041;580.0;500.0;680.0;180.0;143.6914;False;
+2021;BR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;1;4.4e-05;520.0;520.0;520.0;520.0;0.0;0.0;False;
 2021;BR;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;AC;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;2613;19.691032;561.1558;560.0;480.0;620.0;140.0;132.1159;False;
 2021;AC;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;3082;23.22532;581.7197;580.0;500.0;660.0;160.0;137.2901;False;
 2021;AC;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;2205;16.616428;594.1043;580.0;500.0;660.0;160.0;139.5363;False;
 2021;AC;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;2770;20.874152;652.0072;620.0;540.0;780.0;240.0;156.0638;False;
 2021;AC;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;816;6.149209;702.3775;700.0;580.0;840.0;260.0;152.2856;False;
-2021;AC;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AC;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AC;pai_ou_responsavel_masculino;Q003;F;Não sei;5;1784;13.443858;582.8139;580.0;500.0;640.0;140.0;135.2888;False;
+2021;AC;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;AC;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;AL;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;8361;21.348688;594.8834;580.0;500.0;680.0;180.0;147.8074;False;
 2021;AL;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;8359;21.343581;621.3853;600.0;520.0;720.0;200.0;147.9648;False;
 2021;AL;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;7746;19.778368;625.04;600.0;520.0;720.0;200.0;146.8397;False;
 2021;AL;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;7837;20.010724;690.1008;680.0;580.0;820.0;240.0;155.781;False;
 2021;AL;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2573;6.569809;716.9918;720.0;600.0;840.0;240.0;149.9376;False;
-2021;AL;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AL;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AL;pai_ou_responsavel_masculino;Q003;F;Não sei;5;4288;10.948831;602.472;580.0;500.0;685.0;185.0;147.6048;False;
+2021;AL;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;AL;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;AP;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;2102;15.616642;555.8991;560.0;480.0;620.0;140.0;126.2853;False;
 2021;AP;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;3071;22.81575;583.7708;580.0;500.0;640.0;140.0;130.3632;False;
 2021;AP;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;2602;19.331352;592.8517;580.0;520.0;660.0;140.0;132.2772;False;
 2021;AP;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;2961;21.998514;644.2823;620.0;540.0;760.0;220.0;151.8937;False;
 2021;AP;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;890;6.612184;704.2472;700.0;580.0;840.0;260.0;157.3443;False;
-2021;AP;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AP;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AP;pai_ou_responsavel_masculino;Q003;F;Não sei;5;1834;13.625557;578.0589;560.0;500.0;640.0;140.0;132.6787;False;
+2021;AP;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;AP;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;AM;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;8094;17.50319;521.2083;520.0;440.0;580.0;140.0;118.8092;False;
 2021;AM;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;9400;20.327401;556.9021;560.0;480.0;620.0;140.0;126.2622;False;
 2021;AM;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;9352;20.223601;565.0;560.0;480.0;620.0;140.0;127.4742;False;
 2021;AM;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;9210;19.916528;618.3127;600.0;520.0;700.0;180.0;143.0509;False;
 2021;AM;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2659;5.750059;676.2241;660.0;560.0;800.0;240.0;154.4473;False;
-2021;AM;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AM;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AM;pai_ou_responsavel_masculino;Q003;F;Não sei;5;7528;16.279221;551.7428;540.0;460.0;620.0;160.0;128.1937;False;
+2021;AM;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;AM;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;BA;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;41125;22.970241;588.2266;580.0;500.0;660.0;160.0;142.2841;False;
 2021;BA;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;36127;20.178623;609.0021;600.0;520.0;700.0;180.0;143.756;False;
 2021;BA;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;38601;21.560468;616.4105;600.0;520.0;700.0;180.0;143.3177;False;
 2021;BA;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;36005;20.110481;685.6014;680.0;580.0;820.0;240.0;151.1435;False;
 2021;BA;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;9426;5.264863;724.9417;740.0;620.0;860.0;240.0;147.0686;False;
-2021;BA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;BA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;BA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;17752;9.915324;594.9741;580.0;500.0;680.0;180.0;142.699;False;
+2021;BA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;BA;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;CE;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;40765;28.765277;583.6134;580.0;480.0;680.0;200.0;157.5549;False;
 2021;CE;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;30693;21.658105;614.7304;600.0;520.0;720.0;200.0;154.5516;False;
 2021;CE;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;25433;17.946456;630.8741;620.0;540.0;740.0;200.0;151.3701;False;
 2021;CE;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;23266;16.417342;708.9074;700.0;600.0;840.0;240.0;153.3677;False;
 2021;CE;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;6743;4.758108;756.0107;780.0;640.0;880.0;240.0;141.9866;False;
-2021;CE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;CE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;CE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;14816;10.454712;601.6212;580.0;500.0;700.0;200.0;151.1114;False;
+2021;CE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;CE;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;DF;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;3120;6.717912;560.7885;560.0;480.0;620.0;140.0;133.9155;False;
 2021;DF;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;10376;22.341365;599.3446;580.0;520.0;680.0;160.0;133.778;False;
 2021;DF;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;7525;16.202657;606.0013;600.0;520.0;680.0;160.0;133.1414;False;
 2021;DF;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;12959;27.903021;679.4058;660.0;580.0;800.0;220.0;146.7526;False;
 2021;DF;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;7149;15.393062;727.7018;740.0;620.0;860.0;240.0;144.9632;False;
-2021;DF;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;DF;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;DF;pai_ou_responsavel_masculino;Q003;F;Não sei;5;5314;11.441983;604.14;580.0;520.0;680.0;160.0;137.79;False;
+2021;DF;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;DF;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;ES;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;6410;14.766863;609.117;600.0;520.0;700.0;180.0;146.2326;False;
 2021;ES;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;7260;16.725028;616.3829;600.0;520.0;700.0;180.0;143.0667;False;
 2021;ES;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;10988;25.313306;626.5799;600.0;540.0;720.0;180.0;144.7292;False;
 2021;ES;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;10425;24.01631;695.9348;680.0;580.0;840.0;260.0;153.0353;False;
 2021;ES;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;3858;8.887763;745.9409;760.0;640.0;880.0;240.0;145.996;False;
-2021;ES;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;ES;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;ES;pai_ou_responsavel_masculino;Q003;F;Não sei;5;4467;10.29073;609.6082;600.0;520.0;700.0;180.0;147.2096;False;
+2021;ES;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;ES;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;GO;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;11795;13.611762;580.1357;560.0;480.0;660.0;180.0;147.2508;False;
 2021;GO;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;17090;19.722341;608.0094;580.0;500.0;700.0;200.0;149.1587;False;
 2021;GO;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;20941;24.166503;613.6087;600.0;520.0;700.0;180.0;146.3057;False;
 2021;GO;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;20729;23.921849;695.0678;680.0;580.0;840.0;260.0;154.8078;False;
 2021;GO;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;6891;7.952408;742.4844;760.0;620.0;880.0;260.0;150.5807;False;
-2021;GO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;GO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;GO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;9207;10.625137;593.8916;580.0;500.0;680.0;180.0;147.6682;False;
+2021;GO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;GO;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;MA;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;25802;30.056147;571.3301;560.0;480.0;640.0;160.0;139.6028;False;
 2021;MA;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;16909;19.696899;608.7941;580.0;520.0;700.0;180.0;147.2938;False;
 2021;MA;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;15431;17.975211;617.2004;600.0;520.0;700.0;180.0;146.9517;False;
 2021;MA;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;15332;17.859889;682.5046;660.0;560.0;820.0;260.0;157.7127;False;
 2021;MA;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;3639;4.238986;730.6843;740.0;600.0;880.0;280.0;155.7238;False;
-2021;MA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;8733;10.172868;595.1723;580.0;500.0;680.0;180.0;146.6304;False;
+2021;MA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;MA;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;MG;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;31399;13.920094;612.3736;600.0;520.0;700.0;180.0;150.8905;False;
 2021;MG;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;38445;17.043792;636.8017;620.0;540.0;740.0;200.0;151.184;False;
 2021;MG;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;59142;26.219377;644.8639;620.0;540.0;760.0;220.0;150.5032;False;
 2021;MG;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;55117;24.434977;715.5008;720.0;600.0;860.0;260.0;152.8451;False;
 2021;MG;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;21824;9.675217;753.6391;780.0;640.0;880.0;240.0;144.9375;False;
-2021;MG;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MG;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MG;pai_ou_responsavel_masculino;Q003;F;Não sei;5;19639;8.706543;624.5379;600.0;520.0;720.0;200.0;149.7192;False;
+2021;MG;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;MG;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;MS;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;3646;13.085454;564.6846;560.0;480.0;640.0;160.0;137.1107;False;
 2021;MS;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;4749;17.044109;588.3976;580.0;500.0;660.0;160.0;138.5467;False;
 2021;MS;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;6380;22.89775;592.9875;580.0;500.0;660.0;160.0;137.7587;False;
 2021;MS;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;7534;27.039443;664.404;640.0;560.0;780.0;220.0;150.4609;False;
 2021;MS;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2761;9.909199;707.8233;700.0;600.0;840.0;240.0;148.0906;False;
-2021;MS;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MS;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MS;pai_ou_responsavel_masculino;Q003;F;Não sei;5;2793;10.024046;580.1361;560.0;480.0;640.0;160.0;138.9784;False;
+2021;MS;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;MS;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;MT;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;5630;15.622399;572.0675;560.0;480.0;640.0;160.0;141.4096;False;
 2021;MT;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;5984;16.604695;586.7213;580.0;480.0;660.0;180.0;144.9579;False;
 2021;MT;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;8276;22.964648;592.5302;580.0;500.0;660.0;160.0;139.8122;False;
 2021;MT;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;8873;24.621233;661.81;640.0;560.0;780.0;220.0;155.2513;False;
 2021;MT;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;3475;9.642599;704.3914;700.0;600.0;840.0;240.0;155.4954;False;
-2021;MT;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MT;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MT;pai_ou_responsavel_masculino;Q003;F;Não sei;5;3800;10.544425;582.6632;560.0;480.0;660.0;180.0;145.5988;False;
+2021;MT;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;MT;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PA;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;27181;22.286998;571.4087;560.0;480.0;640.0;160.0;131.7823;False;
 2021;PA;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;27421;22.483786;611.6517;600.0;520.0;700.0;180.0;144.8565;False;
 2021;PA;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;24039;19.710722;619.5724;600.0;520.0;720.0;200.0;145.8552;False;
 2021;PA;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;21617;17.724809;686.2451;680.0;580.0;820.0;240.0;156.118;False;
 2021;PA;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;5277;4.326864;735.4595;760.0;620.0;880.0;260.0;155.4703;False;
-2021;PA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PA;pai_ou_responsavel_masculino;Q003;F;Não sei;5;16424;13.466821;602.5804;580.0;500.0;680.0;180.0;143.3903;False;
+2021;PA;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PA;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PB;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;19416;27.24632;597.4176;580.0;500.0;680.0;180.0;147.1191;False;
 2021;PB;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;14654;20.563843;625.5261;600.0;520.0;720.0;200.0;149.5103;False;
 2021;PB;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;12984;18.220345;628.0484;600.0;520.0;720.0;200.0;148.4085;False;
 2021;PB;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;13261;18.609057;702.8761;700.0;580.0;840.0;260.0;156.0649;False;
 2021;PB;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;4535;6.36393;745.5347;760.0;620.0;880.0;260.0;151.6823;False;
-2021;PB;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PB;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PB;pai_ou_responsavel_masculino;Q003;F;Não sei;5;6411;8.996506;607.9988;600.0;520.0;700.0;180.0;147.7152;False;
+2021;PB;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PB;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PE;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;28272;21.378179;596.0003;580.0;500.0;680.0;180.0;148.4786;False;
 2021;PE;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;28403;21.477236;616.8165;600.0;520.0;720.0;200.0;147.9603;False;
 2021;PE;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;27202;20.569087;622.2616;600.0;520.0;720.0;200.0;147.4923;False;
 2021;PE;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;25632;19.381914;684.5732;660.0;580.0;820.0;240.0;153.8439;False;
 2021;PE;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;8374;6.332091;729.7206;740.0;620.0;860.0;240.0;148.0474;False;
-2021;PE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;14364;10.861494;597.8154;580.0;500.0;680.0;180.0;144.759;False;
+2021;PE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PE;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PI;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;18032;31.697927;585.2562;560.0;480.0;660.0;180.0;147.979;False;
 2021;PI;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;11026;19.382284;634.0305;600.0;520.0;740.0;220.0;156.173;False;
 2021;PI;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;9432;16.580238;637.9008;620.0;520.0;760.0;240.0;156.2777;False;
 2021;PI;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;10369;18.227363;717.67;720.0;600.0;860.0;260.0;160.2242;False;
 2021;PI;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2682;4.71461;759.5302;800.0;640.0;880.0;240.0;150.4185;False;
-2021;PI;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PI;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PI;pai_ou_responsavel_masculino;Q003;F;Não sei;5;5346;9.397578;616.1803;600.0;500.0;720.0;220.0;154.7115;False;
+2021;PI;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PI;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PR;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;11310;11.357816;583.7931;560.0;500.0;660.0;160.0;131.565;False;
 2021;PR;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;15203;15.267275;597.6452;580.0;520.0;680.0;160.0;133.4361;False;
 2021;PR;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;26047;26.157121;599.3995;580.0;520.0;680.0;160.0;132.4137;False;
 2021;PR;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;26966;27.080007;658.2652;640.0;560.0;760.0;200.0;142.1091;False;
 2021;PR;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;10681;10.726157;690.3623;680.0;580.0;800.0;220.0;140.7459;False;
-2021;PR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;9372;9.411623;589.2446;580.0;500.0;660.0;160.0;131.5046;False;
+2021;PR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PR;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RJ;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;5099;3.117644;583.6752;560.0;480.0;660.0;180.0;142.4523;False;
 2021;RJ;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;36333;22.214817;615.5875;600.0;520.0;700.0;180.0;141.9902;False;
 2021;RJ;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;38084;23.285418;624.5001;600.0;520.0;720.0;200.0;143.9294;False;
 2021;RJ;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;45294;27.693775;687.8377;680.0;580.0;820.0;240.0;150.6892;False;
 2021;RJ;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;20146;12.31772;737.6422;760.0;620.0;860.0;240.0;148.4855;False;
-2021;RJ;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RJ;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RJ;pai_ou_responsavel_masculino;Q003;F;Não sei;5;18597;11.370626;610.121;600.0;520.0;700.0;180.0;144.0608;False;
+2021;RJ;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RJ;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RN;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;13237;23.08712;596.676;580.0;500.0;680.0;180.0;143.581;False;
 2021;RN;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;11124;19.401762;625.196;600.0;540.0;720.0;180.0;145.031;False;
 2021;RN;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;11192;19.520363;625.7505;600.0;540.0;720.0;180.0;143.2983;False;
 2021;RN;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;12482;21.770297;695.3581;680.0;580.0;840.0;260.0;153.6933;False;
 2021;RN;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;3656;6.376559;759.3764;780.0;640.0;880.0;240.0;148.4782;False;
-2021;RN;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RN;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RN;pai_ou_responsavel_masculino;Q003;F;Não sei;5;5644;9.8439;611.6726;600.0;520.0;700.0;180.0;144.6405;False;
+2021;RN;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RN;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RO;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;4144;21.1407;573.499;560.0;480.0;640.0;160.0;141.5261;False;
 2021;RO;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;3659;18.666463;583.5201;560.0;480.0;660.0;180.0;142.2709;False;
 2021;RO;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;3798;19.375574;592.7962;580.0;500.0;680.0;180.0;140.268;False;
 2021;RO;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;4425;22.574227;642.8972;620.0;540.0;760.0;220.0;149.2787;False;
 2021;RO;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;1295;6.606469;674.8726;660.0;560.0;800.0;240.0;153.6168;False;
-2021;RO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;2281;11.636568;577.6589;560.0;480.0;660.0;180.0;138.9216;False;
+2021;RO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RO;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RR;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;730;14.66747;568.8767;560.0;480.0;620.0;140.0;134.0991;False;
 2021;RR;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;849;17.058469;578.563;560.0;480.0;660.0;180.0;142.3124;False;
 2021;RR;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;869;17.460317;587.5949;560.0;500.0;660.0;160.0;138.4821;False;
 2021;RR;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;1339;26.903757;643.54;620.0;540.0;760.0;220.0;149.7851;False;
 2021;RR;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;501;10.066305;675.3293;660.0;560.0;800.0;240.0;153.1666;False;
-2021;RR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RR;pai_ou_responsavel_masculino;Q003;F;Não sei;5;689;13.843681;577.3004;560.0;480.0;660.0;180.0;139.2421;False;
+2021;RR;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RR;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RS;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;13751;13.177641;604.3008;580.0;520.0;680.0;160.0;136.929;False;
 2021;RS;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;17050;16.339086;605.4674;580.0;520.0;680.0;160.0;138.6608;False;
 2021;RS;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;26796;25.678719;611.9092;600.0;520.0;680.0;160.0;137.4576;False;
 2021;RS;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;26081;24.993531;681.3519;660.0;580.0;800.0;220.0;149.0002;False;
 2021;RS;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;10901;10.446474;729.2689;740.0;620.0;860.0;240.0;145.6473;False;
-2021;RS;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RS;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RS;pai_ou_responsavel_masculino;Q003;F;Não sei;5;9772;9.364548;598.8191;580.0;520.0;680.0;160.0;138.7121;False;
+2021;RS;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RS;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;SC;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;6225;10.994737;598.9365;580.0;520.0;680.0;160.0;135.7222;False;
 2021;SC;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;7786;13.75181;612.5533;600.0;520.0;695.0;175.0;136.7735;False;
 2021;SC;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;15231;26.901339;613.3136;600.0;520.0;700.0;180.0;134.2516;False;
 2021;SC;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;15722;27.768554;673.1027;660.0;580.0;780.0;200.0;142.5947;False;
 2021;SC;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;6837;12.075665;709.8406;700.0;600.0;840.0;240.0;141.46;False;
-2021;SC;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;SC;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;SC;pai_ou_responsavel_masculino;Q003;F;Não sei;5;4817;8.507895;607.4611;600.0;520.0;680.0;160.0;134.6933;False;
+2021;SC;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;SC;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;SE;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;10108;26.760563;607.0479;580.0;500.0;700.0;200.0;153.4686;False;
 2021;SE;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;7466;19.765964;629.6223;600.0;520.0;740.0;220.0;152.3453;False;
 2021;SE;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;7597;20.112782;639.7657;620.0;540.0;760.0;220.0;154.5021;False;
 2021;SE;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;6920;18.320449;717.9971;720.0;600.0;860.0;260.0;156.3965;False;
 2021;SE;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;2083;5.514667;754.5751;780.0;640.0;880.0;240.0;150.0288;False;
-2021;SE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;SE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;SE;pai_ou_responsavel_masculino;Q003;F;Não sei;5;3598;9.525574;613.552;600.0;520.0;720.0;200.0;152.1643;False;
+2021;SE;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;SE;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;SP;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;16772;4.62561;586.1328;580.0;500.0;660.0;160.0;141.4972;False;
 2021;SP;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;61669;17.007915;616.0191;600.0;520.0;700.0;180.0;138.4907;False;
 2021;SP;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;96019;26.481425;622.5166;600.0;540.0;700.0;160.0;137.5168;False;
 2021;SP;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;106467;29.362917;678.1711;660.0;580.0;800.0;220.0;141.6068;False;
 2021;SP;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;48359;13.337103;710.6942;700.0;600.0;820.0;220.0;138.8677;False;
-2021;SP;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;SP;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;SP;pai_ou_responsavel_masculino;Q003;F;Não sei;5;33303;9.184754;606.8126;600.0;520.0;680.0;160.0;136.9113;False;
+2021;SP;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;1;0.000276;520.0;520.0;520.0;520.0;0.0;0.0;False;
 2021;SP;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;TO;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;4907;24.101179;559.5028;560.0;480.0;620.0;140.0;136.831;False;
 2021;TO;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;3357;16.488212;594.9479;580.0;500.0;680.0;180.0;142.0493;False;
 2021;TO;pai_ou_responsavel_masculino;Q003;C;Grupo ocupacional 3;2;3779;18.560904;608.1662;580.0;500.0;700.0;200.0;146.2065;False;
 2021;TO;pai_ou_responsavel_masculino;Q003;D;Grupo ocupacional 4;3;4674;22.956778;666.5126;640.0;560.0;800.0;240.0;151.9313;False;
 2021;TO;pai_ou_responsavel_masculino;Q003;E;Grupo ocupacional 5;4;1596;7.8389;711.4035;700.0;600.0;840.0;240.0;146.05;False;
-2021;TO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;TO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;TO;pai_ou_responsavel_masculino;Q003;F;Não sei;5;2047;10.054028;589.7899;580.0;480.0;680.0;200.0;147.3396;False;
+2021;TO;pai_ou_responsavel_masculino;Q003;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;TO;pai_ou_responsavel_masculino;Q003;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;BR;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;291983;12.729243;579.6371;560.0;480.0;660.0;180.0;142.7933;False;
 2021;BR;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;890700;38.830812;614.5508;600.0;520.0;700.0;180.0;144.7119;False;
 2021;BR;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;138486;6.037413;618.3766;600.0;520.0;700.0;180.0;143.7818;False;
 2021;BR;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;649875;28.331845;680.7894;660.0;560.0;800.0;240.0;151.7873;False;
 2021;BR;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;144660;6.306574;726.9827;740.0;620.0;860.0;240.0;148.1694;False;
-2021;BR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;BR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;BR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;178092;7.76407;613.6255;600.0;520.0;700.0;180.0;148.1461;False;
+2021;BR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;1;4.4e-05;520.0;520.0;520.0;520.0;0.0;0.0;False;
 2021;BR;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;AC;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;1849;13.933685;557.6095;540.0;480.0;620.0;140.0;130.4256;False;
 2021;AC;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;5644;42.532027;584.4578;580.0;500.0;660.0;160.0;136.6164;False;
 2021;AC;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;604;4.55162;592.9139;560.0;500.0;680.0;180.0;143.0606;False;
 2021;AC;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;3522;26.54107;646.36;620.0;540.0;760.0;220.0;154.8965;False;
 2021;AC;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;541;4.076865;694.8983;700.0;580.0;840.0;260.0;157.9368;False;
-2021;AC;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AC;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AC;mae_ou_responsavel_feminino;Q004;F;Não sei;5;1110;8.364732;583.6577;580.0;500.0;660.0;160.0;142.9696;False;
+2021;AC;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;AC;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;AL;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;7272;18.568073;590.3245;580.0;500.0;680.0;180.0;145.7891;False;
 2021;AL;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;14791;37.766827;617.7527;600.0;520.0;720.0;200.0;146.8863;False;
 2021;AL;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;1588;4.054744;627.5567;600.0;520.0;720.0;200.0;148.925;False;
 2021;AL;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;10024;25.594934;683.8887;660.0;580.0;820.0;240.0;155.2554;False;
 2021;AL;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2088;5.331427;724.5977;720.0;600.0;860.0;260.0;152.4837;False;
-2021;AL;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AL;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AL;mae_ou_responsavel_feminino;Q004;F;Não sei;5;3401;8.683996;603.1285;580.0;500.0;680.0;180.0;146.7999;False;
+2021;AL;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;AL;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;AP;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;1577;11.716196;551.7438;540.0;480.0;620.0;140.0;122.4939;False;
 2021;AP;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;5810;43.164933;581.346;580.0;500.0;640.0;140.0;130.3544;False;
 2021;AP;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;599;4.450223;591.1185;580.0;520.0;660.0;140.0;126.4697;False;
 2021;AP;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;3717;27.615156;645.0525;620.0;540.0;760.0;220.0;150.9941;False;
 2021;AP;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;616;4.576523;700.6494;700.0;580.0;840.0;260.0;164.2601;False;
-2021;AP;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AP;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AP;mae_ou_responsavel_feminino;Q004;F;Não sei;5;1141;8.476969;584.9781;560.0;500.0;660.0;160.0;139.3277;False;
+2021;AP;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;AP;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;AM;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;6956;15.042277;515.5434;520.0;440.0;580.0;140.0;117.6032;False;
 2021;AM;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;18451;39.900093;558.9746;560.0;480.0;620.0;140.0;127.2779;False;
 2021;AM;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;3398;7.348139;567.3102;560.0;480.0;640.0;160.0;131.0554;False;
 2021;AM;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;10747;23.240274;612.9673;600.0;520.0;700.0;180.0;141.5776;False;
 2021;AM;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2009;4.344441;678.0189;660.0;560.0;820.0;260.0;156.3351;False;
-2021;AM;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;AM;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;AM;mae_ou_responsavel_feminino;Q004;F;Não sei;5;4682;10.124776;556.7065;560.0;460.0;620.0;160.0;132.1947;False;
+2021;AM;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;AM;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;BA;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;33323;18.612458;580.0954;560.0;480.0;660.0;180.0;139.2025;False;
 2021;BA;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;70307;39.269756;608.5923;600.0;520.0;700.0;180.0;143.1121;False;
 2021;BA;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;8413;4.699055;616.301;600.0;520.0;700.0;180.0;143.43;False;
 2021;BA;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;46800;26.139994;677.7974;660.0;560.0;800.0;240.0;151.7915;False;
 2021;BA;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;7260;4.05505;724.6309;740.0;620.0;860.0;240.0;148.4765;False;
-2021;BA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;BA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;BA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;12933;7.223687;601.6516;580.0;500.0;680.0;180.0;146.2314;False;
+2021;BA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;BA;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;CE;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;35584;25.109374;578.3116;560.0;480.0;660.0;180.0;155.7508;False;
 2021;CE;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;51528;36.360044;619.4143;600.0;520.0;720.0;200.0;154.4221;False;
 2021;CE;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;9793;6.910299;616.7201;600.0;520.0;720.0;200.0;149.1182;False;
 2021;CE;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;28609;20.187558;705.1732;700.0;600.0;840.0;240.0;153.746;False;
 2021;CE;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;4792;3.381411;757.9925;780.0;660.0;880.0;220.0;142.5287;False;
-2021;CE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;CE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;CE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;11410;8.051314;601.8247;580.0;500.0;700.0;200.0;154.6727;False;
+2021;CE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;CE;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;DF;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;2238;4.81881;555.7105;540.0;480.0;620.0;140.0;131.0868;False;
 2021;DF;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;18838;40.561549;602.0406;580.0;520.0;680.0;160.0;134.4989;False;
 2021;DF;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;1911;4.114721;609.2517;600.0;520.0;680.0;160.0;138.4243;False;
 2021;DF;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;14449;31.111255;679.4712;660.0;580.0;800.0;220.0;148.0148;False;
 2021;DF;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;5022;10.813255;733.1183;740.0;620.0;860.0;240.0;143.878;False;
-2021;DF;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;DF;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;DF;mae_ou_responsavel_feminino;Q004;F;Não sei;5;3985;8.58041;626.6449;600.0;540.0;720.0;180.0;145.7342;False;
+2021;DF;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;DF;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;ES;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;4333;9.982031;601.1586;580.0;500.0;680.0;180.0;143.5788;False;
 2021;ES;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;17218;39.665499;619.0719;600.0;520.0;700.0;180.0;144.5352;False;
 2021;ES;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;2597;5.982768;622.5183;600.0;540.0;720.0;180.0;144.0125;False;
 2021;ES;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;13326;30.69941;690.2071;680.0;580.0;820.0;240.0;153.882;False;
 2021;ES;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2610;6.012717;750.0153;760.0;640.0;880.0;240.0;149.1937;False;
-2021;ES;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;ES;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;ES;mae_ou_responsavel_feminino;Q004;F;Não sei;5;3324;7.657575;627.0758;600.0;520.0;720.0;200.0;149.2726;False;
+2021;ES;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;ES;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;GO;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;5835;6.733754;562.9477;560.0;460.0;640.0;180.0;142.1078;False;
 2021;GO;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;37727;43.538019;606.8418;580.0;500.0;700.0;200.0;147.8919;False;
 2021;GO;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;6051;6.983024;614.1299;600.0;520.0;720.0;200.0;147.9888;False;
 2021;GO;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;25001;28.851857;686.199;680.0;560.0;820.0;260.0;156.0621;False;
 2021;GO;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;5136;5.927089;743.567;760.0;620.0;880.0;260.0;152.5797;False;
-2021;GO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;GO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;GO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;6903;7.966256;609.2713;580.0;500.0;700.0;200.0;156.0201;False;
+2021;GO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;GO;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;MA;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;23844;27.775319;567.6447;560.0;480.0;640.0;160.0;138.6694;False;
 2021;MA;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;29799;34.712159;608.2922;580.0;520.0;700.0;180.0;146.3422;False;
 2021;MA;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;3345;3.896512;616.7833;600.0;520.0;720.0;200.0;149.1049;False;
 2021;MA;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;20911;24.358735;671.4581;660.0;560.0;800.0;240.0;157.7736;False;
 2021;MA;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2588;3.014701;731.136;760.0;600.0;880.0;280.0;156.6578;False;
-2021;MA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;5359;6.242574;601.3697;580.0;500.0;680.0;180.0;149.4941;False;
+2021;MA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;MA;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;MG;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;18458;8.182971;599.338;580.0;500.0;680.0;180.0;146.3428;False;
 2021;MG;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;90960;40.325226;637.9015;620.0;540.0;740.0;200.0;151.2387;False;
 2021;MG;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;14156;6.275769;641.766;620.0;540.0;760.0;220.0;150.3438;False;
 2021;MG;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;70441;31.228554;707.8466;700.0;580.0;840.0;260.0;154.4552;False;
 2021;MG;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;15138;6.711118;757.0485;780.0;640.0;880.0;240.0;144.9522;False;
-2021;MG;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MG;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MG;mae_ou_responsavel_feminino;Q004;F;Não sei;5;16413;7.276363;640.0244;620.0;540.0;760.0;220.0;153.9632;False;
+2021;MG;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;MG;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;MS;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;1754;6.295087;547.8449;540.0;460.0;620.0;160.0;132.4156;False;
 2021;MS;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;11269;40.444317;588.2687;580.0;500.0;660.0;160.0;138.3763;False;
 2021;MS;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;1523;5.46603;598.6211;580.0;500.0;680.0;180.0;141.1795;False;
 2021;MS;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;9053;32.491117;657.2716;640.0;540.0;780.0;240.0;151.8132;False;
 2021;MS;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2013;7.224635;705.6632;700.0;600.0;840.0;240.0;147.4894;False;
-2021;MS;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MS;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MS;mae_ou_responsavel_feminino;Q004;F;Não sei;5;2251;8.078814;597.0857;580.0;500.0;680.0;180.0;145.9455;False;
+2021;MS;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;MS;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;MT;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;2926;8.119208;560.8134;560.0;480.0;620.0;140.0;140.7179;False;
 2021;MT;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;14178;39.341806;585.5297;580.0;480.0;660.0;180.0;142.535;False;
 2021;MT;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;1906;5.288862;593.2634;580.0;500.0;680.0;180.0;145.9619;False;
 2021;MT;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;11381;31.580554;655.5487;640.0;540.0;780.0;240.0;155.196;False;
 2021;MT;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2669;7.406071;699.0558;700.0;580.0;840.0;260.0;155.2035;False;
-2021;MT;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;MT;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;MT;mae_ou_responsavel_feminino;Q004;F;Não sei;5;2978;8.2635;594.2445;580.0;500.0;680.0;180.0;145.9148;False;
+2021;MT;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;MT;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PA;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;22419;18.382407;566.0065;560.0;480.0;630.0;150.0;129.5518;False;
 2021;PA;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;52176;42.781591;611.6651;600.0;520.0;700.0;180.0;144.3464;False;
 2021;PA;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;6001;4.920506;612.4346;600.0;520.0;700.0;180.0;144.7156;False;
 2021;PA;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;26848;22.013956;677.3428;660.0;560.0;820.0;260.0;156.7397;False;
 2021;PA;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;4022;3.29783;735.7683;760.0;620.0;880.0;260.0;156.0269;False;
-2021;PA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PA;mae_ou_responsavel_feminino;Q004;F;Não sei;5;10493;8.603711;608.6439;600.0;520.0;700.0;180.0;147.3348;False;
+2021;PA;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PA;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PB;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;17934;25.166641;592.7858;580.0;500.0;680.0;180.0;144.3638;False;
 2021;PB;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;25154;35.29841;625.0298;600.0;520.0;720.0;200.0;149.3731;False;
 2021;PB;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;3067;4.303897;632.7682;600.0;540.0;740.0;200.0;151.5127;False;
 2021;PB;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;16384;22.991538;693.7573;680.0;580.0;840.0;260.0;157.4884;False;
 2021;PB;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;3482;4.886263;752.5388;780.0;640.0;880.0;240.0;150.9284;False;
-2021;PB;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PB;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PB;mae_ou_responsavel_feminino;Q004;F;Não sei;5;5240;7.353251;618.2519;600.0;520.0;720.0;200.0;151.2225;False;
+2021;PB;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PB;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PE;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;26002;19.661694;590.9776;580.0;500.0;680.0;180.0;146.0036;False;
 2021;PE;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;49742;37.612952;617.3069;600.0;520.0;720.0;200.0;147.6654;False;
 2021;PE;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;6728;5.08745;623.5642;600.0;520.0;720.0;200.0;147.1096;False;
 2021;PE;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;32019;24.211513;678.9669;660.0;560.0;800.0;240.0;154.8672;False;
 2021;PE;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;6282;4.750202;731.3913;740.0;620.0;860.0;240.0;150.2192;False;
-2021;PE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;11474;8.676189;604.7185;580.0;500.0;700.0;200.0;147.8999;False;
+2021;PE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PE;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PI;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;16364;28.765799;580.0171;560.0;480.0;660.0;180.0;145.8003;False;
 2021;PI;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;19353;34.020075;631.4494;600.0;520.0;740.0;220.0;155.4548;False;
 2021;PI;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;2396;4.211859;639.9416;620.0;540.0;760.0;220.0;153.0704;False;
 2021;PI;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;13372;23.506249;706.4687;700.0;580.0;860.0;280.0;163.0032;False;
 2021;PI;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;1958;3.441911;765.5465;800.0;660.0;900.0;240.0;147.5122;False;
-2021;PI;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PI;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PI;mae_ou_responsavel_feminino;Q004;F;Não sei;5;3444;6.054107;622.108;600.0;520.0;720.0;200.0;158.4143;False;
+2021;PI;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PI;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;PR;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;7104;7.134034;578.6205;560.0;500.0;640.0;140.0;131.0676;False;
 2021;PR;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;37061;37.217686;598.68;580.0;520.0;680.0;160.0;133.4843;False;
 2021;PR;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;7972;8.005704;594.8896;580.0;520.0;660.0;140.0;130.2274;False;
 2021;PR;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;32555;32.692636;654.3431;640.0;560.0;760.0;200.0;142.5217;False;
 2021;PR;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;7406;7.437311;686.3597;680.0;580.0;800.0;220.0;141.7228;False;
-2021;PR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;PR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;PR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;7481;7.512628;604.4941;580.0;520.0;680.0;160.0;137.5974;False;
+2021;PR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;PR;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RJ;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;3468;2.120414;571.2572;560.0;480.0;640.0;160.0;138.3213;False;
 2021;RJ;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;71522;43.730167;618.7892;600.0;520.0;700.0;180.0;143.3047;False;
 2021;RJ;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;9070;5.545603;622.2448;600.0;520.0;720.0;200.0;145.9712;False;
 2021;RJ;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;49802;30.450068;687.9274;680.0;580.0;820.0;240.0;151.3929;False;
 2021;RJ;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;15485;9.467879;737.794;760.0;620.0;880.0;260.0;148.6485;False;
-2021;RJ;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RJ;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RJ;mae_ou_responsavel_feminino;Q004;F;Não sei;5;14206;8.685869;627.9614;600.0;520.0;740.0;220.0;148.8774;False;
+2021;RJ;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RJ;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RN;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;12085;21.077876;591.1477;580.0;500.0;660.0;160.0;140.9567;False;
 2021;RN;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;20667;36.046045;626.7596;600.0;540.0;720.0;180.0;145.7766;False;
 2021;RN;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;3092;5.392866;628.4088;600.0;540.0;720.0;180.0;147.4674;False;
 2021;RN;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;14145;24.670794;691.1007;680.0;580.0;820.0;240.0;153.876;False;
 2021;RN;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;2714;4.733583;765.5416;800.0;640.0;900.0;260.0;147.7563;False;
-2021;RN;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RN;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RN;mae_ou_responsavel_feminino;Q004;F;Não sei;5;4632;8.078835;619.7539;600.0;520.0;720.0;200.0;146.5193;False;
+2021;RN;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RN;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RO;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;2888;14.73319;563.3241;560.0;480.0;640.0;160.0;139.5085;False;
 2021;RO;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;7709;39.32762;584.7918;580.0;500.0;660.0;160.0;141.1159;False;
 2021;RO;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;994;5.070911;585.6942;580.0;500.0;660.0;160.0;142.4144;False;
 2021;RO;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;5312;27.099276;643.0685;620.0;540.0;740.0;200.0;148.2778;False;
 2021;RO;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;1060;5.407611;668.6226;660.0;560.0;800.0;240.0;154.3018;False;
-2021;RO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;1639;8.361392;584.2587;560.0;480.0;660.0;180.0;141.0054;False;
+2021;RO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RO;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RR;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;467;9.383163;559.6146;560.0;480.0;620.0;140.0;125.883;False;
 2021;RR;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;1766;35.483223;574.0204;560.0;480.0;640.0;160.0;136.7675;False;
 2021;RR;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;219;4.400241;605.1142;580.0;520.0;690.0;170.0;146.4445;False;
 2021;RR;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;1726;34.679526;640.7995;620.0;540.0;760.0;220.0;151.6493;False;
 2021;RR;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;358;7.193088;674.3017;660.0;560.0;800.0;240.0;150.1691;False;
-2021;RR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RR;mae_ou_responsavel_feminino;Q004;F;Não sei;5;441;8.860759;589.3424;580.0;480.0;660.0;180.0;145.6171;False;
+2021;RR;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RR;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;RS;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;8977;8.602697;601.1919;580.0;520.0;680.0;160.0;135.1739;False;
 2021;RS;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;40219;38.542036;607.4253;580.0;520.0;680.0;160.0;138.5383;False;
 2021;RS;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;8384;8.034422;614.9857;600.0;520.0;700.0;180.0;137.869;False;
 2021;RS;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;32080;30.742398;677.3473;660.0;560.0;800.0;240.0;149.4426;False;
 2021;RS;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;7584;7.267779;732.1255;740.0;620.0;860.0;240.0;146.1421;False;
-2021;RS;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;RS;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;RS;mae_ou_responsavel_feminino;Q004;F;Não sei;5;7107;6.810668;610.204;580.0;520.0;700.0;180.0;143.6637;False;
+2021;RS;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;RS;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;SC;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;4556;8.046911;597.7041;580.0;520.0;660.0;140.0;133.4992;False;
 2021;SC;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;18768;33.148469;613.6679;600.0;520.0;700.0;180.0;136.6365;False;
 2021;SC;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;5712;10.088664;610.6197;600.0;520.0;680.0;160.0;132.4041;False;
 2021;SC;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;19519;34.474902;669.1162;660.0;560.0;780.0;220.0;143.5399;False;
 2021;SC;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;4521;7.985093;712.1389;720.0;600.0;840.0;240.0;142.0788;False;
-2021;SC;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;SC;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;SC;mae_ou_responsavel_feminino;Q004;F;Não sei;5;3542;6.255961;619.0175;600.0;520.0;700.0;180.0;139.2987;False;
+2021;SC;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;SC;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;SE;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;9679;25.624801;603.5933;580.0;500.0;700.0;200.0;151.5528;False;
 2021;SE;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;13616;36.047866;633.1507;620.0;520.0;740.0;220.0;154.5923;False;
 2021;SE;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;1696;4.490098;637.7476;620.0;540.0;740.0;200.0;150.7681;False;
 2021;SE;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;8529;22.580218;707.6726;700.0;580.0;840.0;260.0;158.6224;False;
 2021;SE;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;1511;4.000318;763.0179;800.0;660.0;880.0;220.0;148.4494;False;
-2021;SE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;SE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;SE;mae_ou_responsavel_feminino;Q004;F;Não sei;5;2741;7.256698;624.4217;600.0;520.0;740.0;220.0;154.7733;False;
+2021;SE;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;SE;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;SP;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;10766;2.969194;571.1332;560.0;480.0;640.0;160.0;137.0726;False;
 2021;SP;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;139391;38.443145;619.2483;600.0;520.0;700.0;180.0;138.4549;False;
 2021;SP;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;26434;7.290328;623.0181;600.0;540.0;700.0;160.0;138.1477;False;
 2021;SP;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;123069;33.941642;676.3302;660.0;580.0;780.0;200.0;142.1754;False;
 2021;SP;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;34568;9.533633;708.4529;700.0;600.0;820.0;220.0;140.8675;False;
-2021;SP;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;SP;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;SP;mae_ou_responsavel_feminino;Q004;F;Não sei;5;28361;7.821782;624.5513;600.0;540.0;720.0;180.0;141.8552;False;
+2021;SP;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;1;0.000276;520.0;520.0;520.0;520.0;0.0;0.0;False;
 2021;SP;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2021;TO;mae_ou_responsavel_feminino;Q004;A;Grupo ocupacional 1;0;3325;16.331041;544.0722;540.0;460.0;600.0;140.0;130.878;False;
 2021;TO;mae_ou_responsavel_feminino;Q004;B;Grupo ocupacional 2;1;7036;34.557957;597.4417;580.0;500.0;680.0;180.0;143.7658;False;
 2021;TO;mae_ou_responsavel_feminino;Q004;C;Grupo ocupacional 3;2;837;4.111002;603.5125;580.0;500.0;680.0;180.0;145.4054;False;
 2021;TO;mae_ou_responsavel_feminino;Q004;D;Grupo ocupacional 4;3;6534;32.092338;653.8231;640.0;540.0;780.0;240.0;153.4584;False;
 2021;TO;mae_ou_responsavel_feminino;Q004;E;Grupo ocupacional 5;4;1227;6.026523;708.2804;700.0;600.0;840.0;240.0;150.965;False;
-2021;TO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;;;;;;;;;True;complementar_contra_inferencia_por_totais
-2021;TO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;;;;;;;;;True;primaria_grupo_pequeno_em_alguma_uf
+2021;TO;mae_ou_responsavel_feminino;Q004;F;Não sei;5;1401;6.881139;599.6003;580.0;500.0;680.0;180.0;146.7336;False;
+2021;TO;mae_ou_responsavel_feminino;Q004;SEM_RESPOSTA;Não informou;6;0;0.0;;;;;;;False;
 2021;TO;mae_ou_responsavel_feminino;Q004;CODIGO_NAO_RECONHECIDO;Código não reconhecido;7;0;0.0;;;;;;;False;
 2022;BR;pai_ou_responsavel_masculino;Q003;A;Grupo ocupacional 1;0;381376;16.135284;599.7853;580.0;500.0;700.0;200.0;155.0587;False;
 2022;BR;pai_ou_responsavel_masculino;Q003;B;Grupo ocupacional 2;1;441080;18.661246;628.449;620.0;540.0;740.0;200.0;153.1448;False;

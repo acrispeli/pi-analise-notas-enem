@@ -36,7 +36,7 @@ PARES={'AV1_AV2':(1,2),'AV1_AV3':(1,3),'AV2_AV3':(2,3)}
 ROTAS=('AV1_AV2','AV1_AV3','AV2_AV3','BANCA_AV4',
        'MULTIPLOS_PARES_COMPATIVEIS','AV1_AV2_COM_AV3_PRESENTE',
        'NAO_RECONCILIADO','SEM_DETALHE_SUFICIENTE')
-MIN_N=30
+MIN_N=1
 ARQUIVO='IND_034_recorte_980_final'
 CAMPOS=['TP_STATUS_REDACAO','NU_NOTA_REDACAO',*FIN]
 for _av in (1,2,3,4):
@@ -291,10 +291,11 @@ def autoteste():
            'MULTIPLOS_PARES_COMPATIVEIS','BANCA_AV4','AV1_AV2'],rotas
     assert err==0
     x=contagem_segura({'C1':29,'C2':40,'C3':0,'C4':50,'C5':1},120)
-    assert x['categorias']['C1'] is None and x['categorias']['C5'] is None
-    assert sum(v is None for v in x['categorias'].values())>=3
+    assert x['categorias']['C1'] == 29 and x['categorias']['C5'] == 1
+    assert all(v is not None for v in x['categorias'].values())
     x=contagem_segura({'C1':1,'C2':0,'C3':0,'C4':0,'C5':0},1)
-    assert x['n_total'] is None and all(v is None for v in x['categorias'].values())
+    assert x['n_total'] == 1 and x['categorias']['C1'] == 1
+    assert all(v is not None for v in x['categorias'].values())
     z.loc[0,'NU_NOTA_COMP3']='180'
     try:classificar_lote(z)
     except ValueError:pass
@@ -305,7 +306,7 @@ def autoteste():
         pd.DataFrame(dados*40).to_csv(src,sep=';',index=False,encoding='utf-8-sig')
         agregado=processar_ano(src,1000)
         assert agregado['n_980_total']==240 and agregado['n_980_padrao_4x200_1x180']==200
-        assert sum(int(v['n_980_competencia'] or 0) for v in agregado['resumo_competencias'] if not v['suprimido']) <= 200
+        assert sum(int(v['n_980_competencia'] or 0) for v in agregado['resumo_competencias']) == 200
     print('AUTOTESTE IND-034 (recorte 980) APROVADO | nota final + AV1/AV2/AV3/AV4 | privacidade')
 
 
@@ -330,7 +331,7 @@ def main():
             'competence_source':'NU_NOTA_COMP1..5 definitivas; NÃO recalcular com AV1/AV2',
             'pathway':'AV1+AV2; AV1+AV3; AV2+AV3; banca AV4 conferidos por comparação do vetor de competências quando disponível; empates sinalizados',
             'pattern':'4 competências=200 e 1=180; outros perfis não atribuídos a uma competência',
-            'publication':'Brasil por ano; supressão <30 e complementar; sem cruzamento por percurso ou UF',
+            'publication':'Brasil por ano; sem supressão automática n<30; sem cruzamento por percurso ou UF',
             'privacy':'draft sujeito a revisão cruzada e acadêmica'},'years':{}}
     for ano in args.anos:
         path=caminho_fonte(base,ano)

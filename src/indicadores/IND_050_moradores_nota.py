@@ -509,7 +509,7 @@ def executar(base: Path, saida: Path, anos: tuple[int, ...], bloco: int,
             'reference': 'IND-045: N de UF/BR, média total quando íntegra e soma das competências',
             'join_2024': 'NU_INSCRICAO única e obrigatória para redações válidas',
             '2025': 'indisponível (sem vínculo público questionário × nota)',
-            'privacy': 'Supressão global por categoria/ano quando 1<=N<30 em UF/BR + complemento; draft',
+            'privacy': 'Resultados agregados publicados sem supressão automática por N<30; homologação acadêmica pendente',
             'notes': [
                 'Q005 inclui a pessoa participante na contagem.',
                 'Ausência de resposta e valores não reconhecidos não são imputados.',
@@ -636,11 +636,7 @@ def autoteste() -> None:
             assert br['n_pop_socio_valid'] == 4860
             assert len(br['categories']) == len(CATEGORIAS)
             motivos = obj['validacao']['categorias_suprimidas_globalmente']
-            assert motivos['10_20'] == 'primaria_grupo_pequeno_em_alguma_uf'
-            assert motivos['SEM_RESPOSTA'] == 'primaria_grupo_pequeno_em_alguma_uf'
-            assert motivos['CODIGO_NAO_RECONHECIDO'] == 'primaria_grupo_pequeno_em_alguma_uf'
-            assert any(v == 'complementar_contra_inferencia_por_totais'
-                       for v in motivos.values())
+            assert not motivos
             assert all(c['n_redacoes'] is None and c['media'] is None
                        for c in br['categories'] if c['suprimido'])
             doc = json.loads((out/f'dashboard_enem_{ano}.json').read_text())
@@ -732,8 +728,9 @@ def autoteste() -> None:
             obter_grupo(pequenos, 'BR', c).n for c in CATEGORIAS)
         rec_priv, val_priv = conferir_montar(2019, pequenos,
                                             ref2['years']['2019']['n_brasil'], ref2)
-        assert len(val_priv['categorias_suprimidas_globalmente']) == len(CATEGORIAS)
-        assert all(cat['suprimido'] for cat in rec_priv['SP']['categories'])
+        assert not val_priv['categorias_suprimidas_globalmente']
+        assert all(not cat['suprimido'] and cat['n_redacoes'] == 1
+                   for cat in rec_priv['SP']['categories'])
     log('AUTOTESTE IND-050 APROVADO: códigos 1–20, faixas estáveis, '
         'estatísticas, N por UF/BR, supressão complementar, junção 2024, '
         'duplicatas, vínculos, CSV/JSON, dashboards e 2025 indisponível.')
