@@ -1,0 +1,328 @@
+{
+  "indicator_id": "IND-066",
+  "slug": "IND_066_evolucao_quase_1000",
+  "status": "draft",
+  "generated_at": "2026-10-30T17:39:45.187142+00:00",
+  "dashboard_target": "pages.temporal.high_performance",
+  "population_note": "POP_VALID_YEAR/POP_NEAR_YEAR/POP_EVALUATOR_YEAR, conforme indicador",
+  "method_note": "Resultados derivados sem reler microdados; não há inferência causal.",
+  "scope": "2019–2025; participações e não pessoas únicas",
+  "results": [
+    {
+      "ano": 2019,
+      "competencia": "C1",
+      "status": "ok",
+      "n_near": 172548,
+      "perda_media": 34.22607,
+      "frequencia_desconto": 0.96191784,
+      "n_com_desconto": 165977
+    },
+    {
+      "ano": 2019,
+      "competencia": "C2",
+      "status": "ok",
+      "n_near": 172548,
+      "perda_media": 3.888078,
+      "frequencia_desconto": 0.16990634,
+      "n_com_desconto": 29317
+    },
+    {
+      "ano": 2019,
+      "competencia": "C3",
+      "status": "ok",
+      "n_near": 172548,
+      "perda_media": 13.020377,
+      "frequencia_desconto": 0.52764448,
+      "n_com_desconto": 91044
+    },
+    {
+      "ano": 2019,
+      "competencia": "C4",
+      "status": "ok",
+      "n_near": 172548,
+      "perda_media": 7.809885,
+      "frequencia_desconto": 0.33358833,
+      "n_com_desconto": 57560
+    },
+    {
+      "ano": 2019,
+      "competencia": "C5",
+      "status": "ok",
+      "n_near": 172548,
+      "perda_media": 12.070265,
+      "frequencia_desconto": 0.44291444,
+      "n_com_desconto": 76424
+    },
+    {
+      "ano": 2020,
+      "competencia": "C1",
+      "status": "ok",
+      "n_near": 183343,
+      "perda_media": 34.795547,
+      "frequencia_desconto": 0.96264379,
+      "n_com_desconto": 176494
+    },
+    {
+      "ano": 2020,
+      "competencia": "C2",
+      "status": "ok",
+      "n_near": 183343,
+      "perda_media": 3.089619,
+      "frequencia_desconto": 0.13979263,
+      "n_com_desconto": 25630
+    },
+    {
+      "ano": 2020,
+      "competencia": "C3",
+      "status": "ok",
+      "n_near": 183343,
+      "perda_media": 16.036827,
+      "frequencia_desconto": 0.61328221,
+      "n_com_desconto": 112441
+    },
+    {
+      "ano": 2020,
+      "competencia": "C4",
+      "status": "ok",
+      "n_near": 183343,
+      "perda_media": 7.379393,
+      "frequencia_desconto": 0.3219703,
+      "n_com_desconto": 59031
+    },
+    {
+      "ano": 2020,
+      "competencia": "C5",
+      "status": "ok",
+      "n_near": 183343,
+      "perda_media": 8.255565,
+      "frequencia_desconto": 0.32024675,
+      "n_com_desconto": 58715
+    },
+    {
+      "ano": 2021,
+      "competencia": "C1",
+      "status": "ok",
+      "n_near": 163747,
+      "perda_media": 37.133383,
+      "frequencia_desconto": 0.98025002,
+      "n_com_desconto": 160513
+    },
+    {
+      "ano": 2021,
+      "competencia": "C2",
+      "status": "ok",
+      "n_near": 163747,
+      "perda_media": 1.330101,
+      "frequencia_desconto": 0.06304238,
+      "n_com_desconto": 10323
+    },
+    {
+      "ano": 2021,
+      "competencia": "C3",
+      "status": "ok",
+      "n_near": 163747,
+      "perda_media": 24.629459,
+      "frequencia_desconto": 0.81804247,
+      "n_com_desconto": 133952
+    },
+    {
+      "ano": 2021,
+      "competencia": "C4",
+      "status": "ok",
+      "n_near": 163747,
+      "perda_media": 7.229934,
+      "frequencia_desconto": 0.32757241,
+      "n_com_desconto": 53639
+    },
+    {
+      "ano": 2021,
+      "competencia": "C5",
+      "status": "ok",
+      "n_near": 163747,
+      "perda_media": 5.406511,
+      "frequencia_desconto": 0.22390639,
+      "n_com_desconto": 36664
+    },
+    {
+      "ano": 2022,
+      "competencia": "C1",
+      "status": "ok",
+      "n_near": 197083,
+      "perda_media": 37.358575,
+      "frequencia_desconto": 0.98333697,
+      "n_com_desconto": 193799
+    },
+    {
+      "ano": 2022,
+      "competencia": "C2",
+      "status": "ok",
+      "n_near": 197083,
+      "perda_media": 1.097,
+      "frequencia_desconto": 0.05259713,
+      "n_com_desconto": 10366
+    },
+    {
+      "ano": 2022,
+      "competencia": "C3",
+      "status": "ok",
+      "n_near": 197083,
+      "perda_media": 25.334605,
+      "frequencia_desconto": 0.83103058,
+      "n_com_desconto": 163782
+    },
+    {
+      "ano": 2022,
+      "competencia": "C4",
+      "status": "ok",
+      "n_near": 197083,
+      "perda_media": 7.090312,
+      "frequencia_desconto": 0.32236672,
+      "n_com_desconto": 63533
+    },
+    {
+      "ano": 2022,
+      "competencia": "C5",
+      "status": "ok",
+      "n_near": 197083,
+      "perda_media": 5.14981,
+      "frequencia_desconto": 0.21229127,
+      "n_com_desconto": 41839
+    },
+    {
+      "ano": 2023,
+      "competencia": "C1",
+      "status": "ok",
+      "n_near": 288602,
+      "perda_media": 37.359478,
+      "frequencia_desconto": 0.98711721,
+      "n_com_desconto": 284884
+    },
+    {
+      "ano": 2023,
+      "competencia": "C2",
+      "status": "ok",
+      "n_near": 288602,
+      "perda_media": 1.847943,
+      "frequencia_desconto": 0.08808324,
+      "n_com_desconto": 25421
+    },
+    {
+      "ano": 2023,
+      "competencia": "C3",
+      "status": "ok",
+      "n_near": 288602,
+      "perda_media": 18.226831,
+      "frequencia_desconto": 0.67592394,
+      "n_com_desconto": 195073
+    },
+    {
+      "ano": 2023,
+      "competencia": "C4",
+      "status": "ok",
+      "n_near": 288602,
+      "perda_media": 6.745137,
+      "frequencia_desconto": 0.30487315,
+      "n_com_desconto": 87987
+    },
+    {
+      "ano": 2023,
+      "competencia": "C5",
+      "status": "ok",
+      "n_near": 288602,
+      "perda_media": 7.484841,
+      "frequencia_desconto": 0.29871934,
+      "n_com_desconto": 86211
+    },
+    {
+      "ano": 2024,
+      "competencia": "C1",
+      "status": "ok",
+      "n_near": 291111,
+      "perda_media": 38.777854,
+      "frequencia_desconto": 0.99323969,
+      "n_com_desconto": 289143
+    },
+    {
+      "ano": 2024,
+      "competencia": "C2",
+      "status": "ok",
+      "n_near": 291111,
+      "perda_media": 3.590658,
+      "frequencia_desconto": 0.17018938,
+      "n_com_desconto": 49544
+    },
+    {
+      "ano": 2024,
+      "competencia": "C3",
+      "status": "ok",
+      "n_near": 291111,
+      "perda_media": 22.261612,
+      "frequencia_desconto": 0.77897778,
+      "n_com_desconto": 226769
+    },
+    {
+      "ano": 2024,
+      "competencia": "C4",
+      "status": "ok",
+      "n_near": 291111,
+      "perda_media": 6.478148,
+      "frequencia_desconto": 0.29531004,
+      "n_com_desconto": 85968
+    },
+    {
+      "ano": 2024,
+      "competencia": "C5",
+      "status": "ok",
+      "n_near": 291111,
+      "perda_media": 5.536651,
+      "frequencia_desconto": 0.23340238,
+      "n_com_desconto": 67946
+    },
+    {
+      "ano": 2025,
+      "competencia": "C1",
+      "status": "ok",
+      "n_near": 173533,
+      "perda_media": 38.200688,
+      "frequencia_desconto": 0.99246829,
+      "n_com_desconto": 172226
+    },
+    {
+      "ano": 2025,
+      "competencia": "C2",
+      "status": "ok",
+      "n_near": 173533,
+      "perda_media": 7.248881,
+      "frequencia_desconto": 0.32223842,
+      "n_com_desconto": 55919
+    },
+    {
+      "ano": 2025,
+      "competencia": "C3",
+      "status": "ok",
+      "n_near": 173533,
+      "perda_media": 22.533927,
+      "frequencia_desconto": 0.79719131,
+      "n_com_desconto": 138339
+    },
+    {
+      "ano": 2025,
+      "competencia": "C4",
+      "status": "ok",
+      "n_near": 173533,
+      "perda_media": 6.131399,
+      "frequencia_desconto": 0.28313347,
+      "n_com_desconto": 49133
+    },
+    {
+      "ano": 2025,
+      "competencia": "C5",
+      "status": "ok",
+      "n_near": 173533,
+      "perda_media": 4.313646,
+      "frequencia_desconto": 0.18705952,
+      "n_com_desconto": 32461
+    }
+  ],
+  "review": "pendente_revisao_academica_e_privacidade_contextual"
+}

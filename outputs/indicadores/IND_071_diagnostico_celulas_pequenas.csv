@@ -1,0 +1,15 @@
+celulas_contadas_positivas;celulas_positivas_1_a_29;colunas_avaliadas;contagens_zero;fonte_csv;indicador_origem;menor_contagem_positiva;n_linhas;revisao_contextual;status;tratamento
+2236;246;quantidade;4;IND_006_distribuicao_notas.csv;006;1;2240;True;draft;auditoria_sem_supressao_automatica
+2016;112;quantidade;0;IND_007_situacao_redacao.csv;007;1;2016;True;draft;auditoria_sem_supressao_automatica
+11849;959;quantidade;0;IND_012_distribuicao_niveis_competencias.csv;012;1;11849;True;draft;auditoria_sem_supressao_automatica
+18258;6023;quantidade;0;IND_016_mapa_pc1_pc2.csv;016;1;18258;True;draft;auditoria_sem_supressao_automatica
+2240;58;n_redacoes_bin;0;IND_020_diferenca_total_av1_av2.csv;020;2;2240;True;draft;auditoria_sem_supressao_automatica
+448;0;n_com_av3|n_sem_av3;0;IND_024_terceiro_avaliador.csv;024;;224;False;draft;auditoria_sem_supressao_automatica
+448;0;n_com_av4|n_sem_av4;0;IND_025_banca.csv;025;;224;False;draft;auditoria_sem_supressao_automatica
+1119;43;quantidade;1;IND_030_faixas_alto_desempenho.csv;030;1;1120;True;draft;auditoria_sem_supressao_automatica
+1960;51;n_com_desconto|n_sem_desconto;0;IND_032_frequencia_desconto.csv;032;2;980;True;draft;auditoria_sem_supressao_automatica
+2221;131;n_ambos;0;IND_036_regras_associacao.csv;036;3;2221;True;draft;auditoria_sem_supressao_automatica
+4745;1011;n_com_desconto;155;IND_039_mapa_nota_competencia.csv;039;1;4900;True;draft;auditoria_sem_supressao_automatica
+26617;2469;quantidade;0;IND_040_perfil_socioeconomico.csv;040;1;26645;True;draft;auditoria_sem_supressao_automatica
+118;0;n_cluster;0;IND_054_clusters_socioeconomicos.csv;054;;158;False;draft;auditoria_sem_supressao_automatica
+35;0;n_com_desconto;0;IND_066_evolucao_quase_1000.csv;066;;35;False;draft;auditoria_sem_supressao_automatica

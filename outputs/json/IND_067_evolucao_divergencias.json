@@ -1,0 +1,83 @@
+{
+  "indicator_id": "IND-067",
+  "slug": "IND_067_evolucao_divergencias",
+  "status": "draft",
+  "generated_at": "2026-10-30T17:39:46.850255+00:00",
+  "dashboard_target": "pages.temporal.reviewers",
+  "population_note": "POP_VALID_YEAR/POP_NEAR_YEAR/POP_EVALUATOR_YEAR, conforme indicador",
+  "method_note": "Resultados derivados sem reler microdados; não há inferência causal.",
+  "scope": "2019–2025; participações e não pessoas únicas",
+  "results": [
+    {
+      "ano": 2019,
+      "status": "ok",
+      "n_pareadas": 3779355,
+      "diferenca_media_absoluta": 79.425955,
+      "diferenca_mediana_absoluta": 80.0,
+      "percentual_discrepancia_confirmada": 30.187029,
+      "n_indeterminada": 0,
+      "alerta": "Critérios do edital de 2024 padronizados; não equivalem necessariamente aos editais históricos."
+    },
+    {
+      "ano": 2020,
+      "status": "ok",
+      "n_pareadas": 2674914,
+      "diferenca_media_absoluta": 87.492682,
+      "diferenca_mediana_absoluta": 80.0,
+      "percentual_discrepancia_confirmada": 32.45566,
+      "n_indeterminada": 0,
+      "alerta": "Critérios do edital de 2024 padronizados; não equivalem necessariamente aos editais históricos."
+    },
+    {
+      "ano": 2021,
+      "status": "ok",
+      "n_pareadas": 2378379,
+      "diferenca_media_absoluta": 67.211946,
+      "diferenca_mediana_absoluta": 40.0,
+      "percentual_discrepancia_confirmada": 22.705759,
+      "n_indeterminada": 0,
+      "alerta": "Critérios do edital de 2024 padronizados; não equivalem necessariamente aos editais históricos."
+    },
+    {
+      "ano": 2022,
+      "status": "ok",
+      "n_pareadas": 2493442,
+      "diferenca_media_absoluta": 70.412081,
+      "diferenca_mediana_absoluta": 40.0,
+      "percentual_discrepancia_confirmada": 23.659744,
+      "n_indeterminada": 0,
+      "alerta": "Critérios do edital de 2024 padronizados; não equivalem necessariamente aos editais históricos."
+    },
+    {
+      "ano": 2023,
+      "status": "ok",
+      "n_pareadas": 2822643,
+      "diferenca_media_absoluta": 93.113171,
+      "diferenca_mediana_absoluta": 80.0,
+      "percentual_discrepancia_confirmada": 35.006198,
+      "n_indeterminada": 0,
+      "alerta": "Critérios do edital de 2024 padronizados; não equivalem necessariamente aos editais históricos."
+    },
+    {
+      "ano": 2024,
+      "status": "ok",
+      "n_pareadas": 3167955,
+      "diferenca_media_absoluta": 84.279341,
+      "diferenca_mediana_absoluta": 80.0,
+      "percentual_discrepancia_confirmada": 32.814734,
+      "n_indeterminada": 0,
+      "alerta": "Critérios do edital de 2024 padronizados; não equivalem necessariamente aos editais históricos."
+    },
+    {
+      "ano": 2025,
+      "status": "ok",
+      "n_pareadas": 3457555,
+      "diferenca_media_absoluta": 84.893793,
+      "diferenca_mediana_absoluta": 80.0,
+      "percentual_discrepancia_confirmada": 33.109958,
+      "n_indeterminada": 0,
+      "alerta": "Critérios do edital de 2024 padronizados; não equivalem necessariamente aos editais históricos."
+    }
+  ],
+  "review": "pendente_revisao_academica_e_privacidade_contextual"
+}

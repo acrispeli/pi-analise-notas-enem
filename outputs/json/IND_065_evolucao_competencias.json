@@ -1,0 +1,293 @@
+{
+  "indicator_id": "IND-065",
+  "slug": "IND_065_evolucao_competencias",
+  "status": "draft",
+  "generated_at": "2026-10-30T17:39:43.401634+00:00",
+  "dashboard_target": "pages.temporal.competencies",
+  "population_note": "POP_VALID_YEAR/POP_NEAR_YEAR/POP_EVALUATOR_YEAR, conforme indicador",
+  "method_note": "Resultados derivados sem reler microdados; não há inferência causal.",
+  "scope": "2019–2025; participações e não pessoas únicas",
+  "results": [
+    {
+      "ano": 2019,
+      "competencia": "C1",
+      "status": "ok",
+      "n_validas": 3779356,
+      "media": 125.0579,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2019,
+      "competencia": "C2",
+      "status": "ok",
+      "n_validas": 3779356,
+      "media": 127.4024,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2019,
+      "competencia": "C3",
+      "status": "ok",
+      "n_validas": 3779356,
+      "media": 119.1777,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2019,
+      "competencia": "C4",
+      "status": "ok",
+      "n_validas": 3779356,
+      "media": 126.2524,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2019,
+      "competencia": "C5",
+      "status": "ok",
+      "n_validas": 3779356,
+      "media": 95.0114,
+      "mediana": 100.0
+    },
+    {
+      "ano": 2020,
+      "competencia": "C1",
+      "status": "ok",
+      "n_validas": 2674914,
+      "media": 123.2779,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2020,
+      "competencia": "C2",
+      "status": "ok",
+      "n_validas": 2674914,
+      "media": 125.4976,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2020,
+      "competencia": "C3",
+      "status": "ok",
+      "n_validas": 2674914,
+      "media": 113.612,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2020,
+      "competencia": "C4",
+      "status": "ok",
+      "n_validas": 2674914,
+      "media": 127.1436,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2020,
+      "competencia": "C5",
+      "status": "ok",
+      "n_validas": 2674914,
+      "media": 100.865,
+      "mediana": 100.0
+    },
+    {
+      "ano": 2021,
+      "competencia": "C1",
+      "status": "ok",
+      "n_validas": 2293797,
+      "media": 123.6635,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2021,
+      "competencia": "C2",
+      "status": "ok",
+      "n_validas": 2293797,
+      "media": 143.1166,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2021,
+      "competencia": "C3",
+      "status": "ok",
+      "n_validas": 2293797,
+      "media": 119.5638,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2021,
+      "competencia": "C4",
+      "status": "ok",
+      "n_validas": 2293797,
+      "media": 132.912,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2021,
+      "competencia": "C5",
+      "status": "ok",
+      "n_validas": 2293797,
+      "media": 116.867,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2022,
+      "competencia": "C1",
+      "status": "ok",
+      "n_validas": 2363615,
+      "media": 125.9502,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2022,
+      "competencia": "C2",
+      "status": "ok",
+      "n_validas": 2363615,
+      "media": 148.7035,
+      "mediana": 140.0
+    },
+    {
+      "ano": 2022,
+      "competencia": "C3",
+      "status": "ok",
+      "n_validas": 2363615,
+      "media": 121.178,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2022,
+      "competencia": "C4",
+      "status": "ok",
+      "n_validas": 2363615,
+      "media": 136.5481,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2022,
+      "competencia": "C5",
+      "status": "ok",
+      "n_validas": 2363615,
+      "media": 120.0713,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2023,
+      "competencia": "C1",
+      "status": "ok",
+      "n_validas": 2704814,
+      "media": 126.84,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2023,
+      "competencia": "C2",
+      "status": "ok",
+      "n_validas": 2704814,
+      "media": 145.3633,
+      "mediana": 140.0
+    },
+    {
+      "ano": 2023,
+      "competencia": "C3",
+      "status": "ok",
+      "n_validas": 2704814,
+      "media": 123.6716,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2023,
+      "competencia": "C4",
+      "status": "ok",
+      "n_validas": 2704814,
+      "media": 135.4513,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2023,
+      "competencia": "C5",
+      "status": "ok",
+      "n_validas": 2704814,
+      "media": 113.3852,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2024,
+      "competencia": "C1",
+      "status": "ok",
+      "n_validas": 3002710,
+      "media": 126.2204,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2024,
+      "competencia": "C2",
+      "status": "ok",
+      "n_validas": 3002710,
+      "media": 152.5334,
+      "mediana": 160.0
+    },
+    {
+      "ano": 2024,
+      "competencia": "C3",
+      "status": "ok",
+      "n_validas": 3002710,
+      "media": 124.4475,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2024,
+      "competencia": "C4",
+      "status": "ok",
+      "n_validas": 3002710,
+      "media": 135.9954,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2024,
+      "competencia": "C5",
+      "status": "ok",
+      "n_validas": 3002710,
+      "media": 119.7692,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2025,
+      "competencia": "C1",
+      "status": "ok",
+      "n_validas": 3245696,
+      "media": 120.6208,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2025,
+      "competencia": "C2",
+      "status": "ok",
+      "n_validas": 3245696,
+      "media": 136.9705,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2025,
+      "competencia": "C3",
+      "status": "ok",
+      "n_validas": 3245696,
+      "media": 119.6319,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2025,
+      "competencia": "C4",
+      "status": "ok",
+      "n_validas": 3245696,
+      "media": 127.3459,
+      "mediana": 120.0
+    },
+    {
+      "ano": 2025,
+      "competencia": "C5",
+      "status": "ok",
+      "n_validas": 3245696,
+      "media": 114.1461,
+      "mediana": 120.0
+    }
+  ],
+  "review": "pendente_revisao_academica_e_privacidade_contextual"
+}

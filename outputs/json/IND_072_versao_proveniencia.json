@@ -1,0 +1,845 @@
+{
+  "indicator_id": "IND-072",
+  "status": "draft",
+  "generated_at": "2026-10-30T17:39:56.734926+00:00",
+  "meta": {
+    "schema_version": "1.0.0",
+    "analysis_version": "ind055-072-preparado-v1",
+    "git_commit": "b97277b1ae608325e691bd29f27da019b0896b9c",
+    "python": "3.13.5",
+    "data_version": "enem-2019-2025-publicado",
+    "sources_must_be_checked": "source files hashes in manifest only",
+    "no_individual_identifiers": true
+  },
+  "results": [
+    {
+      "arquivo": "outputs/json/dashboard_enem_2019.json",
+      "tamanho_bytes": 16039193,
+      "sha256": "c53af28aec11a5fcff3236071cc71abc2a336f5971764cb9f557511dd5d01cbb",
+      "modificado_em_utc": "2026-10-30T16:30:43.763496+00:00"
+    },
+    {
+      "arquivo": "outputs/json/dashboard_enem_2020.json",
+      "tamanho_bytes": 16640099,
+      "sha256": "75d3749b03a19b7529873be27fd1349f4f4563501ee2c65fee85306eba0b7765",
+      "modificado_em_utc": "2026-10-30T16:30:44.764146+00:00"
+    },
+    {
+      "arquivo": "outputs/json/dashboard_enem_2021.json",
+      "tamanho_bytes": 16156238,
+      "sha256": "b6b860b53aabc6e1542d2e24d803a750938f8a9c623d2256ee36fdbc310a3423",
+      "modificado_em_utc": "2026-10-30T16:30:45.630410+00:00"
+    },
+    {
+      "arquivo": "outputs/json/dashboard_enem_2022.json",
+      "tamanho_bytes": 16062743,
+      "sha256": "95936b7bd2bc1669d106a80a15e4feed3b83d6e4d5bdfa395b39267f0091bff1",
+      "modificado_em_utc": "2026-10-30T16:30:46.678906+00:00"
+    },
+    {
+      "arquivo": "outputs/json/dashboard_enem_2023.json",
+      "tamanho_bytes": 16074553,
+      "sha256": "4688c6bb764e0ecbb3d36ebcae8471f2ac16b9fbff6deee1ac75b744516c7165",
+      "modificado_em_utc": "2026-10-30T16:30:47.497333+00:00"
+    },
+    {
+      "arquivo": "outputs/json/dashboard_enem_2024.json",
+      "tamanho_bytes": 16025456,
+      "sha256": "b344541bbc9741aea7e9a665b48bc7c6c398a7ef017a1d1b58417f7a74e5e8b4",
+      "modificado_em_utc": "2026-10-30T16:30:48.273757+00:00"
+    },
+    {
+      "arquivo": "outputs/json/dashboard_enem_2025.json",
+      "tamanho_bytes": 9307770,
+      "sha256": "ebc111a12c4edbd0b98672ee934067c1f6846343c37e61d044f1239742808a00",
+      "modificado_em_utc": "2026-10-30T16:30:48.765466+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_001_dashboard_2019.json",
+      "tamanho_bytes": 17680,
+      "sha256": "18e6b631fe072420d9a340130066451559aa3992eb003744558951cac1ef9465",
+      "modificado_em_utc": "2026-10-30T00:44:20.988723+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_001_dashboard_2020.json",
+      "tamanho_bytes": 17681,
+      "sha256": "bfda85fb0416f38237a89a167402e74aa526aa32e4c55d181c2eeccd2c6e8d6b",
+      "modificado_em_utc": "2026-10-30T00:44:20.991725+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_001_dashboard_2021.json",
+      "tamanho_bytes": 17666,
+      "sha256": "2482f2da785a7ea9afdf861f5fa05459802abfd4245c0e60d2fea5551113d1e1",
+      "modificado_em_utc": "2026-10-30T00:44:20.994725+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_001_dashboard_2022.json",
+      "tamanho_bytes": 17670,
+      "sha256": "cc674e415e3189cffb782dc8d914be30820bc7dbf60d60e7b44c811868f516f3",
+      "modificado_em_utc": "2026-10-30T00:44:20.999251+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_001_dashboard_2023.json",
+      "tamanho_bytes": 17674,
+      "sha256": "98a06d1a79a8974e4523e4c6bd3fa6ec592dc13607e0e5d28c3f2c329e3dd215",
+      "modificado_em_utc": "2026-10-30T00:44:21.002492+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_001_dashboard_2024.json",
+      "tamanho_bytes": 17664,
+      "sha256": "cdea24aa15d89a006db1b94389489b2ec0000fab969a2c9d8099c5392d377b22",
+      "modificado_em_utc": "2026-10-30T00:44:21.006492+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_001_dashboard_2025.json",
+      "tamanho_bytes": 17671,
+      "sha256": "18060b525e88418c78df5ebe1dc26576fbe9f0ad59168f63e88b0726e4c6503a",
+      "modificado_em_utc": "2026-10-30T00:44:21.011142+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_001_redacoes_validas.json",
+      "tamanho_bytes": 51208,
+      "sha256": "4debdff6fe74877c2bde78a870ff6c89bd556078abf34990cd4f0e8145053d3c",
+      "modificado_em_utc": "2026-10-30T00:44:20.984722+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_002_nota_media.json",
+      "tamanho_bytes": 43951,
+      "sha256": "f1c3cd36a080da6865cd15bcf403c7f8c68d61cd9bf0e4e4436cea77ea10d023",
+      "modificado_em_utc": "2026-10-17T21:12:35.193979+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_003_mediana_redacao.json",
+      "tamanho_bytes": 35117,
+      "sha256": "bd3b4068a544182abe9b217035d69fd23920abb52e7dcab13ca4a84d53d2ea53",
+      "modificado_em_utc": "2026-10-17T22:07:11.086644+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_004_desvio_padrao_redacao.json",
+      "tamanho_bytes": 52651,
+      "sha256": "e7d56da47509d8fd955c2a59060a62725e2bad9b9330bc9d86f3df0f41c5fd68",
+      "modificado_em_utc": "2026-10-17T22:38:54.002509+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_005_percentis_redacao.json",
+      "tamanho_bytes": 96886,
+      "sha256": "b6412b78f9bd68b9393756a87011e5db820e5b9171ab05bbee4716d0f29cd8ad",
+      "modificado_em_utc": "2026-10-17T23:20:25.055872+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_006_distribuicao_notas.json",
+      "tamanho_bytes": 775427,
+      "sha256": "be95fcffcadbc4803b3e34e72052a12457481df08b5c0f0f8d0bc89112775721",
+      "modificado_em_utc": "2026-10-17T23:46:43.190687+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_007_situacao_redacao.json",
+      "tamanho_bytes": 667418,
+      "sha256": "e6060bdf06962ac911632f3d5c0398c47dd7c84a39d38ef70e4e315545b00207",
+      "modificado_em_utc": "2026-10-18T00:07:34.010344+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_008_notas_1000.json",
+      "tamanho_bytes": 62027,
+      "sha256": "0cbbca17152807b42f2b0b17bc19b7015edc4055a913d2fe78beb9dc286006de",
+      "modificado_em_utc": "2026-10-18T01:44:57.567750+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_009_media_competencias.json",
+      "tamanho_bytes": 447846,
+      "sha256": "c5741b751097de2ee373238180e20837c08ac1c5c97c32835c283954650656f9",
+      "modificado_em_utc": "2026-10-18T17:49:16.149449+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_010_mediana_competencias.json",
+      "tamanho_bytes": 369270,
+      "sha256": "905f922e2ed3fdbfdd5e854a195b63e97bde1598e58be2a7257fad850ac78c42",
+      "modificado_em_utc": "2026-10-18T18:30:45.191310+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_011_dispersao_competencias.json",
+      "tamanho_bytes": 662066,
+      "sha256": "c25fd3b2562b3e150ee851ca22651800190c4c9dd1867645ed5b551fbc0e58f9",
+      "modificado_em_utc": "2026-10-18T18:57:40.110367+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_012_distribuicao_niveis_competencias.json",
+      "tamanho_bytes": 3912820,
+      "sha256": "5224fe92fa2ee272abeeed1b8f1a3af2e669bee55b4d90d9096ff859864f9f5f",
+      "modificado_em_utc": "2026-10-18T19:46:35.533629+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_013_correlacao_competencias.json",
+      "tamanho_bytes": 1044167,
+      "sha256": "483bcfd7664ed8ce49dfb038a8156bdd9acb841201775494968b7e6e5b31186c",
+      "modificado_em_utc": "2026-10-18T21:02:07.682980+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_014_variancia_explicada_pca.json",
+      "tamanho_bytes": 1230920,
+      "sha256": "c116e672f62aebb99c5528e136c296c52638e03a7dbeb29b598865846c0983fb",
+      "modificado_em_utc": "2026-10-18T21:34:20.225554+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_015_loadings_pca.json",
+      "tamanho_bytes": 3238754,
+      "sha256": "a61cee2dcf2a73b439039984772a18a92274f13c7edca3fe4dc8cf5a6b13008a",
+      "modificado_em_utc": "2026-10-18T21:38:02.252747+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_016_mapa_pc1_pc2.json",
+      "tamanho_bytes": 5091617,
+      "sha256": "d4bb74901173e16d539faa25851e3557ff8d7ee53f1040c41e252ec906b9f400",
+      "modificado_em_utc": "2026-10-30T01:12:35.348881+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_017_perfis_competencias.json",
+      "tamanho_bytes": 1729337,
+      "sha256": "bdd4593d2024f029e17962585b806bb7e5386560504534b0be797e9da669f06a",
+      "modificado_em_utc": "2026-10-18T23:37:50.057650+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_018_tamanho_clusters.json",
+      "tamanho_bytes": 588078,
+      "sha256": "174780234723fb61cb85c31427c3c75ba7bb0a6d10e82ded123226ea954e5503",
+      "modificado_em_utc": "2026-10-18T23:57:49.189532+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_019_qualidade_clustering.json",
+      "tamanho_bytes": 218679,
+      "sha256": "b63e78c4f54ad492726936b0c4e2be2509d60e655a333a513e7c9a4b49123eaa",
+      "modificado_em_utc": "2026-10-19T00:44:53.272456+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_020_diferenca_total_av1_av2.json",
+      "tamanho_bytes": 936578,
+      "sha256": "07ad1dc09d0ae7ee0846edcc0817abfeb4beeb7ca0f189078a7529537e8c6a05",
+      "modificado_em_utc": "2026-10-30T01:36:35.763050+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_021_diferenca_por_competencia.json",
+      "tamanho_bytes": 1002781,
+      "sha256": "70ac9d942e41dc4f7046f370401c58fe72859362cac1f284802f7231f47a9f5f",
+      "modificado_em_utc": "2026-10-30T13:43:12.438438+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_022_discrepancia_oficial.json",
+      "tamanho_bytes": 256006,
+      "sha256": "6b310eb2b96849fc7711205ce0e350d56fc8a83f42a9dd82cae0ee9d5b018598",
+      "modificado_em_utc": "2026-10-30T14:10:38.062580+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_023_divergencia_status.json",
+      "tamanho_bytes": 176389,
+      "sha256": "8a6021ce40a06956ab1921fa468f3070a5120434fd2a7887da0744032aaf21a3",
+      "modificado_em_utc": "2026-10-30T01:36:58.547789+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_024_terceiro_avaliador.json",
+      "tamanho_bytes": 83403,
+      "sha256": "e65f6fe53e5b1eb4203cc610df0b42bfca3720984106a2b045eeb1567ff0c2cd",
+      "modificado_em_utc": "2026-10-30T14:26:27.427224+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_025_banca.json",
+      "tamanho_bytes": 83142,
+      "sha256": "a029e90be0364b61336ad60348160e6dd73df96b363af513e0a3a118eee7a95c",
+      "modificado_em_utc": "2026-10-30T14:40:40.026637+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_026_concordancia_competencias.json",
+      "tamanho_bytes": 512165,
+      "sha256": "7c25fa12b02904920f2c49fbde28ab22d76c6249217af096a10b56916c73e0e2",
+      "modificado_em_utc": "2026-10-30T15:06:17.495715+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_027_concordancia_total.json",
+      "tamanho_bytes": 116580,
+      "sha256": "3c157f6d3c6291f4d67686d12f1fc9c1e6ab0e3017a5716fe555419f29bfa73b",
+      "modificado_em_utc": "2026-10-22T13:45:48.778858+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_028_perfis_divergencia.json",
+      "tamanho_bytes": 1339300,
+      "sha256": "a0c84b009e7e93bbb1377ab1fc959cd9725fd4041d30d3ef8edf6f82d88fc72f",
+      "modificado_em_utc": "2026-10-22T15:13:07.251412+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_029_avaliacoes_atipicas.json",
+      "tamanho_bytes": 837504,
+      "sha256": "f5a540b0f3b09cb2fd21a8dc6f15d79e9262bc0797e49e649df8322a5aa4afbe",
+      "modificado_em_utc": "2026-10-30T15:32:27.725558+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_030_faixas_alto_desempenho.json",
+      "tamanho_bytes": 420081,
+      "sha256": "2a8f66d5179001796f5dc53c5eb0cde3c1982de56e0d141dc7d47816f1fd424f",
+      "modificado_em_utc": "2026-10-30T01:41:44.117825+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_031_perda_competencias.json",
+      "tamanho_bytes": 2059824,
+      "sha256": "5cea2607e8893654babe194f8342c40f05745acb9ce9cc658b305f30a50e8b80",
+      "modificado_em_utc": "2026-10-30T01:47:14.585418+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_032_frequencia_desconto.json",
+      "tamanho_bytes": 445779,
+      "sha256": "7ec3f68f2e4e989a17c441345ade16cc0a06c98a94834b8ebecd60da8f6abc2f",
+      "modificado_em_utc": "2026-10-30T01:53:12.126774+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_033_participacao_perda_total.json",
+      "tamanho_bytes": 515551,
+      "sha256": "93ec26ba18e188730961839cca80923e8487c380d929f758cc543d8f15b6edf5",
+      "modificado_em_utc": "2026-10-30T15:58:13.754730+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_034_competencia_unica_impede_1000.json",
+      "tamanho_bytes": 408222,
+      "sha256": "a116ad1312fa042d9815303aa7a60f059f5d11eb0673be3861fe8ad70bd58648",
+      "modificado_em_utc": "2026-10-30T02:02:43.005478+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_034_recorte_980_final.json",
+      "tamanho_bytes": 20484,
+      "sha256": "5cc19ad752e852842783d2efac581650d7e50c78682f12e4e6f35a19d51fad91",
+      "modificado_em_utc": "2026-10-30T02:02:39.076292+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_035_combinacoes_perdas.json",
+      "tamanho_bytes": 1606558,
+      "sha256": "07a0992c168b17c7fdbf1dac9e3906d9313bb33f4210da1e904147b62dbb9965",
+      "modificado_em_utc": "2026-10-30T02:08:28.197116+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_036_regras_associacao.json",
+      "tamanho_bytes": 1603593,
+      "sha256": "fe334f0e5d522473811dca98bf8d53379c4b89592b8fab91c22dfa24b222e199",
+      "modificado_em_utc": "2026-10-30T02:14:07.961503+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_037_concentracao_descontos.json",
+      "tamanho_bytes": 2962670,
+      "sha256": "739694e1e3b559d7f3b238bb3377b6e1a13f0f4f6c0c0062dabd93dca77f914b",
+      "modificado_em_utc": "2026-10-30T02:20:09.511969+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_038_concordancia_desconto.json",
+      "tamanho_bytes": 749663,
+      "sha256": "1ad10d781d7785006ddfb30bd56cabc54c0385debd4894d01bd7d5a40d856619",
+      "modificado_em_utc": "2026-10-30T02:30:03.578322+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_039_mapa_nota_competencia.json",
+      "tamanho_bytes": 2212721,
+      "sha256": "c717852e2a49e9ebc2c786b2ae6b81157736ccf2dbca4ad085ac853eff744c33",
+      "modificado_em_utc": "2026-10-28T15:20:30.626396+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_040_perfil_socioeconomico.json",
+      "tamanho_bytes": 8183027,
+      "sha256": "55a61bedea1e57d566011b7313378ed11fb30f29fdc13cec0177bb08d33c331c",
+      "modificado_em_utc": "2026-10-30T02:41:14.107212+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_041_renda_nota_total.json",
+      "tamanho_bytes": 3355984,
+      "sha256": "724611c391e6f9ecd6e1f2d27d9c00da90567b499810da079a05b5585186db59",
+      "modificado_em_utc": "2026-10-22T22:35:18.213281+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_042_renda_competencias.json",
+      "tamanho_bytes": 12245457,
+      "sha256": "7a99e9990c3a0277983f747519455ba435c6760b314ea6ab78dcd522b6555431",
+      "modificado_em_utc": "2026-10-23T01:15:16.115584+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_043_escolaridade_responsaveis_nota.json",
+      "tamanho_bytes": 4079838,
+      "sha256": "594f040b8cf310ce14b33a4ffa7de18c6b575a0dcf503af294590cb879f35541",
+      "modificado_em_utc": "2026-10-23T19:01:27.291378+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_044_escolaridade_competencias.json",
+      "tamanho_bytes": 6245968,
+      "sha256": "09458c1ee683ae5a7b7385c580611dc0a58e7bd61805549d07b4a40decf62a3d",
+      "modificado_em_utc": "2026-10-30T02:49:43.383378+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_045_tipo_escola_nota.json",
+      "tamanho_bytes": 612463,
+      "sha256": "a7509467a66612ca24a7a969adb0ab6340df941715113fe66fde2131515169fa",
+      "modificado_em_utc": "2026-10-30T02:57:38.811321+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_046_tipo_escola_competencias.json",
+      "tamanho_bytes": 2025579,
+      "sha256": "a963cabf078312d173aa546b790cf052d252f80bcf01a8c4143076732d46db2b",
+      "modificado_em_utc": "2026-10-30T03:05:22.378691+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_047_internet_desempenho.json",
+      "tamanho_bytes": 1913508,
+      "sha256": "eeb409fdb9c5e8d1047dd565f7ab5def3b392a3de9780ba3fbf98cd55a9f3a46",
+      "modificado_em_utc": "2026-10-30T03:13:11.310572+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_048_computador_desempenho.json",
+      "tamanho_bytes": 2595523,
+      "sha256": "4789a31a4472e98605d4855e84ca197f3381530c5240f0086ca1edabf8c0ab0c",
+      "modificado_em_utc": "2026-10-30T03:20:50.847403+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_049_ocupacao_responsaveis_nota.json",
+      "tamanho_bytes": 1597878,
+      "sha256": "62e027bad9b71588bfe898c26073d4ba3cd7658b168e59f625130f243c163152",
+      "modificado_em_utc": "2026-10-30T03:29:37.096864+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_050_moradores_nota.json",
+      "tamanho_bytes": 843644,
+      "sha256": "fc87d410800e6266a277c14bbe844c2cd2958ffee11948cf1691b5be05ae8be4",
+      "modificado_em_utc": "2026-10-30T03:37:38.797686+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_051_subgrupos_demograficos.json",
+      "tamanho_bytes": 2517083,
+      "sha256": "3fff8138977c9c9136c6c22995d58864641e72a1677b375ea5366e8b07fabbac",
+      "modificado_em_utc": "2026-10-30T03:47:32.869385+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_052_uf_prova_desempenho.json",
+      "tamanho_bytes": 508829,
+      "sha256": "a251e1b157ae1af8943889f4de986f506ae1f387aca0e1ed6150535743e12e9f",
+      "modificado_em_utc": "2026-10-30T03:55:55.332893+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_053_dimensoes_socioeconomicas.json",
+      "tamanho_bytes": 641275,
+      "sha256": "8ccff6a0d36e24a147dc741402cd05e104cd0e40505567816d78e83d587c5b01",
+      "modificado_em_utc": "2026-10-30T16:13:27.404265+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_054_clusters_socioeconomicos.json",
+      "tamanho_bytes": 53931,
+      "sha256": "71d5d9af1699909cc3ff142091803ab4f0311b2986d83a310a4b3711a0944f19",
+      "modificado_em_utc": "2026-10-30T16:30:42.856917+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_064_evolucao_nota.json",
+      "tamanho_bytes": 1440,
+      "sha256": "a55e5eb9be6a26a42ee6a20a4dd49c70cc2274d48514578ce9de4e765753d82e",
+      "modificado_em_utc": "2026-10-30T17:39:41.638174+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_065_evolucao_competencias.json",
+      "tamanho_bytes": 6026,
+      "sha256": "c5d330022b9726f73e0de4a9bedcd75f214e2e794499af4870323c620d92df59",
+      "modificado_em_utc": "2026-10-30T17:39:43.397342+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_066_evolucao_quase_1000.json",
+      "tamanho_bytes": 7808,
+      "sha256": "eea0b50f8c7bf4ac7c92529a1bc580960d7e848a22196107274b573ec5f50086",
+      "modificado_em_utc": "2026-10-30T17:39:45.190836+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_067_evolucao_divergencias.json",
+      "tamanho_bytes": 3125,
+      "sha256": "20469073bbedbd3c4ccef51695d7dc554850a38e4f52b3e847a3507b08726c20",
+      "modificado_em_utc": "2026-10-30T17:39:46.852173+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_069_taxa_juncao.json",
+      "tamanho_bytes": 4449,
+      "sha256": "e4a39131003878b07bc227d56904a1f18ad334f7fa835b2265a53c15673b5bdf",
+      "modificado_em_utc": "2026-10-30T17:28:50.369340+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_070_valores_ausentes.json",
+      "tamanho_bytes": 72945,
+      "sha256": "cc310dcc46abb747b1f09dc911e83914ea98b7913a6c7ed3d45e02ab7b538e13",
+      "modificado_em_utc": "2026-10-30T17:39:35.808240+00:00"
+    },
+    {
+      "arquivo": "outputs/json/IND_071_diagnostico_celulas_pequenas.json",
+      "tamanho_bytes": 6513,
+      "sha256": "ff1c17000cb1b0e808343665fb956f5417af7cdb75e7900217f85d7d6a87b908",
+      "modificado_em_utc": "2026-10-30T17:39:50.131466+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_001_redacoes_validas.csv",
+      "tamanho_bytes": 16149,
+      "sha256": "3b1dc1bec0f8ba00176defce1a1012b21a4ad4b2446808d4297efc22b1fe21db",
+      "modificado_em_utc": "2026-10-30T00:44:20.960126+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_002_nota_media.csv",
+      "tamanho_bytes": 20081,
+      "sha256": "7b35ce8eddc2b025cebac08b8017128bb779961cfea0eac8c5c13b55f263f620",
+      "modificado_em_utc": "2026-10-17T21:12:35.171926+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_003_mediana_redacao.csv",
+      "tamanho_bytes": 18878,
+      "sha256": "94f20f1fbd4dade5d03be27d5b02ff0c1ccdc9c42ac4b5883e2d3b658b5eda06",
+      "modificado_em_utc": "2026-10-17T22:07:11.070119+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_004_desvio_padrao_redacao.csv",
+      "tamanho_bytes": 24748,
+      "sha256": "ff07b2599ce2dade17720a4f1ba5671f0a36935ca01d6fa8ebffc7bf4a18c1e0",
+      "modificado_em_utc": "2026-10-17T22:38:53.981401+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_005_percentis_redacao.csv",
+      "tamanho_bytes": 28568,
+      "sha256": "7a05dbf3c687a513e566a9274053445f15f4414648e139d2a789ddf936875c56",
+      "modificado_em_utc": "2026-10-17T23:20:25.018375+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_006_distribuicao_notas.csv",
+      "tamanho_bytes": 297526,
+      "sha256": "1cfaf80b9918c86a03bd827e8e4fc39913e9ebba7a19369757abe41833913c52",
+      "modificado_em_utc": "2026-10-17T23:46:43.092476+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_007_situacao_redacao.csv",
+      "tamanho_bytes": 328939,
+      "sha256": "7f97b4c41aa6b9d796004575d98969d49c4ab9e6380db488e0f54784de586800",
+      "modificado_em_utc": "2026-10-18T00:07:33.753091+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_008_notas_1000.csv",
+      "tamanho_bytes": 27413,
+      "sha256": "268528cb28d5bed054386499f41b34284f340ae4675becfb62273bc546802338",
+      "modificado_em_utc": "2026-10-18T01:44:57.550944+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_009_media_competencias.csv",
+      "tamanho_bytes": 164261,
+      "sha256": "423bf50a11f17ffb88a33539e3fdba8c128b81311b6901203736a5871b6999aa",
+      "modificado_em_utc": "2026-10-18T17:49:16.064317+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_010_mediana_competencias.csv",
+      "tamanho_bytes": 152458,
+      "sha256": "f70d443bcbaba0e42668ecc20ec1ea150d783ae340b1c9e1368310e00c4d30bb",
+      "modificado_em_utc": "2026-10-18T18:30:45.104510+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_011_dispersao_competencias.csv",
+      "tamanho_bytes": 213209,
+      "sha256": "2cf49dc23f6bf0a66dcce811d0640c76e6f94e611329f876891da9e233e10ff2",
+      "modificado_em_utc": "2026-10-18T18:57:39.925537+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_012_distribuicao_niveis_competencias.csv",
+      "tamanho_bytes": 2032985,
+      "sha256": "d3b889bc78fb79cc4ac140717a12ad812f02ad98b1eab7c176797b218a6d3f3a",
+      "modificado_em_utc": "2026-10-18T19:46:34.564983+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_013_correlacao_competencias.csv",
+      "tamanho_bytes": 320566,
+      "sha256": "2ae02b623357a25b8c3abccd65ba46eddf1b4457724e4f034ee7ff5c26a470e6",
+      "modificado_em_utc": "2026-10-18T21:02:07.538849+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_014_variancia_explicada_pca.csv",
+      "tamanho_bytes": 215387,
+      "sha256": "382c95668ebf5acd0c72d132e7e5e11d40e5e5d96d9d6bbe6bb2a7305e22402b",
+      "modificado_em_utc": "2026-10-18T21:34:19.983929+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_015_loadings_pca.csv",
+      "tamanho_bytes": 1322523,
+      "sha256": "1e9e53ade1900fd75d570755d9ccfba21f321a4bc89d0c2132a9d0504de6046f",
+      "modificado_em_utc": "2026-10-18T21:38:00.660757+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_016_mapa_pc1_pc2.csv",
+      "tamanho_bytes": 3238417,
+      "sha256": "2f6191ae4c8148ef0aa140806888e4e2b46b075d31139c47642ad2b3eee47ea8",
+      "modificado_em_utc": "2026-10-30T01:12:34.618541+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_017_perfis_competencias.csv",
+      "tamanho_bytes": 233793,
+      "sha256": "92b0e0b2a365d8e729ddc378387fb8368572fa2eef76ab605af50fabbb3562f1",
+      "modificado_em_utc": "2026-10-18T23:37:49.540853+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_018_tamanho_clusters.csv",
+      "tamanho_bytes": 115275,
+      "sha256": "b4840544af57c69b122f6a2ec9fb130733d885005e3b6b516a32196bf9f49387",
+      "modificado_em_utc": "2026-10-18T23:57:49.053627+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_019_qualidade_clustering.csv",
+      "tamanho_bytes": 35098,
+      "sha256": "ce13822545cafff4db95ccb12b3b6c32244d727997a262f4358e51aa10dd4c80",
+      "modificado_em_utc": "2026-10-19T00:44:53.208577+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_020_diferenca_total_av1_av2.csv",
+      "tamanho_bytes": 460361,
+      "sha256": "9c62bb88dbd4749ae9fa67714cd6f3a5fc3e78546cdd30e61fac1338d47ceb85",
+      "modificado_em_utc": "2026-10-30T01:36:35.690045+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_021_diferenca_por_competencia.csv",
+      "tamanho_bytes": 232711,
+      "sha256": "90096492946219f39408f5451e263d7750dc6d71300e35ecd80fbe86442c418b",
+      "modificado_em_utc": "2026-10-30T13:43:12.349416+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_022_discrepancia_oficial.csv",
+      "tamanho_bytes": 47098,
+      "sha256": "254e0ee40b85e27eff574d578025b6de52973a0a279ce2da8a2da0396dc9ff81",
+      "modificado_em_utc": "2026-10-30T14:10:38.049010+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_023_divergencia_status.csv",
+      "tamanho_bytes": 42537,
+      "sha256": "d9f5eb7243a8ac6270986fd7ee097afa813a9e28672e4e65cce86b7615dca1fb",
+      "modificado_em_utc": "2026-10-30T01:36:58.533977+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_024_terceiro_avaliador.csv",
+      "tamanho_bytes": 22453,
+      "sha256": "cbd7d6c2c7ea54433cf8a5c79cf17dd75aebbb68a0efbd3dfac4563142b4855a",
+      "modificado_em_utc": "2026-10-30T14:26:27.438112+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_025_banca.csv",
+      "tamanho_bytes": 22075,
+      "sha256": "cea4506a00ea156bebaeffaa9c3ed1f3c136f511776d9a354f4be28846a01885",
+      "modificado_em_utc": "2026-10-30T14:40:40.026637+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_026_concordancia_competencias.csv",
+      "tamanho_bytes": 160872,
+      "sha256": "ee65ba02c9ce47c558f0e5005908f6f10c57ff434aabe2bad2972879120f87f4",
+      "modificado_em_utc": "2026-10-30T15:06:17.512552+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_027_concordancia_total.csv",
+      "tamanho_bytes": 31724,
+      "sha256": "a681cff11b58db2cd2eb9af16349fd5ac7725f606bd47c322a116b972fdc7a85",
+      "modificado_em_utc": "2026-10-22T13:45:48.794566+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_028_perfis_divergencia.csv",
+      "tamanho_bytes": 178645,
+      "sha256": "453aa9b450788ad62c22bb79101a1ad78cc359761cf321f3fa3e6e28a7619223",
+      "modificado_em_utc": "2026-10-22T15:13:07.349289+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_029_avaliacoes_atipicas.csv",
+      "tamanho_bytes": 44547,
+      "sha256": "7f7ff83d3fac79c0cd3a6cd16df15da3920bc5a467abdb7f91346bad94866d07",
+      "modificado_em_utc": "2026-10-30T15:32:27.741487+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_030_faixas_alto_desempenho.csv",
+      "tamanho_bytes": 163686,
+      "sha256": "31e02793997c18b06fe9127aa9df412756a4896dec993ee2d4c5e18ed8ddf448",
+      "modificado_em_utc": "2026-10-30T01:41:44.117825+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_031_perda_competencias.csv",
+      "tamanho_bytes": 459567,
+      "sha256": "6651d2f26fac3dca9654179bf8998b59cff8cadf8cc32ce1091f5614d66eaca7",
+      "modificado_em_utc": "2026-10-30T01:47:14.633221+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_032_frequencia_desconto.csv",
+      "tamanho_bytes": 53314,
+      "sha256": "5bd63800bb91a6aa05f4caba72e9a4366a18f844c267d07fa4e52b31811cc86e",
+      "modificado_em_utc": "2026-10-30T01:53:12.127786+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_033_participacao_perda_total.csv",
+      "tamanho_bytes": 70791,
+      "sha256": "dcdcc0f82a03fecb585cf4e92ff38b4af30fe903dfe5c9faab54db45c910012f",
+      "modificado_em_utc": "2026-10-30T15:58:13.767342+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_034_competencia_unica_impede_1000.csv",
+      "tamanho_bytes": 47433,
+      "sha256": "879cf4178b92047a2da7bd93231a481db203c720e033141f7179ce2146e4219b",
+      "modificado_em_utc": "2026-10-30T01:58:48.523584+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_034_recorte_980_final.csv",
+      "tamanho_bytes": 1575,
+      "sha256": "33fdcdb840c3c82bd1c7d208385276d320b0d9f1cc3f08b2e98e96e92eb9916a",
+      "modificado_em_utc": "2026-10-30T02:02:39.089712+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_035_combinacoes_perdas.csv",
+      "tamanho_bytes": 211934,
+      "sha256": "e3d4ccd5b789838ae02f9e4463c4e43508a939c0aef5f35a82aaa4513448cd39",
+      "modificado_em_utc": "2026-10-30T02:08:28.229150+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_036_regras_associacao.csv",
+      "tamanho_bytes": 361890,
+      "sha256": "ff822c0ba78312fa7e52b97ac025becbfe7eb518897025de1993d33e81e8a6b2",
+      "modificado_em_utc": "2026-10-30T02:14:08.001154+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_037_concentracao_descontos.csv",
+      "tamanho_bytes": 688748,
+      "sha256": "a0d5ba540e29401f533f05d56296ff478f62c92ae6601231f938d6ac4e81430d",
+      "modificado_em_utc": "2026-10-30T02:20:09.582726+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_038_concordancia_desconto.csv",
+      "tamanho_bytes": 69973,
+      "sha256": "764e737b48bec801933fb6578148e6d4f9a07916cf6e015b7d64f779ff669dfc",
+      "modificado_em_utc": "2026-10-30T02:30:03.597446+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_039_mapa_nota_competencia.csv",
+      "tamanho_bytes": 426827,
+      "sha256": "cddc99dd9f7164320da0810b217ec994234426c597dda97a40ba80c782c41c93",
+      "modificado_em_utc": "2026-10-28T15:20:30.690665+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_040_perfil_socioeconomico.csv",
+      "tamanho_bytes": 2658351,
+      "sha256": "5eed5b13358b80bf9f9454d0f60a8ae93f98299e2f786c0c885e1e0c99d5dbcf",
+      "modificado_em_utc": "2026-10-30T02:41:14.374824+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_041_renda_nota_total.csv",
+      "tamanho_bytes": 333153,
+      "sha256": "649d4dad7f30471eee58b1df754d1fc4c4814b1f03f952d8ce8ca3a3366f19db",
+      "modificado_em_utc": "2026-10-22T22:35:18.313924+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_042_renda_competencias.csv",
+      "tamanho_bytes": 1689135,
+      "sha256": "012c47f26cba553d1b9c68723ce3ffef981449c50d5d32f5e2059a416aafe512",
+      "modificado_em_utc": "2026-10-23T01:15:16.661240+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_043_escolaridade_responsaveis_nota.csv",
+      "tamanho_bytes": 467311,
+      "sha256": "5e0cdc753780ab777b7c72902844a946fd41da2d3969dcb9ae4757bb4804a9c9",
+      "modificado_em_utc": "2026-10-23T19:01:27.573061+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_044_escolaridade_competencias.csv",
+      "tamanho_bytes": 2206824,
+      "sha256": "94f0e23ee7f513d59d0272bdd81014ec53a571afc6265b6f0fa910b569349744",
+      "modificado_em_utc": "2026-10-30T02:49:43.597732+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_045_tipo_escola_nota.csv",
+      "tamanho_bytes": 157120,
+      "sha256": "7ae092793200f282141d5da1a7b36898ade3be5f802a8fc7da48c8754ccd9e64",
+      "modificado_em_utc": "2026-10-30T02:57:38.828824+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_046_tipo_escola_competencias.csv",
+      "tamanho_bytes": 794594,
+      "sha256": "e7d9b731f0e3ca4e4dea584ee6823365e4311ec66407bb56e6fa30966c86d07e",
+      "modificado_em_utc": "2026-10-30T03:05:22.472677+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_047_internet_desempenho.csv",
+      "tamanho_bytes": 553675,
+      "sha256": "7ad7577dcb9bd34667bd7491828d0c6ebe1c15d9038cec4e5e85793a7e7e1b21",
+      "modificado_em_utc": "2026-10-30T03:13:11.374179+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_048_computador_desempenho.csv",
+      "tamanho_bytes": 1029722,
+      "sha256": "e80d6ef4c3155831a1c694653c3e9a5a8b5f86affab8064e0a91c176f913bc30",
+      "modificado_em_utc": "2026-10-30T03:20:51.118943+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_049_ocupacao_responsaveis_nota.csv",
+      "tamanho_bytes": 329602,
+      "sha256": "7b0821bac79fc3f36e873e2727345708eea812c3038c42ac4058e4c476fb3e1a",
+      "modificado_em_utc": "2026-10-30T03:29:37.118686+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_050_moradores_nota.csv",
+      "tamanho_bytes": 141384,
+      "sha256": "4efd16c36863f546647d64c7038c53722441607057f35fb320a69f55a08d643c",
+      "modificado_em_utc": "2026-10-30T03:37:38.811649+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_051_subgrupos_demograficos.csv",
+      "tamanho_bytes": 406305,
+      "sha256": "51c72399f4e6759baccb092776794bf3145432b2dd152c01edd71ec93c798037",
+      "modificado_em_utc": "2026-10-30T03:47:32.917028+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_052_uf_prova_desempenho.csv",
+      "tamanho_bytes": 148363,
+      "sha256": "485a9612b1616719058f375ea1fa70a71599f880261e45a76a14e2834b6a3372",
+      "modificado_em_utc": "2026-10-30T03:55:55.364597+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_053_dimensoes_socioeconomicas.csv",
+      "tamanho_bytes": 270468,
+      "sha256": "59de1588eda3f5edb6c1f49c476605da55948a402cc927e63febd67511f089bb",
+      "modificado_em_utc": "2026-10-30T16:13:27.437665+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_054_clusters_socioeconomicos.csv",
+      "tamanho_bytes": 13345,
+      "sha256": "694e9b70a05eff4953b207e703a941e5c56a30c895e47664cd5af2af41873184",
+      "modificado_em_utc": "2026-10-30T16:30:42.862920+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_064_evolucao_nota.csv",
+      "tamanho_bytes": 252,
+      "sha256": "6d5aeae156ce8fc53d2aad6879ecec9cdd71819185014e838c7d4a964b2d15c7",
+      "modificado_em_utc": "2026-10-30T17:39:41.621710+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_065_evolucao_competencias.csv",
+      "tamanho_bytes": 1229,
+      "sha256": "9298c6d0757346ed6a38ac2488f4fb5437752d06f5a5a001fa58dd384182cac8",
+      "modificado_em_utc": "2026-10-30T17:39:43.397342+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_066_evolucao_quase_1000.csv",
+      "tamanho_bytes": 1639,
+      "sha256": "5439708863754733d458f28f8603d0eb2f5bb81a83c9cf8ac32aa64414f8b199",
+      "modificado_em_utc": "2026-10-30T17:39:45.182141+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_067_evolucao_divergencias.csv",
+      "tamanho_bytes": 1139,
+      "sha256": "0aeb51432d1da3979401f16883aa2504fe108483926a0f3bccb3767003398868",
+      "modificado_em_utc": "2026-10-30T17:39:46.851584+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_069_taxa_juncao.csv",
+      "tamanho_bytes": 1228,
+      "sha256": "fa59e3689efcdfd5daba270d78321add39042072280a00b0cad2901996c1c868",
+      "modificado_em_utc": "2026-10-30T17:28:50.356411+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_070_valores_ausentes.csv",
+      "tamanho_bytes": 29412,
+      "sha256": "e58f7ed0de87c286e2e5a69c405feea6f5868d79184eb9b0ccf3741c1cce2aa3",
+      "modificado_em_utc": "2026-10-30T17:39:35.808240+00:00"
+    },
+    {
+      "arquivo": "outputs/indicadores/IND_071_diagnostico_celulas_pequenas.csv",
+      "tamanho_bytes": 1771,
+      "sha256": "109d24abcb433e2e2bb3b8f40e291dcc2d82d11e02f26d532adb3d4f632fc23e",
+      "modificado_em_utc": "2026-10-30T17:39:50.118954+00:00"
+    }
+  ],
+  "review": "Verificar documentação e disponibilidade dos microdados antes da publicação."
+}
