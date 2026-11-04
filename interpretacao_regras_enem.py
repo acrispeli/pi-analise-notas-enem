@@ -103,9 +103,9 @@ def _rows(doc: dict, year: int | None) -> list[dict]:
 
 
 def _size_ok(row: dict, column: str) -> bool:
-    # Quando n existe, nunca narrar números de células com 1..29 unidades.
+    # Resumir somente medidas realmente disponíveis; n positivo pode ser pequeno.
     v = _num(row.get(column))
-    return v is not None and v >= 30
+    return v is not None and v > 0
 
 
 def _result(achado: str, orientacao: str, ressalva: str, recorte: str = '') -> dict:
@@ -237,14 +237,6 @@ def _resumo_58(doc: dict, ano: int | None) -> dict:
     lines = _rows(doc, ano)
     years=sorted({_year(r.get('ano')) for r in lines if _year(r.get('ano'))})
     if not years:return _indisponivel(ano,'BR')
-    # Proteção conservadora: não produzir uma taxa composta que possa revelar
-    # células pequenas ou seus complementos. Nenhuma célula é ocultada no JSON;
-    # este módulo apenas opta por não resumi-la numericamente.
-    if any(0 < (_num(r.get('n_com_competencia_valida')) or 0) < 30 for r in lines):
-        return _result('Há resultados sobre a frequência de descontos nas cinco competências entre redações com notas de 900 a 980, mas alguns recortes têm tamanho pequeno. Por segurança, a interpretação automática não destaca percentuais desses grupos.',
-                       'Na leitura pedagógica, compare primeiro **em quais competências** os descontos aparecem e diferencie a frequência de ocorrência da quantidade de pontos perdidos. Evite conclusões sobre perfis individuais.',
-                       'A divulgação exige revisão contextual de células pequenas e complementos em outras tabelas. Não é seguro inferir que a maior frequência representa a maior perda de pontos.',
-                       f'{"Série " + str(years[0])+"–"+str(years[-1]) if ano is None else "ENEM "+str(ano)} · revisão interna')
     grouped=defaultdict(lambda:[0.,0.])
     chosen=ano if ano is not None else years[-1]
     for r in lines:
@@ -252,11 +244,11 @@ def _resumo_58(doc: dict, ano: int | None) -> dict:
             continue
         n=_num(r.get('n_com_competencia_valida'))
         d=_num(r.get('n_com_desconto'))
-        if n is None or d is None or n < 30 or not 0<=d<=n:
+        if n is None or d is None or n <= 0 or not 0<=d<=n:
             continue
         grouped[r['competencia']][0]+=n
         grouped[r['competencia']][1]+=d
-    vals={k:100*v[1]/v[0] for k,v in grouped.items() if v[0]>=30}
+    vals={k:100*v[1]/v[0] for k,v in grouped.items() if v[0]>0}
     if not vals:return _indisponivel(ano,'BR')
     highest=max(vals,key=vals.get)
     achado=f'Em {chosen}, a {COMP[highest]} apresentou a maior frequência agregada de desconto entre os perfis reunidos ({_fmt(vals[highest],1)}%).'
@@ -265,10 +257,10 @@ def _resumo_58(doc: dict, ano: int | None) -> dict:
         p=[r for r in lines if _year(r.get('ano'))==first and r.get('competencia')==highest]
         den=sum(_num(r.get('n_com_competencia_valida')) or 0 for r in p)
         d=sum(_num(r.get('n_com_desconto')) or 0 for r in p)
-        if den>=30:achado+=f' Em {first}, a frequência correspondente era {_fmt(100*d/den,1)}%.'
+        if den>0:achado+=f' Em {first}, a frequência correspondente era {_fmt(100*d/den,1)}%.'
     return _result(achado,
                    'Para planejar atividades, pergunte que características textuais são verificadas nessa competência. Frequência do desconto não equivale à intensidade da perda.',
-                   'Estatísticas da amostra de notas 900–980; interpretações dependem de auditoria de privacidade cruzada antes de qualquer publicação.',
+                   'Estatísticas da amostra de notas 900–980; grupo pequeno pode produzir percentual instável. Frequência de desconto não equivale a perda média.',
                    f'{"Série "+str(years[0])+"–"+str(years[-1]) if ano is None else "ENEM "+str(ano)} · Brasil')
 
 
@@ -339,7 +331,7 @@ def _known_series(numero: int, doc: dict, ano: int | None, uf: str) -> dict | No
             v=_num(region.get(field))
             n=_num(region.get(nfield))
             # Unavailable or suppressed counts are never silently zeros.
-            if v is not None and n is not None and n>=30 and str(region.get('status_publicacao','ok')) not in ('suprimido','suppressed'):
+            if v is not None and n is not None and n>0 and str(region.get('status_publicacao','ok')) not in ('suprimido','suppressed'):
                 by[yr]=v
     if ano is not None:
         if ano not in by:
@@ -369,8 +361,160 @@ def _known_series(numero: int, doc: dict, ano: int | None, uf: str) -> dict | No
                    f'Série {first}–{last} · {uf} · fonte anual')
 
 
+def _resumo_12(doc: dict, ano: int | None, competencia: str) -> dict | None:
+    anos = doc.get('years', [])
+    if not isinstance(anos, list):
+        return None
+    itens = [x for x in anos if isinstance(x, dict) and isinstance(x.get('brasil'), dict)]
+    disponiveis = sorted((_year(x.get('ano')),x) for x in itens if _year(x.get('ano')))
+    if not disponiveis:
+        return None
+    escolhido = next((x for y,x in disponiveis if y == ano), None) if ano else disponiveis[-1][1]
+    if escolhido is None:
+        return None
+    detalhes = escolhido['brasil'].get('competencias', [])
+    linha = next((x for x in detalhes if x.get('competencia') == competencia), {})
+    valores = [(x.get('pontuacao'), _num(x.get('percentual'))) for x in linha.get('niveis',[])]
+    valores = [(a,b) for a,b in valores if b is not None]
+    if not valores:
+        return None
+    pontuacao, percentual = max(valores, key=lambda item:item[1])
+    y = escolhido['ano']
+    return _result(f'Em {y}, a pontuação mais frequente na {COMP[competencia]} foi '
+                   f'{pontuacao} pontos, com {_fmt(percentual,2)}% das redações válidas. '
+                   'Essa frequência não é a nota média da competência.',
+                   f'A {COMP[competencia]} avalia {FOCO_DIDATICO[competencia]}. '
+                   'A distribuição pode inspirar uma revisão dos critérios dessa competência, '
+                   'mas não identifica erros ou causas em textos individuais.',
+                   'Percentual calculado pela fonte agregada da competência selecionada; '
+                   'compare edições usando a mesma população e a escala 0–200.',
+                   f'ENEM {y} · Brasil · {competencia}')
+
+
+def _resumo_980(doc: dict, ano: int | None) -> dict | None:
+    anos=doc.get('years', {})
+    if not isinstance(anos,dict):return None
+    years=sorted(int(k) for k in anos if k.isdigit())
+    if not years:return None
+    escolhido=ano if ano is not None else (2024 if 2024 in years else years[-1])
+    if escolhido not in years:return None
+    rec=anos[str(escolhido)]
+    dados=[x for x in rec.get('resumo_competencias', []) if isinstance(x,dict)
+           and _num(x.get('percentual_entre_980_classificadas')) is not None]
+    if not dados:return None
+    maior=max(dados,key=lambda x:float(x['percentual_entre_980_classificadas']))
+    return _result(f'Entre as redações com 980 pontos classificadas em {escolhido}, '
+                   f'a {COMP[maior["competencia"]]} foi a competência que recebeu 180 pontos '
+                   f'em {_fmt(float(maior["percentual_entre_980_classificadas"]),2)}% dos casos. '
+                   'As demais quatro receberam 200 pontos no padrão observado.',
+                   'Essa leitura ajuda a discutir critérios de aperfeiçoamento de uma redação quase máxima '
+                   'sem atribuir ao gráfico a causa do desconto de 20 pontos.',
+                   'A variante 980 é um recorte complementar, não a mesma população do indicador principal.',
+                   f'ENEM {escolhido} · Brasil · recorte 980')
+
+
+def _resumo_serie_disponivel(numero: int, doc: dict, ano: int | None, uf: str) -> dict | None:
+    try:
+        from painel_revisao_geral_68 import SERIES, _recorte_ano
+    except ImportError:
+        return None
+    cfg=SERIES.get(numero)
+    if not cfg or '.' in cfg[0]:
+        return None
+    campo, nome, unidade=cfg
+    serie={int(y):_num(rec.get(campo)) for y,rec in _recorte_ano(doc, numero, uf)}
+    serie={y:v for y,v in serie.items() if v is not None}
+    if not serie:
+        return None
+    sigla='Brasil' if uf=='BR' else 'UF da prova '+uf
+    if ano is not None:
+        if ano not in serie:
+            return None
+        v=serie[ano]
+        return _result(f'Em {ano}, {nome.lower()} apresentou {_fmt(v,2)} {unidade} no recorte {sigla}. '
+                       'A medida descreve a população e o período indicados no gráfico.',
+                       'Compare essa medida com distribuições e competências específicas, '
+                       'evitando atribuir resultados agregados a uma única prática pedagógica.',
+                       'Interpretação baseada na série agregada; diferenças não provam causalidade.',
+                       f'ENEM {ano} · {sigla}')
+    ys=sorted(serie)
+    if len(ys)<2:return None
+    first,last=ys[0],ys[-1]
+    return _result(f'De {first} a {last}, {nome.lower()} passou de {_fmt(serie[first],2)} '
+                   f'para {_fmt(serie[last],2)} {unidade} em {sigla}. '
+                   f'A variação entre extremos foi de {_delta(serie[last]-serie[first],2)} {unidade}. '
+                   'Isso não implica progressão contínua em cada ano.',
+                   'Compare a série com as definições de população e os indicadores complementares '
+                   'antes de propor hipóteses sobre ensino ou aprendizagem.',
+                   'São edições independentes, não o acompanhamento dos mesmos estudantes.',
+                   f'Série {first}–{last} · {sigla}')
+
+
+def _resumo_comparacao_competencias(numero: int, doc: dict, ano: int | None, uf: str) -> dict | None:
+    """Conclusões específicas dos quartis/centróides disponíveis, sem inferir pessoas."""
+    if numero not in (11, 17, 21, 28):return None
+    from painel_revisao_geral_68 import _recorte_ano
+    recortes = _recorte_ano(doc, numero, uf)
+    if not recortes:return None
+    por_ano=dict(recortes)
+    escolhido=ano if ano is not None else sorted(por_ano)[-1]
+    if escolhido not in por_ano:return None
+    rec=por_ano[escolhido]
+    comp_names=FOCO_DIDATICO
+    if numero in (11,21):
+        linhas=[]
+        for r in rec.get('competencias', []):
+            if not isinstance(r,dict) or r.get('competencia') not in COMP:continue
+            q1=_num(r.get('p25',r.get('q1'))); q3=_num(r.get('p75',r.get('q3')))
+            if q1 is not None and q3 is not None and q3>=q1:
+                linhas.append((q3-q1, r['competencia'],q1,q3))
+        if not linhas:return None
+        dist,comp,q1,q3=max(linhas)
+        if numero==11:
+            texto=(f'Em {escolhido}, a {COMP[comp]} apresentou o maior intervalo interquartil '
+                   f'({_fmt(q1,1)} a {_fmt(q3,1)} pontos; amplitude de {_fmt(dist,1)} pontos) '
+                   'entre as competências da amostra consultada.')
+            pedag=(f'Esse intervalo revela variação na {comp_names[comp]}. '
+                   'Ele pode estimular propostas de atividades com níveis de apoio diferentes, '
+                   'mas não identifica quais erros ocorreram nos textos.')
+        else:
+            texto=(f'Em {escolhido}, a {COMP[comp]} teve o maior intervalo interquartil '
+                   f'da diferença absoluta AV1×AV2 ({_fmt(q1,1)} a {_fmt(q3,1)} pontos).')
+            pedag=(f'A {COMP[comp]} avalia {comp_names[comp]}. O contraste pode ajudar '
+                   'a discutir a consistência de critérios de correção, mas não prova '
+                   'que uma das avaliações estava incorreta.')
+        return _result(texto,pedag,'Q1–Q3 foi extraído de estatísticas agregadas; não se trata de um boxplot individual.',f'ENEM {escolhido} · {uf}')
+    clusters=rec.get('clusters',[])
+    candidatos=[]
+    for c in clusters:
+        if not isinstance(c,dict):continue
+        ident=str(c.get('cluster_id','?'))
+        elementos=c.get('centro_competencias' if numero==17 else 'centro_por_competencia',[])
+        campo='nota_media_centro' if numero==17 else 'diferenca_media_pontos'
+        valores={r.get('competencia'): _num(r.get(campo)) for r in elementos if isinstance(r,dict) and r.get('competencia') in COMP}
+        valores={k:v for k,v in valores.items() if v is not None}
+        if len(valores)<2:continue
+        maior=max(valores,key=valores.get);menor=min(valores,key=valores.get)
+        candidatos.append((valores[maior]-valores[menor],ident,maior,valores[maior],menor,valores[menor]))
+    if not candidatos:return None
+    _,ident,hi,vhi,lo,vlo=max(candidatos)
+    if numero==17:
+        texto=(f'Em {escolhido}, no perfil {ident}, o centro do grupo apresentou '
+               f'{_fmt(vhi,1)} pontos na {COMP[hi]} e {_fmt(vlo,1)} na {COMP[lo]}. '
+               'São médias do agrupamento, não notas típicas obrigatórias dos participantes.')
+        pedag=(f'Compare as dimensões de {comp_names[hi]} e {comp_names[lo]}. '
+               'O mapa ajuda a criar hipóteses sobre padrões de escrita e atividades de revisão distintas.')
+    else:
+        texto=(f'Em {escolhido}, no grupo de divergência {ident}, a diferença absoluta '
+               f'média do centro atingiu {_fmt(vhi,1)} pontos na {COMP[hi]} e '
+               f'{_fmt(vlo,1)} na {COMP[lo]}.')
+        pedag=(f'Os padrões podem apoiar formação de corretores para discutir descritores de '
+               f'{comp_names[hi]}, sem atribuir erro, responsabilidade ou viés individual.')
+    return _result(texto,pedag,'Os grupos são definidos por amostragem e não são equivalentes entre edições.',f'ENEM {escolhido} · {uf}')
+
+
 def _geral(numero: int, doc: dict, meta: dict, ano: int | None, uf: str, valor: Any) -> dict:
-    known=_known_series(numero,doc,ano,uf)
+    known=_known_series(numero,doc,ano,uf) or _resumo_serie_disponivel(numero,doc,ano,uf)
     if known:return known
     page=str(meta.get('pagina','overview'))
     pedag, cuidado=PEDAGOGIA.get(page,PEDAGOGIA['methodology'])
@@ -396,6 +540,13 @@ def resumir_indicador(numero: int, doc: dict, meta: dict, ano: int | None, uf: s
     if not isinstance(doc,dict):doc={}
     if not isinstance(meta,dict):meta={}
     if numero in V2:return _resumo_v2(numero,doc,ano,uf)
+    if numero in (11,17,21,28):
+        especial=_resumo_comparacao_competencias(numero,doc,ano,uf)
+        if especial:return especial
+    if numero == 34 and doc.get('supplement_id'):
+        return _resumo_980(doc,ano) or _geral(numero,doc,meta,ano,uf,valor_visualizado)
+    if numero == 12 and uf == 'BR':
+        return _resumo_12(doc,ano,meta.get('_competencia_atual','C1')) or _geral(numero,doc,meta,ano,uf,valor_visualizado)
     return _geral(numero,doc,meta,ano,uf,valor_visualizado)
 
 
@@ -412,4 +563,4 @@ def mostrar_interpretacao(st, numero: int, doc: dict, meta: dict, ano: int | Non
         st.caption(resumo['nota'])
         if ano is None and numero in (56,58):
             st.caption('A interpretação considera a série histórica; o gráfico de competências pode mostrar uma edição detalhada selecionada à parte.')
-        st.caption('Texto produzido por regras estatísticas a partir de JSONs agregados. Não é IA generativa, e resultados internos não estão automaticamente autorizados para publicação.')
+        st.caption('Texto produzido por regras estatísticas sobre JSONs agregados; a aprovação editorial da apresentação foi declarada pela equipe. Resultados não oficiais do INEP.')

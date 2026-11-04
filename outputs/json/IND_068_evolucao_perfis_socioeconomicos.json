@@ -1,0 +1,184 @@
+{
+  "indicator_id": "IND-068",
+  "slug": "IND_068_evolucao_perfis_socioeconomicos",
+  "status": "draft",
+  "generated_at": "2026-11-03T11:53:59.389355+00:00",
+  "dashboard_target": "pages.temporal.socio_clusters",
+  "population_note": "AMOSTRA_SOCIO_ML",
+  "method_note": "Comparação só de clusters projetados no MESMO modelo fixo; sem comparabilidade caso ano ausente.",
+  "scope": "2019–2025; participações e não pessoas únicas",
+  "results": [
+    {
+      "ano": 2019,
+      "cluster_referencia": "C1",
+      "n_amostra": 9856,
+      "percentual_amostra": 65.706667,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2019,
+      "cluster_referencia": "C2",
+      "n_amostra": 4577,
+      "percentual_amostra": 30.513333,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2019,
+      "cluster_referencia": "C3",
+      "n_amostra": 567,
+      "percentual_amostra": 3.78,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2020,
+      "cluster_referencia": "C1",
+      "n_amostra": 10243,
+      "percentual_amostra": 69.434653,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2020,
+      "cluster_referencia": "C2",
+      "n_amostra": 4012,
+      "percentual_amostra": 27.196312,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2020,
+      "cluster_referencia": "C3",
+      "n_amostra": 497,
+      "percentual_amostra": 3.369035,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2021,
+      "cluster_referencia": "C1",
+      "n_amostra": 9230,
+      "percentual_amostra": 61.533333,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2021,
+      "cluster_referencia": "C2",
+      "n_amostra": 5339,
+      "percentual_amostra": 35.593333,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2021,
+      "cluster_referencia": "C3",
+      "n_amostra": 431,
+      "percentual_amostra": 2.873333,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2022,
+      "cluster_referencia": "C1",
+      "n_amostra": 8967,
+      "percentual_amostra": 59.78,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2022,
+      "cluster_referencia": "C2",
+      "n_amostra": 5575,
+      "percentual_amostra": 37.166667,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2022,
+      "cluster_referencia": "C3",
+      "n_amostra": 458,
+      "percentual_amostra": 3.053333,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2023,
+      "cluster_referencia": "C1",
+      "n_amostra": 9447,
+      "percentual_amostra": 62.98,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2023,
+      "cluster_referencia": "C2",
+      "n_amostra": 5003,
+      "percentual_amostra": 33.353333,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2023,
+      "cluster_referencia": "C3",
+      "n_amostra": 550,
+      "percentual_amostra": 3.666667,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2024,
+      "cluster_referencia": "C1",
+      "n_amostra": 9378,
+      "percentual_amostra": 62.52,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2024,
+      "cluster_referencia": "C2",
+      "n_amostra": 4984,
+      "percentual_amostra": 33.226667,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2024,
+      "cluster_referencia": "C3",
+      "n_amostra": 638,
+      "percentual_amostra": 4.253333,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2025,
+      "cluster_referencia": "C1",
+      "n_amostra": 9543,
+      "percentual_amostra": 63.62,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2025,
+      "cluster_referencia": "C2",
+      "n_amostra": 4750,
+      "percentual_amostra": 31.666667,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    },
+    {
+      "ano": 2025,
+      "cluster_referencia": "C3",
+      "n_amostra": 707,
+      "percentual_amostra": 4.713333,
+      "status": "ok",
+      "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+    }
+  ],
+  "review": "pendente_revisao_academica_e_privacidade_contextual",
+  "modo_execucao": "rascunho_interno_nao_publicar",
+  "publicacao_autorizada": false,
+  "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
+}

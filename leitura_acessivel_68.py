@@ -44,7 +44,7 @@ GUIAS = {
       'Quanto maior a dispersão, mais diferentes são as notas naquela competência. Não significa que ela seja necessariamente "mais difícil" para todas as pessoas.',
       'Diferenças de dispersão podem orientar atividades com diferentes níveis de apoio.'),
  12: ('Conta redações em cada pontuação ou nível observado nas cinco competências.',
-      'Leia o nível junto ao total de redações; uma barra alta mostra frequência, não que o nível seja o ideal.',
+      'Cada barra representa o percentual de redações válidas naquela pontuação e naquela competência. Barra alta indica frequência, não um nível ideal.',
       'Ajuda a perceber em quais competências certas faixas de pontuação se concentram.'),
  13: ('Compara se as pontuações de duas competências costumam aumentar ou diminuir juntas.',
       'Uma correlação positiva indica que notas altas em uma frequentemente acompanham notas altas em outra. Uma negativa sugere sentidos opostos; valor próximo de zero indica associação linear ou monotônica fraca, conforme o método.',
@@ -208,9 +208,9 @@ GUIAS = {
  70: ('Mostra a quantidade ou porcentagem de informações ausentes nas bases analisadas.',
       'Um campo vazio significa ausência de informação, não necessariamente resposta negativa ou valor zero.',
       'Ajuda a entender por que certos resultados são calculados com grupos menores.'),
- 71: ('Mostra diagnósticos de grupos com poucos registros e necessidades de proteção da divulgação.',
-      'Uma contagem pequena pode revelar informações indiretas quando combinada com outras tabelas; nem toda célula pequena pode ser exibida publicamente.',
-      'Ajuda a explicar por que transparência estatística também precisa considerar privacidade.'),
+ 71: ('Quantifica células com poucos registros em tabelas agregadas dos indicadores.',
+      'Uma célula pequena indica menor base de observações naquela categoria e pode produzir estimativas instáveis; não é uma contagem de redações com nota baixa.',
+      'Ajuda a distinguir volume de dados, qualidade das estimativas e rastreabilidade da pesquisa.'),
  72: ('Informa a origem das bases, as versões dos resultados e detalhes de processamento.',
       'É a ficha de procedência do painel: permite verificar de que arquivos e critérios veio um número. Não é indicador de desempenho escolar.',
       'Ajuda a conferir se duas análises podem ser comparadas com segurança.'),
@@ -220,7 +220,7 @@ GUIAS = {
 CUIDADOS = {
  1: 'O total do denominador corresponde aos registros da base de resultados analisada, não a todos os inscritos, e o consolidado histórico soma participações, não pessoas únicas.',
  5: 'Os percentis são calculados sobre redações válidas. Não some percentis de anos diferentes nem calcule a média de percentis para produzir o resultado do período.',
- 8: 'Notas máximas são eventos raros; contagens pequenas exigem revisão de privacidade, inclusive comparando outras tabelas.',
+ 8: 'Notas máximas são eventos raros: compare quantidade, proporção e denominador para evitar extrapolar resultados.',
  17: 'Os grupos foram obtidos por amostragem/modelo; proporções amostrais não equivalem automaticamente a proporções da população.',
  18: 'Os nomes dos grupos podem mudar de um recorte para outro; o tamanho não define mérito.',
  22: 'Os critérios de 2024 foram aplicados retrospectivamente para comparação; não representam necessariamente decisões históricas de cada edição.',
@@ -234,10 +234,10 @@ CUIDADOS = {
  55: 'Resultados agregados de uma amostra com notas disponíveis em 2019–2024; não há ligação validada com notas de 2025.',
  56: 'M1–M3 são perfis materiais, não níveis de escrita. Sem comparação causal.',
  57: 'Percentuais de grupos distintos devem ser lidos com seus denominadores próprios.',
- 58: 'Há risco de revelação indireta de células pequenas ao combinar resultados de outras tabelas; exige auditoria de divulgação.',
+ 58: 'Com amostras pequenas, os percentuais podem oscilar bastante; compare sempre os denominadores e as medidas de desconto.',
  59: 'Diferença entre notas não comprova viés, erro nem discriminação.',
  68: 'Composição de amostra, não tendência da população brasileira. 2025 não foi vinculado às notas.',
- 71: 'Não interprete a existência de uma célula pequena como autorização para divulgá-la.',
+ 71: 'Contagens pequenas podem implicar incerteza elevada e exigem leitura contextual do tamanho do grupo.',
 }
 
 GLOSSARIO_RAPIDO = {
@@ -256,7 +256,9 @@ GLOSSARIO_RAPIDO = {
  69: 'Taxa de junção = percentual de registros que correspondem entre bases.',
 }
 
-NUMERICOS_VERIFICADOS = frozenset({2,20,24,25,30,55,56,57,58,59,68})
+NUMERICOS_VERIFICADOS = frozenset(GUIAS)  # resumo contextual sempre que houver evidência agregada
+
+from orientacoes_pedagogicas_68 import ACOES
 
 
 def texto_leigo(numero: int, meta: dict, ano: int | None, uf: str) -> dict:
@@ -272,10 +274,23 @@ def texto_leigo(numero: int, meta: dict, ano: int | None, uf: str) -> dict:
 def mostrar_leitura_acessivel(st, numero: int, doc: dict, meta: dict,
                               ano: int | None, uf: str, valor_visualizado: Any = None,
                               resumo_especifico: dict | None = None) -> None:
+    # Quando o painel exibe um ano/competência detalhada dentro do recorte global,
+    # alinhar a interpretação à seleção efetivamente mostrada.
+    if ano is None and numero in (11,12,17,21,28):
+        ano_detalhado = getattr(st,'session_state',{}).get(f'geral_ind{numero:03d}_ano')
+        if isinstance(ano_detalhado, int):
+            ano = ano_detalhado
+    if ano is None and numero == 34 and doc.get('supplement_id'):
+        ano_detalhado = getattr(st,'session_state',{}).get('ind034_980_ano')
+        if isinstance(ano_detalhado, int):
+            ano = ano_detalhado
     guia = texto_leigo(numero, meta, ano, uf)
     if resumo_especifico is None and numero in NUMERICOS_VERIFICADOS:
         from interpretacao_regras_enem import resumir_indicador
-        resumo_especifico = resumir_indicador(numero, doc, meta, ano, uf, valor_visualizado)
+        meta_atual=dict(meta)
+        if numero == 12:
+            meta_atual['_competencia_atual'] = getattr(st, 'session_state', {}).get('ind012_comp', 'C1')
+        resumo_especifico = resumir_indicador(numero, doc, meta_atual, ano, uf, valor_visualizado)
     with st.expander('Entenda este resultado · explicação simples', expanded=(numero in (1,5))):
         st.caption(guia['recorte']+' · Explicação automática baseada em regras')
         st.markdown('**O que está sendo contado ou comparado?**')
@@ -289,6 +304,10 @@ def mostrar_leitura_acessivel(st, numero: int, doc: dict, meta: dict,
             st.write(resumo_especifico['texto'])
         st.markdown('**O que isso pode nos ensinar?**')
         st.write(guia['pedag'])
+        if resumo_especifico and resumo_especifico.get('pedagogia') and resumo_especifico['pedagogia'] != guia['pedag']:
+            st.write(resumo_especifico['pedagogia'])
+        st.markdown('**Como usar esta leitura pedagogicamente?**')
+        st.write(ACOES[numero])
         st.markdown('**Antes de tirar uma conclusão**')
         aviso = ('São dados de grupos de participantes, não uma avaliação de cada pessoa. '
                  'Diferenças e associações não provam relação de causa e efeito. '
@@ -296,4 +315,4 @@ def mostrar_leitura_acessivel(st, numero: int, doc: dict, meta: dict,
         st.caption((guia['cuidado'] + ' ' if guia['cuidado'] else '') + aviso)
         if resumo_especifico and resumo_especifico.get('nota'):
             st.caption(resumo_especifico['nota'])
-        st.caption('Texto gerado por regras transparentes, sem IA generativa. Resultados de trabalho interno sujeitos a revisão acadêmica e de privacidade.')
+        st.caption('Texto gerado por regras transparentes sobre dados agregados; interpretação pedagógica indicativa, sem atribuição causal ou diagnóstico individual. Apresentação editorial aprovada pela equipe.')

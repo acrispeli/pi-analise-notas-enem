@@ -16,6 +16,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+CORES_COMPETENCIAS = {
+    'C1': '#2667A9', 'C2': '#D97706', 'C3': '#1F8A70',
+    'C4': '#7C5DB5', 'C5': '#C44E52',
+}
+
 # Chave: indicador -> (campo preexistente, título, unidade)
 SERIES = {
     1: ('n_validas', 'Redações válidas', 'redações'),
@@ -186,7 +191,7 @@ def _pontos_series(ind:int, anos:list[tuple[int,dict]]):
 
 def _tracar(st,fig,titulo:str,unidade:str,altura=390):
     fig.update_layout(title=titulo,height=altura,margin=dict(l=25,r=25,t=65,b=55),
-                      legend_title_text='Série',yaxis_title=unidade, xaxis_title=None)
+                      legend_title_text='Série',yaxis_title=unidade)
     st.plotly_chart(fig,use_container_width=True)
 
 
@@ -204,7 +209,9 @@ def _historico(st,ind,anos):
         if len(opcoes)>5:
             selecao=st.selectbox('Par ou componente para evolução',opcoes,key=f'hist_ind{ind:03d}_serie')
             df=df.loc[df['Série']==selecao]
-        fig=px.line(df,x='Ano',y='Valor',color='Série',markers=True)
+        fig=px.line(df,x='Ano',y='Valor',color='Série',markers=True,
+                    color_discrete_map={k + ' · ' + v[:34]: CORES_COMPETENCIAS[k]
+                                        for k,v in COMPETENCIAS.items()})
     else:
         fig=px.line(df,x='Ano',y='Valor',markers=True)
     _tracar(st,fig,'Evolução histórica · '+etiqueta,unidade)
@@ -230,8 +237,160 @@ def _tabela_dados(st,lista,nome='Tabela de dados'):
             st.dataframe(df[simples].head(200),hide_index=True,use_container_width=True)
 
 
+def _mapa_centroides(st, ind: int, rec: dict) -> bool:
+    """Mostra o PERFIL dos grupos, sem confundir percentual amostral e média."""
+    clusters = rec.get('clusters', [])
+    if not isinstance(clusters, list) or not clusters:
+        return False
+    registros = []
+    for c in clusters:
+        if not isinstance(c, dict):
+            continue
+        ident = str(c.get('cluster_id', c.get('cluster', '?')))
+        centros = (c.get('centro_competencias', []) if ind == 17
+                   else c.get('centro_por_competencia', []))
+        chave = 'nota_media_centro' if ind == 17 else 'diferenca_media_pontos'
+        if isinstance(centros, list) and centros:
+            for row in centros:
+                if isinstance(row, dict) and row.get('competencia') in COMPETENCIAS and _numerico(row.get(chave)):
+                    registros.append({'Grupo': ident, 'Competência': row['competencia'],
+                                      'Pontos': float(row[chave])})
+        else:
+            valores = c.get('centro_pontos' if ind == 17 else 'centro_divergencias_pontos', [])
+            for competencia, valor in zip(COMPETENCIAS, valores):
+                if _numerico(valor):
+                    registros.append({'Grupo': ident, 'Competência': competencia, 'Pontos': float(valor)})
+    if not registros:
+        return False
+    df = pd.DataFrame(registros)
+    grade = df.pivot_table(index='Grupo', columns='Competência', values='Pontos', aggfunc='first')
+    grade = grade.reindex(sorted(grade.index), axis=0).reindex(list(COMPETENCIAS), axis=1)
+    if grade.isna().all(axis=None):
+        return False
+    titulo = ('Notas médias dos centróides de cada perfil' if ind == 17
+              else 'Diferença absoluta média AV1 × AV2 nos centróides')
+    fig = px.imshow(grade, text_auto='.1f', aspect='auto', zmin=0,
+                    zmax=200 if ind == 17 else None, color_continuous_scale='Blues',
+                    labels={'x':'Competência','y':'Perfil de agrupamento','color':'Pontos'})
+    _tracar(st, fig, titulo, 'Perfil', altura=max(360, 135 + 58 * len(grade)))
+    st.caption(('Cada célula é a pontuação média no centro do grupo (escala 0–200); '
+                'não representa a nota de todos os integrantes.' if ind == 17 else
+                'Cada célula representa a divergência absoluta média no centro do grupo, '
+                'em pontos. Valores maiores não demonstram erro ou viés de avaliadores.') +
+               ' P1, P2 etc. são identificadores definidos no recorte e não equivalem automaticamente entre edições.')
+    tamanhos = pd.DataFrame([{'Grupo': c.get('cluster_id', '?'),
+                              'Participação (%)': c.get('percentual_amostra'),
+                              'N da amostra': c.get('n_amostra')}
+                             for c in clusters if isinstance(c, dict)])
+    tamanhos = tamanhos.dropna(subset=['Participação (%)'])
+    if not tamanhos.empty:
+        with st.expander('Participação e tamanho dos grupos na amostra'):
+            chart = px.bar(tamanhos, x='Grupo', y='Participação (%)', hover_data=['N da amostra'],
+                           title='Representatividade amostral de cada grupo')
+            _tracar(st, chart, 'Participação dos perfis', '% da amostra')
+            st.dataframe(tamanhos, hide_index=True, use_container_width=True)
+    return True
+
+
+def _quartis_por_competencia(st, ind: int, rec: dict) -> bool:
+    """Intervalos Q1–Q3 de agregados, sem fabricar observações individuais."""
+    rows = rec.get('competencias', [])
+    if not isinstance(rows, list):
+        return False
+    d=[]
+    for r in rows:
+        if not isinstance(r,dict):
+            continue
+        comp=r.get('competencia')
+        q1=r.get('p25',r.get('q1'))
+        q3=r.get('p75',r.get('q3'))
+        med=r.get('mediana',r.get('mediana_controle'))
+        media=r.get('media',r.get('media_controle'))
+        if comp in COMPETENCIAS and all(_numerico(v) for v in (q1,q3,med)) and q1<=q3:
+            d.append({'competencia':comp,'Q1':float(q1),'Q3':float(q3),
+                      'Mediana':float(med),'Média':float(media) if _numerico(media) else None})
+    if not d:
+        return False
+    fig=go.Figure()
+    for r in d:
+        fig.add_trace(go.Scatter(x=[r['Q1'],r['Q3']], y=[r['competencia']]*2,
+                      mode='lines', line={'color':CORES_COMPETENCIAS[r['competencia']], 'width':12},
+                      showlegend=False, hovertemplate=f"{r['competencia']} · Q1–Q3: {r['Q1']:.1f}–{r['Q3']:.1f} pontos<extra></extra>"))
+    fig.add_trace(go.Scatter(x=[r['Mediana'] for r in d],y=[r['competencia'] for r in d],
+                     mode='markers',name='Mediana',marker={'symbol':'diamond','color':'#151515','size':10},
+                     hovertemplate='Mediana: %{x:.1f} pontos<extra></extra>'))
+    if any(r['Média'] is not None for r in d):
+        fig.add_trace(go.Scatter(x=[r['Média'] for r in d],y=[r['competencia'] for r in d],
+                     mode='markers',name='Média',marker={'symbol':'circle-open','color':'#151515','size':12},
+                     hovertemplate='Média: %{x:.1f} pontos<extra></extra>'))
+    fig.update_xaxes(title_text='Pontos (0–200)',range=[0,200])
+    fig.update_layout(yaxis={'categoryorder':'array','categoryarray':['C5','C4','C3','C2','C1']})
+    _tracar(st,fig,'Faixa interquartil (Q1–Q3), mediana e média das competências','Competência',altura=420)
+    st.caption('As faixas indicam do primeiro ao terceiro quartil; os símbolos representam mediana e média. '
+               'São estatísticas agregadas, não um boxplot construído a partir de redações individuais.')
+    _tabela_dados(st, d, 'Tabela de quartis e medidas de tendência central')
+    return True
+
+
+def renderizar_variante_980(st, doc: dict, ano: int | None, uf: str) -> bool:
+    """IND-034 complementar: entre redações com 980, competência que ficou com 180."""
+    if uf != 'BR':
+        st.info('A variante complementar 980 não declara recorte por UF. Selecione Brasil.')
+        return True
+    years = doc.get('years', {})
+    if not isinstance(years,dict):
+        st.error('Estrutura da variante 980 não reconhecida.')
+        return True
+    disponiveis = sorted(int(k) for k in years if str(k).isdigit())
+    if not disponiveis:
+        st.info('Não há edições disponíveis na variante 980.')
+        return True
+    hist=[{'Edição':str(y),'Redações com 980 pontos':years[str(y)].get('n_980_total')}
+          for y in disponiveis if _numerico(years[str(y)].get('n_980_total'))]
+    st.markdown('#### Complemento do IND-034 — redações com exatamente 980 pontos')
+    st.caption('Uma redação com nota 980 pode ter 200 pontos em quatro competências e 180 em uma. '
+               'O gráfico mostra em qual competência ocorreu esse desconto de 20 pontos, na população classificada.')
+    if len(hist)>1:
+        with st.expander('Histórico de redações com 980 pontos'):
+            f=px.line(pd.DataFrame(hist),x='Edição',y='Redações com 980 pontos',markers=True)
+            _tracar(st,f,'Redações com 980 pontos em cada edição','redações')
+    escolhido=ano if ano is not None else st.selectbox('Edição do recorte 980',disponiveis,
+                                      index=disponiveis.index(2024) if 2024 in disponiveis else len(disponiveis)-1,
+                                      key='ind034_980_ano')
+    if escolhido not in disponiveis:
+        st.info(f'A variante não contém dados para {escolhido}.')
+        return True
+    rec=years[str(escolhido)]
+    dados=pd.DataFrame(rec.get('resumo_competencias',[]))
+    col='percentual_entre_980_classificadas'
+    if not {'competencia',col,'n_980_competencia'}.issubset(dados.columns):
+        st.info('Dados de competência incompletos nesta edição.')
+        return True
+    dados=dados.copy().dropna(subset=[col]);dados['competencia']=dados['competencia'].astype(str)
+    fig=px.bar(dados,x='competencia',y=col,color='competencia',
+               color_discrete_map=CORES_COMPETENCIAS, text_auto='.1f',
+               hover_data={'n_980_competencia':True},
+               labels={'competencia':'Competência com 180 pontos',col:'% entre as redações de 980 classificadas'})
+    fig.update_layout(showlegend=False)
+    _tracar(st,fig,f'Competência com desconto de 20 pontos · ENEM {escolhido}',
+            '% das redações com 980 classificadas')
+    st.metric('Redações com 980 pontos', f"{int(rec.get('n_980_total',0)):,}".replace(',','.'))
+    st.caption('Denominador: redações de 980 pontos classificadas com quatro competências em 200 e uma em 180. '
+               'Uma barra mais alta não identifica a causa do desconto nem uma dificuldade individual.')
+    _tabela_dados(st,dados.to_dict('records'),'Tabela do recorte 980')
+    return True
+
+
 def _anual_basico(st,ind,rec):
     cfg=ANUAL.get(ind)
+    if ind in (17,28) and _mapa_centroides(st, ind, rec):
+        return True
+    if ind in (11,21) and _quartis_por_competencia(st,ind,rec):
+        if ind == 11:
+            st.caption('O desvio-padrão complementa o intervalo Q1–Q3; a diferença entre essas métricas é explicada na tabela.')
+        else:
+            st.caption('AV1 × AV2: os quartis representam diferenças absolutas entre as duas avaliações por competência.')
+        return True
     if ind==12:
         comp=st.selectbox('Competência para distribuição de níveis',list(COMPETENCIAS),key='ind012_comp')
         row=next((x for x in rec.get('competencias',[]) if x.get('competencia')==comp),{})
@@ -332,6 +491,20 @@ def _anual_basico(st,ind,rec):
     if ind==37:
         testes=rec.get('tests',{})
         ocorrencia=testes.get('ocorrencia',{}) if isinstance(testes,dict) else {}
+        magnitude=testes.get('magnitude',{}) if isinstance(testes,dict) else {}
+        if ocorrencia and magnitude:
+            p1=ocorrencia.get('p_valor')
+            p2=magnitude.get('p_valor')
+            w=magnitude.get('kendall_w')
+            resultados=[]
+            if _numerico(p1): resultados.append('Q de Cochran · p ' + ('<0,001' if p1 < 0.001 else f'= {p1:.3g}'))
+            if _numerico(p2): resultados.append('Friedman · p ' + ('<0,001' if p2 < 0.001 else f'= {p2:.3g}'))
+            if _numerico(w): resultados.append(f'W de Kendall = {w:.3f}')
+            if resultados:
+                st.caption(' | '.join(resultados))
+            st.caption('Q de Cochran compara frequências de desconto; Friedman compara magnitudes; '
+                       'W de Kendall resume o tamanho de efeito. Um p-valor muito pequeno não descreve a magnitude '
+                       'nem demonstra relação causal.')
         linhas=ocorrencia.get('frequencias_por_competencia',[])
         if linhas:
             df=pd.DataFrame([r for r in linhas if isinstance(r,dict) and not r.get('suprimido')])
@@ -377,10 +550,16 @@ def _anual_basico(st,ind,rec):
     if df.empty:
         st.info('Não há valores exibíveis neste recorte.'); return True
     df[x]=df[x].astype(str)
-    fig=px.bar(df.head(60),x=x,y=y)
+    if x == 'competencia':
+        fig=px.bar(df.head(60),x=x,y=y,color=x,color_discrete_map=CORES_COMPETENCIAS)
+        fig.update_layout(showlegend=False)
+    else:
+        fig=px.bar(df.head(60),x=x,y=y)
     if x in ('competencia','cluster_id'):
         fig.update_xaxes(categoryorder='array',categoryarray=sorted(df[x].unique()))
     _tracar(st,fig,titulo,unidade,altura=410 if len(df)<15 else 480)
+    if ind == 20:
+        st.caption('As faixas possuem larguras diferentes: cada barra representa o percentual de pares na sua própria faixa, não uma densidade por ponto.')
     if x=='competencia':
         with st.expander('O que significa cada competência?'):
             for k,v in COMPETENCIAS.items():st.markdown(f'**{k}:** {v}')
@@ -452,7 +631,8 @@ def renderizar_resultados_gerais(st,doc:dict,ind:int,ano:int|None,uf:str)->bool:
         if 'tamanho_bytes' in df:
             topo=df.nlargest(20,'tamanho_bytes').copy()
             topo['Tamanho (MB)']=topo['tamanho_bytes']/1_000_000
-            fig=px.bar(topo,x='Tamanho (MB)',y='arquivo',orientation='h',
+            topo['Arquivo'] = topo['arquivo'].map(lambda x: Path(str(x)).name)
+            fig=px.bar(topo,x='Tamanho (MB)',y='Arquivo',orientation='h',
                        labels={'arquivo':'Arquivo de origem'},title='20 maiores arquivos da proveniência')
             fig.update_yaxes(categoryorder='total ascending')
             _tracar(st,fig,'Arquivos por tamanho','MB')

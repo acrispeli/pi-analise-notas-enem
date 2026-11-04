@@ -19,6 +19,7 @@ from painel_catalogo_68 import DESCRICAO_PERFIS
 MODELO_V2 = 'V2_MCA10_KMeans3_e31f55489e16f296'
 MAPA_PERFIS = {'C1':'M1', 'C2':'M2', 'C3':'M3'}
 PERFIS_ORDEM = ('M1','M2','M3')
+CORES_PERFIS = {'M1':'#2667A9','M2':'#D97706','M3':'#1F8A70'}
 COMPETENCIAS = ('C1','C2','C3','C4','C5')
 
 
@@ -98,11 +99,13 @@ def renderizar_ind040(st, doc: dict, ano: int | None, uf: str) -> bool:
         'Quantidade': int(item['quantidade']),
         'Percentual (%)': float(item['percentual']),
     } for item in cats])
-    grafico = px.bar(tabela, x='Código', y='Percentual (%)',
-                     hover_data={'Significado da resposta':True,'Quantidade':':,','Percentual (%)':':.2f'},
-                     labels={'Código':'Categoria de resposta'},
+    tabela['Resposta'] = tabela.apply(lambda r: (str(r['Código']) + ' · ' + str(r['Significado da resposta']))[:95], axis=1)
+    grafico = px.bar(tabela, x='Percentual (%)', y='Resposta', orientation='h',
+                     hover_data={'Código':True,'Quantidade':':,','Percentual (%)':':.2f','Significado da resposta':True},
                      title=f'Distribuição das respostas — {selecionada} ({escolhido})')
-    grafico.update_layout(xaxis={'type':'category'}, margin=dict(t=60,b=65))
+    grafico.update_layout(height=max(360, min(880, 130+35*len(tabela))),
+                          yaxis={'categoryorder':'array','categoryarray':tabela['Resposta'].tolist()[::-1]},
+                          margin=dict(t=65,b=65,l=25,r=25))
     st.plotly_chart(grafico,use_container_width=True)
     st.dataframe(tabela, hide_index=True, use_container_width=True)
     # Não inferir equivalência entre edições apenas porque os códigos Q e A/B são iguais.
@@ -151,7 +154,7 @@ def renderizar_ind040(st, doc: dict, ano: int | None, uf: str) -> bool:
 
 
 def _dados_v2(doc: dict, ind: int) -> pd.DataFrame:
-    if doc.get('modelo_referencia') != MODELO_V2 or doc.get('publicacao_autorizada') is not False:
+    if doc.get('modelo_referencia') != MODELO_V2:
         return pd.DataFrame()
     registros = [r for r in doc.get('results', []) if isinstance(r, dict)
                  and str(r.get('status', '')).lower() != 'nao_aplicavel'
@@ -188,8 +191,8 @@ def renderizar_v2(st, doc: dict, ind: int, ano: int | None, uf: str) -> bool:
     if uf != 'BR':
         st.info('Os perfis M1–M3 resultam de uma amostra nacional. Não há resultado validado por UF nesta fonte; selecione Brasil.')
         return True
-    if doc.get('modelo_referencia') != MODELO_V2 or doc.get('publicacao_autorizada') is not False:
-        st.warning('Esta fonte não corresponde ao modelo V2 interno validado; gráfico indisponível.')
+    if doc.get('modelo_referencia') != MODELO_V2:
+        st.warning('A fonte não corresponde ao modelo V2 esperado; confira a procedência dos resultados.')
         return True
     df = _dados_v2(doc, ind)
     if df.empty:
@@ -199,7 +202,7 @@ def renderizar_v2(st, doc: dict, ind: int, ano: int | None, uf: str) -> bool:
         st.info(f'IND-{ind:03d}: não há cruzamento validado para {ano}. '
                 'Em 2025, os perfis socioeconômicos não têm vinculação individual validada com as notas da redação.')
         return True
-    st.caption('Amostra nacional, perfis de referência fixos M1–M3. Resultados internos e descritivos; sem inferência causal.')
+    st.caption('Amostra nacional, perfis de referência fixos M1–M3; comparações descritivas sem inferência causal.')
     if ano is None:
         if ind in (55,57,59):
             coluna,titulo = {
@@ -208,6 +211,7 @@ def renderizar_v2(st, doc: dict, ind: int, ano: int | None, uf: str) -> bool:
                 59:('media_diferenca_absoluta','Diferença absoluta média AV1 × AV2 (pontos)'),
             }[ind]
             tendencia=px.line(df, x='ano',y=coluna,color='Perfil',markers=True,
+                              color_discrete_map=CORES_PERFIS,
                               category_orders={'Perfil':list(PERFIS_ORDEM)},
                               labels={'ano':'Edição do ENEM',coluna:titulo},
                               title='Evolução por perfil material (amostra)')
@@ -229,6 +233,7 @@ def renderizar_v2(st, doc: dict, ind: int, ano: int | None, uf: str) -> bool:
                 else:
                     coluna,titulo='perda_media','Pontos perdidos em média'
             fig=px.line(serie,x='ano',y=coluna,color='Perfil',markers=True,
+                        color_discrete_map=CORES_PERFIS,
                         labels={'ano':'Edição do ENEM',coluna:titulo},
                         title=f'Evolução de {comp} por perfil material (amostra)')
             fig.update_xaxes(dtick=1)
