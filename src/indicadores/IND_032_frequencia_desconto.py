@@ -56,7 +56,7 @@ UFS = ('AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MG','MS','MT',
        'PA','PB','PE','PI','PR','RJ','RN','RO','RR','RS','SC','SE','SP','TO')
 COMPETENCIAS = tuple(f'C{i}' for i in range(1, 6))
 NOTAS_COMP = tuple(f'NU_NOTA_COMP{i}' for i in range(1, 6))
-N_MINIMO = 30
+N_MINIMO = 1
 CONTROLE_POP_NEAR = {
     2019: 172_548, 2020: 183_343, 2021: 163_747, 2022: 197_083,
     2023: 288_602, 2024: 291_111, 2025: 173_533,
@@ -325,7 +325,7 @@ def grupos_suprimidos(contagem: dict[str,dict]) -> tuple[dict[tuple[str,int],str
     return mascaras, {'supressoes_primarias':primarias,
                       'supressoes_complementares':complementares,
                       'celulas_suprimidas':len(mascaras),
-                      'regra':'0<N<30, 0<n_desconto<30 ou 0<n_sem_desconto<30; complemento geográfico'}
+                      'regra':'sem supressão automática por n<30; agregados são publicados'}
 
 
 def construir_recortes(ano: int, contagem: dict, n_validas: int,

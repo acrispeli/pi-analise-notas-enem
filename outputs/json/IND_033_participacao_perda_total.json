@@ -2,7 +2,7 @@
   "indicator_id": "IND-033",
   "titulo": "Participação de cada competência na perda total até 1000",
   "status": "draft",
-  "gerado_em_utc": "2026-10-27T23:02:26.275538+00:00",
+  "gerado_em_utc": "2026-10-30T15:58:13.705421+00:00",
   "anos_solicitados": [
     2019,
     2020,
@@ -34,7 +34,7 @@
     "ind031_requerido": true,
     "nao_ler_microdados_novamente": true,
     "ano_2025": "calculável quando IND-031/2025 estiver disponível",
-    "privacidade": "Suprime recortes com 1..29 redações e complemento estadual; proteção cruzada com IND-031 e outros indicadores pendente.",
+    "privacidade": "Não suprime automaticamente agregados com 1..29 redações; proteção cruzada com IND-031 e outros indicadores pendente.",
     "cautelas": [
       "O percentual é participação no total da perda, não proporção de redações com desconto (IND-032).",
       "Os cinco percentuais do mesmo ano/UF somam 100%, sujeitos a arredondamento.",

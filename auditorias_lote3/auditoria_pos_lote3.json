@@ -1,0 +1,68 @@
+{
+  "auditoria": "IND-064-067_069-072",
+  "executada_em_utc": "2026-10-31T15:13:07.201487+00:00",
+  "escopo": "somente leitura de outputs CSV/JSON; sem recálculo dos microdados",
+  "indicadores_presentes": 8,
+  "indicadores_esperados": 8,
+  "checagens": 5723,
+  "falhas": 0,
+  "alertas": 2,
+  "detalhes_falhas": [],
+  "detalhes_alertas": [
+    "IND-071: existem agregados 1–29; revisão de privacidade cruzada obrigatória antes da publicação",
+    "IND-072: hashes registram arquivos gerados, mas não comprovam validade dos microdados de origem"
+  ],
+  "resumo": {
+    "IND-069": {
+      "linhas_csv": 7,
+      "colunas_csv": 21,
+      "csv": "IND_069_taxa_juncao.csv",
+      "json": "IND_069_taxa_juncao.json"
+    },
+    "IND-070": {
+      "linhas_csv": 220,
+      "colunas_csv": 9,
+      "csv": "IND_070_valores_ausentes.csv",
+      "json": "IND_070_valores_ausentes.json"
+    },
+    "IND-064": {
+      "linhas_csv": 7,
+      "colunas_csv": 5,
+      "csv": "IND_064_evolucao_nota.csv",
+      "json": "IND_064_evolucao_nota.json"
+    },
+    "IND-065": {
+      "linhas_csv": 35,
+      "colunas_csv": 6,
+      "csv": "IND_065_evolucao_competencias.csv",
+      "json": "IND_065_evolucao_competencias.json"
+    },
+    "IND-066": {
+      "linhas_csv": 35,
+      "colunas_csv": 7,
+      "csv": "IND_066_evolucao_quase_1000.csv",
+      "json": "IND_066_evolucao_quase_1000.json"
+    },
+    "IND-067": {
+      "linhas_csv": 7,
+      "colunas_csv": 8,
+      "csv": "IND_067_evolucao_divergencias.csv",
+      "json": "IND_067_evolucao_divergencias.json"
+    },
+    "IND-071": {
+      "linhas_csv": 14,
+      "colunas_csv": 11,
+      "csv": "IND_071_diagnostico_celulas_pequenas.csv",
+      "json": "IND_071_diagnostico_celulas_pequenas.json",
+      "grupos_pequenos_detectados": 11103
+    },
+    "IND-072": {
+      "linhas_csv": 138,
+      "colunas_csv": 4,
+      "csv": "IND_072_versao_proveniencia.csv",
+      "json": "IND_072_versao_proveniencia.json"
+    }
+  },
+  "parecer": "SEM_FALHAS_NAS_CHECAGENS_EXECUTADAS",
+  "limites": "sem auditoria de microdados, desempenho de modelos, metodologia ou privacidade cruzada; status draft"
+}

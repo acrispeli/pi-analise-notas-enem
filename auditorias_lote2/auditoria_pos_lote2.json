@@ -1,0 +1,67 @@
+{
+  "versao": "1.1",
+  "gerado_em_utc": "2026-10-30T16:42:27.623794+00:00",
+  "tipo": "auditoria_arquivos_sem_recálculo_microdados",
+  "indicadores_presentes": [
+    21,
+    22,
+    24,
+    25,
+    26,
+    29,
+    33,
+    53,
+    54
+  ],
+  "linhas_csv": {
+    "21": 1120,
+    "22": 224,
+    "24": 224,
+    "25": 224,
+    "26": 1120,
+    "29": 224,
+    "33": 980,
+    "53": 3141,
+    "54": 158
+  },
+  "checagens": {
+    "arquivos_csv_json": 9,
+    "anos_presentes": 6,
+    "geografia_completa": 55,
+    "cinco_competencias": 448,
+    "particao_discrepancias": 224,
+    "contagens_validas": 2436,
+    "ufs_fecham_brasil": 80,
+    "particao_revisores": 448,
+    "amostra_atipicos": 224,
+    "perdas_somam_total": 196,
+    "percentuais": 980,
+    "perdas_ufs_fecham": 35,
+    "linhas_mca": 24,
+    "clusters_somam_amostra": 8,
+    "modelos_cluster": 8,
+    "avaliadores_cruzados": 2240,
+    "integracao_dashboard": 63,
+    "comparacoes_backup": 9,
+    "log_sem_traceback": 9
+  },
+  "falhas": [],
+  "alertas": [],
+  "integracao_dashboard": {
+    "21": 7,
+    "22": 7,
+    "24": 7,
+    "25": 7,
+    "26": 7,
+    "29": 7,
+    "33": 7,
+    "53": 7,
+    "54": 7
+  },
+  "backup_comparado": "saidas_antes_lote2_20261030_095805.zip",
+  "parecer": "SEM_FALHAS_NAS_CHECAGENS_EXECUTADAS",
+  "limites": [
+    "Auditoria sobre CSV/JSON já produzidos, não recálculo independente dos microdados.",
+    "Não demonstra por si só validade estatística, comparabilidade de clusters, privacidade ou aprovação acadêmica."
+  ]
+}

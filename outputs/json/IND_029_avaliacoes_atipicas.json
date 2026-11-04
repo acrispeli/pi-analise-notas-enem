@@ -4,7 +4,7 @@
     "module_schema_version": "ind029-module-1.0.0",
     "analysis_version": "2.28.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023-ind024-ind025-ind026-ind027-ind028-ind029",
     "dataset_version": "enem-2019-2025-csv-publico",
-    "generated_at": "2026-10-22T16:33:12+00:00",
+    "generated_at": "2026-10-30T15:32:20+00:00",
     "data_status": "draft",
     "source_indicator": "IND-028/IND-021",
     "population_definition": "AMOSTRA_ML_EVALUATOR da POP_EVALUATOR com cinco pares completos",
@@ -104,7 +104,7 @@
       }
     },
     "publication_status": "draft; revisão acadêmica e de privacidade pendentes",
-    "notes": "Detecção exploratória de padrões estatisticamente atípicos usando Isolation Forest. Atributos: diferença ASSINADA da nota total (AV1−AV2) e diferenças ABSOLUTAS das cinco competências. Não significa erro de correção, fraude nem identifica avaliador individual: AV1/AV2 são apenas posições no fluxo. A população é AMOSTRA_ML_EVALUATOR da POP_EVALUATOR com cinco pares completos, idêntica à amostra bottom-k do IND-028 em cada recorte. Modelo independente por ano/UF e por consolidado histórico, sem extrapolar frequências amostrais à população. contamination=\"auto\" usa decisão por score_samples<-0.5, correspondente a escore de anomalia (-score_samples)>0.5; escore maior significa mais atípico. Limiar não é calibração de uma probabilidade real de erro. As cinco faixas de distribuição têm tamanho aproximadamente igual por ranking; empates podem cruzar suas fronteiras. Taxas de limiares alternativos representam sensibilidade de corte sobre o MESMO modelo, não validação de estabilidade. Valores de células de 1 a 29 são suprimidos; nenhuma saída inclui notas, escores ou identificadores individuais. UF é da prova. Histórico agrega participações, não pessoas únicas. Dados draft: revisão acadêmica e de privacidade complementar pendentes."
+    "notes": "Detecção exploratória de padrões estatisticamente atípicos usando Isolation Forest. Atributos: diferença ASSINADA da nota total (AV1−AV2) e diferenças ABSOLUTAS das cinco competências. Não significa erro de correção, fraude nem identifica avaliador individual: AV1/AV2 são apenas posições no fluxo. A população é AMOSTRA_ML_EVALUATOR da POP_EVALUATOR com cinco pares completos, idêntica à amostra bottom-k do IND-028 em cada recorte. Modelo independente por ano/UF e por consolidado histórico, sem extrapolar frequências amostrais à população. contamination=\"auto\" usa decisão por score_samples<-0.5, correspondente a escore de anomalia (-score_samples)>0.5; escore maior significa mais atípico. Limiar não é calibração de uma probabilidade real de erro. As cinco faixas de distribuição têm tamanho aproximadamente igual por ranking; empates podem cruzar suas fronteiras. Taxas de limiares alternativos representam sensibilidade de corte sobre o MESMO modelo, não validação de estabilidade. Contagens agregadas de 1 a 29 são divulgadas sem ocultação automática; nenhuma saída inclui notas, escores ou identificadores individuais. UF é da prova. Histórico agrega participações, não pessoas únicas. Dados draft: revisão acadêmica e de privacidade complementar pendentes."
   },
   "indicator": {
     "id": "IND-029",

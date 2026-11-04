@@ -1,0 +1,1747 @@
+{
+  "indicator_id": "IND-054",
+  "slug": "IND_054_clusters_socioeconomicos",
+  "title": "Clusters socioeconômicos — MCA + K-Means",
+  "module_schema_version": "ind054-module-1.0.0",
+  "generated_at": "2026-10-30T16:30:42.853940+00:00",
+  "data_status": "draft",
+  "population": "AMOSTRA_SOCIO_ML",
+  "population_source": "POP_SOCIO",
+  "model_method": "MCA_mais_KMeans",
+  "seed": 2026,
+  "sample_limit_per_year": 15000,
+  "mca_dimensions": 3,
+  "k_range": [
+    2,
+    6
+  ],
+  "years": {
+    "2019": {
+      "ano": 2019,
+      "status": "draft",
+      "n_fonte": 5095171,
+      "n_amostra": 15000,
+      "versao_questionario": "2019-2023",
+      "modelo": {
+        "n_amostra": 15000,
+        "n_eixos": 3,
+        "inercia_pct_eixos": [
+          8.611618,
+          3.791223,
+          2.328909
+        ],
+        "autovalores_mca": [
+          0.325743822,
+          0.143407129,
+          0.088093498
+        ],
+        "n_variaveis_ativas": 23,
+        "n_categorias_ativas": 110,
+        "k_selecionado": 2,
+        "criterio_k": "max_silhouette_amostrada_desempate_menor_k",
+        "metricas_k_escolhido": {
+          "k": 2,
+          "status": "avaliado",
+          "silhouette": 0.466475,
+          "davies_bouldin": 1.011541,
+          "calinski_harabasz": 9820.8321,
+          "ari_estabilidade": 1.0
+        },
+        "diagnosticos_k": [
+          {
+            "k": 2,
+            "status": "avaliado",
+            "silhouette": 0.466475,
+            "davies_bouldin": 1.011541,
+            "calinski_harabasz": 9820.8321,
+            "ari_estabilidade": 1.0
+          },
+          {
+            "k": 3,
+            "status": "avaliado",
+            "silhouette": 0.405082,
+            "davies_bouldin": 0.861374,
+            "calinski_harabasz": 11605.9815,
+            "ari_estabilidade": 0.992805
+          },
+          {
+            "k": 4,
+            "status": "avaliado",
+            "silhouette": 0.389425,
+            "davies_bouldin": 0.798297,
+            "calinski_harabasz": 13196.1727,
+            "ari_estabilidade": 0.997169
+          },
+          {
+            "k": 5,
+            "status": "avaliado",
+            "silhouette": 0.382653,
+            "davies_bouldin": 0.824386,
+            "calinski_harabasz": 13741.6888,
+            "ari_estabilidade": 0.960101
+          },
+          {
+            "k": 6,
+            "status": "avaliado",
+            "silhouette": 0.354659,
+            "davies_bouldin": 0.857064,
+            "calinski_harabasz": 13534.6719,
+            "ari_estabilidade": 0.980554
+          }
+        ],
+        "silhouette_sample_size": 1000,
+        "clusters": [
+          {
+            "cluster": "C1",
+            "n_amostra": 11205,
+            "participacao_aprox_pct": 75,
+            "centroide_mca": [
+              -0.269426,
+              0.015903,
+              -0.04001
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q010",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 75,
+                "prevalencia_amostra_aprox_pct": 55,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q008",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 70,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q019",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 80,
+                "prevalencia_amostra_aprox_pct": 70,
+                "diferenca_aprox_pp": 10
+              },
+              {
+                "variavel": "Q018",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 80,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 65,
+                "prevalencia_amostra_aprox_pct": 50,
+                "diferenca_aprox_pp": 15
+              }
+            ]
+          },
+          {
+            "cluster": "C2",
+            "n_amostra": 3795,
+            "participacao_aprox_pct": 25,
+            "centroide_mca": [
+              0.798029,
+              -0.047105,
+              0.118508
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q018",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 55,
+                "prevalencia_amostra_aprox_pct": 20,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 50,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q021",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 55,
+                "prevalencia_amostra_aprox_pct": 20,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q014",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 90,
+                "prevalencia_amostra_aprox_pct": 60,
+                "diferenca_aprox_pp": 30
+              },
+              {
+                "variavel": "Q023",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 55,
+                "prevalencia_amostra_aprox_pct": 25,
+                "diferenca_aprox_pp": 30
+              }
+            ]
+          }
+        ],
+        "method": "MCA_escores_principais_KMeans",
+        "cluster_ids_are_local_to_model": true,
+        "no_individual_data_exported": true,
+        "qualitative_profile_note": "Categorias sobre-representadas; percentuais aproximados a 5 p.p.; sem nomes definitivos."
+      }
+    },
+    "2020": {
+      "ano": 2020,
+      "status": "draft",
+      "n_fonte": 5783109,
+      "n_amostra": 15000,
+      "versao_questionario": "2019-2023",
+      "modelo": {
+        "n_amostra": 15000,
+        "n_eixos": 3,
+        "inercia_pct_eixos": [
+          21.100917,
+          6.800192,
+          3.012795
+        ],
+        "autovalores_mca": [
+          1.0,
+          0.322269945,
+          0.142780289
+        ],
+        "n_variaveis_ativas": 23,
+        "n_categorias_ativas": 132,
+        "k_selecionado": 2,
+        "criterio_k": "max_silhouette_amostrada_desempate_menor_k",
+        "metricas_k_escolhido": {
+          "k": 2,
+          "status": "avaliado",
+          "silhouette": 0.906925,
+          "davies_bouldin": 0.069881,
+          "calinski_harabasz": 32250.28,
+          "ari_estabilidade": 1.0
+        },
+        "diagnosticos_k": [
+          {
+            "k": 2,
+            "status": "avaliado",
+            "silhouette": 0.906925,
+            "davies_bouldin": 0.069881,
+            "calinski_harabasz": 32250.28,
+            "ari_estabilidade": 1.0
+          },
+          {
+            "k": 3,
+            "status": "avaliado",
+            "silhouette": 0.545404,
+            "davies_bouldin": 0.596036,
+            "calinski_harabasz": 36091.7509,
+            "ari_estabilidade": 0.998579
+          },
+          {
+            "k": 4,
+            "status": "avaliado",
+            "silhouette": 0.504619,
+            "davies_bouldin": 0.525158,
+            "calinski_harabasz": 50499.9274,
+            "ari_estabilidade": 1.0
+          },
+          {
+            "k": 5,
+            "status": "avaliado",
+            "silhouette": 0.48046,
+            "davies_bouldin": 0.56671,
+            "calinski_harabasz": 58075.4722,
+            "ari_estabilidade": 0.911046
+          },
+          {
+            "k": 6,
+            "status": "avaliado",
+            "silhouette": 0.471322,
+            "davies_bouldin": 0.580604,
+            "calinski_harabasz": 64345.6883,
+            "ari_estabilidade": 0.958487
+          }
+        ],
+        "silhouette_sample_size": 1000,
+        "clusters": [
+          {
+            "cluster": "C1",
+            "n_amostra": 14752,
+            "participacao_aprox_pct": 100,
+            "centroide_mca": [
+              -0.129658,
+              0.0,
+              -0.0
+            ],
+            "perfil_exploratorio": []
+          },
+          {
+            "cluster": "C2",
+            "n_amostra": 248,
+            "participacao_aprox_pct": 0,
+            "centroide_mca": [
+              7.712579,
+              -0.0,
+              -0.0
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q001",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              },
+              {
+                "variavel": "Q002",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              },
+              {
+                "variavel": "Q003",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              },
+              {
+                "variavel": "Q004",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              },
+              {
+                "variavel": "Q005",
+                "categoria": "SEM_RESPOSTA",
+                "prevalencia_grupo_aprox_pct": 100,
+                "prevalencia_amostra_aprox_pct": 0,
+                "diferenca_aprox_pp": 100
+              }
+            ]
+          }
+        ],
+        "method": "MCA_escores_principais_KMeans",
+        "cluster_ids_are_local_to_model": true,
+        "no_individual_data_exported": true,
+        "qualitative_profile_note": "Categorias sobre-representadas; percentuais aproximados a 5 p.p.; sem nomes definitivos."
+      }
+    },
+    "2021": {
+      "ano": 2021,
+      "status": "draft",
+      "n_fonte": 3389832,
+      "n_amostra": 15000,
+      "versao_questionario": "2019-2023",
+      "modelo": {
+        "n_amostra": 15000,
+        "n_eixos": 3,
+        "inercia_pct_eixos": [
+          8.583275,
+          3.770161,
+          2.347031
+        ],
+        "autovalores_mca": [
+          0.328403577,
+          0.144249642,
+          0.089799461
+        ],
+        "n_variaveis_ativas": 23,
+        "n_categorias_ativas": 111,
+        "k_selecionado": 2,
+        "criterio_k": "max_silhouette_amostrada_desempate_menor_k",
+        "metricas_k_escolhido": {
+          "k": 2,
+          "status": "avaliado",
+          "silhouette": 0.437564,
+          "davies_bouldin": 1.008979,
+          "calinski_harabasz": 10054.8705,
+          "ari_estabilidade": 0.996986
+        },
+        "diagnosticos_k": [
+          {
+            "k": 2,
+            "status": "avaliado",
+            "silhouette": 0.437564,
+            "davies_bouldin": 1.008979,
+            "calinski_harabasz": 10054.8705,
+            "ari_estabilidade": 0.996986
+          },
+          {
+            "k": 3,
+            "status": "avaliado",
+            "silhouette": 0.401882,
+            "davies_bouldin": 0.874081,
+            "calinski_harabasz": 11422.1134,
+            "ari_estabilidade": 1.0
+          },
+          {
+            "k": 4,
+            "status": "avaliado",
+            "silhouette": 0.382411,
+            "davies_bouldin": 0.791872,
+            "calinski_harabasz": 13057.6954,
+            "ari_estabilidade": 0.962985
+          },
+          {
+            "k": 5,
+            "status": "avaliado",
+            "silhouette": 0.371357,
+            "davies_bouldin": 0.823568,
+            "calinski_harabasz": 13475.4802,
+            "ari_estabilidade": 0.958547
+          },
+          {
+            "k": 6,
+            "status": "avaliado",
+            "silhouette": 0.361379,
+            "davies_bouldin": 0.857168,
+            "calinski_harabasz": 13332.9945,
+            "ari_estabilidade": 0.98257
+          }
+        ],
+        "silhouette_sample_size": 1000,
+        "clusters": [
+          {
+            "cluster": "C1",
+            "n_amostra": 10555,
+            "participacao_aprox_pct": 70,
+            "centroide_mca": [
+              -0.305475,
+              0.017757,
+              -0.044152
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q008",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 65,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q010",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 70,
+                "prevalencia_amostra_aprox_pct": 55,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q018",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 75,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q019",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 80,
+                "prevalencia_amostra_aprox_pct": 65,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 65,
+                "prevalencia_amostra_aprox_pct": 50,
+                "diferenca_aprox_pp": 15
+              }
+            ]
+          },
+          {
+            "cluster": "C2",
+            "n_amostra": 4445,
+            "participacao_aprox_pct": 30,
+            "centroide_mca": [
+              0.721448,
+              -0.041937,
+              0.104275
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q018",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 60,
+                "prevalencia_amostra_aprox_pct": 25,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 50,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q014",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 60,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q021",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 50,
+                "prevalencia_amostra_aprox_pct": 20,
+                "diferenca_aprox_pp": 30
+              },
+              {
+                "variavel": "Q004",
+                "categoria": "D",
+                "prevalencia_grupo_aprox_pct": 50,
+                "prevalencia_amostra_aprox_pct": 25,
+                "diferenca_aprox_pp": 25
+              }
+            ]
+          }
+        ],
+        "method": "MCA_escores_principais_KMeans",
+        "cluster_ids_are_local_to_model": true,
+        "no_individual_data_exported": true,
+        "qualitative_profile_note": "Categorias sobre-representadas; percentuais aproximados a 5 p.p.; sem nomes definitivos."
+      }
+    },
+    "2022": {
+      "ano": 2022,
+      "status": "draft",
+      "n_fonte": 3476105,
+      "n_amostra": 15000,
+      "versao_questionario": "2019-2023",
+      "modelo": {
+        "n_amostra": 15000,
+        "n_eixos": 3,
+        "inercia_pct_eixos": [
+          8.658919,
+          3.75983,
+          2.302965
+        ],
+        "autovalores_mca": [
+          0.331297788,
+          0.143854383,
+          0.088113444
+        ],
+        "n_variaveis_ativas": 23,
+        "n_categorias_ativas": 111,
+        "k_selecionado": 2,
+        "criterio_k": "max_silhouette_amostrada_desempate_menor_k",
+        "metricas_k_escolhido": {
+          "k": 2,
+          "status": "avaliado",
+          "silhouette": 0.432294,
+          "davies_bouldin": 1.014634,
+          "calinski_harabasz": 10242.7941,
+          "ari_estabilidade": 0.986449
+        },
+        "diagnosticos_k": [
+          {
+            "k": 2,
+            "status": "avaliado",
+            "silhouette": 0.432294,
+            "davies_bouldin": 1.014634,
+            "calinski_harabasz": 10242.7941,
+            "ari_estabilidade": 0.986449
+          },
+          {
+            "k": 3,
+            "status": "avaliado",
+            "silhouette": 0.401011,
+            "davies_bouldin": 0.874,
+            "calinski_harabasz": 11748.315,
+            "ari_estabilidade": 0.975135
+          },
+          {
+            "k": 4,
+            "status": "avaliado",
+            "silhouette": 0.396461,
+            "davies_bouldin": 0.811942,
+            "calinski_harabasz": 13012.6057,
+            "ari_estabilidade": 0.990643
+          },
+          {
+            "k": 5,
+            "status": "avaliado",
+            "silhouette": 0.384027,
+            "davies_bouldin": 0.836934,
+            "calinski_harabasz": 13426.7039,
+            "ari_estabilidade": 0.97684
+          },
+          {
+            "k": 6,
+            "status": "avaliado",
+            "silhouette": 0.355443,
+            "davies_bouldin": 0.863698,
+            "calinski_harabasz": 13278.6154,
+            "ari_estabilidade": 0.987692
+          }
+        ],
+        "silhouette_sample_size": 1000,
+        "clusters": [
+          {
+            "cluster": "C1",
+            "n_amostra": 10321,
+            "participacao_aprox_pct": 70,
+            "centroide_mca": [
+              -0.318015,
+              0.018312,
+              -0.042806
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q010",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 70,
+                "prevalencia_amostra_aprox_pct": 50,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q008",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 65,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q018",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 75,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 65,
+                "prevalencia_amostra_aprox_pct": 50,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q019",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 80,
+                "prevalencia_amostra_aprox_pct": 65,
+                "diferenca_aprox_pp": 15
+              }
+            ]
+          },
+          {
+            "cluster": "C2",
+            "n_amostra": 4679,
+            "participacao_aprox_pct": 30,
+            "centroide_mca": [
+              0.703666,
+              -0.040519,
+              0.094714
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q018",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 65,
+                "prevalencia_amostra_aprox_pct": 25,
+                "diferenca_aprox_pp": 40
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 50,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q014",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 65,
+                "diferenca_aprox_pp": 30
+              },
+              {
+                "variavel": "Q021",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 55,
+                "prevalencia_amostra_aprox_pct": 25,
+                "diferenca_aprox_pp": 30
+              },
+              {
+                "variavel": "Q009",
+                "categoria": "D",
+                "prevalencia_grupo_aprox_pct": 60,
+                "prevalencia_amostra_aprox_pct": 35,
+                "diferenca_aprox_pp": 25
+              }
+            ]
+          }
+        ],
+        "method": "MCA_escores_principais_KMeans",
+        "cluster_ids_are_local_to_model": true,
+        "no_individual_data_exported": true,
+        "qualitative_profile_note": "Categorias sobre-representadas; percentuais aproximados a 5 p.p.; sem nomes definitivos."
+      }
+    },
+    "2023": {
+      "ano": 2023,
+      "status": "draft",
+      "n_fonte": 3933955,
+      "n_amostra": 15000,
+      "versao_questionario": "2019-2023",
+      "modelo": {
+        "n_amostra": 15000,
+        "n_eixos": 3,
+        "inercia_pct_eixos": [
+          8.619412,
+          3.724154,
+          2.303617
+        ],
+        "autovalores_mca": [
+          0.329786203,
+          0.142489377,
+          0.088138408
+        ],
+        "n_variaveis_ativas": 23,
+        "n_categorias_ativas": 111,
+        "k_selecionado": 2,
+        "criterio_k": "max_silhouette_amostrada_desempate_menor_k",
+        "metricas_k_escolhido": {
+          "k": 2,
+          "status": "avaliado",
+          "silhouette": 0.438498,
+          "davies_bouldin": 1.008948,
+          "calinski_harabasz": 10241.0697,
+          "ari_estabilidade": 0.999173
+        },
+        "diagnosticos_k": [
+          {
+            "k": 2,
+            "status": "avaliado",
+            "silhouette": 0.438498,
+            "davies_bouldin": 1.008948,
+            "calinski_harabasz": 10241.0697,
+            "ari_estabilidade": 0.999173
+          },
+          {
+            "k": 3,
+            "status": "avaliado",
+            "silhouette": 0.399788,
+            "davies_bouldin": 0.885717,
+            "calinski_harabasz": 11673.1475,
+            "ari_estabilidade": 0.990299
+          },
+          {
+            "k": 4,
+            "status": "avaliado",
+            "silhouette": 0.387912,
+            "davies_bouldin": 0.811489,
+            "calinski_harabasz": 12996.7432,
+            "ari_estabilidade": 0.997694
+          },
+          {
+            "k": 5,
+            "status": "avaliado",
+            "silhouette": 0.373449,
+            "davies_bouldin": 0.840031,
+            "calinski_harabasz": 13394.7938,
+            "ari_estabilidade": 0.994689
+          },
+          {
+            "k": 6,
+            "status": "avaliado",
+            "silhouette": 0.338124,
+            "davies_bouldin": 0.886823,
+            "calinski_harabasz": 13213.3615,
+            "ari_estabilidade": 0.978182
+          }
+        ],
+        "silhouette_sample_size": 1000,
+        "clusters": [
+          {
+            "cluster": "C1",
+            "n_amostra": 10695,
+            "participacao_aprox_pct": 70,
+            "centroide_mca": [
+              -0.298612,
+              0.016172,
+              -0.041027
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q008",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 65,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q010",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 75,
+                "prevalencia_amostra_aprox_pct": 55,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q018",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 75,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 70,
+                "prevalencia_amostra_aprox_pct": 55,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q014",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 55,
+                "prevalencia_amostra_aprox_pct": 40,
+                "diferenca_aprox_pp": 15
+              }
+            ]
+          },
+          {
+            "cluster": "C2",
+            "n_amostra": 4305,
+            "participacao_aprox_pct": 30,
+            "centroide_mca": [
+              0.745242,
+              -0.04036,
+              0.10239
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q018",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 60,
+                "prevalencia_amostra_aprox_pct": 25,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 45,
+                "diferenca_aprox_pp": 40
+              },
+              {
+                "variavel": "Q014",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 60,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q021",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 50,
+                "prevalencia_amostra_aprox_pct": 20,
+                "diferenca_aprox_pp": 30
+              },
+              {
+                "variavel": "Q009",
+                "categoria": "D",
+                "prevalencia_grupo_aprox_pct": 60,
+                "prevalencia_amostra_aprox_pct": 30,
+                "diferenca_aprox_pp": 30
+              }
+            ]
+          }
+        ],
+        "method": "MCA_escores_principais_KMeans",
+        "cluster_ids_are_local_to_model": true,
+        "no_individual_data_exported": true,
+        "qualitative_profile_note": "Categorias sobre-representadas; percentuais aproximados a 5 p.p.; sem nomes definitivos."
+      }
+    },
+    "2024": {
+      "ano": 2024,
+      "status": "draft",
+      "n_fonte": 4332944,
+      "n_amostra": 15000,
+      "versao_questionario": "2024-2025",
+      "modelo": {
+        "n_amostra": 15000,
+        "n_eixos": 3,
+        "inercia_pct_eixos": [
+          9.476142,
+          3.875627,
+          2.266333
+        ],
+        "autovalores_mca": [
+          0.358445375,
+          0.146599821,
+          0.085726506
+        ],
+        "n_variaveis_ativas": 23,
+        "n_categorias_ativas": 110,
+        "k_selecionado": 2,
+        "criterio_k": "max_silhouette_amostrada_desempate_menor_k",
+        "metricas_k_escolhido": {
+          "k": 2,
+          "status": "avaliado",
+          "silhouette": 0.47207,
+          "davies_bouldin": 0.930946,
+          "calinski_harabasz": 11243.8703,
+          "ari_estabilidade": 0.998611
+        },
+        "diagnosticos_k": [
+          {
+            "k": 2,
+            "status": "avaliado",
+            "silhouette": 0.47207,
+            "davies_bouldin": 0.930946,
+            "calinski_harabasz": 11243.8703,
+            "ari_estabilidade": 0.998611
+          },
+          {
+            "k": 3,
+            "status": "avaliado",
+            "silhouette": 0.406724,
+            "davies_bouldin": 0.839728,
+            "calinski_harabasz": 12662.7931,
+            "ari_estabilidade": 0.978726
+          },
+          {
+            "k": 4,
+            "status": "avaliado",
+            "silhouette": 0.397636,
+            "davies_bouldin": 0.807558,
+            "calinski_harabasz": 13501.5473,
+            "ari_estabilidade": 0.982076
+          },
+          {
+            "k": 5,
+            "status": "avaliado",
+            "silhouette": 0.386066,
+            "davies_bouldin": 0.800438,
+            "calinski_harabasz": 13955.4145,
+            "ari_estabilidade": 0.910823
+          },
+          {
+            "k": 6,
+            "status": "avaliado",
+            "silhouette": 0.364108,
+            "davies_bouldin": 0.80238,
+            "calinski_harabasz": 14335.029,
+            "ari_estabilidade": 0.963926
+          }
+        ],
+        "silhouette_sample_size": 1000,
+        "clusters": [
+          {
+            "cluster": "C1",
+            "n_amostra": 10861,
+            "participacao_aprox_pct": 70,
+            "centroide_mca": [
+              -0.30763,
+              -0.010342,
+              -0.036525
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q009",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 70,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q011",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 70,
+                "prevalencia_amostra_aprox_pct": 55,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q021",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 65,
+                "prevalencia_amostra_aprox_pct": 50,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q017",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 90,
+                "prevalencia_amostra_aprox_pct": 75,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 70,
+                "prevalencia_amostra_aprox_pct": 55,
+                "diferenca_aprox_pp": 15
+              }
+            ]
+          },
+          {
+            "cluster": "C2",
+            "n_amostra": 4139,
+            "participacao_aprox_pct": 30,
+            "centroide_mca": [
+              0.810482,
+              0.027247,
+              0.096228
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q017",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 65,
+                "prevalencia_amostra_aprox_pct": 25,
+                "diferenca_aprox_pp": 40
+              },
+              {
+                "variavel": "Q010",
+                "categoria": "D",
+                "prevalencia_grupo_aprox_pct": 70,
+                "prevalencia_amostra_aprox_pct": 30,
+                "diferenca_aprox_pp": 40
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 45,
+                "diferenca_aprox_pp": 40
+              },
+              {
+                "variavel": "Q015",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 60,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q023",
+                "categoria": "D",
+                "prevalencia_grupo_aprox_pct": 45,
+                "prevalencia_amostra_aprox_pct": 15,
+                "diferenca_aprox_pp": 30
+              }
+            ]
+          }
+        ],
+        "method": "MCA_escores_principais_KMeans",
+        "cluster_ids_are_local_to_model": true,
+        "no_individual_data_exported": true,
+        "qualitative_profile_note": "Categorias sobre-representadas; percentuais aproximados a 5 p.p.; sem nomes definitivos."
+      }
+    },
+    "2025": {
+      "ano": 2025,
+      "status": "draft",
+      "n_fonte": 4810772,
+      "n_amostra": 15000,
+      "versao_questionario": "2024-2025",
+      "modelo": {
+        "n_amostra": 15000,
+        "n_eixos": 3,
+        "inercia_pct_eixos": [
+          9.531426,
+          3.898172,
+          2.385164
+        ],
+        "autovalores_mca": [
+          0.360536562,
+          0.147452586,
+          0.090221409
+        ],
+        "n_variaveis_ativas": 23,
+        "n_categorias_ativas": 110,
+        "k_selecionado": 2,
+        "criterio_k": "max_silhouette_amostrada_desempate_menor_k",
+        "metricas_k_escolhido": {
+          "k": 2,
+          "status": "avaliado",
+          "silhouette": 0.474995,
+          "davies_bouldin": 0.927222,
+          "calinski_harabasz": 11202.9047,
+          "ari_estabilidade": 0.992499
+        },
+        "diagnosticos_k": [
+          {
+            "k": 2,
+            "status": "avaliado",
+            "silhouette": 0.474995,
+            "davies_bouldin": 0.927222,
+            "calinski_harabasz": 11202.9047,
+            "ari_estabilidade": 0.992499
+          },
+          {
+            "k": 3,
+            "status": "avaliado",
+            "silhouette": 0.422775,
+            "davies_bouldin": 0.826855,
+            "calinski_harabasz": 12392.5911,
+            "ari_estabilidade": 0.99926
+          },
+          {
+            "k": 4,
+            "status": "avaliado",
+            "silhouette": 0.405556,
+            "davies_bouldin": 0.77746,
+            "calinski_harabasz": 13522.2831,
+            "ari_estabilidade": 0.991365
+          },
+          {
+            "k": 5,
+            "status": "avaliado",
+            "silhouette": 0.399858,
+            "davies_bouldin": 0.784232,
+            "calinski_harabasz": 14235.2708,
+            "ari_estabilidade": 0.988207
+          },
+          {
+            "k": 6,
+            "status": "avaliado",
+            "silhouette": 0.354059,
+            "davies_bouldin": 0.803938,
+            "calinski_harabasz": 14540.4938,
+            "ari_estabilidade": 0.710158
+          }
+        ],
+        "silhouette_sample_size": 1000,
+        "clusters": [
+          {
+            "cluster": "C1",
+            "n_amostra": 10905,
+            "participacao_aprox_pct": 75,
+            "centroide_mca": [
+              -0.307456,
+              -0.003205,
+              -0.038862
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q011",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 75,
+                "prevalencia_amostra_aprox_pct": 55,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q009",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 70,
+                "diferenca_aprox_pp": 15
+              },
+              {
+                "variavel": "Q021",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 70,
+                "prevalencia_amostra_aprox_pct": 50,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q017",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 75,
+                "diferenca_aprox_pp": 20
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "A",
+                "prevalencia_grupo_aprox_pct": 70,
+                "prevalencia_amostra_aprox_pct": 55,
+                "diferenca_aprox_pp": 15
+              }
+            ]
+          },
+          {
+            "cluster": "C2",
+            "n_amostra": 4095,
+            "participacao_aprox_pct": 25,
+            "centroide_mca": [
+              0.818757,
+              0.008535,
+              0.103489
+            ],
+            "perfil_exploratorio": [
+              {
+                "variavel": "Q017",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 65,
+                "prevalencia_amostra_aprox_pct": 25,
+                "diferenca_aprox_pp": 40
+              },
+              {
+                "variavel": "Q016",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 85,
+                "prevalencia_amostra_aprox_pct": 45,
+                "diferenca_aprox_pp": 40
+              },
+              {
+                "variavel": "Q010",
+                "categoria": "D",
+                "prevalencia_grupo_aprox_pct": 65,
+                "prevalencia_amostra_aprox_pct": 30,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q015",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 95,
+                "prevalencia_amostra_aprox_pct": 60,
+                "diferenca_aprox_pp": 35
+              },
+              {
+                "variavel": "Q019",
+                "categoria": "B",
+                "prevalencia_grupo_aprox_pct": 55,
+                "prevalencia_amostra_aprox_pct": 20,
+                "diferenca_aprox_pp": 35
+              }
+            ]
+          }
+        ],
+        "method": "MCA_escores_principais_KMeans",
+        "cluster_ids_are_local_to_model": true,
+        "no_individual_data_exported": true,
+        "qualitative_profile_note": "Categorias sobre-representadas; percentuais aproximados a 5 p.p.; sem nomes definitivos."
+      }
+    }
+  },
+  "pooled_core_clusters": {
+    "n_amostra": 105000,
+    "n_eixos": 3,
+    "inercia_pct_eixos": [
+      22.222222,
+      7.72624,
+      3.701282
+    ],
+    "autovalores_mca": [
+      1.0,
+      0.347680813,
+      0.166557692
+    ],
+    "n_variaveis_ativas": 14,
+    "n_categorias_ativas": 77,
+    "k_selecionado": 2,
+    "criterio_k": "max_silhouette_amostrada_desempate_menor_k",
+    "metricas_k_escolhido": {
+      "k": 2,
+      "status": "avaliado",
+      "silhouette": 0.958275,
+      "davies_bouldin": 0.029988,
+      "calinski_harabasz": 204181.5092,
+      "ari_estabilidade": 1.0
+    },
+    "diagnosticos_k": [
+      {
+        "k": 2,
+        "status": "avaliado",
+        "silhouette": 0.958275,
+        "davies_bouldin": 0.029988,
+        "calinski_harabasz": 204181.5092,
+        "ari_estabilidade": 1.0
+      },
+      {
+        "k": 3,
+        "status": "avaliado",
+        "silhouette": 0.484568,
+        "davies_bouldin": 0.575668,
+        "calinski_harabasz": 238178.0128,
+        "ari_estabilidade": 0.983395
+      },
+      {
+        "k": 4,
+        "status": "avaliado",
+        "silhouette": 0.438847,
+        "davies_bouldin": 0.548925,
+        "calinski_harabasz": 304383.1777,
+        "ari_estabilidade": 0.988101
+      },
+      {
+        "k": 5,
+        "status": "avaliado",
+        "silhouette": 0.440526,
+        "davies_bouldin": 0.580573,
+        "calinski_harabasz": 353475.5276,
+        "ari_estabilidade": 0.963829
+      },
+      {
+        "k": 6,
+        "status": "avaliado",
+        "silhouette": 0.403706,
+        "davies_bouldin": 0.627965,
+        "calinski_harabasz": 372530.0175,
+        "ari_estabilidade": 0.957491
+      }
+    ],
+    "silhouette_sample_size": 1000,
+    "clusters": [
+      {
+        "cluster": "C1",
+        "n_amostra": 104752,
+        "participacao_aprox_pct": 100,
+        "centroide_mca": [
+          -0.048657,
+          -0.0,
+          0.0
+        ],
+        "perfil_exploratorio": []
+      },
+      {
+        "cluster": "C2",
+        "n_amostra": 248,
+        "participacao_aprox_pct": 0,
+        "centroide_mca": [
+          20.552058,
+          -0.0,
+          -0.0
+        ],
+        "perfil_exploratorio": [
+          {
+            "variavel": "aspirador",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          },
+          {
+            "variavel": "banheiros",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          },
+          {
+            "variavel": "carros",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          },
+          {
+            "variavel": "celulares_domicilio",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          },
+          {
+            "variavel": "escolaridade_mae",
+            "categoria": "SEM_RESPOSTA",
+            "prevalencia_grupo_aprox_pct": 100,
+            "prevalencia_amostra_aprox_pct": 0,
+            "diferenca_aprox_pp": 100
+          }
+        ]
+      }
+    ],
+    "method": "MCA_escores_principais_KMeans",
+    "cluster_ids_are_local_to_model": true,
+    "no_individual_data_exported": true,
+    "qualitative_profile_note": "Categorias sobre-representadas; percentuais aproximados a 5 p.p.; sem nomes definitivos.",
+    "years_in_training": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "sampling_note": "Até n por ano; mesmo peso amostral por edição."
+  },
+  "harmonization": {
+    "version": "nucleo_14_conceitos_v1_reutilizado_IND053",
+    "mapping": {
+      "escolaridade_pai": {
+        "2019_2023": "Q001",
+        "2024_2025": "Q001",
+        "regra": "mesmo"
+      },
+      "escolaridade_mae": {
+        "2019_2023": "Q002",
+        "2024_2025": "Q002",
+        "regra": "mesmo"
+      },
+      "ocupacao_pai": {
+        "2019_2023": "Q003",
+        "2024_2025": "Q003",
+        "regra": "mesmo"
+      },
+      "ocupacao_mae": {
+        "2019_2023": "Q004",
+        "2024_2025": "Q004",
+        "regra": "mesmo"
+      },
+      "moradores_domicilio": {
+        "2019_2023": "Q005",
+        "2024_2025": "Q005",
+        "regra": "moradores"
+      },
+      "banheiros": {
+        "2019_2023": "Q008",
+        "2024_2025": "Q009",
+        "regra": "contagem"
+      },
+      "quartos": {
+        "2019_2023": "Q009",
+        "2024_2025": "Q010",
+        "regra": "contagem"
+      },
+      "carros": {
+        "2019_2023": "Q010",
+        "2024_2025": "Q011",
+        "regra": "contagem"
+      },
+      "motocicletas": {
+        "2019_2023": "Q011",
+        "2024_2025": "Q012",
+        "regra": "contagem"
+      },
+      "geladeiras": {
+        "2019_2023": "Q012",
+        "2024_2025": "Q013",
+        "regra": "contagem"
+      },
+      "maquina_lavar": {
+        "2019_2023": "Q014",
+        "2024_2025": "Q015",
+        "regra": "presenca"
+      },
+      "microondas": {
+        "2019_2023": "Q016",
+        "2024_2025": "Q016",
+        "regra": "presenca"
+      },
+      "aspirador": {
+        "2019_2023": "Q018",
+        "2024_2025": "Q017",
+        "regra": "mesmo"
+      },
+      "celulares_domicilio": {
+        "2019_2023": "Q022",
+        "2024_2025": "Q022",
+        "regra": "presenca"
+      }
+    },
+    "annual_models": "23 perguntas nativas; eixos e clusters não alinhados entre edições",
+    "pooled_model": "14 conceitos recodificados; somente se ambas versões do questionário presentes"
+  },
+  "quality": {
+    "annual_source": {
+      "2019": {
+        "ano": 2019,
+        "fonte": "MICRODADOS_ENEM_2019.csv",
+        "populacao": "POP_SOCIO",
+        "n_fonte": 5095171,
+        "n_amostra": 15000,
+        "fracao_amostral_pct": 0.2944,
+        "aleatorizacao": "chaves_aleatorias_iid_prioridades_minimas",
+        "seed_efetiva": 4045,
+        "ordem_csv_relevante": true,
+        "sem_notas_sem_join": true,
+        "codigos_invalidos_na_amostra_por_questao": {
+          "Q001": 0,
+          "Q002": 0,
+          "Q003": 0,
+          "Q004": 0,
+          "Q005": 0,
+          "Q006": 0,
+          "Q007": 0,
+          "Q008": 0,
+          "Q009": 0,
+          "Q010": 0,
+          "Q011": 0,
+          "Q012": 0,
+          "Q013": 0,
+          "Q014": 0,
+          "Q015": 0,
+          "Q016": 0,
+          "Q017": 0,
+          "Q018": 0,
+          "Q019": 0,
+          "Q020": 0,
+          "Q021": 0,
+          "Q022": 0,
+          "Q023": 0
+        }
+      },
+      "2020": {
+        "ano": 2020,
+        "fonte": "MICRODADOS_ENEM_2020.csv",
+        "populacao": "POP_SOCIO",
+        "n_fonte": 5783109,
+        "n_amostra": 15000,
+        "fracao_amostral_pct": 0.25938,
+        "aleatorizacao": "chaves_aleatorias_iid_prioridades_minimas",
+        "seed_efetiva": 4046,
+        "ordem_csv_relevante": true,
+        "sem_notas_sem_join": true,
+        "codigos_invalidos_na_amostra_por_questao": {
+          "Q001": 0,
+          "Q002": 0,
+          "Q003": 0,
+          "Q004": 0,
+          "Q005": 0,
+          "Q006": 0,
+          "Q007": 0,
+          "Q008": 0,
+          "Q009": 0,
+          "Q010": 0,
+          "Q011": 0,
+          "Q012": 0,
+          "Q013": 0,
+          "Q014": 0,
+          "Q015": 0,
+          "Q016": 0,
+          "Q017": 0,
+          "Q018": 0,
+          "Q019": 0,
+          "Q020": 0,
+          "Q021": 0,
+          "Q022": 0,
+          "Q023": 0
+        }
+      },
+      "2021": {
+        "ano": 2021,
+        "fonte": "MICRODADOS_ENEM_2021.csv",
+        "populacao": "POP_SOCIO",
+        "n_fonte": 3389832,
+        "n_amostra": 15000,
+        "fracao_amostral_pct": 0.4425,
+        "aleatorizacao": "chaves_aleatorias_iid_prioridades_minimas",
+        "seed_efetiva": 4047,
+        "ordem_csv_relevante": true,
+        "sem_notas_sem_join": true,
+        "codigos_invalidos_na_amostra_por_questao": {
+          "Q001": 0,
+          "Q002": 0,
+          "Q003": 0,
+          "Q004": 0,
+          "Q005": 0,
+          "Q006": 0,
+          "Q007": 0,
+          "Q008": 0,
+          "Q009": 0,
+          "Q010": 0,
+          "Q011": 0,
+          "Q012": 0,
+          "Q013": 0,
+          "Q014": 0,
+          "Q015": 0,
+          "Q016": 0,
+          "Q017": 0,
+          "Q018": 0,
+          "Q019": 0,
+          "Q020": 0,
+          "Q021": 0,
+          "Q022": 0,
+          "Q023": 0
+        }
+      },
+      "2022": {
+        "ano": 2022,
+        "fonte": "MICRODADOS_ENEM_2022.csv",
+        "populacao": "POP_SOCIO",
+        "n_fonte": 3476105,
+        "n_amostra": 15000,
+        "fracao_amostral_pct": 0.43152,
+        "aleatorizacao": "chaves_aleatorias_iid_prioridades_minimas",
+        "seed_efetiva": 4048,
+        "ordem_csv_relevante": true,
+        "sem_notas_sem_join": true,
+        "codigos_invalidos_na_amostra_por_questao": {
+          "Q001": 0,
+          "Q002": 0,
+          "Q003": 0,
+          "Q004": 0,
+          "Q005": 0,
+          "Q006": 0,
+          "Q007": 0,
+          "Q008": 0,
+          "Q009": 0,
+          "Q010": 0,
+          "Q011": 0,
+          "Q012": 0,
+          "Q013": 0,
+          "Q014": 0,
+          "Q015": 0,
+          "Q016": 0,
+          "Q017": 0,
+          "Q018": 0,
+          "Q019": 0,
+          "Q020": 0,
+          "Q021": 0,
+          "Q022": 0,
+          "Q023": 0
+        }
+      },
+      "2023": {
+        "ano": 2023,
+        "fonte": "MICRODADOS_ENEM_2023.csv",
+        "populacao": "POP_SOCIO",
+        "n_fonte": 3933955,
+        "n_amostra": 15000,
+        "fracao_amostral_pct": 0.3813,
+        "aleatorizacao": "chaves_aleatorias_iid_prioridades_minimas",
+        "seed_efetiva": 4049,
+        "ordem_csv_relevante": true,
+        "sem_notas_sem_join": true,
+        "codigos_invalidos_na_amostra_por_questao": {
+          "Q001": 0,
+          "Q002": 0,
+          "Q003": 0,
+          "Q004": 0,
+          "Q005": 0,
+          "Q006": 0,
+          "Q007": 0,
+          "Q008": 0,
+          "Q009": 0,
+          "Q010": 0,
+          "Q011": 0,
+          "Q012": 0,
+          "Q013": 0,
+          "Q014": 0,
+          "Q015": 0,
+          "Q016": 0,
+          "Q017": 0,
+          "Q018": 0,
+          "Q019": 0,
+          "Q020": 0,
+          "Q021": 0,
+          "Q022": 0,
+          "Q023": 0
+        }
+      },
+      "2024": {
+        "ano": 2024,
+        "fonte": "PARTICIPANTES_2024.csv",
+        "populacao": "POP_SOCIO",
+        "n_fonte": 4332944,
+        "n_amostra": 15000,
+        "fracao_amostral_pct": 0.34618,
+        "aleatorizacao": "chaves_aleatorias_iid_prioridades_minimas",
+        "seed_efetiva": 4050,
+        "ordem_csv_relevante": true,
+        "sem_notas_sem_join": true,
+        "codigos_invalidos_na_amostra_por_questao": {
+          "Q001": 0,
+          "Q002": 0,
+          "Q003": 0,
+          "Q004": 0,
+          "Q005": 0,
+          "Q006": 0,
+          "Q007": 0,
+          "Q008": 0,
+          "Q009": 0,
+          "Q010": 0,
+          "Q011": 0,
+          "Q012": 0,
+          "Q013": 0,
+          "Q014": 0,
+          "Q015": 0,
+          "Q016": 0,
+          "Q017": 0,
+          "Q018": 0,
+          "Q019": 0,
+          "Q020": 0,
+          "Q021": 0,
+          "Q022": 0,
+          "Q023": 0
+        }
+      },
+      "2025": {
+        "ano": 2025,
+        "fonte": "PARTICIPANTES_2025.csv",
+        "populacao": "POP_SOCIO",
+        "n_fonte": 4810772,
+        "n_amostra": 15000,
+        "fracao_amostral_pct": 0.3118,
+        "aleatorizacao": "chaves_aleatorias_iid_prioridades_minimas",
+        "seed_efetiva": 4051,
+        "ordem_csv_relevante": true,
+        "sem_notas_sem_join": true,
+        "codigos_invalidos_na_amostra_por_questao": {
+          "Q001": 0,
+          "Q002": 0,
+          "Q003": 0,
+          "Q004": 0,
+          "Q005": 0,
+          "Q006": 0,
+          "Q007": 0,
+          "Q008": 0,
+          "Q009": 0,
+          "Q010": 0,
+          "Q011": 0,
+          "Q012": 0,
+          "Q013": 0,
+          "Q014": 0,
+          "Q015": 0,
+          "Q016": 0,
+          "Q017": 0,
+          "Q018": 0,
+          "Q019": 0,
+          "Q020": 0,
+          "Q021": 0,
+          "Q022": 0,
+          "Q023": 0
+        }
+      }
+    },
+    "ind040_reconciliation": {
+      "status": "ok",
+      "anos_conferidos": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ind053_reconciliation": {
+      "status": "ok",
+      "anos_conferidos": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "privacy": {
+      "minimum_cluster_size": 30,
+      "category_modalities_collapsed_below_n": 30,
+      "profile_percentages_rounded_to_5pp": true,
+      "profile_category_count_threshold": null,
+      "cross_indicator_disclosure_review": "pendente"
+    },
+    "no_personal_identifiers_scores_or_individual_assignments_exported": true,
+    "join_diagnostics": {
+      "status": "nao_aplicavel",
+      "reason": "questionário sem notas ou identificadores"
+    },
+    "caveats": [
+      "Clusters são exploratórios, não classes socioeconômicas oficiais; nomes somente após inspeção.",
+      "IDs C1, C2 etc. reordenados por tamanho e NÃO equivalentes entre anos e modelos.",
+      "K selecionado pelo maior silhouette numa subamostra fixa por modelo, sujeito a K permitido e limiar de privacidade.",
+      "ARI verifica estabilidade entre inicializações, não entre outras amostras ou diferentes edições.",
+      "Silhouette, Davies-Bouldin e Calinski-Harabasz são métricas internas, não de validade causal.",
+      "Eixos MCA são categóricos; percentuais de inércia não equivalem a variância PCA.",
+      "Amostras equilibradas por edição no conjunto não representam pesos populacionais.",
+      "Modelo conjunto usa conceitos harmonizados; domínios Qxxx diferem entre 2019–23 e 2024–25.",
+      "Para projetar outros participantes, é preciso replicar a codificação, a MCA e os centroides; este módulo não expõe IDs.",
+      "Sem relação com notas de redação inclusive em 2025."
+    ]
+  }
+}

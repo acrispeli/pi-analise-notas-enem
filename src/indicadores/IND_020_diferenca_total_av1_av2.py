@@ -46,7 +46,7 @@ IND = 'IND-020'
 NOME = 'Diferença total AV1×AV2'
 METODO = 'distribuicao_abs_nota_total_av1_av2_pop_evaluator'
 VERSAO = '2.19.1-'+'-'.join(f'ind{i:03d}' for i in range(1,21))
-MIN_N = 30
+MIN_N = 1
 BLOCO = 100_000
 BASE_BINS = ((0.,0.),(0.,20.),(20.,40.),(40.,60.),(60.,80.),
              (80.,100.),(100.,120.),(120.,160.),(160.,200.),
@@ -54,7 +54,7 @@ BASE_BINS = ((0.,0.),(0.,20.),(20.,40.),(40.,60.),(60.,80.),
 NOTAS = ('POP_EVALUATOR requer ambas as notas AV1 e AV2 disponíveis; '
     'não equivale a POP_VALID. Diferença absoluta não identifica avaliadores, '
     'não demonstra erro nem viés individual. Classes de frequência com '
-    'coalescência adaptativa para garantir N>=30 nas células positivas; '
+    'faixas fixas publicadas mesmo com células pequenas positivas; '
     'comparação de histogramas entre recortes requer considerar os limites '
     'das classes. As UFs são da aplicação, não residência. Dados 2019–2024 '
     'do complemento de redação unidos à localização por NU_INSCRICAO e NU_ANO; '
@@ -76,7 +76,7 @@ def fonte_ano(raiz:Path,ano:int):
     return None,d/'RESULTADOS_2025.csv'
 
 
-def validar_requisitos(raiz:Path):
+def validar_requisitos(raiz:Path,sobrescrever:bool=False):
     jdir=raiz/'outputs'/'json'
     mod=jdir/'IND_019_qualidade_clustering.json'
     if not mod.is_file():raise FileNotFoundError('Execute e finalize IND-019 antes do IND-020: '+str(mod))
@@ -92,7 +92,7 @@ def validar_requisitos(raiz:Path):
             raise ValueError(f'{ano}: metadados do dashboard inválidos')
         if d.get('quality',{}).get('ind019_validation',{}).get('status')!='ok':
             raise ValueError(f'{ano}: IND-019 ainda não integrado ao dashboard')
-        if 'ind020_validation' in d['quality'] or 'total_difference' in d['pages']['evaluators']:
+        if not sobrescrever and ('ind020_validation' in d['quality'] or 'total_difference' in d['pages']['evaluators']):
             raise ValueError(f'{ano}: IND-020 já existe: não sobrescrever execução anterior')
         if not isinstance(d['pages'].get('temporal'),dict) or not isinstance(d['pages'].get('methodology'),dict):
             raise ValueError(f'{ano}: estrutura do dashboard incompleta')
@@ -216,7 +216,7 @@ def resumo(a:Acumulador)->dict:
         'desvio_padrao':round(math.sqrt(v),6),'ddof':0,
         'minimo':a.min,'maximo':a.max,
         'n_classes_histograma':len(bins),'soma_histograma':sum(b['n_redacoes'] for b in bins),
-        'classes_variaveis_por_privacidade':True,
+        'classes_variaveis_por_privacidade':False,
         'histograma':bins,'sem_dados_individuais':True}
 
 
@@ -417,7 +417,7 @@ def atualizar_dashboard(ano:int,periodos:list,hist:dict,d:dict,gerado:str):
     x['meta']['data_status']='draft'
     aviso=('IND-020: diferença absoluta AV1×AV2 usa POP_EVALUATOR, não POP_VALID; '
            '2019–2024 requer junção por NU_INSCRICAO/NU_ANO com fonte geográfica. '
-           'Classes de histogramas adaptadas a n>=30; privacidade complementar '
+           'Classes de histogramas originais preservadas, sem corte n>=30; revisão '
            'e revisão acadêmica pendentes.')
     if aviso not in x['meta'].setdefault('warnings',[]):x['meta']['warnings'].append(aviso)
     return x
@@ -439,9 +439,9 @@ def gravar_json(p:Path,d):
         json.dump(d,f,ensure_ascii=False,allow_nan=False,indent=2);f.write('\n')
 
 
-def executar(raiz:Path,bloco:int=BLOCO):
+def executar(raiz:Path,bloco:int=BLOCO,sobrescrever:bool=False):
     if bloco<1:raise ValueError('bloco precisa ser >=1')
-    originais=validar_requisitos(raiz)
+    originais=validar_requisitos(raiz,sobrescrever=sobrescrever)
     anos=[];historico=iniciar_grupos();qa={}
     with tempfile.TemporaryDirectory(prefix='ind020_sql_',dir=raiz/'outputs') as tmp:
         for ano in ANOS:
@@ -507,7 +507,8 @@ def main():
     p=argparse.ArgumentParser(description='IND-020: diferenças totais AV1×AV2 (POP_EVALUATOR)')
     p.add_argument('--raiz',type=Path,default=Path(__file__).resolve().parents[2])
     p.add_argument('--bloco',type=int,default=BLOCO)
+    p.add_argument('--sobrescrever',action='store_true',help='Atualizar resultados e blocos do IND-020 já existentes (use com backup)')
     opt=p.parse_args()
-    executar(opt.raiz.resolve(),opt.bloco)
+    executar(opt.raiz.resolve(),opt.bloco,sobrescrever=opt.sobrescrever)
 
 if __name__=='__main__':main()

@@ -40,7 +40,7 @@ IND='IND-021'
 NOME='Diferença por competência'
 METODO='abs_nota_competencia_av1_av2_pop_evaluator_cinco_pares_completos'
 VERSAO='2.20.0-'+'-'.join(f'ind{i:03d}' for i in range(1,22))
-MIN_N=30
+MIN_N=1
 BLOCO=100_000
 COMPETENCIAS=tuple(f'C{i}' for i in range(1,6))
 AV_COLS=tuple(f'NU_NOTA_COMP{i}_AV{j}' for i in range(1,6) for j in (1,2))
@@ -53,7 +53,7 @@ NOTAS=(
   'o mesmo denominador dentro de cada recorte, que pode ser inferior à '
   'POP_EVALUATOR; verificar cobertura. UF é local de prova, não residência. '
   'Modelos históricos somam participações, não pessoas únicas. '
-  'Somente estatísticas agregadas de grupos com n>=30 são exportadas. '
+  'Agregados com N de 1 a 29 são exportados, mas demandam cuidado interpretativo. '
   'Status draft; revisão acadêmica e privacidade complementar pendentes.')
 
 class Distribuicao:
@@ -117,7 +117,7 @@ def adicionar(grupos,ufs,matrizes,total_elig,ano):
             data=matrizes[mask]
             for j,c in enumerate(COMPETENCIAS):g['comps'][c].adicionar(data[:,j])
 
-def validar_requisitos(raiz):
+def validar_requisitos(raiz,sobrescrever=False):
     jdir=raiz/'outputs'/'json'
     mod=jdir/'IND_020_diferenca_total_av1_av2.json'
     if not mod.is_file():raise FileNotFoundError('É necessário concluir IND-020 antes de IND-021: '+str(mod))
@@ -134,7 +134,7 @@ def validar_requisitos(raiz):
             raise ValueError(f'{ano}: dashboard incompleto/inválido')
         if d.get('quality',{}).get('ind020_validation',{}).get('status')!='ok':
             raise ValueError(f'{ano}: IND-020 ainda não está integrado')
-        if 'ind021_validation' in d['quality'] or 'by_competency' in d.get('pages',{}).get('evaluators',{}):
+        if not sobrescrever and ('ind021_validation' in d['quality'] or 'by_competency' in d.get('pages',{}).get('evaluators',{})):
             raise ValueError(f'{ano}: IND-021 já registrado; não sobrescrever')
         for pth in ('evaluators','methodology','temporal'):
             if not isinstance(d.get('pages',{}).get(pth),dict):raise ValueError(f'{ano}: página {pth} ausente')
@@ -248,7 +248,7 @@ def processar_ano(raiz,ano,grupos,historico,bloco,tempdir):
 def compilar_recorte(g):
     n=g['n_comp'];ne=g['n_evaluator']
     if not 0<=n<=ne:raise AssertionError('Denominadores inconsistentes')
-    if n<MIN_N:raise ValueError(f'POP_EVALUATOR_COMP n={n}<30, saída bloqueada')
+    if n<MIN_N:raise ValueError(f'POP_EVALUATOR_COMP vazio: n={n}')
     comps=[{'competencia':c,**g['comps'][c].resumo()} for c in COMPETENCIAS]
     if any(v['n_pares_validos']!=n for v in comps):raise AssertionError('Denominador desigual em C1–C5')
     maiores=sorted(comps,key=lambda x:(-x['media'],x['competencia']))
@@ -332,9 +332,9 @@ def dashboard(ano,periodos,hist,d,gerado):
     if aviso not in x['meta'].setdefault('warnings',[]):x['meta']['warnings'].append(aviso)
     return x
 
-def executar(raiz,bloco=BLOCO):
+def executar(raiz,bloco=BLOCO,sobrescrever=False):
     if bloco<1:raise ValueError('bloco deve ser >=1')
-    p20,originais=validar_requisitos(raiz)
+    p20,originais=validar_requisitos(raiz,sobrescrever=sobrescrever)
     ref={v['ano']:v for v in p20['years']}
     periodos=[];histgr=iniciar();qa={}
     out=raiz/'outputs';out.mkdir(parents=True,exist_ok=True)
@@ -407,7 +407,8 @@ def main():
     p=argparse.ArgumentParser(description='IND-021: diferenças AV1–AV2 por C1..C5, 2019–2025')
     p.add_argument('--raiz',type=Path,default=Path(__file__).resolve().parents[2])
     p.add_argument('--bloco',type=int,default=BLOCO)
+    p.add_argument('--sobrescrever',action='store_true',help='Reprocessar IND-021 preservando outros indicadores')
     a=p.parse_args()
-    executar(a.raiz.resolve(),a.bloco)
+    executar(a.raiz.resolve(),a.bloco,sobrescrever=a.sobrescrever)
 
 if __name__=='__main__':main()

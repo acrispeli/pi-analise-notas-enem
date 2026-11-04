@@ -65,7 +65,7 @@ UFS = ('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG',
        'RS', 'SC', 'SE', 'SP', 'TO')
 COMPETENCIAS = tuple(f'C{i}' for i in range(1, 6))
 COLUNAS_C = tuple(f'NU_NOTA_COMP{i}' for i in range(1, 6))
-MIN_N = 30  # Critério de frequência mínima dos itemsets e de N do recorte.
+MIN_N = 1  # Critério de frequência mínima dos itemsets e de N do recorte.
 POLITICA_DIVULGACAO = 'regras_agregadas_sem_bloqueio_mascara_rara_v2'
 POP_NEAR_REFERENCIA = {
     2019: 172_548, 2020: 183_343, 2021: 163_747,
@@ -864,10 +864,9 @@ def autoteste() -> None:
     geo_peq['SP'][1] = 5
     geo_peq['BR'] = sum((geo_peq[u] for u in UFS), start=np.zeros(32, dtype=np.int64))
     escondidos_peq, _ = supressao_territorial(geo_peq)
-    assert escondidos_peq['SP'] == 'primaria_pop_near_pequena'
-    assert len(escondidos_peq) == 2 and 'BR' not in escondidos_peq
+    assert not escondidos_peq
     rec_peq, _ = montar_recortes(geo_peq, 0.05, 0.2, 1.0, 30)
-    assert rec_peq['SP']['suprimido'] and not rec_peq['SP']['rules']
+    assert not rec_peq['SP']['suprimido']
     assert rec_peq['BR']['rules']
     # Fonte com soma de competências e nota reais, incluindo uma redação 1000
     # que não pertence à POP_NEAR.

@@ -4,7 +4,7 @@
     "module_schema_version": "ind001-module-1.0.0",
     "analysis_version": "2.0.0-ind001",
     "dataset_version": "enem-2019-2025-csv-publico",
-    "generated_at": "2026-10-16T23:42:40+00:00",
+    "generated_at": "2026-10-30T00:44:17+00:00",
     "data_status": "draft",
     "source_files": {
       "2019": "MICRODADOS_ENEM_2019.csv",

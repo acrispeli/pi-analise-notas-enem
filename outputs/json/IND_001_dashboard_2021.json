@@ -3,7 +3,7 @@
     "schema_version": "1.0.0",
     "analysis_version": "2.0.0-ind001",
     "dataset_version": "enem-2021-csv-publico",
-    "generated_at": "2026-10-16T23:42:40+00:00",
+    "generated_at": "2026-10-30T00:44:17+00:00",
     "year": 2021,
     "data_status": "draft",
     "source_files": [
@@ -86,9 +86,9 @@
       }
     ],
     "suppression": {
-      "min_group_n": 30,
+      "min_group_n": 1,
       "suppressed_cells": 0,
-      "note": "Limiar de 30 verificado para Brasil e UF; publicação é bloqueada se houver contagem positiva inferior a 30."
+      "note": "Nenhuma supressão automática por contagem menor que 30; apenas agregados."
     },
     "indicator_validation": {
       "status": "ok",

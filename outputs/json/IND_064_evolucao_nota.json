@@ -1,0 +1,62 @@
+{
+  "indicator_id": "IND-064",
+  "slug": "IND_064_evolucao_nota",
+  "status": "draft",
+  "generated_at": "2026-10-30T17:39:41.624585+00:00",
+  "dashboard_target": "pages.temporal.total_score",
+  "population_note": "POP_VALID_YEAR/POP_NEAR_YEAR/POP_EVALUATOR_YEAR, conforme indicador",
+  "method_note": "Resultados derivados sem reler microdados; não há inferência causal.",
+  "scope": "2019–2025; participações e não pessoas únicas",
+  "results": [
+    {
+      "ano": 2019,
+      "status": "ok",
+      "n_validas": 3779356,
+      "media": 592.9016,
+      "mediana": 580.0
+    },
+    {
+      "ano": 2020,
+      "status": "ok",
+      "n_validas": 2674914,
+      "media": 590.3961,
+      "mediana": 580.0
+    },
+    {
+      "ano": 2021,
+      "status": "ok",
+      "n_validas": 2293797,
+      "media": 636.1228,
+      "mediana": 620.0
+    },
+    {
+      "ano": 2022,
+      "status": "ok",
+      "n_validas": 2363615,
+      "media": 652.4511,
+      "mediana": 640.0
+    },
+    {
+      "ano": 2023,
+      "status": "ok",
+      "n_validas": 2704814,
+      "media": 644.7115,
+      "mediana": 620.0
+    },
+    {
+      "ano": 2024,
+      "status": "ok",
+      "n_validas": 3002710,
+      "media": 658.9658,
+      "mediana": 640.0
+    },
+    {
+      "ano": 2025,
+      "status": "ok",
+      "n_validas": 3245696,
+      "media": 618.7151,
+      "mediana": 600.0
+    }
+  ],
+  "review": "pendente_revisao_academica_e_privacidade_contextual"
+}

@@ -43,7 +43,7 @@ UFS=base.UFS
 IND='IND-023'
 METODO='taxa_status_av1_av2_na_pop_evaluator_a_partir_ind022_auditado'
 VERSAO='2.22.0-'+'-'.join(f'ind{i:03d}' for i in range(1,24))
-MIN_N=30
+MIN_N=1
 BLOCO=100_000
 ARQUIVO='IND_023_divergencia_status'
 NOTAS=('Compara exclusivamente TP_STATUS_REDACAO_AV1 com TP_STATUS_REDACAO_AV2 '
@@ -75,7 +75,7 @@ def obter_recorte(periodo,uf):
 def resumo_022(g):
     n=int(g['n_pop_evaluator']);pares=int(g['n_status_par_preenchido'])
     diff=int(g['n_criterio_status_divergente']);unk=int(g['n_status_criterio_desconhecido'])
-    if n<MIN_N:raise ValueError(f'Recorte com n={n}<30; publicação bloqueada')
+    if n<MIN_N:raise ValueError(f'Recorte vazio: n={n}')
     if any(x<0 for x in (n,pares,diff,unk)) or pares+unk!=n or diff>pares:
         raise ValueError(f'Inconsistência nos contadores de status do IND-022: {g}')
     iguais=pares-diff

@@ -65,7 +65,7 @@ UFS = ('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG',
        'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR',
        'RS', 'SC', 'SE', 'SP', 'TO')
 NOTAS_COMP = tuple(f'NU_NOTA_COMP{i}' for i in range(1, 6))
-LIMIAR = 30
+LIMIAR = 1
 HIST_ESCOLA = {
     '1': 'Não respondeu', '2': 'Pública', '3': 'Privada', '4': 'Exterior',
 }
@@ -660,10 +660,9 @@ def autoteste()->None:
             'Q001': {'categories': [{'n_redacoes': n, 'media': 600.0}]}}}
     ref_t = {'years': {'2024': {'status': 'ok', 'recortes': rec_ref_t}}}
     rec_t, qa_t = conferir_montar(2024, grupos_t, rec_ref_t['BR']['n_pop_socio_valid'], ref_t)
-    assert 'C' in qa_t['categorias_suprimidas_globalmente']
-    assert len(qa_t['categorias_suprimidas_globalmente']) >= 2
-    assert rec_t['BR']['categories'][2]['n_redacoes'] is None
-    assert rec_t['SP']['categories'][2]['media'] is None
+    assert not qa_t['categorias_suprimidas_globalmente']
+    assert rec_t['BR']['categories'][2]['n_redacoes'] == 1
+    assert rec_t['SP']['categories'][2]['media'] == 600.0
     with _tempfile.TemporaryDirectory(prefix='teste_ind045_') as d:
         raiz=Path(d)
         (raiz/'data'/'raw'/'2024'/'competencias_redacao').mkdir(parents=True)

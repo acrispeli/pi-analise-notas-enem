@@ -70,7 +70,7 @@ CAMPOS_CSV = ('ano','uf','competencia','n_pop_near','n_near_evaluator',
               'av1_nao_av2_nao','av1_nao_av2_sim','av1_sim_av2_nao',
               'av1_sim_av2_sim','concordancia_percentual','kappa_ponderado',
               'kappa_status','suprimido','motivo_supressao')
-MIN_CELULA = 30
+MIN_CELULA = 1
 # Controle independente já auditado para POP_NEAR. --sem-controle-populacao
 # é reservado ao teste sintético. 2025 exige a fonte real quando disponível.
 POP_NEAR_REFERENCIA = {2019:172548, 2020:183343, 2021:163747,
@@ -673,7 +673,7 @@ def executar(base: Path,saida: Path,anos: tuple[int,...],bloco: int,
             'kappa_zero_denominator':'retorna null se os marginais não apresentam variabilidade',
             'join_2019_2024':'NU_INSCRICAO no mesmo ano via SQLite temporário',
             'join_2025':'mesma_linha RESULTADOS_2025.csv, sem link a participantes',
-            'privacy':'tabelas com contagens positivas menores que 30 omitidas; complemento geográfico',
+            'privacy':'matrizes agregadas sem supressão automática n<30; sem registros individuais',
             'cautions':[
                 'Kappa quantifica concordância além do acaso sob marginais observadas; não é causal.',
                 'Kappa binário ponderado quadrático coincide com kappa não ponderado.',

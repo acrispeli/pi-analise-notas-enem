@@ -45,9 +45,9 @@ NOTAS=(
     'preenchida. A presença do campo indica evidência de avaliação AV3, '
     'não comprova o registro administrativo da convocação. UF é de prova. '
     'O histórico agrega participações, não pessoas únicas. Nenhum ID ou '
-    'registro individual é exportado. Contagens positivas inferiores a 30 '
-    'na medida ou no complemento bloqueiam a publicação do recorte (e a '
-    'execução, para impedir reconstruções). Resultados draft, aguardando '
+    'registro individual é exportado. Contagens positivas de 1 a 29 '
+    'na medida e no complemento são exibidas em agregados e requerem '
+    'revisão contextual de privacidade. Resultados draft, aguardando '
     'revisão metodológica, acadêmica e de privacidade complementar.'
 )
 
@@ -236,9 +236,7 @@ def resumo(n:int,marcados:int):
     if n<=0 or not 0<=marcados<=n:
         raise ValueError('Denominador ou numerador de AV3 inválido')
     outros=n-marcados
-    # Bloqueia publicação de células pequenas e sua inferência via complemento.
-    if 0<marcados<MIN_N or 0<outros<MIN_N:
-        raise ValueError(f'Célula pequena detectada: com AV3={marcados}; sem AV3={outros}; N={n}')
+    # A pequena contagem é divulgada como agregado; não é falha de execução.
     return {'n_pop_all':n,'n_com_av3':marcados,'n_sem_av3':outros,
             'percentual_com_av3':round(marcados*100/n,6),
             'populacao':'POP_ALL', 'criterio':'NU_NOTA_AV3 OU TP_STATUS_REDACAO_AV3 preenchido',
@@ -249,7 +247,11 @@ def compilar(ano:int|str,pop:dict[str,int],numeradores:Counter,qa:dict|None=None
     d={'brasil':resumo(pop['BR'],sum(numeradores[u] for u in UFS)),
        'ufs':[{'uf':u,**resumo(pop[u],numeradores[u])} for u in UFS],
        'qualidade':{'status':'ok','soma_27_ufs_igual_brasil':True,
-                   'celulas_positivas_inferiores_30':0}}
+                   'celulas_positivas_inferiores_30':sum(0 < g[v] < 30
+                     for g in [resumo(pop['BR'],sum(numeradores[u] for u in UFS)),
+                               *(resumo(pop[u],numeradores[u]) for u in UFS)]
+                     for v in ('n_com_av3','n_sem_av3')),
+                   'politica_divulgacao':'agregados_sem_supressao_1_29_draft'}}
     for col in ('n_pop_all','n_com_av3','n_sem_av3'):
         if sum(g[col] for g in d['ufs'])!=d['brasil'][col]:
             raise AssertionError(f'{ano}/{col}: soma UFs diferente de Brasil')
@@ -278,7 +280,7 @@ def atualizar_dashboard(d:dict,p:dict,anos:list[dict],hist:dict,gerado:str):
         'numerator':'NU_NOTA_AV3 preenchida OU TP_STATUS_REDACAO_AV3 preenchido',
         'method':METODO,'join':'NU_INSCRICAO+NU_ANO em 2019-2024; fonte conjunta em 2025',
         'geography':'SG_UF_PROVA (UF de aplicação)',
-        'minimum_positive_cell_count':MIN_N,'limitations':NOTAS}
+        'minimum_positive_cell_count':1,'limitations':NOTAS}
     x['quality']['ind024_validation']={
         'status':'ok','source_indicator':'IND-007',
         'n_pop_all_brasil':p['brasil']['n_pop_all'],
@@ -351,7 +353,7 @@ def executar(raiz:Path,bloco:int=100_000,somente_modulo:bool=False,sobrescrever:
         'analysis_version':VERSAO,'dataset_version':'enem-2019-2025-csv-publico',
         'generated_at':gerado,'data_status':'draft','source_indicator':'IND-007',
         'population_definition':'POP_ALL: todos os registros dos resultados',
-        'geographic_dimension':'SG_UF_PROVA','method':METODO,'minimum_group_count':MIN_N,
+        'geographic_dimension':'SG_UF_PROVA','method':METODO,'minimum_group_count':1,
         'source_qa':qa_anos,'publication_status':'draft; revisão acadêmica e privacidade complementar pendentes',
         'notes':NOTAS},
         'indicator':{'id':IND,'name':NOME,'unit':'percentual',

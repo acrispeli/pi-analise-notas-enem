@@ -85,7 +85,8 @@ def _heatmap(st, plot, linhas, linha, coluna, valor, titulo, limite=None, anotac
 
 def _comp_linhas(rec, chave, col, campo='competencia'):
     return [{'Competência': q.get(campo), col: q.get(chave),
-             'Redações': q.get('n_redacoes'), 'Suprimido': bool(q.get('suprimido'))}
+             'Redações': q.get(chave) if col == 'Redações' else q.get('n_redacoes'),
+             'Suprimido': bool(q.get('suprimido'))}
             for q in (rec.get('resumo_competencias') or [])]
 
 
@@ -107,14 +108,45 @@ def _mostrar_033(st, plot, rec):
                'sujeita ao arredondamento; não representa o percentual de redações.')
 
 
-def _mostrar_034(st, plot, rec):
+def _mostrar_034(st, plot, rec, modulo=None, uf='BR'):
     st.metric('Redações com apenas uma competência descontada',
               _contagem(rec.get('n_casos_com_uma_unica_competencia')))
     dados = _comp_linhas(rec, 'n_competencia_unica', 'Redações')
     _barras(st, plot, dados, 'Competência', 'Redações', 'Redações (competência única)')
-    _tabela(st, dados, 'Competência única')
-    st.caption('Competência única com nota abaixo de 200 dentro da POP_NEAR; '
-               'não equivale automaticamente a uma redação de 980 pontos.')
+    _tabela(st, dados, 'Competência única · notas 900–980')
+    st.caption('IND-034 original: uma competência abaixo de 200 dentro da POP_NEAR (900–980). '
+               'Esse grupo não corresponde somente às redações com nota 980.')
+
+    # Extensão do IND-034 com notas finais: bloco Brasil, independente do filtro UF.
+    extra = (modulo or {}).get('recorte_980_nota_final_brasil')
+    st.markdown('#### Recorte exclusivo: redações com nota final 980')
+    if not isinstance(extra, dict):
+        st.info('Recorte 980 ainda não processado ou integrado ao dashboard deste ano.')
+        return
+    if uf != 'BR':
+        st.info('O recorte 980 está disponível apenas para o Brasil; não utiliza o filtro de UF atual.')
+    st.metric('Redações com nota definitiva 980 · Brasil',
+              _contagem(extra.get('n_980_total')))
+    st.caption('As competências são as notas finais NU_NOTA_COMP1–5, após as etapas '
+               'de correção. Não são utilizadas notas intermediárias de AV1/AV2 como resultado final.')
+    linhas = [{'Competência': c.get('competencia'),
+               'Redações': c.get('n_980_competencia'),
+               'Participação (%)': c.get('percentual_entre_980_classificadas'),
+               'Suprimido': c.get('suprimido')}
+              for c in extra.get('resumo_competencias', [])]
+    _barras(st, plot, linhas, 'Competência', 'Participação (%)',
+            'Participação entre redações 980 classificadas (%)')
+    _tabela(st, linhas, 'Nota 980 · competência abaixo de 200')
+    with st.expander('Percursos de avaliação identificados (controle de qualidade)'):
+        st.caption('Uma mesma combinação de notas pode ser compatível com mais de um par; '
+                   'esses casos permanecem ambíguos. Banca AV4 é uma avaliação colegiada.')
+        st.dataframe(pd.DataFrame([
+            {'Percurso': q.get('percurso'), 'Redações': q.get('n_redacoes'),
+             'Suprimido': q.get('suprimido')}
+            for q in extra.get('percursos_avaliacao', [])]),
+            use_container_width=True, hide_index=True)
+    st.caption('Resultados em rascunho, sujeitos a auditoria e revisão de privacidade. '
+               'Contagens inferiores a 30 são suprimidas, inclusive complementarmente.')
 
 
 def _mostrar_035(st, plot, rec):
@@ -311,6 +343,28 @@ def alto_desempenho_novos(st, plot, ano, uf, dashboards: Mapping[int, dict]):
         df = pd.DataFrame(serie2)
         if df[['Regras Apriori', 'W de Kendall']].notna().any().any():
             st.dataframe(df, hide_index=True, use_container_width=True)
+        linhas_980 = []
+        for yy, dash in sorted(dashboards.items()):
+            mod34 = bloco(dash, 34)
+            rec980 = (mod34 or {}).get('recorte_980_nota_final_brasil')
+            if not isinstance(rec980, dict):
+                continue
+            for item in rec980.get('resumo_competencias') or []:
+                pct = item.get('percentual_entre_980_classificadas')
+                if _numero(pct):
+                    linhas_980.append({'Ano': str(yy), 'Competência': item.get('competencia'),
+                                      'Participação (%)': pct})
+        st.markdown('#### Recorte exclusivo de nota 980 · IND-034 · Brasil')
+        if linhas_980:
+            fig = px.line(pd.DataFrame(linhas_980), x='Ano', y='Participação (%)',
+                          color='Competência', markers=True, color_discrete_sequence=CORES)
+            fig.update_layout(yaxis_title='Redações de nota 980 classificadas (%)')
+            plot(fig, 370)
+            _tabela(st, linhas_980, 'Série anual de competência limitante em 980')
+            st.caption('Recorte nacional por ano; o filtro de UF não se aplica. '
+                       'Edições sem complemento processado não são preenchidas artificialmente.')
+        else:
+            st.info('Recorte 980 ainda não integrado; execute o script complementar do IND-034.')
         return
     d = dashboards.get(ano)
     if not d:
@@ -326,6 +380,8 @@ def alto_desempenho_novos(st, plot, ano, uf, dashboards: Mapping[int, dict]):
                 continue
             if ind == 36:
                 render(st, plot, r, mod or {})
+            elif ind == 34:
+                render(st, plot, r, mod or {}, uf)
             else:
                 render(st, plot, r)
 

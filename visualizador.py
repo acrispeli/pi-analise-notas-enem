@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-r"""Visualizador ENEM 2019–2025 | IND-001–039 e IND-040–045.
+r"""Visualizador ENEM 2019–2025 | IND-001–054.
 
 Instalar: .\.venv\Scripts\python.exe -m pip install -r requirements_visualizador.txt
 Executar: .\.venv\Scripts\python.exe -m streamlit run visualizador.py
@@ -15,6 +15,10 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+
+from painel_indicadores_046_054 import pagina_indicadores_novos
+from painel_paginas_contrato_68 import pagina_contrato_68
+from painel_catalogo_68 import pagina_catalogo_68
 
 from painel_visualizacoes_novas import (
     alto_desempenho_novos, socioeconomico_novos,
@@ -107,12 +111,7 @@ header [data-testid="stToolbar"] {right:1rem}
 }
 </style>''', unsafe_allow_html=True)
 
-PAGINAS = [
-    'Visão geral', 'Notas e distribuição', 'Competências', 'Relações e PCA',
-    'Perfis de redação', 'Evolução temporal',
-    'Avaliação entre corretores', 'Alto desempenho', 'Contexto socioeconômico',
-    'Modelos futuros', 'Metodologia',
-]
+PAGINAS = ['Visão geral', 'Competências', 'Avaliadores', 'Alto desempenho', 'Contexto socioeconômico', 'Padrões por ML', 'Evolução temporal', 'Metodologia']
 
 def imprimir_menu_lateral(pagina_atual: str, recorte: str) -> None:
     """Menu estático exibido somente na impressão, sem alterar a navegação interativa.
@@ -134,7 +133,7 @@ def imprimir_menu_lateral(pagina_atual: str, recorte: str) -> None:
         f'{itens}'
         '<div class="print-nav-recorte"><strong>Recorte da impressão</strong><div>'
         f'{escape(recorte)}</div></div>'
-        '<div class="print-nav-fim">Indicadores disponíveis: IND-001 a IND-045</div>'
+        '<div class="print-nav-fim">Indicadores disponíveis: 68 IDs do catálogo</div>'
         '<div class="print-nav-fim">Projeto Integrador IV · UNIVESP</div>'
         '</aside>'
     )
@@ -1221,9 +1220,9 @@ status `draft` e requerem revisão acadêmica e de divulgação antes de publica
     with st.expander('Fontes locais utilizadas'):
         for y,p in sorted(arquivos.items()):st.write(f'{y}: `{p}`')
         st.write('Nenhum CSV de microdados é lido pelo visualizador.')
-    with st.expander('Método de cada indicador disponível (IND-001 a IND-045)'):
+    with st.expander('Método de cada indicador disponível (IND-001 a IND-054)'):
         m=referencia.get('pages',{}).get('methodology',{})
-        for i in list(range(1,46)):
+        for i in list(range(1,55)):
             entry=m if i==1 else m.get(f'ind{i:03d}',{})
             if entry:
                 with st.expander(f'IND-{i:03d}'):
@@ -1238,17 +1237,29 @@ def _ler_cache(caminho: Path, versao: int):
 def ler_cached(caminho: Path):
     return _ler_cache(caminho, caminho.stat().st_mtime_ns)
 
+
+    st.markdown('**Indicadores IND-046 a IND-052:** cruzamentos descritivos com as notas finais e as competências. '
+                'Os campos socioeconômicos mudam de significado em 2024; só compare categorias entre anos '
+                'quando existir equivalência conceitual demonstrada. O IND-052 utiliza UF da prova, '
+                'inclusive em 2025. **IND-053:** MCA com inércia e contribuições de categorias. '
+                '**IND-054:** K-Means sobre escores de MCA; os rótulos C1–Ck não são competências '
+                'da redação e não equivalem entre anos. Ambos usam amostras do questionário e não notas.')
+    st.markdown('**IND-034 · recorte 980:** extensão da análise de competência única, baseada na '
+                'nota final oficial de cada competência (NU_NOTA_COMP1–5). Os percursos AV1/AV2/AV3/AV4 '
+                'são auditorias auxiliares, não substituem a nota definitiva. O recorte é exclusivamente '
+                'nacional e só aparece se integrado ao dashboard correspondente.')
+
 # Navegação e filtros. Defaults reais: todos os anos e Brasil.
 with st.sidebar:
     st.markdown('### Redação no ENEM')
     st.caption('Painel de indicadores · UNIVESP')
-    st.caption('Versão IND-045 · indicadores de 2019 a 2025')
+    st.caption('Catálogo v2 · 68 indicadores (ambiente interno)')
     st.markdown('---')
     st.caption('NAVEGAÇÃO')
     pagina=st.radio('Páginas',PAGINAS,label_visibility='collapsed',key='pagina_ativa')
     st.markdown('---')
-    st.caption('Disponíveis: IND-001 a IND-045, conforme os JSONs de cada edição')
-    st.caption('IND-032–039: Alto desempenho · IND-042–045: Contexto socioeconômico')
+    st.caption('Navegação conforme catálogo v2 e contrato JSON por página')
+    st.caption('IND-060–063: experimentos internos fora desta interface')
     st.caption('Alguns cruzamentos não estão disponíveis em todas as edições.')
     if st.button('Atualizar dados', use_container_width=True):
         st.cache_data.clear()
@@ -1289,17 +1300,45 @@ if ano is not None:
 st.caption(f'**Recorte atual:** {nome_escopo()}')
 imprimir_menu_lateral(pagina, nome_escopo())
 st.divider()
-if pagina=='Visão geral':boas_vindas()
-elif pagina=='Notas e distribuição':notas()
-elif pagina=='Competências':competencias()
-elif pagina=='Relações e PCA':relacoes()
-elif pagina=='Perfis de redação':perfis()
-elif pagina=='Evolução temporal':evolucao()
-elif pagina=='Avaliação entre corretores':avaliadores()
-elif pagina=='Alto desempenho':pagina_alto_desempenho()
-elif pagina=='Contexto socioeconômico':pagina_socioeconomica()
-elif pagina=='Modelos futuros':futura('Modelos futuros','Espaço reservado para novas análises de aprendizado de máquina.')
-elif pagina=='Metodologia':metodologia()
+# Navegação canônica: páginas da aba Paginas_UI do catálogo e do contrato JSON.
+ROTAS_CATALOGO = {
+    'Visão geral': 'overview',
+    'Competências': 'competencies',
+    'Avaliadores': 'evaluators',
+    'Alto desempenho': 'high_performance',
+    'Contexto socioeconômico': 'socioeconomic',
+    'Padrões por ML': 'ml',
+    'Evolução temporal': 'temporal',
+    'Metodologia': 'methodology',
+}
+pagina_contrato_68(st, ROOT, ROTAS_CATALOGO[pagina], ano, uf, referencia, anual)
+
+# Recursos gráficos anteriores continuam acessíveis, sem criar páginas extras no menu.
+if st.checkbox('Explorar visualizações temáticas da versão anterior', value=False,
+               key='mostrar_painel_anterior'):
+    st.divider()
+    if pagina == 'Visão geral':
+        boas_vindas()
+        notas()
+    elif pagina == 'Competências':
+        competencias()
+        relacoes()
+        perfis()
+    elif pagina == 'Avaliadores':
+        avaliadores()
+    elif pagina == 'Alto desempenho':
+        pagina_alto_desempenho()
+    elif pagina == 'Contexto socioeconômico':
+        pagina_socioeconomica()
+        pagina_indicadores_novos(st, grafico, ano, uf,
+                                dashboards_disponiveis() if ano is None else {ano: dashboard_do_filtro()})
+    elif pagina == 'Padrões por ML':
+        pagina_indicadores_novos(st, grafico, ano, uf,
+                                dashboards_disponiveis() if ano is None else {ano: dashboard_do_filtro()})
+    elif pagina == 'Evolução temporal':
+        evolucao()
+    elif pagina == 'Metodologia':
+        metodologia()
 
 st.divider()
-st.caption('Projeto Integrador IV — UNIVESP · Dados agregados · Versão de demonstração local · Revisões acadêmica e de privacidade pendentes.')
+st.caption('Projeto Integrador IV — UNIVESP · Dados agregados · Versão de demonstração local · Resultados sujeitos à validação acadêmica conforme o status de cada indicador.')

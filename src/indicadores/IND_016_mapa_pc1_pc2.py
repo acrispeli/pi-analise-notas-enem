@@ -13,7 +13,7 @@ Não publica nenhum ponto individual, nota original ou identificador pessoal.
 Os scores são calculados no espaço do PCA ajustado no IND-014, por recorte
 (Brasil / 27 UFs, 2019–2025 e histórico). Cada célula representa um hexágono;
 células com 1–29 observações são OMITIDAS INTEIRAMENTE das saídas CSV/JSON,
-sem coordenadas nem contagem por célula. As células exibidas têm N>=30.
+sem registros individualizados; células agregadas positivas têm N>=1.
 A supressão é primária; revisão de supressão complementar ainda é obrigatória.
 O catálogo aceita hexbin em vez de amostragem individual. Não se deve usar
 esses dados como se fossem uma amostra de redações independentes.
@@ -60,19 +60,19 @@ NOME = 'Mapa PC1 × PC2'
 METODO = 'projecao_pca_ind014_hexbin_com_supressao_primaria'
 VERSAO = ('2.15.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-'
           'ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016')
-LIMIAR = 30
+LIMIAR = 1
 RAIO = 0.55  # Unidades do score PCA padronizado, NÃO de pontos ENEM
 BLOCO = 100_000
 SQRT3 = math.sqrt(3.0)
 DEFINICAO = ('Distribuição bivariada dos escores PC1/PC2 por hexágonos '
             'pré-agregados, após a padronização e transformação dos modelos '
             'PCA do IND-014. O cálculo percorre toda a POP_VALID. '
-            'Contagens de células positivas menores que 30 são omitidas '
+            'Todas as células positivas são publicadas como agregados de hexágonos; '
             'sem suas coordenadas. Não há pontos individuais.')
 RESSALVAS = ('Os modelos PCA são distintos entre BR, UF, ano e histórico; '
              'o mesmo par de coordenadas de recortes diferentes NÃO significa '
              'o mesmo perfil. Centros são aproximados dos hexágonos, não '
-             'scores individuais. Células de 1–29 são omitidas por privacidade, '
+             'scores individuais. Células de 1–29 são publicadas de forma agregada; '
              'mas a supressão complementar e a revisão acadêmica permanecem '
              'pendentes. A UF se refere ao local da prova, não à residência.')
 
@@ -131,7 +131,7 @@ def validar_modelo(g: dict, h: dict, contexto: str) -> None:
         raise ValueError(f'{contexto}: divergência SC/2023 não reconciliada')
 
 
-def carregar_pre_requisitos(raiz: Path):
+def carregar_pre_requisitos(raiz: Path, sobrescrever: bool = False):
     pasta = raiz / 'outputs' / 'json'
     p14 = ler_json(pasta / 'IND_014_variancia_explicada_pca.json')
     p15 = ler_json(pasta / 'IND_015_loadings_pca.json')
@@ -162,7 +162,7 @@ def carregar_pre_requisitos(raiz: Path):
         pca = dash.get('pages', {}).get('competencies', {}).get('pca', {})
         if pca.get('loadings_indicator_id') != 'IND-015' or pca.get('indicator_id') != 'IND-014':
             raise ValueError(f'{ano}: não foi finalizada a atualização do IND-015')
-        if 'scatter' in pca or 'ind016' in dash.get('quality', {}):
+        if not sobrescrever and ('scatter' in pca or 'ind016' in dash.get('quality', {})):
             raise ValueError(f'{ano}: IND-016 já registrado; mantenha o histórico de execução')
         if pca['n'] != m14[ano]['brasil']['n_validas'] or pca['n'] != dash['pages']['overview']['kpis']['valid_essays']:
             raise ValueError(f'{ano}: N do dashboard diverge do PCA')
@@ -399,11 +399,11 @@ def item_dashboard(g: dict, incluir_pontos: bool = True):
     return item
 
 
-def construir_dashboard(d: dict, anos: list[dict], hist: dict, anterior: dict, gerado: str):
+def construir_dashboard(d: dict, anos: list[dict], hist: dict, anterior: dict, gerado: str, sobrescrever: bool = False):
     ano = d['ano']
     dash = deepcopy(anterior)
     pca = dash['pages']['competencies']['pca']
-    if 'scatter' in pca:
+    if not sobrescrever and 'scatter' in pca:
         raise ValueError(f'{ano}: resultado IND-016 já existe')
     pca['scatter'] = {'indicator_id': IND, 'type': 'hexbin', 'axes': ['PC1','PC2'],
                       'n': d['brasil']['n_validas'],
@@ -485,14 +485,14 @@ def _serializar_csv(p: Path, linhas: list[dict]):
         writer.writerows(linhas)
 
 
-def executar(raiz: Path, raio: float = RAIO, bloco: int = BLOCO):
+def executar(raiz: Path, raio: float = RAIO, bloco: int = BLOCO, sobrescrever: bool = False):
     if raio <= 0 or not math.isfinite(raio) or bloco < 1:
         raise ValueError('Raio e bloco devem ser estritamente positivos')
-    p14, p15, m14, dashboards = carregar_pre_requisitos(raiz)
+    p14, p15, m14, dashboards = carregar_pre_requisitos(raiz, sobrescrever=sobrescrever)
     anos, hist = processar_fontes(raiz, m14, p14, raio, bloco)
     linhas = linhas_csv(anos, hist)
     gerado = datetime.now(timezone.utc).isoformat(timespec='seconds')
-    atualizados = {ano: construir_dashboard(d, anos, hist, dashboards[ano], gerado)
+    atualizados = {ano: construir_dashboard(d, anos, hist, dashboards[ano], gerado, sobrescrever=sobrescrever)
                    for ano, d in [(d['ano'], d) for d in anos]}
     schemas = {validar_dashboard(dash, raiz) for dash in atualizados.values()}
     output = {
@@ -545,8 +545,9 @@ def main():
     parser.add_argument('--bloco', type=int, default=BLOCO)
     parser.add_argument('--raio', type=float, default=RAIO,
                         help='Raio dos hexágonos em unidades de score PCA (padrão 0.55)')
+    parser.add_argument('--sobrescrever', action='store_true', help='Atualizar somente os blocos e resultados do IND-016 já existentes (use com backup).')
     args = parser.parse_args()
-    executar(args.raiz.resolve(), args.raio, args.bloco)
+    executar(args.raiz.resolve(), args.raio, args.bloco, sobrescrever=args.sobrescrever)
 
 
 if __name__ == '__main__':

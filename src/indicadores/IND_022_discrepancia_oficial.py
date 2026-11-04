@@ -40,7 +40,7 @@ NOME='Discrepância oficial (critério ENEM 2024)'
 METODO='regra_edital_2024_total_gt100_ou_comp_gt80_ou_status_divergente'
 VERSAO='2.21.0-'+'-'.join(f'ind{i:03d}' for i in range(1,23))
 BLOCO=100_000
-MIN_N=30
+MIN_N=1
 COMP_COLS=tuple(f'NU_NOTA_COMP{i}_AV{j}' for i in range(1,6) for j in (1,2))
 STATUS_COLS=('TP_STATUS_REDACAO_AV1','TP_STATUS_REDACAO_AV2')
 NOTAS=(
@@ -134,7 +134,7 @@ def acumular(grupos,ufs,flags):
         for k,f in campos.items():g[k]+=int(np.sum(flags[f][mask]))
 
 
-def validar_requisitos(raiz:Path):
+def validar_requisitos(raiz:Path,sobrescrever:bool=False):
     j=raiz/'outputs'/'json'
     p20=j/'IND_020_diferenca_total_av1_av2.json'
     p21=j/'IND_021_diferenca_por_competencia.json'
@@ -154,7 +154,7 @@ def validar_requisitos(raiz:Path):
             raise ValueError(f'{ano}: metadados do dashboard inválidos')
         if d.get('quality',{}).get('ind021_validation',{}).get('status')!='ok':
             raise ValueError(f'{ano}: aguarde IND-021 integrar o dashboard')
-        if 'ind022_validation' in d['quality'] or 'official_discrepancy' in d.get('pages',{}).get('evaluators',{}):
+        if not sobrescrever and ('ind022_validation' in d['quality'] or 'official_discrepancy' in d.get('pages',{}).get('evaluators',{})):
             raise ValueError(f'{ano}: IND-022 já executado, não sobrescrever')
         for k in ('evaluators','temporal','methodology'):
             if not isinstance(d.get('pages',{}).get(k),dict):
@@ -335,9 +335,9 @@ def dashboard(ano,anos,historico,d,gerado):
     return x
 
 
-def executar(raiz:Path,bloco:int=BLOCO):
+def executar(raiz:Path,bloco:int=BLOCO,sobrescrever:bool=False):
     if bloco<1:raise ValueError('bloco precisa ser >=1')
-    m20,m21,originais=validar_requisitos(raiz)
+    m20,m21,originais=validar_requisitos(raiz,sobrescrever=sobrescrever)
     refs20={p['ano']:p for p in m20['years']}
     refs21={p['ano']:p for p in m21['years']}
     historico=grupos_vazios();periodos=[];qa={}
@@ -420,7 +420,8 @@ def main():
     ap=argparse.ArgumentParser(description='IND-022 discrepância oficial AV1/AV2 (critério do edital 2024)')
     ap.add_argument('--raiz',type=Path,default=Path(__file__).resolve().parents[2])
     ap.add_argument('--bloco',type=int,default=BLOCO)
+    ap.add_argument('--sobrescrever',action='store_true',help='Reprocessar IND-022 preservando outros indicadores')
     args=ap.parse_args()
-    executar(args.raiz.resolve(),args.bloco)
+    executar(args.raiz.resolve(),args.bloco,sobrescrever=args.sobrescrever)
 
 if __name__=='__main__':main()

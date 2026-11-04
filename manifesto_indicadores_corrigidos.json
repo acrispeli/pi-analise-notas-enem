@@ -1,0 +1,165 @@
+{
+  "observacao": "LOTE 1: somente versões testadas; NÃO execute os outros IND-001..054 com este manifesto. Sem homologação real.",
+  "politica": "sem supressão automática para 1<=N<=29; limites inferenciais e de ML permanecem distintos",
+  "scripts": {
+    "1": {
+      "sha256": "631e5eff7d97a06d1fd144d6e40c9d74044ab8ae360d494dda68ea05799b3704",
+      "args": [],
+      "teste": "ensaio focal de N=1 sem microdados"
+    },
+    "16": {
+      "sha256": "eea20f2601b57632f750b9a6874bb42088ede14b90d366a09575d8e6b03212ab",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "ensaio focal de N=1 sem microdados"
+    },
+    "20": {
+      "sha256": "ab7f44d31c9920722252274747fa93b7bba37b01829e4d61b9bf7525938e8a60",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "ensaio focal de N=1 sem microdados"
+    },
+    "23": {
+      "sha256": "c7dbaa92ae5904db9da08f98d789eeff29c9a39540d0ee8d56e2b5070f5a6743",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "ensaio focal de N=1 sem microdados"
+    },
+    "30": {
+      "sha256": "90486c7fec847850ce7de4442cdd7599a45825031d0b99766fcf5f15d8499829",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "ensaio focal de N=1 sem microdados"
+    },
+    "31": {
+      "sha256": "d97e4d016c9a2752f88f946413100a87e093b63051af5ae85d4c0198ebd6afc2",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "ensaio focal de N=1 sem microdados"
+    },
+    "32": {
+      "sha256": "0a056d36083de0f0b3a30d9797781caf683211f7a56a3bec6a505d9c2a94cbf6",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "ensaio focal de N=1 sem microdados"
+    },
+    "34": {
+      "sha256": "cc5eca13aff52e308d8003df74d181a216228b5455df468c43bc9e2d23589dbb",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "34_980": {
+      "sha256": "3f8715f3751c6a33260524ec247014527a34cfff3b7486c131ed6769dc4a41f9",
+      "args": [
+        "--integrar"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "35": {
+      "sha256": "d5dab5d9d550a8ee03e36a7f9fec97e8e5b8399bc2fc79e54feb6dfce5904f65",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "36": {
+      "sha256": "86aa31d8044c776e7c35756dd4bdff0b2e77ff54b5bd041d5d87124aa5b20c95",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "37": {
+      "sha256": "f0255717d61173beabe18cd288071b8a2bdff2ad275201968a16b3ede5712ed2",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "38": {
+      "sha256": "8c2cabc5ecbd3b64b0529a367a137fe2d58f4ffee56b842c21b5eaf27e59155f",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "40": {
+      "sha256": "93ff6c356d8a5f228a24f2da20a563da6e45efa7693252c0cf2d5e62a5d8b69e",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "ensaio focal de N=1 sem microdados"
+    },
+    "44": {
+      "sha256": "58273b7849e248699d1cc036dd8acbb83583df436ddcd1112a7cc18045d23d95",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "45": {
+      "sha256": "d4ac0046ba087601227e245802c8cf011a0a7fcac89da27a6e6f9c2523c01bf0",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "46": {
+      "sha256": "4499f187cec6472fbc77939282351360543e9e2a6c6dd03fa9e7b4805adec441",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "47": {
+      "sha256": "36752dd1850d2c593c25e67169ddf8b344e5270ff27d5464a56d7430c62c5b9a",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "48": {
+      "sha256": "9359b8c58dba79f7ff3e4c09022c352b5bd67da841e3b7afa2c6a244976e700b",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "49": {
+      "sha256": "e5acfdb5160ebab62c7f1065f5baaa5cd8dd09eff0c3cbc43628fd7c77621718",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "50": {
+      "sha256": "55c66d711c5e11010ddd16d9077ab885ee19e21bca5db72dd8178d6722911a1c",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "51": {
+      "sha256": "6689d017c01fd7a6cb38b27c84c523f64c0e372368ac31888834963e3086e518",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    },
+    "52": {
+      "sha256": "531c6bd89699f09de747dd8c5b2909bcc40e0a714c6ff363215fc644f54a0833",
+      "args": [
+        "--sobrescrever"
+      ],
+      "teste": "autoteste com dados sintéticos"
+    }
+  }
+}
