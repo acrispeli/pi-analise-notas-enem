@@ -280,6 +280,12 @@ def _mostrar_mca(st, plot, modelo, titulo):
     _tabela(st, eixos, 'Indicadores de inércia')
 
 
+def _rotulo_grupo_historico(codigo):
+    """Identificação visual do K-Means do IND-054; não equivale ao modelo V2."""
+    texto = str(codigo) if codigo is not None else ''
+    return 'H' + texto[1:] if texto.startswith('C') and texto[1:].isdigit() else texto
+
+
 def _mostrar_clusters(st, plot, modelo, titulo):
     if not isinstance(modelo, dict):
         st.info('Modelo K-Means ainda não integrado ou não calculado para esta edição.'); return
@@ -289,25 +295,25 @@ def _mostrar_clusters(st, plot, modelo, titulo):
     col[0].metric('Participantes da amostra', formato(modelo.get('n_amostra'), 0))
     col[1].metric('K escolhido', formato(modelo.get('k_selecionado'), 0))
     col[2].metric('Silhouette', formato(metricas.get('silhouette'), 3))
-    linhas = [{'Cluster': c.get('cluster'), 'Participantes': c.get('n_amostra'),
+    linhas = [{'Grupo histórico': _rotulo_grupo_historico(c.get('cluster')), 'Participantes': c.get('n_amostra'),
               'Participação aproximada (%)': c.get('participacao_aprox_pct')}
              for c in modelo.get('clusters') or []]
-    _barras(st, plot, linhas, 'Cluster', 'Participantes', 'Participantes na amostra')
-    _tabela(st, linhas, 'Distribuição dos clusters')
+    _barras(st, plot, linhas, 'Grupo histórico', 'Participantes', 'Participantes na amostra')
+    _tabela(st, linhas, 'Distribuição dos grupos históricos')
     diagnosticos = [{'K': x.get('k'), 'Situação': x.get('status'),
                      'Silhouette': x.get('silhouette'), 'Davies–Bouldin': x.get('davies_bouldin'),
                      'Calinski–Harabasz': x.get('calinski_harabasz'),
                      'ARI de estabilidade': x.get('ari_estabilidade')}
                     for x in modelo.get('diagnosticos_k') or []]
     _tabela(st, diagnosticos, 'Diagnóstico de escolha do K')
-    perfis = [{'Cluster': c.get('cluster'), 'Variável': x.get('variavel'),
+    perfis = [{'Grupo histórico': _rotulo_grupo_historico(c.get('cluster')), 'Variável': x.get('variavel'),
               'Categoria': x.get('categoria'), 'Prevalência no cluster (aprox. %)': x.get('prevalencia_grupo_aprox_pct'),
               'Diferença aproximada (p.p.)': x.get('diferenca_aprox_pp')}
              for c in modelo.get('clusters') or [] for x in c.get('perfil_exploratorio') or []]
-    _tabela(st, perfis, 'Perfis exploratórios (margens agregadas)')
-    st.caption('C1, C2 etc. são rótulos locais do K-Means e NÃO equivalem às competências da redação. '
-               'Os clusters de anos distintos não têm correspondência automática. '
-               'A amostra não representa necessariamente o peso populacional de cada edição.')
+    _tabela(st, perfis, 'Perfis exploratórios do modelo histórico (margens agregadas)')
+    st.caption('H1, H2 etc. identificam grupos do modelo socioeconômico histórico (IND-054), '
+               'distintos dos perfis materiais M1–M3 da V2 e das competências C1–C5 da redação. '
+               'Agrupamentos de anos distintos não têm correspondência automática; a amostra não representa necessariamente cada edição.')
 
 
 def pagina_indicadores_novos(st, plot, ano: int | None, uf: str,

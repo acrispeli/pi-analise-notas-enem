@@ -238,3 +238,39 @@ data/processed/*
 
 
 *.bak*
+
+# === Projeto Integrador IV: arquivos locais, temporarios e privados ===
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+data/raw/
+data/processed/
+data/derived/
+/outputs/rascunho_ponte_v2/
+/outputs/ind020_sql_*/
+/backups/
+/backups_*/
+/logs/
+/logs_*/
+/capturas_enem_*/
+/auditoria_repositorio/
+/PI_IV_*.zip
+/*.zip
+*.bak*
+*.log
+*.tmp
+*.pyc
+~$*
+Thumbs.db
+.DS_Store
+# NOTA: nao ignorar outputs/json/ sem planejar como publicar dados demonstrativos.
+# === Fim da secao Projeto Integrador IV ===

@@ -1,0 +1,2260 @@
+{
+  "fonte": "DICIONARIOS.xlsx (fornecido pelo projeto)",
+  "observacao": "Os textos são transcrições das células do dicionário, incluindo eventuais abreviações e reticências na fonte.",
+  "anos": {
+    "2019": {
+      "Q001": {
+        "pergunta": "Até que série seu pai, ou o homem responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q002": {
+        "pergunta": "Até que série sua mãe, ou a mulher responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q003": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).",
+        "respostas": {
+          "A": "Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.",
+          "B": "Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.",
+          "C": "Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.",
+          "D": "Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.",
+          "E": "Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q004": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).",
+        "respostas": {
+          "A": "Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.",
+          "B": "Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.",
+          "C": "Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.",
+          "D": "Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.",
+          "E": "Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q005": {
+        "pergunta": "Incluindo você, quantas pessoas moram atualmente em sua residência?",
+        "respostas": {
+          "1": "1, pois moro sozinho(a).",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        }
+      },
+      "Q006": {
+        "pergunta": "Qual é a renda mensal de sua família? (Some a sua renda com a dos seus familiares.)",
+        "respostas": {
+          "A": "Nenhuma renda.",
+          "B": "Até R$ 998,00.",
+          "C": "De R$ 998,01 até R$ 1.497,00.",
+          "D": "De R$ 1.497,01 até R$ 1.996,00.",
+          "E": "De R$ 1.996,01 até R$ 2.495,00.",
+          "F": "De R$ 2.495,01 até R$ 2.994,00.",
+          "G": "De R$ 2.994,01 até R$ 3.992,00.",
+          "H": "De R$ 3.992,01 até R$ 4.990,00.",
+          "I": "De R$ 4.990,01 até R$ 5.988,00.",
+          "J": "De R$ 5.988,01 até R$ 6.986,00.",
+          "K": "De R$ 6.986,01 até R$ 7.984,00.",
+          "L": "De R$ 7.984,01 até R$ 8.982,00.",
+          "M": "De R$ 8.982,01 até R$ 9.980,00.",
+          "N": "De R$ 9.980,01 até R$ 11.976,00.",
+          "O": "De R$ 11.976,01 até R$ 14.970,00.",
+          "P": "De R$ 14.970,01 até R$ 19.960,00.",
+          "Q": "Mais de R$ 19.960,00."
+        }
+      },
+      "Q007": {
+        "pergunta": "Em sua residência trabalha empregado(a) doméstico(a)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um ou dois dias por semana.",
+          "C": "Sim, três ou quatro dias por semana.",
+          "D": "Sim, pelo menos cinco dias por semana."
+        }
+      },
+      "Q008": {
+        "pergunta": "Na sua residência tem banheiro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q009": {
+        "pergunta": "Na sua residência tem quartos para dormir?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q010": {
+        "pergunta": "Na sua residência tem carro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q011": {
+        "pergunta": "Na sua residência tem motocicleta?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q012": {
+        "pergunta": "Na sua residência tem geladeira?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q013": {
+        "pergunta": "Na sua residência tem freezer (independente ou segunda porta da geladeira)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q014": {
+        "pergunta": "Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q015": {
+        "pergunta": "Na sua residência tem máquina de secar roupa (independente ou em conjunto com a máquina de lavar roupa)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q016": {
+        "pergunta": "Na sua residência tem forno micro-ondas?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q017": {
+        "pergunta": "Na sua residência tem máquina de lavar louça?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q018": {
+        "pergunta": "Na sua residência tem aspirador de pó?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q019": {
+        "pergunta": "Na sua residência tem televisão em cores?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q020": {
+        "pergunta": "Na sua residência tem aparelho de DVD?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q021": {
+        "pergunta": "Na sua residência tem TV por assinatura?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q022": {
+        "pergunta": "Na sua residência tem telefone celular?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q023": {
+        "pergunta": "Na sua residência tem telefone fixo?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q024": {
+        "pergunta": "Na sua residência tem computador?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q025": {
+        "pergunta": "Na sua residência tem acesso à Internet?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      }
+    },
+    "2020": {
+      "Q001": {
+        "pergunta": "Até que série seu pai, ou o homem responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q002": {
+        "pergunta": "Até que série sua mãe, ou a mulher responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q003": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).",
+        "respostas": {
+          "A": "Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.",
+          "B": "Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.",
+          "C": "Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.",
+          "D": "Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.",
+          "E": "Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q004": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).",
+        "respostas": {
+          "A": "Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.",
+          "B": "Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.",
+          "C": "Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.",
+          "D": "Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.",
+          "E": "Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q005": {
+        "pergunta": "Incluindo você, quantas pessoas moram atualmente em sua residência?",
+        "respostas": {
+          "1": "1, pois moro sozinho(a).",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        }
+      },
+      "Q006": {
+        "pergunta": "Qual é a renda mensal de sua família? (Some a sua renda com a dos seus familiares.)",
+        "respostas": {
+          "A": "Nenhuma Renda",
+          "B": "Até R$ 1.045,00",
+          "C": "De R$ 1.045,01 até R$ 1.567,50",
+          "D": "De R$ 1.567,51 até R$ 2.090,00",
+          "E": "De R$ 2.090,01 até R$ 2.612,50",
+          "F": "De R$ 2.612,51 até R$ 3.135,00",
+          "G": "De R$ 3.135,01 até R$ 4.180,00",
+          "H": "De R$ 4.180,01 até R$ 5.225,00",
+          "I": "De R$ 5.225,01 até R$ 6.270,00",
+          "J": "De R$ 6.270,01 até R$ 7.315,00",
+          "K": "De R$ 7.315,01 até R$ 8.360,00",
+          "L": "De R$ 8.360,01 até R$ 9.405,00",
+          "M": "De R$ 9.405,01 até R$ 10.450,00",
+          "N": "De R$ 10.450,01 até R$ 12.540,00",
+          "O": "De R$ 12.540,01 até R$ 15.675,00",
+          "P": "De R$ 15.675,01 até R$ 20.900,00",
+          "Q": "Acima de R$ 20.900,00"
+        }
+      },
+      "Q007": {
+        "pergunta": "Em sua residência trabalha empregado(a) doméstico(a)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um ou dois dias por semana.",
+          "C": "Sim, três ou quatro dias por semana.",
+          "D": "Sim, pelo menos cinco dias por semana."
+        }
+      },
+      "Q008": {
+        "pergunta": "Na sua residência tem banheiro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q009": {
+        "pergunta": "Na sua residência tem quartos para dormir?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q010": {
+        "pergunta": "Na sua residência tem carro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q011": {
+        "pergunta": "Na sua residência tem motocicleta?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q012": {
+        "pergunta": "Na sua residência tem geladeira?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q013": {
+        "pergunta": "Na sua residência tem freezer (independente ou segunda porta da geladeira)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q014": {
+        "pergunta": "Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q015": {
+        "pergunta": "Na sua residência tem máquina de secar roupa (independente ou em conjunto com a máquina de lavar roupa)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q016": {
+        "pergunta": "Na sua residência tem forno micro-ondas?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q017": {
+        "pergunta": "Na sua residência tem máquina de lavar louça?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q018": {
+        "pergunta": "Na sua residência tem aspirador de pó?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q019": {
+        "pergunta": "Na sua residência tem televisão em cores?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q020": {
+        "pergunta": "Na sua residência tem aparelho de DVD?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q021": {
+        "pergunta": "Na sua residência tem TV por assinatura?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q022": {
+        "pergunta": "Na sua residência tem telefone celular?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q023": {
+        "pergunta": "Na sua residência tem telefone fixo?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q024": {
+        "pergunta": "Na sua residência tem computador?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q025": {
+        "pergunta": "Na sua residência tem acesso à Internet?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      }
+    },
+    "2021": {
+      "Q001": {
+        "pergunta": "Até que série seu pai, ou o homem responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q002": {
+        "pergunta": "Até que série sua mãe, ou a mulher responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q003": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).",
+        "respostas": {
+          "A": "Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.",
+          "B": "Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.",
+          "C": "Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.",
+          "D": "Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.",
+          "E": "Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q004": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).",
+        "respostas": {
+          "A": "Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.",
+          "B": "Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.",
+          "C": "Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.",
+          "D": "Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.",
+          "E": "Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q005": {
+        "pergunta": "Incluindo você, quantas pessoas moram atualmente em sua residência?",
+        "respostas": {
+          "1": "1, pois moro sozinho(a).",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        }
+      },
+      "Q006": {
+        "pergunta": "Qual é a renda mensal de sua família? (Some a sua renda com a dos seus familiares.)",
+        "respostas": {
+          "A": "Nenhuma Renda",
+          "B": "Até R$ 1.100,00",
+          "C": "De R$ 1.100,01 até R$ 1.650,00.",
+          "D": "De R$ 1.650,01 até R$ 2.200,00.",
+          "E": "De R$ 2.200,01 até R$ 2.750,00.",
+          "F": "De R$ 2.750,01 até R$ 3.300,00.",
+          "G": "De R$ 3.300,01 até R$ 4.400,00.",
+          "H": "De R$ 4.400,01 até R$ 5.500,00.",
+          "I": "De R$ 5.500,01 até R$ 6.600,00.",
+          "J": "De R$ 6.600,01 até R$ 7.700,00.",
+          "K": "De R$ 7.700,01 até R$ 8.800,00.",
+          "L": "De R$ 8.800,01 até R$ 9.900,00.",
+          "M": "De R$ 9.900,01 até R$ 11.000,00.",
+          "N": "De R$ 11.000,01 até R$ 13.200,00.",
+          "O": "De R$ 13.200,01 até R$ 16.500,00.",
+          "P": "De R$ 16.500,01 até R$ 22.000,00.",
+          "Q": "Acima de R$ 22.000,00."
+        }
+      },
+      "Q007": {
+        "pergunta": "Em sua residência trabalha empregado(a) doméstico(a)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um ou dois dias por semana.",
+          "C": "Sim, três ou quatro dias por semana.",
+          "D": "Sim, pelo menos cinco dias por semana."
+        }
+      },
+      "Q008": {
+        "pergunta": "Na sua residência tem banheiro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q009": {
+        "pergunta": "Na sua residência tem quartos para dormir?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q010": {
+        "pergunta": "Na sua residência tem carro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q011": {
+        "pergunta": "Na sua residência tem motocicleta?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q012": {
+        "pergunta": "Na sua residência tem geladeira?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q013": {
+        "pergunta": "Na sua residência tem freezer (independente ou segunda porta da geladeira)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q014": {
+        "pergunta": "Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q015": {
+        "pergunta": "Na sua residência tem máquina de secar roupa (independente ou em conjunto com a máquina de lavar roupa)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q016": {
+        "pergunta": "Na sua residência tem forno micro-ondas?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q017": {
+        "pergunta": "Na sua residência tem máquina de lavar louça?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q018": {
+        "pergunta": "Na sua residência tem aspirador de pó?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q019": {
+        "pergunta": "Na sua residência tem televisão em cores?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q020": {
+        "pergunta": "Na sua residência tem aparelho de DVD?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q021": {
+        "pergunta": "Na sua residência tem TV por assinatura?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q022": {
+        "pergunta": "Na sua residência tem telefone celular?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q023": {
+        "pergunta": "Na sua residência tem telefone fixo?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q024": {
+        "pergunta": "Na sua residência tem computador?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q025": {
+        "pergunta": "Na sua residência tem acesso à Internet?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      }
+    },
+    "2022": {
+      "Q001": {
+        "pergunta": "Até que série seu pai, ou o homem responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q002": {
+        "pergunta": "Até que série sua mãe, ou a mulher responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q003": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).",
+        "respostas": {
+          "A": "Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.",
+          "B": "Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.",
+          "C": "Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.",
+          "D": "Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.",
+          "E": "Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q004": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).",
+        "respostas": {
+          "A": "Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.",
+          "B": "Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.",
+          "C": "Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.",
+          "D": "Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.",
+          "E": "Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q005": {
+        "pergunta": "Incluindo você, quantas pessoas moram atualmente em sua residência?",
+        "respostas": {
+          "1": "1, pois moro sozinho(a).",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        }
+      },
+      "Q006": {
+        "pergunta": "Qual é a renda mensal de sua família? (Some a sua renda com a dos seus familiares.)",
+        "respostas": {
+          "A": "Nenhuma Renda",
+          "B": "Até R$ 1.212,00",
+          "C": "De R$ 1.212,01 até R$ 1.818,00.",
+          "D": "De R$ 1.818,01 até R$ 2.424,00.",
+          "E": "De R$ 2.424,01 até R$ 3.030,00.",
+          "F": "De R$ 3.030,01 até R$ 3.636,00.",
+          "G": "De R$ 3.636,01 até R$ 4.848,00.",
+          "H": "De R$ 4.848,01 até R$ 6.060,00.",
+          "I": "De R$ 6.060,01 até R$ 7.272,00.",
+          "J": "De R$ 7.272,01 até R$ 8.484,00.",
+          "K": "De R$ 8.484,01 até R$ 9.696,00.",
+          "L": "De R$ 9.696,01 até R$ 10.908,00.",
+          "M": "De R$ 10.908,01 até R$ 12.120,00.",
+          "N": "De R$ 12.120,01 até R$ 14.544,00.",
+          "O": "De R$ 14.544,01 até R$ 18.180,00.",
+          "P": "De R$ 18.180,01 até R$ 24.240,00.",
+          "Q": "Acima de R$ 24.240,00."
+        }
+      },
+      "Q007": {
+        "pergunta": "Em sua residência trabalha empregado(a) doméstico(a)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um ou dois dias por semana.",
+          "C": "Sim, três ou quatro dias por semana.",
+          "D": "Sim, pelo menos cinco dias por semana."
+        }
+      },
+      "Q008": {
+        "pergunta": "Na sua residência tem banheiro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q009": {
+        "pergunta": "Na sua residência tem quartos para dormir?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q010": {
+        "pergunta": "Na sua residência tem carro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q011": {
+        "pergunta": "Na sua residência tem motocicleta?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q012": {
+        "pergunta": "Na sua residência tem geladeira?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q013": {
+        "pergunta": "Na sua residência tem freezer (independente ou segunda porta da geladeira)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q014": {
+        "pergunta": "Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q015": {
+        "pergunta": "Na sua residência tem máquina de secar roupa (independente ou em conjunto com a máquina de lavar roupa)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q016": {
+        "pergunta": "Na sua residência tem forno micro-ondas?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q017": {
+        "pergunta": "Na sua residência tem máquina de lavar louça?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q018": {
+        "pergunta": "Na sua residência tem aspirador de pó?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q019": {
+        "pergunta": "Na sua residência tem televisão em cores?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q020": {
+        "pergunta": "Na sua residência tem aparelho de DVD?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q021": {
+        "pergunta": "Na sua residência tem TV por assinatura?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q022": {
+        "pergunta": "Na sua residência tem telefone celular?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q023": {
+        "pergunta": "Na sua residência tem telefone fixo?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q024": {
+        "pergunta": "Na sua residência tem computador?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q025": {
+        "pergunta": "Na sua residência tem acesso à Internet?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      }
+    },
+    "2023": {
+      "Q001": {
+        "pergunta": "Até que série seu pai, ou o homem responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q002": {
+        "pergunta": "Até que série sua mãe, ou a mulher responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q003": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).",
+        "respostas": {
+          "A": "Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.",
+          "B": "Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.",
+          "C": "Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.",
+          "D": "Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.",
+          "E": "Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q004": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).",
+        "respostas": {
+          "A": "Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.",
+          "B": "Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.",
+          "C": "Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.",
+          "D": "Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.",
+          "E": "Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q005": {
+        "pergunta": "Incluindo você, quantas pessoas moram atualmente em sua residência?",
+        "respostas": {
+          "1": "1, pois moro sozinho(a).",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        }
+      },
+      "Q006": {
+        "pergunta": "Qual é a renda mensal de sua família? (Some a sua renda com a dos seus familiares.)",
+        "respostas": {
+          "A": "Nenhuma Renda",
+          "B": "Até R$ 1.320,00",
+          "C": "De R$ 1.320,01 até R$ 1.980,00.",
+          "D": "De R$ 1.980,01 até R$ 2.640,00.",
+          "E": "De R$ 2.640,01 até R$ 3.300,00.",
+          "F": "De R$ 3.300,01 até R$ 3.960,00.",
+          "G": "De R$ 3.960,01 até R$ 5.280,00.",
+          "H": "De R$ 5.280,01 até R$ 6.600,00.",
+          "I": "De R$ 6.600,01 até R$ 7.920,00.",
+          "J": "De R$ 7.920,01 até R$ 9240,00.",
+          "K": "De R$ 9.240,01 até R$ 10.560,00.",
+          "L": "De R$ 10.560,01 até R$ 11.880,00.",
+          "M": "De R$ 11.880,01 até R$ 13.200,00.",
+          "N": "De R$ 13.200,01 até R$ 15.840,00.",
+          "O": "De R$ 15.840,01 até R$19.800,00.",
+          "P": "De R$ 19.800,01 até R$ 26.400,00.",
+          "Q": "Acima de R$ 26.400,00."
+        }
+      },
+      "Q007": {
+        "pergunta": "Em sua residência trabalha empregado(a) doméstico(a)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um ou dois dias por semana.",
+          "C": "Sim, três ou quatro dias por semana.",
+          "D": "Sim, pelo menos cinco dias por semana."
+        }
+      },
+      "Q008": {
+        "pergunta": "Na sua residência tem banheiro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q009": {
+        "pergunta": "Na sua residência tem quartos para dormir?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q010": {
+        "pergunta": "Na sua residência tem carro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q011": {
+        "pergunta": "Na sua residência tem motocicleta?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q012": {
+        "pergunta": "Na sua residência tem geladeira?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q013": {
+        "pergunta": "Na sua residência tem freezer (independente ou segunda porta da geladeira)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q014": {
+        "pergunta": "Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q015": {
+        "pergunta": "Na sua residência tem máquina de secar roupa (independente ou em conjunto com a máquina de lavar roupa)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q016": {
+        "pergunta": "Na sua residência tem forno micro-ondas?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q017": {
+        "pergunta": "Na sua residência tem máquina de lavar louça?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q018": {
+        "pergunta": "Na sua residência tem aspirador de pó?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q019": {
+        "pergunta": "Na sua residência tem televisão em cores?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q020": {
+        "pergunta": "Na sua residência tem aparelho de DVD?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q021": {
+        "pergunta": "Na sua residência tem TV por assinatura?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q022": {
+        "pergunta": "Na sua residência tem telefone celular?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q023": {
+        "pergunta": "Na sua residência tem telefone fixo?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q024": {
+        "pergunta": "Na sua residência tem computador?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q025": {
+        "pergunta": "Na sua residência tem acesso à Internet?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      }
+    },
+    "2024": {
+      "Q001": {
+        "pergunta": "Até que série seu pai, ou o homem responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q002": {
+        "pergunta": "Até que série sua mãe, ou a mulher responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q003": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).",
+        "respostas": {
+          "A": "Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.",
+          "B": "Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.",
+          "C": "Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.",
+          "D": "Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.",
+          "E": "Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q004": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).",
+        "respostas": {
+          "A": "Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.",
+          "B": "Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.",
+          "C": "Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.",
+          "D": "Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.",
+          "E": "Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q005": {
+        "pergunta": "Incluindo você, quantas pessoas moram atualmente em sua residência?",
+        "respostas": {
+          "1": "1, pois moro sozinho(a).",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        }
+      },
+      "Q006": {
+        "pergunta": "Você possui renda?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim"
+        }
+      },
+      "Q007": {
+        "pergunta": "Qual é a renda mensal de sua família? (Considere a sua renda com a das pessoas que moram com você.)",
+        "respostas": {
+          "A": "Nenhuma Renda",
+          "B": "Até R$ 1.412,00.",
+          "C": "De R$ 1.412,01 até R$ 2.118,00.",
+          "D": "De R$ 2.118,01 até R$ 2.824,00.",
+          "E": "De R$ 2.824,01 até R$ 3.530,00.",
+          "F": "De R$ 3.530,01 até R$ 4.236,00.",
+          "G": "De R$ 4.236,01 até R$ 5.648,00.",
+          "H": "De R$ 5.648,01 até R$ 7.060,00.",
+          "I": "De R$ 7.060,01 até R$ 8.472,00.",
+          "J": "De R$ 8.472,01 até R$9.884,00.",
+          "K": "De R$ 9.884,01 até R$ 11.296,00.",
+          "L": "De R$ 11.296,01 até R$ 12.708,00.",
+          "M": "De R$ 12.708,01 até R$ 14.120,00.",
+          "N": "De R$ 14.120,01 até R$ 16.944,00.",
+          "O": "De R$ 16.944,01 até R$ 21.180,00.",
+          "P": "De R$ 21.180,01 até R$ 28.240,00.",
+          "Q": "Acima de R$ 28.240,00."
+        }
+      },
+      "Q008": {
+        "pergunta": "Em sua casa, você ou a pessoa responsável pela sua família costuma contratar os serviços de um(a) empregado(a) doméstico(a)?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um ou dois dias por semana.",
+          "C": "Sim, três ou quatro dias por semana.",
+          "D": "Sim, pelo menos cinco dias por semana."
+        }
+      },
+      "Q009": {
+        "pergunta": "Em sua casa, existe banheiro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três ou mais."
+        }
+      },
+      "Q010": {
+        "pergunta": "Em sua casa, existe quarto para dormir?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três ou mais."
+        }
+      },
+      "Q011": {
+        "pergunta": "Incluindo você, as pessoas com quem você mora têm carro?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três ou mais."
+        }
+      },
+      "Q012": {
+        "pergunta": "Incluindo você, as pessoas com quem você mora têm motocicleta?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três ou mais."
+        }
+      },
+      "Q013": {
+        "pergunta": "Em sua casa, existe geladeira?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três ou mais."
+        }
+      },
+      "Q014": {
+        "pergunta": "Em sua casa, existe freezer independente (vertical ou horizontal)? (Não considere a segunda porta da geladeira.)",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim"
+        }
+      },
+      "Q015": {
+        "pergunta": "Em sua casa, existe máquina de lavar roupa? (Não considere o tanquinho.)",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim"
+        }
+      },
+      "Q016": {
+        "pergunta": "Em sua casa, existe micro-ondas?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim"
+        }
+      },
+      "Q017": {
+        "pergunta": "Em sua casa, existe aspirador de pó?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q018": {
+        "pergunta": "Em sua casa, existe aparelho de TV?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, uma.",
+          "C": "Sim, duas.",
+          "D": "Sim, três ou mais."
+        }
+      },
+      "Q019": {
+        "pergunta": "Em sua casa, existe TV por assinatura?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q020": {
+        "pergunta": "Em sua casa, existe acesso à internet por rede wi-fi?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim."
+        }
+      },
+      "Q021": {
+        "pergunta": "Em sua casa, existe computador/notebook?",
+        "respostas": {
+          "A": "Não.",
+          "B": "Sim, um.",
+          "C": "Sim, dois.",
+          "D": "Sim, três.",
+          "E": "Sim, quatro ou mais."
+        }
+      },
+      "Q022": {
+        "pergunta": "Incluindo você, as pessoas com quem você mora têm telefone celular?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, um",
+          "C": "Sim, dois",
+          "D": "Sim, três ou mais",
+          "E": "Sim, quatro ou mais"
+        }
+      },
+      "Q023": {
+        "pergunta": "Em que tipo de escola você frequentou ou frequenta o Ensino Médio?",
+        "respostas": {
+          "A": "Somente em escola pública.",
+          "B": "Parte em escola pública e parte em escola privada sem bolsa de estudo integral.",
+          "C": "Parte em escola pública e parte em escola privada com bolsa de estudo integral",
+          "D": "Somente em escola privada sem bolsa de estudo integral",
+          "E": "Somente em escola privada com bolsa de estudo integral",
+          "F": "Não frequentei escola de Ensino Médio"
+        }
+      }
+    },
+    "2025": {
+      "Q001": {
+        "pergunta": "Até que série seu pai, ou o homem responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q002": {
+        "pergunta": "Até que série sua mãe, ou a mulher responsável por você, estudou?",
+        "respostas": {
+          "A": "Nunca estudou.",
+          "B": "Não completou a 4ª série/5º ano do Ensino Fundamental.",
+          "C": "Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.",
+          "D": "Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.",
+          "E": "Completou o Ensino Médio, mas não completou a Faculdade.",
+          "F": "Completou a Faculdade, mas não completou a Pós-graduação.",
+          "G": "Completou a Pós-graduação.",
+          "H": "Não sei."
+        }
+      },
+      "Q003": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).",
+        "respostas": {
+          "A": "Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.",
+          "B": "Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.",
+          "C": "Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.",
+          "D": "Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.",
+          "E": "Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q004": {
+        "pergunta": "A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).",
+        "respostas": {
+          "A": "Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.",
+          "B": "Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.",
+          "C": "Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.",
+          "D": "Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.",
+          "E": "Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.",
+          "F": "Não sei."
+        }
+      },
+      "Q005": {
+        "pergunta": "Incluindo você, quantas pessoas moram atualmente em sua residência?",
+        "respostas": {
+          "1": "1, pois moro sozinho(a)",
+          "2": "2 pessoas",
+          "3": "3 pessoas",
+          "4": "4 pessoas",
+          "5": "5 pessoas",
+          "6": "6 pessoas",
+          "7": "7 pessoas",
+          "8": "8 pessoas",
+          "9": "9 pessoas",
+          "10": "10 pessoas",
+          "11": "11 pessoas",
+          "12": "12 pessoas",
+          "13": "13 pessoas",
+          "14": "14 pessoas",
+          "15": "15 pessoas",
+          "16": "16 pessoas",
+          "17": "17 pessoas",
+          "18": "18 pessoas",
+          "19": "19 pessoas",
+          "20": "20 pessoas"
+        }
+      },
+      "Q006": {
+        "pergunta": "Você possui renda?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim"
+        }
+      },
+      "Q007": {
+        "pergunta": "Qual é a renda mensal de sua família? (Considere a sua renda com a das pessoas que moram com você)",
+        "respostas": {
+          "A": "Nenhuma renda",
+          "B": "Até R$ 1.518,00",
+          "C": "De R$ 1.518,01 até R$ 2.277,00",
+          "D": "De R$ 2.277,01 até R$ 3.036,00",
+          "E": "De R$ 3.036,01 até R$ 3.795,00",
+          "F": "De R$ 3.795,01 até R$ 4.554,00",
+          "G": "De R$ 4.554,01 até R$ 6.072,00",
+          "H": "De R$ 6.072,01 até R$ 7.590,00",
+          "I": "De R$ 7.590,01 até R$ 9.108,00",
+          "J": "De R$ 9.108,01 até R$10.626,00",
+          "K": "De R$ 10.626,01 até R$ 12.144,00",
+          "L": "De R$ 12.144,01 até R$ 13.662,00",
+          "M": "De R$ 13.662,01 até R$ 15.180,00",
+          "N": "De R$ 15.180,01 até R$ 18.216,00",
+          "O": "De R$ 18.216,01 até R$ 22.770,00",
+          "P": "De R$ 22.770,01 até R$ 30.360,00",
+          "Q": "Acima de R$ 30.360,00"
+        }
+      },
+      "Q008": {
+        "pergunta": "Em sua casa, você ou a pessoa responsável pela sua família costuma contratar os serviços de um(a) empregado(a) doméstico(a)?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, um ou dois dias por semana",
+          "C": "Sim, três ou quatro dias por semana",
+          "D": "Sim, pelo menos cinco dias por semana"
+        }
+      },
+      "Q009": {
+        "pergunta": "Em sua casa, existe banheiro?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, um",
+          "C": "Sim, dois",
+          "D": "Sim, três ou mais"
+        }
+      },
+      "Q010": {
+        "pergunta": "Em sua casa, existe quarto para dormir?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, um",
+          "C": "Sim, dois",
+          "D": "Sim, três ou mais"
+        }
+      },
+      "Q011": {
+        "pergunta": "Incluindo você, as pessoas com quem você mora têm carro?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, um",
+          "C": "Sim, dois",
+          "D": "Sim, três ou mais"
+        }
+      },
+      "Q012": {
+        "pergunta": "Incluindo você, as pessoas com quem você mora têm motocicleta?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, uma",
+          "C": "Sim, duas",
+          "D": "Sim, três ou mais"
+        }
+      },
+      "Q013": {
+        "pergunta": "Em sua casa, existe geladeira?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, uma",
+          "C": "Sim, duas",
+          "D": "Sim, três ou mais"
+        }
+      },
+      "Q014": {
+        "pergunta": "Em sua casa, existe freezer independente (vertical ou horizontal)? (Não considere a segunda porta da geladeira.)",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim"
+        }
+      },
+      "Q015": {
+        "pergunta": "Em sua casa, existe máquina de lavar roupa? (Não considere o tanquinho)",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim"
+        }
+      },
+      "Q016": {
+        "pergunta": "Em sua casa, existe micro-ondas?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim"
+        }
+      },
+      "Q017": {
+        "pergunta": "Em sua casa, existe aspirador de pó?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim"
+        }
+      },
+      "Q018": {
+        "pergunta": "Em sua casa, existe aparelho de TV?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, um",
+          "C": "Sim, dois",
+          "D": "Sim, três ou mais"
+        }
+      },
+      "Q019": {
+        "pergunta": "Em sua casa, existe TV por assinatura?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim"
+        }
+      },
+      "Q020": {
+        "pergunta": "Em sua casa, existe acesso à internet por rede wi-fi?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim"
+        }
+      },
+      "Q021": {
+        "pergunta": "Em sua casa, existe computador/notebook?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, um",
+          "C": "Sim, dois",
+          "D": "Sim, três",
+          "E": "Sim, quatro ou mais"
+        }
+      },
+      "Q022": {
+        "pergunta": "Incluindo você, as pessoas com quem você mora têm telefone celular?",
+        "respostas": {
+          "A": "Não",
+          "B": "Sim, um",
+          "C": "Sim, dois",
+          "D": "Sim, três",
+          "E": "Sim, quatro ou mais"
+        }
+      },
+      "Q023": {
+        "pergunta": "Em que tipo de escola você frequentou ou frequenta o Ensino Médio?",
+        "respostas": {
+          "A": "Somente em escola pública.",
+          "B": "Parte em escola pública e parte em escola privada sem bolsa de estudo integral",
+          "C": "Parte em escola pública e parte em escola privada com bolsa de estudo integral",
+          "D": "Somente em escola privada sem bolsa de estudo integral",
+          "E": "Somente em escola privada com bolsa de estudo integral",
+          "F": "Não frequentei escola de Ensino Médio"
+        }
+      }
+    }
+  },
+  "variaveis": {
+    "2019": {
+      "TP_FAIXA_ETARIA": {
+        "pergunta": "Faixa etária2",
+        "respostas": {
+          "1": "Menor de 17 anos",
+          "2": "17 anos",
+          "3": "18 anos",
+          "4": "19 anos",
+          "5": "20 anos",
+          "6": "21 anos",
+          "7": "22 anos",
+          "8": "23 anos",
+          "9": "24 anos",
+          "10": "25 anos",
+          "11": "Entre 26 e 30 anos",
+          "12": "Entre 31 e 35 anos",
+          "13": "Entre 36 e 40 anos",
+          "14": "Entre 41 e 45 anos",
+          "15": "Entre 46 e 50 anos",
+          "16": "Entre 51 e 55 anos",
+          "17": "Entre 56 e 60 anos",
+          "18": "Entre 61 e 65 anos",
+          "19": "Entre 66 e 70 anos",
+          "20": "Maior de 70 anos"
+        }
+      },
+      "TP_SEXO": {
+        "pergunta": "Sexo",
+        "respostas": {
+          "M": "Masculino",
+          "F": "Feminino"
+        }
+      },
+      "TP_COR_RACA": {
+        "pergunta": "Cor/raça",
+        "respostas": {
+          "0": "Não declarado",
+          "1": "Branca",
+          "2": "Preta",
+          "3": "Parda",
+          "4": "Amarela",
+          "5": "Indígena"
+        }
+      },
+      "TP_ESCOLA": {
+        "pergunta": "Tipo de escola do Ensino Médio",
+        "respostas": {
+          "1": "Não Respondeu",
+          "2": "Pública",
+          "3": "Privada",
+          "4": "Exterior"
+        }
+      },
+      "SG_UF_PROVA": {
+        "pergunta": "Sigla da Unidade da Federação da aplicação da prova",
+        "respostas": {}
+      }
+    },
+    "2020": {
+      "TP_FAIXA_ETARIA": {
+        "pergunta": "Faixa etária2",
+        "respostas": {
+          "1": "Menor de 17 anos",
+          "2": "17 anos",
+          "3": "18 anos",
+          "4": "19 anos",
+          "5": "20 anos",
+          "6": "21 anos",
+          "7": "22 anos",
+          "8": "23 anos",
+          "9": "24 anos",
+          "10": "25 anos",
+          "11": "Entre 26 e 30 anos",
+          "12": "Entre 31 e 35 anos",
+          "13": "Entre 36 e 40 anos",
+          "14": "Entre 41 e 45 anos",
+          "15": "Entre 46 e 50 anos",
+          "16": "Entre 51 e 55 anos",
+          "17": "Entre 56 e 60 anos",
+          "18": "Entre 61 e 65 anos",
+          "19": "Entre 66 e 70 anos",
+          "20": "Maior de 70 anos"
+        }
+      },
+      "TP_SEXO": {
+        "pergunta": "Sexo",
+        "respostas": {
+          "M": "Masculino",
+          "F": "Feminino"
+        }
+      },
+      "TP_COR_RACA": {
+        "pergunta": "Cor/raça",
+        "respostas": {
+          "0": "Não declarado",
+          "1": "Branca",
+          "2": "Preta",
+          "3": "Parda",
+          "4": "Amarela",
+          "5": "Indígena"
+        }
+      },
+      "TP_ESCOLA": {
+        "pergunta": "Tipo de escola do Ensino Médio",
+        "respostas": {
+          "1": "Não Respondeu",
+          "2": "Pública",
+          "3": "Privada",
+          "4": "Exterior"
+        }
+      },
+      "SG_UF_PROVA": {
+        "pergunta": "Sigla da Unidade da Federação da aplicação da prova",
+        "respostas": {}
+      }
+    },
+    "2021": {
+      "TP_FAIXA_ETARIA": {
+        "pergunta": "Faixa etária2",
+        "respostas": {
+          "1": "Menor de 17 anos",
+          "2": "17 anos",
+          "3": "18 anos",
+          "4": "19 anos",
+          "5": "20 anos",
+          "6": "21 anos",
+          "7": "22 anos",
+          "8": "23 anos",
+          "9": "24 anos",
+          "10": "25 anos",
+          "11": "Entre 26 e 30 anos",
+          "12": "Entre 31 e 35 anos",
+          "13": "Entre 36 e 40 anos",
+          "14": "Entre 41 e 45 anos",
+          "15": "Entre 46 e 50 anos",
+          "16": "Entre 51 e 55 anos",
+          "17": "Entre 56 e 60 anos",
+          "18": "Entre 61 e 65 anos",
+          "19": "Entre 66 e 70 anos",
+          "20": "Maior de 70 anos"
+        }
+      },
+      "TP_SEXO": {
+        "pergunta": "Sexo",
+        "respostas": {
+          "M": "Masculino",
+          "F": "Feminino"
+        }
+      },
+      "TP_COR_RACA": {
+        "pergunta": "Cor/raça",
+        "respostas": {
+          "0": "Não declarado",
+          "1": "Branca",
+          "2": "Preta",
+          "3": "Parda",
+          "4": "Amarela",
+          "5": "Indígena",
+          "6": "Não dispõe da informação"
+        }
+      },
+      "TP_ESCOLA": {
+        "pergunta": "Tipo de escola do Ensino Médio",
+        "respostas": {
+          "1": "Não Respondeu",
+          "2": "Pública",
+          "3": "Privada"
+        }
+      },
+      "SG_UF_PROVA": {
+        "pergunta": "Sigla da Unidade da Federação da aplicação da prova",
+        "respostas": {}
+      }
+    },
+    "2022": {
+      "TP_FAIXA_ETARIA": {
+        "pergunta": "Faixa etária2",
+        "respostas": {
+          "1": "Menor de 17 anos",
+          "2": "17 anos",
+          "3": "18 anos",
+          "4": "19 anos",
+          "5": "20 anos",
+          "6": "21 anos",
+          "7": "22 anos",
+          "8": "23 anos",
+          "9": "24 anos",
+          "10": "25 anos",
+          "11": "Entre 26 e 30 anos",
+          "12": "Entre 31 e 35 anos",
+          "13": "Entre 36 e 40 anos",
+          "14": "Entre 41 e 45 anos",
+          "15": "Entre 46 e 50 anos",
+          "16": "Entre 51 e 55 anos",
+          "17": "Entre 56 e 60 anos",
+          "18": "Entre 61 e 65 anos",
+          "19": "Entre 66 e 70 anos",
+          "20": "Maior de 70 anos"
+        }
+      },
+      "TP_SEXO": {
+        "pergunta": "Sexo",
+        "respostas": {
+          "M": "Masculino",
+          "F": "Feminino"
+        }
+      },
+      "TP_COR_RACA": {
+        "pergunta": "Cor/raça",
+        "respostas": {
+          "0": "Não declarado",
+          "1": "Branca",
+          "2": "Preta",
+          "3": "Parda",
+          "4": "Amarela",
+          "5": "Indígena",
+          "6": "Não dispõe da informação"
+        }
+      },
+      "TP_ESCOLA": {
+        "pergunta": "Tipo de escola do Ensino Médio",
+        "respostas": {
+          "1": "Não Respondeu",
+          "2": "Pública",
+          "3": "Privada"
+        }
+      },
+      "SG_UF_PROVA": {
+        "pergunta": "Sigla da Unidade da Federação da aplicação da prova",
+        "respostas": {}
+      }
+    },
+    "2023": {
+      "TP_FAIXA_ETARIA": {
+        "pergunta": "Faixa etária2",
+        "respostas": {
+          "1": "Menor de 17 anos",
+          "2": "17 anos",
+          "3": "18 anos",
+          "4": "19 anos",
+          "5": "20 anos",
+          "6": "21 anos",
+          "7": "22 anos",
+          "8": "23 anos",
+          "9": "24 anos",
+          "10": "25 anos",
+          "11": "Entre 26 e 30 anos",
+          "12": "Entre 31 e 35 anos",
+          "13": "Entre 36 e 40 anos",
+          "14": "Entre 41 e 45 anos",
+          "15": "Entre 46 e 50 anos",
+          "16": "Entre 51 e 55 anos",
+          "17": "Entre 56 e 60 anos",
+          "18": "Entre 61 e 65 anos",
+          "19": "Entre 66 e 70 anos",
+          "20": "Maior de 70 anos"
+        }
+      },
+      "TP_SEXO": {
+        "pergunta": "Sexo",
+        "respostas": {
+          "M": "Masculino",
+          "F": "Feminino"
+        }
+      },
+      "TP_COR_RACA": {
+        "pergunta": "Cor/raça",
+        "respostas": {
+          "0": "Não declarado",
+          "1": "Branca",
+          "2": "Preta",
+          "3": "Parda",
+          "4": "Amarela",
+          "5": "Indígena",
+          "6": "Não dispõe da informação"
+        }
+      },
+      "TP_ESCOLA": {
+        "pergunta": "Tipo de escola do Ensino Médio",
+        "respostas": {
+          "1": "Não Respondeu",
+          "2": "Pública",
+          "3": "Privada"
+        }
+      },
+      "SG_UF_PROVA": {
+        "pergunta": "Sigla da Unidade da Federação da aplicação da prova",
+        "respostas": {}
+      }
+    },
+    "2024": {
+      "TP_FAIXA_ETARIA": {
+        "pergunta": "Faixa etária2",
+        "respostas": {
+          "1": "Menor de 17 anos",
+          "2": "17 anos",
+          "3": "18 anos",
+          "4": "19 anos",
+          "5": "20 anos",
+          "6": "21 anos",
+          "7": "22 anos",
+          "8": "23 anos",
+          "9": "24 anos",
+          "10": "25 anos",
+          "11": "Entre 26 e 30 anos",
+          "12": "Entre 31 e 35 anos",
+          "13": "Entre 36 e 40 anos",
+          "14": "Entre 41 e 45 anos",
+          "15": "Entre 46 e 50 anos",
+          "16": "Entre 51 e 55 anos",
+          "17": "Entre 56 e 60 anos",
+          "18": "Entre 61 e 65 anos",
+          "19": "Entre 66 e 70 anos",
+          "20": "Maior de 70 anos"
+        }
+      },
+      "TP_SEXO": {
+        "pergunta": "Sexo",
+        "respostas": {
+          "M": "Masculino",
+          "F": "Feminino"
+        }
+      },
+      "TP_COR_RACA": {
+        "pergunta": "Cor/raça",
+        "respostas": {
+          "0": "Não declarado",
+          "1": "Branca",
+          "2": "Preta",
+          "3": "Parda",
+          "4": "Amarela",
+          "5": "Indígena",
+          "6": "Não dispõe da informação"
+        }
+      },
+      "SG_UF_PROVA": {
+        "pergunta": "Sigla da Unidade da Federação da aplicação da prova",
+        "respostas": {}
+      }
+    },
+    "2025": {
+      "TP_FAIXA_ETARIA": {
+        "pergunta": "Faixa etária2",
+        "respostas": {
+          "1": "Menor de 17 anos",
+          "2": "17 anos",
+          "3": "18 anos",
+          "4": "19 anos",
+          "5": "20 anos",
+          "6": "21 anos",
+          "7": "22 anos",
+          "8": "23 anos",
+          "9": "24 anos",
+          "10": "25 anos",
+          "11": "Entre 26 e 30 anos",
+          "12": "Entre 31 e 35 anos",
+          "13": "Entre 36 e 40 anos",
+          "14": "Entre 41 e 45 anos",
+          "15": "Entre 46 e 50 anos",
+          "16": "Entre 51 e 55 anos",
+          "17": "Entre 56 e 60 anos",
+          "18": "Entre 61 e 65 anos",
+          "19": "Entre 66 e 70 anos",
+          "20": "Maior de 70 anos"
+        }
+      },
+      "TP_SEXO": {
+        "pergunta": "Sexo",
+        "respostas": {
+          "M": "Masculino",
+          "F": "Feminino"
+        }
+      },
+      "TP_COR_RACA": {
+        "pergunta": "Cor/raça",
+        "respostas": {
+          "0": "Não declarado",
+          "1": "Branca",
+          "2": "Preta",
+          "3": "Parda",
+          "4": "Amarela",
+          "5": "Indígena"
+        }
+      },
+      "SG_UF_PROVA": {
+        "pergunta": "Sigla da Unidade da Federação da aplicação da prova",
+        "respostas": {
+          "RO": "Rondônia",
+          "AC": "Acre",
+          "AM": "Amazonas",
+          "RR": "Roraima",
+          "PA": "Pará",
+          "AP": "Amapá",
+          "TO": "Tocantins",
+          "MA": "Maranhão",
+          "PI": "Piauí",
+          "CE": "Ceará",
+          "RN": "Rio Grande do Norte",
+          "PB": "Paraíba",
+          "PE": "Pernambuco",
+          "AL": "Alagoas",
+          "SE": "Sergipe",
+          "BA": "Bahia",
+          "MG": "Minas Gerais",
+          "ES": "Espírito Santo",
+          "RJ": "Rio de Janeiro",
+          "SP": "São Paulo",
+          "PR": "Paraná",
+          "SC": "Santa Catarina",
+          "RS": "Rio Grande do Sul",
+          "MS": "Mato Grosso do Sul",
+          "MT": "Mato Grosso",
+          "GO": "Goiás",
+          "DF": "Distrito Federal"
+        }
+      }
+    }
+  }
+}

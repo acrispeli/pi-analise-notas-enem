@@ -364,16 +364,135 @@ COL_TARGET=['nota_redacao','c1','c2','c3','c4','c5']
 BRIDGE_VERSION='ponte-socio-cluster-fixo-v1'
 
 
+
+# Somente trabalho interno da pesquisa. NAO equivale a homologacao/publicacao.
+ENV_RASCUNHO_V2='ENEM_V2_RASCUNHO_INTERNO'
+SCHEMA_RASCUNHO_V2='ponte-socio-10-ativas-rascunho-interno-v2'
+
+def _manifesto_v2_para_rascunho(root):
+    """Lê a candidata V2 SEM alterar status de aprovacao e valida proveniencia."""
+    if (root/'data/derived/manifesto_ponte_socio_v2_homologada.json').exists():
+        raise Pendencia('Ja existe ponte homologada: use o executor normal em vez de rascunho')
+    refpath=root/'data/derived/candidata_ponte_socio_v2/comparativo_modelos_agrupado.json'
+    candpath=root/'data/derived/candidata_ponte_socio_v2_individual/manifesto_candidato_v2.json'
+    if not refpath.is_file() or not candpath.is_file():
+        raise Pendencia('Ponte V2 candidata e comparativo nao encontrados')
+    ref=json.loads(refpath.read_text(encoding='utf-8-sig'))
+    cand=json.loads(candpath.read_text(encoding='utf-8-sig'))
+    if (ref.get('schema')!='comparativo-clusters-10-ativas-v1'
+        or ref.get('status')!='exploratorio_nao_aprovado'
+        or ref.get('amostra_comparavel_n')!=104752
+        or ref.get('v2',{}).get('k')!=3
+        or ref['v2'].get('cluster_sizes')!=[66664,34240,3848]):
+        raise Pendencia('Comparativo V2 nao corresponde ao modelo previamente auditado')
+    if (cand.get('schema_version')!='ponte-socio-10-ativas-candidata-v2'
+        or cand.get('status')!='candidato_nao_aprovado'
+        or cand.get('hash_comparacao_v2')!=sha(refpath)
+        or cand.get('n_total')!=104752
+        or cand.get('k')!=3
+        or cand.get('cluster_sizes')!=ref['v2']['cluster_sizes']
+        or cand.get('variaveis_ativas')!=ref.get('variaveis_ativas')
+        or len(cand.get('variaveis_ativas',[]))!=10
+        or len(cand.get('anos',{}))!=7):
+        raise Pendencia('Manifesto candidato V2 divergente ou sem rastreabilidade')
+    if cand.get('modelo_referencia')!='modelo_v2_reproduzido_do_comparativo_nao_IND054_oficial':
+        raise Pendencia('Manifesto da candidata passou a declarar modelo oficial incorretamente')
+    byyear={int(x['ano']):x for x in ref['v2']['distribuicao_anual']}
+    counts=Counter()
+    manifest={
+        'schema_version':SCHEMA_RASCUNHO_V2,
+        'status':'rascunho_interno_nao_homologado',
+        'modelo_referencia':'V2_MCA10_KMeans3_'+sha(refpath)[:16],
+        'validacao_mca_clusters':'reproducao_e_auditoria_tecnicas_conferidas',
+        'aviso':'Nao divulgar nem interpretar como IND-054 oficial',
+        'anos':{},
+    }
+    for year in range(2019,2026):
+        item=cand['anos'].get(str(year),{})
+        yr=byyear.get(year,{})
+        if (not item or item.get('n_registros')!=yr.get('n')
+            or item.get('clusters')!={k:v['n'] for k,v in yr.get('clusters',{}).items()}):
+            raise Pendencia(f'{year}: contagens da candidata nao conferem com comparativo')
+        source=(root/item.get('arquivo','')).resolve()
+        allowed=(root/'data/derived/candidata_ponte_socio_v2_individual').resolve()
+        if source.parent!=allowed or not source.is_file():
+            raise Pendencia(f'{year}: arquivo da candidata fora do diretorio privado')
+        if not re.fullmatch('[0-9a-f]{64}',str(item.get('sha256',''))):
+            raise Pendencia(f'{year}: hash ausente ou malformado')
+        counts.update(item['clusters'])
+        if year==2025 and (item.get('notas_validas') is not None or item.get('av_pareadas') is not None):
+            raise Pendencia('2025 nao possui vinculo de notas: proibida associacao artificial')
+        manifest['anos'][str(year)]={
+            'arquivo':item['arquivo'], 'sha256':item['sha256'],
+            'n_registros':item['n_registros'],
+            'join_qa':'nao_aplicavel_sem_notas' if year==2025 else 'ok',
+            'unicidade_qa':'ok',
+        }
+    if [counts[f'C{i}'] for i in (1,2,3)]!=[66664,34240,3848]:
+        raise Pendencia('Contagem total por cluster diverge da auditoria V2')
+    return manifest
+
 def bridge_manifest(root):
+    if os.environ.get(ENV_RASCUNHO_V2)=='1':
+        return _manifesto_v2_para_rascunho(root)
+    """Aceita contrato original ou V2 homologada; NUNCA aceita manifesto candidato.
+
+    A rota V2 só existe depois da decisão documentada externa. A validação dos
+    hashes das pontes ocorre em bridge_data, em cada execução.
+    """
+    v2=root/'data/derived/manifesto_ponte_socio_v2_homologada.json'
+    if v2.exists():
+        obj=json.loads(v2.read_text(encoding='utf-8-sig'))
+        if obj.get('schema_version')!='ponte-socio-10-ativas-homologada-v2' or obj.get('status')!='homologado_com_pareceres':
+            raise Pendencia('Manifesto V2 presente mas não homologado: recusa de execução')
+        if obj.get('validacao_mca_clusters')!='reproducao_e_auditoria_conferidas':
+            raise Pendencia('Modelo V2 sem reconciliação técnica')
+        if obj.get('modelo_tipo')!='MCA10_KMeans3_amostra_2019_2025':
+            raise Pendencia('Tipo de modelo V2 incorreto')
+        ref=root/'data/derived/candidata_ponte_socio_v2/comparativo_modelos_agrupado.json'
+        cand=root/'data/derived/candidata_ponte_socio_v2_individual/manifesto_candidato_v2.json'
+        if not ref.is_file() or not cand.is_file():
+            raise Pendencia('Relatório e manifesto candidato V2 não encontrados')
+        if obj.get('comparativo_sha256')!=sha(ref) or obj.get('candidato_sha256')!=sha(cand):
+            raise Pendencia('Relatório ou candidato V2 modificados após homologação')
+        expected_ref='V2_MCA10_KMeans3_'+sha(ref)[:16]
+        if obj.get('modelo_referencia')!=expected_ref:
+            raise Pendencia('Modelo de referência V2 não rastreável')
+        original=json.loads(cand.read_text(encoding='utf-8-sig'))
+        if original.get('status')!='candidato_nao_aprovado' or original.get('k')!=3:
+            raise Pendencia('Manifesto de origem V2 não é candidato legítimo K=3')
+        if original.get('n_total')!=104752 or len(original.get('anos',{}))!=7:
+            raise Pendencia('Amostra modelo V2 diverge da referência validada')
+        for y in range(2019,2026):
+            item=obj.get('anos',{}).get(str(y),{})
+            source=original['anos'].get(str(y),{})
+            if (not item or item.get('arquivo')!=source.get('arquivo')
+                or item.get('sha256')!=source.get('sha256')
+                or item.get('n_registros')!=source.get('n_registros')
+                or item.get('join_qa')!=('nao_aplicavel_sem_notas' if y==2025 else 'ok')
+                or item.get('unicidade_qa')!='ok'):
+                raise Pendencia(f'{y}: manifesto V2 sem rastreabilidade e QA completos')
+        if obj['anos']['2025'].get('notas_validas') is not None or obj['anos']['2025'].get('av_pareadas') is not None:
+            raise Pendencia('2025 deve permanecer sem notas associadas')
+        decisions=obj.get('pareceres',{})
+        for key in ('metodologia','representatividade','privacidade_cruzada'):
+            p=decisions.get(key,{})
+            if (p.get('status')!='aprovado_com_ressalvas'
+                or not str(p.get('responsavel','')).strip()
+                or not str(p.get('fundamentacao','')).strip()
+                or not str(p.get('data','')).strip()):
+                raise Pendencia(f'Parecer obrigatório ausente/incompleto: {key}')
+        return obj
+    # Compatibilidade retroativa: somente o contrato oficial original da V1.
     file=root/'data/derived/manifesto_ponte_socio_cluster.json'
     if not file.exists():
-        raise Pendencia('Ponte socio×clusters não disponível. IND-054 não exporta rótulos individuais. '
-                       'Preparar ligação por inscrição e atribuição VALIDADA a um modelo fixo.')
+        raise Pendencia('Não há ponte homologada. Ponte V2 candidata não autoriza execução; '
+                       'necessária homologação metodológica e privacidade cruzada.')
     obj=json.loads(file.read_text(encoding='utf-8-sig'))
     if obj.get('schema_version')!=BRIDGE_VERSION or not obj.get('modelo_referencia'):
-        raise Pendencia('Manifesto da ponte não declara schema_version e modelo_referencia fixa')
-    if not obj.get('validacao_mca_clusters')=='aprovado':
-        raise Pendencia('Manifesto sem reconciliação da MCA/K-Means e centroides IND-054')
+        raise Pendencia('Manifesto original declara esquema ou modelo inválido')
+    if obj.get('validacao_mca_clusters')!='aprovado':
+        raise Pendencia('Manifesto original sem reconciliação MCA/KMeans IND-054')
     return obj
 
 
@@ -384,8 +503,13 @@ def bridge_data(root,years=tuple(range(2019,2025)),max_n=85000,require_score=Tru
         item=m.get('anos',{}).get(str(year))
         if not item:
             salvage[year]='sem_ponte_validada';continue
-        if item.get('join_qa')!='ok' or item.get('unicidade_qa')!='ok':
-            raise Pendencia(f'{year}: manifesto sem junção e unicidade aprovadas')
+        situacao_join=item.get('join_qa')
+        if (item.get('unicidade_qa')!='ok'
+            or (year==2025 and m.get('schema_version') in ('ponte-socio-10-ativas-homologada-v2',SCHEMA_RASCUNHO_V2)
+                and not require_score and situacao_join!='nao_aplicavel_sem_notas')
+            or (year!=2025 or require_score or m.get('schema_version') not in ('ponte-socio-10-ativas-homologada-v2',SCHEMA_RASCUNHO_V2))
+               and situacao_join!='ok'):
+            raise Pendencia(f'{year}: manifesto sem status de junção/unicidade coerente')
         path=(root/item.get('arquivo','')).resolve()
         if root.resolve() not in path.parents:
             raise Pendencia(f'{year}: ponte fora do repositório')
@@ -547,7 +671,7 @@ def ml_model(ind,root):
         # Guardar só modelo/metadata, nunca informações individuais ou predições.
         try:import joblib
         except ImportError as e:raise Pendencia('joblib indisponível') from e
-        model_path=root/'outputs/modelos/IND_060_modelo_local.joblib'
+        model_path=(root/('outputs/modelos_rascunho_v2' if os.environ.get(ENV_RASCUNHO_V2)=='1' else 'outputs/modelos')/'IND_060_modelo_local.joblib')
         model_path.parent.mkdir(parents=True,exist_ok=True)
         joblib.dump({'modelo':pipe,'metricas':stats,'bridge_hashes':qa,
                      'referencia':manifest['modelo_referencia']},model_path,compress=3)
@@ -562,7 +686,7 @@ def ml_model(ind,root):
     if ind in (62,63):
         try:import joblib
         except ImportError as e:raise Pendencia('joblib indisponível') from e
-        saved=root/'outputs/modelos/IND_060_modelo_local.joblib'
+        saved=(root/('outputs/modelos_rascunho_v2' if os.environ.get(ENV_RASCUNHO_V2)=='1' else 'outputs/modelos')/'IND_060_modelo_local.joblib')
         if not saved.exists():raise Pendencia('IND-060 precisa ter sido treinado na mesma ponte antes de IND-062/063')
         model=joblib.load(saved)
         pipe,x,y,train,test,data,stats,qa,manifest=_fit_mldata(root,treinar=False)
@@ -655,8 +779,18 @@ def write_atomic(path, content):
 
 def write_results(ind,root,doc,sobrescrever):
     stem=nome(ind)
-    jsonout=root/'outputs/json'/f'{stem}.json'
-    csvout=root/'outputs/indicadores'/f'{stem}.csv'
+    if os.environ.get(ENV_RASCUNHO_V2)=='1' and (55<=ind<=63 or ind==68):
+        out=root/'outputs/rascunho_ponte_v2'
+        jsonout=out/'json'/f'{stem}.json'
+        csvout=out/'indicadores'/f'{stem}.csv'
+        if doc.get('status')!='draft':
+            raise Pendencia('Modo interno nao permite resultado homologado')
+        doc['modo_execucao']='rascunho_interno_nao_publicar'
+        doc['publicacao_autorizada']=False
+        doc['modelo_referencia']='V2_MCA10_KMeans3_'+sha(root/'data/derived/candidata_ponte_socio_v2/comparativo_modelos_agrupado.json')[:16]
+    else:
+        jsonout=root/'outputs/json'/f'{stem}.json'
+        csvout=root/'outputs/indicadores'/f'{stem}.csv'
     if not sobrescrever and (jsonout.exists() or csvout.exists()):
         raise FileExistsError(f'IND-{ind:03d}: saídas já existem, use --sobrescrever')
     rows=doc.get('results',[])
