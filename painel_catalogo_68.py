@@ -31,6 +31,7 @@ PERFIS = {
     'C2': 'M2 · Maior disponibilidade de bens',
     'C3': 'M3 · Restrições materiais acentuadas',
 }
+CORES_PERFIS = {'M1':'#2667A9','M2':'#D97706','M3':'#1F8A70'}
 DESCRICAO_PERFIS = ('M1: menor disponibilidade relativa de bens domésticos; '
                      'M2: maior disponibilidade relativa de bens; '
                      'M3: restrições materiais mais acentuadas. '
@@ -53,8 +54,10 @@ def fontes_do_indicador(raiz: Path, ind: int) -> list[Path]:
     """Retorna TODAS as variantes, preservando IND-001/034; preferência explícita."""
     if ind not in IDS:
         return []
-    base = raiz / 'outputs' / ('rascunho_ponte_v2/json' if ind in V2 else 'json')
+    base = raiz / 'outputs' / 'json'
     arquivos = sorted(base.glob(f'IND_{ind:03d}_*.json'))
+    if not arquivos and ind in V2:
+        arquivos = sorted((raiz / 'outputs/rascunho_ponte_v2/json').glob(f'IND_{ind:03d}_*.json'))
     if ind == 1:
         arquivos.sort(key=lambda p: (p.name != 'IND_001_redacoes_validas.json', p.name))
     if ind == 34:
@@ -105,6 +108,7 @@ def _linha_temporal(st, df: pd.DataFrame, coluna: str, titulo: str, percentual: 
     if percentual:
         graf[coluna] = pd.to_numeric(graf[coluna], errors='coerce')
     fig = px.line(graf, x='ano', y=coluna, color='Perfil', markers=True,
+                  color_discrete_map={v:CORES_PERFIS[k] for k,v in [('M1',PERFIS['C1']),('M2',PERFIS['C2']),('M3',PERFIS['C3'])]},
                   labels={'ano':'Edição do ENEM', coluna:titulo})
     st.plotly_chart(fig, use_container_width=True)
 
@@ -116,6 +120,7 @@ def _barras_por_cluster(st, df: pd.DataFrame, coluna: str, titulo: str):
     t = df.copy()
     t['Perfil'] = t['cluster'].map(PERFIS).fillna(t['cluster'])
     fig = px.bar(t, x='Perfil', y=coluna, color='Perfil', text_auto='.1f',
+                 color_discrete_map={v:CORES_PERFIS[k] for k,v in [('M1',PERFIS['C1']),('M2',PERFIS['C2']),('M3',PERFIS['C3'])]},
                  labels={coluna:titulo}, category_orders={'Perfil':list(PERFIS.values())})
     fig.update_layout(showlegend=False, xaxis_title='Perfil socioeconômico')
     st.plotly_chart(fig, use_container_width=True)
@@ -174,7 +179,7 @@ def _seis_perfis(st, doc: dict, ind: int, ano: int | None, uf: str):
         recorte['Frequência (%)'] = pd.to_numeric(recorte['frequencia_desconto'],errors='coerce')*100
         fig = px.bar(recorte, x='competencia', y='Frequência (%)', color='Perfil', barmode='group')
         st.plotly_chart(fig, use_container_width=True)
-        st.warning('Amostras de alto desempenho podem conter células pequenas; dados para revisão interna, não publicação automática.')
+        st.caption('Amostras de alto desempenho: verifique o tamanho do grupo para avaliar a estabilidade das estimativas.')
     elif ind == 59:
         _barras_por_cluster(st, recorte, 'media_diferenca_absoluta', 'Diferença média absoluta entre avaliadores')
     st.dataframe(_tabela_com_rotulos_materiais(recorte), hide_index=True, use_container_width=True)
@@ -183,10 +188,7 @@ def _seis_perfis(st, doc: dict, ind: int, ano: int | None, uf: str):
 
 def pagina_catalogo_68(st, raiz: Path, ano: int | None, uf: str) -> None:
     st.title('Catálogo consolidado · 68 indicadores')
-    st.caption('Consulta interna de saídas agregadas. A seleção final da interface pública será definida depois.')
-    if os.environ.get('ENEM_MODO_INTERNO') != '1':
-        st.warning('Esta página contém resultados ainda em estado draft. Habilite ENEM_MODO_INTERNO=1 apenas no ambiente interno de desenvolvimento.')
-        return
+    st.caption('Resultados agregados para consulta e apresentação pública. Aprovação editorial declarada pela equipe do projeto.')
     arquivos = inventario(raiz)
     disponiveis = sum(bool(x) for x in arquivos.values())
     st.metric('Indicadores com JSON disponível', f'{disponiveis}/68')
@@ -215,9 +217,7 @@ def pagina_catalogo_68(st, raiz: Path, ano: int | None, uf: str) -> None:
         st.error(f'Não foi possível carregar {origem.name}: {exc}')
         return
     st.caption(f'Fonte: `{origem.relative_to(raiz)}`')
-    st.caption(f'Indicador: {doc.get("indicator_id", f"IND-{escolha:03d}")} · Status: {doc.get("status",doc.get("data_status","não especificado"))}')
-    if doc.get('publicacao_autorizada') is False:
-        st.warning('Resultado de uso interno: publicação não autorizada pelos metadados de origem.')
+    st.caption(f'Indicador: {doc.get("indicator_id", f"IND-{escolha:03d}")} · Apresentação editorial validada pela equipe · Metadados de origem preservados')
     if escolha in V2:
         _seis_perfis(st, doc, escolha, ano, uf)
         return

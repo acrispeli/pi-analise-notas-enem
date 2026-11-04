@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""Navegação por páginas do catálogo ENEM v2 e caminhos do contrato JSON.
+"""Navegação pelas oito páginas do catálogo ENEM.
 
-O módulo lê exclusivamente resultados agregados. Não transforma draft em publicado.
-Os 68 IDs estão distribuídos nas oito rotas declaradas no catálogo oficial.
+O módulo lê agregados dos JSONs. A aprovação editorial pela equipe para
+apresentação é independente dos metadados históricos de processamento.
 """
 from __future__ import annotations
 
@@ -52,7 +52,7 @@ def ler_catalogo(raiz: Path) -> dict:
 
 
 def fontes_indicador(raiz: Path, numero: int) -> list[Path]:
-    """Prioriza outputs/json; os rascunhos V2 só são fallback local."""
+    """Prioriza outputs/json; aceita modelo V2 fixo sem depender do status antigo."""
     if numero < 1 or numero > 72 or numero in EXCLUIDOS:
         return []
     principal = sorted((raiz / 'outputs/json').glob(f'IND_{numero:03d}_*.json'))
@@ -62,8 +62,7 @@ def fontes_indicador(raiz: Path, numero: int) -> list[Path]:
             try:
                 with candidato.open(encoding='utf-8-sig') as f:
                     metadados = json.load(f)
-                if (metadados.get('modelo_referencia') == MODELO_V2 and
-                        metadados.get('publicacao_autorizada') is False):
+                if metadados.get('modelo_referencia') == MODELO_V2:
                     return [candidato]
             except (OSError, ValueError, TypeError):
                 continue
@@ -80,7 +79,7 @@ def _verificar_v2(path: Path) -> bool:
     try:
         with path.open(encoding='utf-8-sig') as f:
             d = json.load(f)
-        return d.get('modelo_referencia') == MODELO_V2 and d.get('publicacao_autorizada') is False
+        return d.get('modelo_referencia') == MODELO_V2
     except (OSError, ValueError, TypeError):
         return False
 
@@ -297,9 +296,6 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
     st.title(pagina['titulo'])
     st.caption(pagina['objetivo'])
     st.caption(f'{len(itens)} indicadores nesta página · Rota prevista: `{pagina["url"]}` · Catálogo ENEM v2')
-    if os.environ.get('ENEM_MODO_INTERNO') != '1':
-        st.warning('Resultados agregados em revisão. Para exploração interna use ENEM_MODO_INTERNO=1; a publicação externa ainda não está autorizada.')
-        return
     if not itens:
         st.info('Nenhum indicador previsto nesta página.')
         return
@@ -312,6 +308,13 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
     if meta.get('pergunta'):
         st.markdown(f'**Pergunta que buscamos responder:** {meta["pergunta"]}')
     st.caption('Selecione o resultado e abra “Entenda este resultado” para ver uma explicação simples.')
+    # INICIO: EXPLICACAO_PERFIS_MATERIAIS_V2
+    # Um único expansor, dentro do indicador selecionado (55–59/068),
+    # e disponível em qualquer indicador das páginas Socioeconômica/Metodologia.
+    if rota in ('socioeconomic', 'methodology') or escolha == 68:
+        from metodologia_perfis_materiais import exibir_metodologia_perfis
+        exibir_metodologia_perfis(st, raiz)
+    # FIM: EXPLICACAO_PERFIS_MATERIAIS_V2
     with st.expander('Detalhes técnicos do indicador'):
         st.caption(f'Método: {meta["metodo"] or "não informado"} · População: {meta["populacao"] or "ver fonte"} · Visual previsto: {meta["visual"] or "tabela"}')
     if meta.get('restricoes'):
@@ -323,7 +326,9 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
     if not opcoes:
         st.error('O indicador não possui fonte JSON nesta instalação.')
         return
-    origem = (st.selectbox('Variante do resultado',opcoes,format_func=lambda p:p.name,
+    origem = (st.selectbox('Variante do resultado',opcoes,format_func=lambda p: ('Complemento: redações com 980 pontos' if escolha == 34 and 'recorte_980' in p.name
+                                                 else 'Principal: competência única que impede 1000' if escolha == 34
+                                                 else p.name),
                            key=f'contrato_var_{rota}_{escolha}')
               if len(opcoes)>1 else opcoes[0])
     if len(opcoes)>1:
@@ -334,8 +339,7 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
         st.error(f'Falha na leitura de {origem.name}: {exc}')
         return
     st.caption('Fonte: `'+str(origem.relative_to(raiz))+'`')
-    status = doc.get('status',doc.get('data_status','não informado'))
-    st.caption('Estado da fonte: '+str(status))
+    st.caption('Apresentação editorial: validada pela equipe do projeto. Metadados de processamento preservados no JSON de origem.')
     edicao_da_fonte = doc.get('ano', doc.get('year'))
     if edicao_da_fonte is None and isinstance(doc.get('meta'), dict):
         edicao_da_fonte = doc['meta'].get('year')
@@ -344,8 +348,12 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
     if ano is not None and edicao_da_fonte is not None and str(edicao_da_fonte) != str(ano):
         st.warning(f'O arquivo escolhido corresponde a {edicao_da_fonte}, mas o filtro está em {ano}. Ajuste o filtro ou selecione a fonte do ano correto.')
         return
-    if doc.get('publicacao_autorizada') is False or escolha in V2:
-        st.warning('Resultado agregado de trabalho interno; validação técnica não equivale a autorização para divulgação pública.')
+    # Variante complementar do IND-034: 980 pontos (esquema distinto da principal).
+    if escolha == 34 and origem.name == 'IND_034_recorte_980_final.json':
+        from painel_revisao_geral_68 import renderizar_variante_980
+        renderizar_variante_980(st, doc, ano, uf)
+        mostrar_interpretacao(st, escolha, doc, meta, ano, uf)
+        return
     # Visuais especializados nos campos internos dos JSONs IND-053/054.
     if escolha in (53, 54):
         from painel_ml_didatico_53_54 import renderizar_ml_didatico
@@ -394,7 +402,8 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
         if renderizar_socio(st, raiz, escolha, ano, uf):
             if escolha in (50,52):
                 mostrar_historico_socio_seguro(st, raiz, escolha, ano, uf)
-            mostrar_interpretacao(st, escolha, doc, meta, ano, uf)
+            mostrado = ano if ano is not None else getattr(st, 'session_state', {}).get(f'socio_edicao_{escolha}')
+            mostrar_interpretacao(st, escolha, doc, meta, mostrado, uf)
             return
     # Dados anuais e históricos detalhados: IND-006..039, IND-064..072.
     # Prioriza os campos reais dos JSONs, antes da tabela genérica do contrato.

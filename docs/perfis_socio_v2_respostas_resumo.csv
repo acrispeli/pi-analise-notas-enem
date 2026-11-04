@@ -1,0 +1,31 @@
+﻿Variavel;Perfil;N_total;Resposta_mais_frequente;Percentual_1;Segunda_resposta;Percentual_2
+Moradores no domicilio;M1;66664;4;27,63;3;27,08
+Moradores no domicilio;M2;34240;4;41,25;3;28,52
+Moradores no domicilio;M3;3848;5 a 6;23,54;4;22,97
+Banheiros;M1;66664;1;90,89;2;8,93
+Banheiros;M2;34240;2;48,05;3 ou mais;28,34
+Banheiros;M3;3848;1;69,54;0;27,44
+Quartos;M1;66664;2;64,39;1;19,86
+Quartos;M2;34240;3 ou mais;72,51;2;26,91
+Quartos;M3;3848;1;39,60;2;27,55
+Carros;M1;66664;0;76,46;1;23,18
+Carros;M2;34240;1;62,72;2;24,14
+Carros;M3;3848;0;93,69;1;5,98
+Motocicletas;M1;66664;0;76,72;1;21,89
+Motocicletas;M2;34240;0;74,24;1;20,66
+Motocicletas;M3;3848;0;87,66;1;11,54
+Geladeiras;M1;66664;1;99,68;2;0,31
+Geladeiras;M2;34240;1;85,76;2;12,92
+Geladeiras;M3;3848;1;51,07;0;48,47
+Maquina de lavar;M1;66664;Nao (nenhum);54,99;Sim (um ou mais);45,01
+Maquina de lavar;M2;34240;Sim (um ou mais);96,44;Nao (nenhum);3,56
+Maquina de lavar;M3;3848;Nao (nenhum);83,11;Sim (um ou mais);16,89
+Micro-ondas;M1;66664;Nao (nenhum);70,02;Sim (um ou mais);29,98
+Micro-ondas;M2;34240;Sim (um ou mais);86,72;Nao (nenhum);13,28
+Micro-ondas;M3;3848;Nao (nenhum);91,16;Sim (um ou mais);8,84
+Aspirador de po;M1;66664;Nao;96,03;Sim;3,97
+Aspirador de po;M2;34240;Sim;59,39;Nao;40,61
+Aspirador de po;M3;3848;Nao;98,02;Sim;1,98
+Celulares no domicilio;M1;66664;Sim (um ou mais);99,10;Nao (nenhum);0,90
+Celulares no domicilio;M2;34240;Sim (um ou mais);99,09;Nao (nenhum);0,91
+Celulares no domicilio;M3;3848;Sim (um ou mais);68,35;Nao (nenhum);31,65

@@ -28,6 +28,12 @@ DESCRICAO_COMP = {
     'C3': 'C3 · Argumentação', 'C4': 'C4 · Coesão',
     'C5': 'C5 · Intervenção',
 }
+CORES_COMPETENCIAS = {
+    'C1 · Escrita formal':'#2667A9',
+    'C2 · Proposta':'#D97706',
+    'C3 · Argumentação':'#1F8A70',
+    'C4 · Coesão':'#7C5DB5',
+    'C5 · Intervenção':'#C44E52'}
 
 
 def anos_com_dados(raiz: Path, numero: int) -> list[int]:
@@ -194,6 +200,7 @@ def _figura_competencias(df:pd.DataFrame,numero:int):
     df=df.sort_values('ordem')
     if numero==42:
         fig=px.line(df,x='Codigo',y='Média',color='Competência',markers=True,
+                    color_discrete_map=CORES_COMPETENCIAS,
                     hover_data=['Descrição','Redações'],
                     labels={'Codigo':'Faixas de renda da edição','Média':'Média por competência (0–200)'})
     else:
@@ -220,11 +227,13 @@ def _renderizar_052(st, recorte:dict, raiz:Path, uf:str):
             st.info('Não existem médias estaduais divulgáveis para este recorte.')
             return
         t=t.sort_values('Média',ascending=False)
-        fig=px.bar(t,x='UF',y='Média',hover_data=['Redações'],
-                   labels={'Média':'Média da redação (0–1000)','UF':'UF de aplicação da prova'})
+        fig=px.bar(t,x='Média',y='UF',orientation='h',hover_data=['Redações'],
+                   labels={'Média':'Média da redação (pontos, 0–1000)','UF':'UF de aplicação da prova'})
+        fig.update_layout(height=820, yaxis={'categoryorder':'array',
+                          'categoryarray':t['UF'].tolist()[::-1]})
         media_br=_numero(dados.get('metricas',{}).get('TOTAL',{}).get('media'))
         if media_br is not None:
-            fig.add_hline(y=media_br,line_dash='dash',annotation_text='Média Brasil')
+            fig.add_vline(x=media_br,line_dash='dash',annotation_text=f'Brasil: {media_br:.1f} pontos')
         st.plotly_chart(fig,use_container_width=True)
         st.dataframe(t,hide_index=True,use_container_width=True)
     else:
@@ -316,5 +325,5 @@ def renderizar_socio(st, raiz:Path, numero:int, ano:int|None, uf:str) -> bool:
         st.caption('As categorias correspondem às respostas do questionário da edição selecionada. Mudanças de pergunta/códigos entre anos podem impedir comparações diretas.')
     if not df.empty and df['n_pequeno'].any():
         st.warning('Algumas categorias têm poucos registros; suas estimativas podem variar bastante. Essa observação não elimina os dados automaticamente.')
-    st.caption('Os dados descrevem associações, não relações de causa e efeito. Resultados em revisão acadêmica.')
+    st.caption('Os dados descrevem associações entre características declaradas e desempenho; não demonstram relações de causa e efeito.')
     return True

@@ -8,6 +8,7 @@ Apenas JSONs cumulativos agregados, nunca os microdados individuais.
 from __future__ import annotations
 
 from pathlib import Path
+import os
 from html import escape
 import math
 from plotly.colors import sample_colorscale
@@ -1195,7 +1196,7 @@ def metodologia():
 
 **Privacidade**: o IND-016 é exibido para **exploração interna** usando apenas hexágonos com pelo menos 30 redações; células menores já foram omitidas no processamento. A revisão de supressão complementar permanece pendente para publicação externa. Este visualizador oculta ou agrega informações potencialmente sensíveis, **mas não substitui uma auditoria formal de privacidade**.
 
-**Situação acadêmica**: os JSONs podem ter status `draft`; validação computacional não significa aprovação para divulgação pública. Os indicadores IND-020 a IND-029 são exibidos na página Avaliação entre corretores, apenas como resultados agregados em estado draft.''')
+**Situação acadêmica**: a equipe aprovou editorialmente a apresentação dos indicadores. Os campos históricos de processamento dos JSONs são preservados e não constituem, por si só, certificação externa dos resultados.''')
     st.markdown('**IND-040:** perfil descritivo de todo o questionário (POP_SOCIO), independentemente de redação válida. '
                 '**IND-041:** apenas redações válidas com informação de renda vinculável (POP_SOCIO_VALID); '
                 'renda Q006 até 2023 e Q007 em 2024. 2025 não foi estimado. As faixas A–Q mudam de limites '
@@ -1215,8 +1216,8 @@ anos diferentes. O IND-045 usa variáveis que não são diretamente harmonizáve
 
 **Divulgação:** a versão corrigida do IND-039 mostra agregados com contagens de 1 a 29;
 os IND-036/037 não bloqueiam recortes inteiros por máscaras raras. A ausência de linhas
-individuais não garante, isoladamente, anonimização. Todos esses módulos seguem em
-status `draft` e requerem revisão acadêmica e de divulgação antes de publicação externa.''')
+individuais não garante, isoladamente, anonimização. A equipe definiu o status editorial de apresentação como validado.
+Estimativas de grupos reduzidos devem ser contextualizadas estatisticamente.''')
     with st.expander('Fontes locais utilizadas'):
         for y,p in sorted(arquivos.items()):st.write(f'{y}: `{p}`')
         st.write('Nenhum CSV de microdados é lido pelo visualizador.')
@@ -1253,7 +1254,7 @@ def ler_cached(caminho: Path):
 with st.sidebar:
     st.markdown('### Redação no ENEM')
     st.caption('Painel de indicadores · UNIVESP')
-    st.caption('Catálogo v2 · 68 indicadores (ambiente interno)')
+    st.caption('Catálogo v2 · 68 indicadores · Versão de apresentação')
     st.markdown('---')
     st.caption('NAVEGAÇÃO')
     pagina=st.radio('Páginas',PAGINAS,label_visibility='collapsed',key='pagina_ativa')
@@ -1314,8 +1315,9 @@ ROTAS_CATALOGO = {
 pagina_contrato_68(st, ROOT, ROTAS_CATALOGO[pagina], ano, uf, referencia, anual)
 
 # Recursos gráficos anteriores continuam acessíveis, sem criar páginas extras no menu.
-if st.checkbox('Explorar visualizações temáticas da versão anterior', value=False,
-               key='mostrar_painel_anterior'):
+if os.environ.get('ENEM_MODO_INTERNO') == '1' and st.checkbox(
+        'Explorar visualizações legadas (modo desenvolvimento)', value=False,
+        key='mostrar_painel_anterior'):
     st.divider()
     if pagina == 'Visão geral':
         boas_vindas()
@@ -1341,4 +1343,4 @@ if st.checkbox('Explorar visualizações temáticas da versão anterior', value=
         metodologia()
 
 st.divider()
-st.caption('Projeto Integrador IV — UNIVESP · Dados agregados · Versão de demonstração local · Resultados sujeitos à validação acadêmica conforme o status de cada indicador.')
+st.caption('Projeto Integrador IV — UNIVESP · Dados agregados · Versão de apresentação · Validação editorial declarada pela equipe · Análises não oficiais do INEP.')
