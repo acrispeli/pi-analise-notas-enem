@@ -1,5 +1,5 @@
 import { CORES, COR, Grafico, type Figura } from '../grafico.tsx';
-import { Aviso, Cartao, Estado } from '../layout.tsx';
+import { Cartao, Estado } from '../layout.tsx';
 import { useFiltros } from '../filtros.tsx';
 import { useDados } from '../useDados.ts';
 import { formatarIndice, formatarInteiro, formatarNota, numero } from '../lib/formatar.ts';
@@ -92,8 +92,9 @@ export default function Competencias() {
   return (
     <div>
       <h1>Competências</h1>
-      {todos ? <p className="nota">Modelo do período já publicado. Coordenadas de anos diferentes não são misturadas.</p> : null}
-      <Aviso>Os centros do IND-017 vêm de uma amostra de 4.000 redações. O tamanho na legenda é o da população, no IND-018.</Aviso>
+      <p className="nota">C1 escrita formal · C2 tema · C3 argumentação · C4 coesão · C5 proposta de intervenção</p>
+      {todos ? <p className="nota">Período inteiro. Anos diferentes não são misturados no mapa.</p> : null}
+      <p className="nota">Os perfis vêm de uma amostra de 4.000 redações. O tamanho na legenda é o de todas as redações válidas.</p>
       <div className="grade-2">
         <section className="painel" data-visual="medias">
           <h2>Qual é a média de cada competência?</h2>
@@ -112,28 +113,26 @@ export default function Competencias() {
                 return (
                   <tr key={codigo}>
                     <td>{codigo}</td>
-                    <td>{valor === null ? 'indisponível' : formatarNota(valor)}</td>
+                    <td>{valor === null ? 'não disponível' : formatarNota(valor)}</td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
         </section>
-        <Grafico identificador="niveis" titulo="Como se distribuem os níveis de cada competência?" figura={niveis} nota={niveis ? undefined : 'Há nível com contagem suprimida. A barra empilhada fica indisponível para não completar com zero.'} />
+        <Grafico identificador="niveis" titulo="Como se distribuem os níveis de cada competência?" figura={niveis} nota={niveis ? undefined : 'Há nível com poucas redações. O gráfico não aparece, para não completar com zero.'} />
       </div>
       <div className="grade-2">
         <Grafico identificador="correlacao" titulo="Quais competências variam juntas?" figura={calor} />
-        <Grafico identificador="variancia" titulo="Quanto cada componente principal explica?" figura={variancia} />
+        <Grafico identificador="variancia" titulo="Quanto cada eixo do mapa explica?" figura={variancia} />
       </div>
-      <Grafico identificador="loadings" titulo="Qual o peso de cada competência nos componentes?" figura={cargas} nota="O sinal do componente pode mudar de um recorte para outro." />
-      <Grafico identificador="hexbin" titulo="Onde se concentram as redações no mapa PC1 × PC2?" figura={mapa} nota={notaHex(modelo.hex)} />
-      <Grafico identificador="perfis" titulo="Como os perfis diferem nas cinco competências?" figura={perfis} nota="Os rótulos P1 a Pk são locais a este recorte. A amostra do IND-017 não é a população." />
+      <Grafico identificador="loadings" titulo="Qual competência pesa mais em cada eixo?" figura={cargas} nota="O sentido do eixo pode inverter de um recorte para outro. O peso continua o mesmo." />
+      <Grafico identificador="hexbin" titulo="Onde as redações se concentram no mapa?" figura={mapa} nota={notaHex(modelo.hex)} />
+      <Grafico identificador="perfis" titulo="Como os perfis diferem nas cinco competências?" figura={perfis} nota="P1, P2 e os demais são nomes deste recorte. Não se repetem de um ano para outro." />
       <div className="cartoes" data-visual="qualidade">
-        <Cartao rotulo="Silhouette" valor={textoIndice(modelo.qualidade?.silhouette)} />
-        <Cartao rotulo="Davies–Bouldin" valor={textoIndice(modelo.qualidade?.davies_bouldin)} />
-        <Cartao rotulo="Calinski–Harabasz" valor={textoInteiro(modelo.qualidade?.calinski_harabasz)} />
-        <Cartao rotulo="Grupos (k)" valor={modelo.qualidade?.k == null ? 'indisponível' : String(modelo.qualidade.k)} />
-        <Cartao rotulo="Amostra do IND-017" valor={modelo.amostra == null ? 'indisponível' : formatarInteiro(modelo.amostra)} />
+        <Cartao rotulo="Separação dos grupos" valor={textoIndice(modelo.qualidade?.silhouette)} detalhe="De 0 a 1. Mais alto, grupos mais distintos." />
+        <Cartao rotulo="Grupos" valor={modelo.qualidade?.k == null ? 'não disponível' : String(modelo.qualidade.k)} />
+        <Cartao rotulo="Redações na amostra" valor={modelo.amostra == null ? 'não disponível' : formatarInteiro(modelo.amostra)} />
       </div>
     </div>
   );
@@ -141,12 +140,7 @@ export default function Competencias() {
 
 function textoIndice(valor: number | undefined): string {
   const n = numero(valor);
-  return n === null ? 'indisponível' : formatarIndice(n);
-}
-
-function textoInteiro(valor: number | undefined): string {
-  const n = numero(valor);
-  return n === null ? 'indisponível' : formatarInteiro(Math.round(n));
+  return n === null ? 'não disponível' : formatarIndice(n);
 }
 
 function doAno(doc: Record<string, unknown>, uf: string): Modelo {
