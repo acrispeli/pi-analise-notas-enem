@@ -207,7 +207,10 @@ test('ranking de notas por UF mantém maior valor no topo', async ({ page }) => 
     return {
       orientacao: trace?.orientation,
       ordemDecrescente: notas.every((nota, i) => i === 0 || notas[i - 1] >= nota),
-      eixoReverso: elemento._fullLayout?.yaxis?.autorange === 'reversed',
+      // Plotly converte autorange: 'reversed' em range decrescente
+      // depois do primeiro desenho. Verificar o eixo renderizado, não a opção inicial.
+      eixoReverso: Array.isArray(elemento._fullLayout?.yaxis?.range) &&
+        elemento._fullLayout.yaxis.range[0] > elemento._fullLayout.yaxis.range[1],
       quantidade: notas.length,
     };
   });
