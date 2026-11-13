@@ -649,21 +649,28 @@ def ultima_pagina_so_rodape(leitor) -> bool:
 
 
 def grafico_historico_tem_todos_anos(leitor, codigo: str) -> bool:
-    """Confere rótulos visíveis, não apenas a menção textual a 2025."""
+    """Confere 2019–2025 no gráfico, aceitando títulos atuais e legados.
+
+    Após a revisão das visualizações, os gráficos especializados passaram a
+    usar títulos como "Evolução histórica · Nota média da redação". O teste
+    anterior exigia exclusivamente o rótulo antigo do eixo Y e, por isso,
+    marcava PDFs íntegros como incompletos. Mantemos a exigência de os sete
+    anos estarem presentes na mesma página do gráfico.
+    """
     marcadores = {
-        'IND-002': 'nota media (pontos)',
-        'IND-003': 'mediana da redacao (pontos)',
-        'IND-004': 'desvio-padrao das notas (pontos)',
-        'IND-005': 'nota (pontos)',
+        'IND-002': ('nota media (pontos)', 'nota media da redacao'),
+        'IND-003': ('mediana da redacao (pontos)', 'mediana da redacao'),
+        'IND-004': ('desvio-padrao das notas (pontos)', 'desvio-padrao da nota'),
+        'IND-005': ('nota (pontos)', 'intervalo interquartil da nota'),
     }
-    marcador = marcadores.get(codigo)
-    if not marcador:
+    opcoes = marcadores.get(codigo)
+    if not opcoes:
         return True
     for pagina in leitor.pages:
         texto = _normalizar_validacao(pagina.extract_text() or '')
-        if marcador in texto and all(
-                re.search(r'(?<!\d)' + str(ano) + r'(?!\d)', texto)
-                for ano in range(2019, 2026)):
+        if (any(marcador in texto for marcador in opcoes)
+                and all(re.search(r'(?<!\d)' + str(ano) + r'(?!\d)', texto)
+                        for ano in range(2019, 2026))):
             return True
     return False
 
