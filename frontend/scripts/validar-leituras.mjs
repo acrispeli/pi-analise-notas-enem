@@ -25,6 +25,11 @@ for (let ano = 2019; ano <= 2025; ano++) {
 exigir(dicionario.anos['2023'].Q006.pergunta !== dicionario.anos['2024'].Q006.pergunta,
   'Q006 precisa respeitar mudança semântica entre 2023 e 2024');
 
+const serieQuestionario = JSON.parse(fs.readFileSync(path.join(dados, 'serie-questionario.json'), 'utf8'));
+exigir(serieQuestionario.populacao === 'POP_SOCIO', 'a série deve usar POP_SOCIO');
+exigir(serieQuestionario.nacional.length === 7, 'sete contagens nacionais anuais do questionário');
+exigir(serieQuestionario.ufs.SP?.length === 7, 'sete contagens anuais da UF SP');
+
 const resultado = {
   indicadores: ids.length,
   anos: Object.keys(dicionario.anos).length,
