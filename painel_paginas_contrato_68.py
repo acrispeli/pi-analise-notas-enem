@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Navegação pelas oito páginas do catálogo ENEM.
 
-O módulo lê agregados dos JSONs. A aprovação editorial pela equipe para
-apresentação é independente dos metadados históricos de processamento.
+O módulo lê agregados dos JSONs. A consolidação editorial para apresentação
+não implica recálculo nem certificação acadêmica externa.
 """
 from __future__ import annotations
 
@@ -356,7 +356,7 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
             return
         mostrar_aviso_publicacao_v2(st, escolha, ocultas)
     st.caption('Fonte: `'+str(origem.relative_to(raiz))+'`')
-    st.caption('Apresentação editorial: validada pela equipe do projeto. Metadados de processamento preservados no JSON de origem.')
+    st.caption('Apresentação pública autorizada pelo responsável pelo projeto. Definições e limitações constam da metodologia; histórico das fontes disponível no Git.')
     edicao_da_fonte = doc.get('ano', doc.get('year'))
     if edicao_da_fonte is None and isinstance(doc.get('meta'), dict):
         edicao_da_fonte = doc['meta'].get('year')
