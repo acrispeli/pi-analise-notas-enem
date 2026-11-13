@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -43,7 +44,7 @@ def auditar_indicador(raiz: Path, indicador: dict) -> dict:
         "linhas_omitidas_publicacao": 0,
     }
     restricao = str(indicador.get("restricoes") or "")
-    if any(t in restricao.casefold() for t in ("confirmar", "pendente", "revisão", "revisao")):
+    if re.search(r"\b(?:confirmar|pendente|pendentes|revisão|revisao)\b", restricao.casefold()):
         row["pendencia_catalogo"] = restricao
 
     fontes = fontes_indicador(raiz, numero)
