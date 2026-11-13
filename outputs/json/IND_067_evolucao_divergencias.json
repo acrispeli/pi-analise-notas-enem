@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-067",
   "slug": "IND_067_evolucao_divergencias",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "generated_at": "2026-10-30T17:39:46.850255+00:00",
   "dashboard_target": "pages.temporal.reviewers",
   "population_note": "POP_VALID_YEAR/POP_NEAR_YEAR/POP_EVALUATOR_YEAR, conforme indicador",
@@ -79,5 +79,5 @@
       "alerta": "Critérios do edital de 2024 padronizados; não equivalem necessariamente aos editais históricos."
     }
   ],
-  "review": "pendente_revisao_academica_e_privacidade_contextual"
+  "review": "aprovacao_editorial_pelo_responsavel"
 }

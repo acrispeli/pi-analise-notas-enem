@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-034",
   "titulo": "Competência única que impede 1000",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "gerado_em_utc": "2026-10-30T01:58:48.483552+00:00",
   "anos_solicitados": [
     2019,
@@ -1611,7 +1611,7 @@
         }
       },
       "recorte_980_nota_final": {
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "n_980_total": 9364,
         "n_980_padrao_4x200_1x180": 9364,
         "n_980_outros_perfis": 0,
@@ -3274,7 +3274,7 @@
         }
       },
       "recorte_980_nota_final": {
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "n_980_total": 12255,
         "n_980_padrao_4x200_1x180": 12255,
         "n_980_outros_perfis": 0,
@@ -4937,7 +4937,7 @@
         }
       },
       "recorte_980_nota_final": {
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "n_980_total": 5295,
         "n_980_padrao_4x200_1x180": 5295,
         "n_980_outros_perfis": 0,
@@ -6600,7 +6600,7 @@
         }
       },
       "recorte_980_nota_final": {
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "n_980_total": 6042,
         "n_980_padrao_4x200_1x180": 6042,
         "n_980_outros_perfis": 0,
@@ -8263,7 +8263,7 @@
         }
       },
       "recorte_980_nota_final": {
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "n_980_total": 12836,
         "n_980_padrao_4x200_1x180": 12836,
         "n_980_outros_perfis": 0,
@@ -9929,7 +9929,7 @@
         }
       },
       "recorte_980_nota_final": {
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "n_980_total": 2308,
         "n_980_padrao_4x200_1x180": 2308,
         "n_980_outros_perfis": 0,
@@ -11592,7 +11592,7 @@
         }
       },
       "recorte_980_nota_final": {
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "n_980_total": 840,
         "n_980_padrao_4x200_1x180": 840,
         "n_980_outros_perfis": 0,

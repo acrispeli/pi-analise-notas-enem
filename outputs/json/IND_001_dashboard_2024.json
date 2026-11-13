@@ -5,7 +5,7 @@
     "dataset_version": "enem-2024-csv-publico",
     "generated_at": "2026-10-30T00:44:17+00:00",
     "year": 2024,
-    "data_status": "draft",
+    "data_status": "consolidado_para_apresentacao",
     "source_files": [
       "RESULTADOS_2024.csv"
     ],

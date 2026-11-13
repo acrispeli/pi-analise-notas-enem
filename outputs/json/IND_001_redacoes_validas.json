@@ -5,7 +5,7 @@
     "analysis_version": "2.0.0-ind001",
     "dataset_version": "enem-2019-2025-csv-publico",
     "generated_at": "2026-10-30T00:44:17+00:00",
-    "data_status": "draft",
+    "data_status": "consolidado_para_apresentacao",
     "source_files": {
       "2019": "MICRODADOS_ENEM_2019.csv",
       "2020": "MICRODADOS_ENEM_2020.csv",

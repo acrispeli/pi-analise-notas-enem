@@ -4,7 +4,7 @@
   "title": "Clusters socioeconômicos — MCA + K-Means",
   "module_schema_version": "ind054-module-1.0.0",
   "generated_at": "2026-10-30T16:30:42.853940+00:00",
-  "data_status": "draft",
+  "data_status": "consolidado_para_apresentacao",
   "population": "AMOSTRA_SOCIO_ML",
   "population_source": "POP_SOCIO",
   "model_method": "MCA_mais_KMeans",
@@ -18,7 +18,7 @@
   "years": {
     "2019": {
       "ano": 2019,
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_fonte": 5095171,
       "n_amostra": 15000,
       "versao_questionario": "2019-2023",
@@ -194,7 +194,7 @@
     },
     "2020": {
       "ano": 2020,
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_fonte": 5783109,
       "n_amostra": 15000,
       "versao_questionario": "2019-2023",
@@ -334,7 +334,7 @@
     },
     "2021": {
       "ano": 2021,
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_fonte": 3389832,
       "n_amostra": 15000,
       "versao_questionario": "2019-2023",
@@ -510,7 +510,7 @@
     },
     "2022": {
       "ano": 2022,
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_fonte": 3476105,
       "n_amostra": 15000,
       "versao_questionario": "2019-2023",
@@ -686,7 +686,7 @@
     },
     "2023": {
       "ano": 2023,
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_fonte": 3933955,
       "n_amostra": 15000,
       "versao_questionario": "2019-2023",
@@ -862,7 +862,7 @@
     },
     "2024": {
       "ano": 2024,
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_fonte": 4332944,
       "n_amostra": 15000,
       "versao_questionario": "2024-2025",
@@ -1038,7 +1038,7 @@
     },
     "2025": {
       "ano": 2025,
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_fonte": 4810772,
       "n_amostra": 15000,
       "versao_questionario": "2024-2025",

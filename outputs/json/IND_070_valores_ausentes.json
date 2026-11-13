@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-070",
   "slug": "IND_070_valores_ausentes",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "generated_at": "2026-10-30T17:39:35.704183+00:00",
   "dashboard_target": "quality.missingness",
   "population_note": "POP_ALL_FONTE e POP_SOCIO_FONTE",
@@ -2429,5 +2429,5 @@
       "observacao": "Ausência física; códigos NÃO SEI não são ausências"
     }
   ],
-  "review": "pendente_revisao_academica_e_privacidade_contextual"
+  "review": "aprovacao_editorial_pelo_responsavel"
 }

@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-065",
   "slug": "IND_065_evolucao_competencias",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "generated_at": "2026-10-30T17:39:43.401634+00:00",
   "dashboard_target": "pages.temporal.competencies",
   "population_note": "POP_VALID_YEAR/POP_NEAR_YEAR/POP_EVALUATOR_YEAR, conforme indicador",
@@ -289,5 +289,5 @@
       "mediana": 120.0
     }
   ],
-  "review": "pendente_revisao_academica_e_privacidade_contextual"
+  "review": "aprovacao_editorial_pelo_responsavel"
 }

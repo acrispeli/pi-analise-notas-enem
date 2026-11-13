@@ -2,7 +2,7 @@
   "indicator_id": "IND-034",
   "supplement_id": "IND-034-980",
   "titulo": "Recorte exclusivo da nota definitiva 980: competência limitante",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "gerado_em_utc": "2026-10-30T01:59:07.404764+00:00",
   "population": "POP_980_FINAL",
   "geography": "BR",
@@ -16,7 +16,7 @@
   },
   "years": {
     "2019": {
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_980_total": 9364,
       "n_980_padrao_4x200_1x180": 9364,
       "n_980_outros_perfis": 0,
@@ -118,7 +118,7 @@
       "fonte": "COMPETENCIAS_REDACAO_2019.csv"
     },
     "2020": {
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_980_total": 12255,
       "n_980_padrao_4x200_1x180": 12255,
       "n_980_outros_perfis": 0,
@@ -220,7 +220,7 @@
       "fonte": "COMPETENCIAS_REDACAO_2020.csv"
     },
     "2021": {
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_980_total": 5295,
       "n_980_padrao_4x200_1x180": 5295,
       "n_980_outros_perfis": 0,
@@ -322,7 +322,7 @@
       "fonte": "COMPETENCIAS_REDACAO_2021.csv"
     },
     "2022": {
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_980_total": 6042,
       "n_980_padrao_4x200_1x180": 6042,
       "n_980_outros_perfis": 0,
@@ -424,7 +424,7 @@
       "fonte": "COMPETENCIAS_REDACAO_2022.csv"
     },
     "2023": {
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_980_total": 12836,
       "n_980_padrao_4x200_1x180": 12836,
       "n_980_outros_perfis": 0,
@@ -526,7 +526,7 @@
       "fonte": "COMPETENCIAS_REDACAO_2023.csv"
     },
     "2024": {
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_980_total": 2308,
       "n_980_padrao_4x200_1x180": 2308,
       "n_980_outros_perfis": 0,
@@ -628,7 +628,7 @@
       "fonte": "COMPETENCIAS_REDACAO_2024.csv"
     },
     "2025": {
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_980_total": 840,
       "n_980_padrao_4x200_1x180": 840,
       "n_980_outros_perfis": 0,
