@@ -79,6 +79,29 @@ async function medirLayout(page) {
       .map((elemento) => elemento.outerHTML.slice(0, 120))
       .slice(0, 10);
     const figuras = [...document.querySelectorAll('main .js-plotly-plot')].filter(visivel);
+    // Fiscaliza automaticamente todos os gráficos: coordenadas numéricas
+    // precisam de eixos numéricos; códigos/nomes continuam categóricos.
+    const eixosNumericosInvalidos = figuras.flatMap((figura, indice) => {
+      const dados = Array.isArray(figura.data) ? figura.data : [];
+      return ['x', 'y'].flatMap((coordenada) => {
+        let temNumeros = false;
+        let temCategorias = false;
+        for (const trace of dados) {
+          const lista = trace?.[coordenada];
+          if (!Array.isArray(lista)) continue;
+          for (const valor of lista) {
+            if (valor === null || valor === undefined) continue;
+            if (typeof valor === 'number' && Number.isFinite(valor)) temNumeros = true;
+            else temCategorias = true;
+          }
+        }
+        if (!temNumeros || temCategorias) return [];
+        const tipo = figura._fullLayout?.[coordenada + 'axis']?.type;
+        return tipo === 'linear' || tipo === 'log' ? [] : [{
+          grafico: indice + 1, eixo: coordenada, tipoDetectado: tipo ?? 'indefinido',
+        }];
+      });
+    });
     const alturas = figuras.map((e) => arredondar(e.getBoundingClientRect().height));
     return {
       larguraViewport: largura,
@@ -92,6 +115,7 @@ async function medirLayout(page) {
       controlesSemNome,
       titulosH1: document.querySelectorAll('main h1').length,
       graficosPlotly: figuras.length,
+      eixosNumericosInvalidos,
       elementosVisuais: document.querySelectorAll('main [data-visual]').length,
       graficosIndisponiveis: document.querySelectorAll('main [data-visual] .indisponivel').length,
       alturaMinimaGrafico: alturas.length ? Math.min(...alturas) : null,
@@ -144,6 +168,7 @@ test.describe('Medição visual automatizada de 8 seções × 3 tamanhos de tela
       expect(medidas.controlesSemNome, 'controles sem nome acessível').toEqual([]);
       expect(falhasDados, 'erros HTTP ao buscar dados JSON').toEqual([]);
       expect(errosJavaScript, 'erros JavaScript não tratados').toEqual([]);
+      expect(medidas.eixosNumericosInvalidos, 'números renderizados como categorias nos eixos Plotly').toEqual([]);
 
       // Comparação pixel a pixel opcional, habilitada somente após aprovar e
       // versionar uma linha de base feita no mesmo ambiente de renderização.
@@ -311,4 +336,42 @@ test('questionário no período completo mostra tendência POP_SOCIO sem agregar
     body: await page.screenshot({ fullPage: true, animations: 'disabled' }),
     contentType: 'image/png',
   });
+});
+
+test('eixos percentuais e de notas são lineares e respeitam distâncias reais', async ({ page }) => {
+  await prepararPagina(page, 'evolucao', 'todos', 'BR');
+  for (const id of ['serie-validas', 'serie-notas', 'serie-desvio', 'serie-mil']) {
+    const grafico = page.locator('[data-visual="' + id + '"] .js-plotly-plot');
+    await expect(grafico).toBeVisible();
+    const resultado = await grafico.evaluate((elemento) => {
+      const eixo = elemento._fullLayout?.yaxis;
+      const coordenadas = (elemento.data ?? []).flatMap((trace) =>
+        Array.from(trace.y ?? []).filter((v) => typeof v === 'number' && Number.isFinite(v))
+      );
+      return {
+        tipo: eixo?.type,
+        quantidade: coordenadas.length,
+        // Em eixos lineares, a diferença visual entre 60 e 70 equivale
+        // à diferença entre 70 e 80. Eixos categóricos falham nessa propriedade.
+        distancia60a70: eixo?.l2p ? Math.abs(eixo.l2p(70) - eixo.l2p(60)) : null,
+        distancia70a80: eixo?.l2p ? Math.abs(eixo.l2p(80) - eixo.l2p(70)) : null,
+      };
+    });
+    expect(resultado.tipo, id + ': o eixo não pode ser categoria').toBe('linear');
+    expect(resultado.quantidade, id + ': série precisa conter números').toBeGreaterThan(0);
+    expect(resultado.distancia60a70, id + ': escala deve ser proporcional')
+      .toBeCloseTo(resultado.distancia70a80, 3);
+  }
+});
+
+test('eixo horizontal de respostas continua categórico enquanto percentual é linear', async ({ page }) => {
+  await prepararPagina(page, 'socioeconomico', '2024', 'BR');
+  const grafico = page.locator('[data-visual="perfil-grafico"] .js-plotly-plot');
+  await expect(grafico).toBeVisible();
+  const tipos = await grafico.evaluate((elemento) => ({
+    eixoCodigos: elemento._fullLayout?.yaxis?.type,
+    eixoPercentual: elemento._fullLayout?.xaxis?.type,
+  }));
+  expect(tipos.eixoCodigos).toBe('category');
+  expect(tipos.eixoPercentual).toBe('linear');
 });
