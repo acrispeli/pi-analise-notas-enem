@@ -182,6 +182,9 @@ def melhorar_figura(fig):
         nome = str(getattr(trace, 'name', '') or '').strip()
         comp = re.match(r'^(C[1-5])(?:\b|\s*[-:–])', nome, flags=re.I)
         if comp:
+            # O nome completo permanece disponível no glossário de C1–C5.
+            # Legendas extensas eram cortadas nas comparações históricas.
+            trace.update(name=comp.group(1).upper())
             cor = PALETA_COMP[comp.group(1).upper()]
             if trace.type == 'scatter':
                 trace.update(line=dict(color=cor), marker=dict(color=cor))
@@ -228,26 +231,72 @@ def _grafico_essencial_catalogo(st, raiz: Path, numero: int, ano: int | None, uf
 
     if numero == 8:
         fonte = Path(raiz) / 'outputs' / 'json' / 'IND_008_notas_1000.json'
-        if ano is None or not fonte.is_file():
+        if not fonte.is_file():
             return False
         try:
             with fonte.open(encoding='utf-8-sig') as f:
                 doc = json.load(f)
-            registro = next(x for x in doc['years'] if int(x['ano']) == int(ano))
-            if uf == 'BR':
-                d = registro['brasil']
-            else:
-                d = next(x for x in registro['ufs'] if x['uf'] == uf)
-            total = d.get('n_notas_1000');validas = d.get('n_validas')
-            pct = d.get('percentual')
-            if total is None or validas is None or pct is None:
-                return False
-        except (OSError, ValueError, TypeError, KeyError, StopIteration):
+            linhas = []
+            for registro in doc.get('years', []):
+                if not isinstance(registro, dict):
+                    continue
+                yr = int(registro['ano'])
+                if ano is not None and yr != int(ano):
+                    continue
+                if uf == 'BR':
+                    d = registro.get('brasil')
+                else:
+                    d = next((v for v in registro.get('ufs', [])
+                              if isinstance(v, dict) and v.get('uf') == uf), None)
+                if not isinstance(d, dict):
+                    continue
+                # A fonte sinaliza recortes cuja contagem não pode ser publicada.
+                if d.get('requer_revisao_privacidade') is True or d.get('suprimido') is True:
+                    continue
+                total, validas, pct = (d.get('n_notas_1000'), d.get('n_validas'),
+                                       d.get('percentual'))
+                if any(isinstance(v, bool) or v is None for v in (total, validas, pct)):
+                    continue
+                total, validas, pct = int(total), int(validas), float(pct)
+                if not (validas >= 30 and 0 <= total <= validas and 0 <= pct <= 100
+                        and math.isfinite(pct)):
+                    continue
+                if uf != 'BR' and 0 < total < 30:
+                    continue
+                if total > 0 and pct == 0:
+                    pct = 100 * total / validas
+                linhas.append({'ano': yr, 'quantidade': total,
+                               'validas': validas, 'pct': pct})
+        except (OSError, ValueError, TypeError, KeyError, StopIteration, OverflowError):
             return False
-        st.metric('Redações com nota 1.000', _pt_int(total))
-        st.metric('Percentual entre as redações válidas', f'{_pt(pct, 4)}%')
-        st.caption(f'Denominador: {_pt_int(validas)} redações válidas. ' 
-                   'Um percentual próximo de zero não significa inexistência de casos.')
+        if not linhas:
+            st.info('Não há resultados de notas 1.000 divulgáveis para este recorte. '
+                    'Um resultado indisponível não equivale a zero.')
+            return True
+        linhas.sort(key=lambda r: r['ano'])
+        if ano is not None:
+            d = linhas[0]
+            st.metric('Redações com nota 1.000', _pt_int(d['quantidade']))
+            st.metric('Percentual entre as redações válidas', f'{_pt(d["pct"], 4)}%')
+            st.caption(f'Denominador: {_pt_int(d["validas"])} redações válidas. '
+                       'Um percentual próximo de zero não significa inexistência de casos.')
+        else:
+            df = pd.DataFrame(linhas)
+            if len(df) >= 2:
+                fig = px.line(df, x='ano', y='pct', markers=True,
+                              labels={'ano': 'Edição do ENEM',
+                                      'pct': 'Redações com nota 1.000 (% das válidas)'})
+                fig.update_xaxes(tickmode='array', tickvals=df['ano'].tolist())
+                fig.update_yaxes(tickformat='.4f', rangemode='tozero')
+                st.plotly_chart(fig, use_container_width=True)
+            tabela = pd.DataFrame([{
+                'Edição': r['ano'], 'Redações nota 1.000': _pt_int(r['quantidade']),
+                'Redações válidas': _pt_int(r['validas']),
+                'Percentual das válidas': f'{_pt(r["pct"], 4)}%'
+            } for r in linhas])
+            st.dataframe(tabela, hide_index=True, use_container_width=True)
+            st.caption('Cada edição tem seu próprio denominador. '
+                       'Casos com restrição de divulgação não são exibidos.')
         return True
 
     if numero not in (2, 3, 4, 5, 7):
@@ -292,9 +341,15 @@ def _grafico_essencial_catalogo(st, raiz: Path, numero: int, ano: int | None, uf
             d = dados[0]
             if not all(k in d for k in percentis):
                 return False
+            # A tabela de cinco valores permanece visível mesmo em capturas
+            # estáticas nas quais o navegador recorte uma barra do Plotly.
+            for coluna, chave in zip(st.columns(5), percentis):
+                coluna.metric(chave.upper(), f'{_pt(d[chave], 0)} pontos')
             df = pd.DataFrame({'Percentil': [p.upper() for p in percentis],
                                'Nota (pontos)': [d[p] for p in percentis]})
             fig = px.bar(df, x='Percentil', y='Nota (pontos)', text='Nota (pontos)')
+            fig.update_xaxes(type='category', categoryorder='array',
+                             categoryarray=[p.upper() for p in percentis])
             fig.update_traces(texttemplate='%{y:,.0f}', textposition='outside', cliponaxis=False)
             fig.update_yaxes(range=[0, 1050])
         st.plotly_chart(fig, use_container_width=True)
