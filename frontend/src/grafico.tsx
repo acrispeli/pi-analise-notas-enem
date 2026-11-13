@@ -1,12 +1,21 @@
+import { useEffect, useId, useRef, useState } from 'react';
 import Plotly from 'plotly.js-dist-min';
 import createPlotlyComponent from 'react-plotly.js/factory';
 
 const Plot = createPlotlyComponent(Plotly);
 
 const CONFIG = {
-  displayModeBar: false,
+  displayModeBar: 'hover' as const,
   responsive: true,
   displaylogo: false,
+  scrollZoom: false,
+  toImageButtonOptions: {
+    format: 'png' as const,
+    filename: 'grafico-redacao-enem',
+    height: 800,
+    width: 1280,
+    scale: 1,
+  },
 };
 
 export type Figura = {
@@ -18,11 +27,14 @@ export type Figura = {
 const LAYOUT = {
   paper_bgcolor: 'rgba(0,0,0,0)',
   plot_bgcolor: 'rgba(0,0,0,0)',
-  font: { family: 'Segoe UI, system-ui, sans-serif', size: 12, color: '#1c2430' },
-  margin: { t: 16, r: 24, b: 72, l: 64 },
-  legend: { orientation: 'h', yanchor: 'top', y: -0.35, x: 0, xanchor: 'left' },
-  xaxis: { gridcolor: '#e6ebf2', zerolinecolor: '#d5dbe3', automargin: true, title: { standoff: 16 } },
-  yaxis: { gridcolor: '#e6ebf2', zerolinecolor: '#d5dbe3', automargin: true, title: { standoff: 10 } },
+  font: { family: 'Segoe UI, system-ui, sans-serif', size: 12, color: '#26394d' },
+  margin: { t: 30, r: 30, b: 100, l: 68, autoexpand: true },
+  legend: { orientation: 'h', yanchor: 'top', y: -0.28, x: 0, xanchor: 'left' },
+  xaxis: { gridcolor: '#e6ebf2', zerolinecolor: '#d5dbe3', automargin: true, title: { standoff: 14 } },
+  yaxis: { gridcolor: '#e6ebf2', zerolinecolor: '#d5dbe3', automargin: true, title: { standoff: 12 } },
+  hovermode: 'closest',
+  separators: ',.',
+  autosize: true,
 };
 
 function eixo(base: object, extra: object | undefined): object {
@@ -61,37 +73,119 @@ export function Grafico({
   identificador: string;
   embutido?: boolean;
 }) {
-  const corpo = figura ? (
-    <Plot
-      data={figura.data}
-      layout={layoutFigura(figura.layout, figura.altura ?? 360)}
-      config={CONFIG}
-      useResizeHandler
-      style={{ width: '100%', height: figura.altura ?? 360 }}
-    />
-  ) : (
-    <p className="indisponivel">não disponível</p>
+  const [ampliado, setAmpliado] = useState(false);
+  const botaoAbrir = useRef<HTMLButtonElement>(null);
+  const botaoFechar = useRef<HTMLButtonElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const tituloId = useId();
+  const nome = titulo || 'Visualização dos resultados';
+
+  useEffect(() => {
+    if (!ampliado) return;
+    const overflowAnterior = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    botaoFechar.current?.focus();
+    const aoTeclar = (evento: KeyboardEvent) => {
+      if (evento.key === 'Escape') {
+        evento.preventDefault();
+        setAmpliado(false);
+      }
+      if (evento.key !== 'Tab') return;
+      const elementos = Array.from(
+        modalRef.current?.querySelectorAll<HTMLElement>('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])') ?? [],
+      ).filter((item) => item.getClientRects().length > 0);
+      if (elementos.length === 0) return;
+      const primeiro = elementos[0];
+      const ultimo = elementos[elementos.length - 1];
+      if (evento.shiftKey && document.activeElement === primeiro) {
+        evento.preventDefault();
+        ultimo.focus();
+      } else if (!evento.shiftKey && document.activeElement === ultimo) {
+        evento.preventDefault();
+        primeiro.focus();
+      }
+    };
+    window.addEventListener('keydown', aoTeclar);
+    return () => {
+      window.removeEventListener('keydown', aoTeclar);
+      document.body.style.overflow = overflowAnterior;
+      botaoAbrir.current?.focus();
+    };
+  }, [ampliado]);
+
+  function desenhar(altura: number) {
+    return figura ? (
+      <Plot
+        data={figura.data}
+        layout={layoutFigura(figura.layout, altura)}
+        config={CONFIG}
+        useResizeHandler
+        style={{ width: '100%', height: altura }}
+      />
+    ) : <p className="indisponivel">Dados não disponíveis neste recorte.</p>;
+  }
+
+  const controles = figura ? (
+    <div className="grafico-acoes">
+      <button ref={botaoAbrir} className="botao-leve" type="button" onClick={() => setAmpliado(true)}
+        aria-label={'Ampliar gráfico: ' + nome}>
+        Ampliar gráfico ↗
+      </button>
+    </div>
+  ) : null;
+
+  const corpo = (
+    <>
+      <div className="grafico-canvas" role="group" aria-label={'Gráfico interativo: ' + nome}>
+        {desenhar(figura?.altura ?? 360)}
+      </div>
+      {nota ? <p className="nota">{nota}</p> : null}
+    </>
   );
-  const notaEl = nota ? <p className="nota">{nota}</p> : null;
+
+  const ampliacao = ampliado && figura ? (
+    <div className="grafico-overlay" onMouseDown={(evento) => {
+      if (evento.target === evento.currentTarget) setAmpliado(false);
+    }}>
+      <div className="grafico-modal" ref={modalRef} role="dialog" aria-modal="true" aria-labelledby={tituloId}>
+        <div className="painel-cabecalho">
+          <h2 id={tituloId}>{nome}</h2>
+          <button type="button" className="botao-leve" ref={botaoFechar} onClick={() => setAmpliado(false)}>Fechar ✕</button>
+        </div>
+        <div className="grafico-canvas">{desenhar(Math.max(560, figura.altura ?? 360))}</div>
+        {nota ? <p className="nota">{nota}</p> : null}
+        <p className="nota">Passe o cursor sobre os dados para visualizar os valores. Use a barra de ferramentas do gráfico para ampliar, redefinir ou exportar a imagem.</p>
+      </div>
+    </div>
+  ) : null;
+
   if (embutido) {
     return (
-      <div data-visual={identificador}>
-        {corpo}
-        {notaEl}
-      </div>
+      <>
+        <div className="grafico-embutido" data-visual={identificador}>{controles}{corpo}</div>
+        {ampliacao}
+      </>
     );
   }
   return (
-    <section className="painel" data-visual={identificador}>
-      {titulo ? <h2>{titulo}</h2> : null}
-      {corpo}
-      {notaEl}
-    </section>
+    <>
+      <section className="painel" data-visual={identificador}>
+        <div className="painel-cabecalho">
+          {titulo ? <h2>{titulo}</h2> : <span />}
+          {controles}
+        </div>
+        {corpo}
+      </section>
+      {ampliacao}
+    </>
   );
 }
 
-export const COR = '#1f4e79';
-export const CORES = ['#d6e4f0', '#b7d0e6', '#8fb4d4', '#6a98c2', '#4f86c6', '#3a6fa3', '#1f4e79', '#163a5c', '#8d6a2f', '#c4a46a', '#5c6b7a'];
+export const COR = '#176590';
+export const CORES = [
+  '#176590', '#c45a3d', '#16806d', '#8056a1', '#b28725',
+  '#5469b2', '#b24272', '#416b76', '#a76b37', '#4c8752', '#7855a5',
+];
 
 export function barra(x: (string | number)[], y: (number | null)[], horizontal = false): Figura {
   return {
