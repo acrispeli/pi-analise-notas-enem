@@ -31,10 +31,12 @@ type Overview = {
 };
 
 type BlocoPeriodo<T> = { period_total?: T; period_by_uf?: (T & { uf: string })[] };
+type PontoHistorico = { year: number; mean_score?: number; n?: number };
+type SerieUF = { ufs?: Record<string, { year: number; ind002?: { mean_score?: number; n?: number } }[]> };
 type Temporal = {
   period_total?: { redacoes_validas?: number; percentual_validas?: number };
   period_by_uf?: { uf: string; redacoes_validas?: number; percentual_validas?: number }[];
-  ind002: BlocoPeriodo<{ n?: number; mean_score?: number }>;
+  ind002: BlocoPeriodo<{ n?: number; mean_score?: number }> & { national_by_year?: PontoHistorico[] };
   ind003: BlocoPeriodo<{ n?: number; median_score?: number }>;
   ind004: BlocoPeriodo<{ n?: number; std_score?: number }>;
   ind005: BlocoPeriodo<{ n?: number; percentiles?: Percentis }>;
@@ -108,6 +110,7 @@ export default function VisaoGeral() {
   const todos = ano === 'todos';
   const anual = useDados<Overview>(todos ? null : `/data/${ano}/overview.json`);
   const temporal = useDados<Temporal>(todos ? '/data/temporal.json' : null);
+  const serieUf = useDados<SerieUF>(todos && uf !== 'BR' ? '/data/serie-uf.json' : null);
   const fonte = todos ? temporal : anual;
   if (fonte.carregando || fonte.erro || !fonte.dados) {
     return <Estado carregando={fonte.carregando} erro={fonte.erro} />;
@@ -186,6 +189,12 @@ export default function VisaoGeral() {
   const hist = histograma(bins, limiar);
   const sit = situacao(categorias, limiar);
   const rankingFigura = brasil ? rankingMedias(ranking, limiar) : null;
+  const pontosHistoricos: PontoHistorico[] = !todos ? [] : brasil
+    ? (temporal.dados?.ind002.national_by_year ?? [])
+    : (serieUf.dados?.ufs?.[uf] ?? []).map((item) => ({
+        year: item.year, mean_score: item.ind002?.mean_score, n: item.ind002?.n,
+      }));
+  const historico = evolucaoInicial(pontosHistoricos, limiar);
 
   return (
     <div>
@@ -203,6 +212,14 @@ export default function VisaoGeral() {
         <Cartao rotulo="Desvio-padrão" valor={textoNota(desvio)} />
         <Cartao rotulo="Notas 1000" valor={textoContagem(notasMil)} />
       </div>
+      {todos ? (
+        <Grafico
+          identificador="resumo-evolucao"
+          titulo="Como a nota média evoluiu de 2019 a 2025?"
+          figura={historico.figura}
+          nota={historico.leitura + ' Cada ponto representa uma edição, e não os mesmos estudantes ao longo do tempo. A média consolidada acima é ponderada pelas redações válidas, não a média simples dos anos.'}
+        />
+      ) : null}
       <Grafico
         identificador="histograma"
         titulo="Em quais faixas se concentram as notas?"
@@ -256,6 +273,41 @@ export default function VisaoGeral() {
       ) : null}
     </div>
   );
+}
+
+
+function evolucaoInicial(pontos: PontoHistorico[], limiar: number): { figura: Figura | null; leitura: string } {
+  const serie = [...pontos].sort((a, b) => a.year - b.year).map((ponto) => ({
+    ano: ponto.year,
+    nota: metricaPublicavel(ponto.mean_score, ponto.n, limiar),
+  }));
+  const validos = serie.filter((item): item is { ano: number; nota: number } => item.nota !== null);
+  if (!validos.length) {
+    return { figura: null, leitura: 'Não há valores publicáveis para a série do recorte selecionado.' };
+  }
+  const primeiro = validos[0];
+  const ultimo = validos[validos.length - 1];
+  const diferenca = ultimo.nota - primeiro.nota;
+  const leitura = validos.length > 1
+    ? 'Entre ' + primeiro.ano + ' e ' + ultimo.ano + ', a média registrada passou de ' +
+      formatarNota(primeiro.nota) + ' para ' + formatarNota(ultimo.nota) +
+      ' pontos (diferença de ' + (diferenca >= 0 ? '+' : '−') + formatarNota(Math.abs(diferenca)) + ' pontos).'
+    : 'Há somente um ano com nota média publicável neste recorte.';
+  return {
+    figura: {
+      data: [{
+        type: 'scatter', mode: 'lines+markers',
+        name: 'Média anual', x: serie.map((item) => String(item.ano)),
+        y: serie.map((item) => item.nota),
+        connectgaps: false,
+        line: { color: '#176590', width: 3 }, marker: { color: '#176590', size: 9 },
+        hovertemplate: 'ENEM %{x}<br>Nota média: %{y:.1f} pontos<extra></extra>',
+      }],
+      altura: 350,
+      layout: { yaxis: { title: { text: 'Nota média (0–1.000 pontos)' }, range: [0, 1000] }, xaxis: { title: { text: 'Edição do exame' } } },
+    },
+    leitura,
+  };
 }
 
 function rankingMedias(lista: UfNota[], limiar: number): Figura | null {
