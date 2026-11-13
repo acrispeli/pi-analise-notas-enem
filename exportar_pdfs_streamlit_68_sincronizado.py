@@ -643,8 +643,8 @@ def ultima_pagina_so_rodape(leitor) -> bool:
     if len(leitor.pages) < 2:
         return False
     texto = _normalizar_validacao(leitor.pages[-1].extract_text() or '')
-    texto = re.sub(r'projeto integrador iv.*?analises nao oficiais do inep\\.', '', texto)
-    texto = re.sub(r'\\b\\d+\\s*/\\s*\\d+\\b', '', texto)
+    texto = re.sub(r'projeto integrador iv.*?analises nao oficiais do inep\.', '', texto)
+    texto = re.sub(r'\b\d+\s*/\s*\d+\b', '', texto)
     return not texto.strip()
 
 
@@ -662,7 +662,7 @@ def grafico_historico_tem_todos_anos(leitor, codigo: str) -> bool:
     for pagina in leitor.pages:
         texto = _normalizar_validacao(pagina.extract_text() or '')
         if marcador in texto and all(
-                re.search(r'(?<!\\d)' + str(ano) + r'(?!\\d)', texto)
+                re.search(r'(?<!\d)' + str(ano) + r'(?!\d)', texto)
                 for ano in range(2019, 2026)):
             return True
     return False
