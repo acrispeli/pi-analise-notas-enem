@@ -76,10 +76,10 @@ class TestePublicacaoSeguraV2(unittest.TestCase):
                 with (RAIZ / "outputs" / "json" / nome).open(encoding="utf-8") as file:
                     doc = json.load(file)
                 self.assertIs(doc["publicacao_autorizada"], True)
-                self.assertEqual(doc["status"], "apresentacao_publica_com_ressalvas")
-                self.assertIn("revisao_academica_formal_pendente", doc["review"])
+                self.assertEqual(doc["status"], "apresentacao_publica_autorizada")
+                self.assertEqual(doc["review"], "aprovacao_editorial_pelo_responsavel")
                 self.assertEqual(doc["modelo_referencia"], MODELO_V2)
-                visivel, ocultas[ind] = preparar_doc_publico_v2(doc, ind)
+                visivel, ocultos[ind] = preparar_doc_publico_v2(doc, ind)
                 self.assertIsNotNone(visivel)
                 for registro in visivel["results"]:
                     for chave, val in registro.items():
