@@ -15,6 +15,7 @@ import pandas as pd
 import plotly.express as px
 
 from painel_catalogo_68 import _seis_perfis
+from publicacao_segura_v2 import preparar_doc_publico_v2, mostrar_aviso_publicacao_v2
 from leitura_acessivel_68 import mostrar_leitura_acessivel as mostrar_interpretacao
 from graficos_educacionais_68 import mostrar_grafico_didatico, resumo_expresso
 from painel_revisao_geral_68 import (renderizar_historico_geral, renderizar_resultados_gerais,
@@ -342,6 +343,18 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
     except (OSError,ValueError) as exc:
         st.error(f'Falha na leitura de {origem.name}: {exc}')
         return
+    # Valida publicação e omite células pequenas ANTES de qualquer visual,
+    # interpretação ou inspeção de registros no navegador público.
+    if escolha in V2:
+        doc, ocultas = preparar_doc_publico_v2(doc, escolha)
+        if doc is None:
+            st.warning(
+                'Os resultados deste indicador aguardam liberação explícita '
+                'para divulgação externa ou a fonte não corresponde ao modelo V2. '
+                'A descrição metodológica permanece disponível.'
+            )
+            return
+        mostrar_aviso_publicacao_v2(st, escolha, ocultas)
     st.caption('Fonte: `'+str(origem.relative_to(raiz))+'`')
     st.caption('Apresentação editorial: validada pela equipe do projeto. Metadados de processamento preservados no JSON de origem.')
     edicao_da_fonte = doc.get('ano', doc.get('year'))
