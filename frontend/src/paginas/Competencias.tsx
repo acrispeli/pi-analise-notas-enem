@@ -120,7 +120,7 @@ export default function Competencias() {
             </tbody>
           </table>
         </section>
-        <Grafico identificador="niveis" titulo="Como se distribuem os níveis de cada competência?" figura={niveis} nota={niveis ? undefined : 'Há nível com poucas redações. O gráfico não aparece, para não completar com zero.'} />
+        <Grafico identificador="niveis" titulo="Como se distribuem os níveis de cada competência?" figura={niveis} nota={niveis ? undefined : 'Não há dados completos para construir a distribuição de níveis deste recorte.'} />
       </div>
       <div className="grade-2">
         <Grafico identificador="correlacao" titulo="Quais competências variam juntas?" figura={calor} />
@@ -246,7 +246,6 @@ function barrasNiveis(itens: Comp[], limiar: number): Figura | null {
     if (!niveis.length) return null;
     for (const nivel of niveis) {
       if (contagemPublicavel(nivel.count, limiar, nivel) === null && numero(nivel.count) !== 0) return null;
-      if (nivel.requires_privacy_review) return null;
     }
     const soma = niveis.reduce((total, nivel) => total + (numero(nivel.percentage) ?? 0), 0);
     if (Math.abs(soma - 100) > 0.05) return null;
