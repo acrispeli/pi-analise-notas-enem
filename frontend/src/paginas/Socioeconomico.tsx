@@ -113,7 +113,7 @@ export default function Socioeconomico() {
           identificador="serie-questionario"
           titulo="Quantas participações responderam ao questionário em cada edição?"
           figura={figura}
-          nota="Contagens históricas de participações com questionário, inclusive sem redação válida. Não são pessoas únicas, nem médias de notas."
+          nota="População POP_SOCIO: contagens históricas de participações com questionário, inclusive sem redação válida. Não são pessoas únicas, nem médias de notas."
         />
         <Aviso>Para consultar as alternativas e seus significados, escolha um ano. Algumas perguntas mudam entre edições; seus percentuais não são somados.</Aviso>
       </div>
