@@ -11,6 +11,11 @@ on:
 permissions:
   contents: read
 
+# Uma única auditoria ativa por PR; novas revisões substituem execuções antigas.
+concurrency:
+  group: auditoria-visual-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   playwright:
     name: Medição visual (375, 768 e 1440 px)
