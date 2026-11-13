@@ -60,10 +60,10 @@ class TestesImpressaoPdf(unittest.TestCase):
 
         rotulos = '2019 2020 2021 2022 2023 2024 2025'
         titulos = {
-            'IND-002': 'Evolução histórica · Nota média da redação · pontos (0–1000)',
-            'IND-003': 'Evolução histórica · Mediana da redação · pontos (0–1000)',
-            'IND-004': 'Evolução histórica · Desvio-padrão da nota · pontos',
-            'IND-005': 'Evolução histórica · Intervalo interquartil da nota · pontos',
+            'IND-002': 'Nota média (pontos)',
+            'IND-003': 'Nota mediana (pontos)',
+            'IND-004': 'Dispersão das notas (desvio-padrão) (pontos)',
+            'IND-005': 'Nota de referência\\nP25 P50 P75 P90 P95',
         }
         for codigo, titulo in titulos.items():
             with self.subTest(indicador=codigo):
@@ -77,6 +77,33 @@ class TestesImpressaoPdf(unittest.TestCase):
                 self.assertFalse(grafico_historico_tem_todos_anos(incompleto, codigo))
                 incompleto = Leitor([titulo + '\\n2019 2020 2021 2022 2023 2024'])
                 self.assertFalse(grafico_historico_tem_todos_anos(incompleto, codigo))
+
+    def test_nao_aprova_grafico_de_quantidade_em_lugar_de_notas(self):
+        class Pagina:
+            def __init__(self, texto):
+                self.texto = texto
+
+            def extract_text(self):
+                return self.texto
+
+        class Leitor:
+            def __init__(self, texto):
+                self.pages = [Pagina(texto)]
+
+        # Reproduz o que foi encontrado nos quatro PDFs enviados:
+        # o eixo Y estava marcado com N para IND-003, 004 e 005.
+        texto = '2019 2020 2021 2022 2023 2024 2025\\nN\\n2,2M 3M 3,8M'
+        for codigo in ('IND-003', 'IND-004', 'IND-005'):
+            with self.subTest(indicador=codigo):
+                self.assertFalse(
+                    grafico_historico_tem_todos_anos(Leitor(texto), codigo)
+                )
+        # O IND-005 não é válido com apenas a curva de IQR; deve mostrar
+        # todos os cinco percentis. Não basta haver ano e eixo de nota.
+        self.assertFalse(grafico_historico_tem_todos_anos(
+            Leitor('Nota de referência\\n2019 2020 2021 2022 2023 2024 2025'),
+            'IND-005'
+        ))
 
     def test_ultimo_ano_permanece_no_pdf_a4(self):
         try:
