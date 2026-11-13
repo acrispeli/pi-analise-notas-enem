@@ -7,7 +7,7 @@
 
 O valor `consolidado_para_apresentacao` representa **uma decisão editorial do projeto** e não uma certificação científica independente. A mudança não recalcula estatísticas nem altera populações, unidades, filtros, notas ou séries. As versões anteriores permanecem disponíveis no histórico Git, caso seja necessário conferir a origem de cada resultado.
 
-O `publicacao_autorizada: true` dos seis indicadores M1–M3 (IND-055–059/068) permanece. A supressão das células pequenas dos IND-057/058 não deve ser desativada.
+O `publicacao_autorizada: true` dos seis indicadores M1–M3 (IND-055–059/068) permanece. Por decisão posterior do responsável, o painel não suprime automaticamente os registros com contagens inferiores a 30 nos IND-057/058; eles permanecem visíveis com aviso de instabilidade estatística. Não são exibidos microdados, nem transformados em zero os valores sem cálculo possível.
 
 ## Alterações preparadas na branch
 
