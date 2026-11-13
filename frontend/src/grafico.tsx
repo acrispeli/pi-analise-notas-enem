@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import Plotly from 'plotly.js-dist-min';
 import createPlotlyComponent from 'react-plotly.js/factory';
+import { LeituraPedagogica } from './LeituraPedagogica.tsx';
 
 const Plot = createPlotlyComponent(Plotly);
 
@@ -140,6 +141,7 @@ export function Grafico({
         {desenhar(figura?.altura ?? 360)}
       </div>
       {nota ? <p className="nota">{nota}</p> : null}
+      <LeituraPedagogica identificador={identificador} />
     </>
   );
 
