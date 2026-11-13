@@ -59,8 +59,11 @@ def auditar_indicador(raiz: Path, indicador: dict) -> dict:
         metadados = doc.get("meta")
         if not isinstance(metadados, dict):
             metadados = {}
-        status = metadados.get("data_status") or doc.get("data_status") or ""
-        row["status_dados"] = str(status)
+        # JSONs de perfis V2 declaram o estado em "status" na raiz.
+        # Também preservamos os formatos meta.data_status/data_status.
+        status = (metadados.get("data_status") or doc.get("data_status") or
+                  doc.get("status") or "")
+        row["status_dados"] = str(status) if isinstance(status, str) else ""
 
         autorizado = doc.get("publicacao_autorizada")
         if isinstance(autorizado, bool):
