@@ -1263,7 +1263,7 @@
       "prioridade": "P2",
       "observacoes": "Ativar somente após validação de dicionários 2019–2024.",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Comparação temporal: amostragem/escala/centroides comparáveis; clusters não se alinham automaticamente.",
+      "restricoes": "Comparações entre edições independentes: médias e medianas consideram redações válidas de cada ano. Não acompanham as mesmas pessoas e não demonstram causalidade.",
       "numero": 64
     },
     {
@@ -1283,7 +1283,7 @@
       "prioridade": "P2",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Comparação temporal: amostragem/escala/centroides comparáveis; clusters não se alinham automaticamente.",
+      "restricoes": "As médias das competências C1–C5 estão na escala de 0 a 200 por edição. Alterações de população e contexto do exame devem ser consideradas ao comparar anos.",
       "numero": 65
     },
     {
@@ -1303,7 +1303,7 @@
       "prioridade": "P2",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Comparação temporal: amostragem/escala/centroides comparáveis; clusters não se alinham automaticamente.",
+      "restricoes": "Os valores descrevem perdas e frequência de desconto no recorte de alto desempenho definido na fonte. Os denominadores variam por edição; não interprete as séries como acompanhamento individual.",
       "numero": 66
     },
     {
