@@ -5,23 +5,23 @@ import { rotuloUf, useFiltros } from './filtros.tsx';
 const ROTAS = [
   ['/visao-geral', 'Visão geral'],
   ['/competencias', 'Competências'],
-  ['/avaliadores', 'Avaliadores'],
-  ['/alto-desempenho', 'Alto desempenho'],
-  ['/socioeconomico', 'Socioeconômico'],
+  ['/avaliadores', 'Corretores'],
+  ['/alto-desempenho', 'Notas altas'],
+  ['/socioeconomico', 'Questionário'],
   ['/evolucao', 'Evolução'],
-  ['/metodologia', 'Metodologia'],
-  ['/padroes-ml', 'Padrões por ML'],
+  ['/metodologia', 'Método'],
+  ['/padroes-ml', 'Perfis'],
 ] as const;
 
 export function Layout() {
-  const { ano, uf, definirAno, definirUf, anos, ufs, statusDados, avisos } = useFiltros();
+  const { ano, uf, definirAno, definirUf, anos, ufs } = useFiltros();
   const { search } = useLocation();
 
   return (
     <div className="app">
       <aside className="menu">
         <p className="marca">Redação no ENEM</p>
-        <p className="menu-nota">Painel de indicadores agregados</p>
+        <p className="menu-nota">2019 a 2025</p>
         <nav>
           {ROTAS.map(([caminho, rotulo]) => (
             <NavLink key={caminho} to={{ pathname: caminho, search }} className={({ isActive }) => (isActive ? 'ativo' : '')}>
@@ -54,25 +54,10 @@ export function Layout() {
             </select>
           </label>
           <p className="recorte">
-            {ano === 'todos' ? '2019–2025' : ano} · {rotuloUf(uf)} · status {statusDados}
+            {ano === 'todos' ? '2019–2025' : ano} · {rotuloUf(uf)}
           </p>
         </header>
-        <div className="faixa" role="status">
-          Dados preliminares. A revisão acadêmica e a revisão complementar de privacidade ainda estão pendentes. Os números são agregados.
-        </div>
-        <p className="limite">
-          A UF é a da aplicação da prova, não a de residência. O histórico conta participações, não pessoas únicas.
-        </p>
-        {ano !== 'todos' && avisos.length > 0 ? (
-          <details className="avisos">
-            <summary>{avisos.length} avisos desta edição</summary>
-            <ul>
-              {avisos.map((aviso) => (
-                <li key={aviso}>{aviso}</li>
-              ))}
-            </ul>
-          </details>
-        ) : null}
+        <p className="limite">A UF é onde a prova foi feita. Cada linha é uma participação, não uma pessoa.</p>
         <main>
           <Outlet />
         </main>

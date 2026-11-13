@@ -44,11 +44,11 @@ type Temporal = {
 };
 
 function textoContagem(valor: number | null): string {
-  return valor === null ? 'indisponível' : formatarInteiro(valor);
+  return valor === null ? 'não disponível' : formatarInteiro(valor);
 }
 
 function textoNota(valor: number | null): string {
-  return valor === null ? 'indisponível' : formatarNota(valor);
+  return valor === null ? 'não disponível' : formatarNota(valor);
 }
 
 function histograma(bins: Bin[] | undefined, limiar: number): { figura: Figura | null; omitidos: boolean } {
@@ -95,11 +95,11 @@ function situacao(categorias: Categoria[] | undefined, limiar: number): { figura
 }
 
 const ORDEM_PERCENTIL = [
-  ['p25', 'P25'],
-  ['p50', 'P50'],
-  ['p75', 'P75'],
-  ['p90', 'P90'],
-  ['p95', 'P95'],
+  ['p25', '25% das notas'],
+  ['p50', 'Metade das notas'],
+  ['p75', '75% das notas'],
+  ['p90', '90% das notas'],
+  ['p95', '95% das notas'],
 ] as const;
 
 export default function VisaoGeral() {
@@ -193,7 +193,7 @@ export default function VisaoGeral() {
         <Aviso>Em 2020, a parcela de redações válidas é menor do que nas outras edições.</Aviso>
       ) : null}
       {todos ? (
-        <p className="nota">Números do período já publicados. A série ano a ano está em Evolução.</p>
+        <p className="nota">Soma de 2019 a 2025. A série de cada ano está em Evolução.</p>
       ) : null}
       <div className="cartoes">
         <Cartao rotulo="Redações válidas" valor={textoContagem(validas)} detalhe={percentual === null ? undefined : formatarPercentual(percentual)} />
@@ -206,7 +206,7 @@ export default function VisaoGeral() {
         identificador="histograma"
         titulo="Em quais faixas se concentram as notas?"
         figura={hist.figura}
-        nota={hist.omitidos ? 'Há faixa com contagem suprimida. O histograma fica indisponível para não aparecer como zero.' : undefined}
+        nota={hist.omitidos ? 'Há faixa com poucas redações. O gráfico não aparece, para não virar zero.' : undefined}
       />
       <div className="grade-2">
         <Grafico
@@ -215,19 +215,19 @@ export default function VisaoGeral() {
           figura={sit.figura}
           nota={
             [
-              populacaoStatus === 'POP_ALL' ? 'Conta todas as participações, não só as redações válidas.' : '',
-              sit.omitidos ? 'Situações com contagem suprimida ficam indisponíveis e não entram como zero.' : '',
+              populacaoStatus === 'POP_ALL' ? 'Inclui todas as participações, não só as redações válidas.' : '',
+              sit.omitidos ? 'Situações com poucas redações não aparecem e não entram como zero.' : '',
             ]
               .filter(Boolean)
               .join(' ') || undefined
           }
         />
         <section className="painel" data-visual="percentis">
-          <h2>Onde ficam os percentis da nota?</h2>
+          <h2>Até que nota chega cada fatia das redações?</h2>
           <table>
             <thead>
               <tr>
-                <th>Percentil</th>
+                <th>Fatia</th>
                 <th>Nota</th>
               </tr>
             </thead>
@@ -237,7 +237,7 @@ export default function VisaoGeral() {
                 return (
                   <tr key={chave}>
                     <td>{rotulo}</td>
-                    <td>{valor === null ? 'indisponível' : formatarNota(valor)}</td>
+                    <td>{valor === null ? 'não disponível' : formatarNota(valor)}</td>
                   </tr>
                 );
               })}
@@ -250,7 +250,7 @@ export default function VisaoGeral() {
           identificador="ranking-uf"
           titulo="Qual UF da prova tem a maior média?"
           figura={rankingFigura}
-          nota="Só aparece no recorte Brasil."
+          nota="Comparação dos estados. Some quando um estado está selecionado."
         />
       ) : null}
     </div>

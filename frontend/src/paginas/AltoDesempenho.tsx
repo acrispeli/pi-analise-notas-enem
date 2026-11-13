@@ -23,7 +23,6 @@ export default function AltoDesempenho() {
 
   const faixas = fatia(fonte.dados, todos, uf, 'score_bands', 'ind030');
   const perda = fatia(fonte.dados, todos, uf, 'loss_by_competency', 'ind031');
-  const motivo = todos ? '' : String(anual.dados?.reason ?? '');
   const nHigh = contagemPublicavel(faixas?.n_high, limiar);
   const pctHigh = nHigh === null ? null : numero(faixas?.percentual_high_sobre_validas);
   const nNear = contagemPublicavel(perda?.n_near, limiar);
@@ -38,12 +37,12 @@ export default function AltoDesempenho() {
 
   return (
     <div>
-      <h1>Alto desempenho</h1>
-      {motivo ? <Aviso>{motivo}</Aviso> : null}
-      {todos ? <Aviso>IND-032 a IND-039 existem por edição. Selecione um ano. A série abaixo é a de IND-030 e IND-031.</Aviso> : null}
+      <h1>Notas altas</h1>
+      <p className="nota">C1 escrita formal · C2 tema · C3 argumentação · C4 coesão · C5 proposta de intervenção</p>
+      {todos ? <Aviso>Os gráficos de desconto são de um ano só. Escolha o ano. Os dois números e os dois gráficos de cima valem para o período inteiro.</Aviso> : null}
       <div className="cartoes">
-        <Cartao rotulo="Redações de 900 a 1000" valor={nHigh === null ? 'indisponível' : formatarInteiro(nHigh)} detalhe={pctHigh === null ? undefined : formatarPercentual(pctHigh)} />
-        <Cartao rotulo="Redações de 900 a 980" valor={nNear === null ? 'indisponível' : formatarInteiro(nNear)} />
+        <Cartao rotulo="Redações de 900 a 1000" valor={nHigh === null ? 'não disponível' : formatarInteiro(nHigh)} detalhe={pctHigh === null ? undefined : formatarPercentual(pctHigh)} />
+        <Cartao rotulo="Redações de 900 a 980" valor={nNear === null ? 'não disponível' : formatarInteiro(nNear)} />
       </div>
       <div className="grade-2">
         <Grafico identificador="faixas-900" titulo="Como se distribuem as notas de 900 a 1000?" figura={graficoFaixas(faixas?.faixas as Faixa[] | undefined, limiar)} />
@@ -51,7 +50,7 @@ export default function AltoDesempenho() {
       </div>
       {todos ? null : (
         <>
-          <Grafico identificador="ind032" titulo="Em qual competência o desconto é mais frequente na faixa 900–980?" figura={barrasCompetencia(desconto?.resumo_competencias as Comp[] | undefined, 'percentual_desconto', 'n_redacoes', limiar, 'Redações com desconto (%)')} nota="Desconto: competência abaixo de 200. Categorias suprimidas não entram como zero." />
+          <Grafico identificador="ind032" titulo="Em qual competência o desconto é mais frequente?" figura={barrasCompetencia(desconto?.resumo_competencias as Comp[] | undefined, 'percentual_desconto', 'n_redacoes', limiar, 'Redações com desconto (%)')} nota="Nas redações de 900 a 980. Grupo pequeno demais não entra como zero." />
           <Grafico identificador="ind033" titulo="Qual competência concentra a perda de pontos?" figura={barrasCompetencia(participacao?.resumo_competencias as Comp[] | undefined, 'percentual_participacao', 'n_redacoes', limiar, 'Participação na perda (%)')} />
           <div className="cartoes">
             <Cartao rotulo="Uma única competência abaixo de 200" valor={textoContagem(unica?.n_casos_com_uma_unica_competencia, limiar, unica)} detalhe={textoPercentual(unica?.percentual_casos_unicos_na_pop_near, unica?.n_near, limiar)} />
@@ -66,12 +65,12 @@ export default function AltoDesempenho() {
                 <option value="trio">Trios</option>
               </select>
             </label>
-            <Grafico identificador="ind035-grafico" titulo="" embutido figura={graficoCombinacoes(combinacoes?.combinacoes as Comp[] | undefined, tipoCombinacao, limiar)} nota="Interseção inclusiva: uma redação com três descontos entra também nos pares." />
+            <Grafico identificador="ind035-grafico" titulo="" embutido figura={graficoCombinacoes(combinacoes?.combinacoes as Comp[] | undefined, tipoCombinacao, limiar)} nota="Uma redação com três descontos também entra nos pares." />
           </section>
-          <Grafico identificador="ind036" titulo="Quais descontos aparecem juntos acima do acaso?" figura={graficoRegras(regras, limiar)} nota="Apriori. O eixo é o lift publicado. Regras suprimidas não entram como zero." />
+          <Grafico identificador="ind036" titulo="Quais descontos aparecem juntos acima do acaso?" figura={graficoRegras(regras, limiar)} nota="Quanto maior a barra, mais a combinação supera o que seria esperado ao acaso." />
           <Testes testes={testes} familia={familia} onFamilia={setFamilia} />
-          <Grafico identificador="ind038" titulo="Os dois corretores concordam sobre o desconto?" figura={graficoConcordancia(concordancia, limiar)} nota="Concordância binária de Ci abaixo de 200 entre AV1 e AV2, na faixa 900–980." />
-          <Grafico identificador="ind039" titulo="Em qual faixa de 900 a 1000 cada competência ainda perde pontos?" figura={graficoMapa(mapa, limiar)} nota="A nota 1000 entra na última faixa. Célula suprimida não é desenhada como zero." />
+          <Grafico identificador="ind038" titulo="Os dois corretores concordam sobre o desconto?" figura={graficoConcordancia(concordancia, limiar)} nota="Os dois marcaram a competência abaixo de 200, nas redações de 900 a 980." />
+          <Grafico identificador="ind039" titulo="Em qual faixa de 900 a 1000 cada competência ainda perde pontos?" figura={graficoMapa(mapa, limiar)} nota="A nota 1000 entra na última faixa. Grupo pequeno demais não aparece como zero." />
         </>
       )}
     </div>
@@ -87,31 +86,31 @@ function Testes({ testes, familia, onFamilia }: { testes: Recorte | undefined; f
     <section className="painel" data-visual="ind037">
       <h2>As competências descontadas diferem entre si?</h2>
       <div className="cartoes">
-        <Cartao rotulo="Q de Cochran" valor={textoEstatistica(ocorrencia?.estatistica)} detalhe={textoP(ocorrencia?.p_valor)} />
-        <Cartao rotulo="Friedman" valor={textoEstatistica(magnitude?.estatistica)} detalhe={textoP(magnitude?.p_valor)} />
+        <Cartao rotulo="O desconto muda de competência?" valor={textoEstatistica(ocorrencia?.estatistica)} detalhe={textoP(ocorrencia?.p_valor)} />
+        <Cartao rotulo="O tamanho da perda muda?" valor={textoEstatistica(magnitude?.estatistica)} detalhe={textoP(magnitude?.p_valor)} />
       </div>
       <label className="seletor">
-        Pós-testes
+        Comparação
         <select value={familia} onChange={(evento) => onFamilia(evento.target.value as 'ocorrencia' | 'magnitude')}>
-          <option value="ocorrencia">Ocorrência do desconto</option>
-          <option value="magnitude">Magnitude da perda</option>
+          <option value="ocorrencia">Quem recebe desconto</option>
+          <option value="magnitude">Quantos pontos faltam</option>
         </select>
       </label>
       <TabelaTestes linhas={linhas} />
-      <p className="nota">p publicado como zero é subfluxo numérico, não probabilidade exatamente zero. Revisão acadêmica e de privacidade ainda pendentes.</p>
+      <p className="nota">Um valor de p igual a zero, na prática, está abaixo do que o cálculo consegue registrar.</p>
     </section>
   );
 }
 
 function TabelaTestes({ linhas }: { linhas: Comp[] | undefined }) {
-  if (!linhas?.length) return <p className="indisponivel">indisponível</p>;
+  if (!linhas?.length) return <p className="indisponivel">não disponível</p>;
   return (
     <table>
       <thead>
         <tr>
           <th>Par</th>
-          <th>p ajustado</th>
-          <th>Significativo a 5%</th>
+          <th>Margem de acaso</th>
+          <th>Diferença real a 5%?</th>
         </tr>
       </thead>
       <tbody>
@@ -121,8 +120,8 @@ function TabelaTestes({ linhas }: { linhas: Comp[] | undefined }) {
           return (
             <tr key={par}>
               <td>{par}</td>
-              <td>{oculto ? 'indisponível' : textoP(linha.p_ajustado_holm)}</td>
-              <td>{oculto ? 'indisponível' : linha.significativo_5pct === true ? 'sim' : linha.significativo_5pct === false ? 'não' : 'indisponível'}</td>
+              <td>{oculto ? 'não disponível' : textoP(linha.p_ajustado_holm)}</td>
+              <td>{oculto ? 'não disponível' : linha.significativo_5pct === true ? 'sim' : linha.significativo_5pct === false ? 'não' : 'não disponível'}</td>
             </tr>
           );
         })}
@@ -149,7 +148,7 @@ function listaConcordancia(valor: unknown, uf: string): Comp[] {
 
 function textoContagem(valor: unknown, limiar: number, item?: unknown): string {
   const n = contagemPublicavel(valor, limiar, item);
-  return n === null ? 'indisponível' : formatarInteiro(n);
+  return n === null ? 'não disponível' : formatarInteiro(n);
 }
 
 function textoPercentual(valor: unknown, denominador: unknown, limiar: number): string | undefined {
@@ -159,14 +158,14 @@ function textoPercentual(valor: unknown, denominador: unknown, limiar: number): 
 
 function textoEstatistica(valor: unknown): string {
   const n = numero(valor);
-  if (n === null) return 'indisponível';
+  if (n === null) return 'não disponível';
   return n >= 100 ? formatarInteiro(n) : formatarNota(n);
 }
 
 function textoP(valor: unknown): string {
   const n = numero(valor);
-  if (n === null) return 'indisponível';
-  if (n === 0) return 'abaixo do limite numérico';
+  if (n === null) return 'não disponível';
+  if (n === 0) return 'abaixo do que o cálculo registra';
   if (n < 0.001) return n.toExponential(2).replace('.', ',');
   return formatarIndice(n);
 }

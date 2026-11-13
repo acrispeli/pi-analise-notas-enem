@@ -70,7 +70,7 @@ export function Grafico({
       style={{ width: '100%', height: figura.altura ?? 360 }}
     />
   ) : (
-    <p className="indisponivel">indisponível</p>
+    <p className="indisponivel">não disponível</p>
   );
   const notaEl = nota ? <p className="nota">{nota}</p> : null;
   if (embutido) {

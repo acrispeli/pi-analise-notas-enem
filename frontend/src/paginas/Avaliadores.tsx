@@ -1,5 +1,5 @@
 import { COR, CORES, Grafico, type Figura } from '../grafico.tsx';
-import { Aviso, Cartao, Estado } from '../layout.tsx';
+import { Cartao, Estado } from '../layout.tsx';
 import { useFiltros } from '../filtros.tsx';
 import { useDados } from '../useDados.ts';
 import { formatarIndice, formatarInteiro, formatarNota, formatarPercentual, numero } from '../lib/formatar.ts';
@@ -29,9 +29,6 @@ export default function Avaliadores() {
   const icc = fatia(doc, todos, uf, 'icc', 'ind027');
   const perfis = fatia(doc, todos, uf, 'divergence_clusters', 'ind028');
   const atipicos = fatia(doc, todos, uf, 'anomalies', 'ind029');
-  const motivo = todos ? 'indicadores_ainda_nao_implementados' : String((anual.dados?.reason as string) ?? '');
-  const parcial = todos ? '' : String(anual.dados?.status ?? '');
-
   const hist = histograma(dif?.histograma as Hist[] | undefined, limiar);
   const barras = diferencaCompetencia(comp?.competencias as CompDif[] | undefined, limiar);
   const kappas = barrasKappa(kappa?.competencias as Record<string, Kappa> | undefined, limiar);
@@ -41,40 +38,36 @@ export default function Avaliadores() {
 
   return (
     <div>
-      <h1>Avaliadores</h1>
-      <Aviso>
-        {parcial === 'partial' ? `${motivo}. ` : ''}
-        O restante do catálogo de avaliadores está pendente. A regra de discrepância é a de 2024, aplicada a todos os anos.
-      </Aviso>
+      <h1>Corretores</h1>
+      <p className="nota">A regra de discrepância é a do edital de 2024, usada em todos os anos para poder comparar.</p>
       <div className="cartoes">
         <Cartao rotulo="Diferença média total" valor={textoNota(metricaPublicavel(dif?.media, dif?.n_avaliacoes_pareadas, limiar))} />
         <Cartao
           rotulo="Discrepância oficial"
           valor={textoPercentual(metricaPublicavel(oficial?.percentual_discrepancia_confirmada_pop_evaluator, oficial?.n_pop_evaluator, limiar))}
         />
-        <Cartao rotulo="ICC" valor={iccValor === null ? 'indisponível' : formatarIndice(iccValor)} />
-        <Cartao rotulo="Terceiro avaliador" valor={textoPercentual(metricaPublicavel(av3?.percentual_com_av3, av3?.n_pop_all, limiar))} />
+        <Cartao rotulo="Concordância entre corretores" valor={iccValor === null ? 'não disponível' : formatarIndice(iccValor)} detalhe="1 é concordância total." />
+        <Cartao rotulo="Terceiro corretor" valor={textoPercentual(metricaPublicavel(av3?.percentual_com_av3, av3?.n_pop_all, limiar))} />
         <Cartao rotulo="Banca" valor={textoPercentual(metricaPublicavel(banca?.percentual_com_av4, banca?.n_pop_all, limiar))} />
         <Cartao
-          rotulo="Situação divergente"
+          rotulo="Situação diferente"
           valor={textoPercentual(metricaPublicavel(status?.percentual_divergencia_pop_evaluator, status?.n_pop_evaluator, limiar))}
-          detalhe="A matriz de situação fica indisponível."
         />
       </div>
       <div className="grade-2">
-        <Grafico identificador="diferenca-total" titulo="Como se distribui a diferença entre os dois corretores?" figura={hist.figura} nota={hist.omitidos ? 'Faixas com contagem suprimida ficam indisponíveis.' : 'A população é a das duas notas de corretor, não a das redações válidas.'} />
+        <Grafico identificador="diferenca-total" titulo="Como se distribui a diferença entre os dois corretores?" figura={hist.figura} nota={hist.omitidos ? 'Faixas com poucas avaliações não aparecem.' : 'Conta as redações com as duas notas de corretor.'} />
         <Grafico identificador="diferenca-competencia" titulo="Em qual competência a diferença média é maior?" figura={barras} />
       </div>
-      <Grafico identificador="kappa" titulo="Qual é o kappa de cada competência?" figura={kappas} />
+      <Grafico identificador="kappa" titulo="Quão parecida é a nota dos dois corretores?" figura={kappas} nota="1 é concordância total. 0 é concordância ao acaso." />
       {divergencia ? (
         <Grafico identificador="perfis-divergencia" titulo="Como os perfis de divergência se separam?" figura={divergencia} nota={notaAmostra(perfis?.n_amostra_ml_evaluator)} />
       ) : (
-        <Grafico identificador="perfis-divergencia" titulo="Como os perfis de divergência se separam?" figura={null} nota="Este recorte não tem perfis publicados." />
+        <Grafico identificador="perfis-divergencia" titulo="Como os perfis de divergência se separam?" figura={null} nota="Este recorte não tem perfis." />
       )}
       <section className="painel" data-visual="atipicos">
         <h2>Quantas avaliações da amostra foram sinalizadas como atípicas?</h2>
         {atipicos?.sinalizacao_suprimida ? (
-          <p className="indisponivel">indisponível</p>
+          <p className="indisponivel">não disponível</p>
         ) : (
           <div className="cartoes">
             <Cartao rotulo="Sinalizadas na amostra" valor={textoContagem(contagemPublicavel(atipicos?.n_sinalizados_auto, limiar, atipicos))} />
@@ -82,7 +75,7 @@ export default function Avaliadores() {
           </div>
         )}
         <p className="nota">
-          Amostra de {numero(atipicos?.n_amostra_ml_evaluator) === null ? 'tamanho indisponível' : formatarInteiro(numero(atipicos?.n_amostra_ml_evaluator) ?? 0)}. Atípico é um padrão menos frequente na amostra, não um erro nem uma pessoa.
+          Amostra de {numero(atipicos?.n_amostra_ml_evaluator) === null ? 'tamanho não disponível' : formatarInteiro(numero(atipicos?.n_amostra_ml_evaluator) ?? 0)}. Atípico é um padrão menos frequente, não um erro nem uma pessoa.
         </p>
       </section>
     </div>
@@ -101,19 +94,19 @@ function fatia(doc: Record<string, unknown>, todos: boolean, uf: string, anual: 
 }
 
 function textoNota(valor: number | null): string {
-  return valor === null ? 'indisponível' : formatarNota(valor);
+  return valor === null ? 'não disponível' : formatarNota(valor);
 }
 function textoPercentual(valor: number | null): string {
-  return valor === null ? 'indisponível' : formatarPercentual(valor);
+  return valor === null ? 'não disponível' : formatarPercentual(valor);
 }
 function textoContagem(valor: number | null): string {
-  return valor === null ? 'indisponível' : formatarInteiro(valor);
+  return valor === null ? 'não disponível' : formatarInteiro(valor);
 }
 
 function notaAmostra(valor: unknown): string {
   const n = numero(valor);
-  const tamanho = n === null ? 'tamanho indisponível' : `${formatarInteiro(n)} avaliações`;
-  return `Amostra de ${tamanho}. Os percentuais da amostra não são os da população.`;
+  const tamanho = n === null ? 'tamanho não disponível' : `${formatarInteiro(n)} avaliações`;
+  return `Amostra de ${tamanho}. Os percentuais da amostra não são os de todas as redações.`;
 }
 
 function histograma(itens: Hist[] | undefined, limiar: number): { figura: Figura | null; omitidos: boolean } {
@@ -172,7 +165,7 @@ function barrasKappa(mapa: Record<string, Kappa> | undefined, limiar: number): F
   return {
     data: [{ type: 'bar', x: linhas.map((item) => item.codigo), y: linhas.map((item) => item.valor), marker: { color: COR }, hovertemplate: '%{x}: %{y:.3f}<extra></extra>' }],
     altura: 320,
-    layout: { yaxis: { title: { text: 'Kappa quadrático' }, range: [0, 1] } },
+    layout: { yaxis: { title: { text: 'Concordância' }, range: [0, 1] } },
   };
 }
 

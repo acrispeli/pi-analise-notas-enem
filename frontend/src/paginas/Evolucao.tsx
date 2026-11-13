@@ -1,5 +1,5 @@
-import { COR, Grafico, type Figura } from '../grafico.tsx';
-import { Estado } from '../layout.tsx';
+import { COR, CORES, Grafico, type Figura } from '../grafico.tsx';
+import { Aviso, Estado } from '../layout.tsx';
 import { useFiltros } from '../filtros.tsx';
 import { useDados } from '../useDados.ts';
 import { contagemPublicavel, metricaPublicavel } from '../lib/supressao.ts';
@@ -37,11 +37,15 @@ type SerieUf = {
   }[]>;
 };
 
+type ExtraLinha = { ano?: number; competencia?: string; cluster_referencia?: string; status?: string; media?: number; n_validas?: number; frequencia_desconto?: number; n_near?: number; percentual_discrepancia_confirmada?: number; n_pareadas?: number; percentual_amostra?: number; n_amostra?: number; alerta?: string };
+type ExtraEvolucao = { competencias?: { results?: ExtraLinha[] }; quase?: { results?: ExtraLinha[] }; divergencia?: { results?: ExtraLinha[] }; perfis?: { results?: ExtraLinha[] } };
+
 export default function Evolucao() {
   const { ano, uf, limiar } = useFiltros();
   const brasil = uf === 'BR';
   const temporal = useDados<Temporal>(brasil ? '/data/temporal.json' : null);
   const serie = useDados<SerieUf>(brasil ? null : '/data/serie-uf.json');
+  const extra = useDados<ExtraEvolucao>('/data/extra/evolucao.json');
   const fonte = brasil ? temporal : serie;
   if (fonte.carregando || fonte.erro || !fonte.dados) return <Estado carregando={fonte.carregando} erro={fonte.erro} />;
 
@@ -51,7 +55,7 @@ export default function Evolucao() {
     return (
       <div>
         <h1>Evolução</h1>
-        <p className="indisponivel">indisponível</p>
+        <p className="indisponivel">não disponível</p>
       </div>
     );
   }
@@ -59,15 +63,72 @@ export default function Evolucao() {
   return (
     <div>
       <h1>Evolução</h1>
-      <p className="nota">A série usa o valor já publicado de cada edição. O ano selecionado fica em destaque. Não há média dos anos nesta tela.</p>
+      <p className="nota">Cada ponto é o valor daquele ano. O ano escolhido fica em destaque.</p>
       <div className="grade-2">
         <Grafico identificador="serie-validas" titulo="Qual foi a parcela de redações válidas em cada edição?" figura={linha(pontos, destaque, (ponto) => metricaPublicavel(ponto.percentual_validas, ponto.n_validas, limiar), 'Percentual', [0, 100])} />
         <Grafico identificador="serie-notas" titulo="Como evoluíram a média e a mediana?" figura={duasLinhas(pontos, destaque, limiar)} />
         <Grafico identificador="serie-desvio" titulo="Como evoluiu o desvio-padrão?" figura={linha(pontos, destaque, (ponto) => metricaPublicavel(ponto.std_score, ponto.n_desvio, limiar), 'Desvio-padrão')} />
         <Grafico identificador="serie-mil" titulo="Quantas redações chegaram a 1.000 pontos?" figura={linhaMil(pontos, destaque, limiar)} />
       </div>
+      {brasil ? (
+        <SeriesNacionais extra={extra.dados} destaque={destaque} limiar={limiar} carregando={extra.carregando} erro={extra.erro} />
+      ) : (
+        <Aviso>Estas séries são do Brasil. No estado, ficam as quatro séries de cima.</Aviso>
+      )}
     </div>
   );
+}
+
+function SeriesNacionais({ extra, destaque, limiar, carregando, erro }: { extra: ExtraEvolucao | null; destaque: number | null; limiar: number; carregando: boolean; erro: boolean }) {
+  if (carregando) return <Estado carregando erro={false} />;
+  if (erro || !extra) {
+    return <Grafico identificador="serie-competencias" titulo="Como evoluiu a média de cada competência?" figura={null} />;
+  }
+  const alerta = extra.divergencia?.results?.find((item) => item.alerta)?.alerta;
+  return (
+    <>
+      <Grafico identificador="serie-competencias" titulo="Como evoluiu a média de cada competência?" figura={seriePorGrupo(extra.competencias?.results, 'competencia', 'media', 'n_validas', limiar, destaque, [0, 200])} nota="Brasil. O ano escolhido fica em destaque." />
+      <Grafico identificador="serie-quase" titulo="Com que frequência cada competência recebe desconto nas notas próximas de 1.000?" figura={seriePorGrupo(extra.quase?.results, 'competencia', 'frequencia_desconto', 'n_near', limiar, destaque, [0, 100], true)} nota="Percentual de redações com desconto naquela competência." />
+      <Grafico identificador="serie-divergencia" titulo="Como evoluiu a parcela de redações com discrepância?" figura={serieUnica(extra.divergencia?.results, 'percentual_discrepancia_confirmada', 'n_pareadas', limiar, destaque, [0, 100])} nota={alerta ? 'A regra é a do edital de 2024, usada em todos os anos.' : undefined} />
+      <Grafico identificador="serie-perfis" titulo="Como mudou a participação de cada perfil?" figura={seriePorGrupo(extra.perfis?.results, 'cluster_referencia', 'percentual_amostra', 'n_amostra', limiar, destaque, [0, 100])} nota="Amostra. Estes perfis são os mesmos ao longo dos anos e não são os grupos da página Perfis." />
+    </>
+  );
+}
+
+function serieUnica(linhas: ExtraLinha[] | undefined, campo: keyof ExtraLinha, denominador: keyof ExtraLinha, limiar: number, destaque: number | null, intervalo?: [number, number]): Figura | null {
+  const pontos = (linhas ?? []).filter((item) => item.ano && item.status !== 'nao_aplicavel');
+  if (!pontos.length) return null;
+  const anos = pontos.map((item) => item.ano as number);
+  const y = pontos.map((item) => metricaPublicavel(item[campo], item[denominador], limiar, item));
+  if (y.every((valor) => valor === null)) return null;
+  return {
+    data: [{ type: 'scatter', mode: 'lines+markers', x: anos.map(String), y, connectgaps: false, line: { color: COR, width: 2 }, marker: { size: 9, color: corMarcador(anos, destaque, COR) }, hovertemplate: '%{x}<br>%{y:.1f}<extra></extra>' }],
+    altura: 340,
+    layout: { yaxis: { title: { text: 'Percentual' }, range: intervalo }, xaxis: { title: { text: 'Ano' } } },
+  };
+}
+
+function seriePorGrupo(linhas: ExtraLinha[] | undefined, grupo: keyof ExtraLinha, campo: keyof ExtraLinha, denominador: keyof ExtraLinha, limiar: number, destaque: number | null, intervalo?: [number, number], taxa?: boolean): Figura | null {
+  const pontos = (linhas ?? []).filter((item) => item.ano && item[grupo] && item.status !== 'nao_aplicavel');
+  const nomes = [...new Set(pontos.map((item) => String(item[grupo])))];
+  if (!nomes.length) return null;
+  const anos = [...new Set(pontos.map((item) => item.ano as number))].sort((a, b) => a - b);
+  const data = nomes.map((nome, indice) => {
+    const cor = CORES[(indice + 4) % CORES.length];
+    const y = anos.map((anoLinha) => {
+      const item = pontos.find((linha) => linha.ano === anoLinha && String(linha[grupo]) === nome);
+      if (!item) return null;
+      const valor = metricaPublicavel(item[campo], item[denominador], limiar, item);
+      return taxa && valor !== null ? valor * 100 : valor;
+    });
+    return { type: 'scatter', mode: 'lines+markers', name: nome, x: anos.map(String), y, connectgaps: false, line: { color: cor, width: 2 }, marker: { size: 8, color: corMarcador(anos, destaque, cor) }, hovertemplate: '%{fullData.name}<br>%{x}: %{y:.1f}<extra></extra>' };
+  });
+  if (data.every((serieLinha) => (serieLinha.y as (number | null)[]).every((valor) => valor === null))) return null;
+  return {
+    data,
+    altura: 380,
+    layout: { yaxis: { title: { text: taxa || intervalo?.[1] === 100 ? 'Percentual' : 'Nota média' }, range: intervalo }, xaxis: { title: { text: 'Ano' } }, margin: { b: 96 } },
+  };
 }
 
 function pontosBrasil(doc: Temporal | null): Ponto[] {

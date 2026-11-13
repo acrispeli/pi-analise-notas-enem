@@ -109,6 +109,44 @@ fs.writeFileSync(
   }),
 );
 
+const extraDir = path.join(destino, 'extra');
+fs.mkdirSync(extraDir, { recursive: true });
+
+function indicadorPublicado(nome) {
+  const arquivo = path.join(origem, nome);
+  if (!fs.existsSync(arquivo)) {
+    console.error('indicador ausente:', nome);
+    process.exit(1);
+  }
+  const doc = JSON.parse(fs.readFileSync(arquivo, 'utf8'));
+  return {
+    indicator_id: doc.indicator_id,
+    status: doc.status,
+    review: doc.review,
+    results: doc.results,
+  };
+}
+
+fs.writeFileSync(
+  path.join(extraDir, 'evolucao.json'),
+  JSON.stringify({
+    competencias: indicadorPublicado('IND_065_evolucao_competencias.json'),
+    quase: indicadorPublicado('IND_066_evolucao_quase_1000.json'),
+    divergencia: indicadorPublicado('IND_067_evolucao_divergencias.json'),
+    perfis: indicadorPublicado('IND_068_evolucao_perfis_socioeconomicos.json'),
+  }),
+);
+fs.writeFileSync(
+  path.join(extraDir, 'perfis.json'),
+  JSON.stringify({
+    nota: indicadorPublicado('IND_055_perfil_socio_nota.json'),
+    competencias: indicadorPublicado('IND_056_perfil_socio_competencias.json'),
+    alto: indicadorPublicado('IND_057_perfil_socio_alto_desempenho.json'),
+    perdas: indicadorPublicado('IND_058_perfil_socio_perdas.json'),
+    divergencia: indicadorPublicado('IND_059_perfil_socio_divergencia.json'),
+  }),
+);
+
 const doc2024 = dashboards.get(2024);
 const doc2025 = dashboards.get(2025);
 const chaves2025 = Object.keys(doc2025.pages.socioeconomic);
@@ -121,7 +159,7 @@ const relatorio = {
   serie_uf: Object.keys(serie).length,
   anos_por_uf_ac: serie.AC?.length ?? 0,
   socio_2025: chaves2025,
-  ml_2024: doc2024.pages.ml,
+  ml_2024: doc2024.pages.ml.status,
   avaliadores_2024: doc2024.pages.evaluators.status,
   alto_desempenho_2024: doc2024.pages.high_performance.status,
   limiar_minimo: limiares,

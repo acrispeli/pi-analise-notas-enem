@@ -37,11 +37,11 @@ export default function Metodologia() {
   const blocos = indicadores(pedido.dados);
   return (
     <div>
-      <h1>Metodologia</h1>
+      <h1>Método</h1>
       {ano === 'todos' ? (
-        <p className="nota">O texto abaixo é o publicado para 2024. Cada edição tem o próprio arquivo-fonte. Selecione o ano para ler o texto daquela edição.</p>
+        <p className="nota">O texto é o de 2024. Cada ano tem o próprio texto. Escolha o ano para ler o daquela edição.</p>
       ) : (
-        <p className="nota">Texto publicado para {edicao}.</p>
+        <p className="nota">Como os números de {edicao} foram calculados.</p>
       )}
       {blocos.map((bloco) => (
         <article key={bloco.id} className="metodo">
@@ -56,7 +56,7 @@ export default function Metodologia() {
               ))}
             </dl>
           ) : (
-            <p className="indisponivel">indisponível</p>
+            <p className="indisponivel">não disponível</p>
           )}
         </article>
       ))}

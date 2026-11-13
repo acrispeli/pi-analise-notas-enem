@@ -73,14 +73,11 @@ export function figuraHexbin(recorte: RecorteHex | undefined, limiar: number): F
 export function notaHex(recorte: RecorteHex | undefined): string {
   if (!recorte) return '';
   const partes = [
-    'Cada hexágono já vem agregado. Não há ponto de participante.',
-    'Coordenadas de anos ou UFs diferentes não entram neste gráfico.',
+    'Cada área junta várias redações. Não há ponto de uma pessoa.',
+    'Anos e estados diferentes não entram no mesmo mapa.',
   ];
-  if (typeof recorte.n_hexagonos_suprimidos === 'number') {
-    partes.push(`${formatarInteiro(recorte.n_hexagonos_suprimidos)} hexágonos omitidos na origem.`);
-  }
-  if (recorte.status_privacidade && recorte.status_privacidade !== 'aprovado_publicacao') {
-    partes.push('A revisão complementar de privacidade deste mapa continua pendente.');
+  if (typeof recorte.n_hexagonos_suprimidos === 'number' && recorte.n_hexagonos_suprimidos > 0) {
+    partes.push(`${formatarInteiro(recorte.n_hexagonos_suprimidos)} áreas com poucas redações ficam de fora.`);
   }
   return partes.join(' ');
 }
