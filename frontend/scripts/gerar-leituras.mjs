@@ -61,8 +61,9 @@ function extrairGuias(texto) {
 function extrairMapa(texto, nome) {
   const inicio = texto.indexOf(nome + ' = {');
   if (inicio < 0) throw new Error('Mapa não encontrado: ' + nome);
-  const fim = texto.indexOf('\n}', inicio);
-  if (fim < 0) throw new Error('Mapa sem fechamento: ' + nome);
+  const fechamentoEmLinha = texto.indexOf('\n}', inicio);
+  const fim = fechamentoEmLinha >= 0 ? fechamentoEmLinha : texto.lastIndexOf('}');
+  if (fim < inicio) throw new Error('Mapa sem fechamento: ' + nome);
   const trecho = texto.slice(inicio, fim);
   const saida = {};
   const re = /(\d+):\s*('(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*")/g;
