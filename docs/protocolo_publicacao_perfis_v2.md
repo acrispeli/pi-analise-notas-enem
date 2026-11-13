@@ -1,30 +1,30 @@
 # Protocolo de divulgação dos perfis materiais V2 (IND-055–059 e IND-068)
 
-**Decisão:** autorização de apresentação pelo responsável pelo Projeto Integrador IV em 13/11/2026.  
-**Escopo:** somente gráficos e tabelas agregados na interface pública Streamlit, com supressão de células pequenas.  
-**Natureza da aprovação:** autorização editorial expressa pelo responsável para o painel público, sem alegar certificação externa. Não constitui auditoria exaustiva de privacidade, publicação irrestrita de JSONs nem autorização para divulgar microdados.
+**Decisões editoriais:** apresentação pública autorizada pelo responsável em 13/11/2026 e retirada da supressão automática de contagens inferiores a 30 na mesma data.  
+**Escopo:** gráficos e tabelas agregados dos seis indicadores M1–M3 no Streamlit público.  
+**Limites:** não configura certificação acadêmica externa, auditoria integral de privacidade nem autorização de divulgação de microdados identificáveis.
 
-## Indicadores
+## Indicadores e origem
 
-Os seis indicadores permanecem no catálogo final de 68: IND-055, IND-056, IND-057, IND-058, IND-059 e IND-068. O modelo fixo de referência é `V2_MCA10_KMeans3_e31f55489e16f296`. Não comparar os grupos materiais M1–M3 com o IND-054 (agrupamento original).
+Os IND-055–059 e IND-068 permanecem entre os 68 indicadores do projeto. O modelo de referência é `V2_MCA10_KMeans3_e31f55489e16f296`; ele não é equivalente ao agrupamento original do IND-054.
 
-O modelo descreve **amostras**, não classes sociais oficiais nem estimativas censitárias. Para 2025, o IND-068 apresenta perfis da amostra, mas os indicadores de desempenho 055–059 não possuem vínculo individual validado com as notas e não devem preencher resultados ausentes.
+Os três perfis M1–M3 descrevem **amostras**, não classes sociais oficiais, distribuição censitária ou diagnósticos individuais. Para 2025, o IND-068 tem composição dos perfis, mas os indicadores 055–059 não possuem ligação de notas validada; ausências permanecem ausências.
 
-## Restrições preservadas na publicação
+## Regra de divulgação atual
 
-- Os dados originais permanecem nos JSONs para rastreabilidade. A interface pública constrói uma cópia filtrada **antes** de gerar gráficos, tabelas ou resumos pedagógicos.
-- A função `preparar_doc_publico_v2` exige `publicacao_autorizada: true` e o modelo V2 correto; caso contrário, o resultado não é exibido.
-- São omitidos registros com **qualquer contagem `n` ou `n_*` abaixo de 30**, inclusive contagens iguais a zero. Na análise condicional dos IND-057/058, o critério considera explicitamente tanto denominadores quanto numeradores.
-- Na verificação dos JSONs de 13/11/2026, o IND-057 possui **6 de 18 registros aplicáveis** com contagens pequenas; o IND-058 possui **34 de 90**. Nos campos de contagem examinados dos IND-055/056/059/068, não foram encontradas células abaixo de 30.
-- **Não se substitui dado ausente por zero** e não se recalculam médias, medianas ou percentuais a partir das linhas omitidas.
-- A proteção é aplicada tanto em `painel_paginas_contrato_68.py` quanto em `painel_catalogo_68.py`. Os gráficos podem apresentar lacunas ou não ter todos os perfis/competências em determinado recorte.
-- O aviso na interface informa a **autorização editorial do responsável**, a natureza amostral dos perfis e a proteção das células pequenas. Não apresenta certificação acadêmica que não tenha sido demonstrada.
+- A função `preparar_doc_publico_v2` exige `publicacao_autorizada: true` e a versão V2 correta. Não altera os JSONs estatísticos e não fabrica dados.
+- **Não ocorre supressão automática pelo número de registros da célula** nos seis indicadores V2. Resultados de grupos pequenos são apresentados quando a métrica está definida.
+- Para o IND-057 foram encontrados **6 de 18 registros aplicáveis** com alguma contagem inferior a 30; para o IND-058, **34 de 90**. Esses 40 registros deixam de ser omitidos por tamanho. O limite de 30 passa a funcionar como **aviso sobre estabilidade estatística**, não como restrição de visibilidade.
+- Quando não há denominador suficiente para calcular uma métrica, o valor segue como **ausente** (`null`) e não é apresentado como zero. Exemplo: grupos do IND-058 com `n_near_cluster = 0`.
+- O Streamlit mostra um aviso quando algum grupo tem contagem pequena. Isso é relevante para a interpretação dos percentuais e médias.
+- As duas rotas de visualização, `painel_paginas_contrato_68.py` e `painel_catalogo_68.py`, usam o mesmo preparo dos dados.
+- A autorização editorial é registrada nos JSONs e no histórico Git; não pressupõe validação científica independente.
 
-## Proteções e verificações
+## Avaliação de risco e apresentação
 
-A inspeção do conteúdo dos seis JSONs e a aplicação de uma regra de supressão simples **não garantem anonimização completa** nem avaliam todas as possibilidades de inferência por comparação entre tabelas. Devem ser evitadas rotas públicas de download dos arquivos completos sem sanitização.
+A retirada da regra de supressão atende à decisão do responsável pelo projeto. Expor contagens pequenas aumenta a granularidade da informação pública e pode tornar mais frágeis as estimativas e a privacidade contextual. Os arquivos inspecionados apresentam dados agregados por edição e perfil, sem campos diretos de identificação nas linhas examinadas. Isso **não comprova ausência de risco de inferência**. Evite acrescentar campos pessoais ou disponibilizar microdados em downloads públicos.
 
-Antes de colocar o link público em circulação, executar:
+## Verificação antes de divulgar
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_publicacao_segura_v2.py" -v
@@ -32,6 +32,6 @@ Antes de colocar o link público em circulação, executar:
 .\.venv\Scripts\python.exe .\auditar_streamlit_entrega.py
 ```
 
-Também é necessário inspecionar na interface os IND-055, 056, 057, 058, 059 e 068 em **Todos os anos**, em **2024**, em **2025** e em uma **UF**. O link público não deve expor os CSVs/JSONs originais com contagens suprimidas pela interface.
+Visualmente, conferir os seis indicadores em “Todos os anos”, 2024, 2025 e com uma UF selecionada, preservando a informação de ausência de cruzamentos não calculados.
 
-**Controle de versão:** alterações apenas na branch `fix/qualidade-visual-streamlit`, sem alterar `main`.
+**Controle de versão:** alterações limitadas à branch `fix/qualidade-visual-streamlit` até a decisão sobre integração com `main`.
