@@ -103,3 +103,11 @@ A tolerância configurada é maxDiffPixelRatio = 0.02 (2% de pixels diferentes).
 5. O site externo publicado e a versão do PR não foram visualmente medidos por esta conversa até que o primeiro relatório do Playwright seja concluído.
 
 **Não realizar merge do PR #6 apenas porque o código dos testes foi adicionado.** Conferir a primeira execução do workflow e os screenshots antes da publicação.
+
+## Diagnóstico da implantação Cloudflare Pages (13/11/2026)
+
+O commit `d9c881b` passou no build do Vite e publicou 73 ativos estáticos, mas a implantação de prévia terminou com a mensagem do serviço: `Failed to publish your Function. Got error: Unknown internal error occurred.` A opção `Retry deployment` no painel também retornou um erro interno, sem iniciar uma implantação completa.
+
+Trata-se de uma falha **posterior ao build**; por isso, não é evidência de erro de TypeScript, Vite, JSON ou Playwright. O projeto não possui pasta `frontend/functions/` e o log informa `No functions dir at /functions found`. Um novo commit de documentação nesta branch pode solicitar outra implantação pelo GitHub integrado ao Cloudflare Pages, mantendo a `main` intacta.
+
+Se persistir, conferir o status da verificação Cloudflare Pages e contatar o suporte informando o projeto `enem-redacao-univesp-pi4`, o identificador da implantação `7515b8da-0c1b-4040-a656-644d62f7107e` e a mensagem final de erro. Não criar Pages Functions nem alterar o build para contornar uma falha interna ainda não diagnosticada.
