@@ -443,6 +443,22 @@ def _itens_ausentes(texto: str, codigo: str, titulo: str,
             if valor and _normalizar_validacao(valor) not in normal]
 
 
+def reabrir_leitura_pedagogica(page) -> bool:
+    """Reabre somente o guia específico se um rerun o recolapsou.
+
+    Mantém a verificação de título, pergunta e texto do indicador; não
+    considera o painel pronto se o guia continuar ausente.
+    """
+    fechados = page.locator(
+        '[data-testid="stMain"] [data-testid="stExpander"] '
+        'details:not([open]) summary'
+    ).filter(has_text='Entenda este resultado · explicação simples')
+    if fechados.count() == 0:
+        return False
+    fechados.first.click(timeout=6000)
+    return True
+
+
 def esperar_indicador_estavel(page, codigo: str, titulo: str = '',
                               pergunta: str = '', pista: str = '',
                               timeout_ms: int = 120000) -> str:
@@ -472,6 +488,19 @@ def esperar_indicador_estavel(page, codigo: str, titulo: str = '',
             cabecalho = page.get_by_role('heading', name=esperado).count() > 0
             texto = page.locator('[data-testid="stMain"]').inner_text(timeout=3000)
             ausentes = _itens_ausentes(texto, codigo, titulo, pergunta, pista)
+            # A abertura feita antes da impressão pode ser desfeita por um
+            # rerun. Se isso ocorreu, recupere o expander e confira novamente
+            # o texto específico; nunca dispense essa verificação.
+            if (estado in (None, '', 'notRunning', 'idle') and
+                    esqueletos == 0 and cabecalho and
+                    'leitura pedagógica' in ausentes and
+                    reabrir_leitura_pedagogica(page)):
+                print(f'  {codigo}: leitura pedagógica recolapsada; reabrindo o painel.',
+                      flush=True)
+                anterior = None
+                iguais = 0
+                page.wait_for_timeout(350)
+                continue
             pronto = (estado in (None, '', 'notRunning', 'idle') and
                       esqueletos == 0 and cabecalho and not ausentes)
             atual = _normalizar_validacao(texto) if pronto else None
@@ -490,7 +519,11 @@ def esperar_indicador_estavel(page, codigo: str, titulo: str = '',
             iguais = 0
             diagnostico = str(exc)
         page.wait_for_timeout(500)
-    raise RuntimeError(f'Captura bloqueada: {codigo} não estabilizou. {diagnostico}')
+    raise RuntimeError(
+        f'Captura bloqueada: {codigo} não estabilizou. {diagnostico}. '
+        'Se o cabeçalho estiver correto e a explicação faltar, confira se '
+        'o painel "Entenda este resultado" foi renderizado e se há aviso '
+        'de fonte ausente; a captura não foi aprovada.')
 
 
 def imprimir_pdf(page, destino: Path, papel: str, paisagem: bool, espera: int,
