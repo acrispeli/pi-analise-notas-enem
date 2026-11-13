@@ -52,6 +52,17 @@ class TesteAuditoriaEntrega(unittest.TestCase):
         self.assertTrue(linha["pendencia_catalogo"])
         self.assertIn("rascunho", linha["observacoes"])
 
+    def test_status_draft_na_raiz_do_json_v2_tambem_e_contado(self):
+        self.fonte(json.dumps({
+            "indicator_id": "IND-002",
+            "status": "draft",
+            "publicacao_autorizada": False,
+        }))
+        linha = auditar_indicador(self.raiz, self.indicador)
+        self.assertEqual(linha["status_dados"], "draft")
+        self.assertEqual(linha["publicacao_autorizada"], "false")
+        self.assertEqual(linha["estado"], "OK")
+
     def test_nao_autorizado_na_fonte_e_sinalizado(self):
         self.fonte(json.dumps({
             "indicator_id": "IND-002", "publicacao_autorizada": False,
