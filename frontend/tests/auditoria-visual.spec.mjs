@@ -230,7 +230,7 @@ test('página Método oferece pesquisa por indicador', async ({ page }) => {
   await expect(page.locator('.metodo')).toHaveAttribute('open', '');
 });
 
-test('abertura sem parâmetros apresenta todas as edições e evolução anual', async ({ page }) => {
+test('abertura sem parâmetros apresenta todas as edições e evolução anual', async ({ page }, testInfo) => {
   await page.goto('/visao-geral', { waitUntil: 'domcontentloaded' });
   await expect(page.locator('[data-filtro="ano"]')).toHaveValue('todos');
   await expect(page.locator('[data-filtro="uf"]')).toHaveValue('BR');
@@ -244,6 +244,13 @@ test('abertura sem parâmetros apresenta todas as edições e evolução anual',
   expect(serie.anos).toContain('2019');
   expect(serie.anos).toContain('2025');
   expect(serie.valores.filter((v) => typeof v === 'number').length).toBeGreaterThan(1);
+  const layout = await medirLayout(page);
+  expect(layout.excessoHorizontalPx).toBeLessThanOrEqual(4);
+  expect(layout.elementosForaDaTela).toEqual([]);
+  await testInfo.attach('captura-visao-historica-' + testInfo.project.name, {
+    body: await page.screenshot({ fullPage: true, animations: 'disabled' }),
+    contentType: 'image/png',
+  });
 });
 
 test('evolução da abertura respeita a UF selecionada', async ({ page }) => {
@@ -284,7 +291,7 @@ test('questionário preserva diferença semântica da pergunta Q006 entre 2023 e
   await expect(page.getByTestId('enunciado-questionario')).toContainText('Você possui renda?');
 });
 
-test('questionário no período completo mostra tendência POP_SOCIO sem agregar alternativas', async ({ page }) => {
+test('questionário no período completo mostra tendência POP_SOCIO sem agregar alternativas', async ({ page }, testInfo) => {
   await prepararPagina(page, 'socioeconomico', 'todos', 'BR');
   const painel = page.locator('[data-visual="serie-questionario"]');
   await expect(painel.locator('.js-plotly-plot')).toBeVisible({ timeout: 40_000 });
@@ -297,4 +304,11 @@ test('questionário no período completo mostra tendência POP_SOCIO sem agregar
   expect(serie.anos).toEqual(['2019', '2020', '2021', '2022', '2023', '2024', '2025']);
   expect(serie.valores.filter((v) => typeof v === 'number').length).toBe(7);
   await expect(painel.locator('[data-indicador="IND-040"]')).toBeVisible();
+  const layout = await medirLayout(page);
+  expect(layout.excessoHorizontalPx).toBeLessThanOrEqual(4);
+  expect(layout.elementosForaDaTela).toEqual([]);
+  await testInfo.attach('captura-questionario-historico-' + testInfo.project.name, {
+    body: await page.screenshot({ fullPage: true, animations: 'disabled' }),
+    contentType: 'image/png',
+  });
 });
