@@ -64,6 +64,7 @@ const leiturasGeradas = gerarLeituras(raiz, destino);
 console.log('Leituras pedagógicas geradas:', leiturasGeradas);
 
 const serie = {};
+const serieQuestionario = { nacional: [], ufs: {} };
 for (const ano of anos) {
   const doc = dashboards.get(ano);
   const dir = path.join(destino, String(ano));
@@ -79,6 +80,17 @@ for (const ano of anos) {
     path.join(dir, 'meta.json'),
     JSON.stringify({ meta: doc.meta, filters: doc.filters, quality: doc.quality }),
   );
+
+  // IND-040: contagens de POP_SOCIO por edição, sem unir respostas de questões distintas.
+  const perfilSocio = doc.pages.socioeconomic?.profile;
+  if (perfilSocio?.brasil?.n_participacoes !== undefined) {
+    serieQuestionario.nacional.push({ ano, n_participacoes: perfilSocio.brasil.n_participacoes });
+  }
+  for (const estado of perfilSocio?.ufs ?? []) {
+    if (!estado.uf || estado.n_participacoes === undefined) continue;
+    if (!serieQuestionario.ufs[estado.uf]) serieQuestionario.ufs[estado.uf] = [];
+    serieQuestionario.ufs[estado.uf].push({ ano, n_participacoes: estado.n_participacoes });
+  }
 
   const visao = doc.pages.overview;
   const por001 = new Map(visao.ind001.by_uf.map((item) => [item.uf, item]));
@@ -100,6 +112,15 @@ for (const ano of anos) {
     });
   }
 }
+
+fs.writeFileSync(
+  path.join(destino, 'serie-questionario.json'),
+  JSON.stringify({
+    populacao: 'POP_SOCIO',
+    observacao: 'Contagens anuais de participações com questionário. Não soma alternativas de perguntas com significado variável.',
+    ...serieQuestionario,
+  }),
+);
 
 fs.writeFileSync(
   path.join(destino, 'temporal.json'),
