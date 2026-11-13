@@ -425,13 +425,43 @@ html, body, #root { margin: 0 !important; padding: 0 !important; }
 """
 
 
-def preparar_impressao_sem_cortes(page) -> dict:
-    """Reajusta o Plotly APOS o CSS de impressão; mantém eixos/legendas visíveis.
+def largura_imprimivel_css(papel: str, paisagem: bool, escala: float) -> int:
+    """Largura em CSS px que realmente cabe no PDF, já descontadas margens.
+
+    Uma figura pode caber no viewport (1560px) e, mesmo assim, ultrapassar
+    a folha A4 impressa. Reserve 48px para bordas e imprecisões de layout.
+    """
+    medidas = {'A4': (210, 297), 'A3': (297, 420)}
+    altura_mm, largura_mm = medidas[papel]
+    if not paisagem:
+        largura_mm = altura_mm
+    return max(400, int((largura_mm - 20) * 96 / 25.4 / escala) - 48)
+
+
+def preparar_impressao_sem_cortes(page, papel: str = 'A4',
+                                 paisagem: bool = True,
+                                 escala: float = 0.80) -> dict:
+    """Ajusta largura de TODO o painel à folha, inclusive Plotly e eixos.
 
     A nota editorial é preservada no rodapé HTML do PDF, não em folha própria.
-    As alterações afetam apenas a sessão Playwright e só enquanto o CSS atua.
+    Os estilos temporários são restaurados após imprimir.
     """
-    return page.evaluate("""async () => {
+    limite_css = largura_imprimivel_css(papel, paisagem, escala)
+    return page.evaluate("""async (limite) => {
+      const bloco = document.querySelector('[data-testid="stMainBlockContainer"]');
+      if (bloco) {
+        if (!bloco.hasAttribute('data-exportador-estilos-originais')) {
+          bloco.setAttribute('data-exportador-estilos-originais', JSON.stringify({
+            width: bloco.style.getPropertyValue('width'),
+            widthPriority: bloco.style.getPropertyPriority('width'),
+            maxWidth: bloco.style.getPropertyValue('max-width'),
+            maxWidthPriority: bloco.style.getPropertyPriority('max-width')
+          }));
+        }
+        bloco.style.setProperty('width', limite + 'px', 'important');
+        bloco.style.setProperty('max-width', limite + 'px', 'important');
+      }
+      await new Promise(resolve => setTimeout(resolve, 180));
       const avisos = [...document.querySelectorAll(
         '[data-testid="stCaptionContainer"], [data-testid="stMarkdownContainer"]')];
       let notas = 0;
@@ -476,8 +506,8 @@ def preparar_impressao_sem_cortes(page) -> dict:
       }
       await new Promise(resolve => setTimeout(resolve, 250));
       return {graficos: graficos.length, ajustados: diagnosticos,
-              notaEditorialNoRodape: notas > 0};
-    }""")
+              larguraPaginaCss: limite, notaEditorialNoRodape: notas > 0};
+    }""", limite_css)
 
 
 def restaurar_impressao(page) -> None:
@@ -489,6 +519,17 @@ def restaurar_impressao(page) -> None:
       }
       for (const el of document.querySelectorAll('[data-exportador-nota-editorial]')) {
         el.removeAttribute('data-exportador-nota-editorial');
+      }
+      for (const bloco of document.querySelectorAll('[data-exportador-estilos-originais]')) {
+        const antes = JSON.parse(bloco.getAttribute('data-exportador-estilos-originais'));
+        for (const [nome, valor, prioridade] of [
+          ['width', antes.width, antes.widthPriority],
+          ['max-width', antes.maxWidth, antes.maxWidthPriority]
+        ]) {
+          if (valor) bloco.style.setProperty(nome, valor, prioridade);
+          else bloco.style.removeProperty(nome);
+        }
+        bloco.removeAttribute('data-exportador-estilos-originais');
       }
       window.dispatchEvent(new Event('resize'));
     }""")
@@ -644,7 +685,8 @@ def imprimir_pdf(page, destino: Path, papel: str, paisagem: bool, espera: int,
     estilo = page.add_style_tag(content=ESTILO_IMPRESSAO)
     try:
         page.wait_for_timeout(350)
-        preparo_pdf = preparar_impressao_sem_cortes(page)
+        preparo_pdf = preparar_impressao_sem_cortes(
+            page, papel=papel, paisagem=paisagem, escala=0.80)
         print('  Preparo de gráficos para impressão: ' + str(preparo_pdf), flush=True)
         altura = page.evaluate("""() => {
             const main=document.querySelector('[data-testid="stMain"]');
@@ -659,7 +701,7 @@ def imprimir_pdf(page, destino: Path, papel: str, paisagem: bool, espera: int,
         page.pdf(
             path=str(destino), format=papel, landscape=paisagem,
             print_background=True, prefer_css_page_size=False,
-            scale=0.85,
+            scale=0.80,
             margin={'top':'12mm','bottom':'14mm','left':'10mm','right':'10mm'},
             display_header_footer=True,
             header_template='<div></div>',
