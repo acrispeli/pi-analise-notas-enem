@@ -466,6 +466,9 @@ def preparar_impressao_sem_cortes(page) -> dict:
         if (disponivel > 100 && largura > disponivel + 5) {
           const fator = Math.min(1, disponivel / largura);
           // zoom reduz também a largura interna do SVG, não apenas a caixa.
+          if (!grafico.hasAttribute('data-exportador-zoom-anterior')) {
+            grafico.setAttribute('data-exportador-zoom-anterior', grafico.style.zoom || '');
+          }
           grafico.style.zoom = String(fator);
           diagnosticos.push({ajuste: fator.toFixed(3),
             antes: Math.round(largura), disponivel: Math.round(disponivel)});
@@ -474,6 +477,20 @@ def preparar_impressao_sem_cortes(page) -> dict:
       await new Promise(resolve => setTimeout(resolve, 250));
       return {graficos: graficos.length, ajustados: diagnosticos,
               notaEditorialNoRodape: notas > 0};
+    }""")
+
+
+def restaurar_impressao(page) -> None:
+    """Evita acumular zoom e ajustes temporários na próxima captura."""
+    page.evaluate("""() => {
+      for (const el of document.querySelectorAll('[data-exportador-zoom-anterior]')) {
+        el.style.zoom = el.getAttribute('data-exportador-zoom-anterior') || '';
+        el.removeAttribute('data-exportador-zoom-anterior');
+      }
+      for (const el of document.querySelectorAll('[data-exportador-nota-editorial]')) {
+        el.removeAttribute('data-exportador-nota-editorial');
+      }
+      window.dispatchEvent(new Event('resize'));
     }""")
 
 
@@ -658,6 +675,10 @@ def imprimir_pdf(page, destino: Path, papel: str, paisagem: bool, espera: int,
         # O CSS de impressao nao pode ocultar a barra lateral na proxima captura.
         try:
             estilo.evaluate("elemento => elemento.remove()")
+        except Exception:
+            pass
+        try:
+            restaurar_impressao(page)
         except Exception:
             pass
     leitor=PdfReader(str(destino), strict=False)
