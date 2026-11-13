@@ -38,12 +38,19 @@ export default function Metodologia() {
 
   const todos = indicadores(pedido.dados);
   const termo = busca.trim().toLocaleLowerCase('pt-BR');
-  const blocos = termo
-    ? todos.filter((bloco) =>
-        bloco.id.toLocaleLowerCase('pt-BR').includes(termo) ||
-        bloco.campos.some(([rotulo, texto]) => (rotulo + ' ' + texto).toLocaleLowerCase('pt-BR').includes(termo))
-      )
-    : todos;
+  // Uma consulta por código exato deve priorizar o próprio indicador,
+  // mesmo que seu código seja citado na descrição de outros indicadores.
+  const exatos = termo
+    ? todos.filter((bloco) => bloco.id.toLocaleLowerCase('pt-BR') === termo)
+    : [];
+  const blocos = !termo
+    ? todos
+    : exatos.length
+      ? exatos
+      : todos.filter((bloco) =>
+          bloco.id.toLocaleLowerCase('pt-BR').includes(termo) ||
+          bloco.campos.some(([rotulo, texto]) => (rotulo + ' ' + texto).toLocaleLowerCase('pt-BR').includes(termo))
+        );
   return (
     <div>
       <h1>Método</h1>
