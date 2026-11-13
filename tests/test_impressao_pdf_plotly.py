@@ -46,6 +46,38 @@ class TestesImpressaoPdf(unittest.TestCase):
         self.assertFalse(ultima_pagina_so_rodape(completo))
         self.assertTrue(grafico_historico_tem_todos_anos(completo, 'IND-002'))
 
+    def test_titulos_atuais_dos_quatro_graficos_historicos(self):
+        class Pagina:
+            def __init__(self, texto):
+                self.texto = texto
+
+            def extract_text(self):
+                return self.texto
+
+        class Leitor:
+            def __init__(self, paginas):
+                self.pages = [Pagina(t) for t in paginas]
+
+        rotulos = '2019 2020 2021 2022 2023 2024 2025'
+        titulos = {
+            'IND-002': 'Evolução histórica · Nota média da redação · pontos (0–1000)',
+            'IND-003': 'Evolução histórica · Mediana da redação · pontos (0–1000)',
+            'IND-004': 'Evolução histórica · Desvio-padrão da nota · pontos',
+            'IND-005': 'Evolução histórica · Intervalo interquartil da nota · pontos',
+        }
+        for codigo, titulo in titulos.items():
+            with self.subTest(indicador=codigo):
+                pdf = Leitor(['Cabeçalho e filtros', titulo + '\\n' + rotulos,
+                              'Leitura pedagógica'])
+                self.assertTrue(grafico_historico_tem_todos_anos(pdf, codigo))
+                # Não basta mencionar o intervalo 2019–2025 em uma legenda:
+                # os rótulos devem estar na página do próprio gráfico.
+                incompleto = Leitor(['2019 2020 2021 2022 2023',
+                                     titulo + '\\n2024 2025'])
+                self.assertFalse(grafico_historico_tem_todos_anos(incompleto, codigo))
+                incompleto = Leitor([titulo + '\\n2019 2020 2021 2022 2023 2024'])
+                self.assertFalse(grafico_historico_tem_todos_anos(incompleto, codigo))
+
     def test_ultimo_ano_permanece_no_pdf_a4(self):
         try:
             from playwright.sync_api import sync_playwright
