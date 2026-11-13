@@ -346,7 +346,7 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
     # Valida publicação e omite células pequenas ANTES de qualquer visual,
     # interpretação ou inspeção de registros no navegador público.
     if escolha in V2:
-        doc, ocultas = preparar_doc_publico_v2(doc, escolha)
+        doc, pequenas = preparar_doc_publico_v2(doc, escolha)
         if doc is None:
             st.warning(
                 'Os resultados deste indicador aguardam liberação explícita '
@@ -354,7 +354,7 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
                 'A descrição metodológica permanece disponível.'
             )
             return
-        mostrar_aviso_publicacao_v2(st, escolha, ocultas)
+        mostrar_aviso_publicacao_v2(st, escolha, pequenas)
     st.caption('Fonte: `'+str(origem.relative_to(raiz))+'`')
     st.caption('Apresentação pública autorizada pelo responsável pelo projeto. Definições e limitações constam da metodologia; histórico das fontes disponível no Git.')
     edicao_da_fonte = doc.get('ano', doc.get('year'))
