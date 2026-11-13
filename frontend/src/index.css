@@ -130,6 +130,26 @@ tr:last-child td { border-bottom: 0; }
 .pagina-nao-encontrada { padding: 2rem; }
 .pagina-nao-encontrada a { color: #17628e; text-decoration: underline; font-weight: 700; }
 
+
+/* Camada editorial: explicações recolhíveis para não sobrecarregar gráficos. */
+.leitura-pedagogica, .leitura-tabela { border-top: 1px solid var(--borda); margin-top: .8rem; padding: .7rem 0 .1rem; min-width: 0; }
+.leitura-pedagogica summary, .leitura-tabela summary { cursor: pointer; color: var(--azul-900); font-size: .87rem; font-weight: 730; padding: .35rem .1rem; }
+.leitura-pedagogica[open] summary, .leitura-tabela[open] summary { margin-bottom: .65rem; }
+.leitura-pedagogica-corpo { color: var(--texto); line-height: 1.65; overflow-wrap: anywhere; }
+.leitura-pedagogica-corpo h3 { font-size: .9rem; color: var(--azul-900); margin: .95rem 0 .22rem; }
+.leitura-pedagogica-corpo p { margin: .25rem 0 .6rem; font-size: .86rem; }
+.leitura-glossario { border-left: 3px solid #a3c5d6; padding-left: .75rem; }
+.leitura-tabela table { table-layout: auto; white-space: normal; }
+.leitura-tabela th, .leitura-tabela td { white-space: normal; overflow-wrap: anywhere; vertical-align: top; }
+.leitura-tabela th:first-child, .leitura-tabela td:first-child { white-space: nowrap; }
+.leitura-tabela td:nth-child(3), .leitura-tabela th:nth-child(3) { text-align: right; }
+.leitura-tabela td:nth-child(4), .leitura-tabela th:nth-child(4) { text-align: right; }
+@media (max-width: 600px) {
+  .leitura-tabela { overflow-x: auto; }
+  .leitura-tabela table { display: table; min-width: 0; font-size: .78rem; }
+  .leitura-tabela th, .leitura-tabela td { padding: .45rem .2rem; }
+}
+
 @media (max-width: 1180px) {
   .app { grid-template-columns: 210px minmax(0, 1fr); }
   .menu { padding: 1.4rem .7rem 1rem; }

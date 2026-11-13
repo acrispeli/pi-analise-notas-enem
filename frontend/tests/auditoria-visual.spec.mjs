@@ -79,6 +79,29 @@ async function medirLayout(page) {
       .map((elemento) => elemento.outerHTML.slice(0, 120))
       .slice(0, 10);
     const figuras = [...document.querySelectorAll('main .js-plotly-plot')].filter(visivel);
+    // Fiscaliza automaticamente todos os gráficos: coordenadas numéricas
+    // precisam de eixos numéricos; códigos/nomes continuam categóricos.
+    const eixosNumericosInvalidos = figuras.flatMap((figura, indice) => {
+      const dados = Array.isArray(figura.data) ? figura.data : [];
+      return ['x', 'y'].flatMap((coordenada) => {
+        let temNumeros = false;
+        let temCategorias = false;
+        for (const trace of dados) {
+          const lista = trace?.[coordenada];
+          if (!Array.isArray(lista)) continue;
+          for (const valor of lista) {
+            if (valor === null || valor === undefined) continue;
+            if (typeof valor === 'number' && Number.isFinite(valor)) temNumeros = true;
+            else temCategorias = true;
+          }
+        }
+        if (!temNumeros || temCategorias) return [];
+        const tipo = figura._fullLayout?.[coordenada + 'axis']?.type;
+        return tipo === 'linear' || tipo === 'log' ? [] : [{
+          grafico: indice + 1, eixo: coordenada, tipoDetectado: tipo ?? 'indefinido',
+        }];
+      });
+    });
     const alturas = figuras.map((e) => arredondar(e.getBoundingClientRect().height));
     return {
       larguraViewport: largura,
@@ -92,6 +115,7 @@ async function medirLayout(page) {
       controlesSemNome,
       titulosH1: document.querySelectorAll('main h1').length,
       graficosPlotly: figuras.length,
+      eixosNumericosInvalidos,
       elementosVisuais: document.querySelectorAll('main [data-visual]').length,
       graficosIndisponiveis: document.querySelectorAll('main [data-visual] .indisponivel').length,
       alturaMinimaGrafico: alturas.length ? Math.min(...alturas) : null,
@@ -144,6 +168,7 @@ test.describe('Medição visual automatizada de 8 seções × 3 tamanhos de tela
       expect(medidas.controlesSemNome, 'controles sem nome acessível').toEqual([]);
       expect(falhasDados, 'erros HTTP ao buscar dados JSON').toEqual([]);
       expect(errosJavaScript, 'erros JavaScript não tratados').toEqual([]);
+      expect(medidas.eixosNumericosInvalidos, 'números renderizados como categorias nos eixos Plotly').toEqual([]);
 
       // Comparação pixel a pixel opcional, habilitada somente após aprovar e
       // versionar uma linha de base feita no mesmo ambiente de renderização.
@@ -228,4 +253,127 @@ test('página Método oferece pesquisa por indicador', async ({ page }) => {
   await expect(page.locator('.metodo')).toHaveCount(1);
   await expect(page.locator('.metodo summary')).toContainText('IND-020');
   await expect(page.locator('.metodo')).toHaveAttribute('open', '');
+});
+
+test('abertura sem parâmetros apresenta todas as edições e evolução anual', async ({ page }, testInfo) => {
+  await page.goto('/visao-geral', { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-filtro="ano"]')).toHaveValue('todos');
+  await expect(page.locator('[data-filtro="uf"]')).toHaveValue('BR');
+  const grafico = page.locator('[data-visual="resumo-evolucao"] .js-plotly-plot');
+  await expect(grafico).toBeVisible({ timeout: 40_000 });
+  await expect(page.locator('[data-visual="resumo-evolucao"]')).toContainText('média consolidada');
+  const serie = await grafico.evaluate((elemento) => {
+    const ponto = elemento.data?.[0];
+    return { anos: [...(ponto?.x ?? [])].map(String), valores: [...(ponto?.y ?? [])] };
+  });
+  expect(serie.anos).toContain('2019');
+  expect(serie.anos).toContain('2025');
+  expect(serie.valores.filter((v) => typeof v === 'number').length).toBeGreaterThan(1);
+  const layout = await medirLayout(page);
+  expect(layout.excessoHorizontalPx).toBeLessThanOrEqual(4);
+  expect(layout.elementosForaDaTela).toEqual([]);
+  await testInfo.attach('captura-visao-historica-' + testInfo.project.name, {
+    body: await page.screenshot({ fullPage: true, animations: 'disabled' }),
+    contentType: 'image/png',
+  });
+});
+
+test('evolução da abertura respeita a UF selecionada', async ({ page }) => {
+  await page.goto('/visao-geral?ano=todos&uf=SP');
+  await expect(page.locator('[data-filtro="uf"]')).toHaveValue('SP');
+  await expect(page.locator('[data-visual="resumo-evolucao"] .js-plotly-plot')).toBeVisible({ timeout: 40_000 });
+  await expect(page.locator('[data-visual="resumo-evolucao"]')).toContainText('Edição do exame');
+});
+
+test('guia dos indicadores explica conceitos e cuidados, sem alterar valores', async ({ page }) => {
+  await prepararPagina(page, 'visao-geral', '2024', 'BR');
+  const guia = page.locator('[data-visual="histograma"] [data-indicador="IND-006"]');
+  await expect(guia.locator('summary')).toBeVisible();
+  await guia.locator('summary').click();
+  await expect(guia).toContainText('O que está sendo medido?');
+  await expect(guia).toContainText('Como interpretar?');
+  await expect(guia).toContainText('Sugestão pedagógica');
+  await expect(guia).toContainText('não demonstram causalidade');
+  await expect(guia).toContainText('2024 · Brasil');
+});
+
+test('questionário 2024 mostra significado real de alternativa e enunciado', async ({ page }) => {
+  await prepararPagina(page, 'socioeconomico', '2024', 'BR');
+  await expect(page.getByTestId('enunciado-questionario')).toContainText('Até que série');
+  const legenda = page.getByTestId('respostas-questionario');
+  await legenda.locator('summary').click();
+  await expect(legenda).toContainText('Nunca estudou.');
+  await expect(legenda.locator('tbody tr').first()).toContainText('A');
+  await expect(legenda.locator('tbody tr').first()).toContainText('Nunca estudou.');
+});
+
+test('questionário preserva diferença semântica da pergunta Q006 entre 2023 e 2024', async ({ page }) => {
+  await prepararPagina(page, 'socioeconomico', '2023', 'BR');
+  await page.locator('[data-visual="perfil"] select').selectOption('Q006');
+  await expect(page.getByTestId('enunciado-questionario')).toContainText('Qual é a renda mensal');
+  await page.locator('[data-filtro="ano"]').selectOption('2024');
+  await expect(page.locator('[data-visual="perfil"] select')).toHaveValue('Q006');
+  await expect(page.getByTestId('enunciado-questionario')).toContainText('Você possui renda?');
+});
+
+test('questionário no período completo mostra tendência POP_SOCIO sem agregar alternativas', async ({ page }, testInfo) => {
+  await prepararPagina(page, 'socioeconomico', 'todos', 'BR');
+  const painel = page.locator('[data-visual="serie-questionario"]');
+  await expect(painel.locator('.js-plotly-plot')).toBeVisible({ timeout: 40_000 });
+  await expect(painel).toContainText('POP_SOCIO');
+  await expect(page.getByText('Para consultar as alternativas e seus significados')).toBeVisible();
+  const serie = await painel.locator('.js-plotly-plot').evaluate((e) => ({
+    anos: Array.from(e.data?.[0]?.x ?? [], String),
+    valores: Array.from(e.data?.[0]?.y ?? []),
+  }));
+  expect(serie.anos).toEqual(['2019', '2020', '2021', '2022', '2023', '2024', '2025']);
+  expect(serie.valores.filter((v) => typeof v === 'number').length).toBe(7);
+  await expect(painel.locator('[data-indicador="IND-040"]')).toBeVisible();
+  const layout = await medirLayout(page);
+  expect(layout.excessoHorizontalPx).toBeLessThanOrEqual(4);
+  expect(layout.elementosForaDaTela).toEqual([]);
+  await testInfo.attach('captura-questionario-historico-' + testInfo.project.name, {
+    body: await page.screenshot({ fullPage: true, animations: 'disabled' }),
+    contentType: 'image/png',
+  });
+});
+
+test('eixos percentuais e de notas são lineares e respeitam distâncias reais', async ({ page }) => {
+  await prepararPagina(page, 'evolucao', 'todos', 'BR');
+  for (const id of ['serie-validas', 'serie-notas', 'serie-desvio', 'serie-mil']) {
+    const grafico = page.locator('[data-visual="' + id + '"] .js-plotly-plot');
+    await expect(grafico).toBeVisible();
+    const resultado = await grafico.evaluate((elemento) => {
+      const eixo = elemento._fullLayout?.yaxis;
+      const coordenadas = (elemento.data ?? []).flatMap((trace) =>
+        Array.from(trace.y ?? []).filter((v) => typeof v === 'number' && Number.isFinite(v))
+      );
+      return {
+        tipo: eixo?.type,
+        quantidade: coordenadas.length,
+        // Em eixos lineares, a diferença visual entre 60 e 70 equivale
+        // à diferença entre 70 e 80. Eixos categóricos falham nessa propriedade.
+        distancia60a70: eixo?.l2p ? Math.abs(eixo.l2p(70) - eixo.l2p(60)) : null,
+        distancia70a80: eixo?.l2p ? Math.abs(eixo.l2p(80) - eixo.l2p(70)) : null,
+      };
+    });
+    expect(resultado.tipo, id + ': o eixo não pode ser categoria').toBe('linear');
+    expect(resultado.quantidade, id + ': série precisa conter números').toBeGreaterThan(0);
+    // Plotly arredonda posições de eixo a centésimos de pixel.
+    // Uma tolerância de 0,1 px não admite distorção perceptível ou eixo categórico.
+    expect(Math.abs(resultado.distancia60a70 - resultado.distancia70a80),
+      id + ': intervalos numéricos iguais devem ocupar distância proporcional').toBeLessThan(0.1);
+  }
+});
+
+test('eixo horizontal de respostas continua categórico enquanto percentual é linear', async ({ page }) => {
+  await prepararPagina(page, 'socioeconomico', '2024', 'BR');
+  const grafico = page.locator('[data-visual="perfil-grafico"] .js-plotly-plot');
+  await expect(grafico).toBeVisible();
+  const tipos = await grafico.evaluate((elemento) => ({
+    eixoCodigos: elemento._fullLayout?.yaxis?.type,
+    eixoPercentual: elemento._fullLayout?.xaxis?.type,
+  }));
+  expect(tipos.eixoCodigos).toBe('category');
+  expect(tipos.eixoPercentual).toBe('linear');
 });

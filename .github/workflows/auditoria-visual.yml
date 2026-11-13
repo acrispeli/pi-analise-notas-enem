@@ -47,7 +47,10 @@ jobs:
       - name: Gerar pacote de produção com dados
         run: npm run build
 
-      - name: Executar testes de 24 telas e interações
+      - name: Validar 68 guias e respostas dos questionários de 2019 a 2025
+        run: node scripts/validar-leituras.mjs
+
+      - name: Executar testes visuais, históricos e pedagógicos nos três tamanhos de tela
         run: npx playwright test --config playwright.visual.config.mjs
 
       - name: Registrar resultados no resumo da execução
