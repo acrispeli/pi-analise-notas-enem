@@ -25,6 +25,18 @@ class TestesCatalogo(unittest.TestCase):
         self.assertEqual(sum(x['pagina']=='socioeconomic' for x in cat['indicadores']), 18)
         self.assertEqual(sum(x['pagina']=='ml' for x in cat['indicadores']), 2)
 
+    def test_avisos_temporais_nao_confundem_notas_com_clusters(self):
+        itens = {item['numero']: item for item in ler_catalogo(RAIZ)['indicadores']}
+        for numero in (64, 65, 66):
+            with self.subTest(numero=numero):
+                texto = itens[numero]['restricoes'].casefold()
+                self.assertNotIn('centroides', texto)
+                self.assertNotIn('clusters não se alinham', texto)
+                self.assertIn('ediç', texto)
+        # O IND-068 efetivamente compara agrupamentos, mas sem equiparar
+        # modelos diferentes ou transformar amostras em população censitária.
+        self.assertIn('cluster', itens[68]['pergunta'].casefold())
+
     def test_metodologia_m1_m3_so_nos_indicadores_que_utilizam_perfis(self):
         # Antes, o expansor era repetido em 23 indicadores de duas seções.
         for numero in (55, 56, 57, 58, 59, 68):
