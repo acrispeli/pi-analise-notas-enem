@@ -31,7 +31,12 @@ class LocatorFalso:
             return 0
         if 'stSkeleton' in self.seletor:
             return self.tela.atual.get('skeletons', 0)
+        if 'details:not([open]) summary' in self.seletor:
+            return 0
         return 1
+
+    def filter(self, **_):
+        return self
 
     def get_attribute(self, _):
         return self.tela.atual.get('estado', 'notRunning')
@@ -66,6 +71,38 @@ class PaginaFalsa:
         self.posicao += 1
 
 
+class ExpanderFalso:
+    def __init__(self, tela):
+        self.tela = tela
+
+    def filter(self, **_):
+        return self
+
+    @property
+    def first(self):
+        return self
+
+    def count(self):
+        return int(not self.tela.aberto)
+
+    def click(self, **_):
+        self.tela.aberto = True
+        self.tela.aberturas += 1
+        self.tela.atual['texto'] = texto_correto()
+
+
+class PaginaComExpanderRecolapsado(PaginaFalsa):
+    def __init__(self, etapas):
+        super().__init__(etapas)
+        self.aberto = False
+        self.aberturas = 0
+
+    def locator(self, seletor):
+        if 'details:not([open]) summary' in seletor:
+            return ExpanderFalso(self)
+        return super().locator(seletor)
+
+
 class TestesSincronizacaoExportador(unittest.TestCase):
     def test_aceita_apenas_pergunta_e_explicacao_corretas(self):
         self.assertEqual(_itens_ausentes(texto_correto(), CODIGO, TITULO, PERGUNTA, PISTA), [])
@@ -89,6 +126,18 @@ class TestesSincronizacaoExportador(unittest.TestCase):
         lido = esperar_indicador_estavel(tela, CODIGO, TITULO, PERGUNTA, PISTA)
         self.assertIn(PISTA, lido)
         self.assertEqual(tela.posicao, 4)
+
+    def test_reabre_guia_recolapsado_depois_do_rerun(self):
+        titulo = f'{CODIGO} · {TITULO}'
+        sem_guia = f'{titulo}\\nPergunta que buscamos responder: {PERGUNTA}'
+        tela = PaginaComExpanderRecolapsado([
+            {'estado': 'notRunning', 'titulo': titulo, 'texto': sem_guia},
+        ])
+        resultado = esperar_indicador_estavel(
+            tela, CODIGO, TITULO, PERGUNTA, PISTA, timeout_ms=6000)
+        self.assertEqual(tela.aberturas, 1)
+        self.assertIn(PISTA, resultado)
+        self.assertIn('O que está sendo contado ou comparado?', resultado)
 
     def test_bloqueia_pagina_desatualizada(self):
         tela = PaginaFalsa([{'titulo': f'{CODIGO} · {TITULO}',
