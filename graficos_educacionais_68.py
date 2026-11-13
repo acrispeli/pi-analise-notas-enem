@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Gráficos explicativos 001–005 e 007, somente a partir dos dashboards anuais.
+"""Gráficos explicativos 001–005 e 007, a partir dos dashboards anuais.
 
-Nenhuma reestimativa de médias/percentis; lê medidas já calculadas.
+Aceita o estado editorial consolidado, sem recalcular médias ou percentis.
 Não substitui os gráficos especializados de outros indicadores.
 """
 from __future__ import annotations
@@ -40,7 +40,9 @@ def _fonte_ano(raiz: Path, ano: int):
             try:
                 d=json.loads(candidate.read_text(encoding='utf-8-sig'))
                 if (d.get('meta',{}).get('year') == ano and
-                        d.get('meta',{}).get('data_status') in ('draft','internal','approved','published') and
+                        d.get('meta',{}).get('data_status') in
+                        ('draft','internal','approved','published',
+                         'consolidado_para_apresentacao') and
                         isinstance(d.get('pages',{}).get('overview'),dict)):
                     return d
             except (OSError,ValueError,TypeError):pass
