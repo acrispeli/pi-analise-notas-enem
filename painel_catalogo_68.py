@@ -222,14 +222,14 @@ def pagina_catalogo_68(st, raiz: Path, ano: int | None, uf: str) -> None:
         st.error(f'Não foi possível carregar {origem.name}: {exc}')
         return
     if escolha in V2:
-        doc, ocultas = preparar_doc_publico_v2(doc, escolha)
+        doc, pequenas = preparar_doc_publico_v2(doc, escolha)
         if doc is None:
             st.warning(
                 'Este indicador não tem resultados autorizados para publicação '
                 'ou a fonte V2 não pôde ser validada.'
             )
             return
-        mostrar_aviso_publicacao_v2(st, escolha, ocultas)
+        mostrar_aviso_publicacao_v2(st, escolha, pequenas)
     st.caption(f'Fonte: `{origem.relative_to(raiz)}`')
     st.caption(f'Indicador: {doc.get("indicator_id", f"IND-{escolha:03d}")} · Apresentação pública autorizada · Fontes rastreáveis no histórico do projeto')
     if escolha in V2:
