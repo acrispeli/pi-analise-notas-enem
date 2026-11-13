@@ -420,7 +420,61 @@ html, body, #root { margin: 0 !important; padding: 0 !important; }
     break-inside: avoid !important;
     page-break-inside: avoid !important;
 }
+/* O aviso editorial passa a compor o rodape PDF, evitando uma folha orfa. */
+[data-exportador-nota-editorial="1"] { display: none !important; }
 """
+
+
+def preparar_impressao_sem_cortes(page) -> dict:
+    """Reajusta o Plotly APOS o CSS de impressão; mantém eixos/legendas visíveis.
+
+    A nota editorial é preservada no rodapé HTML do PDF, não em folha própria.
+    As alterações afetam apenas a sessão Playwright e só enquanto o CSS atua.
+    """
+    return page.evaluate("""async () => {
+      const avisos = [...document.querySelectorAll(
+        '[data-testid="stCaptionContainer"], [data-testid="stMarkdownContainer"]')];
+      let notas = 0;
+      for (const el of avisos) {
+        const txt = (el.textContent || '').replace(/\\s+/g, ' ').trim();
+        if (txt.includes('Projeto Integrador IV') &&
+            txt.includes('Dados agregados') &&
+            txt.includes('Análises não oficiais do INEP') && txt.length < 450) {
+          el.setAttribute('data-exportador-nota-editorial', '1');
+          notas++;
+        }
+      }
+
+      const graficos = [...document.querySelectorAll(
+          '[data-testid="stPlotlyChart"] .js-plotly-plot')];
+      window.dispatchEvent(new Event('resize'));
+      if (window.Plotly && window.Plotly.Plots &&
+          typeof window.Plotly.Plots.resize === 'function') {
+        for (const grafico of graficos) {
+          try { await window.Plotly.Plots.resize(grafico); }
+          catch (_) { /* usa o ajuste geométrico como alternativa */ }
+        }
+      }
+      await new Promise(resolve => setTimeout(resolve, 300));
+      const diagnosticos = [];
+      for (const grafico of graficos) {
+        const container = grafico.closest('[data-testid="stPlotlyChart"]');
+        const svg = grafico.querySelector('svg.main-svg');
+        if (!container || !svg) continue;
+        const disponivel = container.getBoundingClientRect().width - 16;
+        const largura = svg.getBoundingClientRect().width;
+        if (disponivel > 100 && largura > disponivel + 5) {
+          const fator = Math.min(1, disponivel / largura);
+          // zoom reduz também a largura interna do SVG, não apenas a caixa.
+          grafico.style.zoom = String(fator);
+          diagnosticos.push({ajuste: fator.toFixed(3),
+            antes: Math.round(largura), disponivel: Math.round(disponivel)});
+        }
+      }
+      await new Promise(resolve => setTimeout(resolve, 250));
+      return {graficos: graficos.length, ajustados: diagnosticos,
+              notaEditorialNoRodape: notas > 0};
+    }""")
 
 
 def _normalizar_validacao(txt: str) -> str:
@@ -573,6 +627,8 @@ def imprimir_pdf(page, destino: Path, papel: str, paisagem: bool, espera: int,
     estilo = page.add_style_tag(content=ESTILO_IMPRESSAO)
     try:
         page.wait_for_timeout(350)
+        preparo_pdf = preparar_impressao_sem_cortes(page)
+        print('  Preparo de gráficos para impressão: ' + str(preparo_pdf), flush=True)
         altura = page.evaluate("""() => {
             const main=document.querySelector('[data-testid="stMain"]');
             const doc=document.documentElement;
@@ -590,9 +646,13 @@ def imprimir_pdf(page, destino: Path, papel: str, paisagem: bool, espera: int,
             margin={'top':'12mm','bottom':'14mm','left':'10mm','right':'10mm'},
             display_header_footer=True,
             header_template='<div></div>',
-            footer_template=('<div style="font-size:8px;width:100%;text-align:center;'
-                             'color:#666">Projeto Integrador IV - UNIVESP &nbsp;'
-                             '<span class="pageNumber"></span> / <span class="totalPages"></span></div>'),
+            footer_template=('<div style="font-size:7px;width:100%;text-align:center;'
+                             'color:#666">Projeto Integrador IV — UNIVESP · '
+                             'Dados agregados · Versão de apresentação · '
+                             'Validação editorial declarada pela equipe · '
+                             'Análises não oficiais do INEP. &nbsp; '
+                             '<span class="pageNumber"></span> / '
+                             '<span class="totalPages"></span></div>'),
         )
     finally:
         # O CSS de impressao nao pode ocultar a barra lateral na proxima captura.
