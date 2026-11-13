@@ -1,0 +1,64 @@
+name: Auditoria visual React
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/auditoria-visual.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Uma única auditoria ativa por PR; novas revisões substituem execuções antigas.
+concurrency:
+  group: auditoria-visual-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  playwright:
+    name: Medição visual (375, 768 e 1440 px)
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - name: Obter código da revisão
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Instalar dependências do site
+        run: npm ci
+
+      - name: Instalar Playwright de auditoria
+        run: npm install --no-save @playwright/test@1.65.0
+
+      - name: Preparar Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Gerar pacote de produção com dados
+        run: npm run build
+
+      - name: Executar testes de 24 telas e interações
+        run: npx playwright test --config playwright.visual.config.mjs
+
+      - name: Registrar resultados no resumo da execução
+        if: always()
+        run: node scripts/resumo-auditoria-visual.mjs >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Arquivar capturas, medições e relatório HTML
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-visual-react-${{ github.run_number }}
+          path: frontend/auditoria-visual/
+          if-no-files-found: warn
+          retention-days: 14

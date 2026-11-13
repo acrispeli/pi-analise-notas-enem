@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Estado } from '../layout.tsx';
 import { useFiltros } from '../filtros.tsx';
 import { useDados } from '../useDados.ts';
@@ -29,12 +30,27 @@ const ROTULOS: Record<string, string> = {
 };
 
 export default function Metodologia() {
+  const [busca, setBusca] = useState('');
   const { ano } = useFiltros();
   const edicao = ano === 'todos' ? '2024' : ano;
   const pedido = useDados<Record<string, unknown>>(`/data/${edicao}/methodology.json`);
   if (pedido.carregando || pedido.erro || !pedido.dados) return <Estado carregando={pedido.carregando} erro={pedido.erro} />;
 
-  const blocos = indicadores(pedido.dados);
+  const todos = indicadores(pedido.dados);
+  const termo = busca.trim().toLocaleLowerCase('pt-BR');
+  // Uma consulta por código exato deve priorizar o próprio indicador,
+  // mesmo que seu código seja citado na descrição de outros indicadores.
+  const exatos = termo
+    ? todos.filter((bloco) => bloco.id.toLocaleLowerCase('pt-BR') === termo)
+    : [];
+  const blocos = !termo
+    ? todos
+    : exatos.length
+      ? exatos
+      : todos.filter((bloco) =>
+          bloco.id.toLocaleLowerCase('pt-BR').includes(termo) ||
+          bloco.campos.some(([rotulo, texto]) => (rotulo + ' ' + texto).toLocaleLowerCase('pt-BR').includes(termo))
+        );
   return (
     <div>
       <h1>Método</h1>
@@ -48,9 +64,23 @@ export default function Metodologia() {
         médias e outras métricas com menos de cinco observações ficam indisponíveis quando o denominador é conhecido.
         A ausência de um valor não deve ser interpretada como zero.
       </p>
+      <label className="busca-indicador" htmlFor="busca-metodo">
+        Buscar por indicador, definição ou assunto
+        <input
+          id="busca-metodo"
+          type="search"
+          placeholder="Ex.: IND-020, competências, amostragem…"
+          value={busca}
+          onChange={(evento) => setBusca(evento.target.value)}
+        />
+      </label>
+      <p className="nota" aria-live="polite">
+        {blocos.length} de {todos.length} indicadores encontrados. Selecione um indicador para consultar os detalhes.
+      </p>
+      {blocos.length === 0 ? <p className="indisponivel">Nenhum indicador corresponde à pesquisa.</p> : null}
       {blocos.map((bloco) => (
-        <article key={bloco.id} className="metodo">
-          <h2>{bloco.id}</h2>
+        <details key={bloco.id + (termo ? '-pesquisa' : '')} className="metodo" open={termo ? true : undefined}>
+          <summary>{bloco.id} · Definição e metodologia</summary>
           {bloco.campos.length ? (
             <dl>
               {bloco.campos.map(([rotulo, texto]) => (
@@ -61,9 +91,9 @@ export default function Metodologia() {
               ))}
             </dl>
           ) : (
-            <p className="indisponivel">não disponível</p>
+            <p className="indisponivel">Informação metodológica não disponível.</p>
           )}
-        </article>
+        </details>
       ))}
     </div>
   );

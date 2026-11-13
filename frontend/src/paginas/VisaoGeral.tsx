@@ -57,7 +57,8 @@ function histograma(bins: Bin[] | undefined, limiar: number): { figura: Figura |
     faixa: bin.faixa ?? '',
     quantidade: contagemPublicavel(bin.quantidade, limiar, bin),
   }));
-  if (linhas.some((linha) => linha.quantidade === null)) return { figura: null, omitidos: true };
+  const omitidos = linhas.some((linha) => linha.quantidade === null);
+  if (linhas.every((linha) => linha.quantidade === null)) return { figura: null, omitidos: true };
   const figura = barra(
     linhas.map((linha) => linha.faixa),
     linhas.map((linha) => linha.quantidade),
@@ -68,7 +69,7 @@ function histograma(bins: Bin[] | undefined, limiar: number): { figura: Figura |
     xaxis: { title: { text: 'Faixa da nota' }, tickangle: -35 },
     yaxis: { title: { text: 'Redações' } },
   };
-  return { figura, omitidos: false };
+  return { figura, omitidos };
 }
 
 function situacao(categorias: Categoria[] | undefined, limiar: number): { figura: Figura | null; omitidos: number } {
@@ -206,7 +207,7 @@ export default function VisaoGeral() {
         identificador="histograma"
         titulo="Em quais faixas se concentram as notas?"
         figura={hist.figura}
-        nota={hist.omitidos ? 'Há faixa sem contagem disponível; o gráfico não foi completado com zero.' : undefined}
+        nota={hist.omitidos ? 'Algumas faixas não possuem contagem disponível e permanecem sem barra, sem serem transformadas em zero.' : undefined}
       />
       <div className="grade-2">
         <Grafico
@@ -270,9 +271,9 @@ function rankingMedias(lista: UfNota[], limiar: number): Figura | null {
   );
   figura.altura = Math.max(420, linhas.length * 22);
   figura.layout = {
-    margin: { l: 140, t: 8, b: 40 },
-    xaxis: { title: { text: 'Nota média' }, range: [0, 1000] },
-    yaxis: { automargin: true },
+    margin: { l: 170, t: 12, b: 55 },
+    xaxis: { title: { text: 'Nota média (0–1000)' }, range: [0, 1000] },
+    yaxis: { automargin: true, autorange: 'reversed' },
   };
   return figura;
 }

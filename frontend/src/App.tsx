@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
 import { ProvedorFiltros } from './filtros.tsx';
 import { Layout } from './layout.tsx';
 
@@ -28,6 +28,13 @@ export default function App() {
               <Route path="/evolucao" element={<Evolucao />} />
               <Route path="/metodologia" element={<Metodologia />} />
               <Route path="/padroes-ml" element={<PadroesMl />} />
+              <Route path="*" element={
+                <section className="painel pagina-nao-encontrada">
+                  <h1>Página não encontrada</h1>
+                  <p>O endereço informado não corresponde a uma seção do painel.</p>
+                  <Link to="/visao-geral">Voltar à Visão geral</Link>
+                </section>
+              } />
             </Route>
           </Routes>
         </Suspense>

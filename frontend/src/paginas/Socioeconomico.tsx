@@ -232,19 +232,28 @@ function faixasRenda(renda: Renda | undefined, limiar: number): { codigo: string
 }
 
 function graficoRenda(renda: Renda | undefined, limiar: number): Figura | null {
-  const linhas = faixasRenda(renda, limiar).filter((item) => item.media !== null && item.codigo);
+  const linhas = faixasRenda(renda, limiar).filter((item) => item.media !== null && item.codigo).reverse();
   if (!linhas.length) return null;
+  const rotulos = linhas.map((item) => {
+    const descricao = item.descricao || 'Faixa não descrita';
+    return item.codigo + ' · ' + (descricao.length > 34 ? descricao.slice(0, 33) + '…' : descricao);
+  });
   return {
     data: [{
       type: 'bar',
-      x: linhas.map((item) => item.codigo),
-      y: linhas.map((item) => item.media),
+      orientation: 'h',
+      x: linhas.map((item) => item.media),
+      y: rotulos,
       customdata: linhas.map((item) => item.descricao),
       marker: { color: COR },
-      hovertemplate: '%{x}<br>%{customdata}<br>%{y:.1f}<extra></extra>',
+      hovertemplate: '%{y}<br>%{customdata}<br>Nota média: %{x:.1f}<extra></extra>',
     }],
-    altura: 360,
-    layout: { xaxis: { title: { text: 'Faixa de renda' } }, yaxis: { title: { text: 'Nota média' }, range: [0, 1000] } },
+    altura: Math.max(380, linhas.length * 37),
+    layout: {
+      margin: { l: 255, b: 60 },
+      xaxis: { title: { text: 'Nota média (0–1000)' }, range: [0, 1000] },
+      yaxis: { automargin: true },
+    },
   };
 }
 
@@ -284,12 +293,26 @@ function graficoEscola(categorias: FaixaEscola[] | undefined, limiar: number): F
       nome: item.descricao_categoria || item.codigo_escolaridade || '',
       media: metricaPublicavel(item.media, item.n_redacoes, limiar, item),
     }))
-    .filter((item) => item.media !== null && item.nome);
+    .filter((item) => item.media !== null && item.nome)
+    .reverse();
   if (!linhas.length) return null;
+  const rotulos = linhas.map((item) => item.nome.length > 42 ? item.nome.slice(0, 41) + '…' : item.nome);
   return {
-    data: [{ type: 'bar', x: linhas.map((item) => item.nome), y: linhas.map((item) => item.media), marker: { color: COR }, hovertemplate: '%{x}<br>%{y:.1f}<extra></extra>' }],
-    altura: 360,
-    layout: { margin: { b: 128 }, yaxis: { title: { text: 'Nota média' }, range: [0, 1000] }, xaxis: { tickangle: -35 } },
+    data: [{
+      type: 'bar',
+      orientation: 'h',
+      y: rotulos,
+      x: linhas.map((item) => item.media),
+      customdata: linhas.map((item) => item.nome),
+      marker: { color: COR },
+      hovertemplate: '%{customdata}<br>Nota média: %{x:.1f}<extra></extra>',
+    }],
+    altura: Math.max(370, linhas.length * 41),
+    layout: {
+      margin: { l: 255, b: 55 },
+      xaxis: { title: { text: 'Nota média (0–1000)' }, range: [0, 1000] },
+      yaxis: { automargin: true },
+    },
   };
 }
 

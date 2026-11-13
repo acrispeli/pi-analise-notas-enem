@@ -26,3 +26,6 @@ dist-ssr
 
 # o .gitignore da raiz ignora lib/; aqui lib/ tem codigo-fonte
 !src/lib/
+
+# Relatorios e capturas do Playwright
+auditoria-visual/

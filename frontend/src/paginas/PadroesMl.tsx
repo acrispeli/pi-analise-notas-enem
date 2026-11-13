@@ -61,11 +61,23 @@ export default function PadroesMl() {
   const ativo = grupos.find((item) => item.cluster === grupo) ?? grupos[0];
   const anoNumero = Number(ano);
 
+  // Ausência dos modelos não deve gerar uma sequência de cartões e gráficos vazios.
+  // Os indicadores IND-055–059 podem continuar disponíveis no pacote complementar.
+  if (!mca && !clusters) {
+    return (
+      <div data-visual="ml">
+        <h1>Perfis</h1>
+        <Aviso>Os modelos exploratórios do questionário (IND-053 e IND-054) não estão disponíveis para {ano}. Os resultados complementares, quando existentes, aparecem abaixo.</Aviso>
+        <PerfisAmostra extra={extra.dados} ano={anoNumero} limiar={limiar} carregando={extra.carregando} erro={extra.erro} />
+      </div>
+    );
+  }
+
   return (
     <div data-visual="ml">
       <h1>Perfis</h1>
       <p className="nota">Amostra de {mca?.n_amostra ? formatarInteiro(mca.n_amostra) : 'tamanho não disponível'} redações deste ano. Os grupos daqui não são os mesmos da série em Evolução.</p>
-      <div className="grade">
+      <div className="cartoes">
         <Cartao rotulo="Eixos do questionário" valor={mca?.dimensoes?.length ? String(mca.dimensoes.length) : 'não disponível'} detalhe={mca?.inercia_acumulada_primeiros_eixos_pct ? `${formatarPercentual(mca.inercia_acumulada_primeiros_eixos_pct)} da variação` : undefined} />
         <Cartao rotulo="Grupos deste ano" valor={clusters?.k_selecionado ? String(clusters.k_selecionado) : 'não disponível'} detalhe="Nomes locais. Não são os três perfis da série histórica." />
         <Cartao rotulo="Separação dos grupos" valor={clusters?.metricas_k_escolhido?.silhouette ? formatarIndice(clusters.metricas_k_escolhido.silhouette) : 'não disponível'} detalhe="De 0 a 1. Mais alto, grupos mais distintos." />
