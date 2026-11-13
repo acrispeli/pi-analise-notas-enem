@@ -1191,7 +1191,7 @@
     "data": "2026-11-13",
     "escopo": "link_publico_streamlit_com_resultados_agregados_sem_supressao_por_n",
     "origem_decisao": "autorizacao_explicita_do_responsavel_pelo_projeto",
-    "verificacao_realizada": "inspecao_de_campos_de_contagem_dos_seis_jsons_e_supressao_automatica_na_interface",
+    "verificacao_realizada": "inspecao_de_contagens_e_aviso_de_amostra_pequena_na_interface",
     "limite": "somente_divulgacao_agregada_no_streamlit_sem_microdados; grupos_pequenos_sujeitos_a_instabilidade"
   },
   "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
