@@ -359,8 +359,10 @@ test('eixos percentuais e de notas são lineares e respeitam distâncias reais',
     });
     expect(resultado.tipo, id + ': o eixo não pode ser categoria').toBe('linear');
     expect(resultado.quantidade, id + ': série precisa conter números').toBeGreaterThan(0);
-    expect(resultado.distancia60a70, id + ': escala deve ser proporcional')
-      .toBeCloseTo(resultado.distancia70a80, 3);
+    // Plotly arredonda posições de eixo a centésimos de pixel.
+    // Uma tolerância de 0,1 px não admite distorção perceptível ou eixo categórico.
+    expect(Math.abs(resultado.distancia60a70 - resultado.distancia70a80),
+      id + ': intervalos numéricos iguais devem ocupar distância proporcional').toBeLessThan(0.1);
   }
 });
 
