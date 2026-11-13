@@ -175,10 +175,10 @@ def _tabela_competencias(df: pd.DataFrame, coluna: str) -> pd.DataFrame:
 def _mapa_calor(st, df: pd.DataFrame, coluna: str, titulo: str, minimo: int, maximo: int) -> None:
     grade = _tabela_competencias(df, coluna)
     if grade.isna().any().any():
-        st.info('Células omitidas por tamanho insuficiente da amostra ou '
-                'ausência de dados. As células disponíveis permanecem exibidas.')
-        # Evitar uma coluna inteira vazia, sem inventar um zero para o perfil
-        # que teve os dados omitidos. Outros perfis seguem visíveis.
+        st.info('Algumas células não possuem uma medida calculável neste recorte '
+                '(por exemplo, quando o denominador é zero). '
+                'As demais células permanecem visíveis, inclusive grupos pequenos.')
+        # Não representar uma medida não calculável como zero.
         grade = grade.dropna(axis=1, how='all').dropna(axis=0, how='all')
     if grade.empty:
         st.info('Não existem células com dados publicáveis neste recorte.')
