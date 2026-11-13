@@ -78,6 +78,7 @@ class TestePublicacaoSeguraV2(unittest.TestCase):
                 self.assertIs(doc["publicacao_autorizada"], True)
                 self.assertEqual(doc["status"], "apresentacao_publica_autorizada")
                 self.assertEqual(doc["review"], "aprovacao_editorial_pelo_responsavel")
+                self.assertNotIn("revisao_original", doc["aprovacao_apresentacao_publica"])
                 self.assertEqual(doc["modelo_referencia"], MODELO_V2)
                 visivel, ocultos[ind] = preparar_doc_publico_v2(doc, ind)
                 self.assertIsNotNone(visivel)
@@ -89,6 +90,27 @@ class TestePublicacaoSeguraV2(unittest.TestCase):
         self.assertGreater(ocultos[58], 0)
         for numero in (55, 56, 59, 68):
             self.assertEqual(ocultos[numero], 0)
+
+    def test_aviso_publico_registra_autorizacao_sem_pendencia(self):
+        from publicacao_segura_v2 import mostrar_aviso_publicacao_v2
+
+        class Stub:
+            def __init__(self):
+                self.avisos = []
+
+            def caption(self, texto):
+                self.avisos.append(str(texto))
+
+            def warning(self, texto):
+                self.avisos.append(str(texto))
+
+        st = Stub()
+        mostrar_aviso_publicacao_v2(st, 55, 0)
+        self.assertEqual(len(st.avisos), 1)
+        self.assertIn("autorizada pelo responsável", st.avisos[0])
+        self.assertNotIn("Revisão acadêmica formal ainda pendente", st.avisos[0])
+        mostrar_aviso_publicacao_v2(st, 58, 10)
+        self.assertIn("menos de 30", st.avisos[-1])
 
     def test_duas_rotas_aplicam_a_protecao(self):
         for nome in ("painel_paginas_contrato_68.py", "painel_catalogo_68.py"):
