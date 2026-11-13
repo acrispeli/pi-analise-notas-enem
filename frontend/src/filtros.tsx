@@ -22,7 +22,7 @@ export function ProvedorFiltros({ children }: { children: ReactNode }) {
   const [params, setParams] = useSearchParams();
   const [metaOpcoes, setMetaOpcoes] = useState<MetaPainel | null>(null);
   const [metaAno, setMetaAno] = useState<MetaPainel | null>(null);
-  const ano = params.get('ano') || '2024';
+  const ano = params.get('ano') || 'todos';
   const uf = params.get('uf') || 'BR';
 
   useEffect(() => {
