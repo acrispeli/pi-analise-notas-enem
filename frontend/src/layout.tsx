@@ -14,7 +14,7 @@ const ROTAS = [
 ] as const;
 
 export function Layout() {
-  const { ano, uf, definirAno, definirUf, anos, ufs } = useFiltros();
+  const { ano, uf, definirAno, definirUf, anos, ufs, statusDados } = useFiltros();
   const { search } = useLocation();
 
   return (
@@ -58,6 +58,9 @@ export function Layout() {
           </p>
         </header>
         <p className="limite">A UF é onde a prova foi feita. Cada linha é uma participação, não uma pessoa.</p>
+        {statusDados === 'draft' ? (
+          <p className="limite">Resultados preliminares (draft), apresentados para análise acadêmica e exploratória.</p>
+        ) : null}
         <main>
           <Outlet />
         </main>
