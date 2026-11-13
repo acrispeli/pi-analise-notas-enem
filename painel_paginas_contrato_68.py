@@ -364,7 +364,7 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
         st.info('O IND-054 histórico utiliza o modelo original. Os perfis materiais V2 são definidos na ponte revisada dos IND-055–059/068; seus rótulos não são equivalentes aos do IND-054.')
     # Gráficos didáticos baseados em medidas anuais já calculadas, apenas se
     # a variante principal estiver escolhida. Não preenche anos sem dados.
-    if escolha in (1, 2, 3, 4, 5, 7) and origem == opcoes[0]:
+    if escolha in (1, 2, 3, 4, 5, 7, 8) and origem == opcoes[0]:
         if mostrar_grafico_didatico(st, raiz, escolha, ano, uf):
             resumo = resumo_expresso(raiz, escolha, ano, uf)
             mostrar_interpretacao(st, escolha, doc, meta, ano, uf,

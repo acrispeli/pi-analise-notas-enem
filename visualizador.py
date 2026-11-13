@@ -39,6 +39,8 @@ from painel_dados_enem import (
 )
 
 st.set_page_config(page_title='Redação no ENEM | Panorama', page_icon='📘', layout='wide', initial_sidebar_state='expanded')
+from visualizacao_final_enem import instalar_melhorias_visuais
+instalar_melhorias_visuais()
 ROOT = Path(__file__).resolve().parent
 COR = '#2563A6'
 COR_SEC = '#7D9CB8'

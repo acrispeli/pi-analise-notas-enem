@@ -537,6 +537,36 @@ def _geral(numero: int, doc: dict, meta: dict, ano: int | None, uf: str, valor: 
 def resumir_indicador(numero: int, doc: dict, meta: dict, ano: int | None, uf: str,
                       valor_visualizado: Any = None) -> dict:
     """Retorna evidência, leitura e ressalva. Sem conclusões além dos dados."""
+    # HOTFIX_IND058_TAMANHO_PEQUENO_V1: não narrar taxas de recortes pequenos.
+    # Isso afeta somente a interpretação; nenhum registro ou gráfico é alterado.
+    if numero == 58 and isinstance(doc, dict) and uf == 'BR':
+        _linhas58 = doc.get('results', [])
+        if isinstance(_linhas58, list):
+            for _registro58 in _linhas58:
+                if not isinstance(_registro58, dict):
+                    continue
+                if ano is not None and str(_registro58.get('ano')) != str(ano):
+                    continue
+                if str(_registro58.get('status', '')).lower() in (
+                    'nao_aplicavel', 'erro', 'suprimido', 'suppressed', 'indisponivel'
+                ):
+                    continue
+                try:
+                    _n58 = float(_registro58.get('n_com_competencia_valida'))
+                except (ValueError, TypeError):
+                    continue
+                if 0 < _n58 < 30:
+                    return {
+                        'texto': ('O IND-058 contém pelo menos um recorte de tamanho pequeno '
+                                  '(menos de 30 registros com competência válida). '
+                                  'A interpretação automática não destaca percentuais desses grupos.'),
+                        'pedagogia': ('Compare as competências e diferencie a frequência de descontos '
+                                      'da quantidade de pontos perdidos.'),
+                        'nota': ('Amostras pequenas têm baixa estabilidade; o percentual do '
+                                 'recorte não deve ser apresentado isoladamente como resultado geral.'),
+                        'recorte': ('ENEM ' + str(ano) if ano is not None else 'Série histórica')
+                                   + ' · Brasil · leitura com cautela',
+                    }
     if not isinstance(doc,dict):doc={}
     if not isinstance(meta,dict):meta={}
     if numero in V2:return _resumo_v2(numero,doc,ano,uf)
