@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { gerarLeituras } from './gerar-leituras.mjs';
 
 const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const origem = path.join(raiz, 'outputs', 'json');
@@ -57,6 +58,10 @@ if (unicos.size !== 1) {
 
 fs.rmSync(destino, { recursive: true, force: true });
 fs.mkdirSync(destino, { recursive: true });
+
+// Artefatos editoriais gerados das fontes revisadas no Streamlit e dicionários ENEM.
+const leiturasGeradas = gerarLeituras(raiz, destino);
+console.log('Leituras pedagógicas geradas:', leiturasGeradas);
 
 const serie = {};
 for (const ano of anos) {
