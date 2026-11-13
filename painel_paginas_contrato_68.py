@@ -38,6 +38,10 @@ TITULOS_ROTAS = {
     'methodology': 'Metodologia',
 }
 
+def exibir_detalhe_perfis_materiais(numero: int) -> bool:
+    """A metodologia M1–M3 é pertinente somente aos indicadores V2."""
+    return numero in V2
+
 
 def ler_catalogo(raiz: Path) -> dict:
     with (raiz / CATALOGO_REL).open(encoding='utf-8-sig') as f:
@@ -309,9 +313,9 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
         st.markdown(f'**Pergunta que buscamos responder:** {meta["pergunta"]}')
     st.caption('Selecione o resultado e abra “Entenda este resultado” para ver uma explicação simples.')
     # INICIO: EXPLICACAO_PERFIS_MATERIAIS_V2
-    # Um único expansor, dentro do indicador selecionado (55–59/068),
-    # e disponível em qualquer indicador das páginas Socioeconômica/Metodologia.
-    if rota in ('socioeconomic', 'methodology') or escolha == 68:
+    # Mostrar a metodologia material apenas quando o indicador utiliza
+    # os perfis M1–M3; evitar repeti-la em renda, escolaridade ou qualidade.
+    if exibir_detalhe_perfis_materiais(escolha):
         from metodologia_perfis_materiais import exibir_metodologia_perfis
         exibir_metodologia_perfis(st, raiz)
     # FIM: EXPLICACAO_PERFIS_MATERIAIS_V2
