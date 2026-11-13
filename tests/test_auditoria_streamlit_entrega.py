@@ -24,6 +24,20 @@ class TesteAuditoriaEntrega(unittest.TestCase):
         arquivo.write_text(conteudo, encoding="utf-8")
         return arquivo
 
+    def test_palavra_independentes_nao_e_pendencia(self):
+        self.indicador["restricoes"] = (
+            "Comparações entre edições independentes não implicam causalidade."
+        )
+        self.fonte(json.dumps({
+            "meta": {"indicator_id": "IND-002",
+                     "data_status": "consolidado_para_apresentacao"},
+            "results": [{"ano": 2024, "media": 658.9}],
+        }))
+        linha = auditar_indicador(self.raiz, self.indicador)
+        self.assertEqual(linha["estado"], "OK")
+        self.assertEqual(linha["pendencia_catalogo"], "")
+        self.assertEqual(linha["status_dados"], "consolidado_para_apresentacao")
+
     def test_fonte_ausente_e_falha(self):
         linha = auditar_indicador(self.raiz, self.indicador)
         self.assertEqual(linha["estado"], "ERRO")
