@@ -14,11 +14,13 @@ from collections import Counter
 from pathlib import Path
 
 from painel_paginas_contrato_68 import ler_catalogo, fontes_indicador
+from publicacao_segura_v2 import PERFIS_V2, preparar_doc_publico_v2
 
 CAMPOS = [
     "indicador", "pagina", "titulo", "estado", "fonte_principal",
     "variantes", "status_dados", "publicacao_autorizada",
     "pendencia_catalogo", "observacoes",
+    "revisao_academica_pendente", "linhas_omitidas_publicacao",
 ]
 
 
@@ -37,6 +39,8 @@ def auditar_indicador(raiz: Path, indicador: dict) -> dict:
         "publicacao_autorizada": "",
         "pendencia_catalogo": "",
         "observacoes": "",
+        "revisao_academica_pendente": "",
+        "linhas_omitidas_publicacao": 0,
     }
     restricao = str(indicador.get("restricoes") or "")
     if any(t in restricao.casefold() for t in ("confirmar", "pendente", "revisão", "revisao")):
@@ -82,6 +86,16 @@ def auditar_indicador(raiz: Path, indicador: dict) -> dict:
                 ("; " if row["observacoes"] else "") +
                 "Metadados não autorizam publicação externa"
             )
+        revisao = str(doc.get("review") or "")
+        if "revisao_academica_formal_pendente" in revisao or "pendente_revisao_academica" in revisao:
+            row["revisao_academica_pendente"] = "sim"
+        if numero in PERFIS_V2 and autorizado is True:
+            protegido, omitidos = preparar_doc_publico_v2(doc, numero)
+            if protegido is None:
+                row["estado"] = "ERRO"
+                row["observacoes"] += "; Proteção V2 não autorizou exibição"
+            else:
+                row["linhas_omitidas_publicacao"] = omitidos
     except (OSError, ValueError, TypeError, UnicodeError) as exc:
         row["estado"] = "ERRO"
         row["observacoes"] = f"Falha ao ler fonte JSON: {type(exc).__name__}: {exc}"
@@ -119,11 +133,15 @@ def main() -> int:
     pendentes = [x for x in linhas if x["pendencia_catalogo"]]
     rascunhos = [x for x in linhas if x["status_dados"].casefold() in ("draft", "rascunho")]
     nao_publicar = [x for x in linhas if x["publicacao_autorizada"] == "false"]
+    revisao_pendente = [x for x in linhas if x["revisao_academica_pendente"] == "sim"]
+    suprimidas = sum(int(x["linhas_omitidas_publicacao"]) for x in linhas)
     print(f"Indicadores conferidos: {len(linhas)} em {len(set(x['pagina'] for x in linhas))} páginas.")
     print(f"Fontes ausentes, inválidas ou inconsistentes: {len(falhas)}")
     print(f"Pendências documentais no catálogo: {len(pendentes)}")
     print(f"Fontes com data_status=rascunho: {len(rascunhos)}")
     print(f"Fontes que declaram publicacao_autorizada=false: {len(nao_publicar)}")
+    print(f"Fontes com revisão acadêmica ainda pendente: {len(revisao_pendente)}")
+    print(f"Registros agregados ocultados por células pequenas na publicação V2: {suprimidas}")
     print(f"CSV de diagnóstico: {saida}")
     if falhas:
         for x in falhas[:20]:
