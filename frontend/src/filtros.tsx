@@ -60,10 +60,8 @@ export function ProvedorFiltros({ children }: { children: ReactNode }) {
   const valor = useMemo<Filtros>(() => {
     const anos = metaOpcoes?.filters.available.year ?? [2019, 2020, 2021, 2022, 2023, 2024, 2025];
     const ufs = metaOpcoes?.filters.available.uf_exam ?? ['BR'];
-    const limiar =
-      (ano === 'todos' ? metaOpcoes : metaAno)?.quality.suppression.min_group_n ??
-      metaOpcoes?.quality.suppression.min_group_n ??
-      30;
+    // O limite da fonte permanece documentado nos metadados; a apresentação é exploratória.
+    const limiar = 5;
     return {
       ano,
       uf,
