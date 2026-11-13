@@ -317,6 +317,75 @@ def _national_row(row: dict, uf: str) -> dict | None:
     return None
 
 
+
+def _fmt_percentual_raro(valor: float) -> str:
+    """Percentual já na escala 0–100, sem transformar casos raros em 0,00%."""
+    if valor == 0:
+        return '0%'
+    casas = 4
+    while casas < 8 and round(valor, casas) == 0:
+        casas += 1
+    return f'{_fmt(valor, casas)}%'
+
+
+def _resumo_008(doc: dict, ano: int | None, uf: str) -> dict | None:
+    """IND-008: narra contagem e proporção da mesma fonte, preservando supressões."""
+    entradas = doc.get('years')
+    if not isinstance(entradas, list):
+        return None
+    dados = []
+    for item in entradas:
+        if not isinstance(item, dict):
+            continue
+        yr = _year(item.get('ano'))
+        reg = _national_row(item, uf)
+        if yr is None or not isinstance(reg, dict):
+            continue
+        if reg.get('requer_revisao_privacidade') is True or reg.get('suprimido') is True:
+            continue
+        n = _num(reg.get('n_notas_1000'))
+        validas = _num(reg.get('n_validas'))
+        pct = _num(reg.get('percentual'))
+        if (n is None or validas is None or pct is None or validas < 30
+                or not 0 <= n <= validas or not 0 <= pct <= 100):
+            continue
+        # Não divulgar células pequenas de UFs nem quando faltar a marca da fonte.
+        if uf != 'BR' and 0 < n < 30:
+            continue
+        if n > 0 and pct == 0:
+            pct = 100 * n / validas
+        dados.append((yr, int(n), int(validas), pct))
+    dados.sort()
+    recorte = 'Brasil' if uf == 'BR' else f'UF {uf}'
+    cuidado = ('A nota 1.000 é rara. Os percentuais usam redações válidas de cada edição, '
+               'e as contagens pequenas sinalizadas pela fonte não são divulgadas. '
+               'Não use esse resultado isoladamente para caracterizar corretores ou estudantes.')
+    pedag = ('Compare a quantidade de notas máximas com o total de redações válidas, '
+             'sem transformar os casos excepcionais em padrão de aprendizagem.')
+    if ano is not None:
+        registro = next((r for r in dados if r[0] == ano), None)
+        if registro is None:
+            return _result(f'Não há resultado de notas 1.000 divulgável para {ano} no recorte {recorte}.',
+                           pedag, cuidado + ' Resultado indisponível não significa zero.',
+                           f'ENEM {ano} · {recorte}')
+        yr, n, validas, pct = registro
+        texto = (f'Em {yr}, foram {_fmt(n, 0)} redações com nota 1.000 '
+                 f'entre {_fmt(validas, 0)} redações válidas em {recorte} '
+                 f'({_fmt_percentual_raro(pct)}).')
+        return _result(texto, pedag, cuidado, f'ENEM {yr} · {recorte}')
+    if len(dados) < 2:
+        return _result('Não há duas edições comparáveis e divulgáveis para resumir a série de notas 1.000.',
+                       pedag, cuidado, f'Todas as edições · {recorte}')
+    primeiro, ultimo = dados[0], dados[-1]
+    texto = (f'De {primeiro[0]} a {ultimo[0]}, a quantidade de redações nota 1.000 '
+             f'passou de {_fmt(primeiro[1], 0)} para {_fmt(ultimo[1], 0)}. '
+             f'A proporção entre as redações válidas passou de '
+             f'{_fmt_percentual_raro(primeiro[3])} para '
+             f'{_fmt_percentual_raro(ultimo[3])}. '
+             'Esses valores são das edições extremas, sem afirmar tendência contínua.')
+    return _result(texto, pedag, cuidado,
+                   f'Série {primeiro[0]}–{ultimo[0]} · {recorte}')
+
 def _known_series(numero: int, doc: dict, ano: int | None, uf: str) -> dict | None:
     if numero not in SERIES_CONHECIDAS:return None
     field, label, unit, nfield=SERIES_CONHECIDAS[numero]
@@ -537,8 +606,42 @@ def _geral(numero: int, doc: dict, meta: dict, ano: int | None, uf: str, valor: 
 def resumir_indicador(numero: int, doc: dict, meta: dict, ano: int | None, uf: str,
                       valor_visualizado: Any = None) -> dict:
     """Retorna evidência, leitura e ressalva. Sem conclusões além dos dados."""
+    # HOTFIX_IND058_TAMANHO_PEQUENO_V1: não narrar taxas de recortes pequenos.
+    # Isso afeta somente a interpretação; nenhum registro ou gráfico é alterado.
+    if numero == 58 and isinstance(doc, dict) and uf == 'BR':
+        _linhas58 = doc.get('results', [])
+        if isinstance(_linhas58, list):
+            for _registro58 in _linhas58:
+                if not isinstance(_registro58, dict):
+                    continue
+                if ano is not None and str(_registro58.get('ano')) != str(ano):
+                    continue
+                if str(_registro58.get('status', '')).lower() in (
+                    'nao_aplicavel', 'erro', 'suprimido', 'suppressed', 'indisponivel'
+                ):
+                    continue
+                try:
+                    _n58 = float(_registro58.get('n_com_competencia_valida'))
+                except (ValueError, TypeError):
+                    continue
+                if 0 < _n58 < 30:
+                    return {
+                        'texto': ('O IND-058 contém pelo menos um recorte de tamanho pequeno '
+                                  '(menos de 30 registros com competência válida). '
+                                  'A interpretação automática não destaca percentuais desses grupos.'),
+                        'pedagogia': ('Compare as competências e diferencie a frequência de descontos '
+                                      'da quantidade de pontos perdidos.'),
+                        'nota': ('Amostras pequenas têm baixa estabilidade; o percentual do '
+                                 'recorte não deve ser apresentado isoladamente como resultado geral.'),
+                        'recorte': ('ENEM ' + str(ano) if ano is not None else 'Série histórica')
+                                   + ' · Brasil · leitura com cautela',
+                    }
     if not isinstance(doc,dict):doc={}
     if not isinstance(meta,dict):meta={}
+    if numero == 8:
+        resumo_notas_maximas = _resumo_008(doc, ano, uf)
+        if resumo_notas_maximas is not None:
+            return resumo_notas_maximas
     if numero in V2:return _resumo_v2(numero,doc,ano,uf)
     if numero in (11,17,21,28):
         especial=_resumo_comparacao_competencias(numero,doc,ano,uf)

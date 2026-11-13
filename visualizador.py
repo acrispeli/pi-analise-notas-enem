@@ -39,6 +39,8 @@ from painel_dados_enem import (
 )
 
 st.set_page_config(page_title='Redação no ENEM | Panorama', page_icon='📘', layout='wide', initial_sidebar_state='expanded')
+from visualizacao_final_enem import instalar_melhorias_visuais
+instalar_melhorias_visuais()
 ROOT = Path(__file__).resolve().parent
 COR = '#2563A6'
 COR_SEC = '#7D9CB8'
@@ -1194,9 +1196,9 @@ def metodologia():
 
 **Perfis por inteligência artificial**: o IND-017 treinou modelos K-Means com amostras de até 4.000 redações por recorte. O IND-018 classificou todas as redações válidas nos perfis desses modelos. O IND-019 avaliou os agrupamentos; os resultados nacionais indicam que soluções com dois grupos tiveram melhor separação interna que quatro grupos, mas isso não determina sozinho a quantidade pedagogicamente adequada.
 
-**Privacidade**: o IND-016 é exibido para **exploração interna** usando apenas hexágonos com pelo menos 30 redações; células menores já foram omitidas no processamento. A revisão de supressão complementar permanece pendente para publicação externa. Este visualizador oculta ou agrega informações potencialmente sensíveis, **mas não substitui uma auditoria formal de privacidade**.
+**Privacidade**: a exploração detalhada de hexágonos do IND-016 é destinada ao modo interno e usa células com pelo menos 30 redações; células menores foram omitidas no processamento. A versão pública não deve divulgar informações de células pequenas. Essa salvaguarda **não substitui uma auditoria formal de privacidade**.
 
-**Situação acadêmica**: a equipe aprovou editorialmente a apresentação dos indicadores. Os campos históricos de processamento dos JSONs são preservados e não constituem, por si só, certificação externa dos resultados.''')
+**Situação editorial**: a apresentação dos indicadores foi autorizada pelo responsável pelo projeto. Os estados de publicação foram consolidados no Git; a atualização dos rótulos não modifica os cálculos nem representa certificação acadêmica externa.''')
     st.markdown('**IND-040:** perfil descritivo de todo o questionário (POP_SOCIO), independentemente de redação válida. '
                 '**IND-041:** apenas redações válidas com informação de renda vinculável (POP_SOCIO_VALID); '
                 'renda Q006 até 2023 e Q007 em 2024. 2025 não foi estimado. As faixas A–Q mudam de limites '

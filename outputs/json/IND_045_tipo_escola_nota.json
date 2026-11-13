@@ -2,7 +2,7 @@
   "indicator_id": "IND-045",
   "titulo": "Tipo de escola × nota total",
   "population": "POP_SOCIO_VALID",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "generated_utc": "2026-10-30T02:57:38.745374+00:00",
   "anos_solicitados": [
     2019,

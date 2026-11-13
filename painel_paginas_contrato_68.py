@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Navegação pelas oito páginas do catálogo ENEM.
 
-O módulo lê agregados dos JSONs. A aprovação editorial pela equipe para
-apresentação é independente dos metadados históricos de processamento.
+O módulo lê agregados dos JSONs. A consolidação editorial para apresentação
+não implica recálculo nem certificação acadêmica externa.
 """
 from __future__ import annotations
 
@@ -15,6 +15,7 @@ import pandas as pd
 import plotly.express as px
 
 from painel_catalogo_68 import _seis_perfis
+from publicacao_segura_v2 import preparar_doc_publico_v2, mostrar_aviso_publicacao_v2
 from leitura_acessivel_68 import mostrar_leitura_acessivel as mostrar_interpretacao
 from graficos_educacionais_68 import mostrar_grafico_didatico, resumo_expresso
 from painel_revisao_geral_68 import (renderizar_historico_geral, renderizar_resultados_gerais,
@@ -37,6 +38,10 @@ TITULOS_ROTAS = {
     'temporal': 'Evolução temporal',
     'methodology': 'Metodologia',
 }
+
+def exibir_detalhe_perfis_materiais(numero: int) -> bool:
+    """A metodologia M1–M3 é pertinente somente aos indicadores V2."""
+    return numero in V2
 
 
 def ler_catalogo(raiz: Path) -> dict:
@@ -309,9 +314,9 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
         st.markdown(f'**Pergunta que buscamos responder:** {meta["pergunta"]}')
     st.caption('Selecione o resultado e abra “Entenda este resultado” para ver uma explicação simples.')
     # INICIO: EXPLICACAO_PERFIS_MATERIAIS_V2
-    # Um único expansor, dentro do indicador selecionado (55–59/068),
-    # e disponível em qualquer indicador das páginas Socioeconômica/Metodologia.
-    if rota in ('socioeconomic', 'methodology') or escolha == 68:
+    # Mostrar a metodologia material apenas quando o indicador utiliza
+    # os perfis M1–M3; evitar repeti-la em renda, escolaridade ou qualidade.
+    if exibir_detalhe_perfis_materiais(escolha):
         from metodologia_perfis_materiais import exibir_metodologia_perfis
         exibir_metodologia_perfis(st, raiz)
     # FIM: EXPLICACAO_PERFIS_MATERIAIS_V2
@@ -338,8 +343,20 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
     except (OSError,ValueError) as exc:
         st.error(f'Falha na leitura de {origem.name}: {exc}')
         return
+    # Valida publicação e omite células pequenas ANTES de qualquer visual,
+    # interpretação ou inspeção de registros no navegador público.
+    if escolha in V2:
+        doc, pequenas = preparar_doc_publico_v2(doc, escolha)
+        if doc is None:
+            st.warning(
+                'Os resultados deste indicador aguardam liberação explícita '
+                'para divulgação externa ou a fonte não corresponde ao modelo V2. '
+                'A descrição metodológica permanece disponível.'
+            )
+            return
+        mostrar_aviso_publicacao_v2(st, escolha, pequenas)
     st.caption('Fonte: `'+str(origem.relative_to(raiz))+'`')
-    st.caption('Apresentação editorial: validada pela equipe do projeto. Metadados de processamento preservados no JSON de origem.')
+    st.caption('Apresentação pública autorizada pelo responsável pelo projeto. Definições e limitações constam da metodologia; histórico das fontes disponível no Git.')
     edicao_da_fonte = doc.get('ano', doc.get('year'))
     if edicao_da_fonte is None and isinstance(doc.get('meta'), dict):
         edicao_da_fonte = doc['meta'].get('year')
@@ -364,7 +381,7 @@ def pagina_contrato_68(st, raiz: Path, rota: str, ano: int | None, uf: str,
         st.info('O IND-054 histórico utiliza o modelo original. Os perfis materiais V2 são definidos na ponte revisada dos IND-055–059/068; seus rótulos não são equivalentes aos do IND-054.')
     # Gráficos didáticos baseados em medidas anuais já calculadas, apenas se
     # a variante principal estiver escolhida. Não preenche anos sem dados.
-    if escolha in (1, 2, 3, 4, 5, 7) and origem == opcoes[0]:
+    if escolha in (1, 2, 3, 4, 5, 7, 8) and origem == opcoes[0]:
         if mostrar_grafico_didatico(st, raiz, escolha, ano, uf):
             resumo = resumo_expresso(raiz, escolha, ano, uf)
             mostrar_interpretacao(st, escolha, doc, meta, ano, uf,

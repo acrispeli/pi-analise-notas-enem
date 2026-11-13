@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-066",
   "slug": "IND_066_evolucao_quase_1000",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "generated_at": "2026-10-30T17:39:45.187142+00:00",
   "dashboard_target": "pages.temporal.high_performance",
   "population_note": "POP_VALID_YEAR/POP_NEAR_YEAR/POP_EVALUATOR_YEAR, conforme indicador",
@@ -324,5 +324,5 @@
       "n_com_desconto": 32461
     }
   ],
-  "review": "pendente_revisao_academica_e_privacidade_contextual"
+  "review": "aprovacao_editorial_pelo_responsavel"
 }

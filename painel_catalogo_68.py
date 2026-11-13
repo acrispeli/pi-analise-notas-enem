@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Catálogo interno de 68 indicadores: somente saídas agregadas locais.
 
-Não utiliza microdados, não transforma status draft em publicado e não
-infere equivalência entre o IND-054 original e os clusters V2.
+Não utiliza microdados, aplica autorização e proteção de células pequenas
+na apresentação V2 e não confunde IND-054 com clusters V2.
 """
 from __future__ import annotations
 import json
@@ -11,6 +11,8 @@ from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
+
+from publicacao_segura_v2 import preparar_doc_publico_v2, mostrar_aviso_publicacao_v2
 
 EXCLUIDOS = frozenset({60, 61, 62, 63})
 V2 = frozenset({55, 56, 57, 58, 59, 68})
@@ -44,7 +46,10 @@ def _tabela_com_rotulos_materiais(df: pd.DataFrame) -> pd.DataFrame:
     origem = 'cluster' if 'cluster' in tabela.columns else 'cluster_referencia'
     if origem in tabela.columns:
         tabela['Perfil material'] = tabela[origem].map(PERFIS).fillna(tabela[origem])
-        tabela = tabela.drop(columns=['cluster', 'cluster_referencia', 'Perfil'], errors='ignore')
+        # O status técnico da linha (rascunho histórico do processamento)
+        # não representa a autorização atual de apresentação do indicador.
+        tabela = tabela.drop(columns=['cluster', 'cluster_referencia',
+                                      'Perfil', 'status'], errors='ignore')
         outras = [c for c in tabela.columns if c != 'Perfil material']
         return tabela[['Perfil material', *outras]]
     return tabela.drop(columns=['Perfil'], errors='ignore')
@@ -188,7 +193,7 @@ def _seis_perfis(st, doc: dict, ind: int, ano: int | None, uf: str):
 
 def pagina_catalogo_68(st, raiz: Path, ano: int | None, uf: str) -> None:
     st.title('Catálogo consolidado · 68 indicadores')
-    st.caption('Resultados agregados para consulta e apresentação pública. Aprovação editorial declarada pela equipe do projeto.')
+    st.caption('Resultados agregados para consulta pública, com autorização editorial pelo responsável pelo projeto.')
     arquivos = inventario(raiz)
     disponiveis = sum(bool(x) for x in arquivos.values())
     st.metric('Indicadores com JSON disponível', f'{disponiveis}/68')
@@ -216,8 +221,17 @@ def pagina_catalogo_68(st, raiz: Path, ano: int | None, uf: str) -> None:
     except (ValueError, OSError) as exc:
         st.error(f'Não foi possível carregar {origem.name}: {exc}')
         return
+    if escolha in V2:
+        doc, pequenas = preparar_doc_publico_v2(doc, escolha)
+        if doc is None:
+            st.warning(
+                'Este indicador não tem resultados autorizados para publicação '
+                'ou a fonte V2 não pôde ser validada.'
+            )
+            return
+        mostrar_aviso_publicacao_v2(st, escolha, pequenas)
     st.caption(f'Fonte: `{origem.relative_to(raiz)}`')
-    st.caption(f'Indicador: {doc.get("indicator_id", f"IND-{escolha:03d}")} · Apresentação editorial validada pela equipe · Metadados de origem preservados')
+    st.caption(f'Indicador: {doc.get("indicator_id", f"IND-{escolha:03d}")} · Apresentação pública autorizada · Fontes rastreáveis no histórico do projeto')
     if escolha in V2:
         _seis_perfis(st, doc, escolha, ano, uf)
         return

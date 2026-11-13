@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-068",
   "slug": "IND_068_evolucao_perfis_socioeconomicos",
-  "status": "draft",
+  "status": "apresentacao_publica_autorizada",
   "generated_at": "2026-11-03T11:53:59.389355+00:00",
   "dashboard_target": "pages.temporal.socio_clusters",
   "population_note": "AMOSTRA_SOCIO_ML",
@@ -177,8 +177,15 @@
       "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
     }
   ],
-  "review": "pendente_revisao_academica_e_privacidade_contextual",
-  "modo_execucao": "rascunho_interno_nao_publicar",
-  "publicacao_autorizada": false,
+  "review": "aprovacao_editorial_pelo_responsavel",
+  "modo_execucao": "divulgacao_streamlit_com_controle_de_celulas_pequenas",
+  "publicacao_autorizada": true,
+  "aprovacao_apresentacao_publica": {
+    "data": "2026-11-13",
+    "escopo": "link_publico_streamlit_com_resultados_agregados_sem_supressao_por_n",
+    "origem_decisao": "autorizacao_explicita_do_responsavel_pelo_projeto",
+    "verificacao_realizada": "inspecao_de_contagens_e_aviso_de_amostra_pequena_na_interface",
+    "limite": "somente_divulgacao_agregada_no_streamlit_sem_microdados; grupos_pequenos_sujeitos_a_instabilidade"
+  },
   "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
 }

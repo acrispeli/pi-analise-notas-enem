@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-071",
   "slug": "IND_071_diagnostico_celulas_pequenas",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "generated_at": "2026-10-30T17:39:50.117559+00:00",
   "dashboard_target": "quality.suppression",
   "population_note": "agregados existentes",
@@ -19,7 +19,7 @@
       "menor_contagem_positiva": 1,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_007_situacao_redacao.csv",
@@ -32,7 +32,7 @@
       "menor_contagem_positiva": 1,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_012_distribuicao_niveis_competencias.csv",
@@ -45,7 +45,7 @@
       "menor_contagem_positiva": 1,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_016_mapa_pc1_pc2.csv",
@@ -58,7 +58,7 @@
       "menor_contagem_positiva": 1,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_020_diferenca_total_av1_av2.csv",
@@ -71,7 +71,7 @@
       "menor_contagem_positiva": 2,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_024_terceiro_avaliador.csv",
@@ -84,7 +84,7 @@
       "menor_contagem_positiva": null,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": false,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_025_banca.csv",
@@ -97,7 +97,7 @@
       "menor_contagem_positiva": null,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": false,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_030_faixas_alto_desempenho.csv",
@@ -110,7 +110,7 @@
       "menor_contagem_positiva": 1,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_032_frequencia_desconto.csv",
@@ -123,7 +123,7 @@
       "menor_contagem_positiva": 2,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_036_regras_associacao.csv",
@@ -136,7 +136,7 @@
       "menor_contagem_positiva": 3,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_039_mapa_nota_competencia.csv",
@@ -149,7 +149,7 @@
       "menor_contagem_positiva": 1,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_040_perfil_socioeconomico.csv",
@@ -162,7 +162,7 @@
       "menor_contagem_positiva": 1,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": true,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_054_clusters_socioeconomicos.csv",
@@ -175,7 +175,7 @@
       "menor_contagem_positiva": null,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": false,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     },
     {
       "fonte_csv": "IND_066_evolucao_quase_1000.csv",
@@ -188,8 +188,8 @@
       "menor_contagem_positiva": null,
       "tratamento": "auditoria_sem_supressao_automatica",
       "revisao_contextual": false,
-      "status": "draft"
+      "status": "consolidado_para_apresentacao"
     }
   ],
-  "review": "pendente_revisao_academica_e_privacidade_contextual"
+  "review": "aprovacao_editorial_pelo_responsavel"
 }

@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-064",
   "slug": "IND_064_evolucao_nota",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "generated_at": "2026-10-30T17:39:41.624585+00:00",
   "dashboard_target": "pages.temporal.total_score",
   "population_note": "POP_VALID_YEAR/POP_NEAR_YEAR/POP_EVALUATOR_YEAR, conforme indicador",
@@ -58,5 +58,5 @@
       "mediana": 600.0
     }
   ],
-  "review": "pendente_revisao_academica_e_privacidade_contextual"
+  "review": "aprovacao_editorial_pelo_responsavel"
 }

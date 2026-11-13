@@ -103,7 +103,7 @@
       "prioridade": "P0",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Confirmar domínio, populações e CSV real antes de publicar.",
+      "restricoes": "Notas calculadas para redações válidas na população declarada pela fonte. A série histórica soma participações por edição, não pessoas únicas.",
       "numero": 2
     },
     {
@@ -123,7 +123,7 @@
       "prioridade": "P0",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Confirmar domínio, populações e CSV real antes de publicar.",
+      "restricoes": "Notas calculadas para redações válidas na população declarada pela fonte. A série histórica soma participações por edição, não pessoas únicas.",
       "numero": 3
     },
     {
@@ -141,9 +141,9 @@
       "filtros": "Globais",
       "json_path": "pages.overview.kpis.std_score",
       "prioridade": "P0",
-      "observacoes": "Definir ddof e manter igual em todos os anos.",
+      "observacoes": "O desvio-padrão depende da convenção de cálculo adotada na fonte (ddof); comparações devem preservar a mesma definição.",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Confirmar domínio, populações e CSV real antes de publicar.",
+      "restricoes": "Notas calculadas para redações válidas na população declarada pela fonte. A série histórica soma participações por edição, não pessoas únicas.",
       "numero": 4
     },
     {
@@ -163,7 +163,7 @@
       "prioridade": "P1",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Confirmar domínio, populações e CSV real antes de publicar.",
+      "restricoes": "Percentis calculados sobre redações válidas; cada percentil é uma posição na distribuição e não deve ser somado nem promediado entre edições.",
       "numero": 5
     },
     {
@@ -183,7 +183,7 @@
       "prioridade": "P0",
       "observacoes": "Manter os mesmos bins na comparação temporal.",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Confirmar domínio, populações e CSV real antes de publicar.",
+      "restricoes": "Distribuição de notas calculada sobre redações válidas; diferenças entre faixas e anos exigem denominadores e limites de intervalos comparáveis.",
       "numero": 6
     },
     {
@@ -463,7 +463,7 @@
       "prioridade": "P0",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 20
     },
     {
@@ -483,7 +483,7 @@
       "prioridade": "P0",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 21
     },
     {
@@ -503,7 +503,7 @@
       "prioridade": "P0",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Aplica a regra de discrepância definida pelo edital ENEM 2024 como referência analítica; sua aplicação retrospectiva não representa necessariamente a decisão administrativa histórica de cada edição.",
       "numero": 22
     },
     {
@@ -523,7 +523,7 @@
       "prioridade": "P0",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 23
     },
     {
@@ -543,7 +543,7 @@
       "prioridade": "P0",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 24
     },
     {
@@ -563,7 +563,7 @@
       "prioridade": "P0",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 25
     },
     {
@@ -583,7 +583,7 @@
       "prioridade": "P1",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 26
     },
     {
@@ -603,7 +603,7 @@
       "prioridade": "P1",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 27
     },
     {
@@ -623,7 +623,7 @@
       "prioridade": "P1",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 28
     },
     {
@@ -643,7 +643,7 @@
       "prioridade": "P2",
       "observacoes": "Não identificar corretor individual; AV1/AV2 são posições na correção.",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 29
     },
     {
@@ -823,7 +823,7 @@
       "prioridade": "P1",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "Os registros detalhados dos avaliadores em 2019–2024 provêm da base específica, e em 2025 da base de resultados. Critérios e procedimentos históricos podem diferir entre edições.",
       "numero": 38
     },
     {
@@ -963,7 +963,7 @@
       "prioridade": "P1",
       "observacoes": "",
       "periodo": "2019–2024 (redação×socio)",
-      "restricoes": "TRAJETORIA_ESCOLAR: TP_ESCOLA (2019–2023) ≠ Q023 (2024–2025); validar conceitos/categorias.",
+      "restricoes": "Tipo de escola: TP_ESCOLA (2019–2023) e Q023 (2024–2025) possuem definições distintas e não devem ser tratados como uma única categoria temporal.",
       "numero": 45
     },
     {
@@ -983,7 +983,7 @@
       "prioridade": "P1",
       "observacoes": "",
       "periodo": "2019–2024 (redação×socio)",
-      "restricoes": "TRAJETORIA_ESCOLAR: TP_ESCOLA (2019–2023) ≠ Q023 (2024–2025); validar conceitos/categorias.",
+      "restricoes": "Tipo de escola: TP_ESCOLA (2019–2023) e Q023 (2024–2025) possuem definições distintas e não devem ser tratados como uma única categoria temporal.",
       "numero": 46
     },
     {
@@ -1041,7 +1041,7 @@
       "filtros": "Globais",
       "json_path": "pages.socioeconomic.parent_occupation",
       "prioridade": "P2",
-      "observacoes": "Validar Q004 no CSV: o dicionário combina categorias A–F com indicação de tipo numérico.",
+      "observacoes": "A pergunta Q004 combina códigos categóricos A–F com informação de tipo numérico no dicionário; não interpretar os códigos como uma escala quantitativa.",
       "periodo": "2019–2024 (redação×socio)",
       "restricoes": "Q003/Q004: verificar códigos por ano; Q004 marcado numérico em dicionário 2024.",
       "numero": 49
@@ -1261,9 +1261,9 @@
       "filtros": "Ano",
       "json_path": "pages.temporal.total_score",
       "prioridade": "P2",
-      "observacoes": "Ativar somente após validação de dicionários 2019–2024.",
+      "observacoes": "Médias e medianas anuais usam as redações válidas de cada edição; os dicionários e populações de referência devem ser considerados em leituras históricas.",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Comparação temporal: amostragem/escala/centroides comparáveis; clusters não se alinham automaticamente.",
+      "restricoes": "Comparações entre edições independentes: médias e medianas consideram redações válidas de cada ano. Não acompanham as mesmas pessoas e não demonstram causalidade.",
       "numero": 64
     },
     {
@@ -1283,7 +1283,7 @@
       "prioridade": "P2",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Comparação temporal: amostragem/escala/centroides comparáveis; clusters não se alinham automaticamente.",
+      "restricoes": "As médias das competências C1–C5 estão na escala de 0 a 200 por edição. Alterações de população e contexto do exame devem ser consideradas ao comparar anos.",
       "numero": 65
     },
     {
@@ -1303,7 +1303,7 @@
       "prioridade": "P2",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Comparação temporal: amostragem/escala/centroides comparáveis; clusters não se alinham automaticamente.",
+      "restricoes": "Os valores descrevem perdas e frequência de desconto no recorte de alto desempenho definido na fonte. Os denominadores variam por edição; não interprete as séries como acompanhamento individual.",
       "numero": 66
     },
     {
@@ -1321,9 +1321,9 @@
       "filtros": "Ano",
       "json_path": "pages.temporal.reviewers",
       "prioridade": "P2",
-      "observacoes": "Disponibilidade histórica dos avaliadores detalhados deve ser verificada por ano.",
+      "observacoes": "Disponibilidade e estrutura dos registros detalhados de avaliadores variam entre as edições.",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Detalhamento dos avaliadores em 2019–24 na base específica e em 2025 no RESULTADOS; confirmar status e edital por ano.",
+      "restricoes": "As séries anuais descrevem divergências observadas. A referência de discrepância do edital 2024 foi aplicada retrospectivamente e não equivale necessariamente às regras administrativas vigentes em cada edição.",
       "numero": 67
     },
     {
@@ -1403,7 +1403,7 @@
       "prioridade": "P0",
       "observacoes": "MIN_GROUP_N sugerido=30, configurável; não é regra oficial do Inep.",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Confirmar domínio, populações e CSV real antes de publicar.",
+      "restricoes": "Diagnóstico agregado de grupos pequenos: o limite mínimo de 30 é uma política prudencial do projeto e não equivale a uma certificação de anonimato.",
       "numero": 71
     },
     {
@@ -1423,7 +1423,7 @@
       "prioridade": "P0",
       "observacoes": "",
       "periodo": "2019–2025 (validar população)",
-      "restricoes": "Confirmar domínio, populações e CSV real antes de publicar.",
+      "restricoes": "Inventário técnico de versões e fontes dos resultados; integridade de arquivos não comprova, por si só, correção estatística ou validade acadêmica.",
       "numero": 72
     }
   ],

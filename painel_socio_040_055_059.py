@@ -175,7 +175,13 @@ def _tabela_competencias(df: pd.DataFrame, coluna: str) -> pd.DataFrame:
 def _mapa_calor(st, df: pd.DataFrame, coluna: str, titulo: str, minimo: int, maximo: int) -> None:
     grade = _tabela_competencias(df, coluna)
     if grade.isna().any().any():
-        st.warning('A matriz está incompleta; gráfico omitido para evitar interpretações erradas.')
+        st.info('Algumas células não possuem uma medida calculável neste recorte '
+                '(por exemplo, quando o denominador é zero). '
+                'As demais células permanecem visíveis, inclusive grupos pequenos.')
+        # Não representar uma medida não calculável como zero.
+        grade = grade.dropna(axis=1, how='all').dropna(axis=0, how='all')
+    if grade.empty:
+        st.info('Não existem células com dados publicáveis neste recorte.')
         return
     fig=px.imshow(grade, text_auto='.1f', aspect='auto', zmin=minimo, zmax=maximo,
                   labels={'x':'Perfil material','y':'Competência da redação','color':titulo},

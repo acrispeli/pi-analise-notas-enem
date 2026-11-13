@@ -5,7 +5,7 @@
     "analysis_version": "2.28.0-ind001-ind002-ind003-ind004-ind005-ind006-ind007-ind008-ind009-ind010-ind011-ind012-ind013-ind014-ind015-ind016-ind017-ind018-ind019-ind020-ind021-ind022-ind023-ind024-ind025-ind026-ind027-ind028-ind029",
     "dataset_version": "enem-2019-2025-csv-publico",
     "generated_at": "2026-10-30T15:32:20+00:00",
-    "data_status": "draft",
+    "data_status": "consolidado_para_apresentacao",
     "source_indicator": "IND-028/IND-021",
     "population_definition": "AMOSTRA_ML_EVALUATOR da POP_EVALUATOR com cinco pares completos",
     "geographic_dimension": "SG_UF_PROVA",

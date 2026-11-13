@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 
-from interpretacao_pedagogica_enem import resumir_indicador
+from interpretacao_regras_enem import resumir_indicador
 
 
 class InterpretacaoTestes(unittest.TestCase):

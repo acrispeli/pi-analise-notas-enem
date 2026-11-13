@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-069",
   "slug": "IND_069_taxa_juncao",
-  "status": "draft",
+  "status": "consolidado_para_apresentacao",
   "generated_at": "2026-10-30T17:28:50.365168+00:00",
   "dashboard_target": "quality.join_diagnostics",
   "population_note": "JOIN_DIAGNOSTIC",
@@ -146,5 +146,5 @@
       "motivo": "Não existe identificador público validado para 2025"
     }
   ],
-  "review": "pendente_revisao_academica_e_privacidade_contextual"
+  "review": "aprovacao_editorial_pelo_responsavel"
 }

@@ -5,7 +5,7 @@
     "dataset_version": "enem-2022-csv-publico",
     "generated_at": "2026-10-30T15:32:20+00:00",
     "year": 2022,
-    "data_status": "draft",
+    "data_status": "consolidado_para_apresentacao",
     "source_files": [
       "MICRODADOS_ENEM_2022.csv"
     ],
@@ -856,14 +856,14 @@
       "revisao_academica_pendente": true
     },
     "ind053_validation": {
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_fonte": 3476105,
       "n_amostra": 15000,
       "sem_join": true,
       "supressao_categoria_n": 30
     },
     "ind054_validation": {
-      "status": "draft",
+      "status": "consolidado_para_apresentacao",
       "n_fonte": 3476105,
       "n_amostra": 15000,
       "sem_join": true,
@@ -84562,7 +84562,7 @@
         "population": "POP_NEAR",
         "method": "mean(NU_NOTA_COMPi < 200), 900 <= nota_total <= 980",
         "year": 2022,
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "brasil": {
           "uf": "BR",
           "populacao": "POP_NEAR",
@@ -86419,7 +86419,7 @@
         "indicator_id": "IND-033",
         "population": "POP_NEAR",
         "year": 2022,
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "method": "sum(200-Ci) / sum_j sum(200-Cj), por ano/UF; derivado de IND-031",
         "brasil": {
           "uf": "BR",
@@ -88418,7 +88418,7 @@
         "population": "POP_NEAR",
         "method": "exatamente uma NU_NOTA_COMPi < 200 por redação, nota em [900,980]",
         "year": 2022,
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "brasil": {
           "uf": "BR",
           "populacao": "POP_NEAR",
@@ -89963,7 +89963,7 @@
         ],
         "privacy_note": "Supressão primária e complementar nos recortes; não publicar sem revisão cruzada com outros indicadores.",
         "recorte_980_nota_final_brasil": {
-          "status": "draft",
+          "status": "consolidado_para_apresentacao",
           "n_980_total": 6042,
           "n_980_padrao_4x200_1x180": 6042,
           "n_980_outros_perfis": 0,
@@ -90070,7 +90070,7 @@
         "population": "POP_NEAR",
         "method": "itemsets inclusivos; COUNT(all Ci<200, Ci em par/trio), nota final [900,980]",
         "year": 2022,
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "brasil": {
           "uf": "BR",
           "populacao": "POP_NEAR",
@@ -97469,7 +97469,7 @@
       },
       "association_rules": {
         "indicator_id": "IND-036",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "year": 2022,
         "population": "POP_NEAR",
         "algorithm": "Apriori",
@@ -105959,7 +105959,7 @@
       },
       "tests": {
         "indicator_id": "IND-037",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "year": 2022,
         "population": "POP_NEAR",
         "parameters": {
@@ -119588,7 +119588,7 @@
         "indicator_id": "IND-039",
         "population": "POP_HIGH",
         "year": 2022,
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "method": "% com Ci<200 e perda média Ci, por faixas 20 pontos de nota final",
         "brasil": {
           "uf": "BR",
@@ -162421,7 +162421,7 @@
       "income_total": {
         "indicator_id": "IND-041",
         "year": 2022,
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "population": "POP_SOCIO_VALID",
         "source_question": "Q006",
         "national": {
@@ -178139,7 +178139,7 @@
       "income_competencies": {
         "indicator_id": "IND-042",
         "year": 2022,
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "population": "POP_SOCIO_VALID",
         "source_question": "Q006",
         "competencies": [
@@ -239140,7 +239140,7 @@
       "parent_education_total": {
         "indicator_id": "IND-043",
         "year": 2022,
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "population": "POP_SOCIO_VALID",
         "source_questions": [
           "Q001",
@@ -255532,7 +255532,7 @@
       },
       "parent_education_competencies": {
         "indicator_id": "IND-044",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "population": "POP_SOCIO_VALID",
         "year": 2022,
         "source_questions": [
@@ -282174,7 +282174,7 @@
       },
       "school_type_total": {
         "indicator_id": "IND-045",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "population": "POP_SOCIO_VALID",
         "year": 2022,
         "source_variable": "TP_ESCOLA",
@@ -284987,7 +284987,7 @@
       },
       "school_type_competencies": {
         "indicator_id": "IND-046",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "year": 2022,
         "population": "POP_SOCIO_VALID",
         "source_variable": "TP_ESCOLA",
@@ -294688,7 +294688,7 @@
       },
       "internet_performance": {
         "indicator_id": "IND-047",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "year": 2022,
         "population": "POP_SOCIO_VALID",
         "source_variable": "Q025",
@@ -304165,7 +304165,7 @@
       },
       "computer_performance": {
         "indicator_id": "IND-048",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "year": 2022,
         "population": "POP_SOCIO_VALID",
         "source_variable": "Q024",
@@ -317198,7 +317198,7 @@
       },
       "parent_occupation": {
         "indicator_id": "IND-049",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "year": 2022,
         "population": "POP_SOCIO_VALID",
         "national": {
@@ -324544,7 +324544,7 @@
       },
       "household_size": {
         "indicator_id": "IND-050",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "year": 2022,
         "population": "POP_SOCIO_VALID",
         "national": {
@@ -328586,7 +328586,7 @@
       },
       "demographics": {
         "indicator_id": "IND-051",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "year": 2022,
         "population": "POP_SOCIO_VALID",
         "national": {
@@ -339740,7 +339740,7 @@
       },
       "uf_performance": {
         "indicator_id": "IND-052",
-        "status": "draft",
+        "status": "consolidado_para_apresentacao",
         "year": 2022,
         "population": "POP_SOCIO_VALID",
         "geography": "SG_UF_PROVA",
@@ -342060,7 +342060,7 @@
       "reason": "indicadores_ainda_nao_implementados",
       "socio_mca": {
         "indicator_id": "IND-053",
-        "data_status": "draft",
+        "data_status": "consolidado_para_apresentacao",
         "ano": 2022,
         "modelo_ano": {
           "n_amostra": 15000,
@@ -346219,7 +346219,7 @@
       },
       "socio_clusters": {
         "indicator_id": "IND-054",
-        "data_status": "draft",
+        "data_status": "consolidado_para_apresentacao",
         "ano": 2022,
         "modelo_ano": {
           "n_amostra": 15000,
@@ -451308,7 +451308,7 @@
         "method": "frequencias_pop_socio_br_uf_por_questao_agregacao_complementar_por_ano",
         "privacy_minimum_count": 1,
         "notes": "POP_SOCIO é composta por todos os registros da fonte de questionário, inclusive os que deixaram questões em branco: o denominador de cada distribuição é o total dessa fonte no recorte. Branco físico é categoria distinta, não se confunde com códigos de Não sei/Não informado. Até 2023 o questionário segue versão antiga e a partir de 2024 versão reformulada. Ex.: Q006 era renda familiar em 2019–2023 e Q007 passou a representar renda familiar em 2024–2025. A série histórica contém apenas contagens de participações socioeconômicas, sem somar códigos de perguntas incompatíveis. A nomenclatura de categoria preserva o código de origem, não interpreta códigos como grandezas numéricas. Uma agregação de categorias por questão/ano é aplicada simultaneamente a BR e todas as UFs, até toda contagem positiva divulgada ser >=30. Categorias agrupadas NÃO são semanticamente homogêneas. Isso não substitui a revisão de privacidade cruzada com outros indicadores. Não se estabelece relação causal nem representação de todas as pessoas inscritas além da cobertura efetiva dos arquivos. UF de prova, não residência. Histórico conta participações, não indivíduos únicos. Resultados DRAFT; revisão acadêmica e de divulgação pública pendentes.",
-        "data_status": "draft"
+        "data_status": "consolidado_para_apresentacao"
       }
     }
   }
