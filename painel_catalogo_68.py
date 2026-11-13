@@ -46,7 +46,10 @@ def _tabela_com_rotulos_materiais(df: pd.DataFrame) -> pd.DataFrame:
     origem = 'cluster' if 'cluster' in tabela.columns else 'cluster_referencia'
     if origem in tabela.columns:
         tabela['Perfil material'] = tabela[origem].map(PERFIS).fillna(tabela[origem])
-        tabela = tabela.drop(columns=['cluster', 'cluster_referencia', 'Perfil'], errors='ignore')
+        # O status técnico da linha (rascunho histórico do processamento)
+        # não representa a autorização atual de apresentação do indicador.
+        tabela = tabela.drop(columns=['cluster', 'cluster_referencia',
+                                      'Perfil', 'status'], errors='ignore')
         outras = [c for c in tabela.columns if c != 'Perfil material']
         return tabela[['Perfil material', *outras]]
     return tabela.drop(columns=['Perfil'], errors='ignore')
