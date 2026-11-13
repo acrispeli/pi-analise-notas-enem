@@ -283,3 +283,18 @@ test('questionário preserva diferença semântica da pergunta Q006 entre 2023 e
   await expect(page.locator('[data-visual="perfil"] select')).toHaveValue('Q006');
   await expect(page.getByTestId('enunciado-questionario')).toContainText('Você possui renda?');
 });
+
+test('questionário no período completo mostra tendência POP_SOCIO sem agregar alternativas', async ({ page }) => {
+  await prepararPagina(page, 'socioeconomico', 'todos', 'BR');
+  const painel = page.locator('[data-visual="serie-questionario"]');
+  await expect(painel.locator('.js-plotly-plot')).toBeVisible({ timeout: 40_000 });
+  await expect(painel).toContainText('POP_SOCIO');
+  await expect(page.getByText('Para consultar as alternativas e seus significados')).toBeVisible();
+  const serie = await painel.locator('.js-plotly-plot').evaluate((e) => ({
+    anos: Array.from(e.data?.[0]?.x ?? [], String),
+    valores: Array.from(e.data?.[0]?.y ?? []),
+  }));
+  expect(serie.anos).toEqual(['2019', '2020', '2021', '2022', '2023', '2024', '2025']);
+  expect(serie.valores.filter((v) => typeof v === 'number').length).toBe(7);
+  await expect(painel.locator('[data-indicador="IND-040"]')).toBeVisible();
+});
