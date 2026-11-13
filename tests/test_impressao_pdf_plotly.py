@@ -46,6 +46,54 @@ class TestesImpressaoPdf(unittest.TestCase):
         self.assertFalse(ultima_pagina_so_rodape(completo))
         self.assertTrue(grafico_historico_tem_todos_anos(completo, 'IND-002'))
 
+    def test_ultimo_ano_permanece_no_pdf_a4(self):
+        try:
+            from playwright.sync_api import sync_playwright
+            from pypdf import PdfReader
+        except ImportError:
+            self.skipTest('Playwright/pypdf não instalados')
+        import tempfile
+        from pathlib import Path
+        with sync_playwright() as playwright:
+            navegador = None
+            for parametros in ({'channel': 'msedge', 'headless': True},
+                               {'headless': True}):
+                try:
+                    navegador = playwright.chromium.launch(**parametros)
+                    break
+                except Exception:
+                    continue
+            if navegador is None:
+                self.skipTest('Sem navegador Chromium')
+            try:
+                pagina = navegador.new_page(viewport={'width': 1560, 'height': 970})
+                anos = ''.join(
+                    f'<text x="{80+i*230}" y="180" font-size="20">'
+                    f'{2019+i}</text>' for i in range(7))
+                pagina.set_content(
+                    '<div data-testid="stMainBlockContainer" '
+                    'style="width:1560px"><div data-testid="stPlotlyChart">'
+                    '<div class="js-plotly-plot" style="width:1516px">'
+                    '<svg class="main-svg" width="1516" height="240">'
+                    + anos + '</svg></div></div></div>')
+                etiqueta = pagina.add_style_tag(content=ESTILO_IMPRESSAO)
+                info = preparar_impressao_sem_cortes(pagina, 'A4', True, 0.80)
+                self.assertLess(info['larguraPaginaCss'], 1400)
+                with tempfile.TemporaryDirectory() as pasta:
+                    arquivo = Path(pasta) / 'grafico.pdf'
+                    pagina.pdf(path=str(arquivo), format='A4',
+                               landscape=True, scale=0.80,
+                               margin={'top':'12mm', 'bottom':'14mm',
+                                       'left':'10mm', 'right':'10mm'})
+                    texto = ' '.join(p.extract_text() or ''
+                                     for p in PdfReader(str(arquivo)).pages)
+                    for ano in range(2019, 2026):
+                        self.assertIn(str(ano), texto)
+                etiqueta.evaluate("el => el.remove()")
+                restaurar_impressao(pagina)
+            finally:
+                navegador.close()
+
     def test_plotly_grande_cabe_na_pagina_e_estado_e_restaurado(self):
         try:
             from playwright.sync_api import sync_playwright
