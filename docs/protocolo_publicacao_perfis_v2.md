@@ -2,7 +2,7 @@
 
 **Decisão:** autorização de apresentação pelo responsável pelo Projeto Integrador IV em 13/11/2026.  
 **Escopo:** somente gráficos e tabelas agregados na interface pública Streamlit, com supressão de células pequenas.  
-**Não é:** revisão acadêmica formal concluída, auditoria exaustiva de risco de reidentificação, publicação irrestrita dos JSONs ou autorização de divulgação de microdados.
+**Natureza da aprovação:** autorização editorial expressa pelo responsável para o painel público, sem alegar certificação externa. Não constitui auditoria exaustiva de privacidade, publicação irrestrita de JSONs nem autorização para divulgar microdados.
 
 ## Indicadores
 
@@ -18,11 +18,11 @@ O modelo descreve **amostras**, não classes sociais oficiais nem estimativas ce
 - Na verificação dos JSONs de 13/11/2026, o IND-057 possui **6 de 18 registros aplicáveis** com contagens pequenas; o IND-058 possui **34 de 90**. Nos campos de contagem examinados dos IND-055/056/059/068, não foram encontradas células abaixo de 30.
 - **Não se substitui dado ausente por zero** e não se recalculam médias, medianas ou percentuais a partir das linhas omitidas.
 - A proteção é aplicada tanto em `painel_paginas_contrato_68.py` quanto em `painel_catalogo_68.py`. Os gráficos podem apresentar lacunas ou não ter todos os perfis/competências em determinado recorte.
-- O aviso na interface distingue a autorização editorial **com ressalvas** da **revisão acadêmica formal ainda pendente**.
+- O aviso na interface informa a **autorização editorial do responsável**, a natureza amostral dos perfis e a proteção das células pequenas. Não apresenta certificação acadêmica que não tenha sido demonstrada.
 
-## Verificações e pendências
+## Proteções e verificações
 
-A inspeção do conteúdo dos seis JSONs e a aplicação de uma regra de supressão simples **não garantem anonimização completa**, não avaliam todas as possibilidades de inferência por comparação entre tabelas e não substituem revisão de especialistas. Devem ser evitadas rotas públicas de download dos arquivos completos sem sanitização.
+A inspeção do conteúdo dos seis JSONs e a aplicação de uma regra de supressão simples **não garantem anonimização completa** nem avaliam todas as possibilidades de inferência por comparação entre tabelas. Devem ser evitadas rotas públicas de download dos arquivos completos sem sanitização.
 
 Antes de colocar o link público em circulação, executar:
 
