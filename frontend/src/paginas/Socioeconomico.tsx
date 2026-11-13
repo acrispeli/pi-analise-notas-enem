@@ -3,11 +3,14 @@ import { COR, CORES, Grafico, type Figura } from '../grafico.tsx';
 import { Aviso, Cartao, Estado } from '../layout.tsx';
 import { useFiltros } from '../filtros.tsx';
 import { useDados } from '../useDados.ts';
-import { formatarNota, numero } from '../lib/formatar.ts';
+import { formatarInteiro, formatarNota, formatarPercentual, numero } from '../lib/formatar.ts';
 import { contagemPublicavel, metricaPublicavel, porUf } from '../lib/supressao.ts';
 import { NOMES_UF } from '../lib/ufs.ts';
 
 type CategoriaPerfil = { codigo?: string; rotulo?: string; quantidade?: number; percentual?: number; requires_privacy_review?: boolean };
+type DicionarioQuestoes = {
+  anos?: Record<string, Record<string, { pergunta?: string; respostas?: Record<string, string> }>>;
+};
 type Questao = { questao?: string; tema?: string; categorias?: CategoriaPerfil[]; tem_agregacao_para_privacidade?: boolean };
 type FaixaRenda = { codigo_renda?: string; faixa_renda?: string; descricao_faixa?: string; ordem?: number; n_redacoes?: number; media?: number; n_pequeno?: boolean; competencias?: Record<string, { media?: number; n_redacoes?: number }> };
 type FaixaEscola = { codigo_escolaridade?: string; descricao_categoria?: string; ordem?: number; n_redacoes?: number; media?: number; n_pequeno?: boolean; suprimido?: boolean };
@@ -74,6 +77,7 @@ export default function Socioeconomico() {
   const { ano, uf, limiar } = useFiltros();
   const todos = ano === 'todos';
   const pedido = useDados<Socio>(todos ? null : `/data/${ano}/socioeconomic.json`);
+  const dicionario = useDados<DicionarioQuestoes>(todos ? null : '/data/dicionario-questoes.json');
   const [questao, setQuestao] = useState('Q001');
   const [guardiao, setGuardiao] = useState<'Q001' | 'Q002'>('Q001');
   const [ocupacao, setOcupacao] = useState('pai_ou_responsavel_masculino');
@@ -94,6 +98,7 @@ export default function Socioeconomico() {
   const perfil = uf === 'BR' ? doc.profile?.brasil : porUf(doc.profile?.ufs, uf);
   const questoes = perfil?.questoes ?? [];
   const escolhida = questoes.find((item) => item.questao === questao) ?? questoes[0];
+  const verbete = escolhida?.questao ? dicionario.dados?.anos?.[ano]?.[escolhida.questao] : undefined;
   const temCruzamento = Boolean(doc.income_total && doc.income_competencies && doc.parent_education_total);
   const renda = uf === 'BR' ? doc.income_total?.national : doc.income_total?.states?.[uf];
   const rendaComp = uf === 'BR' ? doc.income_competencies?.national : doc.income_competencies?.states?.[uf];
@@ -118,9 +123,31 @@ export default function Socioeconomico() {
                 ))}
               </select>
             </label>
-            <UmGrafico identificador="perfil-grafico" figura={graficoPerfil(escolhida, limiar)} />
+            {verbete?.pergunta ? <p className="nota" data-testid="enunciado-questionario"><strong>Enunciado da edição:</strong> {verbete.pergunta}</p> : null}
+            <UmGrafico identificador="perfil-grafico" figura={graficoPerfil(escolhida, limiar, verbete?.respostas)} />
+            <details className="leitura-tabela" data-testid="respostas-questionario">
+              <summary>Ver significado completo e quantidades das respostas</summary>
+              <table>
+                <thead><tr><th>Código</th><th>Significado nesta edição</th><th>Respostas</th><th>Percentual</th></tr></thead>
+                <tbody>
+                  {(escolhida.categorias ?? []).map((categoria, indice) => {
+                    const quantidade = contagemPublicavel(categoria.quantidade, limiar, categoria);
+                    const percentual = numero(categoria.percentual);
+                    const codigo = categoria.codigo ?? categoria.rotulo ?? '';
+                    const significado = (categoria.codigo && verbete?.respostas?.[categoria.codigo]) ||
+                      (categoria.rotulo && categoria.rotulo !== codigo ? categoria.rotulo : 'Descrição não disponível no dicionário desta edição.');
+                    return <tr key={codigo + '-' + indice}>
+                      <td>{codigo}</td><td>{significado}</td>
+                      <td>{quantidade === null ? 'não disponível' : formatarInteiro(quantidade)}</td>
+                      <td>{quantidade === null || percentual === null ? 'não disponível' : formatarPercentual(percentual)}</td>
+                    </tr>;
+                  })}
+                </tbody>
+              </table>
+              <p className="nota">Fonte: dicionário do ENEM da edição selecionada. Respostas são agregadas; categorias não são equivalentes entre todos os anos.</p>
+            </details>
             <p className="nota">
-              Os rótulos são os códigos publicados no questionário.
+              As letras são os códigos originais. A descrição completa de cada alternativa aparece em “Ver significado completo e quantidades das respostas”.
               {escolhida.tem_agregacao_para_privacidade ? ' Há categorias reunidas por proteção de privacidade.' : ''}
             </p>
           </>
@@ -204,17 +231,18 @@ function UmGrafico({ figura, identificador }: { figura: Figura | null; identific
   return <Grafico identificador={identificador} titulo="" figura={figura} embutido />;
 }
 
-function graficoPerfil(questao: Questao, limiar: number): Figura | null {
+function graficoPerfil(questao: Questao, limiar: number, respostas?: Record<string, string>): Figura | null {
   const linhas = [];
   for (const categoria of questao.categorias ?? []) {
     const n = contagemPublicavel(categoria.quantidade, limiar, categoria);
     const pct = numero(categoria.percentual);
     if (n === null || pct === null) continue;
-    linhas.push({ rotulo: categoria.rotulo || categoria.codigo || '', pct });
+    const codigo = categoria.codigo || categoria.rotulo || '';
+    linhas.push({ rotulo: codigo, significado: (categoria.codigo && respostas?.[categoria.codigo]) || categoria.rotulo || codigo, pct });
   }
   if (!linhas.length) return null;
   return {
-    data: [{ type: 'bar', orientation: 'h', y: linhas.map((item) => item.rotulo), x: linhas.map((item) => item.pct), marker: { color: COR }, hovertemplate: '%{y}: %{x:.1f}%<extra></extra>' }],
+    data: [{ type: 'bar', orientation: 'h', y: linhas.map((item) => item.rotulo), x: linhas.map((item) => item.pct), customdata: linhas.map((item) => item.significado), marker: { color: COR }, hovertemplate: 'Resposta %{y}<br>%{customdata}<br>%{x:.1f}%<extra></extra>' }],
     altura: Math.max(280, linhas.length * 32),
     layout: { margin: { l: 220 }, xaxis: { title: { text: 'Participações (%)' } } },
   };
