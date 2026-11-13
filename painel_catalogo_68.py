@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Catálogo interno de 68 indicadores: somente saídas agregadas locais.
 
-Não utiliza microdados, não transforma status draft em publicado e não
-infere equivalência entre o IND-054 original e os clusters V2.
+Não utiliza microdados, aplica autorização e proteção de células pequenas
+na apresentação V2 e não confunde IND-054 com clusters V2.
 """
 from __future__ import annotations
 import json
@@ -11,6 +11,8 @@ from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
+
+from publicacao_segura_v2 import preparar_doc_publico_v2, mostrar_aviso_publicacao_v2
 
 EXCLUIDOS = frozenset({60, 61, 62, 63})
 V2 = frozenset({55, 56, 57, 58, 59, 68})
@@ -216,6 +218,15 @@ def pagina_catalogo_68(st, raiz: Path, ano: int | None, uf: str) -> None:
     except (ValueError, OSError) as exc:
         st.error(f'Não foi possível carregar {origem.name}: {exc}')
         return
+    if escolha in V2:
+        doc, ocultas = preparar_doc_publico_v2(doc, escolha)
+        if doc is None:
+            st.warning(
+                'Este indicador não tem resultados autorizados para publicação '
+                'ou a fonte V2 não pôde ser validada.'
+            )
+            return
+        mostrar_aviso_publicacao_v2(st, escolha, ocultas)
     st.caption(f'Fonte: `{origem.relative_to(raiz)}`')
     st.caption(f'Indicador: {doc.get("indicator_id", f"IND-{escolha:03d}")} · Apresentação editorial validada pela equipe · Metadados de origem preservados')
     if escolha in V2:
