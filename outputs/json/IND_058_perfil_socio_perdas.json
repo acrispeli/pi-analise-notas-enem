@@ -1,7 +1,7 @@
 {
   "indicator_id": "IND-058",
   "slug": "IND_058_perfil_socio_perdas",
-  "status": "draft",
+  "status": "apresentacao_publica_com_ressalvas",
   "generated_at": "2026-11-03T11:54:23.273343+00:00",
   "dashboard_target": "pages.socioeconomic.cluster_losses",
   "population_note": "AMOSTRA_SOCIO_ML_COM_NOTAS_VALIDADA",
@@ -1184,8 +1184,16 @@
       "motivo": "Sem vínculo público legítimo notas×socioeconômico"
     }
   ],
-  "review": "pendente_revisao_academica_e_privacidade_contextual",
-  "modo_execucao": "rascunho_interno_nao_publicar",
-  "publicacao_autorizada": false,
+  "review": "liberacao_pelo_responsavel_com_supressao_de_celulas_pequenas; revisao_academica_formal_pendente",
+  "modo_execucao": "divulgacao_streamlit_com_controle_de_celulas_pequenas",
+  "publicacao_autorizada": true,
+  "aprovacao_apresentacao_publica": {
+    "data": "2026-11-13",
+    "escopo": "link_publico_streamlit_com_filtro_de_contagens_n_menor_30",
+    "origem_decisao": "autorizacao_explicita_do_responsavel_pelo_projeto",
+    "revisao_original": "pendente_revisao_academica_e_privacidade_contextual",
+    "verificacao_realizada": "inspecao_de_campos_de_contagem_dos_seis_jsons_e_supressao_automatica_na_interface",
+    "limite": "nao_comprova_revisao_academica_formal_nem_autoriza_exportacao_de_jsons_sem_suprimento"
+  },
   "modelo_referencia": "V2_MCA10_KMeans3_e31f55489e16f296"
 }
