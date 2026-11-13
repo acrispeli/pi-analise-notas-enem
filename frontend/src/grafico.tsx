@@ -49,14 +49,55 @@ function eixo(base: object, extra: object | undefined): object {
   };
 }
 
-function layoutFigura(extra: object | undefined, altura: number): object {
+/**
+ * Plotly pode inferir um eixo como "category" quando há poucas observações
+ * numéricas (por exemplo, sete percentuais anuais). Isso coloca cada valor na
+ * mesma distância visual, independentemente da diferença real entre eles.
+ *
+ * Identificamos coordenadas numéricas pelos valores efetivamente fornecidos
+ * aos traces, sem converter rótulos textuais nem códigos do questionário.
+ * Ignoramos nulls (pontos não publicáveis) e respeitamos escalas explícitas
+ * como "log", caso sejam usadas no futuro.
+ */
+function eixoNumerico(dados: object[], coordenada: 'x' | 'y'): boolean {
+  let encontrouNumero = false;
+  for (const dado of dados) {
+    const registro = dado as Record<string, unknown>;
+    const valores = registro[coordenada];
+    if (!Array.isArray(valores)) continue;
+    for (const valor of valores) {
+      if (valor === null || valor === undefined) continue;
+      if (typeof valor !== 'number' || !Number.isFinite(valor)) return false;
+      encontrouNumero = true;
+    }
+  }
+  return encontrouNumero;
+}
+
+function configurarEixo(
+  base: object,
+  personalizado: object | undefined,
+  dados: object[],
+  coordenada: 'x' | 'y',
+): object {
+  const configuracao = eixo(base, personalizado);
+  const atual = configuracao as { type?: string };
+  // Um eixo numérico nunca pode virar categoria apenas por inferência
+  // automática do Plotly. Mantemos "log"/"date" quando explícitos.
+  return eixoNumerico(dados, coordenada) &&
+    (atual.type === undefined || atual.type === 'category')
+    ? { ...configuracao, type: 'linear' }
+    : configuracao;
+}
+
+function layoutFigura(extra: object | undefined, altura: number, dados: object[]): object {
   const sobre = (extra ?? {}) as { xaxis?: object; yaxis?: object; margin?: object };
   return {
     ...LAYOUT,
     ...sobre,
     height: altura,
-    xaxis: eixo(LAYOUT.xaxis, sobre.xaxis),
-    yaxis: eixo(LAYOUT.yaxis, sobre.yaxis),
+    xaxis: configurarEixo(LAYOUT.xaxis, sobre.xaxis, dados, 'x'),
+    yaxis: configurarEixo(LAYOUT.yaxis, sobre.yaxis, dados, 'y'),
     margin: { ...LAYOUT.margin, ...sobre.margin },
   };
 }
@@ -118,7 +159,7 @@ export function Grafico({
     return figura ? (
       <Plot
         data={figura.data}
-        layout={layoutFigura(figura.layout, altura)}
+        layout={layoutFigura(figura.layout, altura, figura.data)}
         config={CONFIG}
         useResizeHandler
         style={{ width: '100%', height: altura }}
