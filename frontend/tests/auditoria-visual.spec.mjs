@@ -162,6 +162,8 @@ test('filtros permanecem no endereço ao navegar e atualizar', async ({ page }) 
   await page.locator('[data-filtro="uf"]').selectOption('SP');
   await expect(page).toHaveURL(/ano=2020/);
   await expect(page).toHaveURL(/uf=SP/);
+  const menuMobile = page.locator('.menu-mobile');
+  if (await menuMobile.isVisible()) await menuMobile.click();
   await page.getByRole('link', { name: 'Competências' }).click();
   await expect(page).toHaveURL(/competencias\?/);
   await page.reload();
