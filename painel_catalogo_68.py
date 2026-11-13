@@ -193,7 +193,7 @@ def _seis_perfis(st, doc: dict, ind: int, ano: int | None, uf: str):
 
 def pagina_catalogo_68(st, raiz: Path, ano: int | None, uf: str) -> None:
     st.title('Catálogo consolidado · 68 indicadores')
-    st.caption('Resultados agregados para consulta e apresentação pública. Aprovação editorial declarada pela equipe do projeto.')
+    st.caption('Resultados agregados para consulta pública, com autorização editorial pelo responsável pelo projeto.')
     arquivos = inventario(raiz)
     disponiveis = sum(bool(x) for x in arquivos.values())
     st.metric('Indicadores com JSON disponível', f'{disponiveis}/68')
@@ -231,7 +231,7 @@ def pagina_catalogo_68(st, raiz: Path, ano: int | None, uf: str) -> None:
             return
         mostrar_aviso_publicacao_v2(st, escolha, ocultas)
     st.caption(f'Fonte: `{origem.relative_to(raiz)}`')
-    st.caption(f'Indicador: {doc.get("indicator_id", f"IND-{escolha:03d}")} · Apresentação editorial validada pela equipe · Metadados de origem preservados')
+    st.caption(f'Indicador: {doc.get("indicator_id", f"IND-{escolha:03d}")} · Apresentação pública autorizada · Fontes rastreáveis no histórico do projeto')
     if escolha in V2:
         _seis_perfis(st, doc, escolha, ano, uf)
         return
