@@ -61,6 +61,18 @@ export default function PadroesMl() {
   const ativo = grupos.find((item) => item.cluster === grupo) ?? grupos[0];
   const anoNumero = Number(ano);
 
+  // Ausência dos modelos não deve gerar uma sequência de cartões e gráficos vazios.
+  // Os indicadores IND-055–059 podem continuar disponíveis no pacote complementar.
+  if (!mca && !clusters) {
+    return (
+      <div data-visual="ml">
+        <h1>Perfis</h1>
+        <Aviso>Os modelos exploratórios do questionário (IND-053 e IND-054) não estão disponíveis para {ano}. Os resultados complementares, quando existentes, aparecem abaixo.</Aviso>
+        <PerfisAmostra extra={extra.dados} ano={anoNumero} limiar={limiar} carregando={extra.carregando} erro={extra.erro} />
+      </div>
+    );
+  }
+
   return (
     <div data-visual="ml">
       <h1>Perfis</h1>
