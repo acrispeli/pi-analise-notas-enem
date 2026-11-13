@@ -16,7 +16,7 @@ type Guias = { natureza: string; fonte: string; indicadores: Record<string, Guia
 // Identificadores como "ind044-grafico" são associados automaticamente ao IND-044.
 const CODIGOS: Record<string, number> = {
   histograma: 6, situacao: 7, 'ranking-uf': 52,
-  'resumo-evolucao': 64,
+  'resumo-evolucao': 64, 'serie-questionario': 40,
   medias: 9, niveis: 12, correlacao: 13, variancia: 14,
   loadings: 15, hexbin: 16, perfis: 17,
   'diferenca-total': 20, 'diferenca-competencia': 21,
