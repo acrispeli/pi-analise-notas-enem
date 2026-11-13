@@ -74,8 +74,8 @@ def mostrar_aviso_publicacao_v2(st, indicador: int, ocultas: int) -> None:
         return
     st.caption(
         "Perfis M1–M3: amostras nacionais, não estimativas da população. "
-        "Divulgação autorizada pelo responsável pelo projeto com ressalvas "
-        "e supressão de células pequenas. Revisão acadêmica formal ainda pendente."
+        "Divulgação pública autorizada pelo responsável pelo projeto, "
+        "com supressão de células pequenas e interpretação descritiva."
     )
     if ocultas:
         st.warning(
