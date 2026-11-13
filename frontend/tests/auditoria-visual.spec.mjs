@@ -229,3 +229,57 @@ test('página Método oferece pesquisa por indicador', async ({ page }) => {
   await expect(page.locator('.metodo summary')).toContainText('IND-020');
   await expect(page.locator('.metodo')).toHaveAttribute('open', '');
 });
+
+test('abertura sem parâmetros apresenta todas as edições e evolução anual', async ({ page }) => {
+  await page.goto('/visao-geral', { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-filtro="ano"]')).toHaveValue('todos');
+  await expect(page.locator('[data-filtro="uf"]')).toHaveValue('BR');
+  const grafico = page.locator('[data-visual="resumo-evolucao"] .js-plotly-plot');
+  await expect(grafico).toBeVisible({ timeout: 40_000 });
+  await expect(page.locator('[data-visual="resumo-evolucao"]')).toContainText('média consolidada');
+  const serie = await grafico.evaluate((elemento) => {
+    const ponto = elemento.data?.[0];
+    return { anos: [...(ponto?.x ?? [])].map(String), valores: [...(ponto?.y ?? [])] };
+  });
+  expect(serie.anos).toContain('2019');
+  expect(serie.anos).toContain('2025');
+  expect(serie.valores.filter((v) => typeof v === 'number').length).toBeGreaterThan(1);
+});
+
+test('evolução da abertura respeita a UF selecionada', async ({ page }) => {
+  await page.goto('/visao-geral?ano=todos&uf=SP');
+  await expect(page.locator('[data-filtro="uf"]')).toHaveValue('SP');
+  await expect(page.locator('[data-visual="resumo-evolucao"] .js-plotly-plot')).toBeVisible({ timeout: 40_000 });
+  await expect(page.locator('[data-visual="resumo-evolucao"]')).toContainText('Edição do exame');
+});
+
+test('guia dos indicadores explica conceitos e cuidados, sem alterar valores', async ({ page }) => {
+  await prepararPagina(page, 'visao-geral', '2024', 'BR');
+  const guia = page.locator('[data-visual="histograma"] [data-indicador="IND-006"]');
+  await expect(guia.locator('summary')).toBeVisible();
+  await guia.locator('summary').click();
+  await expect(guia).toContainText('O que está sendo medido?');
+  await expect(guia).toContainText('Como interpretar?');
+  await expect(guia).toContainText('Sugestão pedagógica');
+  await expect(guia).toContainText('não demonstram causalidade');
+  await expect(guia).toContainText('2024 · Brasil');
+});
+
+test('questionário 2024 mostra significado real de alternativa e enunciado', async ({ page }) => {
+  await prepararPagina(page, 'socioeconomico', '2024', 'BR');
+  await expect(page.getByTestId('enunciado-questionario')).toContainText('Até que série');
+  const legenda = page.getByTestId('respostas-questionario');
+  await legenda.locator('summary').click();
+  await expect(legenda).toContainText('Nunca estudou.');
+  await expect(legenda.locator('tbody tr').first()).toContainText('A');
+  await expect(legenda.locator('tbody tr').first()).toContainText('Nunca estudou.');
+});
+
+test('questionário preserva diferença semântica da pergunta Q006 entre 2023 e 2024', async ({ page }) => {
+  await prepararPagina(page, 'socioeconomico', '2023', 'BR');
+  await page.locator('[data-visual="perfil"] select').selectOption('Q006');
+  await expect(page.getByTestId('enunciado-questionario')).toContainText('Qual é a renda mensal');
+  await page.locator('[data-filtro="ano"]').selectOption('2024');
+  await expect(page.locator('[data-visual="perfil"] select')).toHaveValue('Q006');
+  await expect(page.getByTestId('enunciado-questionario')).toContainText('Você possui renda?');
+});
