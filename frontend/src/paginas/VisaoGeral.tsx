@@ -206,7 +206,7 @@ export default function VisaoGeral() {
         identificador="histograma"
         titulo="Em quais faixas se concentram as notas?"
         figura={hist.figura}
-        nota={hist.omitidos ? 'Há faixa com poucas redações. O gráfico não aparece, para não virar zero.' : undefined}
+        nota={hist.omitidos ? 'Há faixa sem contagem disponível; o gráfico não foi completado com zero.' : undefined}
       />
       <div className="grade-2">
         <Grafico
@@ -216,7 +216,7 @@ export default function VisaoGeral() {
           nota={
             [
               populacaoStatus === 'POP_ALL' ? 'Inclui todas as participações, não só as redações válidas.' : '',
-              sit.omitidos ? 'Situações com poucas redações não aparecem e não entram como zero.' : '',
+              sit.omitidos ? 'Situações sem contagem disponível não aparecem e não entram como zero.' : '',
             ]
               .filter(Boolean)
               .join(' ') || undefined

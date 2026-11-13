@@ -1,30 +1,30 @@
 import { numero } from './formatar.ts';
 
+/**
+ * Critério de divulgação exploratória:
+ * - contagens agregadas pequenas podem ser exibidas;
+ * - métricas calculadas com menos de 5 observações continuam indisponíveis;
+ * - supressões efetivas feitas na origem são respeitadas.
+ */
+const MIN_AMOSTRA_METRICA = 5;
+
 export function marcado(item: unknown): boolean {
   if (!item || typeof item !== 'object') return false;
   const registro = item as Record<string, unknown>;
-  return (
-    registro.n_pequeno === true ||
-    registro.suprimido === true ||
-    registro.requires_privacy_review === true ||
-    registro.requer_revisao_privacidade === true ||
-    registro.sinalizacao_suprimida === true
-  );
+  return registro.suprimido === true || registro.sinalizacao_suprimida === true;
 }
 
-/** Contagem positiva abaixo do limiar fica suprimida. Zero publicado continua zero. */
-export function contagemPublicavel(valor: unknown, limiar: number, item?: unknown): number | null {
+/** Não confundir contagem pequena com contagem ausente ou suprimida na origem. */
+export function contagemPublicavel(valor: unknown, _limiar: number, item?: unknown): number | null {
   if (item && marcado(item)) return null;
-  const n = numero(valor);
-  if (n === null) return null;
-  if (n > 0 && n < limiar) return null;
-  return n;
+  return numero(valor);
 }
 
-export function metricaPublicavel(valor: unknown, denominador: unknown, limiar: number, item?: unknown): number | null {
+/** Uma média com n=1 revelaria o valor do único registro do recorte. */
+export function metricaPublicavel(valor: unknown, denominador: unknown, _limiar: number, item?: unknown): number | null {
   if (item && marcado(item)) return null;
   const n = numero(denominador);
-  if (n !== null && n > 0 && n < limiar) return null;
+  if (n !== null && n < MIN_AMOSTRA_METRICA) return null;
   return numero(valor);
 }
 

@@ -50,7 +50,7 @@ export default function AltoDesempenho() {
       </div>
       {todos ? null : (
         <>
-          <Grafico identificador="ind032" titulo="Em qual competência o desconto é mais frequente?" figura={barrasCompetencia(desconto?.resumo_competencias as Comp[] | undefined, 'percentual_desconto', 'n_redacoes', limiar, 'Redações com desconto (%)')} nota="Nas redações de 900 a 980. Grupo pequeno demais não entra como zero." />
+          <Grafico identificador="ind032" titulo="Em qual competência o desconto é mais frequente?" figura={barrasCompetencia(desconto?.resumo_competencias as Comp[] | undefined, 'percentual_desconto', 'n_redacoes', limiar, 'Redações com desconto (%)')} nota="Nas redações de 900 a 980. Valores indisponíveis não entram como zero." />
           <Grafico identificador="ind033" titulo="Qual competência concentra a perda de pontos?" figura={barrasCompetencia(participacao?.resumo_competencias as Comp[] | undefined, 'percentual_participacao', 'n_redacoes', limiar, 'Participação na perda (%)')} />
           <div className="cartoes">
             <Cartao rotulo="Uma única competência abaixo de 200" valor={textoContagem(unica?.n_casos_com_uma_unica_competencia, limiar, unica)} detalhe={textoPercentual(unica?.percentual_casos_unicos_na_pop_near, unica?.n_near, limiar)} />
@@ -70,7 +70,7 @@ export default function AltoDesempenho() {
           <Grafico identificador="ind036" titulo="Quais descontos aparecem juntos acima do acaso?" figura={graficoRegras(regras, limiar)} nota="Quanto maior a barra, mais a combinação supera o que seria esperado ao acaso." />
           <Testes testes={testes} familia={familia} onFamilia={setFamilia} />
           <Grafico identificador="ind038" titulo="Os dois corretores concordam sobre o desconto?" figura={graficoConcordancia(concordancia, limiar)} nota="Os dois marcaram a competência abaixo de 200, nas redações de 900 a 980." />
-          <Grafico identificador="ind039" titulo="Em qual faixa de 900 a 1000 cada competência ainda perde pontos?" figura={graficoMapa(mapa, limiar)} nota="A nota 1000 entra na última faixa. Grupo pequeno demais não aparece como zero." />
+          <Grafico identificador="ind039" titulo="Em qual faixa de 900 a 1000 cada competência ainda perde pontos?" figura={graficoMapa(mapa, limiar)} nota="A nota 1000 entra na última faixa. Valores indisponíveis não aparecem como zero." />
         </>
       )}
     </div>

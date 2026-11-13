@@ -55,7 +55,7 @@ export default function Avaliadores() {
         />
       </div>
       <div className="grade-2">
-        <Grafico identificador="diferenca-total" titulo="Como se distribui a diferença entre os dois corretores?" figura={hist.figura} nota={hist.omitidos ? 'Faixas com poucas avaliações não aparecem.' : 'Conta as redações com as duas notas de corretor.'} />
+        <Grafico identificador="diferenca-total" titulo="Como se distribui a diferença entre os dois corretores?" figura={hist.figura} nota={hist.omitidos ? 'Faixas sem contagem disponível não aparecem.' : 'Conta as redações com as duas notas de corretor.'} />
         <Grafico identificador="diferenca-competencia" titulo="Em qual competência a diferença média é maior?" figura={barras} />
       </div>
       <Grafico identificador="kappa" titulo="Quão parecida é a nota dos dois corretores?" figura={kappas} nota="1 é concordância total. 0 é concordância ao acaso." />

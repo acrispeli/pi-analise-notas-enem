@@ -43,6 +43,11 @@ export default function Metodologia() {
       ) : (
         <p className="nota">Como os números de {edicao} foram calculados.</p>
       )}
+      <p className="nota">
+        Indicadores preliminares (draft) são apresentados para fins acadêmicos. Contagens agregadas pequenas podem ser exibidas;
+        médias e outras métricas com menos de cinco observações ficam indisponíveis quando o denominador é conhecido.
+        A ausência de um valor não deve ser interpretada como zero.
+      </p>
       {blocos.map((bloco) => (
         <article key={bloco.id} className="metodo">
           <h2>{bloco.id}</h2>
