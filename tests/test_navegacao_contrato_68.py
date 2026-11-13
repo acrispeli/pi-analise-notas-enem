@@ -12,6 +12,7 @@ sys.path.insert(0, str(RAIZ))
 from painel_paginas_contrato_68 import (
     ler_catalogo, fontes_indicador, _caminho_contrato,
     _valor_contrato, _filtrar_registros, _kpi_por_uf, ROTAS, MODELO_V2,
+    exibir_detalhe_perfis_materiais,
 )
 
 
@@ -23,6 +24,15 @@ class TestesCatalogo(unittest.TestCase):
         self.assertEqual([p['rota'] for p in cat['paginas']], list(ROTAS))
         self.assertEqual(sum(x['pagina']=='socioeconomic' for x in cat['indicadores']), 18)
         self.assertEqual(sum(x['pagina']=='ml' for x in cat['indicadores']), 2)
+
+    def test_metodologia_m1_m3_so_nos_indicadores_que_utilizam_perfis(self):
+        # Antes, o expansor era repetido em 23 indicadores de duas seções.
+        for numero in (55, 56, 57, 58, 59, 68):
+            with self.subTest(numero=numero):
+                self.assertTrue(exibir_detalhe_perfis_materiais(numero))
+        for numero in (40, 41, 45, 52, 53, 54, 64, 65, 69, 70, 71, 72):
+            with self.subTest(numero=numero):
+                self.assertFalse(exibir_detalhe_perfis_materiais(numero))
 
     def test_variantes_e_preferencia_v2(self):
         with tempfile.TemporaryDirectory() as tmp:
