@@ -7,7 +7,7 @@ Esta revisão amplia o painel público sem alterar microdados, fórmulas, indica
 - A Visão geral apresenta a média anual no período disponível, com recorte da UF selecionada. Os pontos vêm do JSON temporal ou de `serie-uf.json`, e são exibidos **sem interpolação**. Uma interpretação apresenta os valores primeiro/último disponíveis e ressalta a diferença entre série e consolidado ponderado.
 - Gráficos com identificador reconhecido recebem o painel expansível **Entenda este resultado**. Os 68 textos e as ações pedagógicas vêm de `leitura_acessivel_68.py` e `orientacoes_pedagogicas_68.py`; não são inferências automáticas dos valores nem gerados por IA.
 - O Questionário usa `docs/dicionario_questoes_enem_2019_2025.json` para apresentar enunciado, legenda completa, quantidades e porcentagens da edição, mantendo os códigos originais no gráfico. Respostas sem correspondência explícita não recebem rótulo inventado.
-- A escolha Todos os anos não concatena categorias de questionários diferentes. Para essas visualizações, o visitante escolhe uma edição.
+- A página Questionário também apresenta a evolução da contagem de participações POP_SOCIO quando Todos os anos está selecionado; não concatena categorias de perguntas diferentes. Para ver as alternativas, o visitante escolhe uma edição.
 
 ## Origem e sincronização das explicações
 `frontend/scripts/gerar-leituras.mjs` é executado por `frontend/scripts/dividir.mjs` no prebuild. Ele gera dentro de `frontend/public/data`:
