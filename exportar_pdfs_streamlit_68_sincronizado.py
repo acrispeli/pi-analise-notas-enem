@@ -658,19 +658,29 @@ def grafico_historico_tem_todos_anos(leitor, codigo: str) -> bool:
     anos estarem presentes na mesma página do gráfico.
     """
     marcadores = {
-        'IND-002': ('nota media (pontos)', 'nota media da redacao'),
-        'IND-003': ('mediana da redacao (pontos)', 'mediana da redacao'),
-        'IND-004': ('desvio-padrao das notas (pontos)', 'desvio-padrao da nota'),
-        'IND-005': ('nota (pontos)', 'intervalo interquartil da nota'),
+        'IND-002': ('nota media (pontos)', 'nota media da redacao', 'mean score'),
+        'IND-003': ('nota mediana (pontos)', 'mediana da redacao', 'median score'),
+        'IND-004': ('dispersao das notas (desvio-padrao)', 'desvio-padrao da nota',
+                    'desvio-padrao das notas (pontos)', 'std score'),
+        'IND-005': ('nota de referencia', 'nota (pontos)'),
     }
     opcoes = marcadores.get(codigo)
     if not opcoes:
         return True
     for pagina in leitor.pages:
         texto = _normalizar_validacao(pagina.extract_text() or '')
-        if (any(marcador in texto for marcador in opcoes)
-                and all(re.search(r'(?<!\d)' + str(ano) + r'(?!\d)', texto)
-                        for ano in range(2019, 2026))):
+        anos_completos = all(
+            re.search(r'(?<!\d)' + str(ano) + r'(?!\d)', texto)
+            for ano in range(2019, 2026)
+        )
+        # IND-005 deve conter os cinco percentis, e não uma série genérica
+        # de quantidade "N" ou uma variação isolada do intervalo interquartil.
+        percentis_completos = (codigo != 'IND-005' or all(
+            re.search(r'(?<![a-z0-9])' + p + r'(?![a-z0-9])', texto)
+            for p in ('p25', 'p50', 'p75', 'p90', 'p95')
+        ))
+        if (anos_completos and percentis_completos and
+                any(marcador in texto for marcador in opcoes)):
             return True
     return False
 
