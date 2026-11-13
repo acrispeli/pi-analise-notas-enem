@@ -638,9 +638,40 @@ def esperar_indicador_estavel(page, codigo: str, titulo: str = '',
         'de fonte ausente; a captura não foi aprovada.')
 
 
+def ultima_pagina_so_rodape(leitor) -> bool:
+    """Detecta página órfã que contém apenas a paginação do navegador."""
+    if len(leitor.pages) < 2:
+        return False
+    texto = _normalizar_validacao(leitor.pages[-1].extract_text() or '')
+    texto = re.sub(r'projeto integrador iv.*?analises nao oficiais do inep\\.', '', texto)
+    texto = re.sub(r'\\b\\d+\\s*/\\s*\\d+\\b', '', texto)
+    return not texto.strip()
+
+
+def grafico_historico_tem_todos_anos(leitor, codigo: str) -> bool:
+    """Confere rótulos visíveis, não apenas a menção textual a 2025."""
+    marcadores = {
+        'IND-002': 'nota media (pontos)',
+        'IND-003': 'mediana da redacao (pontos)',
+        'IND-004': 'desvio-padrao das notas (pontos)',
+        'IND-005': 'nota (pontos)',
+    }
+    marcador = marcadores.get(codigo)
+    if not marcador:
+        return True
+    for pagina in leitor.pages:
+        texto = _normalizar_validacao(pagina.extract_text() or '')
+        if marcador in texto and all(
+                re.search(r'(?<!\\d)' + str(ano) + r'(?!\\d)', texto)
+                for ano in range(2019, 2026)):
+            return True
+    return False
+
+
 def imprimir_pdf(page, destino: Path, papel: str, paisagem: bool, espera: int,
                  codigo: str = '', competencia: str = '', titulo: str = '',
-                 pergunta: str = '', pista: str = '') -> int:
+                 pergunta: str = '', pista: str = '',
+                 historico: bool = False) -> int:
     from pypdf import PdfReader
     destino.parent.mkdir(parents=True, exist_ok=True)
 
@@ -698,21 +729,29 @@ def imprimir_pdf(page, destino: Path, papel: str, paisagem: bool, espera: int,
         }""")
         print('  Area preparada para impressao: '+str(altura), flush=True)
 
-        page.pdf(
-            path=str(destino), format=papel, landscape=paisagem,
-            print_background=True, prefer_css_page_size=False,
-            scale=0.80,
-            margin={'top':'12mm','bottom':'14mm','left':'10mm','right':'10mm'},
-            display_header_footer=True,
-            header_template='<div></div>',
-            footer_template=('<div style="font-size:7px;width:100%;text-align:center;'
-                             'color:#666">Projeto Integrador IV — UNIVESP · '
-                             'Dados agregados · Versão de apresentação · '
-                             'Validação editorial declarada pela equipe · '
-                             'Análises não oficiais do INEP. &nbsp; '
-                             '<span class="pageNumber"></span> / '
-                             '<span class="totalPages"></span></div>'),
-        )
+        # Se a última página contiver apenas o rodapé, reduza um pouco
+        # a escala e imprima novamente. Nunca deixe um PDF órfão como OK.
+        for escala in (0.80, 0.77):
+            page.pdf(
+                path=str(destino), format=papel, landscape=paisagem,
+                print_background=True, prefer_css_page_size=False,
+                scale=escala,
+                margin={'top':'12mm','bottom':'14mm','left':'10mm','right':'10mm'},
+                display_header_footer=True,
+                header_template='<div></div>',
+                footer_template=('<div style="font-size:7px;width:100%;text-align:center;'
+                                 'color:#666">Projeto Integrador IV — UNIVESP · '
+                                 'Dados agregados · Versão de apresentação · '
+                                 'Validação editorial declarada pela equipe · '
+                                 'Análises não oficiais do INEP. &nbsp; '
+                                 '<span class="pageNumber"></span> / '
+                                 '<span class="totalPages"></span></div>'),
+            )
+            impresso = PdfReader(str(destino), strict=False)
+            if not ultima_pagina_so_rodape(impresso):
+                break
+            print(f'  Página final apenas com rodapé; tentando escala menor '
+                  f'(escala atual: {escala:.2f}).', flush=True)
     finally:
         # O CSS de impressao nao pode ocultar a barra lateral na proxima captura.
         try:
@@ -729,6 +768,11 @@ def imprimir_pdf(page, destino: Path, papel: str, paisagem: bool, espera: int,
         pg.extract_text() or '' for pg in leitor.pages))
     ausentes=[sinal for sinal in verificacoes
              if _normalizar_validacao(sinal) not in texto_pdf]
+    if ultima_pagina_so_rodape(leitor):
+        ausentes.append('última página contém somente o rodapé')
+    if historico and codigo in ('IND-002', 'IND-003', 'IND-004', 'IND-005'):
+        if not grafico_historico_tem_todos_anos(leitor, codigo):
+            ausentes.append('gráfico histórico truncado: faltam rótulos entre 2019 e 2025')
     if paginas < 1 or ausentes:
         # Nao anuncia OK para um PDF que so capturou o cabecalho da pagina.
         destino_falho=destino.with_name(destino.stem+'_INCOMPLETO.pdf')
@@ -1072,7 +1116,8 @@ def main():
                                              codigo,comp,
                                              titulo=item.get('titulo','') if item else '',
                                              pergunta=item.get('pergunta','') if item else '',
-                                             pista=pistas_pedagogicas.get(item['numero'],'') if item else '')
+                                             pista=pistas_pedagogicas.get(item['numero'],'') if item else '',
+                                             historico=(ano == 'Todos os anos'))
                                         if args.png:
                                             salvar_png(page,caminho.with_suffix('.png'))
                                         status='OK'
