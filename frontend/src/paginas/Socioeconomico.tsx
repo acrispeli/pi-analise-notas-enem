@@ -11,6 +11,10 @@ type CategoriaPerfil = { codigo?: string; rotulo?: string; quantidade?: number; 
 type DicionarioQuestoes = {
   anos?: Record<string, Record<string, { pergunta?: string; respostas?: Record<string, string> }>>;
 };
+type SerieQuestionario = {
+  nacional?: { ano: number; n_participacoes?: number }[];
+  ufs?: Record<string, { ano: number; n_participacoes?: number }[]>;
+};
 type Questao = { questao?: string; tema?: string; categorias?: CategoriaPerfil[]; tem_agregacao_para_privacidade?: boolean };
 type FaixaRenda = { codigo_renda?: string; faixa_renda?: string; descricao_faixa?: string; ordem?: number; n_redacoes?: number; media?: number; n_pequeno?: boolean; competencias?: Record<string, { media?: number; n_redacoes?: number }> };
 type FaixaEscola = { codigo_escolaridade?: string; descricao_categoria?: string; ordem?: number; n_redacoes?: number; media?: number; n_pequeno?: boolean; suprimido?: boolean };
@@ -78,17 +82,40 @@ export default function Socioeconomico() {
   const todos = ano === 'todos';
   const pedido = useDados<Socio>(todos ? null : `/data/${ano}/socioeconomic.json`);
   const dicionario = useDados<DicionarioQuestoes>(todos ? null : '/data/dicionario-questoes.json');
+  const serieQuestionario = useDados<SerieQuestionario>(todos ? '/data/serie-questionario.json' : null);
   const [questao, setQuestao] = useState('Q001');
   const [guardiao, setGuardiao] = useState<'Q001' | 'Q002'>('Q001');
   const [ocupacao, setOcupacao] = useState('pai_ou_responsavel_masculino');
   const [dimensao, setDimensao] = useState('TP_SEXO');
 
   if (todos) {
+    const pontos = uf === 'BR'
+      ? (serieQuestionario.dados?.nacional ?? [])
+      : (serieQuestionario.dados?.ufs?.[uf] ?? []);
+    const anos = [...pontos].sort((a, b) => a.ano - b.ano);
+    const valores = anos.map((item) => contagemPublicavel(item.n_participacoes, limiar));
+    const figura: Figura | null = valores.some((valor) => valor !== null) ? {
+      data: [{
+        type: 'scatter', mode: 'lines+markers',
+        x: anos.map((item) => String(item.ano)), y: valores,
+        connectgaps: false, marker: { size: 9, color: COR },
+        line: { width: 3, color: COR },
+        hovertemplate: 'ENEM %{x}<br>Participações com questionário: %{y:,.0f}<extra></extra>',
+      }],
+      altura: 360,
+      layout: { xaxis: { title: { text: 'Edição do ENEM' } }, yaxis: { title: { text: 'Participações com questionário' } } },
+    } : null;
     return (
       <div>
         <h1>Questionário</h1>
-        <p className="nota">C1 escrita formal · C2 tema · C3 argumentação · C4 coesão · C5 proposta de intervenção</p>
-        <Aviso>Escolha um ano. O questionário muda entre as edições e não é somado.</Aviso>
+        <p className="nota">Evolução da população POP_SOCIO de {uf === 'BR' ? 'Brasil' : uf}, edição por edição.</p>
+        <Grafico
+          identificador="serie-questionario"
+          titulo="Quantas participações responderam ao questionário em cada edição?"
+          figura={figura}
+          nota="Contagens históricas de participações com questionário, inclusive sem redação válida. Não são pessoas únicas, nem médias de notas."
+        />
+        <Aviso>Para consultar as alternativas e seus significados, escolha um ano. Algumas perguntas mudam entre edições; seus percentuais não são somados.</Aviso>
       </div>
     );
   }
