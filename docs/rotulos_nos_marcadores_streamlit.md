@@ -9,6 +9,14 @@
 - Gráficos densos, como os cinco percentis P25–P95 mostrados simultaneamente, seguem com hover e legenda; não são preenchidos com textos que se sobrepõem.
 - Ausências seguem vazias. O hover permanece ativo.
 
+## Barras e colunas (nova ampliação)
+
+- Colunas C1–C5 do **IND-009** recebem notas acima das cinco barras coloridas. Antes isso não funcionava porque Plotly Express gera cinco traços e o acabamento visual só tratava um traço.
+- Barras horizontais e agrupadas com poucos valores também recebem rótulos permanentes, com números pt-BR.
+- Até **8 colunas verticais** ou **12 barras horizontais** por figura (contagem total), mantendo textos existentes.
+- Evita gráficos empilhados/normalizados, pilhas com categorias repetidas e muitos valores. Preserva `hover`, dados, cores e escala. Implementação na função `_rotular_barras_compactas` de `visualizacao_final_enem.py`, usada pelo `st.plotly_chart` real.
+- Cobertura: `tests/test_rotulos_barras_plotly.py` testa o renderizador IND-009, barras horizontais e agrupadas, pilhas, números pequenos e idempotência.
+
 ## Onde foi aplicado
 
 - `visualizacao_final_enem.py`: **renderizador efetivo** dos IND-002, 003 e 004 no Streamlit atual; aplica as anotações ao gráfico exibido antes do `st.plotly_chart`. A camada de acabamento chama esse renderizador no lugar da função didática padrão. Também preserva margem superior para os rótulos.
@@ -27,6 +35,7 @@
 Na branch `feat/rotulos-marcadores-streamlit-20261114`, já atualizada com a segunda implementação:
 
 ```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_rotulos_barras_plotly.py" -v
 .\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_rotulos_marcadores_plotly.py" -v
 .\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_graficos_didaticos_consolidados.py" -v
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
