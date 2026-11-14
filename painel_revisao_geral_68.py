@@ -16,6 +16,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+from rotulos_marcadores_plotly import rotular_marcadores
+
 CORES_COMPETENCIAS = {
     'C1': '#2667A9', 'C2': '#D97706', 'C3': '#1F8A70',
     'C4': '#7C5DB5', 'C5': '#C44E52',
@@ -192,6 +194,9 @@ def _pontos_series(ind:int, anos:list[tuple[int,dict]]):
 def _tracar(st,fig,titulo:str,unidade:str,altura=390):
     fig.update_layout(title=titulo,height=altura,margin=dict(l=25,r=25,t=65,b=55),
                       legend_title_text='Série',yaxis_title=unidade)
+    # Rótulos fixos apenas em séries de linha curtas; gráficos densos
+    # mantêm hover para evitar a sobreposição de dezenas de números.
+    rotular_marcadores(fig, casas=None)
     st.plotly_chart(fig,use_container_width=True)
 
 
