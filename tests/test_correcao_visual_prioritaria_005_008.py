@@ -81,6 +81,57 @@ class TestesCorrecaoVisualPrioritaria(unittest.TestCase):
         figura = self.painel.graficos[0]
         self.assertEqual(list(figura.data[0].x), ['P25', 'P50', 'P75', 'P90', 'P95'])
 
+    def test_renderer_real_ind002_003_004_exibe_rotulos_nas_bolinhas(self):
+        # Regressão da camada que substitui o gráfico didático padrão.
+        # A captura do localhost mostrava a legenda "Cada ponto representa",
+        # que só é emitida por _grafico_essencial_catalogo.
+        medias = [592.9, 590.2, 636.4, 652.4, 644.8, 659.0, 618.7]
+        for i, ano in enumerate(range(2019, 2026)):
+            documento = {
+                'meta': {'year': ano,
+                         'data_status': 'consolidado_para_apresentacao'},
+                'pages': {'overview': {
+                    'ind002': {'n': 1000, 'mean_score': medias[i]},
+                    'ind003': {'n': 1000, 'median_score': 580.0 + i * 10},
+                    'ind004': {'n': 1000, 'std_score': 140.0 + i},
+                }},
+            }
+            (self.json_dir / f'dashboard_enem_{ano}.json').write_text(
+                json.dumps(documento), encoding='utf-8'
+            )
+        for numero in (2, 3, 4):
+            with self.subTest(indicador=numero):
+                painel = StreamlitFalso()
+                resultado = _grafico_essencial_catalogo(
+                    painel, self.raiz, numero, None, 'BR'
+                )
+                self.assertTrue(resultado)
+                self.assertEqual(len(painel.graficos), 1)
+                fig = painel.graficos[0]
+                self.assertEqual(len(fig.layout.annotations), 7)
+                self.assertEqual(list(fig.data[0].x), list(range(2019, 2026)))
+                for ano, valor, anotacao in zip(
+                        fig.data[0].x, fig.data[0].y, fig.layout.annotations):
+                    self.assertEqual(anotacao.x, ano)
+                    self.assertEqual(float(anotacao.y), float(valor))
+                    self.assertFalse(anotacao.showarrow)
+                    self.assertTrue(anotacao.text)
+                    self.assertIn(',', anotacao.text)
+                if numero == 2:
+                    self.assertEqual(
+                        [a.text for a in fig.layout.annotations],
+                        ['592,9', '590,2', '636,4', '652,4', '644,8',
+                         '659,0', '618,7']
+                    )
+                # O wrapper visual instalado no Streamlit não pode apagar
+                # as anotações antes de passar a figura ao navegador.
+                melhorar_figura(fig)
+                self.assertEqual(len(fig.layout.annotations), 7)
+                self.assertGreaterEqual(fig.layout.margin.t, 72)
+                self.assertEqual(
+                    len(fig.to_plotly_json()['layout']['annotations']), 7
+                )
+
     def test_ind008_2024_nao_arredonda_para_zero(self):
         resultado = _grafico_essencial_catalogo(self.painel, self.raiz, 8, 2024, 'BR')
         self.assertTrue(resultado)
