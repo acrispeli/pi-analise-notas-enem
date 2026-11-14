@@ -16,7 +16,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from rotulos_marcadores_plotly import rotular_marcadores
+from rotulos_marcadores_plotly import (rotular_marcadores,
+                                       rotular_historico_competencias)
 
 CORES_COMPETENCIAS = {
     'C1': '#2667A9', 'C2': '#D97706', 'C3': '#1F8A70',
@@ -192,7 +193,11 @@ def _pontos_series(ind:int, anos:list[tuple[int,dict]]):
 
 
 def _tracar(st,fig,titulo:str,unidade:str,altura=390):
-    fig.update_layout(title=titulo,height=altura,margin=dict(l=25,r=25,t=65,b=55),
+    # Rótulos específicos podem ter reservado uma margem maior antes
+    # desta função; não reduzi-la (IND-006 e IND-009).
+    topo_reservado = (getattr(fig.layout.margin, 't', None) or 0)
+    fig.update_layout(title=titulo,height=altura,
+                      margin=dict(l=25,r=25,t=max(65, topo_reservado),b=55),
                       legend_title_text='Série',yaxis_title=unidade)
     # Rótulos fixos apenas em séries de linha curtas; gráficos densos
     # mantêm hover para evitar a sobreposição de dezenas de números.
@@ -219,7 +224,11 @@ def _historico(st,ind,anos):
                                         for k,v in COMPETENCIAS.items()})
     else:
         fig=px.line(df,x='Ano',y='Valor',markers=True)
-    _tracar(st,fig,'Evolução histórica · '+etiqueta,unidade)
+    if ind == 9:
+        # C1–C5: 35 anotações pequenas, deslocadas para evitar colisões.
+        rotular_historico_competencias(fig, casas=1)
+    _tracar(st,fig,'Evolução histórica · '+etiqueta,unidade,
+            altura=520 if ind == 9 else 390)
     if ind in (14,15,16,17,18,28,29):
         st.caption(AVISOS.get(ind,''))
     return True
@@ -562,6 +571,11 @@ def _anual_basico(st,ind,rec):
         fig=px.bar(df.head(60),x=x,y=y)
     if x in ('competencia','cluster_id'):
         fig.update_xaxes(categoryorder='array',categoryarray=sorted(df[x].unique()))
+    if ind == 6:
+        # O histograma possui dez faixas fixas: habilitar rótulos para
+        # todas elas, sem ampliar o limite dos demais indicadores.
+        from visualizacao_final_enem import _rotular_barras_compactas
+        _rotular_barras_compactas(fig, limite_vertical=10)
     _tracar(st,fig,titulo,unidade,altura=410 if len(df)<15 else 480)
     if ind == 20:
         st.caption('As faixas possuem larguras diferentes: cada barra representa o percentual de pares na sua própria faixa, não uma densidade por ponto.')

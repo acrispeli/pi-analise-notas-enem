@@ -81,7 +81,7 @@ def _eh_percentual(txt: str) -> bool:
     return bool(re.search(r'percent|participa[cç][aã]o\s*\(%\)|\(\s*%\s*\)|%\b', txt, re.I))
 
 
-def _rotular_barras_compactas(fig) -> bool:
+def _rotular_barras_compactas(fig, *, limite_vertical: int = 8) -> bool:
     """Inclui rótulos em colunas/barras curtas, inclusive múltiplos traços.
 
     Plotly Express cria um traço por competência quando usa color='competencia'.
@@ -97,7 +97,7 @@ def _rotular_barras_compactas(fig) -> bool:
     if len(orientacoes) != 1:
         return False
     horizontal = 'h' in orientacoes
-    limite = 12 if horizontal else 8
+    limite = 12 if horizontal else limite_vertical
     series = []
     for tr in tracos:
         valores = tr.x if horizontal else tr.y
@@ -136,26 +136,32 @@ def _rotular_barras_compactas(fig) -> bool:
                   and getattr(tr, 'text', None) is None}
     if not candidatos:
         return False
-    todos = [n for _, _, valores in series for n in valores]
-    min_positivo = min((abs(n) for n in todos if n != 0), default=1)
-    if all(n.is_integer() for n in todos):
-        casas = 0
-    elif min_positivo < .01:
-        casas = 4
-    elif min_positivo < .1:
-        casas = 3
-    elif min_positivo < 1:
-        casas = 2
-    else:
-        casas = 1
     eixo = _titulo_eixo(fig, 'xaxis' if horizontal else 'yaxis')
     sufixo = '%' if _eh_percentual(eixo) else ''
+    # Em barras horizontais comparáveis, preservar uma casa decimal para
+    # todas as categorias quando a série contém valores fracionários.
+    # Percentuais continuam usando precisão individual (ex.: 23%).
+    decimal_uniforme_horizontal = (horizontal and not sufixo and any(
+        not valor.is_integer() for _, _, numeros in series for valor in numeros
+    ))
     for tr, _, valores in series:
         if id(tr) not in candidatos:
             continue
-        textos = [f'{n:,.{casas}f}'.replace(',', 'X')
-                  .replace('.', ',').replace('X', '.') + sufixo
-                  for n in valores]
+        textos = []
+        for n in valores:
+            # Formatação individual: bins de 0,0004% não devem virar 0,0%,
+            # e valores de 23% não devem receber quatro casas decimais.
+            magnitude = abs(n)
+            casas = (0 if n.is_integer() else
+                     4 if magnitude < .1 else
+                     2 if magnitude < 1 else 1)
+            if decimal_uniforme_horizontal and magnitude >= 1:
+                casas = max(1, casas)
+            rotulo = (f'{n:,.{casas}f}'.replace(',', 'X')
+                      .replace('.', ',').replace('X', '.'))
+            if ',' in rotulo and not (decimal_uniforme_horizontal and casas == 1):
+                rotulo = rotulo.rstrip('0').rstrip(',')
+            textos.append(rotulo + sufixo)
         tr.update(text=textos, texttemplate='%{text}', textposition='outside',
                   textfont=dict(size=11, color='#25394B'), cliponaxis=False)
     margem = fig.layout.margin
@@ -175,6 +181,9 @@ def melhorar_figura(fig):
 
     # Reservar espaço para anotações sobre os pontos, inclusive na impressão.
     tem_rotulos_fixos = bool(getattr(fig.layout, 'annotations', None))
+    # Preserva margens já reservadas por rótulos específicos (IND-006/009).
+    # Antes, o acabamento geral restaurava t=52 e cortava essa reserva.
+    margem_superior_previa = (getattr(fig.layout.margin, 't', None) or 0)
     fig.update_layout(
         separators=',.',
         font=dict(family='Arial, sans-serif', size=13, color='#25394B'),
@@ -182,7 +191,9 @@ def melhorar_figura(fig):
         plot_bgcolor='rgba(0,0,0,0)',
         hoverlabel=dict(namelength=-1),
         legend=dict(font=dict(size=12)),
-        margin=dict(l=66, r=36, t=76 if tem_rotulos_fixos else 52, b=84),
+        margin=dict(l=66, r=36,
+                    t=max(76 if tem_rotulos_fixos else 52, margem_superior_previa),
+                    b=84),
     )
     fig.update_xaxes(automargin=True, showline=True, linecolor='#CCD6DF', ticks='outside')
     fig.update_yaxes(automargin=True, gridcolor='#E7EDF2', zeroline=False)

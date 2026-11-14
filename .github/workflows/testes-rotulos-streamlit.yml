@@ -1,0 +1,36 @@
+name: Testes Python — rótulos Streamlit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'visualizacao_final_enem.py'
+      - 'rotulos_marcadores_plotly.py'
+      - 'painel_revisao_geral_68.py'
+      - 'tests/test_rotulos_*.py'
+      - '.github/workflows/testes-rotulos-streamlit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rotulos:
+    name: IND-006/009 e regressões de rótulos
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements_visualizador.txt
+      - name: Dependências do visualizador
+        run: python -m pip install -r requirements_visualizador.txt
+      - name: Regressões IND-006/009
+        run: python -m unittest discover -s tests -p 'test_rotulos_ind006_ind009.py' -v
+      - name: Barras e precisão numérica
+        run: python -m unittest discover -s tests -p 'test_rotulos_barras_plotly.py' -v
+      - name: Marcadores dos demais indicadores
+        run: python -m unittest discover -s tests -p 'test_rotulos_marcadores_plotly.py' -v
