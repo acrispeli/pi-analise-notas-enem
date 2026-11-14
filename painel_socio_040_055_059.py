@@ -15,6 +15,7 @@ from painel_revisao_geral_68 import ler_dicionario_questoes
 import plotly.express as px
 
 from painel_catalogo_68 import DESCRICAO_PERFIS
+from rotulos_marcadores_plotly import rotular_marcadores
 
 MODELO_V2 = 'V2_MCA10_KMeans3_e31f55489e16f296'
 MAPA_PERFIS = {'C1':'M1', 'C2':'M2', 'C3':'M3'}
@@ -222,6 +223,7 @@ def renderizar_v2(st, doc: dict, ind: int, ano: int | None, uf: str) -> bool:
                               labels={'ano':'Edição do ENEM',coluna:titulo},
                               title='Evolução por perfil material (amostra)')
             tendencia.update_xaxes(dtick=1)
+            rotular_marcadores(tendencia, casas=1 if ind in (55,59) else None)
             st.plotly_chart(tendencia,use_container_width=True)
         elif ind in (56,58):
             comp=st.selectbox('Competência para a evolução histórica',list(COMPETENCIAS),
@@ -243,6 +245,7 @@ def renderizar_v2(st, doc: dict, ind: int, ano: int | None, uf: str) -> bool:
                         labels={'ano':'Edição do ENEM',coluna:titulo},
                         title=f'Evolução de {comp} por perfil material (amostra)')
             fig.update_xaxes(dtick=1)
+            rotular_marcadores(fig, casas=None)
             st.plotly_chart(fig,use_container_width=True)
             st.caption('Séries de edições diferentes e amostrais, não acompanhamento individual. '
                        'O perfil de referência é fixo no modelo V2, mas a composição da amostra muda.')
