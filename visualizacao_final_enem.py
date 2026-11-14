@@ -131,9 +131,9 @@ def _rotular_barras_compactas(fig) -> bool:
         if len(categorias) != len(set(categorias)):
             return False
 
-    candidatos = [tr for tr, _, _ in series
+    candidatos = {id(tr) for tr, _, _ in series
                   if getattr(tr, 'texttemplate', None) is None
-                  and getattr(tr, 'text', None) is None]
+                  and getattr(tr, 'text', None) is None}
     if not candidatos:
         return False
     todos = [n for _, _, valores in series for n in valores]
@@ -151,7 +151,7 @@ def _rotular_barras_compactas(fig) -> bool:
     eixo = _titulo_eixo(fig, 'xaxis' if horizontal else 'yaxis')
     sufixo = '%' if _eh_percentual(eixo) else ''
     for tr, _, valores in series:
-        if tr not in candidatos:
+        if id(tr) not in candidatos:
             continue
         textos = [f'{n:,.{casas}f}'.replace(',', 'X')
                   .replace('.', ',').replace('X', '.') + sufixo
