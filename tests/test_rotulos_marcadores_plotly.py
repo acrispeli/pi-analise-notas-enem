@@ -50,13 +50,19 @@ class TesteRotulosMarcadores(unittest.TestCase):
         dados_iniciais = tuple(fig.data[0].y)
         self.assertTrue(rotular_marcadores(fig, casas=1))
         self.assertEqual(tuple(fig.data[0].y), dados_iniciais)
-        self.assertEqual(fig.data[0].mode, "lines+markers+text")
-        self.assertEqual(fig.data[0].texttemplate, "%{text}")
-        self.assertEqual(fig.data[0].textposition, "top center")
-        self.assertEqual(fig.data[0].text[0], "592,9")
-        self.assertEqual(fig.data[0].text[5], "659,0")
-        self.assertEqual(fig.data[0].text[6], "618,7")
-        self.assertEqual(fig.data[0].cliponaxis, False)
+        self.assertEqual(fig.data[0].mode, "lines+markers")
+        anotacoes = list(fig.layout.annotations)
+        self.assertEqual(len(anotacoes), 7)
+        self.assertEqual([a.text for a in anotacoes][0], "592,9")
+        self.assertEqual([a.text for a in anotacoes][5], "659,0")
+        self.assertEqual([a.text for a in anotacoes][6], "618,7")
+        self.assertEqual([a.x for a in anotacoes], anos)
+        self.assertEqual([float(a.y) for a in anotacoes], notas)
+        self.assertTrue(all(a.showarrow is False for a in anotacoes))
+        self.assertTrue(all(a.yshift == 17 for a in anotacoes))
+        # A descrição também precisa sobreviver à serialização do Streamlit.
+        json_plotly = fig.to_plotly_json()
+        self.assertEqual(len(json_plotly["layout"]["annotations"]), 7)
 
     def test_tres_perfis_tem_posicoes_diferentes(self):
         ano = list(range(2019, 2026))
@@ -67,10 +73,13 @@ class TesteRotulosMarcadores(unittest.TestCase):
         ])
         fig = px.line(df, x="ano", y="nota", color="Perfil", markers=True)
         self.assertTrue(rotular_marcadores(fig, casas=1))
-        self.assertEqual([trace.textposition for trace in fig.data],
-                         ["top center", "bottom center", "middle right"])
-        self.assertTrue(all(trace.mode == "lines+markers+text" for trace in fig.data))
-        self.assertTrue(all(len(trace.text) == 7 for trace in fig.data))
+        self.assertTrue(all(trace.mode == "lines+markers" for trace in fig.data))
+        anotacoes = list(fig.layout.annotations)
+        self.assertEqual(len(anotacoes), 21)
+        self.assertEqual([a.yshift for a in anotacoes],
+                         [17] * 7 + [-17] * 7 + [0] * 7)
+        self.assertEqual([a.xshift for a in anotacoes],
+                         [0] * 14 + [26] * 7)
 
     def test_nao_aplica_em_grafico_denso_ou_barra(self):
         df = pd.DataFrame([
@@ -92,8 +101,10 @@ class TesteRotulosMarcadores(unittest.TestCase):
                                    y=[1000000, None, 0, 1200000],
                                    mode="lines+markers"))
         self.assertTrue(rotular_marcadores(fig, casas=None))
-        self.assertEqual(tuple(fig.data[0].text),
-                         ("1.000.000", "", "0", "1.200.000"))
+        self.assertEqual(tuple(a.text for a in fig.layout.annotations),
+                         ("1.000.000", "0", "1.200.000"))
+        self.assertEqual([a.x for a in fig.layout.annotations],
+                         [2019, 2021, 2022])
         self.assertEqual(tuple(fig.data[0].y),
                          (1000000, None, 0, 1200000))
 
@@ -106,16 +117,23 @@ class TesteRotulosMarcadores(unittest.TestCase):
         historico = st.figuras[0]
         self.assertEqual({tr.name for tr in historico.data},
                          {"M1", "M2", "M3"})
+        anotacoes = list(historico.layout.annotations)
+        self.assertEqual(len(anotacoes),
+                         sum(len(tr.y) for tr in historico.data))
+        cursor = 0
         for tr in historico.data:
             with self.subTest(perfil=tr.name):
-                self.assertEqual(tr.mode, "lines+markers+text")
-                self.assertEqual(len(tr.text), len(tr.y))
-                for valor, rotulo in zip(tr.y, tr.text):
+                self.assertEqual(tr.mode, "lines+markers")
+                for x, valor in zip(tr.x, tr.y):
                     self.assertTrue(math.isfinite(float(valor)))
+                    a = anotacoes[cursor]
+                    self.assertEqual(a.x, x)
+                    self.assertEqual(float(a.y), float(valor))
                     self.assertEqual(
-                        rotulo, f"{float(valor):,.1f}".replace(",", "X")
+                        a.text, f"{float(valor):,.1f}".replace(",", "X")
                         .replace(".", ",").replace("X", ".")
                     )
+                    cursor += 1
 
 
 if __name__ == "__main__":
