@@ -15,17 +15,17 @@
 - `painel_socio_040_055_059.py`: históricos de perfis materiais M1–M3 dos IND-055, 056, 057, 058 e 059 (respeitando o máximo de 3 séries).
 - `painel_revisao_geral_68.py`: outros gráficos de linha curtos do catálogo, automaticamente pelo método comum `_tracar`; séries longas/densas permanecem inalteradas.
 - `painel_paginas_contrato_68.py`: séries curtas do visualizador genérico de reserva.
-- `rotulos_marcadores_plotly.py`: regra compartilhada e testável.
+- `rotulos_marcadores_plotly.py`: anotações em `layout.annotations`, fixadas às coordenadas dos pontos.
 
 ## Validação local
 
-Na branch `feat/rotulos-marcadores-streamlit-20261114`:
+Na branch `feat/rotulos-marcadores-streamlit-20261114`, já atualizada com a segunda implementação:
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_rotulos_marcadores_plotly.py" -v
 .\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_graficos_didaticos_consolidados.py" -v
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
-.\.venv\Scripts\python.exe -m streamlit run .\streamlit_app\visualizador.py --server.port 8501
+.\.venv\Scripts\python.exe -m streamlit run .\streamlit_app\visualizador.py --server.port 8503
 ```
 
 **Após atualizar o branch, reiniciar o servidor em porta NOVA (ex.: 8503) para evitar reutilizar um processo Python com módulos antigos.** Conferir visualmente **IND-002** em Todos os anos (2019–2025) e **IND-055** em Contexto socioeconômico. O gráfico deve manter seus valores, cores, título e hover e acrescentar rótulos junto aos marcadores. Também conferir um gráfico denso como IND-005 para garantir legibilidade.
