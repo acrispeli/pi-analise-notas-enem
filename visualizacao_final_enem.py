@@ -322,6 +322,11 @@ def _grafico_essencial_catalogo(st, raiz: Path, numero: int, ano: int | None, uf
                           labels={'ano':'Edição do ENEM','valor':f'{rotulo} (pontos)'})
             fig.update_traces(line_width=3, marker_size=9)
             fig.update_xaxes(tickvals=sorted(dt['ano'].unique()))
+            # Esta camada visual substitui a função didática do catálogo para
+            # IND-002/003/004. Os rótulos devem ser aplicados AQUI, na figura
+            # efetivamente renderizada, e não só no módulo didático original.
+            from rotulos_marcadores_plotly import rotular_marcadores
+            rotular_marcadores(fig, casas=1)
             st.plotly_chart(fig, use_container_width=True)
             st.caption('Cada ponto representa uma edição independente do ENEM.')
         return True
