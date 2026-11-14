@@ -12,6 +12,8 @@ from pathlib import Path
 import pandas as pd
 import plotly.express as px
 
+from rotulos_marcadores_plotly import rotular_marcadores
+
 NUMEROS = frozenset({1,2,3,4,5,7})
 
 
@@ -180,6 +182,7 @@ def mostrar_grafico_didatico(st, raiz: Path, numero: int, ano: int | None, uf: s
         label={2:'Nota média',3:'Nota mediana',4:'Dispersão das notas (desvio-padrão)'}[numero]
         if ano is None and len(df)>=2:
             fig=px.line(df,x='ano',y='valor',markers=True,labels={'ano':'Edição','valor':f'{label} (pontos)'})
+            rotular_marcadores(fig, casas=1)
             st.plotly_chart(fig,use_container_width=True)
             st.caption('Os pontos representam edições independentes; a linha ajuda a acompanhar valores, não as mesmas pessoas.')
         else:
