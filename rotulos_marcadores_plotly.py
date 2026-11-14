@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Rótulos fixos junto aos marcadores de séries curtas do Plotly.
+"""Anotações permanentes junto aos marcadores de séries curtas do Plotly.
 
-Não cria nem modifica métricas; converte apenas a *apresentação* de valores
-já existentes, em formato pt-BR. Gráficos densos continuam usando hover.
+Usa layout.annotations em coordenadas de dados (x, y). Essa forma é
+independente da renderização de texttemplate nos traços Scatter e funciona
+também quando o Streamlit aplica seu tema ao Plotly. Sem reprocessar métricas.
 """
 from __future__ import annotations
 
@@ -15,60 +16,72 @@ def _formatar_pt_br(valor: float, casas: int) -> str:
 
 def rotular_marcadores(fig, *, casas: int | None = 1,
                       max_series: int = 3, max_pontos: int = 8) -> bool:
-    """Acrescenta valores ao lado de cada ponto de linhas curtas.
+    """Adiciona rótulos fixos diretamente nas coordenadas dos marcadores.
 
-    Retorna False (sem alterações) quando há muitas curvas/pontos ou quando
-    a figura não é exclusivamente um gráfico de linhas com marcadores.
+    Mantém mode, hover e séries originais; usa anotações sem setas com
+    pequeno deslocamento em pixels. Em gráficos densos, não altera a figura.
     """
     if casas is not None and not 0 <= casas <= 4:
         raise ValueError("casas deve estar entre 0 e 4, ou ser None")
     traces = list(fig.data)
-    if not (1 <= len(traces) <= max_series):
+    if not 1 <= len(traces) <= max_series:
         return False
+
     series = []
     for tr in traces:
         if getattr(tr, "type", None) != "scatter":
             return False
-        mode = str(getattr(tr, "mode", "") or "")
-        if "lines" not in mode or "markers" not in mode:
+        modo = str(getattr(tr, "mode", "") or "")
+        if "lines" not in modo or "markers" not in modo:
             return False
-        valores = list(tr.y) if tr.y is not None else []
-        if not (2 <= len(valores) <= max_pontos):
+        xs = list(tr.x) if tr.x is not None else []
+        ys = list(tr.y) if tr.y is not None else []
+        if not (2 <= len(ys) <= max_pontos and len(xs) == len(ys)):
             return False
-        series.append(valores)
+        series.append((xs, ys))
 
-    posicoes = ("top center", "bottom center", "middle right")
-    for idx, (tr, valores) in enumerate(zip(traces, series)):
+    deslocamentos = [(0, 17), (0, -17), (26, 0)]
+    for idx, (tr, (xs, ys)) in enumerate(zip(traces, series)):
         validos = []
-        for val in valores:
+        for val in ys:
             try:
-                num = float(val)
-                if math.isfinite(num):
-                    validos.append(num)
+                numero = float(val)
+                if math.isfinite(numero):
+                    validos.append(numero)
             except (TypeError, ValueError, OverflowError):
                 continue
         if casas is None:
-            # Protege séries de números pequenos de rótulos "0,0" enganosos.
-            significativos = [abs(x) for x in validos if x != 0]
+            significativos = [abs(n) for n in validos if n != 0]
             minimo = min(significativos, default=1)
             maximo = max(significativos, default=0)
-            precisao = (3 if minimo < 1 else 0 if maximo >= 10000
-                        and all(x.is_integer() for x in validos) else 1)
+            precisao = (
+                3 if minimo < 1 else
+                0 if maximo >= 10000 and all(n.is_integer() for n in validos)
+                else 1
+            )
         else:
             precisao = casas
 
-        textos = []
-        for val in valores:
+        shift_x, shift_y = deslocamentos[idx]
+        for x, y in zip(xs, ys):
             try:
-                num = float(val)
-                textos.append(_formatar_pt_br(num, precisao) if math.isfinite(num) else "")
+                numero = float(y)
+                if not math.isfinite(numero):
+                    continue
             except (TypeError, ValueError, OverflowError):
-                textos.append("")
-        tr.update(mode="lines+markers+text", text=textos, texttemplate="%{text}",
-                  textposition=posicoes[idx % len(posicoes)],
-                  textfont=dict(size=11), cliponaxis=False)
-    # Mantém a altura do gráfico e o hover. A margem superior preserva
-    # espaço para valores junto ao topo sem encobrir o título.
+                continue
+            fig.add_annotation(
+                x=x, y=y, xref=getattr(tr, "xaxis", None) or "x",
+                yref=getattr(tr, "yaxis", None) or "y",
+                text=_formatar_pt_br(numero, precisao),
+                showarrow=False, xshift=shift_x, yshift=shift_y,
+                font=dict(size=12, color="#24364B"),
+                bgcolor="rgba(255,255,255,0.90)",
+                borderpad=2, opacity=1,
+                captureevents=False,
+            )
+
+    # Expande margem superior sem modificar o eixo de valores nem as notas.
     atual = fig.layout.margin.t if fig.layout.margin and fig.layout.margin.t else 0
-    fig.update_layout(margin=dict(t=max(55, atual)))
+    fig.update_layout(margin=dict(t=max(65, atual)))
     return True
