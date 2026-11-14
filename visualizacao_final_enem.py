@@ -147,12 +147,13 @@ def _rotular_barras_compactas(fig, *, limite_vertical: int = 8) -> bool:
             # e valores de 23% não devem receber quatro casas decimais.
             magnitude = abs(n)
             casas = (0 if n.is_integer() else
-                     4 if magnitude < .01 else
-                     3 if magnitude < .1 else
+                     4 if magnitude < .1 else
                      2 if magnitude < 1 else 1)
             rotulo = (f'{n:,.{casas}f}'.replace(',', 'X')
-                      .replace('.', ',').replace('X', '.') + sufixo)
-            textos.append(rotulo)
+                      .replace('.', ',').replace('X', '.'))
+            if ',' in rotulo:
+                rotulo = rotulo.rstrip('0').rstrip(',')
+            textos.append(rotulo + sufixo)
         tr.update(text=textos, texttemplate='%{text}', textposition='outside',
                   textfont=dict(size=11, color='#25394B'), cliponaxis=False)
     margem = fig.layout.margin
