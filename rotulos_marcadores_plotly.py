@@ -85,3 +85,77 @@ def rotular_marcadores(fig, *, casas: int | None = 1,
     atual = fig.layout.margin.t if fig.layout.margin and fig.layout.margin.t else 0
     fig.update_layout(margin=dict(t=max(65, atual)))
     return True
+
+
+
+def rotular_historico_competencias(fig, *, casas: int = 1) -> bool:
+    """Rotula os 35 pontos C1–C5 somente no histórico curto do IND-009.
+
+    Com cinco linhas, o limite genérico de três séries seria ultrapassado.
+    Pequenos deslocamentos horizontais/verticais distribuem os textos
+    sem modificar as coordenadas, notas, legendas ou o hover dos traços.
+    """
+    traces = list(fig.data)
+    if len(traces) != 5:
+        return False
+    nomes = {str(getattr(tr, "name", "") or "").strip()[:2].upper()
+             for tr in traces}
+    if nomes != {"C1", "C2", "C3", "C4", "C5"}:
+        return False
+    if getattr(fig.layout, "annotations", None):
+        return False
+
+    dados = []
+    for tr in traces:
+        if getattr(tr, "type", "") != "scatter":
+            return False
+        modo = str(getattr(tr, "mode", "") or "")
+        if not ("lines" in modo and "markers" in modo):
+            return False
+        xs = list(tr.x) if tr.x is not None else []
+        ys = list(tr.y) if tr.y is not None else []
+        if not (2 <= len(xs) <= 8 and len(xs) == len(ys)):
+            return False
+        if any(str(ano) not in {str(y) for y in range(2019, 2026)}
+               for ano in xs):
+            return False
+        dados.append((tr, xs, ys))
+
+    deslocamentos = {
+        "C1": (-27, 15),
+        "C2": (-13, -15),
+        "C3": (0, 17),
+        "C4": (13, -17),
+        "C5": (27, 0),
+    }
+    quantidade = 0
+    for tr, xs, ys in dados:
+        nome = str(tr.name).strip()[:2].upper()
+        sx, sy = deslocamentos[nome]
+        for x, y in zip(xs, ys):
+            try:
+                numero = float(y)
+                if not math.isfinite(numero):
+                    continue
+            except (TypeError, ValueError, OverflowError):
+                continue
+            fig.add_annotation(
+                x=x, y=y,
+                xref=getattr(tr, "xaxis", None) or "x",
+                yref=getattr(tr, "yaxis", None) or "y",
+                text=_formatar_pt_br(numero, casas),
+                showarrow=False,
+                xshift=sx, yshift=sy,
+                font=dict(size=9, color="#24364B"),
+                bgcolor="rgba(255,255,255,0.88)",
+                borderpad=1,
+                captureevents=False,
+            )
+            quantidade += 1
+
+    if not quantidade:
+        return False
+    margem = fig.layout.margin
+    atual = margem.t if margem and margem.t else 0
+    fig.update_layout(margin=dict(t=max(76, atual)))
+    return True
