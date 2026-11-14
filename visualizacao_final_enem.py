@@ -81,11 +81,100 @@ def _eh_percentual(txt: str) -> bool:
     return bool(re.search(r'percent|participa[cç][aã]o\s*\(%\)|\(\s*%\s*\)|%\b', txt, re.I))
 
 
+def _rotular_barras_compactas(fig) -> bool:
+    """Inclui rótulos em colunas/barras curtas, inclusive múltiplos traços.
+
+    Plotly Express cria um traço por competência quando usa color='competencia'.
+    O acabamento antigo exigia um único traço e não rotulava C1–C5.
+    Não rotula gráficos empilhados, normalizados ou visualmente densos.
+    """
+    tracos = list(fig.data)
+    if not tracos or any(t.type != 'bar' for t in tracos):
+        return False
+    if getattr(fig.layout, 'barnorm', None):
+        return False
+    orientacoes = {getattr(t, 'orientation', None) or 'v' for t in tracos}
+    if len(orientacoes) != 1:
+        return False
+    horizontal = 'h' in orientacoes
+    limite = 12 if horizontal else 8
+    series = []
+    for tr in tracos:
+        valores = tr.x if horizontal else tr.y
+        categorias = tr.y if horizontal else tr.x
+        if valores is None or categorias is None:
+            return False
+        valores, categorias = list(valores), list(categorias)
+        if not valores or len(valores) != len(categorias):
+            return False
+        numericos = []
+        for valor in valores:
+            try:
+                numero = float(valor)
+                if not math.isfinite(numero):
+                    return False
+            except (TypeError, ValueError, OverflowError):
+                return False
+            numericos.append(numero)
+        series.append((tr, categorias, numericos))
+    total = sum(len(valores) for _, _, valores in series)
+    if total > limite:
+        return False
+
+    # Mesmo barmode='relative' (padrão do Plotly Express), C1–C5 são
+    # barras INDEPENDENTES se cada categoria aparece em apenas um traço.
+    # Se duas séries ocupam a mesma categoria em modo stack/relative,
+    # evitar rótulos sobrepostos nas pilhas.
+    barmode = str(getattr(fig.layout, 'barmode', None) or '')
+    if barmode in ('stack', 'relative') and len(series) > 1:
+        categorias = [str(cat) for _, xs, _ in series for cat in xs]
+        if len(categorias) != len(set(categorias)):
+            return False
+
+    candidatos = {id(tr) for tr, _, _ in series
+                  if getattr(tr, 'texttemplate', None) is None
+                  and getattr(tr, 'text', None) is None}
+    if not candidatos:
+        return False
+    todos = [n for _, _, valores in series for n in valores]
+    min_positivo = min((abs(n) for n in todos if n != 0), default=1)
+    if all(n.is_integer() for n in todos):
+        casas = 0
+    elif min_positivo < .01:
+        casas = 4
+    elif min_positivo < .1:
+        casas = 3
+    elif min_positivo < 1:
+        casas = 2
+    else:
+        casas = 1
+    eixo = _titulo_eixo(fig, 'xaxis' if horizontal else 'yaxis')
+    sufixo = '%' if _eh_percentual(eixo) else ''
+    for tr, _, valores in series:
+        if id(tr) not in candidatos:
+            continue
+        textos = [f'{n:,.{casas}f}'.replace(',', 'X')
+                  .replace('.', ',').replace('X', '.') + sufixo
+                  for n in valores]
+        tr.update(text=textos, texttemplate='%{text}', textposition='outside',
+                  textfont=dict(size=11, color='#25394B'), cliponaxis=False)
+    margem = fig.layout.margin
+    if horizontal:
+        atual = margem.r if margem and margem.r else 0
+        fig.update_layout(margin=dict(r=max(100, atual)))
+    else:
+        atual = margem.t if margem and margem.t else 0
+        fig.update_layout(margin=dict(t=max(82, atual)))
+    return True
+
+
 def melhorar_figura(fig):
     """Ajustes não destrutivos em figuras Plotly, sem alterar nenhum valor numérico."""
     if fig is None or not hasattr(fig, 'data') or not hasattr(fig, 'update_layout'):
         return fig
 
+    # Reservar espaço para anotações sobre os pontos, inclusive na impressão.
+    tem_rotulos_fixos = bool(getattr(fig.layout, 'annotations', None))
     fig.update_layout(
         separators=',.',
         font=dict(family='Arial, sans-serif', size=13, color='#25394B'),
@@ -93,7 +182,7 @@ def melhorar_figura(fig):
         plot_bgcolor='rgba(0,0,0,0)',
         hoverlabel=dict(namelength=-1),
         legend=dict(font=dict(size=12)),
-        margin=dict(l=66, r=36, t=52, b=84),
+        margin=dict(l=66, r=36, t=76 if tem_rotulos_fixos else 52, b=84),
     )
     fig.update_xaxes(automargin=True, showline=True, linecolor='#CCD6DF', ticks='outside')
     fig.update_yaxes(automargin=True, gridcolor='#E7EDF2', zeroline=False)
@@ -156,6 +245,10 @@ def melhorar_figura(fig):
             if len(nomes) == len(set(nomes)) and all(re.fullmatch('[A-Z]{2}', v) for v in nomes):
                 if fig.layout.yaxis.categoryorder in (None, 'trace'):
                     fig.update_yaxes(categoryorder='total ascending')
+
+    # Abrange as cinco colunas coloridas do IND-009 e outras barras curtas.
+    # Atua depois do caso simples para não duplicar rótulos preexistentes.
+    _rotular_barras_compactas(fig)
 
     # Evita intervalos fracionários no eixo temporal de anos (2019–2025).
     x_anos = []
@@ -322,6 +415,11 @@ def _grafico_essencial_catalogo(st, raiz: Path, numero: int, ano: int | None, uf
                           labels={'ano':'Edição do ENEM','valor':f'{rotulo} (pontos)'})
             fig.update_traces(line_width=3, marker_size=9)
             fig.update_xaxes(tickvals=sorted(dt['ano'].unique()))
+            # Esta camada visual substitui a função didática do catálogo para
+            # IND-002/003/004. Os rótulos devem ser aplicados AQUI, na figura
+            # efetivamente renderizada, e não só no módulo didático original.
+            from rotulos_marcadores_plotly import rotular_marcadores
+            rotular_marcadores(fig, casas=1)
             st.plotly_chart(fig, use_container_width=True)
             st.caption('Cada ponto representa uma edição independente do ENEM.')
         return True
