@@ -111,10 +111,11 @@ class TesteGraficosConsolidados(unittest.TestCase):
                     if ind in (2, 3, 4) and ano is None:
                         # Além do eixo, o valor permanece junto à bolinha.
                         tr = fig.data[0]
-                        self.assertEqual(tr.mode, "lines+markers+text")
-                        self.assertEqual(tr.texttemplate, "%{text}")
-                        self.assertEqual(len(tr.text), len(tr.y))
-                        self.assertIn(",", tr.text[0])
+                        self.assertEqual(tr.mode, "lines+markers")
+                        self.assertEqual(len(fig.layout.annotations), len(tr.y))
+                        self.assertIn(",", fig.layout.annotations[0].text)
+                        self.assertEqual(float(fig.layout.annotations[0].y),
+                                         float(tr.y[0]))
                     if ind == 5 and ano is None:
                         self.assertEqual(
                             {tr.name for tr in fig.data},
