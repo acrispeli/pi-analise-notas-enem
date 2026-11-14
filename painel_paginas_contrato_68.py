@@ -18,6 +18,7 @@ from painel_catalogo_68 import _seis_perfis
 from publicacao_segura_v2 import preparar_doc_publico_v2, mostrar_aviso_publicacao_v2
 from leitura_acessivel_68 import mostrar_leitura_acessivel as mostrar_interpretacao
 from graficos_educacionais_68 import mostrar_grafico_didatico, resumo_expresso
+from rotulos_marcadores_plotly import rotular_marcadores
 from painel_revisao_geral_68 import (renderizar_historico_geral, renderizar_resultados_gerais,
                                        mostrar_legenda_questoes, mostrar_historico_socio_seguro,
                                        mostrar_glossario_visual)
@@ -211,6 +212,7 @@ def _grafico_indicador(st, df: pd.DataFrame, visual: str):
         return False
     if 'linha' in visual.lower() or 'área' in visual.lower() or x in ('ano','year'):
         fig = px.line(chart, x=x, y=y, markers=True)
+        rotular_marcadores(fig, casas=None)
     elif 'heatmap' in visual.lower() and {'cluster','competencia'}.issubset(colunas):
         t = df.copy(); t[y] = pd.to_numeric(t[y],errors='coerce')
         t = t.pivot_table(index='competencia',columns='cluster',values=y,aggfunc='mean')
