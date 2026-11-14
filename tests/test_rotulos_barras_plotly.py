@@ -121,10 +121,19 @@ class TesteRotulosBarras(unittest.TestCase):
         texto_antes = list(fig.data[0].text)
         melhorar_figura(fig)
         self.assertEqual(list(fig.data[0].text), texto_antes)
-        snapshot = fig.to_json()
         melhorar_figura(fig)
-        self.assertEqual(fig.data[0].texttemplate, fig.data[0].texttemplate)
         self.assertEqual(list(fig.data[0].text), texto_antes)
+        # Para barras sem textos prévios, repetir o acabamento não cria
+        # duplicações nem transforma os números dos dados.
+        colorida = px.bar(
+            pd.DataFrame({"C": ["C1", "C2"], "Nota": [100.2, 120.7]}),
+            x="C", y="Nota", color="C"
+        )
+        melhorar_figura(colorida)
+        primeira = [(list(t.text), list(t.y)) for t in colorida.data]
+        melhorar_figura(colorida)
+        self.assertEqual([(list(t.text), list(t.y)) for t in colorida.data],
+                         primeira)
 
 
 if __name__ == "__main__":
