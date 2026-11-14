@@ -5,6 +5,7 @@
 - Linhas com até **8 pontos por série** e até **3 séries** exibem o valor junto à bolinha (não apenas no eixo ou no hover).
 - Valores são apenas formatados para exibição em **pt-BR** (vírgula decimal, ponto de milhar); as notas e contagens originais nos JSONs não são modificadas.
 - A primeira série recebe rótulos acima dos pontos, a segunda abaixo e a terceira à direita, diminuindo a chance de sobreposição.
+- **Implementação atualizada:** os valores são anotações do layout Plotly, fixadas às coordenadas de cada bolinha; a primeira versão com `lines+markers+text` passou nos testes, mas não apareceu no navegador do usuário em `localhost:8502`. Anotações independem do texto interno do traço.
 - Gráficos densos, como os cinco percentis P25–P95 mostrados simultaneamente, seguem com hover e legenda; não são preenchidos com textos que se sobrepõem.
 - Ausências seguem vazias. O hover permanece ativo.
 
@@ -27,7 +28,7 @@ Na branch `feat/rotulos-marcadores-streamlit-20261114`:
 .\.venv\Scripts\python.exe -m streamlit run .\streamlit_app\visualizador.py --server.port 8501
 ```
 
-Conferir visualmente **IND-002** em Todos os anos (2019–2025) e **IND-055** em Contexto socioeconômico. O gráfico deve manter seus valores, cores, título e hover e acrescentar rótulos junto aos marcadores. Também conferir um gráfico denso como IND-005 para garantir legibilidade.
+**Após atualizar o branch, reiniciar o servidor em porta NOVA (ex.: 8503) para evitar reutilizar um processo Python com módulos antigos.** Conferir visualmente **IND-002** em Todos os anos (2019–2025) e **IND-055** em Contexto socioeconômico. O gráfico deve manter seus valores, cores, título e hover e acrescentar rótulos junto aos marcadores. Também conferir um gráfico denso como IND-005 para garantir legibilidade.
 
 ## Publicação e relatórios
 
