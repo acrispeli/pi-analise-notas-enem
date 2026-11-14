@@ -86,6 +86,8 @@ def melhorar_figura(fig):
     if fig is None or not hasattr(fig, 'data') or not hasattr(fig, 'update_layout'):
         return fig
 
+    # Reservar espaço para anotações sobre os pontos, inclusive na impressão.
+    tem_rotulos_fixos = bool(getattr(fig.layout, 'annotations', None))
     fig.update_layout(
         separators=',.',
         font=dict(family='Arial, sans-serif', size=13, color='#25394B'),
@@ -93,7 +95,7 @@ def melhorar_figura(fig):
         plot_bgcolor='rgba(0,0,0,0)',
         hoverlabel=dict(namelength=-1),
         legend=dict(font=dict(size=12)),
-        margin=dict(l=66, r=36, t=52, b=84),
+        margin=dict(l=66, r=36, t=76 if tem_rotulos_fixos else 52, b=84),
     )
     fig.update_xaxes(automargin=True, showline=True, linecolor='#CCD6DF', ticks='outside')
     fig.update_yaxes(automargin=True, gridcolor='#E7EDF2', zeroline=False)
